@@ -11,7 +11,7 @@ export default function HeroSection() {
                         Since 2015
                     </div>
                     <div className={styles.heroTopimage}>
-                        <img src="/images/heroTop.png" alt="Hero Top Image" className={styles.heroTopImage} />
+                        <img src="/images/herotop.png" alt="Hero Top Image" className={styles.heroTopImage} />
                     </div>
 
                 </div>

@@ -1,5 +1,7 @@
 import Banner from '@/component/pages/homeComponent/Banner'
 import HeroSection from '@/component/pages/homeComponent/HeroSection'
+import HowWeWork from '@/component/pages/homeComponent/HowWeWork'
+import ImpactStats from '@/component/pages/homeComponent/ImpactStats'
 import IndustriesServed from '@/component/pages/homeComponent/IndustriesServed'
 import ServicesSlider from '@/component/pages/homeComponent/ServicesSlider'
 import StatsCard from '@/component/pages/homeComponent/StatsCard'
@@ -19,6 +21,8 @@ const page = () => {
    <ServicesSlider/>
    <TechTabs/>
    <IndustriesServed/>
+   <HowWeWork/>
+   <ImpactStats/>
     </>
 
   )

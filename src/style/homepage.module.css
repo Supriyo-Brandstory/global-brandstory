@@ -743,7 +743,7 @@
 }
 
 .industries_item {
-   background: #212025;
+    background: #212025;
     border-radius: 9px;
     width: 95%;
     height: 42px;
@@ -753,4 +753,184 @@
 
 .industries_item:hover {
     background-color: #3a3744;
+}
+
+/* section 7  */
+/* components/HowWeWork.module.css */
+
+.howwework_container {
+    background-color: #0d0d0d;
+    color: white;
+    padding: 80px 0px;
+    margin: auto;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.howwework_heading {
+    font-family: var(--font-family-bold);
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #FDF6F0;
+}
+
+.howwework_subheading {
+    font-family: var(--font-family-gilory-regular);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    color: #FDF6F0;
+}
+
+.howwework_step {
+    display: flex;
+    gap: 100px;
+    border-top: 1px dashed #FFFFFF;
+    padding: 30px 0;
+    align-items: center;
+    padding: 3% 8%;
+}
+
+.howwework_step:hover {
+    background: #F15D22;
+    color: #0F0F0F;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.howwework_step:last-child {
+    border-bottom: 1px dashed #FFFFFF;
+}
+
+.howwework_number {
+    font-family: var(--font-family-gilory-regular);
+    font-weight: 400;
+    font-size: 88px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    text-transform: capitalize;
+
+
+}
+
+.howwework_title {
+    font-family: var(--font-family-bold);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0%;
+
+}
+
+.howwework_description {
+    font-family: var(--font-family-gilory-regular);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    text-transform: capitalize;
+
+}
+
+/* section 8  */
+
+/* components/ImpactStats.module.css */
+
+.impact_container {
+    padding: 80px 0px;
+    text-align: center;
+}
+
+.impact_heading {
+    font-family: var(--font-family-bold);
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    margin-bottom: 20px;
+
+}
+
+.impact_grid {
+    display: grid;
+    max-width: var(--max-width);
+    grid-template-columns: repeat(auto-fit, minmax(399px, 1fr));
+    gap: 0;
+    margin: 0 auto;
+    border-radius: 10px !important;
+    overflow: hidden;
+
+}
+.impact_box {
+  padding: 50px;
+  position: relative;
+  width: 400px;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: white;
+  z-index: 1;
+}
+
+/* Arc fill background */
+.impact_box::before {
+  content: '';
+  position: absolute;
+  bottom: -100px; /* closer start for visible arc */
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #D9D9D9;
+  border-radius: 100% 100% 0 0;
+  transition:
+    height 0.6s ease-in-out,
+    bottom 0.6s ease-in-out,
+    border-radius 0.6s ease-in-out;
+  z-index: 0;
+}
+
+/* Hover: arc fills upward and flattens */
+.impact_box:hover::before {
+  height: 100%;
+  bottom: 0;
+  border-radius: 0;
+}
+
+/* Text/content above fill */
+.impact_box > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+.impact_icon {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    margin-bottom: 40px;
+}
+
+.impact_text {
+    font-family: Gilroy-Regular;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+    color: #0F0F0F;
+
 }
