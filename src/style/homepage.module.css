@@ -849,6 +849,7 @@
 .impact_container {
     padding: 80px 0px;
     text-align: center;
+    border-block-end: 1px solid #fff;
 }
 
 .impact_heading {
@@ -871,47 +872,49 @@
     overflow: hidden;
 
 }
+
 .impact_box {
-  padding: 50px;
-  position: relative;
-  width: 400px;
-  height: 340px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background-color: white;
-  z-index: 1;
+    padding: 50px;
+    position: relative;
+    width: 400px;
+    height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: white;
+    z-index: 1;
 }
 
 /* Arc fill background */
 .impact_box::before {
-  content: '';
-  position: absolute;
-  bottom: -100px; /* closer start for visible arc */
-  left: 0;
-  width: 100%;
-  height: 0;
-  background-color: #D9D9D9;
-  border-radius: 100% 100% 0 0;
-  transition:
-    height 0.6s ease-in-out,
-    bottom 0.6s ease-in-out,
-    border-radius 0.6s ease-in-out;
-  z-index: 0;
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    /* closer start for visible arc */
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #D9D9D9;
+    border-radius: 100% 100% 0 0;
+    transition:
+        height 0.6s ease-in-out,
+        bottom 0.6s ease-in-out,
+        border-radius 0.6s ease-in-out;
+    z-index: 0;
 }
 
 /* Hover: arc fills upward and flattens */
 .impact_box:hover::before {
-  height: 100%;
-  bottom: 0;
-  border-radius: 0;
+    height: 100%;
+    bottom: 0;
+    border-radius: 0;
 }
 
 /* Text/content above fill */
-.impact_box > * {
-  position: relative;
-  z-index: 1;
+.impact_box>* {
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -933,4 +936,305 @@
     text-transform: capitalize;
     color: #0F0F0F;
 
+}
+
+/* section 9  */
+.MarketingServices_container {
+    color: #fff;
+    background-image:
+        url('/images/marketing-services-bg.svg'),
+        url('/images/marketing-services-bg.svg'),
+        url('/images/marketing-services-bg.svg'),
+        url('/images/marketing-services-bg.svg');
+    background-position: -400px 1000px, -400px 3800px, 1000px 300px, 1000px 2200px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 17%, auto 17%;
+    gap: 40px;
+    padding: 80px 8.3%;
+    display: flex;
+    position: relative;
+}
+
+
+
+.MarketingServices_left {
+    flex: 1.2;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+}
+
+.MarketingServices_left h2 {
+    font-family: var(--font-family-bold);
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    margin-bottom: 20px;
+}
+
+.MarketingServices_left p {
+    font-family: var(--font-family-gilory-regular);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.MarketingServices_left span {
+    font-family: var(--font-family-gilory-regular);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.MarketingServices_right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    overflow-y: auto;
+}
+
+.MarketingServices_card {
+    background-color: #212025;
+    border-radius: 18px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.MarketingServices_card_img {
+
+    object-fit: contain;
+    border-radius: 9px;
+}
+
+.MarketingServices_card h3 {
+    font-family: var(--font-family-bold);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    margin: 15px 0 10px;
+
+}
+
+.MarketingServices_card_description {
+    font-family: var(--font-family-gilory-regular);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    text-transform: capitalize;
+
+}
+
+.MarketingServices_card ul {
+    list-style: disc;
+    margin: 15px 0 5px 30px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px 10px;
+}
+
+.MarketingServices_card li {
+    font-size: 0.85rem;
+    font-family: var(--font-family-gilory-regular);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    text-transform: capitalize;
+
+}
+
+/* section 10  */
+.SoftwareSolutions_section {
+    background-color: #3B35851A;
+    padding: 80px 0px;
+    text-align: center;
+}
+
+.SoftwareSolutions_container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.SoftwareSolutions_title {
+    font-family: var(--font-family-bold);
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 20px
+}
+
+.SoftwareSolutions_subtitle {
+    font-family: var(--font-family-gilory-regular);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+    color: #FDF6F0;
+    margin-bottom: 10px;
+
+}
+
+.SoftwareSolutions_description {
+    font-family: var(--font-family-gilory-regular);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+    color: #FDF6F0;
+    margin-bottom: 40px;
+}
+
+.SoftwareSolutions_grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px 0px;
+    margin-bottom: 3rem;
+}
+
+.SoftwareSolutions_cardWrapper {
+    flex: 0 1 calc(25% - 20px);
+    /* 4 cards per row with gap considered */
+    max-width: calc(25% - 20px);
+}
+
+
+/* Flip Card Styling */
+
+
+.SoftwareSolutions_cardInner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.SoftwareSolutions_cardWrapper:hover .SoftwareSolutions_cardInner {
+    transform: rotateY(180deg);
+}
+
+.SoftwareSolutions_cardFront,
+.SoftwareSolutions_cardBack {
+    position: absolute;
+    width: 242px;
+    min-height: 300px;
+    backface-visibility: hidden;
+    border: 1px solid rgba(241, 93, 34, 0.7);
+    border-radius: 16px;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.SoftwareSolutions_cardFront {
+    background: #0F0F0F;
+
+}
+
+.SoftwareSolutions_icon {
+    width: 75px;
+    height: 63px;
+    object-fit: contain;
+}
+
+.SoftwareSolutions_cardBack {
+   background: linear-gradient(156.05deg, #201C1C -27.44%, rgba(241, 93, 34, 0.7) 186.7%);
+    border: 1px solid #201C1C;
+    transform: rotateY(180deg);
+}
+
+
+.SoftwareSolutions_cardBack p {
+    font-family: var(--font-family-gilory-regular);
+    font-weight: 400;
+    font-size: 14.58px;
+    line-height: 130%;
+    letter-spacing: -2%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+    color: #FDF6F0;
+    margin-top: 20px;
+}
+
+.SoftwareSolutions_cardBack h3,
+.SoftwareSolutions_cardFront p {
+    font-family: var(--font-family-bold);
+    font-weight: 400;
+    font-size: 19.44px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #FDF6F0;
+}
+
+.SoftwareSolutions_cardFront span,
+.SoftwareSolutions_cardBack span {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.SoftwareSolutions_icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff5c39;
+}
+
+/* Results */
+.SoftwareSolutions_results_title {
+   font-family: var(--font-family-gilory-regular);
+font-weight: 400;
+font-size: 18px;
+line-height: 130%;
+letter-spacing: -2%;
+text-align: center;
+vertical-align: middle;
+text-transform: capitalize;
+color: #FDF6F0;
+    margin-bottom: 0.5rem;
+}
+
+.SoftwareSolutions_results_description {
+      font-family: var(--font-family-gilory-regular);
+font-weight: 400;
+font-size: 18px;
+line-height: 130%;
+letter-spacing: -2%;
+text-align: center;
+vertical-align: middle;
+text-transform: capitalize;
+color: #FDF6F0;
+    margin: 0 auto;
 }
