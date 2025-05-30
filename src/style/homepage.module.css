@@ -1238,3 +1238,270 @@ text-transform: capitalize;
 color: #FDF6F0;
     margin: 0 auto;
 }
+
+/* section 11  */
+.StoriesSection_section {
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  width: var(--max-width);
+    margin: 0 auto;
+}
+
+.StoriesSection_heading {
+font-family: var(--font-family-bold);
+font-weight: 400;
+font-size: 50px;
+line-height: 120%;
+letter-spacing: 0%;
+text-align: center;
+
+}
+
+.StoriesSection_subheading {
+  font-family: var(--font-family-gilory-regular);
+font-weight: 400;
+font-size: 18px;
+line-height: 130%;
+letter-spacing: -2%;
+text-align: center;
+vertical-align: middle;
+text-transform: capitalize;
+margin-top: 20px;
+}
+
+.StoriesSection_description {
+font-family: var(--font-family-gilory-regular);
+font-weight: 400;
+font-size: 18px;
+line-height: 130%;
+letter-spacing: -2%;
+text-align: center;
+vertical-align: middle;
+text-transform: capitalize;
+margin: 20px auto 40px;
+  
+}
+
+.StoriesSection_grid {
+  display: flex;
+  flex-wrap: nowrap; /* ensure all cards are in one row */
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+
+}
+
+.StoriesSection_card {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 330px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  padding: 165px 20px 20px 20px;
+  max-width: none;
+  transition: 
+  flex 0.3s ease-in-out;
+
+}
+
+.StoriesSection_cardhover {
+  flex: 0 0 442px; /* expanded card width */
+  color: #fff;
+  padding: 30px 20px 20px;
+  transition: 
+  flex 0.3s ease-in-out;
+}
+
+.StoriesSection_cardShrink {
+  flex: 1 1 0; /* allow others to shrink */
+  transition:
+  flex 0.3s ease-in-out;
+}
+
+.StoriesSection_content {
+  text-align: left;
+}
+
+.StoriesSection_card h3 {
+ font-family: var(--font-family-bold);
+font-weight: 400;
+font-size: 32px;
+line-height: 120%;
+letter-spacing: 0%;
+
+}
+
+.StoriesSection_card p {
+  font-family: var(--font-family-gilory-regular);
+font-weight: 400;
+font-size: 18px;
+line-height: 130%;
+letter-spacing: -2%;
+vertical-align: middle;
+text-transform: capitalize;
+  margin-top: 10px;
+}
+
+.StoriesSection_arrowContainer{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 20px;
+}
+.StoriesSection_arrow {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: white;
+}
+
+.StoriesSection_outcome {
+  margin-top: 50px;
+font-family: var(--font-family-gilory-regular);
+font-weight: 400;
+font-size: 18px;
+line-height: 130%;
+letter-spacing: -2%;
+text-align: center;
+vertical-align: middle;
+text-transform: capitalize;
+ 
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.StoriesSection_firstbg{
+background-color: #FF8555;
+color: #FFFFFF !important;
+}
+.StoriesSection_secondbg{
+background-color: #FCFCFC;
+color: #D0161B !important;
+}
+
+/* section 12   */
+.ClientLogosSection_wrapper {
+  background-image: url('/images/client-logos-bg.svg');
+    background-size: cover;
+  background-repeat: no-repeat;
+    background-position: center;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+
+}
+
+.ClientLogosSection_headingContainer {
+  margin-bottom: 40px;
+}
+
+.ClientLogosSection_mainHeading {
+  font-family: var(--font-family-bold);
+font-weight: 400;
+font-size: 50px;
+line-height: 120%;
+letter-spacing: 0%;
+text-align: center;
+color: #E73D26;
+
+}
+
+.ClientLogosSection_subHeading {
+   font-family: var(--font-family-bold);
+font-weight: 400;
+font-size: 32px;
+line-height: 120%;
+letter-spacing: 0%;
+text-align: center;
+
+  margin: 10px 0;
+}
+
+.ClientLogosSection_description {
+  font-family: var(--font-family-gilory-regular);
+font-weight: 400;
+font-size: 18px;
+line-height: 130%;
+letter-spacing: -2%;
+text-align: center;
+vertical-align: middle;
+text-transform: capitalize;
+
+}
+
+.ClientLogosSection_marqueeWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.ClientLogosSection_marqueeLeft,
+.ClientLogosSection_marqueeRight {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.ClientLogosSection_logosRow {
+  display: inline-flex;
+  gap: 30px;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.ClientLogosSection_marqueeLeft .ClientLogosSection_logosRow {
+  animation: scroll-left 25s linear infinite;
+}
+
+.ClientLogosSection_marqueeRight .ClientLogosSection_logosRow {
+  animation: scroll-right 20s linear infinite; /* Reduced duration for smoother scroll */
+}
+
+.ClientLogosSection_logosRow img {
+  flex-shrink: 0;
+  object-fit: contain;
+  width: 318px;
+  height: 84px;
+  background: #D8D7D7;
+  border: 0.5px solid #A6A6A6;
+  border-radius: 9px;
+  padding: 19px 34px;
+}
+
+.ClientLogosSection_logosRow img:hover {
+  filter: grayscale(0);
+}
+
+/* Animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50.3333%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-25.3333%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Pause animation on hover */
+.ClientLogosSection_marqueeLeft:hover .ClientLogosSection_logosRow,
+.ClientLogosSection_marqueeRight:hover .ClientLogosSection_logosRow {
+  animation-play-state: paused;
+}
