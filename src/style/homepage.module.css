@@ -131,6 +131,11 @@
     vertical-align: middle;
     text-transform: uppercase;
 }
+.bannerList li {
+
+    display: flex;
+    gap: 10px;
+}
 
 /* section 2 */
 

@@ -61,12 +61,12 @@ const newImage = {
         <button className={styles.bannerButton}>Let’s Talk</button>
 
         <ul className={styles.bannerList}>
-          <li>Strategy</li>
-          <li>DESIGN</li>
-          <li>MARKETING</li>
-          <li>VIDEO</li>
-          <li>DEVELOPMENT</li>
-          <li>ANALYTICS</li>
+          <li><img src='/icons/dot.svg' alt='dot' /> Strategy</li>
+          <li><img src='/icons/dot.svg' alt='dot' /> DESIGN</li>
+          <li><img src='/icons/dot.svg' alt='dot' /> MARKETING</li>
+          <li><img src='/icons/dot.svg' alt='dot' /> VIDEO</li>
+          <li><img src='/icons/dot.svg' alt='dot' /> DEVELOPMENT</li>
+          <li><img src='/icons/dot.svg' alt='dot' /> ANALYTICS</li>
         </ul>
       </div>
 
