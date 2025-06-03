@@ -27,7 +27,7 @@ export default function Footer() {
       <div className={styles.mainContent}>
         <div className={styles.brandSection}>
           <img src="/white-logo.svg" alt="logo" className={styles.logo}/>
-          <p>A Full-Stack Digital Agency <br/>11+ Years, 250+ Clients, 50+ Industries</p>
+          <p>A Full-Stack Digital Agency <br/>11+ Years, 250+ Clients, 30+ Industries</p>
           <p className={styles.callButtontext}>Ready to speak with a consultant?</p>
           <button className={styles.callButton}>CALL US NOW</button>
         </div>
