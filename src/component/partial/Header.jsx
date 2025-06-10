@@ -23,7 +23,7 @@ const Header = () => {
         </button>
 
        <HeaderMenu mobileMenuOpen={mobileMenuOpen}/>
-        <button className="contactButton">Contact Us</button>
+        <button className="contactButton mobile-hidden">Contact Us</button>
 
       </div>
     </header>

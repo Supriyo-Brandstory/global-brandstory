@@ -78,7 +78,7 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  /* align-items: center;  */
+  align-items: center; 
 }
 
 .logo {
@@ -133,6 +133,8 @@ body {
    Dropdown Menu
    =========== */
 .dropdown {
+        max-height: 300px;
+    overflow-y: auto;
   position: absolute;
   top: 100%;
   left: 50%;
@@ -159,7 +161,10 @@ body {
   visibility: visible;
 }
 
+
+
 .dropdownItem {
+
   color: var(--color-foreground, #333);
   padding: 0.75rem 1.5rem;
   display: block;
@@ -169,7 +174,7 @@ body {
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0%;
-
+  max-height: 200px;
   transition: background-color 0.2s ease;
 }
 
@@ -233,7 +238,6 @@ body {
    =========== */
 .navLinks {
   position: absolute;
-  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -326,4 +330,79 @@ body {
     border-bottom: none;
     margin-bottom: 0;
   }
+}
+
+
+
+
+/* mobile  */
+
+/* Hide on mobile only */
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+  .header {
+    padding: 1.5rem 1rem
+}
+.mobileMenuHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0px;
+    font-size: 16px;
+    font-family: var(--font-family-gilory-regular);
+}
+.mobileMenuContent {
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    margin: -5px 0 0 10px;
+    gap: 20px;
+    border-left: 1px solid;
+}
+.mobileMenuSectionHeader {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
+    font-family: var(--font-family-gilory-regular);
+}
+.mobileMenuSubItems {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #fff;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    gap: 10px;
+}
+.mobileMenuSubItemHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
+    font-family: var(--font-family-gilory-regular);
+}
+.mobileMenuSubChildren {
+    display: flex
+;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    border-left: 1px solid #fff;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+}
+
+/* Show on tablet and up (from 769px) */
+@media (min-width: 769px) {
+  .mobile-hidden {
+    display: block !important;
+  }
+  
 }

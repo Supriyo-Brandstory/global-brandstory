@@ -20,7 +20,7 @@ import React from 'react'
 const page = () => {
   return (
     <>
-   <Header/>
+   {/* <Header/> */}
    <Banner/> 
    <StatsCard/>
    <HeroSection/>
@@ -36,7 +36,7 @@ const page = () => {
    <ClientLogosSection/>
    <Bloglist/>
    <ClientStories/>
-    <Footer/>
+    {/* <Footer/> */}
     </>
 
   )
