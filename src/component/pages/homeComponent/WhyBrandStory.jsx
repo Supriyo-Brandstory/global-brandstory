@@ -1,6 +1,5 @@
-// components/WhyBrandStory.jsx
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '@/style/homepage.module.css';
 
 const cardData = [
@@ -34,7 +33,7 @@ const cardData = [
     icon: '/icons/users.svg',
     bgColor: '#FFEEC2',
   },
-   {
+  {
     id: 5,
     title: 'The BrandStory Experience Clear. Fast. Collaborative. Expertise-driven.',
     description: 'You’ll never have to chase us for updates. We’re hands-on, easy to talk to, and focused on one thing: making your brand stronger without making your day harder.',
@@ -44,7 +43,19 @@ const cardData = [
 ];
 
 export default function WhyBrandStory() {
+  const [isMobile, setIsMobile] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
 
   return (
     <section className={styles.WhyBrandStorySection}>
@@ -59,17 +70,25 @@ export default function WhyBrandStory() {
         {cardData.map((card, index) => (
           <div
             key={card.id}
-            className={`${styles.WhyBrandStoryCard} ${index === activeIndex ? styles.WhyBrandStoryCardActive : ''}`}
-            style={{ backgroundColor: card.bgColor }} onClick={() => setActiveIndex(index)}
+            className={`${styles.WhyBrandStoryCard} ${
+              isMobile || index === activeIndex ? styles.WhyBrandStoryCardActive : ''
+            }`}
+            style={{ backgroundColor: card.bgColor }}
+            onClick={() => !isMobile && setActiveIndex(index)}
           >
-            <div className={styles.WhyBrandStoryCardContent} >
-              <h3 >
+            <div className={styles.WhyBrandStoryCardContent}>
+              <h3>
                 {card.title}
-                {card.subtitle && <span><br />{card.subtitle}</span>}
+                {card.subtitle && (
+                  <span>
+                    <br />
+                    {card.subtitle}
+                  </span>
+                )}
               </h3>
               <p>{card.description}</p>
             </div>
-            <div className={styles.icon} onClick={() => setActiveIndex(index)}>
+            <div className={styles.icon}>
               <img src={card.icon} alt={card.title} />
             </div>
           </div>
