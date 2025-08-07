@@ -1,4 +1,5 @@
 import styles from '@/style/footer.module.css';
+import Link from 'next/link';
 
 
 export default function Footer() {
@@ -26,7 +27,9 @@ export default function Footer() {
 
       <div className={styles.mainContent}>
         <div className={styles.brandSection}>
+          <Link href={'/'}>
           <img src="/white-logo.svg" alt="logo" className={styles.logo}/>
+          </Link>
           <p>A Full-Stack Digital Agency <br/>11+ Years, 250+ Clients, 30+ Industries</p>
           <p className={styles.callButtontext}>Ready to speak with a consultant?</p>
           <button className={styles.callButton}>CALL US NOW</button>

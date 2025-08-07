@@ -1,96 +1,101 @@
 export const menuData = [
   {
     title: "I Want To…",
+    image: "/icons/menuicon.png",
     sections: [
       {
-        name: "I Want to Launch a Digital Product", link: "/i-want-to-launch-a-digital-product",
+        name: "I Want to Launch a Digital Product",
+        link: "/i-want-to-launch-a-digital-product",
+        image: "/icons/menuicon.png",
         children: [
-          { name: "Software Development Services", link: "/i-want-to-launch-a-digital-product/software-development-services", image: "https://via.placeholder.com/200x120?text=Software+Development" },
-          { name: "Web Development Services", link: "/i-want-to-launch-a-digital-product/web-development-services", image: "https://via.placeholder.com/200x120?text=Web+Development" },
-          { name: "Web Application Development", link: "/i-want-to-launch-a-digital-product/web-application-development", image: "https://via.placeholder.com/200x120?text=Web+App" },
-          { name: "SaaS Development", link: "/i-want-to-launch-a-digital-product/saas-development", image: "https://via.placeholder.com/200x120?text=SaaS" },
-          { name: "PaaS Development", link: "/i-want-to-launch-a-digital-product/paas-development", image: "https://via.placeholder.com/200x120?text=PaaS" },
-          { name: "Progressive Web App (PWA) Development", link: "/i-want-to-launch-a-digital-product/progressive-web-app-development", image: "https://via.placeholder.com/200x120?text=PWA" },
-          { name: "Mobile App Development", link: "/i-want-to-launch-a-digital-product/mobile-app-development", image: "https://via.placeholder.com/200x120?text=Mobile+App" },
-          { name: "Ecommerce Web App Development", link: "/i-want-to-launch-a-digital-product/ecommerce-web-app-development", image: "https://via.placeholder.com/200x120?text=Ecommerce" },
-          { name: "Enterprise Web App Development", link: "/i-want-to-launch-a-digital-product/enterprise-web-app-development", image: "https://via.placeholder.com/200x120?text=Enterprise+Web+App" },
-          { name: "Chatbot Development", link: "/i-want-to-launch-a-digital-product/chatbot-development", image: "https://via.placeholder.com/200x120?text=Chatbot" },
-          { name: "AI Development", link: "/i-want-to-launch-a-digital-product/ai-development", image: "https://via.placeholder.com/200x120?text=AI" },
+          { name: "Software Development Services", link: "/i-want-to-launch-a-digital-product/software-development-services", image: "/icons/menuicon.png" },
+          { name: "Web Development Services", link: "/i-want-to-launch-a-digital-product/web-development-services", image: "/icons/menuicon.png" },
+          { name: "Web Application Development", link: "/i-want-to-launch-a-digital-product/web-application-development", image: "/icons/menuicon.png" },
+          { name: "SaaS Development", link: "/i-want-to-launch-a-digital-product/saas-development", image: "/icons/menuicon.png" },
+          { name: "PaaS Development", link: "/i-want-to-launch-a-digital-product/paas-development", image: "/icons/menuicon.png" },
+          { name: "Progressive Web App (PWA) Development", link: "/i-want-to-launch-a-digital-product/progressive-web-app-development", image: "/icons/menuicon.png" },
+          { name: "Mobile App Development", link: "/i-want-to-launch-a-digital-product/mobile-app-development", image: "/icons/menuicon.png" },
+          { name: "Ecommerce Web App Development", link: "/i-want-to-launch-a-digital-product/ecommerce-web-app-development", image: "/icons/menuicon.png" },
+          { name: "Enterprise Web App Development", link: "/i-want-to-launch-a-digital-product/enterprise-web-app-development", image: "/icons/menuicon.png" },
+          { name: "Chatbot Development", link: "/i-want-to-launch-a-digital-product/chatbot-development", image: "/icons/menuicon.png" },
+          { name: "AI Development", link: "/i-want-to-launch-a-digital-product/ai-development", image: "/icons/menuicon.png" },
         ]
       },
       {
-        name: "I Want to Grow My Business", link: "/i-want-to-grow-my-business",
+        name: "I Want to Grow My Business",
+        link: "/i-want-to-grow-my-business",
+        image: "/icons/menuicon.png",
         children: [
           {
-            name: "Get Found Online", link: "/i-want-to-grow-my-business/get-found-online", image: "https://via.placeholder.com/200x120?text=Get+Found",
+            name: "Get Found Online",
+            link: "/i-want-to-grow-my-business/get-found-online",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "SEO Services (Local, Enterprise,Ecommerce, International)", link: "/i-want-to-grow-my-business/get-found-online/seo-services-local-enterprise-ecommerce-international", image: "https://via.placeholder.com/200x120?text=SEO+Services" },
-              { name: "AEO Optimization", link: "/i-want-to-grow-my-business/get-found-online/aeo-optimization", image: "https://via.placeholder.com/200x120?text=AEO+Optimization" },
-              { name: "SEO for LLMs (AI-driven Search Optimization)", link: "/i-want-to-grow-my-business/get-found-online/seo-for-llms-ai-driven-search-optimization", image: "https://via.placeholder.com/200x120?text=SEO+for+LLMs" },
-              { name: "Social Marketing", link: "/i-want-to-grow-my-business/get-found-online/social-marketing", image: "https://via.placeholder.com/200x120?text=Social+Marketing" },
-              { name: "Link Building", link: "/i-want-to-grow-my-business/get-found-online/link-building", image: "https://via.placeholder.com/200x120?text=Link+Building" },
-              { name: "Paid Guest Posting", link: "/i-want-to-grow-my-business/get-found-online/paid-guest-posting", image: "https://via.placeholder.com/200x120?text=Paid+Guest+Posting" },
+              { name: "SEO Services (Local, Enterprise,Ecommerce, International)", link: "/i-want-to-grow-my-business/get-found-online/seo-services-local-enterprise-ecommerce-international", image: "/icons/menuicon.png" },
+              { name: "AEO Optimization", link: "/i-want-to-grow-my-business/get-found-online/aeo-optimization", image: "/icons/menuicon.png" },
+              { name: "SEO for LLMs (AI-driven Search Optimization)", link: "/i-want-to-grow-my-business/get-found-online/seo-for-llms-ai-driven-search-optimization", image: "/icons/menuicon.png" },
+              { name: "Social Marketing", link: "/i-want-to-grow-my-business/get-found-online/social-marketing", image: "/icons/menuicon.png" },
+              { name: "Link Building", link: "/i-want-to-grow-my-business/get-found-online/link-building", image: "/icons/menuicon.png" },
+              { name: "Paid Guest Posting", link: "/i-want-to-grow-my-business/get-found-online/paid-guest-posting", image: "/icons/menuicon.png" },
             ]
-
           },
           {
             name: "Drive Immediate Results",
             link: "/i-want-to-grow-my-business/drive-immediate-results",
-            image: "https://via.placeholder.com/200x120?text=Drive+Immediate+Results",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Google Ads Management", link: "/i-want-to-grow-my-business/drive-immediate-results/google-ads-management", image: "https://via.placeholder.com/200x120?text=Google+Ads+Management" },
-              { name: "Meta (Facebook/Instagram) Ads Management", link: "/i-want-to-grow-my-business/drive-immediate-results/meta-facebook-instagram-ads-management", image: "https://via.placeholder.com/200x120?text=Meta+Ads+Management" },
-              { name: "LinkedIn Advertising Services", link: "/i-want-to-grow-my-business/drive-immediate-results/linkedin-advertising-services", image: "https://via.placeholder.com/200x120?text=LinkedIn+Advertising+Services" },
-              { name: "TikTok & Pinterest Ads", link: "/i-want-to-grow-my-business/drive-immediate-results/tiktok-pinterest-ads-management", image: "https://via.placeholder.com/200x120?text=TikTok+Advertising" },
-              { name: "Reddit & YouTube Advertising", link: "/i-want-to-grow-my-business/drive-immediate-results/reddit-youtube-advertising", image: "https://via.placeholder.com/200x120?text=Reddit+Advertising" },
-              { name: "Marketplace Ads (Amazon, Flipkart)", link: "/i-want-to-grow-my-business/drive-immediate-results/marketplace-ads-amazon-flipkart", image: "https://via.placeholder.com/200x120?text=Marketplace+Advertising" },
-              { name: "Programmatic Advertising", link: "/i-want-to-grow-my-business/drive-immediate-results/programmatic-advertising", image: "https://via.placeholder.com/200x120?text=Programmatic+Advertising" },
-              { name: "Performance Marketing", link: "/i-want-to-grow-my-business/drive-immediate-results/performance-marketing", image: "https://via.placeholder.com/200x120?text=Performance+Marketing" },
+              { name: "Google Ads Management", link: "/i-want-to-grow-my-business/drive-immediate-results/google-ads-management", image: "/icons/menuicon.png" },
+              { name: "Meta (Facebook/Instagram) Ads Management", link: "/i-want-to-grow-my-business/drive-immediate-results/meta-facebook-instagram-ads-management", image: "/icons/menuicon.png" },
+              { name: "LinkedIn Advertising Services", link: "/i-want-to-grow-my-business/drive-immediate-results/linkedin-advertising-services", image: "/icons/menuicon.png" },
+              { name: "TikTok & Pinterest Ads", link: "/i-want-to-grow-my-business/drive-immediate-results/tiktok-pinterest-ads-management", image: "/icons/menuicon.png" },
+              { name: "Reddit & YouTube Advertising", link: "/i-want-to-grow-my-business/drive-immediate-results/reddit-youtube-advertising", image: "/icons/menuicon.png" },
+              { name: "Marketplace Ads (Amazon, Flipkart)", link: "/i-want-to-grow-my-business/drive-immediate-results/marketplace-ads-amazon-flipkart", image: "/icons/menuicon.png" },
+              { name: "Programmatic Advertising", link: "/i-want-to-grow-my-business/drive-immediate-results/programmatic-advertising", image: "/icons/menuicon.png" },
+              { name: "Performance Marketing", link: "/i-want-to-grow-my-business/drive-immediate-results/performance-marketing", image: "/icons/menuicon.png" },
             ]
-
           },
           {
             name: "Grow Through Content",
             link: "/i-want-to-grow-my-business/grow-through-content",
-            image: "https://via.placeholder.com/200x120?text=Grow+Through+Content",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Content Marketing", link: "/i-want-to-grow-my-business/grow-through-content/content-marketing", image: "https://via.placeholder.com/200x120?text=Content+Marketing" },
-              { name: "Content Writing", link: "/i-want-to-grow-my-business/grow-through-content/content-writing", image: "https://via.placeholder.com/200x120?text=Content+Writing" },
-              { name: "Blog Content Writing", link: "/i-want-to-grow-my-business/grow-through-content/blog-content-writing", image: "https://via.placeholder.com/200x120?text=Blog+Content+Writing" },
-              { name: "Listicle Content Writing", link: "/i-want-to-grow-my-business/grow-through-content/listicle-content-writing", image: "https://via.placeholder.com/200x120?text=Listicle+Content+Writing" },
-              { name: "SEO Content Writing", link: "/i-want-to-grow-my-business/grow-through-content/seo-content-writing", image: "https://via.placeholder.com/200x120?text=SEO+Content+Writing" },
-              { name: "Case Study Writing", link: "/i-want-to-grow-my-business/grow-through-content/case-study-writing", image: "https://via.placeholder.com/200x120?text=Case+Study+Writing" },
-              { name: "Social Media Content Writing", link: "/i-want-to-grow-my-business/grow-through-content/social-media-content-writing", image: "https://via.placeholder.com/200x120?text=Social+Media+Content+Writing" },
-              { name: "Press Release Writing", link: "/i-want-to-grow-my-business/grow-through-content/press-release-writing", image: "https://via.placeholder.com/200x120?text=Press+Release+Writing" },
-              { name: "Content Optimization & Promotion", link: "/i-want-to-grow-my-business/grow-through-content/content-optimization-promotion", image: "https://via.placeholder.com/200x120?text=Content+Optimization+Promotion" },
+              { name: "Content Marketing", link: "/i-want-to-grow-my-business/grow-through-content/content-marketing", image: "/icons/menuicon.png" },
+              { name: "Content Writing", link: "/i-want-to-grow-my-business/grow-through-content/content-writing", image: "/icons/menuicon.png" },
+              { name: "Blog Content Writing", link: "/i-want-to-grow-my-business/grow-through-content/blog-content-writing", image: "/icons/menuicon.png" },
+              { name: "Listicle Content Writing", link: "/i-want-to-grow-my-business/grow-through-content/listicle-content-writing", image: "/icons/menuicon.png" },
+              { name: "SEO Content Writing", link: "/i-want-to-grow-my-business/grow-through-content/seo-content-writing", image: "/icons/menuicon.png" },
+              { name: "Case Study Writing", link: "/i-want-to-grow-my-business/grow-through-content/case-study-writing", image: "/icons/menuicon.png" },
+              { name: "Social Media Content Writing", link: "/i-want-to-grow-my-business/grow-through-content/social-media-content-writing", image: "/icons/menuicon.png" },
+              { name: "Press Release Writing", link: "/i-want-to-grow-my-business/grow-through-content/press-release-writing", image: "/icons/menuicon.png" },
+              { name: "Content Optimization & Promotion", link: "/i-want-to-grow-my-business/grow-through-content/content-optimization-promotion", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Win on Social Media",
             link: "/i-want-to-grow-my-business/win-on-social-media",
-            image: "https://via.placeholder.com/200x120?text=Win+on+Social+Media",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Social Media Marketing", link: "/i-want-to-grow-my-business/win-on-social-media/social-media-marketing", image: "https://via.placeholder.com/200x120?text=Social+Media+Marketing" },
-              { name: "Facebook Marketing", link: "/i-want-to-grow-my-business/win-on-social-media/facebook-marketing", image: "https://via.placeholder.com/200x120?text=Facebook+Marketing" },
-              { name: "Instagram Marketing", link: "/i-want-to-grow-my-business/win-on-social-media/instagram-marketing", image: "https://via.placeholder.com/200x120?text=Instagram+Marketing" },
-              { name: "Pinterest Marketing", link: "/i-want-to-grow-my-business/win-on-social-media/pinterest-marketing", image: "https://via.placeholder.com/200x120?text=Pinterest+Marketing" },
-              { name: "LinkedIn Marketing", link: "/i-want-to-grow-my-business/win-on-social-media/linkedin-marketing", image: "https://via.placeholder.com/200x120?text=LinkedIn+Marketing" },
-              { name: "TikTok Marketing", link: "/i-want-to-grow-my-business/win-on-social-media/tiktok-marketing", image: "https://via.placeholder.com/200x120?text=TikTok+Marketing" },
-              { name: "Youtube Marketing", link: "/i-want-to-grow-my-business/win-on-social-media/youtube-marketing", image: "https://via.placeholder.com/200x120?text=Youtube+Marketing" },
-              { name: "Social Listening & Reputation Monitoring", link: "/i-want-to-grow-my-business/win-on-social-media/social-listening-reputation-monitoring", image: "https://via.placeholder.com/200x120?text=Social+Listening+Monitoring" },
+              { name: "Social Media Marketing", link: "/i-want-to-grow-my-business/win-on-social-media/social-media-marketing", image: "/icons/menuicon.png" },
+              { name: "Facebook Marketing", link: "/i-want-to-grow-my-business/win-on-social-media/facebook-marketing", image: "/icons/menuicon.png" },
+              { name: "Instagram Marketing", link: "/i-want-to-grow-my-business/win-on-social-media/instagram-marketing", image: "/icons/menuicon.png" },
+              { name: "Pinterest Marketing", link: "/i-want-to-grow-my-business/win-on-social-media/pinterest-marketing", image: "/icons/menuicon.png" },
+              { name: "LinkedIn Marketing", link: "/i-want-to-grow-my-business/win-on-social-media/linkedin-marketing", image: "/icons/menuicon.png" },
+              { name: "TikTok Marketing", link: "/i-want-to-grow-my-business/win-on-social-media/tiktok-marketing", image: "/icons/menuicon.png" },
+              { name: "Youtube Marketing", link: "/i-want-to-grow-my-business/win-on-social-media/youtube-marketing", image: "/icons/menuicon.png" },
+              { name: "Social Listening & Reputation Monitoring", link: "/i-want-to-grow-my-business/win-on-social-media/social-listening-reputation-monitoring", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Scale with Strategy",
             link: "/i-want-to-grow-my-business/scale-with-strategy",
-            image: "https://via.placeholder.com/200x120?text=Scale+with+Strategy",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Growth Marketing Strategy", link: "/i-want-to-grow-my-business/scale-with-strategy/growth-marketing-strategy", image: "https://via.placeholder.com/200x120?text=Growth+Marketing+Strategy" },
-              { name: "Performance Marketing", link: "/i-want-to-grow-my-business/scale-with-strategy/performance-marketing-strategy", image: "https://via.placeholder.com/200x120?text=Performance+Marketing+Strategy" },
-              { name: "Campaign Reporting & Forecasting", link: "/i-want-to-grow-my-business/scale-with-strategy/campaign-reporting-forecasting", image: "https://via.placeholder.com/200x120?text=Campaign+Reporting+Forecasting" },
-              { name: "ABM for High-Value Clients (B2B)", link: "/i-want-to-grow-my-business/scale-with-strategy/abm-for-high-value-clients-b2b", image: "https://via.placeholder.com/200x120?text=ABM+for+High-Value+Clients" },
-              { name: "Ecommerce Growth Planning (B2C)", link: "/i-want-to-grow-my-business/scale-with-strategy/ecommerce-growth-planning-b2c", image: "https://via.placeholder.com/200x120?text=Ecommerce+Growth+Planning" },
-              { name: "Market-Specific Expansion Strategy", link: "/i-want-to-grow-my-business/scale-with-strategy/market-specific-expansion-strategy", image: "https://via.placeholder.com/200x120?text=Market-Specific+Expansion+Strategy" },
+              { name: "Growth Marketing Strategy", link: "/i-want-to-grow-my-business/scale-with-strategy/growth-marketing-strategy", image: "/icons/menuicon.png" },
+              { name: "Performance Marketing", link: "/i-want-to-grow-my-business/scale-with-strategy/performance-marketing-strategy", image: "/icons/menuicon.png" },
+              { name: "Campaign Reporting & Forecasting", link: "/i-want-to-grow-my-business/scale-with-strategy/campaign-reporting-forecasting", image: "/icons/menuicon.png" },
+              { name: "ABM for High-Value Clients (B2B)", link: "/i-want-to-grow-my-business/scale-with-strategy/abm-for-high-value-clients-b2b", image: "/icons/menuicon.png" },
+              { name: "Ecommerce Growth Planning (B2C)", link: "/i-want-to-grow-my-business/scale-with-strategy/ecommerce-growth-planning-b2c", image: "/icons/menuicon.png" },
+              { name: "Market-Specific Expansion Strategy", link: "/i-want-to-grow-my-business/scale-with-strategy/market-specific-expansion-strategy", image: "/icons/menuicon.png" },
             ]
           }
         ]
@@ -98,55 +103,56 @@ export const menuData = [
       {
         name: "I Want to Improve My <br>Online Presence",
         link: "/i-want-to-improve-my-online-presence",
+        image: "/icons/menuicon.png",
         children: [
           {
             name: "Redesign My Website",
             link: "/i-want-to-improve-my-online/redesign-my-website",
-            image: "https://via.placeholder.com/200x120?text=Redesign+My+Website",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Website Design Services", link: "/i-want-to-improve-my-online/redesign-my-website/website-design-services", image: "https://via.placeholder.com/200x120?text=Website+Design+Services" },
-              { name: "Website Revamp", link: "/i-want-to-improve-my-online/redesign-my-website/website-revamp-services", image: "https://via.placeholder.com/200x120?text=Website+Revamp+Services" },
-              { name: "Landing Page Development", link: "/i-want-to-improve-my-online/redesign-my-website/landing-page-development", image: "https://via.placeholder.com/200x120?text=Landing+Page+Development" },
-              { name: "WordPress Web Development", link: "/i-want-to-improve-my-online/redesign-my-website/wordpress-web-development", image: "https://via.placeholder.com/200x120?text=WordPress+Web+Development" },
-              { name: "Shopify Web Development", link: "/i-want-to-improve-my-online/redesign-my-website/shopify-web-development", image: "https://via.placeholder.com/200x120?text=Shopify+Web+Development" },
-              { name: "Magento Web Development", link: "/i-want-to-improve-my-online/redesign-my-website/magento-web-development", image: "https://via.placeholder.com/200x120?text=Magento+Web+Development" },
-              { name: "Web Maintenance & Support", link: "/i-want-to-improve-my-online/redesign-my-website/web-maintenance-support", image: "https://via.placeholder.com/200x120?text=Web+Maintenance+Support" },
+              { name: "Website Design Services", link: "/i-want-to-improve-my-online/redesign-my-website/website-design-services", image: "/icons/menuicon.png" },
+              { name: "Website Revamp", link: "/i-want-to-improve-my-online/redesign-my-website/website-revamp-services", image: "/icons/menuicon.png" },
+              { name: "Landing Page Development", link: "/i-want-to-improve-my-online/redesign-my-website/landing-page-development", image: "/icons/menuicon.png" },
+              { name: "WordPress Web Development", link: "/i-want-to-improve-my-online/redesign-my-website/wordpress-web-development", image: "/icons/menuicon.png" },
+              { name: "Shopify Web Development", link: "/i-want-to-improve-my-online/redesign-my-website/shopify-web-development", image: "/icons/menuicon.png" },
+              { name: "Magento Web Development", link: "/i-want-to-improve-my-online/redesign-my-website/magento-web-development", image: "/icons/menuicon.png" },
+              { name: "Web Maintenance & Support", link: "/i-want-to-improve-my-online/redesign-my-website/web-maintenance-support", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Improve UX and Visual Design",
             link: "/i-want-to-improve-my-online/improve-ux-and-visual-design",
-            image: "https://via.placeholder.com/200x120?text=Improve+UX+and+Visual+Design",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "UI/UX Design Services", link: "/i-want-to-improve-my-online/improve-ux-and-visual-design/ui-ux-design-services", image: "https://via.placeholder.com/200x120?text=UI/UX+Design+Services" },
-              { name: "Wireframing & Prototyping", link: "/i-want-to-improve-my-online/improve-ux-and-visual-design/wireframing-prototyping", image: "https://via.placeholder.com/200x120?text=Wireframing+Prototyping" },
-              { name: "User Flow Optimization", link: "/i-want-to-improve-my-online/improve-ux-and-visual-design/user-flow-optimization", image: "https://via.placeholder.com/200x120?text=User+Flow+Optimization" },
-              { name: "Design Systems & Style Guides", link: "/i-want-to-improve-my-online/improve-ux-and-visual-design/design-systems-style-guides", image: "https://via.placeholder.com/200x120?text=Design+Systems+Style+Guides" },
-              { name: "Design Systems & Style Guides", link: "/i-want-to-improve-my-online/improve-ux-and-visual-design/design-systems-style-guides", image: "https://via.placeholder.com/200x120?text=Design+Systems+Style+Guides" },
-              { name: "Accessibility Optimization (WCAG Compliance)", link: "/i-want-to-improve-my-online/improve-ux-and-visual-design/accessibility-optimization-wcag-compliance", image: "https://via.placeholder.com/200x120?text=Accessibility+Optimization" },
+              { name: "UI/UX Design Services", link: "/i-want-to-improve-my-online/improve-ux-and-visual-design/ui-ux-design-services", image: "/icons/menuicon.png" },
+              { name: "Wireframing & Prototyping", link: "/i-want-to-improve-my-online/improve-ux-and-visual-design/wireframing-prototyping", image: "/icons/menuicon.png" },
+              { name: "User Flow Optimization", link: "/i-want-to-improve-my-online/improve-ux-and-visual-design/user-flow-optimization", image: "/icons/menuicon.png" },
+              { name: "Design Systems & Style Guides", link: "/i-want-to-improve-my-online/improve-ux-and-visual-design/design-systems-style-guides", image: "/icons/menuicon.png" },
+              { name: "Design Systems & Style Guides", link: "/i-want-to-improve-my-online/improve-ux-and-visual-design/design-systems-style-guides", image: "/icons/menuicon.png" },
+              { name: "Accessibility Optimization (WCAG Compliance)", link: "/i-want-to-improve-my-online/improve-ux-and-visual-design/accessibility-optimization-wcag-compliance", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Enhance Search & Discoverability",
             link: "/i-want-to-improve-my-online/enhance-search-discoverability",
-            image: "https://via.placeholder.com/200x120?text=Enhance+Search+Discoverability",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "SEO Services (Local, Enterprise, Ecommerce)", link: "/i-want-to-improve-my-online/enhance-search-discoverability/seo-services-local-enterprise-ecommerce", image: "https://via.placeholder.com/200x120?text=SEO+Services" },
-              { name: "AEO Optimization (Answer Engine Optimization)", link: "/i-want-to-improve-my-online/enhance-search-discoverability/aeo-optimization-answer-engine-optimization", image: "https://via.placeholder.com/200x120?text=AEO+Optimization" },
-              { name: "SEO for LLMs (AI-first content discoverability)", link: "/i-want-to-improve-my-online/enhance-search-discoverability/seo-for-llms-ai-first-content-discoverability", image: "https://via.placeholder.com/200x120?text=SEO+for+LLMs" },
-              { name: "Multilingual SEO", link: "/i-want-to-improve-my-online/enhance-search-discoverability/multilingual-seo", image: "https://via.placeholder.com/200x120?text=Multilingual+SEO" },
+              { name: "SEO Services (Local, Enterprise, Ecommerce)", link: "/i-want-to-improve-my-online/enhance-search-discoverability/seo-services-local-enterprise-ecommerce", image: "/icons/menuicon.png" },
+              { name: "AEO Optimization (Answer Engine Optimization)", link: "/i-want-to-improve-my-online/enhance-search-discoverability/aeo-optimization-answer-engine-optimization", image: "/icons/menuicon.png" },
+              { name: "SEO for LLMs (AI-first content discoverability)", link: "/i-want-to-improve-my-online/enhance-search-discoverability/seo-for-llms-ai-first-content-discoverability", image: "/icons/menuicon.png" },
+              { name: "Multilingual SEO", link: "/i-want-to-improve-my-online/enhance-search-discoverability/multilingual-seo", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Monitor & Manage Reputation",
             link: "/i-want-to-improve-my-online/monitor-and-manage-reputation",
-            image: "https://via.placeholder.com/200x120?text=Monitor+and+Manage+Reputation",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Online Reputation Management", link: "/i-want-to-improve-my-online/monitor-and-manage-reputation/online-reputation-management", image: "https://via.placeholder.com/200x120?text=Online+Reputation+Management" },
-              { name: "Social Listening & Reputation Monitoring", link: "/i-want-to-improve-my-online/monitor-and-manage-reputation/social-listening-reputation-monitoring", image: "https://via.placeholder.com/200x120?text=Social+Listening+Monitoring" },
-              { name: "Brand Monitoring & Reporting", link: "/i-want-to-improve-my-online/monitor-and-manage-reputation/brand-monitoring-reporting", image: "https://via.placeholder.com/200x120?text=Brand+Monitoring+Reporting" },
-              { name: "Review Management", link: "/i-want-to-improve-my-online/monitor-and-manage-reputation/review-management", image: "https://via.placeholder.com/200x120?text=Review+Management" },
-              { name: "LinkedIn Profile Management", link: "/i-want-to-improve-my-online/monitor-and-manage-reputation/linkedin-profile-management", image: "https://via.placeholder.com/200x120?text=LinkedIn+Profile+Management" },
+              { name: "Online Reputation Management", link: "/i-want-to-improve-my-online/monitor-and-manage-reputation/online-reputation-management", image: "/icons/menuicon.png" },
+              { name: "Social Listening & Reputation Monitoring", link: "/i-want-to-improve-my-online/monitor-and-manage-reputation/social-listening-reputation-monitoring", image: "/icons/menuicon.png" },
+              { name: "Brand Monitoring & Reporting", link: "/i-want-to-improve-my-online/monitor-and-manage-reputation/brand-monitoring-reporting", image: "/icons/menuicon.png" },
+              { name: "Review Management", link: "/i-want-to-improve-my-online/monitor-and-manage-reputation/review-management", image: "/icons/menuicon.png" },
+              { name: "LinkedIn Profile Management", link: "/i-want-to-improve-my-online/monitor-and-manage-reputation/linkedin-profile-management", image: "/icons/menuicon.png" },
             ]
           }
         ]
@@ -154,509 +160,508 @@ export const menuData = [
       {
         name: "I Want to Rebrand My Company",
         link: "/i-want-to-improve-my-online/rebrand-my-company",
-        image: "https://via.placeholder.com/200x120?text=Rebrand+My+Company",
+        image: "/icons/menuicon.png",
         children: [
-          { name: "Branding Services", link: "/i-want-to-improve-my-online/rebrand-my-company/branding-services", image: "https://via.placeholder.com/200x120?text=Branding+Services" },
-          { name: "Packaging & Product Design", link: "/i-want-to-improve-my-online/rebrand-my-company/packaging-product-design", image: "https://via.placeholder.com/200x120?text=Packaging+Design" },
-          { name: "Go to Market(GTM)", link: "/i-want-to-improve-my-online/rebrand-my-company/go-to-market-gtm", image: "https://via.placeholder.com/200x120?text=Go+to+Market" },
-          { name: "Logo Design", link: "/i-want-to-improve-my-online/rebrand-my-company/logo-design", image: "https://via.placeholder.com/200x120?text=Logo+Design" },
-          { name: "Employer Branding", link: "/i-want-to-improve-my-online/rebrand-my-company/employer-branding", image: "https://via.placeholder.com/200x120?text=Employer+Branding" },
-          { name: "Brand Identity Design", link: "/i-want-to-improve-my-online/rebrand-my-company/brand-identity-design", image: "https://via.placeholder.com/200x120?text=Brand+Identity" },
-          { name: "Brand Messaging & Copywriting", link: "/i-want-to-improve-my-online/rebrand-my-company/brand-messaging-copywriting", image: "https://via.placeholder.com/200x120?text=Brand+Messaging" },
-          { name: "Visual Branding & Collateral Design", link: "/i-want-to-improve-my-online/rebrand-my-company/visual-branding-collateral-design", image: "https://via.placeholder.com/200x120?text=Visual+Branding" },
-          { name: "Rebranding Services", link: "/i-want-to-improve-my-online/rebrand-my-company/rebranding-services", image: "https://via.placeholder.com/200x120?text=Rebranding" },
-          { name: "Brand Guidelines & Toolkits", link: "/i-want-to-improve-my-online/rebrand-my-company/brand-guidelines-toolkits", image: "https://via.placeholder.com/200x120?text=Brand+Guidelines" },
-          { name: "Brand Strategy & Positioning", link: "/i-want-to-improve-my-online/rebrand-my-company/brand-strategy-positioning", image: "https://via.placeholder.com/200x120?text=Brand+Strategy" },
+          { name: "Branding Services", link: "/i-want-to-improve-my-online/rebrand-my-company/branding-services", image: "/icons/menuicon.png" },
+          { name: "Packaging & Product Design", link: "/i-want-to-improve-my-online/rebrand-my-company/packaging-product-design", image: "/icons/menuicon.png" },
+          { name: "Go to Market(GTM)", link: "/i-want-to-improve-my-online/rebrand-my-company/go-to-market-gtm", image: "/icons/menuicon.png" },
+          { name: "Logo Design", link: "/i-want-to-improve-my-online/rebrand-my-company/logo-design", image: "/icons/menuicon.png" },
+          { name: "Employer Branding", link: "/i-want-to-improve-my-online/rebrand-my-company/employer-branding", image: "/icons/menuicon.png" },
+          { name: "Brand Identity Design", link: "/i-want-to-improve-my-online/rebrand-my-company/brand-identity-design", image: "/icons/menuicon.png" },
+          { name: "Brand Messaging & Copywriting", link: "/i-want-to-improve-my-online/rebrand-my-company/brand-messaging-copywriting", image: "/icons/menuicon.png" },
+          { name: "Visual Branding & Collateral Design", link: "/i-want-to-improve-my-online/rebrand-my-company/visual-branding-collateral-design", image: "/icons/menuicon.png" },
+          { name: "Rebranding Services", link: "/i-want-to-improve-my-online/rebrand-my-company/rebranding-services", image: "/icons/menuicon.png" },
+          { name: "Brand Guidelines & Toolkits", link: "/i-want-to-improve-my-online/rebrand-my-company/brand-guidelines-toolkits", image: "/icons/menuicon.png" },
+          { name: "Brand Strategy & Positioning", link: "/i-want-to-improve-my-online/rebrand-my-company/brand-strategy-positioning", image: "/icons/menuicon.png" },
         ]
       },
       {
         name: "I Want to Automate <br>Operations & Marketing",
         link: "/i-want-to-improve-my-online/automate-operations-marketing",
-        image: "https://via.placeholder.com/200x120?text=Automate+Operations+Marketing",
+        image: "/icons/menuicon.png",
         children: [
           {
             name: "Platform-Based Automation",
             link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation",
-            image: "https://via.placeholder.com/200x120?text=Platform-Based+Automation",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "HubSpot Marketing Hub Setup", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/hubspot-marketing-hub-setup", image: "https://via.placeholder.com/200x120?text=HubSpot+Marketing+Hub" },
-              { name: "Salesforce Marketing Cloud Setup", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/salesforce-marketing-cloud-setup", image: "https://via.placeholder.com/200x120?text=Salesforce+Marketing+Cloud" },
-              { name: "ActiveCampaign Automation", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/activecampaign-automation", image: "https://via.placeholder.com/200x120?text=ActiveCampaign" },
-              { name: "Zoho CRM Integration", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/zoho-crm-integration", image: "https://via.placeholder.com/200x120?text=Zoho+CRM" },
-              { name: "Brevo (Sendinblue) Setup", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/brevo-sendinblue-setup", image: "https://via.placeholder.com/200x120?text=Brevo" },
-              { name: "Oracle Eloqua Marketing Automation", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/oracle-eloqua-marketing-automation", image: "https://via.placeholder.com/200x120?text=Oracle+Eloqua" },
-              { name: "MoEngage Campaigns", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/moengage-campaigns", image: "https://via.placeholder.com/200x120?text=MoEngage" },
-              { name: "Microsoft Dynamics 365 Integration", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/microsoft-dynamics-365-integration", image: "https://via.placeholder.com/200x120?text=Microsoft+Dynamics+365" },
-              { name: "Omnisend for Ecommerce", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/omnisend-for-ecommerce", image: "https://via.placeholder.com/200x120?text=Omnisend" },
+              { name: "HubSpot Marketing Hub Setup", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/hubspot-marketing-hub-setup", image: "/icons/menuicon.png" },
+              { name: "Salesforce Marketing Cloud Setup", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/salesforce-marketing-cloud-setup", image: "/icons/menuicon.png" },
+              { name: "ActiveCampaign Automation", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/activecampaign-automation", image: "/icons/menuicon.png" },
+              { name: "Zoho CRM Integration", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/zoho-crm-integration", image: "/icons/menuicon.png" },
+              { name: "Brevo (Sendinblue) Setup", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/brevo-sendinblue-setup", image: "/icons/menuicon.png" },
+              { name: "Oracle Eloqua Marketing Automation", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/oracle-eloqua-marketing-automation", image: "/icons/menuicon.png" },
+              { name: "MoEngage Campaigns", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/moengage-campaigns", image: "/icons/menuicon.png" },
+              { name: "Microsoft Dynamics 365 Integration", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/microsoft-dynamics-365-integration", image: "/icons/menuicon.png" },
+              { name: "Omnisend for Ecommerce", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/omnisend-for-ecommerce", image: "/icons/menuicon.png" },
             ]
           },
-          { name: "Email Marketing", link: "/i-want-to-improve-my-online/automate-operations-marketing/email-marketing", image: "https://via.placeholder.com/200x120?text=Email+Marketing" },
-          { name: "WhatsApp Marketing (Automation)", link: "/i-want-to-improve-my-online/automate-operations-marketing/whatsapp-marketing-automation", image: "https://via.placeholder.com/200x120?text=WhatsApp+Marketing" },
-
+          { name: "Email Marketing", link: "/i-want-to-improve-my-online/automate-operations-marketing/email-marketing", image: "/icons/menuicon.png" },
+          { name: "WhatsApp Marketing (Automation)", link: "/i-want-to-improve-my-online/automate-operations-marketing/whatsapp-marketing-automation", image: "/icons/menuicon.png" },
         ]
       },
       {
         name: "I Want to Modernize My Tech Stack",
         link: "/i-want-to-improve-my-online/modernize-my-tech-stack",
-        image: "https://via.placeholder.com/200x120?text=Modernize+My+Tech+Stack",
+        image: "/icons/menuicon.png",
         children: [
           {
             name: "Audit Your Existing Stack",
             link: "/i-want-to-improve-my-online/modernize-my-tech-stack/audit-your-existing-stack",
-            image: "https://via.placeholder.com/200x120?text=Audit+Your+Existing+Stack",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "IT Consulting Services", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/audit-your-existing-stack/it-consulting-services", image: "https://via.placeholder.com/200x120?text=IT+Consulting" },
-              { name: "Legacy System Audit", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/audit-your-existing-stack/legacy-system-audit", image: "https://via.placeholder.com/200x120?text=Legacy+System" },
-              { name: "Technology Stack Assessment", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/audit-your-existing-stack/technology-stack-assessment", image: "https://via.placeholder.com/200x120?text=Technology+Stack" },
+              { name: "IT Consulting Services", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/audit-your-existing-stack/it-consulting-services", image: "/icons/menuicon.png" },
+              { name: "Legacy System Audit", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/audit-your-existing-stack/legacy-system-audit", image: "/icons/menuicon.png" },
+              { name: "Technology Stack Assessment", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/audit-your-existing-stack/technology-stack-assessment", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Modernize Legacy Systems",
             link: "/i-want-to-improve-my-online/modernize-my-tech-stack/modernize-legacy-systems",
-            image: "https://via.placeholder.com/200x120?text=Modernize+Legacy+Systems",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Legacy System Modernization", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/modernize-legacy-systems/legacy-system-modernization", image: "https://via.placeholder.com/200x120?text=Legacy+System" },
-              { name: "Application Refactoring & Re-Engineering", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/modernize-legacy-systems/application-refactoring-re-engineering", image: "https://via.placeholder.com/200x120?text=Application+Refactoring" },
-              { name: "UX/UI Redesign for Legacy Platforms", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/modernize-legacy-systems/ux-ui-redesign-for-legacy-platforms", image: "https://via.placeholder.com/200x120?text=UX/UI+Redesign" },
+              { name: "Legacy System Modernization", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/modernize-legacy-systems/legacy-system-modernization", image: "/icons/menuicon.png" },
+              { name: "Application Refactoring & Re-Engineering", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/modernize-legacy-systems/application-refactoring-re-engineering", image: "/icons/menuicon.png" },
+              { name: "UX/UI Redesign for Legacy Platforms", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/modernize-legacy-systems/ux-ui-redesign-for-legacy-platforms", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Migrate to the Cloud",
             link: "/i-want-to-improve-my-online/modernize-my-tech-stack/migrate-to-the-cloud",
-            image: "https://via.placeholder.com/200x120?text=Migrate+to+the+Cloud",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "AWS Cloud Services", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/migrate-to-the-cloud/aws-cloud-services", image: "https://via.placeholder.com/200x120?text=AWS+Cloud" },
-              { name: "Azure Cloud Services", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/migrate-to-the-cloud/azure-cloud-services", image: "https://via.placeholder.com/200x120?text=Azure+Cloud" },
-              { name: "Google Cloud (GCP) Services", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/migrate-to-the-cloud/google-cloud-gcp-services", image: "https://via.placeholder.com/200x120?text=Google+Cloud" },
-              { name: "Cloud Migration Strategy & Execution", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/migrate-to-the-cloud/cloud-migration-strategy-execution", image: "https://via.placeholder.com/200x120?text=Cloud+Migration" },
-              { name: "Multi-cloud & Hybrid Cloud Setup", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/migrate-to-the-cloud/multi-cloud-hybrid-cloud-setup", image: "https://via.placeholder.com/200x120?text=Multi-cloud+Hybrid+Cloud" },
-              { name: "Serverless Architecture (Lambda, Firebase, etc.)", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/migrate-to-the-cloud/serverless-architecture-lambda-firebase-etc", image: "https://via.placeholder.com/200x120?text=Serverless+Architecture" },
+              { name: "AWS Cloud Services", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/migrate-to-the-cloud/aws-cloud-services", image: "/icons/menuicon.png" },
+              { name: "Azure Cloud Services", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/migrate-to-the-cloud/azure-cloud-services", image: "/icons/menuicon.png" },
+              { name: "Google Cloud (GCP) Services", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/migrate-to-the-cloud/google-cloud-gcp-services", image: "/icons/menuicon.png" },
+              { name: "Cloud Migration Strategy & Execution", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/migrate-to-the-cloud/cloud-migration-strategy-execution", image: "/icons/menuicon.png" },
+              { name: "Multi-cloud & Hybrid Cloud Setup", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/migrate-to-the-cloud/multi-cloud-hybrid-cloud-setup", image: "/icons/menuicon.png" },
+              { name: "Serverless Architecture (Lambda, Firebase, etc.)", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/migrate-to-the-cloud/serverless-architecture-lambda-firebase-etc", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Automate DevOps & CI/CD",
             link: "/i-want-to-improve-my-online/modernize-my-tech-stack/automate-devops-ci-cd",
-            image: "https://via.placeholder.com/200x120?text=Automate+DevOps+CI/CD",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "DevOps Consulting & Automation", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/automate-devops-ci-cd/devops-consulting-automation", image: "https://via.placeholder.com/200x120?text=DevOps+Consulting" },
-              { name: "CI/CD Pipeline Setup (Jenkins, GitHub Actions, GitLab, etc.)", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/automate-devops-ci-cd/ci-cd-pipeline-setup-jenkins-github-actions-gitlab-etc", image: "https://via.placeholder.com/200x120?text=CI/CD+Pipeline" },
-              { name: "Containerization (Docker,Kubernetes)", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/automate-devops-ci-cd/containerization-docker-kubernetes", image: "https://via.placeholder.com/200x120?text=Containerization" },
-              { name: "Infrastructure as Code (IaC)", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/automate-devops-ci-cd/infrastructure-as-code-iac", image: "https://via.placeholder.com/200x120?text=Infrastructure+as+Code" },
-              { name: "Environment Configuration (staging, production)", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/automate-devops-ci-cd/environment-configuration-staging-production", image: "https://via.placeholder.com/200x120?text=Environment+Configuration" },
+              { name: "DevOps Consulting & Automation", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/automate-devops-ci-cd/devops-consulting-automation", image: "/icons/menuicon.png" },
+              { name: "CI/CD Pipeline Setup (Jenkins, GitHub Actions, GitLab, etc.)", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/automate-devops-ci-cd/ci-cd-pipeline-setup-jenkins-github-actions-gitlab-etc", image: "/icons/menuicon.png" },
+              { name: "Containerization (Docker,Kubernetes)", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/automate-devops-ci-cd/containerization-docker-kubernetes", image: "/icons/menuicon.png" },
+              { name: "Infrastructure as Code (IaC)", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/automate-devops-ci-cd/infrastructure-as-code-iac", image: "/icons/menuicon.png" },
+              { name: "Environment Configuration (staging, production)", link: "/i-want-to-improve-my-online/modernize-my-tech-stack/automate-devops-ci-cd/environment-configuration-staging-production", image: "/icons/menuicon.png" },
             ]
           }
         ]
-
       },
       {
         name: "I Want to Use AI in My Business",
         link: "/i-want-to-improve-my-online/use-ai-in-my-business",
-        image: "https://via.placeholder.com/200x120?text=Use+AI+in+My+Business",
+        image: "/icons/menuicon.png",
         children: [
-          { name: "AI Consulting & Opportunity Mapping", link: "/i-want-to-improve-my-online/use-ai-in-my-business/ai-consulting-opportunity-mapping", image: "https://via.placeholder.com/200x120?text=AI+Consulting" },
-          { name: "Artificial Intelligence Development", link: "/i-want-to-improve-my-online/use-ai-in-my-business/artificial-intelligence-development", image: "https://via.placeholder.com/200x120?text=Artificial+Intelligence" },
-          { name: "Machine Learning Model Development", link: "/i-want-to-improve-my-online/use-ai-in-my-business/machine-learning-model-development", image: "https://via.placeholder.com/200x120?text=Machine+Learning" },
-          { name: "Natural Language Processing (NLP)", link: "/i-want-to-improve-my-online/use-ai-in-my-business/natural-language-processing-nlp", image: "https://via.placeholder.com/200x120?text=Natural+Language+Processing" },
-          { name: "Chatbot Development", link: "/i-want-to-improve-my-online/use-ai-in-my-business/chatbot-development", image: "https://via.placeholder.com/200x120?text=Chatbot" },
-          { name: "Voice AI Integration", link: "/i-want-to-improve-my-online/use-ai-in-my-business/voice-ai-integration", image: "https://via.placeholder.com/200x120?text=Voice+AI" },
-          { name: "AI Integration in Digital Products", link: "/i-want-to-improve-my-online/use-ai-in-my-business/ai-integration-in-digital-products", image: "https://via.placeholder.com/200x120?text=AI+Integration" },
-          { name: "Workflow Automation using AI", link: "/i-want-to-improve-my-online/use-ai-in-my-business/workflow-automation-using-ai", image: "https://via.placeholder.com/200x120?text=Workflow+Automation" },
+          { name: "AI Consulting & Opportunity Mapping", link: "/i-want-to-improve-my-online/use-ai-in-my-business/ai-consulting-opportunity-mapping", image: "/icons/menuicon.png" },
+          { name: "Artificial Intelligence Development", link: "/i-want-to-improve-my-online/use-ai-in-my-business/artificial-intelligence-development", image: "/icons/menuicon.png" },
+          { name: "Machine Learning Model Development", link: "/i-want-to-improve-my-online/use-ai-in-my-business/machine-learning-model-development", image: "/icons/menuicon.png" },
+          { name: "Natural Language Processing (NLP)", link: "/i-want-to-improve-my-online/use-ai-in-my-business/natural-language-processing-nlp", image: "/icons/menuicon.png" },
+          { name: "Chatbot Development", link: "/i-want-to-improve-my-online/use-ai-in-my-business/chatbot-development", image: "/icons/menuicon.png" },
+          { name: "Voice AI Integration", link: "/i-want-to-improve-my-online/use-ai-in-my-business/voice-ai-integration", image: "/icons/menuicon.png" },
+          { name: "AI Integration in Digital Products", link: "/i-want-to-improve-my-online/use-ai-in-my-business/ai-integration-in-digital-products", image: "/icons/menuicon.png" },
+          { name: "Workflow Automation using AI", link: "/i-want-to-improve-my-online/use-ai-in-my-business/workflow-automation-using-ai", image: "/icons/menuicon.png" },
         ]
       },
       {
         name: "I Want to Improve My Brand Reputation",
         link: "/i-want-to-improve-my-online/improve-my-brand-reputation",
-        image: "https://via.placeholder.com/200x120?text=Improve+My+Brand",
+        image: "/icons/menuicon.png",
         children: [
           {
             name: "Monitor Your Brand Online",
             link: "/i-want-to-improve-my-online/improve-my-brand-reputation/monitor-your-brand-online",
-            image: "https://via.placeholder.com/200x120?text=Monitor+Your+Brand",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Social Media Reputation Monitoring", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/monitor-your-brand-online/social-media-reputation-monitoring", image: "https://via.placeholder.com/200x120?text=Social+Media+Reputation+Monitoring" },
-              { name: "Brand Mentions & Sentiment Traking", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/monitor-your-brand-online/brand-mentions-sentiment-traking", image: "https://via.placeholder.com/200x120?text=Brand+Mentions+Sentiment" },
-              { name: "Social Listening", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/monitor-your-brand-online/social-listening", image: "https://via.placeholder.com/200x120?text=Social+Listening" },
-              { name: "Google Alert Integration", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/monitor-your-brand-online/google-alert-integration", image: "https://via.placeholder.com/200x120?text=Google+Alert" },
+              { name: "Social Media Reputation Monitoring", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/monitor-your-brand-online/social-media-reputation-monitoring", image: "/icons/menuicon.png" },
+              { name: "Brand Mentions & Sentiment Traking", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/monitor-your-brand-online/brand-mentions-sentiment-traking", image: "/icons/menuicon.png" },
+              { name: "Social Listening", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/monitor-your-brand-online/social-listening", image: "/icons/menuicon.png" },
+              { name: "Google Alert Integration", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/monitor-your-brand-online/google-alert-integration", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Manage Reviews & Public",
             link: "/i-want-to-improve-my-online/improve-my-brand-reputation/manage-reviews-public",
-            image: "https://via.placeholder.com/200x120?text=Manage+Reviews+Public",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Review Management (Google, Facebook, etc.)", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/manage-reviews-public/review-management-google-facebook-etc", image: "https://via.placeholder.com/200x120?text=Review+Management" },
-              { name: "Reputation Recovery for Negative (PR)", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/manage-reviews-public/reputation-recovery-for-negative-pr", image: "https://via.placeholder.com/200x120?text=Reputation+Recovery" },
-              { name: "Response Management Templates & Systems", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/manage-reviews-public/response-management-templates-systems", image: "https://via.placeholder.com/200x120?text=Response+Management" },
-              { name: "Crisis Management Support", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/manage-reviews-public/crisis-management-support", image: "https://via.placeholder.com/200x120?text=Crisis+Management" },
-              { name: "ORM Reporting (Monthly/Weekly)", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/manage-reviews-public/orm-reporting-monthly-weekly", image: "https://via.placeholder.com/200x120?text=ORM+Reporting" },
+              { name: "Review Management (Google, Facebook, etc.)", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/manage-reviews-public/review-management-google-facebook-etc", image: "/icons/menuicon.png" },
+              { name: "Reputation Recovery for Negative (PR)", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/manage-reviews-public/reputation-recovery-for-negative-pr", image: "/icons/menuicon.png" },
+              { name: "Response Management Templates & Systems", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/manage-reviews-public/response-management-templates-systems", image: "/icons/menuicon.png" },
+              { name: "Crisis Management Support", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/manage-reviews-public/crisis-management-support", image: "/icons/menuicon.png" },
+              { name: "ORM Reporting (Monthly/Weekly)", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/manage-reviews-public/orm-reporting-monthly-weekly", image: "/icons/menuicon.png" },
             ]
-
           },
           {
             name: "Build Executive & Personal",
             link: "/i-want-to-improve-my-online/improve-my-brand-reputation/build-executive-personal",
-            image: "https://via.placeholder.com/200x120?text=Build+Executive+Personal",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "LinkedIn Profile Management", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/build-executive-personal/linkedin-profile-management", image: "https://via.placeholder.com/200x120?text=LinkedIn+Profile+Management" },
-              { name: "Executive Branding Strategy", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/build-executive-personal/executive-branding-strategy", image: "https://via.placeholder.com/200x120?text=Executive+Branding" },
-              { name: "Ghostwriting (LinkedIn, Medium, Twitter)", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/build-executive-personal/ghostwriting-linkedin-medium-twitter", image: "https://via.placeholder.com/200x120?text=Ghostwriting" },
-              { name: "Thought Leadership Content Creation", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/build-executive-personal/thought-leadership-content-creation", image: "https://via.placeholder.com/200x120?text=Thought+Leadership" },
-              { name: "Personal ORM & Identity Protection", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/build-executive-personal/personal-orm-identity-protection", image: "https://via.placeholder.com/200x120?text=Personal+ORM" },
+              { name: "LinkedIn Profile Management", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/build-executive-personal/linkedin-profile-management", image: "/icons/menuicon.png" },
+              { name: "Executive Branding Strategy", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/build-executive-personal/executive-branding-strategy", image: "/icons/menuicon.png" },
+              { name: "Ghostwriting (LinkedIn, Medium, Twitter)", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/build-executive-personal/ghostwriting-linkedin-medium-twitter", image: "/icons/menuicon.png" },
+              { name: "Thought Leadership Content Creation", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/build-executive-personal/thought-leadership-content-creation", image: "/icons/menuicon.png" },
+              { name: "Personal ORM & Identity Protection", link: "/i-want-to-improve-my-online/improve-my-brand-reputation/build-executive-personal/personal-orm-identity-protection", image: "/icons/menuicon.png" },
             ]
           }
-
         ]
       }
     ]
   },
   {
     title: "Company",
+    image: "/icons/menuicon.png",
     items: [
-      { name: "About Us", link: "/about" },
-      { name: "Our Works", link: "/our-works" },
-      { name: "Partners", link: "/partners" },
-      { name: "Our Clients", link: "/our-clients" },
-      { name: "Careers", link: "/careers" },
-      { name: "Blogs", link: "/blogs" }
+      { name: "About Us", link: "/about", image: "/icons/menuicon.png" },
+      { name: "Our Works", link: "/our-works", image: "/icons/menuicon.png" },
+      { name: "Partners", link: "/partners", image: "/icons/menuicon.png" },
+      { name: "Our Clients", link: "/our-clients", image: "/icons/menuicon.png" },
+      { name: "Careers", link: "/careers", image: "/icons/menuicon.png" },
+      { name: "Blogs", link: "/blogs", image: "/icons/menuicon.png" }
     ]
   },
   {
     title: "What We Do",
+    image: "/icons/menuicon.png",
     sections: [
       {
         name: "Development",
         link: "/services/software-development",
+        image: "/icons/menuicon.png",
         children: [
           {
             name: "Software Development Services",
             link: "/services/software-development",
-            image: "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Software Consulting Services", link: "/services/consulting", image: "https://via.placeholder.com/200x120?text=Consulting" },
-              { name: "Custom Software Development", link: "/services/custom-software", image: "https://via.placeholder.com/200x120?text=Custom+Software" },
-              { name: "Software Architecture & Wireframe", link: "/services/architecture", image: "https://via.placeholder.com/200x120?text=Architecture" },
-              { name: "Software Maintenance & Support", link: "/services/maintenance", image: "https://via.placeholder.com/200x120?text=Maintenance" },
-              { name: "Database Development", link: "/services/database", image: "https://via.placeholder.com/200x120?text=Database" },
-              { name: "Enterprise Software Development Services", link: "/services/enterprise", image: "https://via.placeholder.com/200x120?text=Enterprise+Software" }
+              { name: "Software Consulting Services", link: "/services/consulting", image: "/icons/menuicon.png" },
+              { name: "Custom Software Development", link: "/services/custom-software", image: "/icons/menuicon.png" },
+              { name: "Software Architecture & Wireframe", link: "/services/architecture", image: "/icons/menuicon.png" },
+              { name: "Software Maintenance & Support", link: "/services/maintenance", image: "/icons/menuicon.png" },
+              { name: "Database Development", link: "/services/database", image: "/icons/menuicon.png" },
+              { name: "Enterprise Software Development Services", link: "/services/enterprise", image: "/icons/menuicon.png" }
             ]
           },
           {
             name: "Web Development Services",
             link: "/services/web-development-services",
-            image: "https://via.placeholder.com/200x120?text=Web+App",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Web Design Services", link: "/services/web-design", image: "https://via.placeholder.com/200x120?text=Web+Design" },
-              { name: "Ecommerce Web Development", link: "/services/ecommerce", image: "https://via.placeholder.com/200x120?text=Ecommerce" },
-              { name: "Landing Page Development", link: "/services/landing-page", image: "https://via.placeholder.com/200x120?text=Landing+Page" },
-              { name: "Website Revamp Services", link: "/services/website-revamp", image: "https://via.placeholder.com/200x120?text=Revamp" },
-              { name: "Web Maintenance & Support", link: "/services/web-maintenance", image: "https://via.placeholder.com/200x120?text=Web+Maintenance" },
-              { name: "WordPress Web Development", link: "/services/wordpress", image: "https://via.placeholder.com/200x120?text=WordPress" },
-              { name: "Shopify Web Development", link: "/services/shopify", image: "https://via.placeholder.com/200x120?text=Shopify" },
-              { name: "Magento Web Development", link: "/services/magento", image: "https://via.placeholder.com/200x120?text=Magento" }
+              { name: "Web Design Services", link: "/services/web-design", image: "/icons/menuicon.png" },
+              { name: "Ecommerce Web Development", link: "/services/ecommerce", image: "/icons/menuicon.png" },
+              { name: "Landing Page Development", link: "/services/landing-page", image: "/icons/menuicon.png" },
+              { name: "Website Revamp Services", link: "/services/website-revamp", image: "/icons/menuicon.png" },
+              { name: "Web Maintenance & Support", link: "/services/web-maintenance", image: "/icons/menuicon.png" },
+              { name: "WordPress Web Development", link: "/services/wordpress", image: "/icons/menuicon.png" },
+              { name: "Shopify Web Development", link: "/services/shopify", image: "/icons/menuicon.png" },
+              { name: "Magento Web Development", link: "/services/magento", image: "/icons/menuicon.png" }
             ]
           },
           {
             name: "Mobile App Development",
             link: "/services/mobile-app-development",
-            image: "https://via.placeholder.com/200x120?text=Mobile+Dev",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Android App Development", link: "/services/android-app-development", image: "https://via.placeholder.com/200x120?text=Android+App" },
-              { name: "iOS App Development", link: "/services/ios-app-development", image: "https://via.placeholder.com/200x120?text=iOS+App" },
-              { name: "Cross Platform App Development", link: "/services/cross-platform-app-development", image: "https://via.placeholder.com/200x120?text=Cross+Platform+App" },
-              { name: "Hybrid Mobile App Development", link: "/services/hybrid-mobile-app-development", image: "https://via.placeholder.com/200x120?text=Hybrid+Mobile+App" },
-              { name: "App Store Optimization Services", link: "/services/app-store-optimization-services", image: "https://via.placeholder.com/200x120?text=App+Store+Optimization" },
-              { name: "App Maintenance & Support", link: "/services/app-maintenance", image: "https://via.placeholder.com/200x120?text=App+Maintenance" },
+              { name: "Android App Development", link: "/services/android-app-development", image: "/icons/menuicon.png" },
+              { name: "iOS App Development", link: "/services/ios-app-development", image: "/icons/menuicon.png" },
+              { name: "Cross Platform App Development", link: "/services/cross-platform-app-development", image: "/icons/menuicon.png" },
+              { name: "Hybrid Mobile App Development", link: "/services/hybrid-mobile-app-development", image: "/icons/menuicon.png" },
+              { name: "App Store Optimization Services", link: "/services/app-store-optimization-services", image: "/icons/menuicon.png" },
+              { name: "App Maintenance & Support", link: "/services/app-maintenance", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Web Application Development",
             link: "/services/web-application-development",
-            image: "https://via.placeholder.com/200x120?text=Web+App",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "SaaS Development", link: "/services/saas-development", image: "https://via.placeholder.com/200x120?text=SaaS" },
-              { name: "PaaS Development", link: "/services/web-development", image: "https://via.placeholder.com/200x120?text=Web+App" },
-              { name: "Web Portal Development", link: "/services/web-portal-development", image: "https://via.placeholder.com/200x120?text=Web+Portal" },
-              { name: "Progressive Web App (PWA) Development", link: "/services/progressive-web-app-development", image: "https://via.placeholder.com/200x120?text=PWA" },
-              { name: "Enterprise Web App Development", link: "/services/enterprise-web-app-development", image: "https://via.placeholder.com/200x120?text=Enterprise+Web+App" },
-              { name: "Web App Maintenance & Support", link: "/services/web-app-maintenance", image: "https://via.placeholder.com/200x120?text=Web+App+Maintenance" },
+              { name: "SaaS Development", link: "/services/saas-development", image: "/icons/menuicon.png" },
+              { name: "PaaS Development", link: "/services/web-development", image: "/icons/menuicon.png" },
+              { name: "Web Portal Development", link: "/services/web-portal-development", image: "/icons/menuicon.png" },
+              { name: "Progressive Web App (PWA) Development", link: "/services/progressive-web-app-development", image: "/icons/menuicon.png" },
+              { name: "Enterprise Web App Development", link: "/services/enterprise-web-app-development", image: "/icons/menuicon.png" },
+              { name: "Web App Maintenance & Support", link: "/services/web-app-maintenance", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Full Stack Development",
             link: "/services/full-stack-development",
-            image: "https://via.placeholder.com/200x120?text=Full+Stack",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Front-End Development", link: "/services/front-end-development", image: "https://via.placeholder.com/200x120?text=Front+End" },
-              { name: "Back-End Development", link: "/services/back-end-development", image: "https://via.placeholder.com/200x120?text=Back+End" },
+              { name: "Front-End Development", link: "/services/front-end-development", image: "/icons/menuicon.png" },
+              { name: "Back-End Development", link: "/services/back-end-development", image: "/icons/menuicon.png" },
             ]
           },
-          { name: "API Development & Integration", link: "/services/api-development-integration", image: "https://via.placeholder.com/200x120?text=API+Dev" },
-          { name: "CRM Integration", link: "/services/crm-integration", image: "https://via.placeholder.com/200x120?text=CRM" },
-          { name: "UI/UX Design Services", link: "/services/ui-ux-design-services", image: "https://via.placeholder.com/200x120?text=UI+UX" }
-
+          { name: "API Development & Integration", link: "/services/api-development-integration", image: "/icons/menuicon.png" },
+          { name: "CRM Integration", link: "/services/crm-integration", image: "/icons/menuicon.png" },
+          { name: "UI/UX Design Services", link: "/services/ui-ux-design-services", image: "/icons/menuicon.png" }
         ]
       },
       {
-        name: "Branding", link: "/services/branding", image: "https://via.placeholder.com/200x120?text=Branding",
+        name: "Branding",
+        link: "/services/branding",
+        image: "/icons/menuicon.png",
         children: [
           {
             name: "Branding Services",
             link: "/services/branding-services",
-            image: "https://via.placeholder.com/200x120?text=Branding+Services",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Brand Strategy & Positioning", link: "/services/brand-strategy-positioning", image: "https://via.placeholder.com/200x120?text=Brand+Strategy" },
-              { name: "Brand Identity Design", link: "/services/brand-identity-design", image: "https://via.placeholder.com/200x120?text=Brand+Identity" },
-              { name: "Brand Messaging & Copywriting", link: "/services/brand-messaging-copywriting", image: "https://via.placeholder.com/200x120?text=Brand+Messaging" },
-              { name: "Visual Branding & Collateral Design", link: "/services/visual-branding-collateral-design", image: "https://via.placeholder.com/200x120?text=Visual+Branding" },
-              { name: "Rebranding Services", link: "/services/rebranding-services", image: "https://via.placeholder.com/200x120?text=Rebranding" },
-              { name: "Brand Guidelines & Toolkits", link: "/services/brand-guidelines-toolkits", image: "https://via.placeholder.com/200x120?text=Brand+Guidelines" },
-              { name: "Employer Branding", link: "/services/employer-branding", image: "https://via.placeholder.com/200x120?text=Employer+Branding" },
-              { name: "Logo Design", link: "/services/logo-design", image: "https://via.placeholder.com/200x120?text=Logo+Design" },
-              { name: "Packaging & Product Design", link: "/services/packaging-product-design", image: "https://via.placeholder.com/200x120?text=Packaging+Design" },
-              { name: "Go to Market(GTM)", link: "/services/go-to-market-gtm", image: "https://via.placeholder.com/200x120?text=Go+to+Market" },
+              { name: "Brand Strategy & Positioning", link: "/services/brand-strategy-positioning", image: "/icons/menuicon.png" },
+              { name: "Brand Identity Design", link: "/services/brand-identity-design", image: "/icons/menuicon.png" },
+              { name: "Brand Messaging & Copywriting", link: "/services/brand-messaging-copywriting", image: "/icons/menuicon.png" },
+              { name: "Visual Branding & Collateral Design", link: "/services/visual-branding-collateral-design", image: "/icons/menuicon.png" },
+              { name: "Rebranding Services", link: "/services/rebranding-services", image: "/icons/menuicon.png" },
+              { name: "Brand Guidelines & Toolkits", link: "/services/brand-guidelines-toolkits", image: "/icons/menuicon.png" },
+              { name: "Employer Branding", link: "/services/employer-branding", image: "/icons/menuicon.png" },
+              { name: "Logo Design", link: "/services/logo-design", image: "/icons/menuicon.png" },
+              { name: "Packaging & Product Design", link: "/services/packaging-product-design", image: "/icons/menuicon.png" },
+              { name: "Go to Market(GTM)", link: "/services/go-to-market-gtm", image: "/icons/menuicon.png" },
             ]
           }
         ]
       },
       {
-        name: "Consulting", link: "/services/consulting", image: "https://via.placeholder.com/200x120?text=Consulting",
+        name: "Consulting",
+        link: "/services/consulting",
+        image: "/icons/menuicon.png",
         children: [
           {
             name: "Digital Transformation Services",
             link: "/services/digital-transformation-services",
-            image: "https://via.placeholder.com/200x120?text=Digital+Transformation",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Digital Strategy & Roadmap", link: "/services/digital-strategy-roadmap", image: "https://via.placeholder.com/200x120?text=Digital+Strategy" },
-              { name: "Cloud Transformation", link: "/services/cloud-transformation", image: "https://via.placeholder.com/200x120?text=Cloud+Transformation" },
-              { name: "Legacy System Modernization", link: "/services/legacy-system-modernization", image: "https://via.placeholder.com/200x120?text=Legacy+System" },
+              { name: "Digital Strategy & Roadmap", link: "/services/digital-strategy-roadmap", image: "/icons/menuicon.png" },
+              { name: "Cloud Transformation", link: "/services/cloud-transformation", image: "/icons/menuicon.png" },
+              { name: "Legacy System Modernization", link: "/services/legacy-system-modernization", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "IT Consulting Services",
             link: "/services/it-consulting-services",
-            image: "https://via.placeholder.com/200x120?text=IT+Consulting",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "IT Strategy & Planning", link: "/services/it-strategy-planning", image: "https://via.placeholder.com/200x120?text=IT+Strategy" },
-              { name: "IT Talent Consulting", link: "/services/it-talent-consulting", image: "https://via.placeholder.com/200x120?text=IT+Talent" },
-              { name: "IT Operations Optimization", link: "/services/it-operations-optimization", image: "https://via.placeholder.com/200x120?text=IT+Operations" },
+              { name: "IT Strategy & Planning", link: "/services/it-strategy-planning", image: "/icons/menuicon.png" },
+              { name: "IT Talent Consulting", link: "/services/it-talent-consulting", image: "/icons/menuicon.png" },
+              { name: "IT Operations Optimization", link: "/services/it-operations-optimization", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Cybersecurity Services",
             link: "/services/cybersecurity-services",
-            image: "https://via.placeholder.com/200x120?text=Cybersecurity",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Security Assessment", link: "/services/security-assessment", image: "https://via.placeholder.com/200x120?text=Security+Assessment" },
-              { name: "IT Security Audit", link: "/services/it-security-audit", image: "https://via.placeholder.com/200x120?text=IT+Security" },
-              { name: "Security Testing", link: "/services/security-testing", image: "https://via.placeholder.com/200x120?text=Security+Testing" },
-              { name: "Penetration Testing", link: "/services/penetration-testing", image: "https://via.placeholder.com/200x120?text=Penetration+Testing" },
-              { name: "Compliance Assessment", link: "/services/compliance-assessment", image: "https://via.placeholder.com/200x120?text=Compliance+Assessment" },
-              { name: "Managed Security Services", link: "/services/managed-security-services", image: "https://via.placeholder.com/200x120?text=Managed+Security" },
-              { name: "Vulnerability Management", link: "/services/vulnerability-management", image: "https://via.placeholder.com/200x120?text=Vulnerability+Management" },
+              { name: "Security Assessment", link: "/services/security-assessment", image: "/icons/menuicon.png" },
+              { name: "IT Security Audit", link: "/services/it-security-audit", image: "/icons/menuicon.png" },
+              { name: "Security Testing", link: "/services/security-testing", image: "/icons/menuicon.png" },
+              { name: "Penetration Testing", link: "/services/penetration-testing", image: "/icons/menuicon.png" },
+              { name: "Compliance Assessment", link: "/services/compliance-assessment", image: "/icons/menuicon.png" },
+              { name: "Managed Security Services", link: "/services/managed-security-services", image: "/icons/menuicon.png" },
+              { name: "Vulnerability Management", link: "/services/vulnerability-management", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Data Analytics Services",
             link: "/services/data-analytics-services",
-            image: "https://via.placeholder.com/200x120?text=Data+Analytics",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Big Data Analytics", link: "/services/big-data-analytics", image: "https://via.placeholder.com/200x120?text=Big+Data" },
-              { name: "Data Visualization Services", link: "/services/data-visualization-services", image: "https://via.placeholder.com/200x120?text=Data+Visualization" },
+              { name: "Big Data Analytics", link: "/services/big-data-analytics", image: "/icons/menuicon.png" },
+              { name: "Data Visualization Services", link: "/services/data-visualization-services", image: "/icons/menuicon.png" },
             ]
           },
-          { name: "cloud consulting", link: "/services/cloud-consulting", image: "https://via.placeholder.com/200x120?text=Cloud+Consulting" },
-          { name: "Managed Services", link: "/services/managed-services", image: "https://via.placeholder.com/200x120?text=Managed+Services" },
-          { name: "Enterprise Mobility", link: "/services/enterprise-mobility", image: "https://via.placeholder.com/200x120?text=Enterprise+Mobility" },
-          { name: "Data Management", link: "/services/data-management", image: "https://via.placeholder.com/200x120?text=Data+Management" },
-
+          { name: "cloud consulting", link: "/services/cloud-consulting", image: "/icons/menuicon.png" },
+          { name: "Managed Services", link: "/services/managed-services", image: "/icons/menuicon.png" },
+          { name: "Enterprise Mobility", link: "/services/enterprise-mobility", image: "/icons/menuicon.png" },
+          { name: "Data Management", link: "/services/data-management", image: "/icons/menuicon.png" },
         ]
-
       },
       {
         name: "Digital Marketing",
         link: "/services/digital-marketing",
-        image: "https://via.placeholder.com/200x120?text=Marketing",
+        image: "/icons/menuicon.png",
         children: [
           {
             name: "SEO Services",
             link: "/services/digital-marketing-services",
-            image: "https://via.placeholder.com/200x120?text=Digital+Marketing",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Enterptise SEO", link: "/services/enterptise-seo", image: "https://via.placeholder.com/200x120?text=Enterptise+SEO" },
-              { name: "Ecommerce SEO", link: "/services/ecommerce-seo", image: "https://via.placeholder.com/200x120?text=Ecommerce+SEO" },
-              { name: "Local SEO", link: "/services/local-seo", image: "https://via.placeholder.com/200x120?text=Local+SEO" },
-              { name: "International/Multilingual SEO", link: "/services/international-multilingual-seo", image: "https://via.placeholder.com/200x120?text=International+SEO" },
-              { name: "Link Building", link: "/services/link-building-services", image: "https://via.placeholder.com/200x120?text=Link+Building" },
-              { name: "Paid Guest Posting", link: "/services/paid-guest-posting", image: "https://via.placeholder.com/200x120?text=Paid+Guest+Posting" },
-              { name: "AEO optimisation", link: "/services/aeo-optimisation", image: "https://via.placeholder.com/200x120?text=AEO+Optimisation" },
-              { name: "SEO for LLMs", link: "/services/seo-for-llms", image: "https://via.placeholder.com/200x120?text=SEO+for+LLMs" },
-
+              { name: "Enterptise SEO", link: "/services/enterptise-seo", image: "/icons/menuicon.png" },
+              { name: "Ecommerce SEO", link: "/services/ecommerce-seo", image: "/icons/menuicon.png" },
+              { name: "Local SEO", link: "/services/local-seo", image: "/icons/menuicon.png" },
+              { name: "International/Multilingual SEO", link: "/services/international-multilingual-seo", image: "/icons/menuicon.png" },
+              { name: "Link Building", link: "/services/link-building-services", image: "/icons/menuicon.png" },
+              { name: "Paid Guest Posting", link: "/services/paid-guest-posting", image: "/icons/menuicon.png" },
+              { name: "AEO optimisation", link: "/services/aeo-optimisation", image: "/icons/menuicon.png" },
+              { name: "SEO for LLMs", link: "/services/seo-for-llms", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Social Media Marketing",
             link: "/services/social-media-marketing",
-            image: "https://via.placeholder.com/200x120?text=Social+Media+Marketing",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Facebook Marketing", link: "/services/facebook-marketing", image: "https://via.placeholder.com/200x120?text=Facebook+Marketing" },
-              { name: "Instagram Marketing", link: "/services/instagram-marketing", image: "https://via.placeholder.com/200x120?text=Instagram+Marketing" },
-              { name: "Pinterest Marketing", link: "/services/pinterest-marketing", image: "https://via.placeholder.com/200x120?text=Pinterest+Marketing" },
-              { name: "LinkedIn Marketing", link: "/services/linkedin-marketing", image: "https://via.placeholder.com/200x120?text=LinkedIn+Marketing" },
-              { name: "Social Media Management", link: "/services/social-media-management", image: "https://via.placeholder.com/200x120?text=Social+Media+Management" },
-              { name: "Youtube Marketing", link: "/services/youtube-marketing", image: "https://via.placeholder.com/200x120?text=Youtube+Marketing" },
-              { name: "TikTok Marketing", link: "/services/tiktok-marketing", image: "https://via.placeholder.com/200x120?text=TikTok+Marketing" },
+              { name: "Facebook Marketing", link: "/services/facebook-marketing", image: "/icons/menuicon.png" },
+              { name: "Instagram Marketing", link: "/services/instagram-marketing", image: "/icons/menuicon.png" },
+              { name: "Pinterest Marketing", link: "/services/pinterest-marketing", image: "/icons/menuicon.png" },
+              { name: "LinkedIn Marketing", link: "/services/linkedin-marketing", image: "/icons/menuicon.png" },
+              { name: "Social Media Management", link: "/services/social-media-management", image: "/icons/menuicon.png" },
+              { name: "Youtube Marketing", link: "/services/youtube-marketing", image: "/icons/menuicon.png" },
+              { name: "TikTok Marketing", link: "/services/tiktok-marketing", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "PPC Management",
             link: "/services/ppc-management",
-            image: "https://via.placeholder.com/200x120?text=PPC+Management",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Performance Marketing", link: "/services/performance-marketing", image: "https://via.placeholder.com/200x120?text=Performance+Marketing" },
-              { name: "PPC Strategy & Planning", link: "/services/ppc-strategy-planning", image: "https://via.placeholder.com/200x120?text=PPC+Strategy+Planning" },
-              { name: "Meta Advertising Services", link: "/services/meta-advertising-services", image: "https://via.placeholder.com/200x120?text=Meta+Advertising+Services" },
-              { name: "Google Ads Management", link: "/services/google-ads-management", image: "https://via.placeholder.com/200x120?text=Google+Ads+Management" },
-              { name: "TikTok Advertisements", link: "/services/tiktok-advertisements", image: "https://via.placeholder.com/200x120?text=TikTok+Advertisements" },
-              { name: "Pinterest Advertisements", link: "/services/pinterest-advertisements", image: "https://via.placeholder.com/200x120?text=Pinterest+Advertisements" },
-              { name: "Reddit Advertisements", link: "/services/reddit-advertisements", image: "https://via.placeholder.com/200x120?text=Reddit+Advertisements" },
-              { name: "LinkedIn Advertising Services", link: "/services/linkedin-advertising-services", image: "https://via.placeholder.com/200x120?text=LinkedIn+Advertising+Services" },
-              { name: "Marketplace Advertisements", link: "/services/marketplace-advertisements", image: "https://via.placeholder.com/200x120?text=Marketplace+Advertisements" },
-              { name: "Inventory/Media Buying", link: "/services/inventory-media-buying", image: "https://via.placeholder.com/200x120?text=Inventory+Media+Buying" },
-
+              { name: "Performance Marketing", link: "/services/performance-marketing", image: "/icons/menuicon.png" },
+              { name: "PPC Strategy & Planning", link: "/services/ppc-strategy-planning", image: "/icons/menuicon.png" },
+              { name: "Meta Advertising Services", link: "/services/meta-advertising-services", image: "/icons/menuicon.png" },
+              { name: "Google Ads Management", link: "/services/google-ads-management", image: "/icons/menuicon.png" },
+              { name: "TikTok Advertisements", link: "/services/tiktok-advertisements", image: "/icons/menuicon.png" },
+              { name: "Pinterest Advertisements", link: "/services/pinterest-advertisements", image: "/icons/menuicon.png" },
+              { name: "Reddit Advertisements", link: "/services/reddit-advertisements", image: "/icons/menuicon.png" },
+              { name: "LinkedIn Advertising Services", link: "/services/linkedin-advertising-services", image: "/icons/menuicon.png" },
+              { name: "Marketplace Advertisements", link: "/services/marketplace-advertisements", image: "/icons/menuicon.png" },
+              { name: "Inventory/Media Buying", link: "/services/inventory-media-buying", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Programmatic Advertising",
             link: "/services/programmatic-advertising",
-            image: "https://via.placeholder.com/200x120?text=Programmatic+Advertising",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "DV-360 Advertising", link: "/services/dv-360-advertising", image: "https://via.placeholder.com/200x120?text=DV-360+Advertising" },
-              { name: "Search360 Advertising", link: "/services/search360-advertising", image: "https://via.placeholder.com/200x120?text=Search360+Advertising" },
-              { name: "Trade Desk Advertising", link: "/services/trade-desk-advertising", image: "https://via.placeholder.com/200x120?text=Trade+Desk+Advertising" },
+              { name: "DV-360 Advertising", link: "/services/dv-360-advertising", image: "/icons/menuicon.png" },
+              { name: "Search360 Advertising", link: "/services/search360-advertising", image: "/icons/menuicon.png" },
+              { name: "Trade Desk Advertising", link: "/services/trade-desk-advertising", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Content Marketing",
             link: "/services/content-marketing",
-            image: "https://via.placeholder.com/200x120?text=Content+Marketing",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Content Strategy", link: "/services/content-strategy", image: "https://via.placeholder.com/200x120?text=Content+Strategy" },
-              { name: "Content Development", link: "/services/content-development", image: "https://via.placeholder.com/200x120?text=Content+Development" },
-              { name: "Content Creation", link: "/services/content-creation", image: "https://via.placeholder.com/200x120?text=Content+Creation" },
-              { name: "Content Optimization", link: "/services/content-optimization", image: "https://via.placeholder.com/200x120?text=Content+Optimization" },
-              { name: "Content Promotion", link: "/services/content-promotion", image: "https://via.placeholder.com/200x120?text=Content+Promotion" },
-              { name: "Content Reporting", link: "/services/content-reporting", image: "https://via.placeholder.com/200x120?text=Content+Reporting" },
+              { name: "Content Strategy", link: "/services/content-strategy", image: "/icons/menuicon.png" },
+              { name: "Content Development", link: "/services/content-development", image: "/icons/menuicon.png" },
+              { name: "Content Creation", link: "/services/content-creation", image: "/icons/menuicon.png" },
+              { name: "Content Optimization", link: "/services/content-optimization", image: "/icons/menuicon.png" },
+              { name: "Content Promotion", link: "/services/content-promotion", image: "/icons/menuicon.png" },
+              { name: "Content Reporting", link: "/services/content-reporting", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Content Writing",
             link: "/services/content-writing",
-            image: "https://via.placeholder.com/200x120?text=Content+Writing",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Blog Content Writing", link: "/services/blog-content-writing", image: "https://via.placeholder.com/200x120?text=Blog+Content+Writing" },
-              { name: "Listicle Content Writing", link: "/services/listicle-content-writing", image: "https://via.placeholder.com/200x120?text=Listicle+Content+Writing" },
-              { name: "Case Study Writing", link: "/services/case-study-writing", image: "https://via.placeholder.com/200x120?text=Case+Study+Writing" },
-              { name: "SEO Content Writing", link: "/services/seo-content-writing", image: "https://via.placeholder.com/200x120?text=SEO+Content+Writing" },
-              { name: "Social Media Content Writing", link: "/services/social-media-content-writing", image: "https://via.placeholder.com/200x120?text=Social+Media+Content+Writing" },
-              { name: "Email Newsletter Writing", link: "/services/email-newsletter-writing", image: "https://via.placeholder.com/200x120?text=Email+Newsletter+Writing" },
-              { name: "Press Release Writing", link: "/services/press-release-writing", image: "https://via.placeholder.com/200x120?text=Press+Release+Writing" },
+              { name: "Blog Content Writing", link: "/services/blog-content-writing", image: "/icons/menuicon.png" },
+              { name: "Listicle Content Writing", link: "/services/listicle-content-writing", image: "/icons/menuicon.png" },
+              { name: "Case Study Writing", link: "/services/case-study-writing", image: "/icons/menuicon.png" },
+              { name: "SEO Content Writing", link: "/services/seo-content-writing", image: "/icons/menuicon.png" },
+              { name: "Social Media Content Writing", link: "/services/social-media-content-writing", image: "/icons/menuicon.png" },
+              { name: "Email Newsletter Writing", link: "/services/email-newsletter-writing", image: "/icons/menuicon.png" },
+              { name: "Press Release Writing", link: "/services/press-release-writing", image: "/icons/menuicon.png" },
             ]
-
           },
           {
             name: "Online Reputation Management",
             link: "/services/online-reputation-management",
-            image: "https://via.placeholder.com/200x120?text=Online+Reputation+Management",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Social Media Reputation Monitoring", link: "/services/social-media-reputation-monitoring", image: "https://via.placeholder.com/200x120?text=Social+Media+Reputation+Monitoring" },
-              { name: "Personal Reputation Management", link: "/services/personal-reputation-management", image: "https://via.placeholder.com/200x120?text=Personal+Reputation+Management" },
-              { name: "LinkedIn Profile Management", link: "/services/linkedin-profile-management", image: "https://via.placeholder.com/200x120?text=LinkedIn+Profile+Management" },
-              { name: "Brand Monitoring & Reporting", link: "/services/brand-monitoring-reporting", image: "https://via.placeholder.com/200x120?text=Brand+Monitoring+Reporting" },
-              { name: "Review Management", link: "/services/review-management", image: "https://via.placeholder.com/200x120?text=Review+Management" },
-              { name: "Social listening", link: "/services/social-listening", image: "https://via.placeholder.com/200x120?text=Social+listening" },
+              { name: "Social Media Reputation Monitoring", link: "/services/social-media-reputation-monitoring", image: "/icons/menuicon.png" },
+              { name: "Personal Reputation Management", link: "/services/personal-reputation-management", image: "/icons/menuicon.png" },
+              { name: "LinkedIn Profile Management", link: "/services/linkedin-profile-management", image: "/icons/menuicon.png" },
+              { name: "Brand Monitoring & Reporting", link: "/services/brand-monitoring-reporting", image: "/icons/menuicon.png" },
+              { name: "Review Management", link: "/services/review-management", image: "/icons/menuicon.png" },
+              { name: "Social listening", link: "/services/social-listening", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Marketing Automation",
             link: "/services/marketing-automation",
-            image: "https://via.placeholder.com/200x120?text=Marketing+Automation",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Email Marketing", link: "/services/email-marketing", image: "https://via.placeholder.com/200x120?text=Email+Marketing" },
-              { name: "WhatsApp Marketing", link: "/services/whatsapp-marketing", image: "https://via.placeholder.com/200x120?text=WhatsApp+Marketing" },
+              { name: "Email Marketing", link: "/services/email-marketing", image: "/icons/menuicon.png" },
+              { name: "WhatsApp Marketing", link: "/services/whatsapp-marketing", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "Tool-Based Marketing Automation",
             link: "/services/tool-based-marketing-automation",
-            image: "https://via.placeholder.com/200x120?text=Tool-Based+Marketing+Automation",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "HubSpot Marketing Hub", link: "/services/hubspot-marketing-hub", image: "https://via.placeholder.com/200x120?text=HubSpot+Marketing+Hub" },
-              { name: "ActiveCampaign", link: "/services/activecampaign", image: "https://via.placeholder.com/200x120?text=ActiveCampaign" },
-              { name: "Marketo Engage (by Adobe)", link: "/services/marketo-engage", image: "https://via.placeholder.com/200x120?text=Marketo+Engage" },
-              { name: "Salesforce Marketing Cloud", link: "/services/salesforce-marketing-cloud", image: "https://via.placeholder.com/200x120?text=Salesforce+Marketing+Cloud" },
-              { name: "Microsoft Dynamics 365", link: "/services/microsoft-dynamics-365", image: "https://via.placeholder.com/200x120?text=Microsoft+Dynamics+365" },
-              { name: "Omnisend", link: "/services/omnisend", image: "https://via.placeholder.com/200x120?text=Omnisend" },
-              { name: "MoEngage", link: "/services/moengage", image: "https://via.placeholder.com/200x120?text=MoEngage" },
-              { name: "Oracle Eloqua Marketing Automation", link: "/services/oracle-eloqua-marketing-automation", image: "https://via.placeholder.com/200x120?text=Oracle+Eloqua" },
-              { name: "Zoho CRM", link: "/services/zoho-crm", image: "https://via.placeholder.com/200x120?text=Zoho+CRM" },
-              { name: "Brevo", link: "/services/brevo", image: "https://via.placeholder.com/200x120?text=Brevo" },
+              { name: "HubSpot Marketing Hub", link: "/services/hubspot-marketing-hub", image: "/icons/menuicon.png" },
+              { name: "ActiveCampaign", link: "/services/activecampaign", image: "/icons/menuicon.png" },
+              { name: "Marketo Engage (by Adobe)", link: "/services/marketo-engage", image: "/icons/menuicon.png" },
+              { name: "Salesforce Marketing Cloud", link: "/services/salesforce-marketing-cloud", image: "/icons/menuicon.png" },
+              { name: "Microsoft Dynamics 365", link: "/services/microsoft-dynamics-365", image: "/icons/menuicon.png" },
+              { name: "Omnisend", link: "/services/omnisend", image: "/icons/menuicon.png" },
+              { name: "MoEngage", link: "/services/moengage", image: "/icons/menuicon.png" },
+              { name: "Oracle Eloqua Marketing Automation", link: "/services/oracle-eloqua-marketing-automation", image: "/icons/menuicon.png" },
+              { name: "Zoho CRM", link: "/services/zoho-crm", image: "/icons/menuicon.png" },
+              { name: "Brevo", link: "/services/brevo", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "B2B Marketing",
             link: "/services/b2b-marketing",
-            image: "https://via.placeholder.com/200x120?text=B2B+Marketing",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Account-Based Marketing (ABM)", link: "/services/account-based-marketing", image: "https://via.placeholder.com/200x120?text=Account-Based+Marketing" },
-              { name: "B2B Lead Generation", link: "/services/b2b-lead-generation", image: "https://via.placeholder.com/200x120?text=B2B+Lead+Generation" },
-              { name: "Social Media For B2B", link: "/services/social-media-for-b2b", image: "https://via.placeholder.com/200x120?text=Social+Media+For+B2B" },
-              { name: "B2B Content Marketing", link: "/services/b2b-content-marketing", image: "https://via.placeholder.com/200x120?text=B2B+Content+Marketing" },
-              { name: "Performance & Paid Media for B2B", link: "/services/performance-paid-media-for-b2b", image: "https://via.placeholder.com/200x120?text=Performance+Paid+Media+for+B2B" },
+              { name: "Account-Based Marketing (ABM)", link: "/services/account-based-marketing", image: "/icons/menuicon.png" },
+              { name: "B2B Lead Generation", link: "/services/b2b-lead-generation", image: "/icons/menuicon.png" },
+              { name: "Social Media For B2B", link: "/services/social-media-for-b2b", image: "/icons/menuicon.png" },
+              { name: "B2B Content Marketing", link: "/services/b2b-content-marketing", image: "/icons/menuicon.png" },
+              { name: "Performance & Paid Media for B2B", link: "/services/performance-paid-media-for-b2b", image: "/icons/menuicon.png" },
             ]
           },
           {
             name: "B2C Marketing",
             link: "/services/b2c-marketing",
-            image: "https://via.placeholder.com/200x120?text=B2C+Marketing",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Conversion Rate Optimization (CRO)", link: "/services/conversion-rate-optimization", image: "https://via.placeholder.com/200x120?text=Conversion+Rate+Optimization" },
-              { name: "Ecommerce Growth Marketing", link: "/services/ecommerce-growth-marketing", image: "https://via.placeholder.com/200x120?text=Ecommerce+Growth+Marketing" },
-              { name: "SEO For B2C", link: "/services/seo-for-b2c", image: "https://via.placeholder.com/200x120?text=SEO+For+B2C" },
-              { name: "Social Media For B2C", link: "/services/social-media-for-b2c", image: "https://via.placeholder.com/200x120?text=Social+Media+For+B2C" },
-              { name: "Performance Marketing for B2C", link: "/services/performance-marketing-for-b2c", image: "https://via.placeholder.com/200x120?text=Performance+Marketing+for+B2C" },
+              { name: "Conversion Rate Optimization (CRO)", link: "/services/conversion-rate-optimization", image: "/icons/menuicon.png" },
+              { name: "Ecommerce Growth Marketing", link: "/services/ecommerce-growth-marketing", image: "/icons/menuicon.png" },
+              { name: "SEO For B2C", link: "/services/seo-for-b2c", image: "/icons/menuicon.png" },
+              { name: "Social Media For B2C", link: "/services/social-media-for-b2c", image: "/icons/menuicon.png" },
+              { name: "Performance Marketing for B2C", link: "/services/performance-marketing-for-b2c", image: "/icons/menuicon.png" },
             ]
           }
-
-
         ]
-
-
       },
       {
-        name: "Creative & Media Production", link: "/services/creative-media", image: "https://via.placeholder.com/200x120?text=Media",
+        name: "Creative & Media Production",
+        link: "/services/creative-media",
+        image: "/icons/menuicon.png",
         children: [
           {
-            name: "Video Production", link: "/services/video-production", image: "https://via.placeholder.com/200x120?text=Video",
+            name: "Video Production",
+            link: "/services/video-production",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Corporate Video", link: "/services/corporate-video", image: "https://via.placeholder.com/200x120?text=Corporate+Video" },
-              { name: "Podcast Production", link: "/services/podcast-production", image: "https://via.placeholder.com/200x120?text=Podcast" },
-              { name: "Explainer Video", link: "/services/explainer-video", image: "https://via.placeholder.com/200x120?text=Explainer+Video" },
-              { name: "E Learning Video", link: "/services/e-learning-video", image: "https://via.placeholder.com/200x120?text=E-Learning+Video" },
-              { name: "Marketing Video", link: "/services/marketing-video", image: "https://via.placeholder.com/200x120?text=Marketing+Video" },
-              { name: "Video Editing Services", link: "/services/video-editing-services", image: "https://via.placeholder.com/200x120?text=Video+Editing" },
-              { name: "Animation Video", link: "/services/animation-video", image: "https://via.placeholder.com/200x120?text=Animation+Video" },
+              { name: "Corporate Video", link: "/services/corporate-video", image: "/icons/menuicon.png" },
+              { name: "Podcast Production", link: "/services/podcast-production", image: "/icons/menuicon.png" },
+              { name: "Explainer Video", link: "/services/explainer-video", image: "/icons/menuicon.png" },
+              { name: "E Learning Video", link: "/services/e-learning-video", image: "/icons/menuicon.png" },
+              { name: "Marketing Video", link: "/services/marketing-video", image: "/icons/menuicon.png" },
+              { name: "Video Editing Services", link: "/services/video-editing-services", image: "/icons/menuicon.png" },
+              { name: "Animation Video", link: "/services/animation-video", image: "/icons/menuicon.png" },
             ]
           },
           {
-            name: "Photography", link: "/services/photography", image: "https://via.placeholder.com/200x120?text=Photography",
+            name: "Photography",
+            link: "/services/photography",
+            image: "/icons/menuicon.png",
             children: [
-              { name: "Corporate Photography", link: "/services/corporate-photography", image: "https://via.placeholder.com/200x120?text=Corporate+Photography" },
-              { name: "Ecommerce Photography", link: "/services/ecommerce-photography", image: "https://via.placeholder.com/200x120?text=Ecommerce+Photography" },
-              { name: "Food Photography", link: "/services/food-photography", image: "https://via.placeholder.com/200x120?text=Food+Photography" },
-              { name: "Fashion Photography", link: "/services/fashion-photography", image: "https://via.placeholder.com/200x120?text=Fashion+Photography" },
-              { name: "Architecural Photography", link: "/services/architecural-photography", image: "https://via.placeholder.com/200x120?text=Architecural+Photography" },
-              { name: "Event Photography", link: "/services/event-photography", image: "https://via.placeholder.com/200x120?text=Event+Photography" },
-              { name: "Drone Photography", link: "/services/drone-photography", image: "https://via.placeholder.com/200x120?text=Drone+Photography" },
+              { name: "Corporate Photography", link: "/services/corporate-photography", image: "/icons/menuicon.png" },
+              { name: "Ecommerce Photography", link: "/services/ecommerce-photography", image: "/icons/menuicon.png" },
+              { name: "Food Photography", link: "/services/food-photography", image: "/icons/menuicon.png" },
+              { name: "Fashion Photography", link: "/services/fashion-photography", image: "/icons/menuicon.png" },
+              { name: "Architecural Photography", link: "/services/architecural-photography", image: "/icons/menuicon.png" },
+              { name: "Event Photography", link: "/services/event-photography", image: "/icons/menuicon.png" },
+              { name: "Drone Photography", link: "/services/drone-photography", image: "/icons/menuicon.png" },
             ]
           },
         ]
@@ -665,105 +670,116 @@ export const menuData = [
   },
   {
     title: "Who We Help",
+    image: "/icons/menuicon.png",
     sections: [
       {
-        name: "Local Businesses", link: "/who-we-help/local-businesses",
+        name: "Local Businesses",
+        link: "/who-we-help/local-businesses",
+        image: "/icons/menuicon.png",
         children: [
-          { name: "Local SEO Services", link: "/who-we-help/ocal-businesses/local-seo-services" },
-          { name: "GMB Profile Setup & Management", link: "/who-we-help/local-businesses/gmb-profile-setup-management" },
-          { name: "Review & Rating Monitoring", link: "/who-we-help/local-businesses/review-rating-monitoring" },
-          { name: "Local Event Marketing", link: "/who-we-help/local-businesses/local-event-marketing" },
-          { name: "Landing Page Development", link: "/who-we-help/local-businesses/landing-page-development" },
+          { name: "Local SEO Services", link: "/who-we-help/ocal-businesses/local-seo-services", image: "/icons/menuicon.png" },
+          { name: "GMB Profile Setup & Management", link: "/who-we-help/local-businesses/gmb-profile-setup-management", image: "/icons/menuicon.png" },
+          { name: "Review & Rating Monitoring", link: "/who-we-help/local-businesses/review-rating-monitoring", image: "/icons/menuicon.png" },
+          { name: "Local Event Marketing", link: "/who-we-help/local-businesses/local-event-marketing", image: "/icons/menuicon.png" },
+          { name: "Landing Page Development", link: "/who-we-help/local-businesses/landing-page-development", image: "/icons/menuicon.png" },
         ]
       },
       {
         name: "Startups",
         link: "/who-we-help/startups",
+        image: "/icons/menuicon.png",
         children: [
-          { name: "Branding Services", link: "/who-we-help/startups/branding-services" },
-          { name: "Web Development Services", link: "/who-we-help/startups/web-development-services" },
-          { name: "Digital Marketing Services", link: "/who-we-help/startups/digital-marketing-services" },
-          { name: "Marketing Automation", link: "/technologies/startups/marketing-automation" },
-          { name: "Web App Development", link: "/technologies/startups/web-app-development" },
+          { name: "Branding Services", link: "/who-we-help/startups/branding-services", image: "/icons/menuicon.png" },
+          { name: "Web Development Services", link: "/who-we-help/startups/web-development-services", image: "/icons/menuicon.png" },
+          { name: "Digital Marketing Services", link: "/who-we-help/startups/digital-marketing-services", image: "/icons/menuicon.png" },
+          { name: "Marketing Automation", link: "/technologies/startups/marketing-automation", image: "/icons/menuicon.png" },
+          { name: "Web App Development", link: "/technologies/startups/web-app-development", image: "/icons/menuicon.png" },
         ]
       },
       {
-        name: "Ecommerce Stores", link: "/who-we-help/ecommerce-stores",
+        name: "Ecommerce Stores",
+        link: "/who-we-help/ecommerce-stores",
+        image: "/icons/menuicon.png",
         children: [
-          { name: "Ecommerce SEO Services", link: "/who-we-help/ecommerce-stores/ecommerce-seo-services" },
-          { name: "Performance Marketing", link: "/who-we-help/ecommerce-stores/performance-marketing" },
-          { name: "Meta Shopping Ads", link: "/who-we-help/ecommerce-stores/meta-shopping-ads" },
-          { name: "Google Shopping Ads", link: "/who-we-help/ecommerce-stores/google-shopping-ads" },
-          { name: "CRO for Ecommerce", link: "/who-we-help/ecommerce-stores/cro-for-ecommerce" },
-          { name: "Ecommerce Website Development", link: "/who-we-help/ecommerce-stores/ecommerce-website-development" },
-          { name: "WhatsApp Marketing", link: "/who-we-help/ecommerce-stores/whatsapp-marketing" },
-          { name: "Marketing Automation", link: "/who-we-help/ecommerce-stores/marketing-automation" },
-          { name: "Email Marketing", link: "/who-we-help/ecommerce-stores/email-marketing" },
+          { name: "Ecommerce SEO Services", link: "/who-we-help/ecommerce-stores/ecommerce-seo-services", image: "/icons/menuicon.png" },
+          { name: "Performance Marketing", link: "/who-we-help/ecommerce-stores/performance-marketing", image: "/icons/menuicon.png" },
+          { name: "Meta Shopping Ads", link: "/who-we-help/ecommerce-stores/meta-shopping-ads", image: "/icons/menuicon.png" },
+          { name: "Google Shopping Ads", link: "/who-we-help/ecommerce-stores/google-shopping-ads", image: "/icons/menuicon.png" },
+          { name: "CRO for Ecommerce", link: "/who-we-help/ecommerce-stores/cro-for-ecommerce", image: "/icons/menuicon.png" },
+          { name: "Ecommerce Website Development", link: "/who-we-help/ecommerce-stores/ecommerce-website-development", image: "/icons/menuicon.png" },
+          { name: "WhatsApp Marketing", link: "/who-we-help/ecommerce-stores/whatsapp-marketing", image: "/icons/menuicon.png" },
+          { name: "Marketing Automation", link: "/who-we-help/ecommerce-stores/marketing-automation", image: "/icons/menuicon.png" },
+          { name: "Email Marketing", link: "/who-we-help/ecommerce-stores/email-marketing", image: "/icons/menuicon.png" },
         ]
       },
       {
-        name: "SaaS Businesses", link: "/who-we-help/saas-businesses",
+        name: "SaaS Businesses",
+        link: "/who-we-help/saas-businesses",
+        image: "/icons/menuicon.png",
         children: [
-          { name: "SaaS Web App Development", link: "/who-we-help/saas-businesses/saas-web-app-development" },
-          { name: "UI/UX for SaaS Products", link: "/who-we-help/saas-businesses/ui-ux-for-saas-products" },
-          { name: "API Development & Integration", link: "/who-we-help/saas-businesses/api-development-integration" },
-          { name: "SEO for SaaS Products", link: "/who-we-help/saas-businesses/seo-for-saas-products" },
-          { name: "Performance Marketing for SaaS Products", link: "/who-we-help/saas-businesses/performance-marketing-for-saas-products" },
-          { name: "Marketing Automation", link: "/who-we-help/saas-businesses/marketing-automation" },
+          { name: "SaaS Web App Development", link: "/who-we-help/saas-businesses/saas-web-app-development", image: "/icons/menuicon.png" },
+          { name: "UI/UX for SaaS Products", link: "/who-we-help/saas-businesses/ui-ux-for-saas-products", image: "/icons/menuicon.png" },
+          { name: "API Development & Integration", link: "/who-we-help/saas-businesses/api-development-integration", image: "/icons/menuicon.png" },
+          { name: "SEO for SaaS Products", link: "/who-we-help/saas-businesses/seo-for-saas-products", image: "/icons/menuicon.png" },
+          { name: "Performance Marketing for SaaS Products", link: "/who-we-help/saas-businesses/performance-marketing-for-saas-products", image: "/icons/menuicon.png" },
+          { name: "Marketing Automation", link: "/who-we-help/saas-businesses/marketing-automation", image: "/icons/menuicon.png" },
         ]
       },
       {
-        name: "Enterprises", link: "/who-we-help/enterprises",
+        name: "Enterprises",
+        link: "/who-we-help/enterprises",
+        image: "/icons/menuicon.png",
         children: [
-          { name: "Cloud Transformation (AWS, Azure, GCP)", link: "/who-we-help/enterprises/cloud-transformation" },
-          { name: "Machine Learning & Predictive Analytics (ML)", link: "/technologies/machine-learning-predictive-analytics" },
-          { name: "Enterprise CRM & ERP Integration", link: "/who-we-help/enterprises/enterprise-crm-erp-integration" },
-          { name: "Cybersecurity Services (Audit, PenTest, MSS)", link: "/technologies/cybersecurity-services" },
-          { name: "ABM & B2B Lead Generation", link: "/who-we-help/enterprises/abm-b2b-lead-generation" },
-          { name: "DevOps & CI/CD Setup", link: "/who-we-help/enterprises/devops-ci-cd-setup" },
-          { name: "AI & Machine Learning Development", link: "/who-we-help/enterprises/ai-machine-learning-development" },
-          { name: "Marketing Automation", link: "/who-we-help/enterprises/marketing-automation" },
-          { name: "Global SEO Strategy", link: "/who-we-help/enterprises/global-seo-strategy" },
+          { name: "Cloud Transformation (AWS, Azure, GCP)", link: "/who-we-help/enterprises/cloud-transformation", image: "/icons/menuicon.png" },
+          { name: "Machine Learning & Predictive Analytics (ML)", link: "/technologies/machine-learning-predictive-analytics", image: "/icons/menuicon.png" },
+          { name: "Enterprise CRM & ERP Integration", link: "/who-we-help/enterprises/enterprise-crm-erp-integration", image: "/icons/menuicon.png" },
+          { name: "Cybersecurity Services (Audit, PenTest, MSS)", link: "/technologies/cybersecurity-services", image: "/icons/menuicon.png" },
+          { name: "ABM & B2B Lead Generation", link: "/who-we-help/enterprises/abm-b2b-lead-generation", image: "/icons/menuicon.png" },
+          { name: "DevOps & CI/CD Setup", link: "/who-we-help/enterprises/devops-ci-cd-setup", image: "/icons/menuicon.png" },
+          { name: "AI & Machine Learning Development", link: "/who-we-help/enterprises/ai-machine-learning-development", image: "/icons/menuicon.png" },
+          { name: "Marketing Automation", link: "/who-we-help/enterprises/marketing-automation", image: "/icons/menuicon.png" },
+          { name: "Global SEO Strategy", link: "/who-we-help/enterprises/global-seo-strategy", image: "/icons/menuicon.png" },
         ]
       }
     ]
   },
   {
     title: "Industries",
+    image: "/icons/menuicon.png",
     items: [
-      { name: "E-commerce", link: "/industries/ecommerce" },
-      { name: "Healthcare", link: "/industries/healthcare" },
-      { name: "Education & E-learning", link: "/industries/education-e-learning" },
-      { name: "Real Estate", link: "/industries/real-estate" },
-      { name: "Finance & Banking", link: "/industries/finance-banking" },
-      { name: "Hospitality & Tourism", link: "/industries/hospitality-tourism" },
-      { name: "Automotive", link: "/industries/automotive" },
-      { name: "Media & Entertainment", link: "/industries/media-entertainment" },
-      { name: "Manufacturing & Industrial", link: "/industries/manufacturing-industrial" },
-      { name: "Fashion & Apparel", link: "/industries/fashion-apparel" },
-      { name: "Technology & SaaS", link: "/industries/technology-saas" },
-      { name: "Logistics & Supply Chain", link: "/industries/logistics-supply-chain" },
-      { name: "Telecommunications", link: "/industries/telecommunications" },
-      { name: "Legal Services", link: "/industries/legal" },
-      { name: "Beauty Wellness & Fitness", link: "/industries/beauty-wellness-fitness" },
-      { name: "Non-Profit & NGOs", link: "/industries/non-profit-ngos" },
-      { name: "Food & Beverages", link: "/industries/food-beverage" },
-      { name: "Home Decor & Interior Design", link: "/industries/home-decor-interior-design" },
-      { name: "Government & Public Sector", link: "/industries/government-public-sector" },
-      { name: "Energy & Utilities", link: "/industries/energy-utilities" },
-      { name: "Insurance", link: "/industries/insurance" },
-      { name: "Gaming & Esports", link: "/industries/gaming-esports" },
-      { name: "Events & Exhibitions", link: "/industries/events-exhibitions" },
-      { name: "Agriculture & AgroTech", link: "/industries/agriculture-agrotech" },
-      { name: "Crypto & Blockchain", link: "/industries/crypto-blockchain" },
-      { name: "Pet Care & Veterinary", link: "/industries/pet-care-veterinary" },
-      { name: "Renewable Energy", link: "/industries/renewable-energy" },
-      { name: "Green & Sustainable Brands", link: "/industries/green-sustainable-brands" },
+      { name: "E-commerce", link: "/industries/ecommerce", image: "/icons/menuicon.png" },
+      { name: "Healthcare", link: "/industries/healthcare", image: "/icons/menuicon.png" },
+      { name: "Education & E-learning", link: "/industries/education-e-learning", image: "/icons/menuicon.png" },
+      { name: "Real Estate", link: "/industries/real-estate", image: "/icons/menuicon.png" },
+      { name: "Finance & Banking", link: "/industries/finance-banking", image: "/icons/menuicon.png" },
+      { name: "Hospitality & Tourism", link: "/industries/hospitality-tourism", image: "/icons/menuicon.png" },
+      { name: "Automotive", link: "/industries/automotive", image: "/icons/menuicon.png" },
+      { name: "Media & Entertainment", link: "/industries/media-entertainment", image: "/icons/menuicon.png" },
+      { name: "Manufacturing & Industrial", link: "/industries/manufacturing-industrial", image: "/icons/menuicon.png" },
+      { name: "Fashion & Apparel", link: "/industries/fashion-apparel", image: "/icons/menuicon.png" },
+      { name: "Technology & SaaS", link: "/industries/technology-saas", image: "/icons/menuicon.png" },
+      { name: "Logistics & Supply Chain", link: "/industries/logistics-supply-chain", image: "/icons/menuicon.png" },
+      { name: "Telecommunications", link: "/industries/telecommunications", image: "/icons/menuicon.png" },
+      { name: "Legal Services", link: "/industries/legal", image: "/icons/menuicon.png" },
+      { name: "Beauty Wellness & Fitness", link: "/industries/beauty-wellness-fitness", image: "/icons/menuicon.png" },
+      { name: "Non-Profit & NGOs", link: "/industries/non-profit-ngos", image: "/icons/menuicon.png" },
+      { name: "Food & Beverages", link: "/industries/food-beverage", image: "/icons/menuicon.png" },
+      { name: "Home Decor & Interior Design", link: "/industries/home-decor-interior-design", image: "/icons/menuicon.png" },
+      { name: "Government & Public Sector", link: "/industries/government-public-sector", image: "/icons/menuicon.png" },
+      { name: "Energy & Utilities", link: "/industries/energy-utilities", image: "/icons/menuicon.png" },
+      { name: "Insurance", link: "/industries/insurance", image: "/icons/menuicon.png" },
+      { name: "Gaming & Esports", link: "/industries/gaming-esports", image: "/icons/menuicon.png" },
+      { name: "Events & Exhibitions", link: "/industries/events-exhibitions", image: "/icons/menuicon.png" },
+      { name: "Agriculture & AgroTech", link: "/industries/agriculture-agrotech", image: "/icons/menuicon.png" },
+      { name: "Crypto & Blockchain", link: "/industries/crypto-blockchain", image: "/icons/menuicon.png" },
+      { name: "Pet Care & Veterinary", link: "/industries/pet-care-veterinary", image: "/icons/menuicon.png" },
+      { name: "Renewable Energy", link: "/industries/renewable-energy", image: "/icons/menuicon.png" },
+      { name: "Green & Sustainable Brands", link: "/industries/green-sustainable-brands", image: "/icons/menuicon.png" },
     ]
   }
 ];
 
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 
 const HeaderMenu = ({ mobileMenuOpen }) => {
@@ -775,6 +791,52 @@ const HeaderMenu = ({ mobileMenuOpen }) => {
     currentSection: null,
     currentSubItem: null
   });
+  // scrollicon show hide 
+// scroll icon show hide 
+// scroll icon show hide 
+const dropdownRef = useRef(null);
+const [showScrollIndicator, setShowScrollIndicator] = useState(false);
+const [userHasScrolled, setUserHasScrolled] = useState(false);
+
+useEffect(() => {
+  const el = dropdownRef.current;
+  if (!el) return;
+
+  const checkScroll = () => {
+    const isScrollable = el.scrollHeight > el.clientHeight;
+    const isAtBottom = el.scrollHeight - el.scrollTop <= el.clientHeight + 2;
+    
+    // Only show indicator if scrollable, not at bottom, and user hasn't scrolled yet
+    setShowScrollIndicator(isScrollable && !isAtBottom && !userHasScrolled);
+  };
+
+  const handleScrollStart = () => {
+    setUserHasScrolled(true);
+  };
+
+  // Initial check and setup observer for content changes
+  checkScroll();
+  
+  const resizeObserver = new ResizeObserver(checkScroll);
+  resizeObserver.observe(el);
+  
+  el.addEventListener("scroll", checkScroll);
+  el.addEventListener("scroll", handleScrollStart); // Add scroll start listener
+  window.addEventListener("resize", checkScroll);
+
+  return () => {
+    resizeObserver.disconnect();
+    el.removeEventListener("scroll", checkScroll);
+    el.removeEventListener("scroll", handleScrollStart);
+    window.removeEventListener("resize", checkScroll);
+  };
+}, [hoveredMenuIndex, userHasScrolled]); // Add userHasScrolled to dependencies
+
+// Reset userHasScrolled when menu changes
+useEffect(() => {
+  setUserHasScrolled(false);
+}, [hoveredMenuIndex]);
+// scrollicon show hide 
 
   const handleMenuHover = (index, menu) => {
     if (!mobileMenuOpen) {
@@ -889,7 +951,7 @@ const HeaderMenu = ({ mobileMenuOpen }) => {
                               // }
                             }}
                           >
-                                                        <div dangerouslySetInnerHTML={{__html: section.name}} />
+                            <div dangerouslySetInnerHTML={{ __html: section.name }} />
 
                           </a>
                           {section.children && (
@@ -986,14 +1048,16 @@ const HeaderMenu = ({ mobileMenuOpen }) => {
               <div className="navTitle">
                 {menu.title} <ChevronDown size={16} />
               </div>
-              
+
 
               {hoveredMenuIndex === index && (
-                <div className={`dropdown ${menu.title === "I Want To…" ? "translateX-32" : ""}`}>
+                <div className={`dropdown ${menu.title === "I Want To…" ? "translateX-32" : ""}`} ref={dropdownRef}>
                   {menu.items ? (
                     menu.items.map((item, idx) => (
                       <a key={idx} href={item.link} className="dropdownItem">
-                        {item.name}
+                        <div className='flex items-center gap-4'>
+                          {item.name}
+                        </div>
                       </a>
                     ))
                   ) : (
@@ -1010,8 +1074,12 @@ const HeaderMenu = ({ mobileMenuOpen }) => {
                             className={`dropdownItem st1column ${hoveredSection?.name === section.name ? "active-link" : ""
                               }`}
                           >
-                            
-                            <div dangerouslySetInnerHTML={{__html: section.name}} />
+
+                            <div className='flex items-center gap-4'>
+                             
+                              <div dangerouslySetInnerHTML={{ __html: section.name }} />
+                            </div>
+
                           </a>
                         ))}
                       </div>
@@ -1026,7 +1094,11 @@ const HeaderMenu = ({ mobileMenuOpen }) => {
                               className={`dropdownItem ${hoveredSubItem?.name === child.name ? "active-link" : ""
                                 }`}
                             >
-                              {child.name}
+                              <div className='flex items-center gap-4'>
+                                
+                                <div dangerouslySetInnerHTML={{ __html: child.name }} />
+                              </div>
+
                             </a>
                           ))}
                         </div>
@@ -1042,23 +1114,19 @@ const HeaderMenu = ({ mobileMenuOpen }) => {
                               className={`dropdownItem ${hoveredSubItem?.name === subChild.name ? "active-link" : ""
                                 }`}
                             >
-                              {subChild.name}
+                              <div className='flex items-center gap-4'>
+                               
+                                <div dangerouslySetInnerHTML={{ __html: subChild.name }} />
+                              </div>
                             </a>
                           ))}
                         </div>
                       )}
 
-                      {hoveredSubItem?.image && (
-                        <div className="dropdownSection dropdownImage">
-                          <img
-                            src={hoveredSubItem.image}
-                            alt={hoveredSubItem.name}
-                            className="menuPreviewImage"
-                          />
-                        </div>
-                      )}
+
                     </div>
                   )}
+                 {showScrollIndicator && <div className="scrollIndicator">↓</div>}
                 </div>
               )}
             </div>

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, Menu } from 'lucide-react';
 import HeaderMenu from './HeaderMenu';
+import Link from 'next/link';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -15,7 +16,9 @@ const Header = () => {
     <header className="header">
       <div className="headerContainer">
         <div className="logo">
-          BRANDSTORY<span>®</span>
+          <Link href="/">
+          <img src='/images/logo.png' alt="logo" className='headerLogo' />
+          </Link>
         </div>
 
         <button className="mobileMenuButton" onClick={toggleMobileMenu}>

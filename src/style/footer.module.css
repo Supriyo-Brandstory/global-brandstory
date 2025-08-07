@@ -98,7 +98,7 @@ letter-spacing: 0%;
 }
 
 .column {
-     width: 390px;
+     width: auto;
 }
 
 .column h4 {
@@ -146,7 +146,7 @@ color: #FDF6F0;
 
 .bottomLinks {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   flex-direction: column;
   gap: 20px;
 }
