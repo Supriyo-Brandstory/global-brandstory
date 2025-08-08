@@ -196,8 +196,13 @@ export const menuData = [
               { name: "Omnisend for Ecommerce", link: "/i-want-to-improve-my-online/automate-operations-marketing/platform-based-automation/omnisend-for-ecommerce", image: "/icons/menuicon.png" },
             ]
           },
-          { name: "Email Marketing", link: "/i-want-to-improve-my-online/automate-operations-marketing/email-marketing", image: "/icons/menuicon.png" },
-          { name: "WhatsApp Marketing (Automation)", link: "/i-want-to-improve-my-online/automate-operations-marketing/whatsapp-marketing-automation", image: "/icons/menuicon.png" },
+          { name: "Email Marketing", link: "/i-want-to-improve-my-online/automate-operations-marketing/email-marketing", image: "/icons/menuicon.png",
+             children: []
+           },
+          { name: "WhatsApp Marketing (Automation)", link: "/i-want-to-improve-my-online/automate-operations-marketing/whatsapp-marketing-automation", image: "/icons/menuicon.png",
+            children: []
+          },
+          
         ]
       },
       {
@@ -395,9 +400,15 @@ export const menuData = [
               { name: "Back-End Development", link: "/services/back-end-development", image: "/icons/menuicon.png" },
             ]
           },
-          { name: "API Development & Integration", link: "/services/api-development-integration", image: "/icons/menuicon.png" },
-          { name: "CRM Integration", link: "/services/crm-integration", image: "/icons/menuicon.png" },
-          { name: "UI/UX Design Services", link: "/services/ui-ux-design-services", image: "/icons/menuicon.png" }
+          { name: "API Development & Integration", link: "/services/api-development-integration", image: "/icons/menuicon.png",
+             children: []
+           },
+          { name: "CRM Integration", link: "/services/crm-integration", image: "/icons/menuicon.png" ,
+             children: []
+          },
+          { name: "UI/UX Design Services", link: "/services/ui-ux-design-services", image: "/icons/menuicon.png" ,
+             children: []
+          }
         ]
       },
       {
@@ -472,10 +483,18 @@ export const menuData = [
               { name: "Data Visualization Services", link: "/services/data-visualization-services", image: "/icons/menuicon.png" },
             ]
           },
-          { name: "cloud consulting", link: "/services/cloud-consulting", image: "/icons/menuicon.png" },
-          { name: "Managed Services", link: "/services/managed-services", image: "/icons/menuicon.png" },
-          { name: "Enterprise Mobility", link: "/services/enterprise-mobility", image: "/icons/menuicon.png" },
-          { name: "Data Management", link: "/services/data-management", image: "/icons/menuicon.png" },
+          { name: "cloud consulting", link: "/services/cloud-consulting", image: "/icons/menuicon.png",
+             children: []
+           },
+          { name: "Managed Services", link: "/services/managed-services", image: "/icons/menuicon.png",
+             children: []
+           },
+          { name: "Enterprise Mobility", link: "/services/enterprise-mobility", image: "/icons/menuicon.png",
+             children: []
+           },
+          { name: "Data Management", link: "/services/data-management", image: "/icons/menuicon.png",
+             children: []
+           },
         ]
       },
       {
@@ -792,51 +811,51 @@ const HeaderMenu = ({ mobileMenuOpen }) => {
     currentSubItem: null
   });
   // scrollicon show hide 
-// scroll icon show hide 
-// scroll icon show hide 
-const dropdownRef = useRef(null);
-const [showScrollIndicator, setShowScrollIndicator] = useState(false);
-const [userHasScrolled, setUserHasScrolled] = useState(false);
+  // scroll icon show hide 
+  // scroll icon show hide 
+  const dropdownRef = useRef(null);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(false);
+  const [userHasScrolled, setUserHasScrolled] = useState(false);
 
-useEffect(() => {
-  const el = dropdownRef.current;
-  if (!el) return;
+  useEffect(() => {
+    const el = dropdownRef.current;
+    if (!el) return;
 
-  const checkScroll = () => {
-    const isScrollable = el.scrollHeight > el.clientHeight;
-    const isAtBottom = el.scrollHeight - el.scrollTop <= el.clientHeight + 2;
-    
-    // Only show indicator if scrollable, not at bottom, and user hasn't scrolled yet
-    setShowScrollIndicator(isScrollable && !isAtBottom && !userHasScrolled);
-  };
+    const checkScroll = () => {
+      const isScrollable = el.scrollHeight > el.clientHeight;
+      const isAtBottom = el.scrollHeight - el.scrollTop <= el.clientHeight + 2;
 
-  const handleScrollStart = () => {
-    setUserHasScrolled(true);
-  };
+      // Only show indicator if scrollable, not at bottom, and user hasn't scrolled yet
+      setShowScrollIndicator(isScrollable && !isAtBottom && !userHasScrolled);
+    };
 
-  // Initial check and setup observer for content changes
-  checkScroll();
-  
-  const resizeObserver = new ResizeObserver(checkScroll);
-  resizeObserver.observe(el);
-  
-  el.addEventListener("scroll", checkScroll);
-  el.addEventListener("scroll", handleScrollStart); // Add scroll start listener
-  window.addEventListener("resize", checkScroll);
+    const handleScrollStart = () => {
+      setUserHasScrolled(true);
+    };
 
-  return () => {
-    resizeObserver.disconnect();
-    el.removeEventListener("scroll", checkScroll);
-    el.removeEventListener("scroll", handleScrollStart);
-    window.removeEventListener("resize", checkScroll);
-  };
-}, [hoveredMenuIndex, userHasScrolled]); // Add userHasScrolled to dependencies
+    // Initial check and setup observer for content changes
+    checkScroll();
 
-// Reset userHasScrolled when menu changes
-useEffect(() => {
-  setUserHasScrolled(false);
-}, [hoveredMenuIndex]);
-// scrollicon show hide 
+    const resizeObserver = new ResizeObserver(checkScroll);
+    resizeObserver.observe(el);
+
+    el.addEventListener("scroll", checkScroll);
+    el.addEventListener("scroll", handleScrollStart); // Add scroll start listener
+    window.addEventListener("resize", checkScroll);
+
+    return () => {
+      resizeObserver.disconnect();
+      el.removeEventListener("scroll", checkScroll);
+      el.removeEventListener("scroll", handleScrollStart);
+      window.removeEventListener("resize", checkScroll);
+    };
+  }, [hoveredMenuIndex, userHasScrolled]); // Add userHasScrolled to dependencies
+
+  // Reset userHasScrolled when menu changes
+  useEffect(() => {
+    setUserHasScrolled(false);
+  }, [hoveredMenuIndex]);
+  // scrollicon show hide 
 
   const handleMenuHover = (index, menu) => {
     if (!mobileMenuOpen) {
@@ -848,7 +867,7 @@ useEffect(() => {
       ) {
         const firstSection = menu.sections[0];
         setHoveredSection(firstSection);
-        setHoveredSubItem(firstSection.children?.[0] || null);
+        // setHoveredSubItem(firstSection.children?.[0] || null);
       } else {
         setHoveredSection(null);
         setHoveredSubItem(null);
@@ -1051,7 +1070,7 @@ useEffect(() => {
 
 
               {hoveredMenuIndex === index && (
-                <div className={`dropdown ${menu.title === "I Want To…" ? "translateX-32" : ""}`} ref={dropdownRef}>
+                <div className={`dropdown ${menu.title === "I Want To…" ? "translateX-32" : ""} ${menu.title === "Who We Help"? "translateX-66":""}`}  ref={dropdownRef}>
                   {menu.items ? (
                     menu.items.map((item, idx) => (
                       <a key={idx} href={item.link} className="dropdownItem">
@@ -1076,7 +1095,7 @@ useEffect(() => {
                           >
 
                             <div className='flex items-center gap-4'>
-                             
+
                               <div dangerouslySetInnerHTML={{ __html: section.name }} />
                             </div>
 
@@ -1084,27 +1103,74 @@ useEffect(() => {
                         ))}
                       </div>
 
-                      {hoveredSection?.children && (
-                        <div className="dropdownSection dropdownGroup">
-                          {hoveredSection.children.map((child, cIdx) => (
-                            <a
-                              key={cIdx}
-                              href={child.link}
-                              onMouseEnter={() => setHoveredSubItem(child)}
-                              className={`dropdownItem ${hoveredSubItem?.name === child.name ? "active-link" : ""
-                                }`}
-                            >
-                              <div className='flex items-center gap-4'>
+                      {hoveredSection?.children && hoveredSubItem?.children ? (
+                        <>
+                          <div className="dropdownSection dropdownGroup">
+                            {hoveredSection.children.map((child, cIdx) => (
+                              <a
+                                key={cIdx}
+                                href={child.link}
+                                onMouseEnter={() => setHoveredSubItem(child)}
+                                className={`dropdownItem ${hoveredSubItem?.name === child.name ? "active-link" : ""
+                                  }`}
+                              >
+                                <div className='flex items-center gap-4'>
+
+                                  <div dangerouslySetInnerHTML={{ __html: child.name }} />
+                                </div>
+
+                              </a>
+                            ))}
+                          </div>
+                          <div className="dropdownSection dropdownGroup">
+                            {hoveredSubItem?.children?.map((subChild, i) => (
+                              <a
+                                key={i}
+                                href={subChild.link}
+                                onMouseEnter={() => { }}
+                                className={`dropdownItem ${hoveredSubItem?.name === subChild.name ? "active-link" : ""
+                                  }`}
+                              >
+                                <div className='flex items-center gap-4'>
+
+                                  <div dangerouslySetInnerHTML={{ __html: subChild.name }} />
+                                </div>
+                              </a>
+                            ))}
+                          </div>
+                        </>
+                      ) :
+                        (
+                          <>
+                            <div className="dropdownSection dropdownGroup min-width-560">
+                              <div className='drop-dwon-2'>
+                              {hoveredSection.children.map((child, cIdx) => (
                                 
-                                <div dangerouslySetInnerHTML={{ __html: child.name }} />
-                              </div>
+                                  <a
+                                    key={cIdx}
+                                    href={child.link}
+                                    onMouseEnter={() => setHoveredSubItem(child)}
+                                    className={`dropdownItem ${hoveredSubItem?.name === child.name ? "active-link" : ""
+                                      }`}
+                                  >
+                                    <div className='flex items-center gap-4'>
 
-                            </a>
-                          ))}
-                        </div>
-                      )}
+                                      <div dangerouslySetInnerHTML={{ __html: child.name }} />
+                                    </div>
 
-                      {hoveredSubItem?.children && (
+                                  </a>
+                               
+                              ))}
+                               </div>
+                            </div>
+                          </>
+                        )
+                      }
+
+                      
+
+
+                      {/* {hoveredSubItem?.children && (
                         <div className="dropdownSection dropdownGroup">
                           {hoveredSubItem.children.map((subChild, i) => (
                             <a
@@ -1121,12 +1187,12 @@ useEffect(() => {
                             </a>
                           ))}
                         </div>
-                      )}
+                      )} */}
 
 
                     </div>
                   )}
-                 {showScrollIndicator && <div className="scrollIndicator">↓</div>}
+                  {showScrollIndicator && <div className="scrollIndicator">↓</div>}
                 </div>
               )}
             </div>
