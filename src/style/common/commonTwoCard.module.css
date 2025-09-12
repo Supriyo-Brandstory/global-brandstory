@@ -1,0 +1,60 @@
+.seoSection {
+  color: #fff;
+  padding: 60px 0px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.header {
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+
+.header h2 {
+  margin-bottom: 15px;
+}
+
+.header p {
+  color: #ccc;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.card h4 {
+  margin-bottom: 12px;
+  font-family: var(--font-family-bold);
+}
+
+.card p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #FFFFFF;
+}
+
+/* Special gradient for Local SEO */
+.local {
+    background: linear-gradient(218.29deg, #F15D22 -37.24%, #211C4B 123.84%);
+  border: none;
+  color: #fff;
+}

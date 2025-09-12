@@ -3,10 +3,24 @@ import React, { useRef, useState } from 'react';
 import styles from '@/style/homepage.module.css';
 
 const Banner = () => {
-  const bannerRef = useRef(null);
+const bannerRef = useRef(null);
   const [images, setImages] = useState([]);
   const [lastImagePos, setLastImagePos] = useState(null);
-  const fixedDistance = 100; // tumi chaile distance eikhane change korte parbe (px)
+  const fixedDistance = 100; // distance (px)
+
+  // ✅ Fix: hardcoded image paths
+  const imageList = [
+    "/images/mouse/img1.svg",
+    "/images/mouse/img2.svg",
+    "/images/mouse/img3.svg",
+    "/images/mouse/img4.svg",
+    "/images/mouse/img5.svg",
+    "/images/mouse/img6.svg",
+    "/images/mouse/img7.svg",
+    "/images/mouse/img8.svg",
+    "/images/mouse/img9.svg",
+    "/images/mouse/img10.svg",
+  ];
 
   const handleMouseMove = (e) => {
     const rect = bannerRef.current.getBoundingClientRect();
@@ -19,22 +33,22 @@ const Banner = () => {
       const dist = Math.sqrt(dx * dx + dy * dy);
 
       if (dist < fixedDistance) {
-        // distance kom, notun image add korbi na
-        return;
+        return; // too close → no new image
       }
     }
 
-    const randomIndex = Math.floor(Math.random() * 10) + 1;
-    const imageSrc = `/images/mouse/img${randomIndex}.svg`;
-const effectClass = Math.random() < 0.5 ? 'hoverImageRound' : 'hoverImageSquare';
+    const randomIndex = Math.floor(Math.random() * imageList.length);
+    const imageSrc = imageList[randomIndex];
+    const effectClass =
+      Math.random() < 0.5 ? "hoverImageRound" : "hoverImageSquare";
 
-const newImage = {
-  id: Date.now() + Math.random(),
-  x: mouseX,
-  y: mouseY,
-  src: imageSrc,
-  effect: effectClass,
-};
+    const newImage = {
+      id: Date.now() + Math.random(),
+      x: mouseX,
+      y: mouseY,
+      src: imageSrc,
+      effect: effectClass,
+    };
 
     setImages((prev) => [...prev, newImage]);
     setLastImagePos({ x: mouseX, y: mouseY });

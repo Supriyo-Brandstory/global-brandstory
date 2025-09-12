@@ -1,0 +1,79 @@
+.CommonAccordion {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.CommonAccordion h2 {
+    width: 1000px;
+    margin: 0 auto;
+}
+.CommonAccordion p {
+    color: #F15D22;
+    font-family: var(--font-family-bold);
+     width: 1000px;
+    margin: 20px auto;
+}
+.CommonAccordion span{
+    font-size: 18px;
+    display: inline-block;
+     width: 1000px;
+    margin: 0 auto 30px;
+}
+
+.accordionWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  text-align: left;
+}
+
+.accordionItem {
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordionItem.active {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: 
+    linear-gradient(#111, #111) padding-box, 
+    linear-gradient(285.81deg, #FFFFFF -67.61%, #500D0D 107.82%) border-box;
+}
+
+.accordionHeader {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 18px 20px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.accordionContent {
+  padding: 15px 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ccc;
+backdrop-filter: blur(100px);
+background: linear-gradient(180deg, #00000000, #e63d261f);
+
+
+}
