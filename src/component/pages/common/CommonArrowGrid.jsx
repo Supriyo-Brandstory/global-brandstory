@@ -42,13 +42,13 @@ const GridBox = ({index, title, description, theme = "dark", size = "md"}) => {
         const img = new Image();
         img.onload = () => {
             if (boxRef.current) {
+
                 // Get the current width of the box
                 const boxWidth = boxRef.current.offsetWidth;
                 
                 // Calculate height based on image aspect ratio
                 const aspectRatio = img.naturalHeight / img.naturalWidth;
-                const newHeight = boxWidth * aspectRatio;
-                
+                const newHeight = boxWidth * aspectRatio;                
                 setCalculatedHeight(newHeight);
             }
         };
@@ -77,7 +77,7 @@ const GridBox = ({index, title, description, theme = "dark", size = "md"}) => {
     return (
         <div 
             ref={boxRef}
-            className={`${styles.gridbox} ${styles[theme]} ${styles[size]}`}
+            className={`${styles.gridbox} ${styles[theme]} ${styles[size]} ${index == 1 ? `${styles.firstbox}` : ''}`}
             style={{
                 backgroundImage: `url(${getBackgroundImage()})`,
                 height: calculatedHeight ? `${calculatedHeight}px` : 'auto',

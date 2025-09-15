@@ -58,3 +58,14 @@
   font-weight: 700;
   color: #fff;
 }
+
+@media (max-width: 768px) {
+  .seoSection{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .row,
+.rowReverse {
+  flex-direction: column;
+}
+}
