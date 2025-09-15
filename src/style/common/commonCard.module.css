@@ -49,7 +49,7 @@
   width: 74px;
   height: 74px;
 }
-
+ 
 .prevBtn:hover svg,
 .nextBtn:hover svg {
   transform: scale(1.05);
@@ -61,4 +61,16 @@
 .nextBtn.swiper-button-disabled {
   opacity: 0.6;
   cursor: not-allowed; /* optional */
+}
+
+@media (max-width: 768px) {
+  .wrapper{
+    width: 100%;
+  }
+  .wrapper h2{
+    width: 100%;
+  }
+  .card{
+    min-height: 300px;
+  }
 }

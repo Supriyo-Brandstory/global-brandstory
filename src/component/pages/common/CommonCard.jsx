@@ -42,7 +42,7 @@ const CommonCard = ({ seoData, heding }) => {
                 }}
                 breakpoints={{
                     320: { slidesPerView: 1 },
-                    768: { slidesPerView: 2 },
+                    768: { slidesPerView: 1 },
                     1024: { slidesPerView: 3 },
                 }}
             >

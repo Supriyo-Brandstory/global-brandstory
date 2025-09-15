@@ -9,7 +9,7 @@ const CommonAccordion = ({ title, subheding1, subheding2, items }) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  return (
+  return ( 
     <div className={styles.CommonAccordion}>
       {/* Render only if value is not null/empty */}
       {title && <h2>{title}</h2>}

@@ -33,3 +33,22 @@
     margin-top: 40px;
     display: inline-block;
 }
+
+@media (max-width: 768px) {
+    .seoBanner {
+        padding: 80px 15px 50px 15px;
+    }
+
+    .seoBannerParagraph {
+        width: 100%;
+        max-width: 100%;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .seoBannerButtonLink {
+        padding: 8px 30px;
+        font-size: 14px;
+        margin-top: 30px;
+    }
+}

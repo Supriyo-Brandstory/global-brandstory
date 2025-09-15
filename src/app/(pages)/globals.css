@@ -371,6 +371,18 @@ body {
   }
 }
 
+.orange-btn{
+    background-color: #E73D26;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.orange-btn-outline{
+  border: 1px solid #E73D26;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
 
 /* ===========
    Responsive Styles
@@ -558,4 +570,15 @@ ul li{
   list-style-type: disc;
   margin-left: 20px;
   margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+  h1{
+    font-size: 32px;
+  }
+
+  h2{
+    font-size: 28px;
+  }
 }

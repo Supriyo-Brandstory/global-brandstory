@@ -1,11 +1,8 @@
-
-.CommonStatsSection{
- 
+.CommonStatsSection {
   background: url('/images/stats-bg.png'); /* dark bg */
   padding: 60px 0px;
-
-    
 }
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -13,16 +10,14 @@
   color: #fff;
   border-radius: 12px;
   background-size: cover;
-     width: var(--max-width);
-    margin: 0 auto;
-    
+  width: var(--max-width);
+  margin: 0 auto;
 }
 
 .textBox {
   flex: 1 1 60%;
   padding-right: 40px;
   max-width: 60%;
-
 }
 
 .textBox h2 {
@@ -32,7 +27,7 @@
 .textBox h4 {
   font-weight: 400;
   margin-bottom: 20px;
-  font-family:  var(--font-family-bold);
+  font-family: var(--font-family-bold);
 }
 
 .description p {
@@ -48,17 +43,14 @@
   border-radius: 12px;
   overflow: hidden;
   max-width: 30%;
-  
 }
 
 .statItem {
   padding: 20px 40px;
   text-align: start;
-
   border-bottom: 1px solid;
   border-image: linear-gradient(277.2deg, #F15D22 37.79%, #BA998C 93.22%) 1;
 }
-
 
 .statItem:last-child {
   border-bottom: none;
@@ -76,5 +68,41 @@
   font-size: 18px;
   color: #A1A1AA;
   font-family: var(--font-family-gilory-regular);
+}
 
+/* ✅ Mobile Responsiveness */
+@media (max-width: 762px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .textBox {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .statsBox {
+    max-width: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .statItem {
+    flex: 1 1 100%;
+    border-right: none;
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .statItem h3 {
+    font-size: 36px;
+  }
+
+  .statItem p {
+    font-size: 16px;
+  }
 }

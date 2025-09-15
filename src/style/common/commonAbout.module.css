@@ -4,7 +4,7 @@
     padding: 60px 0px;
 }
 .textBox{
-        display: flex;
+    display: flex;
     text-align: center;
     width: 1024px;
     margin: 0 auto;
@@ -26,4 +26,22 @@
     flex-direction: column;
     gap: 10px;
     margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .container{
+        width: 100%;
+    }
+
+    .textBox{
+        width: 100%;
+    }
+    
+    .flexbox{
+        width: 100%;
+    }
+    
+    .flexbox{
+        flex-direction: column;
+    }
 }

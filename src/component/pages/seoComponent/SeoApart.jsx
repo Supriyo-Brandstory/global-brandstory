@@ -2,7 +2,7 @@ import React from 'react'
 import CommonCard from '../common/CommonCard'
 
 const SEOApart = () => {
-  const seoData = [
+  const seoData = [ 
   {
     title: "Full SEO Team On Every Project",
     desc: "Strategists, Content Writers, Technical SEO Specialists, And Analytics Experts Work Together To Cover: Every Part Of Your Campaign.",

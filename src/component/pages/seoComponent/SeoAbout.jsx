@@ -13,6 +13,6 @@ const Seoabout = () => {
    imageAlt='seo-about'
    />
   )
-}
+} 
 
 export default Seoabout
