@@ -4,7 +4,7 @@ import styles from "@/style/seopage.module.css";
 import Image from "next/image";
 
 const SeoRoiSection = () => {
-  return (
+  return ( 
     <section className={styles.seoSection}>
       {/* Heading */}
       <h2 className={styles.heading}>

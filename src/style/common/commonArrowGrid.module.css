@@ -34,7 +34,6 @@
 
 .gridbox {
     padding: 20px;
-    /* border-radius: 12px; */
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -43,14 +42,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* Height will be set dynamically via JavaScript */
-    
 }
+
 .firstbox{
     height: 320px !important;
     border-radius: 12px;
     background-position: right;
 }
+
 .gridbox:hover {
     transform: translateY(-5px);
 }
@@ -88,7 +87,6 @@
     display: flex;
     flex-direction: column;
     justify-content: end;
-    /* border: 1px solid red; */
 }
 
 .title {
@@ -109,7 +107,6 @@
     opacity: 0.8;
 }
 
-
 .arrow {
     position: absolute;
     top: 0px;
@@ -122,18 +119,14 @@
     align-items: center;
     justify-content: center;
     opacity: 1;
-    /* background: url('/public/arrow-top-right.png'); */
     background-size: cover;
 }
+
 .firstbox .arrow{
     background: #0000001a;
     width: 17% !important;
     height: 20% !important;
 }
-
-/* .arrow .dark{
-    background: url('/public/arrow-right.png');
-} */
 
 .light .arrow {
     height: 20%;
@@ -163,5 +156,18 @@
     
     .gridbox {
         padding: 20px;
+    }
+    
+    /* Make all boxes behave like 'sm' in mobile */
+    .md .arrow,
+    .lg .arrow {
+        width: 18%;
+        height: 18%;
+    }
+    
+    .light.md .arrow,
+    .light.lg .arrow {
+        width: 14%;
+        height: 20%;
     }
 }

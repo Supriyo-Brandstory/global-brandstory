@@ -28,21 +28,38 @@ const CommonArrowGrid = ({ boxes }) => {
 
 const GridBox = ({index, title, description, theme = "dark", size = "md"}) => {
     const [calculatedHeight, setCalculatedHeight] = useState(null);
+    const [isMobile, setIsMobile] = useState(false);
     const boxRef = useRef(null);
+    
+    // Check if current view is mobile
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+        
+        // Check on initial load
+        checkMobile();
+        
+        // Add resize listener
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
     
     // Get the background image path based on theme and size
     const getBackgroundImage = () => {
         if (theme === 'light') {
             return '/images/container-rounded-bg-white.png';
         }
-        return `/images/container-rounded-bg-${size}.png`;
+        
+        // Use 'sm' size for mobile, otherwise use the provided size
+        const effectiveSize = isMobile ? 'sm' : size;
+        return `/images/container-rounded-bg-${effectiveSize}.png`;
     };
 
     useEffect(() => {
         const img = new Image();
         img.onload = () => {
             if (boxRef.current) {
-
                 // Get the current width of the box
                 const boxWidth = boxRef.current.offsetWidth;
                 
@@ -53,7 +70,7 @@ const GridBox = ({index, title, description, theme = "dark", size = "md"}) => {
             }
         };
         img.src = getBackgroundImage();
-    }, [theme, size]);
+    }, [theme, size, isMobile]); // Added isMobile as dependency
 
     // Also recalculate on window resize
     useEffect(() => {
@@ -72,16 +89,19 @@ const GridBox = ({index, title, description, theme = "dark", size = "md"}) => {
 
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
-    }, [calculatedHeight, theme, size]);
+    }, [calculatedHeight, theme, size, isMobile]); // Added isMobile as dependency
+
+    // Get effective size for CSS classes (sm for mobile)
+    const effectiveSize = isMobile ? 'sm' : size;
 
     return (
         <div 
             ref={boxRef}
-            className={`${styles.gridbox} ${styles[theme]} ${styles[size]} ${index == 1 ? `${styles.firstbox}` : ''}`}
+            className={`${styles.gridbox} ${styles[theme]} ${styles[effectiveSize]} ${index == 1 ? `${styles.firstbox}` : ''}`}
             style={{
                 backgroundImage: `url(${getBackgroundImage()})`,
                 height: calculatedHeight ? `${calculatedHeight}px` : 'auto',
-                minHeight: calculatedHeight ? 'unset' : '200px' // fallback while loading
+                minHeight: calculatedHeight ? 'unset' : '200px' 
             }}
             >
             <div className={styles.indexNumber}>{index}</div>
@@ -92,7 +112,6 @@ const GridBox = ({index, title, description, theme = "dark", size = "md"}) => {
             <div className={styles.arrow}>
                 {theme !== 'light'? <img src="images/arrow-right.png" alt="arrow" /> :  
                 <img src="images/arrow-top-right.png" alt="arrow" />}
-               
             </div>
         </div>
     )

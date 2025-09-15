@@ -58,3 +58,13 @@
   border: none;
   color: #fff;
 }
+
+@media (max-width: 768px) {
+  .seoSection{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

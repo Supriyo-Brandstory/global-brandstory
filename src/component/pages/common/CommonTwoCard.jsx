@@ -7,7 +7,7 @@ const CommonTwoCard = ({ heading, subheading, cards }) => {
       <div className={styles.header}>
         <h2>{heading}</h2>
         <p>{subheading}</p>
-      </div>
+      </div> 
 
       <div className={styles.grid}>
         {cards?.map((card, index) => (

@@ -7,7 +7,7 @@ const CommonGridBox3 = ({ title, description, data }) => {
         <h2>{title}</h2>
         <p>{description}</p>
       </div>
-
+ 
       <div className={styles.grid}>
         {data?.map((card, index) => (
           <div key={index} className={`${styles.card}`} style={{ '--card-color': card.bgcolor }}>
