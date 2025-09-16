@@ -6,7 +6,6 @@
   border-radius: 18px;
   max-width: 1200px;
   position: relative;
-  /* Use a background that matches the content area. */
   background: radial-gradient(circle at 90% 40%, #741541 0%, #000000 50%);
   z-index: 1; /* Puts the main frame on top of the pseudo-element */
 }
@@ -39,4 +38,19 @@
   .heading {
     /* text-align: left; */
     font-size: 50px;
+  }
+
+  @media (max-width: 768px) {
+    .frame{
+      margin: 20px;
+      padding: 80px 10px;
+    }
+    
+    .heading{
+      font-size: 36px;
+    }
+
+    .frame p{
+      font-size: 18px;
+    }
   }

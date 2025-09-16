@@ -21,7 +21,7 @@ const CommonAdvertise = () =>{
                 </div>
             </div>
         </div>
-    );
+    ); 
 }
 
 export default CommonAdvertise;

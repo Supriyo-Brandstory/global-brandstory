@@ -3,7 +3,7 @@ import styles from "@/style/seopage.module.css";
 
 import Image from "next/image";
 
-const SeoRoiSection = () => {
+const SeoRoiSection = () => { 
   return ( 
     <section className={styles.seoSection}>
       {/* Heading */}

@@ -65,12 +65,25 @@
 
 @media (max-width: 768px) {
   .wrapper{
+    padding: 0px 10px;
     width: 100%;
   }
   .wrapper h2{
     width: 100%;
+    margin-top: 60px;
+    margin-bottom: 0px;
   }
-  .card{
-    min-height: 233px;
+  .card h4{
+    font-size: 20px;
   }
+  .card h5{
+    font-size: 18px;
+  }
+   /* .card{
+    min-height: 240px;
+    background-position: bottom !important;
+    background-size: cover;
+    border-radius: 12px;
+    border: 1px solid white;
+  } */
 }

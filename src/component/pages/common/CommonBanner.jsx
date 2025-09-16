@@ -7,8 +7,8 @@ export const CommonBanner = ({heading, paragraph, paragraph2, buttonLink,buttonT
             <div className={styles.seoBannerContent}>
                 <h1 className=''><div dangerouslySetInnerHTML={{__html: heading}}></div></h1>
                 <div className={styles.seoBannerParagraph}>
-                    <p><div dangerouslySetInnerHTML={{__html: paragraph}}></div></p>
-                    <p><div dangerouslySetInnerHTML={{__html: paragraph2}}></div></p>
+                    <div dangerouslySetInnerHTML={{__html: paragraph}}></div>
+                    <div dangerouslySetInnerHTML={{__html: paragraph2}}></div>
                 </div>
                 <div className={styles.seoBannerButton}>
                     <a href={buttonLink} className={styles.seoBannerButtonLink}>{buttonText}</a>
@@ -17,3 +17,4 @@ export const CommonBanner = ({heading, paragraph, paragraph2, buttonLink,buttonT
         </div>
     )
 }
+ 

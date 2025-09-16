@@ -23,6 +23,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    font-size: 20px;
 }
 .seoBannerButtonLink{
     color: #f0f8fd;
@@ -42,8 +43,10 @@
     .seoBannerParagraph {
         width: 100%;
         max-width: 100%;
-        font-size: 14px;
+        font-size: 15px;
         text-align: center;
+        font-weight: 300;
+        /* border: 1px solid red; */
     }
 
     .seoBannerButtonLink {

@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ArrowRight } from "lucide-react";
 
 const CommonArrowGrid = ({ boxes }) => {
-    return (
+    return ( 
         <div className={styles.frame}>
             <div className={styles.header}>
                 <h1>Explore More of Our SEO Marketing Services</h1>

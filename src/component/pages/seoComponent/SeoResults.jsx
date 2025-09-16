@@ -13,4 +13,4 @@ const SeoResults = () =>{
     )
 }
 
-export default SeoResults;
+export default SeoResults; 
