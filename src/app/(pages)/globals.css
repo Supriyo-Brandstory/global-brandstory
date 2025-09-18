@@ -572,6 +572,10 @@ ul li{
   margin-bottom: 10px;
 }
 
+b{
+  font-weight: 700 !important;
+  font-family: var(--font-family-bold);
+}
 
 @media (max-width: 768px) {
   h1{

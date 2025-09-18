@@ -23,17 +23,55 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 20px;    
 }
 .seoBannerButtonLink{
     color: #f0f8fd;
-    background: #452617;
+    background: #f15d22;
     border-radius: 40px;
     box-shadow: 0 0 20px #fdf6f0;
     padding: 10px 60px;
     margin-top: 40px;
     display: inline-block;
 }
+
+.boxes{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    /* border: 1px solid red; */
+}
+
+.boxes div{
+    position: absolute;
+    height: 78px;
+    width: 78px;
+    background: url('/images/banner-sm-box.png');
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.boxes div:hover{
+    background-image: linear-gradient(to top right, rgba(182, 58, 58, 0.231), transparent);
+}
+
+.box1{   
+    top: 425px;
+    left: 145px;
+}
+
+.box2{
+    top: 500px;
+    left: 63px;
+    transform: rotate(180deg);
+}
+
+.box3{
+    top: 300px;
+    right: 65px;
+}
+
 
 @media (max-width: 768px) {
     .seoBanner {

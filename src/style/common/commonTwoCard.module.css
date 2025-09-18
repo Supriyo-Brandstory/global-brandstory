@@ -39,6 +39,7 @@
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(218.29deg, #F15D22 -37.24%, #211C4B 123.84%);
 }
 
 .card h4 {
@@ -54,8 +55,7 @@
 
 /* Special gradient for Local SEO */
 .local {
-    background: linear-gradient(218.29deg, #F15D22 -37.24%, #211C4B 123.84%);
-  border: none;
+  /* border: none; */
   color: #fff;
 }
 

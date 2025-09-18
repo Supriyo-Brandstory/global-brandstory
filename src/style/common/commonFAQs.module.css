@@ -17,13 +17,23 @@
 }
 
 .faqItem {
-  background: #111;
   border: 1px solid #222;
   border-radius: 10px;
   overflow: hidden;
+  background: url('/images/faq-black-bg.png') ;
+  background-repeat: no-repeat;
+  background-position: right;
   transition: all 0.3s ease;
   box-shadow: inset 0 0 10px -2px rgba(255, 255, 255, 0.5);
 }
+
+.faqItem:hover{
+  background: url('/images/faq-bg-lg.png') ;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
 
 .faqHeader {
   width: 100%;
@@ -41,9 +51,11 @@
 
 .arrow {
     /* border: 1px solid white; */
+    background-color: black;
   transition: transform 0.3s ease;
-  height: 44px;
+  height: 40px;
   width: 42px;
+  border-radius: 6px;
 }
 
 .rotate {

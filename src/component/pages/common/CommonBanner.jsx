@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '@/style/common/commponBanner.module.css'
+import styles from '@/style/common/commonBanner.module.css'
 
 export const CommonBanner = ({heading, paragraph, paragraph2, buttonLink,buttonText}) => {
     return (
@@ -13,6 +13,12 @@ export const CommonBanner = ({heading, paragraph, paragraph2, buttonLink,buttonT
                 <div className={styles.seoBannerButton}>
                     <a href={buttonLink} className={styles.seoBannerButtonLink}>{buttonText}</a>
                 </div>
+            </div>
+
+            <div className={styles.boxes}>
+                <div className={styles.box1}></div>
+                <div className={styles.box2}></div>
+                <div className={styles.box3}></div>
             </div>
         </div>
     )

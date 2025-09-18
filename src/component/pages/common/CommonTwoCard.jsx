@@ -20,5 +20,5 @@ const CommonTwoCard = ({ heading, subheading, cards }) => {
     </section>
   );
 };
-
+ 
 export default CommonTwoCard;

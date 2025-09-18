@@ -9,10 +9,20 @@
   margin: 0 auto;
 }
 
-.title {
+.text{
+  display: flex;
+  flex-direction: column;
   flex: 1 1 60%;
-  max-width: 55%;
+}
 
+.title {
+  /* flex: 1 1 60%; */
+  /* max-width: 55%; */
+  padding-bottom: 20px;
+}
+
+.description{
+  font-size: 24;
 }
 
 .accordionWrapper {

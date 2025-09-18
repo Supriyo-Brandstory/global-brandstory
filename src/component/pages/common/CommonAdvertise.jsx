@@ -1,23 +1,23 @@
 import styles from '@/style/common/commonAdvertise.module.css';
+import Link from 'next/link';
 
-const CommonAdvertise = () =>{
+const CommonAdvertise = ({btnOneLink, btnTwoLink, btn1, btn2, title1, title2, description}) =>{
+    
     return (
         <div className={styles.frame}>
             <div className={styles.innerFrame}>
                 <span>
-                    <h1 className={styles.heading}>Ready to Rank?</h1>
-                    <h1 className={styles.heading}>Let’s Grow Your Organic Traffic</h1>
+                    <h1 className={styles.heading}>{title1}</h1>
+                    {title2 && <h1 className={styles.heading}>{title2}</h1>}
                 </span>
-                <p>
-                    Get a free SEO audit and speak with an SEO strategist today. See how these SEO services can help you attract more traffic, better leads, and higher sales.
-                </p>
+                {description && <p>{description}</p>}
                 <div class="flex gap-x-4">
-                  <button class="orange-btn">
-                    Get a Free SEO Audit
-                  </button>
-                  <button class="orange-btn-outline">
-                    Get a Free SEO Audit
-                  </button>
+                  <Link href={btnOneLink} class="orange-btn">
+                    {btn1}
+                  </Link>
+                  <Link href={btnTwoLink} class="orange-btn">
+                    {btn2}
+                  </Link>
                 </div>
             </div>
         </div>

@@ -7,11 +7,12 @@ import SeoStats from '@/component/pages/seoComponent/SeoStats'
 import SeoStrategies from '@/component/pages/seoComponent/SeoStrategies'
 import SeoExpertise from '@/component/pages/seoComponent/SeoExpertise'
 import SeoResults from '@/component/pages/seoComponent/SeoResults'
-import FAQs from '@/component/pages/common/CommonFAQ'
-import CommonAdvertise from '@/component/pages/common/CommonAdvertise'
+import {SeoFaq} from '@/component/pages/seoComponent/SeoFaq'
 import React from 'react'
 import SeoMarketingService from '@/component/pages/seoComponent/SeoMarketingService'
 import CommonDivider from '@/component/pages/common/CommonDivider'
+import { SeoFooter } from '@/component/pages/seoComponent/SeoFooter'
+
 
 const page = () => {
 
@@ -34,11 +35,11 @@ const page = () => {
     
     <CommonDivider /><SeoResults />
     
-    <CommonDivider /><FAQs />
+    <CommonDivider /><SeoFaq />
     
     <CommonDivider /><SeoMarketingService />
     
-    <CommonAdvertise />
+    <SeoFooter />
     </>
   )
 }

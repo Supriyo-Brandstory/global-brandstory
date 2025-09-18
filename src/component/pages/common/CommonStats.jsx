@@ -17,7 +17,7 @@ const CommonStatsSection = ({
         {description && description.length > 0 && (
           <div className={styles.description}>
             {description.map((para, i) => (
-              <p key={i}>{para}</p>
+              <p key={i} dangerouslySetInnerHTML={{ __html: para }} />
             ))}
           </div>
         )}

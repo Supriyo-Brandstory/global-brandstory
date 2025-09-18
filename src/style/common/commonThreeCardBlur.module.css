@@ -1,0 +1,87 @@
+.frame{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.heading{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.subHeading{
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+  position: relative;
+  border-radius: 12px;
+  padding: 30px 10%;
+  background: url('/images/three-card-blur-bg.png'),
+              rgba(255, 255, 255, 0.05);
+  background-size: cover;
+  background-position: bottom;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* border thickness */
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(253, 246, 240, 0) -70.28%, #97938F 106.57%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.logo{
+    width: 30%;
+    /* height: ; */
+    margin: 0 auto 15px;
+    object-fit: contain;
+}
+
+.card h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card p{
+    font-size: 18px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.footer{
+    font-size: 1rem;
+    color: #aaa;
+}
