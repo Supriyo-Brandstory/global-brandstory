@@ -18,20 +18,20 @@ export const SMMRoi = () => {
   {
     title:"B2B Services",
     desc:"LinkedIn Articles, Case Study Posts, Webinars Shared On Social Platforms",
-    icon:"/images/seo/industry-focused-campaigns-icon.png",
-    background:"url('/images/seo/industry-focused-campaigns-bg.webp')",
+    icon:"/images/SMM/b2b.png",
+    background:"url('/images/SMM/b2b-bg.png')",
   },
   {
     title:"Healthcare",
     desc:"Informative Posts On Facebook, Instagram Reels With Tips, LinkedIn Updates For Professionals",
-    icon:"/images/seo/integrated-marketing-approach-icon.png",
-    background:"url('/images/seo/full-seo-bg.webp')",
+    icon:"/images/SMM/health.png",
+    background:"url('/images/SMM/health-bg.png')",
   },
   {
     title:"Real Estate",
     desc:"YouTube Property Walkthrough Videos, Instagram Carousel Posts, Client Testimonials",
-    icon:"/images/seo/100-google-compliant-methods-icon.png",
-    background:"url('/images/seo/clear-transparent-reporting-bg.webp')",
+    icon:"/images/SMM/real.png",
+    background:"url('/images/SMM/real-bg.png')",
   }
   
   

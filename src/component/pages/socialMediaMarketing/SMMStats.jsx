@@ -10,9 +10,9 @@ export const SMMStats = () => {
         "<ul><li><b>Facebook & Instagram:</b> Short Videos, Posts, And Stories</li><li><b>LinkedIn:</b> Professional Content For Businesses</li><li><b>TikTok:</b> Fun, Creative Videos That Reach More People</li><li><b>YouTube:</b> Videos That Explain Your Brand And Products</li><li><b>X (Twitter):</b> Quick Updates And Conversations</li><li><b>Pinterest:</b> Pictures That Motivate And Direct Your Viewers</li></ul>"
       ]}
       stats={[
-        { value: "1M+", label: "keywords tracked and ranked" },
-        { value: "500M+", label: "organic visits delivered" },
-        { value: "$1.5B+", label: "client revenue generated" },
+        { value: "10M+", label: "Followers Gained" },
+        { value: "2B+", label: "Social media views delivered" },
+        { value: "$100M+", label: "Revenue generated from social campaigns" },
       ]}
     />
   );

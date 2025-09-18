@@ -27,9 +27,9 @@ export const SMMSpectrum = () => {
   return (
     <>
     <CommonAccordion
-    title="AI-Driven SEO Methodology for Smarter, Faster Results"
-    subheding1="Turning Raw Data into Clear Actions"
-    subheding2="AI technology makes SEO optimization services faster and more precise. It processes huge volumes of data in seconds, uncovering opportunities that would otherwise take months to find."
+    title="Full-Spectrum Guide to Social Media Growth"
+    // subheding1="We plan your social media to guide people from first seeing your brand to becoming loyal fans. Our social media strategy has four steps:"
+    subheding2="We plan your social media to guide people from first seeing your brand to becoming loyal fans. Our social media strategy has four steps:"
      items={accordionData} />
 
      <p className='text-center mb-25'>Every step helps build trust and long-term relationships.</p>
