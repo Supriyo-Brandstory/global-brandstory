@@ -34,12 +34,16 @@
   flex-direction: column;
   gap: 10px;
 }
-  
+   .frame p{
+    margin: 20px auto;
+   }
+
   .heading {
     /* text-align: left; */
     font-size: 50px;
   }
 
+  
   @media (max-width: 768px) {
     .frame{
       margin: 20px;
