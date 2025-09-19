@@ -1,6 +1,8 @@
 import CommonArrowGrid from "../common/CommonArrowGrid"
 
 export const SMMArrowGrid = () =>{
+    const heading = "Take a Closer Look at Our Social Media Services"
+    const descripton = "We use the right channels to grow your brand and reach more people:"
      const boxesData = [
     {
         title: "Enterprise SEO",
@@ -29,6 +31,8 @@ export const SMMArrowGrid = () =>{
   ];
     return (
         <CommonArrowGrid 
+        heading={heading}
+        descripton={descripton}
          boxes={boxesData}
         />
     )

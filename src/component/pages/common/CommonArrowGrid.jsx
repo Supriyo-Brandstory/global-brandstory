@@ -3,12 +3,12 @@ import styles from "@/style/common/commonArrowGrid.module.css";
 import { useState, useEffect, useRef } from 'react';
 import { ArrowRight } from "lucide-react";
 
-const CommonArrowGrid = ({ boxes }) => {
+const CommonArrowGrid = ({heading,descripton, boxes }) => {
     return ( 
         <div className={styles.frame}>
             <div className={styles.header}>
-                <h1>Explore More of Our SEO Marketing Services</h1>
-                <p>Our expertise covers every area of search optimisation. Depending on your business goals, you may also want to explore:</p>
+                <h1>{heading}</h1>
+                <p>{descripton}</p>
             </div>
             <div className={styles.gridContainer}>
                 {boxes.map((box, index) => (

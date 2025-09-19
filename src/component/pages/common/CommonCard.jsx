@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import styles from "@/style/common/commonCard.module.css";
 
 
-
+ 
 const CommonCard = ({ seoData, heding }) => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
@@ -48,7 +48,7 @@ const CommonCard = ({ seoData, heding }) => {
             >
                 {seoData.map((item, index) => (
                     <SwiperSlide key={index}>
-                        <div className={styles.card} style={{ '--bg': item.background }}>
+                        <div className={styles.card} style={{ '--bg': item.background, '--boxHeight': item.height || '228px' }}>
                             <div className={styles.iconWrapper}>
                                 <img src={item.icon} alt="icon" className={styles.icon} />
                             </div>

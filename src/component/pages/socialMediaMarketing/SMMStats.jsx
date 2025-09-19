@@ -1,7 +1,7 @@
 import React from 'react';
 import CommonStatsSection from '../common/CommonStats';
 
-export const SMMStats = () => {
+export const SMMStats = () => { 
   return (
       <CommonStatsSection
       title="Expertise Across Every<br>Social Platform"

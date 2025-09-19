@@ -1,18 +1,15 @@
 // CommonThreeCardBlur.jsx
 import styles from '@/style/common/commonThreeCardBlur.module.css'
 
-export const CommonThreeCardBlur = ({ data })=>{
+export const CommonThreeCardBlur = ({heading, subheading, data })=>{
     return(
         <div className={styles.frame}>
-            <h1 className={styles.heading}>Our Social Media Tools and Platforms</h1>
-            <p className={styles.subHeading}>
-                To manage campaigns efficiently, we use a mix of tools. 
-                Our social media marketing tools help with scheduling, analytics, and content creation:
-            </p>
+            {heading && <h1 className={styles.heading}>{heading}</h1>}
+            {subheading && <p className={styles.subHeading}>{subheading}</p>}
 
             <div className={styles.cards}>
                 {data.map((item, idx)=>(
-                    <div key={idx} className={styles.card}>
+                    <div key={idx} className={styles.card} style={{'--bg':`url(${item.bg})`}}>
                         <img src={item.logo} alt={item.title} className={styles.logo}/>
                         <h3>{item.title}</h3>
                         <p>{item.description}</p>

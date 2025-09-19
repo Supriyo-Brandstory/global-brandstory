@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding: 70px 0;
     color: #fff;
+    text-align: center;
 }
 
 .heading{
@@ -123,5 +124,13 @@
 @media (max-width: 768px) {
     .caseWrapper{
         flex-direction: column;
+    }
+
+    .heading{
+      font-size: 32px;
+    }
+
+    .frame{
+      padding: 0 10px;
     }
 }

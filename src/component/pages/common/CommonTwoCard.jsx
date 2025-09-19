@@ -13,7 +13,7 @@ const CommonTwoCard = ({ heading, subheading, cards }) => {
         {cards?.map((card, index) => (
           <div key={index} className={`${styles.card} ${index == 0 ? `${styles.local}`:''}`}>
             <h4>{card.title}</h4>
-            <p>{card.description}</p>
+            <div className={styles.description} dangerouslySetInnerHTML={{ __html: card.description }} />
           </div>
         ))}
       </div>

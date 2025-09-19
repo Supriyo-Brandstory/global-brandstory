@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import styles from "@/style/common/commonAccordion2.module.css"; // new CSS module
 
-const CommonAccordion2 = ({ title, description, items }) => {
+const CommonAccordion2 = ({ title, highlited, description, items }) => {
     const [activeIndex, setActiveIndex] = useState(null);
 
     const toggleItem = (index) => {
@@ -14,6 +14,7 @@ const CommonAccordion2 = ({ title, description, items }) => {
             {/* Left Side Title */}
             <div className={styles.text}>
                 {title && <h2 className={styles.title}>{title}</h2>}
+                {highlited && <h2 className={styles.highlited}>{highlited}</h2>}
                 {description && <p className={styles.description}>{description}</p>}
             </div>
 

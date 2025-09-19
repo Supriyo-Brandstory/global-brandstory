@@ -2,7 +2,8 @@
 import CommonArrowGrid from '@/component/pages/common/CommonArrowGrid'
 
 const SeoMarketingService = () => {
-
+    const heading = "Explore More of Our SEO Marketing Services"
+    const description ="Our expertise covers every area of search optimisation. Depending on your business goals, you may also want to explore:"
     const boxesData = [
     {
         title: "Enterprise SEO",
@@ -43,7 +44,7 @@ const SeoMarketingService = () => {
   ];
   
     return (
-    <CommonArrowGrid boxes={boxesData} />
+    <CommonArrowGrid boxes={boxesData} heading={heading} descripton={description}/>
     );    
 }
 

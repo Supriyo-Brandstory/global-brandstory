@@ -53,6 +53,15 @@
   color: #FFFFFF;
 }
 
+.description{
+  font-size: 18px;
+}
+
+.description ul li{
+  font-size: 18px;
+
+}
+
 /* Special gradient for Local SEO */
 .local {
   /* border: none; */
@@ -68,3 +77,4 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
+

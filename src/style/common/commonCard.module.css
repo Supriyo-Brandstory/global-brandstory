@@ -10,17 +10,22 @@
 }
 .card {
     background: var(--bg);
+    height: var(--boxHeight);
     padding: 55px 20px 45px;
     border-radius: 8px;
-    background-size: cover;
+    background-size: 130%;
+    background-position: center;
+    background-repeat: no-repeat;
     margin-top: 90px;
-    min-height: 225px;
+    border: 1px solid #585858;
+    box-shadow: inset 0 0 10px #888888;
 }
+
 .icon {
     width: 90px;
     height: 90px;
     position: absolute;
-    top: 50%;
+    top: 170px;
     left: 50%;
     transform: translate(-50%, -135%);
 }

@@ -3,7 +3,7 @@ import styles from "@/style/common/commonStats.module.css";
 
 const CommonStatsSection = ({
   title = null,
-  subtitle = null,
+  subtitle = null, 
   description = [],
   stats = [],
 }) => {

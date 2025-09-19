@@ -31,8 +31,7 @@
   position: relative;
   border-radius: 12px;
   padding: 30px 10%;
-  background: url('/images/three-card-blur-bg.png'),
-              rgba(255, 255, 255, 0.05);
+  background: var(--bg);
   background-size: cover;
   background-position: bottom;
   backdrop-filter: blur(10px);
