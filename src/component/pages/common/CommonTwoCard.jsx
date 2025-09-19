@@ -1,11 +1,12 @@
 "use client";
 import styles from "@/style/common/commonTwoCard.module.css";
 
-const CommonTwoCard = ({ heading, subheading, cards }) => {
+const CommonTwoCard = ({ heading, subheading, highlight, cards }) => {
   return (
     <section className={styles.seoSection}>
       <div className={styles.header}>
         <h2>{heading}</h2>
+        {highlight && <h3 >{highlight}</h3>}
         <p>{subheading}</p>
       </div> 
 

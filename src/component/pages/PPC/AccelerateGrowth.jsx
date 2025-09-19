@@ -6,7 +6,8 @@ export const AccelerateGrowth = () =>{
        <CommonAbout 
    title='<h2>Accelerate Growth with Performance-Driven Paid Media</h2>'
    subtitle='<p>Paid advertising can fast-track business growth, but only when executed strategically. Targeting the right audience with the right message at the right time turns clicks into revenue.</p>'
-   points={['Every post and ad has a purpose','We help turn people’s attention into real sales','Organic posts, ads, influencer posts, and communities all work together']}
+   text1="As a leading PPC management agency, BrandStory focuses on:"
+   points={['Cost-efficient campaigns that maximize ROI','High-quality lead generation instead of vanity traffic','Data-backed decision-making at every stage']}
    text2='The goal is simple: more engagement, more customers, more growth.'
    imageSrc='/images/ppc/about.jpg'
    imageAlt='Social-media-marketing-about'

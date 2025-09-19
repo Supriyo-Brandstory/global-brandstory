@@ -3,8 +3,9 @@ import CommonTwoCard from '../common/CommonTwoCard'
 export const GrowthPlan =()=>{
     const data = {
     heading: "PPC Growth Plan",
+    highlight: "From Strategy to Scaling",
     subheading:
-      "From Strategy To Scaling. Our Four-Stage Framework Ensures Campaigns Improve Continuously:",
+      "Our four-stage framework ensures campaigns improve continuously:",
     cards: [
             {
               title: "Strategy",
