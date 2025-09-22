@@ -15,7 +15,7 @@ const CommonAdvertise = ({btnOneLink, btnTwoLink, btn1, btn2, title1, title2, de
                   <Link href={btnOneLink} class="orange-btn">
                     {btn1}
                   </Link>
-                  <Link href={btnTwoLink} class="orange-btn">
+                  <Link href={btnTwoLink} class="orange-btn-transparent">
                     {btn2}
                   </Link>
                 </div>

@@ -570,6 +570,11 @@ b{
   font-weight: 700 !important;
   font-family: var(--font-family-bold);
 }
+.orange-btn-transparent{
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 1px solid #F15D22;
+}
 
 @media (max-width: 768px) {
   h1{
