@@ -65,6 +65,15 @@
     object-fit: contain;
 }
 
+.footer p{
+    font-size: 18px;
+    color: white
+}
+
+.footer span{
+    color: #f15d22;
+}
+
 .card h3{
     font-size: 24px;
     font-weight: 600;
@@ -73,6 +82,7 @@
 }
 
 .card p{
+    font-size: 18px;
     color: #ccc;
     line-height: 1.5;
 }

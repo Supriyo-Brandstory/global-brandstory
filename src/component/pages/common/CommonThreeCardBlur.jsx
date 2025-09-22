@@ -1,11 +1,11 @@
 // CommonThreeCardBlur.jsx
 import styles from '@/style/common/commonThreeCardBlur.module.css'
 
-export const CommonThreeCardBlur = ({heading, subheading, data })=>{
+export const CommonThreeCardBlur = ({heading, subheading, data, footer })=>{
     return(
         <div className={styles.frame}>
-            {heading && <h1 className={styles.heading}>{heading}</h1>}
-            {subheading && <p className={styles.subHeading}>{subheading}</p>}
+            {heading && <h2 className={styles.heading}>{heading}</h2>}
+            {subheading && <p className={styles.subHeading} dangerouslySetInnerHTML={{__html: subheading}}/>}
 
             <div className={styles.cards}>
                 {data.map((item, idx)=>(
@@ -17,9 +17,7 @@ export const CommonThreeCardBlur = ({heading, subheading, data })=>{
                 ))}
             </div>
 
-            <p className={styles.footer}>
-                These tools let us save time, stay organized, and focus on strategies that bring results.
-            </p>
+            <p className={styles.footer} dangerouslySetInnerHTML={{ __html: footer }} />
         </div>
     )
 }

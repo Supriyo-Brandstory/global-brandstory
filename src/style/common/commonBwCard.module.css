@@ -8,12 +8,11 @@
 }
 
 .heading {
-  font-size: 2.2rem;
+  font-size: 50px;
   font-weight: 700;
   padding-bottom: 20px;
   margin: 0 auto;
   max-width: 600px;
-
 }
 
 .subHeading {
@@ -40,7 +39,7 @@
 .card {
   flex: 1;
   min-width: 280px;
-  max-width: 500px;
+  /* max-width: 500px; */
   background: url('/images/SMM/white-card.webp');
   background-size: 109%;
   background-size: cover;
@@ -56,12 +55,22 @@
 .card h3{
     font-size: 24px;
     padding-bottom: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .card p{
     font-size: 18px;
     width: 80%;
+}
+
+.description{
+  font-size: 18px;
+}
+.description ul{
+  font-size: 18px;
+}
+.description ul li{
+  font-size: 18px;
 }
 
 .firstBox{
@@ -78,13 +87,10 @@
   /* background: #333; */
 }
 
-.card h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
+
 
 .card p {
-  font-size: 0.95rem;
+  /* font-size: 0.95rem; */
   line-height: 1.5;
 }
 

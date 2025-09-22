@@ -26,7 +26,7 @@ const CommonTwoImgDesc = ({ data }) => {
           </div>
           <div className={styles.textBox}>
             {row.text.map((para, i) => (
-              <p key={i}>{para}</p>
+              <p key={i} dangerouslySetInnerHTML={{ __html: para }} />
             ))}
           </div>
         </div>

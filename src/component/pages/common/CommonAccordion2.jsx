@@ -15,7 +15,8 @@ const CommonAccordion2 = ({ title, highlited, description, items }) => {
             <div className={styles.text}>
                 {title && <h2 className={styles.title}>{title}</h2>}
                 {highlited && <h2 className={styles.highlited}>{highlited}</h2>}
-                {description && <p className={styles.description}>{description}</p>}
+                {/* {description && <p className={styles.description}>{description}</p>} */}
+                {description && <p className={styles.description} dangerouslySetInnerHTML={{__html: description}} />}
             </div>
 
             {/* Accordion Right Side */}

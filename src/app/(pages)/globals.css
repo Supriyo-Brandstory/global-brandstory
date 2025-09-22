@@ -561,6 +561,11 @@ ul li{
   margin-bottom: 10px;
 }
 
+.highlited-text{
+  color: #ff5c39;
+  display: inline-block;
+}
+
 b{
   font-weight: 700 !important;
   font-family: var(--font-family-bold);

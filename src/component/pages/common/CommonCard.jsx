@@ -9,7 +9,7 @@ import styles from "@/style/common/commonCard.module.css";
 
 
  
-const CommonCard = ({ seoData, heding }) => {
+const CommonCard = ({ seoData, heding, description, footer }) => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
 
@@ -18,6 +18,8 @@ const CommonCard = ({ seoData, heding }) => {
             <h2 className={styles.heading}>
                 {heding}
             </h2>
+
+            {description && <p>{description}</p>}
 
             <Swiper
                 modules={[Navigation]}
@@ -113,6 +115,7 @@ const CommonCard = ({ seoData, heding }) => {
 
                 </button>
             </div>
+            {footer && <p className="py-4">{footer}</p>}
         </section>
     );
 };

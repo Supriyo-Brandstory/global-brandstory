@@ -22,10 +22,14 @@
 }
 .points{
     display: flex;
-
     flex-direction: column;
     gap: 10px;
     margin-left: 20px;
+}
+.imageBox{
+    min-width: 40%;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
