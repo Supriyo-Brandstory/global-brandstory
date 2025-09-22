@@ -36,7 +36,7 @@ const CommonAbout = ({
                 {/* Points Section */}
                 {(text1 || (points && points.length > 0) || text2) && (
                     <div className={styles.points}>
-                        {text1 && <h4>{text1}</h4>}
+                        {text1 && <h4 dangerouslySetInnerHTML={{ __html: text1 }}></h4>}
                         {points && points.length > 0 && (
                             <ul>
                                 {points.map((point, index) => (

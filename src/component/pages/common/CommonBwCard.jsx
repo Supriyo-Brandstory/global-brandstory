@@ -10,7 +10,7 @@ export const CommonBwCrd = ({title, description, footer, cardData }) => {
       <p className={styles.subHeading}>
         {description}
       </p>
-      <p className={styles.small}>We Also Work With:</p>
+      {/* <p className={styles.small}>We Also Work With:</p> */}
 
       <div className={styles.cardWrapper}>
         {cardData.map((item, index) => (
