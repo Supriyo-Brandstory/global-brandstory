@@ -1,7 +1,7 @@
 import styles from '@/style/marketingAutomation.module.css'
 export const TechStackAutomation =()=>{
     return (
-        <div className={styles.frame}>
+        <div className={`${styles.frame} py-30`}>
             <h2>Our Technology Stack for Automation</h2>
             <p>
                 We use the best tools to make marketing automation work smoothly for your business. Some of the platforms we work with include: <span className='highlited-text'>HubSpot</span>, <span className='highlited-text'>Marketo</span>, <span className='highlited-text'>Pardot</span>, <span className='highlited-text'>ActiveCampaign</span>, <span className='highlited-text'>Mailchimp</span>, <span className='highlited-text'>Klaviyo</span>, and <span className='highlited-text'>Zoho CRM</span>.
