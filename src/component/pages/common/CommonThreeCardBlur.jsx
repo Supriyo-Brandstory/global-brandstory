@@ -17,7 +17,12 @@ export const CommonThreeCardBlur = ({heading, subheading, data, footer })=>{
                 ))}
             </div>
 
-            <p className={styles.footer} dangerouslySetInnerHTML={{ __html: footer }} />
+<p
+  className={styles.footer}
+  dangerouslySetInnerHTML={{ __html: String(footer || "") }}
+></p>
+
+
         </div>
     )
 }

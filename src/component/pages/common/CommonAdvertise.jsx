@@ -11,7 +11,7 @@ const CommonAdvertise = ({btnOneLink, btnTwoLink, btn1, btn2, title1, title2, de
                     {title2 && <p>{title2}</p>}
                 </span>
                 {description && <p>{description}</p>}
-                <div class="flex gap-x-4">
+                <div className="flex gap-x-4">
                   <Link href={btnOneLink} className="orange-btn">
                     {btn1}
                   </Link>

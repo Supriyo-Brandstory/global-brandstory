@@ -43,8 +43,8 @@ const CommonAccordion2 = ({ title, highlited, description, items }) => {
                                 <path d="M21.2929 33.2071C21.6834 33.5976 22.3166 33.5976 22.7071 33.2071L29.0711 26.8431C29.4616 26.4526 29.4616 25.8195 29.0711 25.4289C28.6805 25.0384 28.0474 25.0384 27.6569 25.4289L22 31.0858L16.3431 25.4289C15.9526 25.0384 15.3195 25.0384 14.9289 25.4289C14.5384 25.8195 14.5384 26.4526 14.9289 26.8431L21.2929 33.2071ZM22 9.5L21 9.5L21 32.5L22 32.5L23 32.5L23 9.5L22 9.5Z" fill="#383838"/>
                                 </g>
                                 <defs>
-                                <filter id="filter0_i_192_122" x="0" y="0" width="44" height="42" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <filter id="filter0_i_192_122" x="0" y="0" width="44" height="42" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                <feFlood floodOpacity="0" result="BackgroundImageFix"/>
                                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
                                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                                 <feOffset/>
