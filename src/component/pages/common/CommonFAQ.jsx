@@ -4,7 +4,6 @@ import Image from 'next/image';
 import styles from '@/style/common/commonFAQs.module.css';
 
 const CommonFAQ = ({data}) => {
-
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -22,13 +21,17 @@ const CommonFAQ = ({data}) => {
               onClick={() => toggleFAQ(index)}
             >
               <span>{item.title}</span>
-              <span
-                className={`${styles.arrow} ${
-                  openIndex === index ? styles.rotate : ''
-                }`}
-              >
-                <Image src="/images/arrow-down.png" alt="arrow down" width={44} height={42} />
-              </span>
+              <div className={styles.arrowContainer}>
+                <Image
+                  src="/images/arrow-down.webp"
+                  alt="arrow down"
+                  width={24}
+                  height={24}
+                  className={`${styles.arrow} ${
+                    openIndex === index ? styles.flip : ''
+                  }`}
+                />
+              </div>
             </button>
             <div
               className={`${styles.faqContent} ${
