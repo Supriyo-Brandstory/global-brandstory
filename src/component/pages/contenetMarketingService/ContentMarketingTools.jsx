@@ -1,6 +1,5 @@
 import React from 'react'
 import CommonAccordion from '../common/CommonAccordion';
-import CommonAccordion2 from '../common/CommonAccordion2';
 
 const ContentMarketingTools = () => {
   const accordionData = [
@@ -30,7 +29,7 @@ const ContentMarketingTools = () => {
     <>
       <CommonAccordion
         title="Our Content Marketing Tools & Technology"
-        subheding1="We Use The Right Tools To Make Content Smarter And Faster:"
+        subheding1=" "
         subheding2="Tools Help Us Scale, But Strategy Drives Results. Every Tool We Use Has One Purpose: Make Your Content Work Harder For Your Business."
         items={accordionData} 
       />
