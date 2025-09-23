@@ -93,13 +93,13 @@
 }
 
 .caseTitle {
-  font-size: 22px;
+  font-size: 24px !important;
   font-weight: 600;
   margin-bottom: 15px;
 }
 
 .caseDesc {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   margin-bottom: 15px;
 }
@@ -116,6 +116,7 @@
 
 .footer {
   color: #bbb;
+  font-size: 18px;
   margin: 50px auto;
   max-width: 800px;
   line-height: 1.6;

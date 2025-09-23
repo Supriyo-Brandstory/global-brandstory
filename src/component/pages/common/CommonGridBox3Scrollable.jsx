@@ -5,25 +5,22 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import styles from "@/style/common/commonCard.module.css";
+import styles from "@/style/common/commonGridBox3Scrollable.module.css"
 
-
- 
-const CommonCard = ({ seoData, heding, description, footer }) => {
+const CommonGridBox3Scrollable = ({ title, description, data }) => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
 
     return (
-        <section className={styles.wrapper}>
-            <h2 className={styles.heading}>
-                {heding}
-            </h2>
-
-            {description && <p>{description}</p>}
+        <section className={styles.seoSection}>
+            <div className={styles.header}>
+                <h2>{title}</h2>
+                <p>{description}</p>
+            </div>
 
             <Swiper
                 modules={[Navigation]}
-                spaceBetween={20}
+                spaceBetween={25}
                 slidesPerView={3}
                 loop={false}
                 navigation={{
@@ -47,15 +44,14 @@ const CommonCard = ({ seoData, heding, description, footer }) => {
                     768: { slidesPerView: 1 },
                     1024: { slidesPerView: 3 },
                 }}
+                className={styles.swiperContainer}
             >
-                {seoData.map((item, index) => (
+                {data?.map((card, index) => (
                     <SwiperSlide key={index}>
-                        <div className={styles.card} style={{ '--bg': item.background, '--boxHeight': item.height || '228px' }}>
-                            <div className={styles.iconWrapper}>
-                                <img src={item.icon} alt="icon" className={styles.icon} />
-                            </div>
-                            <h4 className={styles.title}>{item.title}</h4>
-                            <h5 className={styles.desc}>{item.desc}</h5>
+                        <div className={styles.card} style={{ '--card-color': card.bgcolor }}>
+                            {card.logo && <img src={card.logo || "/placeholder.svg"} alt={card.title} className={styles.cardLogo} />}
+                            <h4>{card.title}</h4>
+                            <p>{card.description}</p>
                         </div>
                     </SwiperSlide>
                 ))}
@@ -71,7 +67,7 @@ const CommonCard = ({ seoData, heding, description, footer }) => {
                         width={74}
                         height={74}
                     >
-                        <title>image</title>
+                        <title>Previous</title>
                         <style
                             dangerouslySetInnerHTML={{
                                 __html:
@@ -90,7 +86,6 @@ const CommonCard = ({ seoData, heding, description, footer }) => {
                             d="m39.22 40.25q0.19-0.21 0.28-0.48 0.09-0.27 0.07-0.55-0.02-0.28-0.14-0.54-0.13-0.25-0.34-0.44l-5.9-5.16 5.16-5.9c0.25-0.28 0.37-0.65 0.35-1.03-0.03-0.38-0.2-0.73-0.48-0.98-0.29-0.25-0.66-0.37-1.04-0.35-0.37 0.03-0.73 0.2-0.97 0.49l-6.11 6.98q-0.19 0.21-0.28 0.48-0.09 0.27-0.07 0.55 0.02 0.28 0.14 0.54 0.13 0.25 0.34 0.44l6.98 6.1c0.58 0.51 1.49 0.45 2.01-0.15z"
                         />
                     </svg>
-
                 </button>
 
                 <button ref={nextRef} className={styles.nextBtn}>
@@ -112,12 +107,10 @@ const CommonCard = ({ seoData, heding, description, footer }) => {
                             </filter>
                         </defs>
                     </svg>
-
                 </button>
             </div>
-            {footer && <p className="py-4">{footer}</p>}
         </section>
     );
 };
 
-export default CommonCard;
+export default CommonGridBox3Scrollable;

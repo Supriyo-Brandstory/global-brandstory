@@ -43,6 +43,10 @@
     font-size: 50px;
   }
 
+  .footertext{
+    font-weight: 900 !important;
+  }
+
   
   @media (max-width: 768px) {
     .frame{

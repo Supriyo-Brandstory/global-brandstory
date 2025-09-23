@@ -1,7 +1,7 @@
 import styles from '@/style/common/commonAdvertise.module.css';
 import Link from 'next/link';
 
-const CommonAdvertise = ({btnOneLink, btnTwoLink, btn1, btn2, title1, title2, description}) =>{
+const CommonAdvertise = ({btnOneLink, btnTwoLink, btn1, btn2, title1, title2, description, footerText}) =>{
     
     return (
         <div className={styles.frame}>
@@ -10,7 +10,7 @@ const CommonAdvertise = ({btnOneLink, btnTwoLink, btn1, btn2, title1, title2, de
                     <h2 className={styles.heading}>{title1}</h2>
                     {title2 && <p>{title2}</p>}
                 </span>
-                {description && <p>{description}</p>}
+                {description && <p dangerouslySetInnerHTML={{__html: description}}></p>}
                 <div className="flex gap-x-4">
                   <Link href={btnOneLink} className="orange-btn">
                     {btn1}
@@ -19,6 +19,8 @@ const CommonAdvertise = ({btnOneLink, btnTwoLink, btn1, btn2, title1, title2, de
                     {btn2}
                   </Link>
                 </div>
+                {footerText && <p className={styles.footertext} dangerouslySetInnerHTML={{__html: footerText}}></p>}
+
             </div>
         </div>
     ); 
