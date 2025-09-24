@@ -85,7 +85,7 @@
   transition: transform 0.3s ease;
   transform-origin: center;
 }
-.arrowContainer:hover .arrow {
+.accordionItem:hover .arrow {
   filter: brightness(0) invert(1);
 }
 

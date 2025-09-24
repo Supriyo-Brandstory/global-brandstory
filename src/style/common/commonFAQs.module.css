@@ -67,7 +67,7 @@
   transform-origin: center;
 }
 
-.arrowContainer:hover .arrow {
+.faqItem:hover .arrow {
   filter: brightness(0) invert(1);
 }
 
