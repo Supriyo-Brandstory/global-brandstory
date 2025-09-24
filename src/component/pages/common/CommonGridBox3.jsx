@@ -1,11 +1,11 @@
 import styles from "@/style/common/commonGridBox3.module.css"
 
-const CommonGridBox3 = ({ title, description, data }) => {
+const CommonGridBox3 = ({ title, description, data, footer }) => {
   return (
     <section className={styles.seoSection}>
       <div className={styles.header}>
         <h2>{title}</h2>
-        <p>{description}</p>
+        <p className={styles.footer}>{description}</p>
       </div>
  
       <div className={styles.grid}>
@@ -17,6 +17,8 @@ const CommonGridBox3 = ({ title, description, data }) => {
           </div>
         ))}
       </div>
+      <br />
+      {footer &&<p className={styles.footer}>{footer}</p>}
     </section>
   )
 }

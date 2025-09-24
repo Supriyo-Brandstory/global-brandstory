@@ -28,7 +28,7 @@
 .card {
   position: relative;
   border-radius: 12px;
-  padding: 30px 10%;
+  padding: 25px 25px;
   background: var(--bg);
   background-size: cover;
   background-position: bottom;

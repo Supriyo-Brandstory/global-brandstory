@@ -8,7 +8,7 @@ const CommonAdvertise = ({btnOneLink, btnTwoLink, btn1, btn2, title1, title2, de
             <div className={styles.innerFrame}>
                 <span>
                     <h2 className={styles.heading}>{title1}</h2>
-                    {title2 && <p>{title2}</p>}
+                    {title2 && <h2 className={styles.heading}>{title2}</h2>}
                 </span>
                 {description && <p dangerouslySetInnerHTML={{__html: description}}></p>}
                 <div className="flex gap-x-4">

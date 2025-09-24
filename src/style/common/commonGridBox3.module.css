@@ -16,7 +16,12 @@
 }
 
 .header p {
-  color: #ccc;
+  color: #fbfbfb;
+}
+
+.footer{
+  font-size: 18px;
+  color: #FDF6F0;  
 }
 
 .grid {

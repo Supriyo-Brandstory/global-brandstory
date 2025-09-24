@@ -67,6 +67,12 @@
   transform-origin: center;
 }
 
+.arrowContainer:hover .arrow {
+  filter: brightness(0) invert(1);
+}
+
+
+
 .flip {
   transform: scaleY(-1);
   filter: brightness(0) invert(1);
