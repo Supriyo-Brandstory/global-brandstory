@@ -3,7 +3,7 @@ import styles from '@/style/marketingAutomation.module.css'
 export const BrandSentiment = () => {
     return (
         <div className={`${styles.frame} py-30`}>
-            <h2>Data-Drive Analysis of Brand Sentiment</h2>
+            <h2 className='pb-10'>Data-Drive Analysis of Brand Sentiment</h2>
             <p>
                 Every Brand Has A History, But How Customers View It Actually Matters. BrandStory Uses Advanced Sentiment Analysis To Examine Real Conversations About Your Brand.
             </p> <br />

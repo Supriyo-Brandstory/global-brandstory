@@ -18,12 +18,19 @@
     margin-bottom: 40px;
 }
 
-.cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-bottom: 40px;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* centers last row */
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
+
+/* .card {
+
+} */
+
 
 .card {
   position: relative;
@@ -35,6 +42,7 @@
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  flex: 0 1 370px;
 }
 
 .card::before {
