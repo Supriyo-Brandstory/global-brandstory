@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import styles from "@/style/common/commonAccordion.module.css"; // module CSS file
 
-const CommonAccordion = ({ title, subheding1, subheding2, items }) => {
+const CommonAccordion = ({ title, subheding1, subheding2, items, footer }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleItem = (index) => {
@@ -71,6 +71,7 @@ const CommonAccordion = ({ title, subheding1, subheding2, items }) => {
           </div>
         ))}
       </div>
+      {footer && <span className="pt-10">{footer}</span>}
     </div>
   );
 };

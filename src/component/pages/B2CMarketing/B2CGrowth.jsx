@@ -1,7 +1,7 @@
 import React from 'react'
 import CommonAccordion from '../common/CommonAccordion';
 
-const StructuredGrowth = () => {
+const B2CGrowth = () => {
   const accordionData = [
     {
       title: "Awareness",
@@ -9,7 +9,7 @@ const StructuredGrowth = () => {
         "Getting Your Brand In Front Of Decision-Makers Through Social Media Campaigns, Content Marketing, And Trade Journals.",
     },
     {
-      title: "Consideration",
+      title: "Engagement",
       content: "", // Content for this stage is not provided in the image
     },
     {
@@ -25,14 +25,14 @@ const StructuredGrowth = () => {
   return (
     <>
       <CommonAccordion
-        title="Structured B2B Growth with BrandStory"
+        title="The BrandStory B2C Growth Framework"
         subheding1=""
-        subheding2="We Structure B2B Marketing Strategy Around Four Stages:"
+        subheding2="Our B2C marketing strategy works across four stages:"
         items={accordionData}
-        footer="Consistent growth, improved pipeline health, and increased industry brand recognition are all guaranteed by this framework."
+        footer="This framework strengthens the consumer sales funnel and creates lasting relationships through structured B2C campaign planning."
       />
     </>
   )
 }
 
-export default StructuredGrowth
+export default B2CGrowth
