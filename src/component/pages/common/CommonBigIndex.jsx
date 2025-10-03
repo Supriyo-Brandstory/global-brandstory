@@ -7,7 +7,7 @@ export const CommonBigIndex = ({ heading, description, data,footer, showCaseLabe
         {heading}
       </h1>
       <p className={styles.center}>
-        {description}
+        {description && description}
       </p> 
 
       <div className={styles.caseWrapper}>
@@ -20,7 +20,8 @@ export const CommonBigIndex = ({ heading, description, data,footer, showCaseLabe
               alt="image"
             />
             <h3 className={styles.caseTitle}>{item.title}</h3>
-            <p className={styles.caseDesc}>{item.description}</p>
+            {/* <p className={styles.caseDesc}>{item.description}</p> */}
+            <p className={styles.caseDesc} dangerouslySetInnerHTML={{__html: item.description}}></p>
             {item.points && <ul>
               {item.points.map((point, i) => (
                 <li key={i}>{point}</li>

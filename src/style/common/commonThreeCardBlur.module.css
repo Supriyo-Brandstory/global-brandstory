@@ -43,6 +43,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   flex: 0 1 370px;
+  background-color: #97938f24;
 }
 
 .card::before {

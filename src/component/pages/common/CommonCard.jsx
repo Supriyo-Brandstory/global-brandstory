@@ -19,7 +19,7 @@ const CommonCard = ({ seoData, heding, description, footer }) => {
                 {heding}
             </h2>
 
-            {description && <p>{description}</p>}
+            {description && <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>}
 
             <Swiper
                 modules={[Navigation]}
@@ -55,7 +55,7 @@ const CommonCard = ({ seoData, heding, description, footer }) => {
                                 <img src={item.icon} alt="icon" className={styles.icon} />
                             </div>
                             <h4 className={styles.title}>{item.title}</h4>
-                            <h5 className={styles.desc}>{item.desc}</h5>
+                            <h5 className={styles.desc} dangerouslySetInnerHTML={{ __html: item.desc }}></h5>
                         </div>
                     </SwiperSlide>
                 ))}

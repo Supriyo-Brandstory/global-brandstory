@@ -29,7 +29,8 @@ const CommonStatsSection = ({
           {stats.map((item, i) => (
             <div key={i} className={styles.statItem}>
               <h3>{item.value}</h3>
-              <p>{item.label}</p>
+              <p dangerouslySetInnerHTML={{__html: item.label}}/>
+              {/* <p>{item.label}</p> */}
             </div>
           ))}
         </div>

@@ -16,7 +16,7 @@
 }
 
 .subHeading {
-  font-size: 24px;
+  font-size: 18px;
   color: #ccc;
   max-width: 1000px;
   margin: 0 auto 20px auto;
@@ -107,6 +107,6 @@
   padding-top: 40px;
   font-size: 18px;
   color: #aaa;
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
 }
