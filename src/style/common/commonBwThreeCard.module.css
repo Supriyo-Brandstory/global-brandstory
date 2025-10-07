@@ -110,3 +110,13 @@
   max-width: 1000px;
   margin: 0 auto;
 }
+
+
+@media (max-width: 768px) {
+  .heading{
+    font-size: 32px;
+  }
+  .frame{
+    margin: 0px 10px;
+  }
+}

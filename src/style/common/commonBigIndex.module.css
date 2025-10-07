@@ -1,66 +1,32 @@
-.frame{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 70px 0;
-    color: #fff;
-    text-align: center;
+.frame {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 70px 0;
+  color: #fff;
+  text-align: center;
 }
 
-.heading{
-    font-size: 50px;
-    margin-bottom: 20px;
+.heading {
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 
-.center{
-    text-align: center;
+.center {
+  text-align: center;
 }
 
-.contentWrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 50px;
-    gap: 40px;
-}
-
-.left{
-    flex: 1;
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.left ul{
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
-
-.left li{
-    margin-bottom: 15px;
-}
-
-.right{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.right img{
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-/* SMMCaseBoxes */
-
+/* Case Boxes Grid */
 .caseWrapper {
   display: flex;
-  justify-content: space-between;
-  margin-top: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
+  margin-top: 60px;
 }
 
 .caseBox {
-  flex: 1;
+  flex: 0 1 calc(33.333% - 30px);
+  box-sizing: border-box;
   padding: 25px;
   border-radius: 12px;
   background-size: 104%;
@@ -70,9 +36,14 @@
   position: relative;
   border: 1px solid #8e8e8e;
   text-align: left !important;
+  transition: transform 0.3s ease;
 }
 
+.caseBox:hover {
+  transform: translateY(-5px);
+}
 
+/* Backgrounds */
 .case1 {
   background-image: url('/images/SMM/case-bg-1.webp');
 }
@@ -83,14 +54,14 @@
   background-image: url('/images/SMM/case-bg-3.webp');
 }
 
-.imageId{
-    position: relative;
-    margin-bottom: 20px;
-    width: 20%;
+.imageId {
+  position: relative;
+  margin-bottom: 20px;
+  width: 20%;
 }
 
-.caseBox h3{
-    font-size: 30px;
+.caseBox h3 {
+  font-size: 30px;
 }
 
 .caseTitle {
@@ -123,17 +94,28 @@
   line-height: 1.6;
 }
 
+/* Responsive */
+@media (max-width: 1024px) {
+  .caseBox {
+    flex: 0 1 calc(45% - 20px);
+  }
+}
 
 @media (max-width: 768px) {
-    .caseWrapper{
-        flex-direction: column;
-    }
+  .caseWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .heading{
-      font-size: 32px;
-    }
+  .caseBox {
+    flex: 0 1 100%;
+  }
 
-    .frame{
-      padding: 0 10px;
-    }
+  .heading {
+    font-size: 32px;
+  }
+
+  .frame {
+    padding: 0 10px;
+  }
 }

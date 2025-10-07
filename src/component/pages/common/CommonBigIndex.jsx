@@ -16,7 +16,7 @@ export const CommonBigIndex = ({ heading, description, data,footer, showCaseLabe
             {showCaseLabel && <h3>Case</h3>} {/* 👈 conditional */}
             <img
               className={styles.imageId}
-              src={`/images/SMM/case-${index+1}.png`}
+              src={`/images/case-${index+1}.png`}
               alt="image"
             />
             <h3 className={styles.caseTitle}>{item.title}</h3>

@@ -21,7 +21,8 @@ const CommonArrowGrid = ({ boxes }) => {
                         index={String(index + 1).padStart(2, '0')}
                         title={box.title}
                         description={box.description}
-                        size={box.size || "md"}
+                     size={box.size || "md"}
+                        height={box.height}
                     />
                 ))}
             </div>
@@ -29,7 +30,7 @@ const CommonArrowGrid = ({ boxes }) => {
     );
 };
 
-const GridBox = ({ index, title, description, size = "md" }) => {
+const GridBox = ({ index, title, description, size = "md", height=null }) => {
     const [isMobile, setIsMobile] = useState(false);
     const [boxSize, setBoxSize] = useState({ width: 0, height: 0 });
     const boxRef = useRef(null);
@@ -66,7 +67,13 @@ const GridBox = ({ index, title, description, size = "md" }) => {
     const effectiveSize = isMobile ? 'sm' : size;
 
     return (
-        <div ref={boxRef} className={`${styles.gridbox} ${styles[effectiveSize]}`}>
+        <div
+            ref={boxRef}
+            className={`${styles.gridbox} ${styles[effectiveSize]}`}
+            style={!isMobile && height ? { height: `${height}px` } : {}}
+        >
+
+
             <div className={styles.indexNumber}>{index}</div>
 
             {/* Dynamically measured background */}
