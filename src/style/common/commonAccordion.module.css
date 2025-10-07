@@ -111,12 +111,14 @@
     font-size: 16px;
     margin: 15px auto;
     line-height: 1.4;
+    font-weight: normal;
   }
 
   .CommonAccordion span {
     width: 100%;
     font-size: 16px;
     margin: 0 auto 20px;
+    font-weight: normal;
     line-height: 1.5;
   }
 

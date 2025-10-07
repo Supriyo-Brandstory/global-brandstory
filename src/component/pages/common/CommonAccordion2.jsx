@@ -2,8 +2,9 @@
 import React, { useState } from "react";
 import Image from 'next/image';
 import styles from "@/style/common/commonAccordion2.module.css";
+import Link from "next/link";
 
-const CommonAccordion2 = ({ title, highlited, description, items }) => {
+const CommonAccordion2 = ({ title, highlited, description, items, button, buttonLink }) => {
     const [activeIndex, setActiveIndex] = useState(null);
 
     const toggleItem = (index) => {
@@ -17,6 +18,7 @@ const CommonAccordion2 = ({ title, highlited, description, items }) => {
                 {title && <h2 className={styles.title}>{title}</h2>}
                 {highlited && <h2 className={styles.highlited}>{highlited}</h2>}
                 {description && <p className={styles.description} dangerouslySetInnerHTML={{__html: description}} />}
+                {button && <Link className={styles.btn} href={buttonLink}>{button}</Link>}
             </div>
 
             {/* Accordion Right Side */}

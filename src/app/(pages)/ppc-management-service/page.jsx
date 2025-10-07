@@ -32,7 +32,7 @@ const page = () => {
         <CommonDivider /><PPCPerformance />
         <CommonDivider /><PPCFaq/>
         <CommonDivider /><PPCServices />
-        <PPCFooter />
+        <CommonDivider /><PPCFooter />
     </>
   )
 }

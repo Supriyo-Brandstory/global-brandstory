@@ -100,8 +100,21 @@
   /* border-top: 1px solid #333; */
 }
 
+.accordionHeader h4{
+  text-align: left;
+}
+
 .accordionContent p {
     font-size: 18px;
+}
+
+.btn{
+  border: 1px solid #F15D22;
+  color: #F15D22;
+  padding: 10px 50px;
+  width: max-content;
+  margin: 40px 0 0 0;
+  border-radius: 50px;
 }
 
 @media (max-width: 768px) {

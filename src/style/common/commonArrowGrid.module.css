@@ -38,41 +38,41 @@
     flex-direction: column;
     text-align: left;
     position: relative;
-    transition: transform 0.3s ease;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+    color: #fff;
+    /* background-color: #1a1a1a; */
+    border-radius: 12px;
+    min-height: 200px;
+    overflow: hidden;
 }
 
-.firstbox{
-    height: 320px !important;
-    border-radius: 12px;
-    background-position: right;
+.boxBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.gridbox:hover .boxBg{
+    opacity: 0;
 }
 
 .gridbox:hover {
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
+    background-color: #ffffff;
+    color: #333;
+    /* border-radius: 0 29px 0px 20px;   */
 }
 
 .lg {
-    grid-column: span 3; /* Full width */
+    grid-column: span 3;
 }
 
 .md {
-    grid-column: span 2; /* 2/3 width */
+    grid-column: span 2;
 }
 
 .sm {
-    grid-column: span 1; /* 1/3 width */
-}
-
-/* Theme variations */
-.light {
-    color: #333;
-}
-
-.dark {
-    color: #fff;
+    grid-column: span 1;
 }
 
 .indexNumber {
@@ -80,23 +80,18 @@
     width: 40px;
     font-size: 1.2rem;
     font-weight: 300;
-    opacity: 0.6;
     margin-bottom: 20px;
     padding: 5px;
     display: flex;
     justify-content: center;
+    align-items: center;
     border-radius: 100px;
     color: black;
     background-color: #86827F;
-    opacity: 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* .dark .indexNumber {
-    color: white;
-    background-color: black;
-} */
-
-.light .indexNumber {
+.gridbox:hover .indexNumber {
     color: white;
     background-color: black;
 }
@@ -112,11 +107,8 @@
     font-size: 24px;
     font-weight: bold;
     margin: 0 0 15px 0;
-    color: inherit;
-}
-
-.dark .title {
     color: #ff6b47;
+    transition: color 0.3s ease;
 }
 
 .description {
@@ -130,40 +122,38 @@
     position: absolute;
     top: 0px;
     right: 0px;
-    width: 18%;
-    height: 18%;
+    width: 60px;
+    height: 60px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 1;
-    background-size: cover;
+    transition: background 0.3s ease;
+    box-shadow: 0px 0px 0px 14px #0f0f0f; 
 }
 
-.firstbox .arrow{
-    background: #0000001a;
-    width: 17% !important;
-    height: 20% !important;
-}
-
-.light .arrow {
-    height: 20%;
-    width: 14%;
+.gridbox:hover .arrow {
     background: rgba(0, 0, 0, 0.1);
+   
 }
 
-.md .arrow {
-    width: 9%;
-    height: 22%;
+.arrowDark {
+    display: block;
 }
 
-.lg .arrow{
-    width: 5%;
-    height: 27%;
+.arrowLight {
+    display: none;
 }
 
-/* Responsive */
+.gridbox:hover .arrowDark {
+    display: none;
+}
+
+.gridbox:hover .arrowLight {
+    display: block;
+}
+
 @media (max-width: 768px) {
     .gridContainer {
         grid-template-columns: 1fr;
@@ -175,18 +165,5 @@
     
     .gridbox {
         padding: 20px;
-    }
-    
-    /* Make all boxes behave like 'sm' in mobile */
-    .md .arrow,
-    .lg .arrow {
-        width: 18%;
-        height: 18%;
-    }
-    
-    .light.md .arrow,
-    .light.lg .arrow {
-        width: 14%;
-        height: 20%;
     }
 }

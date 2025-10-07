@@ -13,8 +13,8 @@ const CommonAccordion = ({ title, subheding1, subheding2, items, footer }) => {
     <div className={styles.CommonAccordion}>
       {/* Render only if value is not null/empty */}
       {title && <h2>{title}</h2>}
-      {subheding1 && <p>{subheding1}</p>}
-      {subheding2 && <span>{subheding2}</span>}
+      {subheding1 && <p dangerouslySetInnerHTML={{__html:subheding1}}/>}
+      {subheding2 && <span dangerouslySetInnerHTML={{__html:subheding2}}/>}
 
       <div className={styles.accordionWrapper}>
         {items?.map((item, index) => (
@@ -71,7 +71,7 @@ const CommonAccordion = ({ title, subheding1, subheding2, items, footer }) => {
           </div>
         ))}
       </div>
-      {footer && <span className="pt-10">{footer}</span>}
+      {footer && <span dangerouslySetInnerHTML={{__html:footer}} className="pt-10"></span>}
     </div>
   );
 };

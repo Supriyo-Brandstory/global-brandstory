@@ -40,7 +40,7 @@ const CommonAbout = ({
                         {points && points.length > 0 && (
                             <ul>
                                 {points.map((point, index) => (
-                                    <li key={index}>{point}</li>
+                                    <li key={index} dangerouslySetInnerHTML={{__html:point}}></li>
                                 ))}
                             </ul>
                         )}
