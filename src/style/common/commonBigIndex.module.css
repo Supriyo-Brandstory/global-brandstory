@@ -6,6 +6,9 @@
   text-align: center;
 }
 
+.frame p{
+  font-size: 18px;
+}
 .heading {
   font-size: 50px;
   margin-bottom: 20px;

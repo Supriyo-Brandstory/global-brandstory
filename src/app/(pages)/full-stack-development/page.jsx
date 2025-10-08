@@ -16,17 +16,16 @@ const page = () =>{
     return(
         <>
             <FullstackBanner />
-            <TechTeam />
-            <Solutions />
-            <Industries />
-            <SmartStack />
-            <DigitalSuccess />
-            <Arsenal />
-            <GrowingBrands />
-            <Standout />
-            <FullStackFaq />
-            <FullStackArrow />
-            <FullStackAdv />
+            <CommonDivider/><Solutions />
+            <CommonDivider/><Industries />
+            <CommonDivider/><SmartStack />
+            <CommonDivider/><DigitalSuccess />
+            <CommonDivider/><Arsenal />
+            <CommonDivider/><GrowingBrands />
+            <CommonDivider/><Standout />
+            <CommonDivider/><FullStackFaq />
+            <CommonDivider/><FullStackArrow />
+            <CommonDivider/><FullStackAdv />
         </>
     )
 }

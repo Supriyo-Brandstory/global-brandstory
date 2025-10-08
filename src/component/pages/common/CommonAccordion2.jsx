@@ -16,7 +16,7 @@ const CommonAccordion2 = ({ title, highlited, description, items, button, button
         <div className={styles.wrapper}>
             {/* Left Side */}
             <div className={styles.text} style={{ flex: `${leftRatio} 1 0` }}>
-                {title && <h2 className={styles.title}>{title}</h2>}
+                {title && <h2 dangerouslySetInnerHTML={{__html:title}} className={styles.title} />}
                 {highlited && <h2 className={styles.highlited}>{highlited}</h2>}
                 {description && <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />}
                 {button && <Link className={styles.btn} href={buttonLink}>{button}</Link>}
