@@ -21,7 +21,7 @@ const CommonArrowGrid = ({ boxes }) => {
                         index={String(index + 1).padStart(2, '0')}
                         title={box.title}
                         description={box.description}
-                     size={box.size || "md"}
+                        size={box.size || "md"}
                         height={box.height}
                     />
                 ))}

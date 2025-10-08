@@ -13,7 +13,7 @@ const CommonStatsSection = ({
       {/* Left Content */}
       <div className={styles.textBox}>
         {title && <h2 dangerouslySetInnerHTML={{ __html: title }} />}
-        {subtitle && <h4 dangerouslySetInnerHTML={{ __html: subtitle }} />}
+        {subtitle && <p dangerouslySetInnerHTML={{ __html: subtitle }} />}
         {description && description.length > 0 && (
           <div className={styles.description}>
             {description.map((para, i) => (

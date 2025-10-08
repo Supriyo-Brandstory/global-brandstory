@@ -15,9 +15,7 @@ const CommonCard = ({ seoData, heding, description, footer }) => {
 
     return (
         <section className={styles.wrapper}>
-            <h2 className={styles.heading}>
-                {heding}
-            </h2>
+            <h2 dangerouslySetInnerHTML={{__html: heding}} className={styles.heading} />
 
             {description && <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>}
 
