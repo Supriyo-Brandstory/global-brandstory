@@ -16,6 +16,7 @@ const page = () =>{
     return(
         <>
             <FullstackBanner />
+            <CommonDivider /><TechTeam />
             <CommonDivider/><Solutions />
             <CommonDivider/><Industries />
             <CommonDivider/><SmartStack />

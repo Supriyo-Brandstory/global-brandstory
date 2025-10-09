@@ -69,13 +69,16 @@
 
 .accordionContent {
   padding: 15px 20px;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.6;
   color: #ccc;
   backdrop-filter: blur(100px);
   background: linear-gradient(180deg, #00000000, #e63d261f);
 }
 
+.accordionContent ul li{
+  font-size: 18px;
+}
 
 /* Tablet and small desktop */
 @media (max-width: 1024px) {
@@ -146,7 +149,7 @@
   }
 
   .accordionContent h5 {
-    font-size: 14px;
+    font-size: 30px;
     line-height: 1.5;
     margin: 0;
   }

@@ -16,7 +16,7 @@ export const CommonBwCrd = ({title, description, footer, cardData }) => {
         {cardData.map((item, index) => (
           <div key={index} className={`${styles.card} ${index===0 ? `${styles.firstBox}` : ''}`}>
             <h3>{item.title}</h3>
-            <p className={styles.description} dangerouslySetInnerHTML={{__html: item.description}}/>
+            <div className={styles.description} dangerouslySetInnerHTML={{__html: item.description}}/>
           </div>
         ))}
       </div>
