@@ -106,6 +106,14 @@
         padding: 80px 15px 50px 15px;
     }
 
+    .btnWrapper{
+        flex-direction: column;
+    }
+
+    .seoBannerButton{
+        margin-bottom: 10px;
+    }
+
     .seoBannerParagraph {
         width: 100%;
         max-width: 100%;
@@ -116,7 +124,7 @@
     }
 
     .seoBannerButtonLink {
-        padding: 8px 30px;
+        padding: 14px 30px;
         font-size: 14px;
         margin-top: 30px;
     }
