@@ -12,10 +12,13 @@ export const CommonBanner = ({heading, paragraph, paragraph2, buttonLink, button
                 </div>
                 <div className={styles.btnWrapper}>
                     <div className={styles.seoBannerButton}>
-                        <a href={buttonLink} className={styles.seoBannerButtonLink}>{buttonText}</a>
+                        <a href={buttonLink} className={styles.seoBannerButtonLink}>{buttonText}
+                        <img src="/images/triangle-btn.png" alt="btn img" className={styles.btnImg}/>
+                        </a>
                     </div>
-                    {buttonText2 && <div className={styles.seoBannerButton}>
-                        <a href={buttonLink2} className={styles.seoBannerButtonLink}>{buttonText2}</a>
+                    {buttonText2 && 
+                    <div className={styles.seoBannerButton}>
+                        <a href={buttonLink2} className={styles.seoBannerButtonLink2}>{buttonText2}</a>
                     </div>}
                 </div>
             </div>

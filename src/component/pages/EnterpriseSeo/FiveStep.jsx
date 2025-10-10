@@ -9,10 +9,10 @@ export const FiveStep = () => {
         `We start by reviewing your website and looking at your competitors. 
         <br><br/>
         <ul>
-    <li><b>Crawl And Heatmap Check</b> – We See How Search Engines Move Through Your Site And Identify Pages They May Miss Or Spend Too Much Time On.</li>
-    <li><b>Site Layout And Page Check</b> – We Find Broken Links, Errors, And Issues In Your Website Design.</li>
-    <li><b>Competitor Check</b> – We Analyze Which Keywords Your Competitors Rank For That You Don't, So We Can Spot Opportunities.</li>
-</ul>
+            <li><b>Crawl And Heatmap Check</b> – We See How Search Engines Move Through Your Site And Identify Pages They May Miss Or Spend Too Much Time On.</li>
+            <li><b>Site Layout And Page Check</b> – We Find Broken Links, Errors, And Issues In Your Website Design.</li>
+            <li><b>Competitor Check</b> – We Analyze Which Keywords Your Competitors Rank For That You Don't, So We Can Spot Opportunities.</li>
+        </ul>
         `,
     },
     {

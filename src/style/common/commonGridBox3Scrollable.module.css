@@ -148,3 +148,12 @@
     height: 60px;
   }
 }
+
+.swiper-slide {
+  display: flex;
+  align-items: stretch;
+}
+
+.swiper-slide > div {
+  flex: 1;
+}

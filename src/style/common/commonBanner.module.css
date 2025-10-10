@@ -33,11 +33,30 @@
     margin-top: 20px;
     font-size: 20px;    
 }
+
+.btnImg{
+    margin-left: 10px;
+    height: 17px;
+    width: 17px;
+}
 .seoBannerButtonLink{
     color: #f0f8fd;
-    background: #f15d22;
+    background: rgba(241, 93, 34, 0.30);
     border-radius: 40px;
     box-shadow: 0 0 20px #fdf6f0;
+    padding: 10px 60px;
+    margin-top: 40px;
+    display: inline-block;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seoBannerButtonLink2{
+    color: #f0f8fd;
+    background: transparent;
+    border-radius: 40px;
+    border: 2px solid #fff;
     padding: 10px 60px;
     margin-top: 40px;
     display: inline-block;
