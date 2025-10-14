@@ -1,11 +1,9 @@
 import { CommonBigIndex } from "../common/CommonBigIndex"
 
 export const TrustedPartner = () => {
-  // Updated Heading and Description based on the screenshot
   const heading = "Your Trusted Partner in Building API-First Digital Systems"
   const description = "We Don't Just Code APIs. We Design Ecosystems. Our API Partnerships Are Built On:"
 
-  // Updated array to reflect the six core areas and their associated descriptions from the image
   const cases = [
     {
       title: "Enterprise-Grade Security & Scalability",

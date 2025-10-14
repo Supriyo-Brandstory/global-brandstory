@@ -5,36 +5,28 @@ export const SeoDifferent = ()=>{
   const boxHeight = "340px";
     const seoData = [
       {
-        // Title from the image
         title: "ECommerce SEO Specialists With Platform Expertise",
-        // Description from the image
         desc: "We've Already Worked On Shopify, WooCommerce, Magento, BigCommerce, Wix, Squarespace, And A Few Custom Ones Too. Whether Your Store Is Plug-And-Play Or Highly Customized, We Know How To Get The SEO Right Without Breaking Your Setup.",
         icon: "/images/EcomSeo/sd-1.png", 
         background:"url('/images/ppc/bg-1.png')",
         height: boxHeight
       },
       {
-        // Title from the image
         title:"Transparent, Data-Driven SEO Campaigns",
-        // Description from the image
         desc:"You'll Always Know What We're Working On, What It's For, And What It's Helping You Achieve. We Explain Things In Plain Terms, No Hiding Behind Jargon Or Long Reports That Say Nothing. Everything We Do Is Backed By Data, And Every Result Is Shared Openly.",
         icon:"/images/EcomSeo/sd-2.png", 
         background:"url('/images/ppc/bg-2.png')",
         height: boxHeight
       },
       {
-        // Title from the image
         title:"Custom Strategies For Every Industry",
-        // Description from the image
         desc:"Selling Furniture Is Not The Same As Selling Skincare. We Study Your Category, Your Customers, And Your Competitors Before We Build Your SEO Roadmap. Whether You're In Fashion, Electronics, Home Goods, Food Delivery, Or Any Other Space, Your Plan Is Built Just For You, Not Copied From Someone Else's.",
         icon:"/images/EcomSeo/sd-3.png", 
         background:"url('/images/ppc/bg-3.png')",
         height: boxHeight
       },
       {
-        // Title from the image
         title:"Proven Track Record With Real Results",
-        // Description from the image
         desc:"We've Helped Over 500 eCommerce Brands Grow Their Visibility, Traffic, And Sales, From Startups To Well-Known Names. Our Clients Have Seen Real Change In Rankings And Revenue. If You Want, We Can Show You Exactly What We Did And The Results It Brought In Your Industry.",
         icon:"/images/EcomSeo/sd-4.png", 
         background:"url('/images/ppc/bg-1.png')",

@@ -4,8 +4,8 @@ import styles from "@/style/common/commonBwThreeCard.module.css";
 export const CommonBwThreeCard = ({ title, description, footer, cardData, rightPadding }) => {
   return (
     <div className={styles.frame}>
-      <h1 className={styles.heading}>{title}</h1>
-      <p className={styles.subHeading}>{description}</p>
+      <h1 className={styles.heading} dangerouslySetInnerHTML={{__html:title}}></h1>
+      <p className={styles.subHeading} dangerouslySetInnerHTML={{__html: description}}></p>
 
       <div className={styles.cardWrapper}>
         {cardData.map((item, index) => (

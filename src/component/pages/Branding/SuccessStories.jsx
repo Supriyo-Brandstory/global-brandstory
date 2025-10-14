@@ -32,6 +32,7 @@ export const SuccessStories = () => {
       description={description}
       heading={heading}
       footer={footer}
+      caseLabel="Case"
     />
   )
 }
