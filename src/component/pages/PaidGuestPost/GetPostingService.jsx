@@ -5,42 +5,42 @@ export const GetPostingService = () => {
     {
       title: "Industry Authority Guest Posts",
       content:
-        "", // Content is left empty as there is no visible open content for this point in the image
+        "", 
     },
     {
       title: "Niche Blogger Outreach",
       content:
-        "", // Content is left empty as there is no visible open content for this point in the image
+        "", 
     },
     {
       title: "Sponsored Editorials On High-Traffic Sites",
       content:
-        "", // Content is left empty as there is no visible open content for this point in the image
+        "", 
     },
     {
       title: "Traffic-Driven Guest Posts",
       content:
-        "", // Content is left empty as there is no visible open content for this point in the image
+        "", 
     },
     {
       title: "Guest Blogging For ECommerce Brands",
       content:
-        "", // Content is left empty as there is no visible open content for this point in the image
+        "", 
     },
     {
       title: "SaaS And B2B Tech-Focused Guest Posts",
       content:
-        "", // Content is left empty as there is no visible open content for this point in the image
+        "", 
     },
     {
       title: "Local Guest Posting For Regional Visibility",
       content:
-        "", // Content is left empty as there is no visible open content for this point in the image
+        "", 
     },
     {
       title: "Guest Posts With Built-In Content Syndication",
       content:
-        "", // Content is left empty as there is no visible open content for this point in the image
+        "", 
     },
   ];
 

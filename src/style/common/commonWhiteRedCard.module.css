@@ -84,6 +84,37 @@
   margin: 0;
 }
 
+/* btns */
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.prevBtn,
+.nextBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.prevBtn:hover:not(:disabled),
+.nextBtn:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.prevBtn:disabled,
+.nextBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
 

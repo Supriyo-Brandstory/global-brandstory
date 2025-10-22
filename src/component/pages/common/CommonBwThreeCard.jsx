@@ -1,9 +1,12 @@
 import React from "react";
 import styles from "@/style/common/commonBwThreeCard.module.css";
 
-export const CommonBwThreeCard = ({ title, description, footer, cardData, rightPadding }) => {
+export const CommonBwThreeCard = ({ title, description, footer, cardData, rightPadding, paddingBottom }) => {
   return (
-    <div className={styles.frame}>
+    <div 
+      className={styles.frame} 
+      style={{ paddingBottom: typeof paddingBottom !== "undefined" ? paddingBottom : undefined }}   
+    >
       <h1 className={styles.heading} dangerouslySetInnerHTML={{__html:title}}></h1>
       <p className={styles.subHeading} dangerouslySetInnerHTML={{__html: description}}></p>
 
