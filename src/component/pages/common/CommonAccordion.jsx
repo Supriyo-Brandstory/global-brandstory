@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import styles from "@/style/common/commonAccordion.module.css"; // module CSS file
+import styles from "@/style/common/commonAccordion.module.css";
 
-const CommonAccordion = ({ title, subheding1, subheding2, items, footer }) => {
+const CommonAccordion = ({ title, subheding1, subheding2, items, footer, paddingBottom }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleItem = (index) => {
@@ -10,9 +10,11 @@ const CommonAccordion = ({ title, subheding1, subheding2, items, footer }) => {
   };
 
   return ( 
-    <div className={styles.CommonAccordion}>
-      {/* Render only if value is not null/empty */}
-      {title && <h2>{title}</h2>}
+      <div
+        className={styles.CommonAccordion}
+        style={{ paddingBottom: typeof paddingBottom !== "undefined" ? paddingBottom : undefined }}
+      >
+      {title && <h2 dangerouslySetInnerHTML={{__html:title}}></h2>}
       {subheding1 && <p dangerouslySetInnerHTML={{__html:subheding1}}/>}
       {subheding2 && <div className="pb-5" dangerouslySetInnerHTML={{__html:subheding2}}/>}
       <div className={styles.accordionWrapper}>
@@ -30,7 +32,6 @@ const CommonAccordion = ({ title, subheding1, subheding2, items, footer }) => {
                 <h4>{item.title}</h4>
                 <div className={styles.icon}>
                   {activeIndex === index ? (
-                    // Up arrow
                     <svg
                       width="21"
                       height="18"
@@ -44,7 +45,6 @@ const CommonAccordion = ({ title, subheding1, subheding2, items, footer }) => {
                       />
                     </svg>
                   ) : (
-                    // Down arrow
                     <svg
                       width="20"
                       height="18"

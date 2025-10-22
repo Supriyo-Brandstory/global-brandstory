@@ -1,9 +1,12 @@
 'use client'
 import styles from '@/style/common/commonBigIndex.module.css'
 
-export const CommonBigIndex = ({ heading, description, data, footer, caseLabel = null }) => {
+export const CommonBigIndex = ({ heading, description, data, footer, caseLabel = null, paddingBottom }) => {
   return (
-    <div className={styles.frame}>
+    <div
+      className={styles.frame} 
+      style={{ paddingBottom: typeof paddingBottom !== "undefined" ? paddingBottom : undefined }}  
+    >
       <h1 className={`${styles.heading} ${styles.center}`}>
         {heading}
       </h1>
