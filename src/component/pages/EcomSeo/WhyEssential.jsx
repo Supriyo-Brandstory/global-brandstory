@@ -2,7 +2,7 @@ import { CommonBwThreeCard } from "../common/CommonBwThreeCard"
 
 export const WhyEssential = () => {
     const title = "Why eCommerce SEO Is Essential for Online Success";
-    // const description = "We help you plug into your existing ecosystems, fast:";
+    const description = "";
     const footer = "";
     const data = [
         {
@@ -25,6 +25,6 @@ export const WhyEssential = () => {
         }
     ];
     return (
-        <CommonBwThreeCard rightPadding="50px" title={title}  footer={footer} cardData={data} />
+        <CommonBwThreeCard rightPadding="50px" title={title} description={description}  footer={footer} cardData={data} />
     );
 }
