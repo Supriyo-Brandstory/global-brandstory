@@ -9,6 +9,11 @@
     /* width: 1000px; */
     margin: 0 auto;
 }
+
+.subheding2{
+  font-size: 24px;
+}
+
 .CommonAccordion p {
     color: #F15D22;
     font-family: var(--font-family-bold);

@@ -5,11 +5,9 @@ const CommonTwoCard = ({ heading, subheading, highlight, cards, subheadingMaxWid
   return (
     <section className={styles.seoSection}>
       <div className={styles.header}>
-        <h2>{heading}</h2>
+        <h2 dangerouslySetInnerHTML={{__html:heading}} />
         {highlight && <h3>{highlight}</h3>}
-        <p style={{ maxWidth: subheadingMaxWidth || "1200px", margin: "0 auto" }}>
-          {subheading}
-        </p>
+        <p style={{ maxWidth: subheadingMaxWidth || "1200px", margin: "0 auto" }} dangerouslySetInnerHTML={{__html:subheading}} />
       </div> 
 
       <div className={styles.grid}>
