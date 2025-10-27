@@ -7,9 +7,7 @@ export const CommonBigIndex = ({ heading, description, data, footer, caseLabel =
       className={styles.frame} 
       style={{ paddingBottom: typeof paddingBottom !== "undefined" ? paddingBottom : undefined }}  
     >
-      <h1 className={`${styles.heading} ${styles.center}`}>
-        {heading}
-      </h1>
+      <h1 className={`${styles.heading} ${styles.center}`} dangerouslySetInnerHTML={{__html:heading}} />
       <p className={styles.center}>
         {description && description}
       </p> 

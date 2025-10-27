@@ -44,7 +44,7 @@ const CommonAccordion2 = ({ title, highlited, description, items, button, button
 
                         {activeIndex === index && (
                             <div className={styles.accordionContent}>
-                                <p>{item.content}</p>
+                                <p dangerouslySetInnerHTML={{__html:item.content}} />
                             </div>
                         )}
                     </div>

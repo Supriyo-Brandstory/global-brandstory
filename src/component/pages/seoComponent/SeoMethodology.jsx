@@ -12,31 +12,25 @@ const SeoMethodology = () => {
     {
       title: "2. Content Creation Plans",
       content:
-        "AI-powered content strategies designed to align with audience demand and search trends.",
+        "Plan content that answers questions your competitors have missed, giving your site a real advantage.",
     },
     {
       title: "3. Competitor Tracking",
       content:
-        "Monitor competitors’ strategies and uncover gaps that you can leverage for better visibility.",
+        "Monitor competitor activity closely so we can act quickly and stay ahead in search rankings.",
     },
     {
       title: "4. Predictive Insights",
       content:
-        "Leverage AI forecasts to stay ahead of SEO trends and make proactive adjustments.",
+        "Spot changes in search demand early and adjust your strategy before the competition notices.",
     },
   ];
   return (
-    <>
     <CommonAccordion
     title="AI-Driven SEO Methodology for Smarter, Faster Results"
     subheding1="Turning Raw Data into Clear Actions"
     subheding2="AI technology makes SEO optimization services faster and more precise. It processes huge volumes of data in seconds, uncovering opportunities that would otherwise take months to find."
      items={accordionData} />
-
-     <CommonAccordion2
-     title="Your Path to Profit: The Three Pillars of Successful SEO"
-     items={accordionData} />
-     </>
 
   )
 }

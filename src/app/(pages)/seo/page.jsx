@@ -12,6 +12,7 @@ import React from 'react'
 import SeoMarketingService from '@/component/pages/seoComponent/SeoMarketingService'
 import CommonDivider from '@/component/pages/common/CommonDivider'
 import { SeoFooter } from '@/component/pages/seoComponent/SeoFooter'
+import { PathToProfit } from '@/component/pages/seoComponent/PathToProfit'
 
 
 const page = () => {
@@ -24,6 +25,8 @@ const page = () => {
     <CommonDivider /><SeoStats/>
     
     <CommonDivider /><SeoMethodology/>
+
+    <CommonDivider /><PathToProfit />
     
     <CommonDivider /><SEOApart/>
     
