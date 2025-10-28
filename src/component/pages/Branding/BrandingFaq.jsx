@@ -1,40 +1,34 @@
-import FAQs from '@/component/pages/common/CommonFAQ'
+import FAQs from '@/component/pages/common/CommonFAQ';
 
 export const BrandingFaq = () => {
     const data = [
         {
-            
-            title: "How Long Does The Branding Process Take?",
-            description: "The timeline to fix or improve an online reputation can vary widely depending on the severity of the issue, the volume of negative content, and the specific goals. While some improvements can be seen in a few weeks, a comprehensive and lasting change typically takes several months of consistent effort."
+            title: "How long does the branding process take?",
+            description: "Most projects take about 4–8 weeks, depending on how big the project is. After our discovery phase, we share a clear timeline so you know exactly what to expect."
         },
         {
-            
-            title: "Do You Handle Both Visual And Verbal Brand Identity?",
-            description: "It is extremely difficult to completely remove negative reviews or search results from the internet, as most platforms have policies against forced removal. Instead, we focus on a proactive strategy of suppression and displacement, creating and promoting positive, high-quality content that pushes negative results down and out of sight."
+            title: "Do you handle both visual and verbal brand identity?",
+            description: "Yes. We create a complete brand identity that includes logos, color palettes, fonts, tone of voice, and messaging. This ensures your brand is consistent and professional everywhere."
         },
         {
-            
-            title: "Can You Refresh My Existing Brand Without Doing A Full Rebrand?",
-            description: "We offer both. Our services include both proactive reputation management, which involves building and maintaining a strong online presence to prevent issues, and reactive crisis recovery, which focuses on swiftly addressing and mitigating damage from negative events."
+            title: "Can you refresh my existing brand without doing a full rebrand?",
+            description: "Absolutely. Our brand refresh updates your visual identity and messaging to feel modern and relevant, while keeping the core values your audience already trusts."
         },
         {
-            
-            title: "Do You Work With Startups As Well As Big Companies?",
-            description: "We use a combination of advanced tools like Brandwatch, Meltwater, and Google Alerts to monitor your brand's online reputation in real-time. This includes tracking mentions, reviews, news articles, and social media conversations to provide a comprehensive view of how your brand is being perceived."
+            title: "Do you work with startups as well as big companies?",
+            description: "Yes. We design branding solutions for startups, small and medium businesses, and global enterprises. Every strategy is tailored to your size, goals, and audience."
         },
         {
-            
-            title: "How Do You Make Sure My Brand Stands Out From Competitors?",
-            description: "No, online reputation management is crucial for businesses of all sizes, from startups to large corporations, as well as for individuals and executives. The strategies are tailored to the specific needs and scale of each client, ensuring that everyone can benefit from a positive online presence."
+            title: "How do you make sure my brand stands out from competitors?",
+            description: "We use research, competitor analysis, and strategic positioning to highlight what makes your brand unique. This helps your brand get noticed and remembered."
         },
-        
         {
-            title: "Will I Get A Brand Guidelines Document?",
-            description: "This is a placeholder description for the new FAQ. Since the answer isn't provided in the screenshot, you'll need to fill this in with the actual answer related to Brand Guidelines Documents."
+            title: "Will I get a brand guidelines document?",
+            description: "Yes. Every project comes with a detailed brand book. It helps you apply your brand consistently across all channels, from digital to print."
         }
     ];
 
     return (
-        <FAQs data={data}/>
-    )
-}
+        <FAQs data={data} />
+    );
+};

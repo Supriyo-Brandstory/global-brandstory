@@ -9,17 +9,17 @@ export const SuccessStories = () => {
     {
       title: "Tech Startup Awareness",
       description:
-        "Before Our Work, The Startup’s Brand Was Unclear. Only 15% Of Their Audience Recognized Them. After A Rebranding, With A New Visual Identity And Consistent Messaging:\n\n• Brand Recall Rose To 65%\n• Social Media Engagement Grew 120%\n• Website Visits Increased By 90%",
+        "Before Our Work, The Startup’s Brand Was Unclear. Only 15% Of Their Audience Recognized Them. After A Rebranding, With A New Visual Identity And Consistent Messaging:<br /><br />• Brand Recall Rose To 65%<br />• Social Media Engagement Grew 120%<br />• Website Visits Increased By 90%",
     },
     {
       title: "Retail Brand Preference",
       description:
-        "A Retail Client Wanted To Attract Younger Customers. Through Updated Logo, Packaging, And Campaigns:\n\n• Customer Preference Increased By 35%\n• Repeat Purchases Went Up 25%\n• Market Share Grew 10%",
+        "A Retail Client Wanted To Attract Younger Customers. Through Updated Logo, Packaging, And Campaigns:<br /><br />• Customer Preference Increased By 35%<br />• Repeat Purchases Went Up 25%<br />• Market Share Grew 10%",
     },
     {
       title: "FMCG Brand Refresh",
       description:
-        "An Established FMCG Brand Needed A Modern Look While Keeping Loyal Customers. With A Refreshed Logo, Messaging, And Visuals:\n\n• Brand Recognition Improved By 40%\n• Social Media Engagement Rose 80%\n• Positive Customer Feedback Grew 50%",
+        "An Established FMCG Brand Needed A Modern Look While Keeping Loyal Customers. With A Refreshed Logo, Messaging, And Visuals:<br /><br />• Brand Recognition Improved By 40%<br />• Social Media Engagement Rose 80%<br />• Positive Customer Feedback Grew 50%",
     },
   ]
 

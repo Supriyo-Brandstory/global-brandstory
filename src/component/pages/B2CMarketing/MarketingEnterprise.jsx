@@ -6,21 +6,21 @@ export const MarketingEnterprise = ()=>{
     const seoData = [
       {
         title: "Social Media",
-        desc: "To zero in on the right audience, we believe in boosting, sharing, and interacting with the community. We also run smart advertisements to maximize reach.",
+        desc: "To get in the right audience, we believe in updating content, sharing insights, putting out advertisements and interacting with the community.",
         icon: "/images/ppc/1.png",
         background:"url('/images/ppc/bg-1.png')",
         height: boxHeight
       },
       {
         title:"Google Ads",
-        desc:"For high-intent customers, we create ads that they can see when they search for something similar to what you sell.",
+        desc:"For right customers to reach you, we create ads that they can see when they search something similar to what you sell.",
         icon:"/images/ppc/2.png",
         background:"url('/images/ppc/bg-2.png')",
         height: boxHeight
       },
       {
         title:"Influencer Marketing",
-        desc:"Create awareness about your product or service by teaming up with key influencers.",
+        desc:"Create awareness about your product or service by teaming up with the influencers",
         icon:"/images/ppc/3.png",
         background:"url('/images/ppc/bg-3.png')",
         height: boxHeight

@@ -1,33 +1,30 @@
 import FAQs from '@/component/pages/common/CommonFAQ'
 
 export const ApiFaq = () => {
-    const data = [
-        {
-            title: "What industries do you serve with your API services?",
-            description: "A mobile app development company handles the entire lifecycle of creating a mobile application, including strategy, UI/UX design, development (coding for iOS, Android, or cross-platform), testing, deployment to app stores, and post-launch maintenance and updates."
-        },
-        {
-            title: "Can you modernize our existing API infrastructure?",
-            description: "The timeline varies significantly based on complexity. A simple app (MVP) may take 2-4 months, a medium-complexity app takes 4-7 months, and a highly complex, feature-rich enterprise application can take 8+ months. Discovery and planning (1-3 weeks) always precede development."
-        },
-        {
-            title: "Do you support post-deployment maintenance?",
-            description: "Custom mobile app development costs depend entirely on features, platform (Native vs. Cross-Platform), design complexity, and hourly rates. Costs can range from $25,000 for a simple app to over $150,000 for a complex, custom enterprise solution."
-        },
-        {
-            title: "How do you ensure the security of APIs?",
-            description: "Native apps are built using platform-specific languages (Swift/Kotlin) for a single operating system, offering maximum performance. Cross-platform apps are built using frameworks like React Native or Flutter, allowing a single codebase to run on both iOS and Android, which reduces development time and cost at the possible expense of minor performance limitations."
-        },
-        {
-            title: "What’s your typical project turnaround time?",
-            description: "BrandStory combines strategic design thinking, engineering excellence, and digital marketing expertise. We offer scalable engagement models, industry-compliant security, and guaranteed post-launch support, ensuring your app is built for long-term success and growth."
-        },
-    ];
+  const data = [
+    {
+      title: "What industries do you serve with your API services?",
+      description: "We’ve delivered tailored API solutions for eCommerce, SaaS, healthcare, finance, logistics, and more. Each project is customized to meet sector-specific compliance, scalability, and integration needs."
+    },
+    {
+      title: "Can you modernize our existing API infrastructure?",
+      description: "Yes. We help upgrade legacy APIs to meet modern performance, security, and scalability benchmarks — whether you're migrating to RESTful APIs, decoupling monoliths, or moving to cloud-native architecture."
+    },
+    {
+      title: "Do you support post-deployment maintenance?",
+      description: "Absolutely. Our support includes 24/7 monitoring, version upgrades, bug fixes, and documentation support — all under robust SLA-backed maintenance plans for long-term performance."
+    },
+    {
+      title: "How do you ensure the security of APIs?",
+      description: "We follow OWASP security guidelines, use industry-standard protocols like OAuth 2.0 and JWT, and regularly conduct security audits and penetration testing to safeguard your data and systems."
+    },
+    {
+      title: "What’s your typical project turnaround time?",
+      description: "Timelines depend on complexity, but most MVP-level integrations are delivered in 4–6 weeks. More complex, enterprise-grade API ecosystems typically take 10–16 weeks from planning to deployment."
+    },
+  ];
 
-    // Removing the 6th item as the screenshot only shows 5 FAQs
-    // The original component had 6 items, so I am reducing it to 5 to match the visible list.
-
-    return (
-        <FAQs data={data}/>
-    )
-}
+  return (
+    <FAQs data={data} />
+  );
+};

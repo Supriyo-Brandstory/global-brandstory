@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import CommonAccordion from '../common/CommonAccordion';
 
 const BrandIdentity = () => {
@@ -6,27 +6,32 @@ const BrandIdentity = () => {
     {
       title: "1. Visual Identity That Sticks",
       content:
-        "Your Brand Is Remembered By What It Looks And Feels Like. We Create Logos, Color Palettes, Typography, And Brand Guides That Reflect Your Brand’s Personality. Every Design Element Helps People Recognize Your Brand, Trust It, And Understand Your Story, From Corporate Identity To Product Packaging.",
+        "Your brand is remembered by what it looks and feels like. We create logos, color palettes, typography, and brand guides that reflect your brand’s personality. Every design element helps people recognize your brand, trust it, and understand your story, from corporate identity to product packaging.",
     },
     {
       title: "2. Data-Led Brand Positioning",
-      content: "", // Not expanded in the image
+      content:
+        "A strong brand knows its place in the market. We study your audience, their needs, and your competitors to define what makes your brand unique. From this, we create a clear value proposition and messaging framework so every touchpoint, website, social media, or marketing material, communicates consistently and builds trust.",
     },
     {
       title: "3. Storytelling That Resonates",
-      content: "", // Not expanded in the image
+      content:
+        "People connect with stories, not just visuals. We help you tell your brand’s mission, values, and promise in a way that feels real and relatable. A consistent tone of voice across all channels makes your audience feel connected and confident in your brand.",
     },
     {
       title: "4. Multi-Channel Experience Design",
-      content: "", // Not expanded in the image
+      content:
+        "Your brand appears wherever your audience interacts with you. We ensure your brand looks and feels consistent across websites, social media, ads, packaging, and events. Every touchpoint tells your story, highlights your values, and makes your brand easy to recognize and memorable.",
     },
     {
-      title: "5. Corporate And Product Branding",
-      content: "", // Not expanded in the image
+      title: "5. Corporate and Product Branding",
+      content:
+        "We help your company and its products speak with one clear, cohesive voice. Every sub-brand aligns with your main brand strategy, making your business feel professional, connected, and purposeful — whether it’s a corporate identity refresh, a new product launch, or managing multiple brands.",
     },
     {
-      title: "6. Complete Rebranding And Brand Refresh",
-      content: "", // Not expanded in the image
+      title: "6. Complete Rebranding and Brand Refresh",
+      content:
+        "Markets evolve, and so should your brand. Whether entering a new market, merging brands, or simply refreshing your look, we update your visual identity, messaging, and positioning carefully to maintain recognition and trust. A thoughtful refresh makes your brand feel confident, modern, and ready for the future while preserving the value you’ve built.",
     },
   ];
 
@@ -40,7 +45,7 @@ const BrandIdentity = () => {
         footer=""
       />
     </>
-  )
-}
+  );
+};
 
-export default BrandIdentity
+export default BrandIdentity;

@@ -4,23 +4,23 @@ export const B2CFaq = () => {
     const data = [
         {
             title: "How Long Does It Take For B2C Marketing To Show Results?",
-            description: "The timeline for B2C marketing results can vary. Initial awareness and engagement metrics often improve within the first 1-3 months, but significant, measurable ROI and sales lift usually require 6 to 12 months of consistent campaign execution and optimization."
+            description: "The audience you want to reach, the type of campaigns, and the industry all influence the result .Though most of the brands see measurable outcomes in the first 3 months, in the form of leads, sales and engagement ."
         },
         {
             title: "Do You Conduct Consumer Campaigns Offline As Well As Online?",
-            description: "Yes, we implement integrated marketing strategies. Depending on your target audience and goals, our campaigns can include both online tactics (social media, search ads) and offline activities (in-store promotions, experiential events, print media, or OOH)."
+            description: "Indeed. To increase reach, we offer both digital and physical channels for our B2C marketing services. From influencer and social media marketing to retail activations and events, we make sure your brand reaches customers wherever they are."
         },
         {
             title: "Can You Assist With A New Product's Launch?",   
-            description: "Absolutely. We specialize in end-to-end product launch support, including market research, defining the go-to-market strategy, crafting compelling messaging, and executing a multi-channel campaign to maximize awareness and initial sales."
+            description: "Of course. We create focused launch campaigns that integrate influencer support, creative storytelling, and direct-to-consumer marketing. Our objective is to create anticipation, encourage initial purchases, and lay the groundwork for future expansion."
         },
         {
             title: "Which Platforms Are Most Effective For My Target Audience?",   
-            description: "Effectiveness is determined by your specific audience. We conduct a thorough analysis to identify where your target consumers spend their time—whether it's on specific social media channels (Meta, TikTok), search engines (Google), or other media—to ensure budget efficiency."
+            description: "Your brand and consumer behavior will determine which platforms work best for you. Whether it's social media, Google Ads, email, or influencer networks, we use data to determine where your audience spends their time and then design a channel mix that will have the biggest impact."
         },
         {
             title: "How Is The Success Of A Campaign Measured?",   
-            description: "Success is measured against pre-defined KPIs, which often include sales conversion rates, lead generation, customer acquisition cost (CAC), return on ad spend (ROAS), and key engagement metrics like click-through rates and website traffic."
+            description: "Clear metrics like ROI, engagement rates, conversions, and customer retention are how we monitor performance. You can see the direct value and growth that each campaign generates with regular reporting."
         },
     ];
 

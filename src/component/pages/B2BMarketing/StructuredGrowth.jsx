@@ -6,19 +6,19 @@ const StructuredGrowth = () => {
     {
       title: "Awareness",
       content:
-        "Getting Your Brand In Front Of Decision-Makers Through Social Media Campaigns, Content Marketing, And Trade Journals.",
+        "Getting your brand in front of decision-makers through social media campaigns, content marketing, and trade journals.",
     },
     {
       title: "Consideration",
-      content: "", // Content for this stage is not provided in the image
+      content: "Take into account case studies, whitepapers, and retargeting campaigns that show off your experience and establish your credibility.",
     },
     {
       title: "Conversion",
-      content: "", // Content for this stage is not provided in the image
+      content: "Campaigns with a conversion focus, lead nurturing, and targeted outreach are intended to motivate potential customers to take action.", 
     },
     {
       title: "Retention",
-      content: "", // Content for this stage is not provided in the image
+      content: "Thought-leadership touchpoints, loyalty programs, and campaigns for repeat engagement that keep your customers coming back.", 
     },
   ];
 

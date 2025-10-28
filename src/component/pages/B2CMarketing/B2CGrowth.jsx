@@ -6,19 +6,19 @@ const B2CGrowth = () => {
     {
       title: "Awareness",
       content:
-        "Getting Your Brand In Front Of Decision-Makers Through Social Media Campaigns, Content Marketing, And Trade Journals.",
+        "We help people notice your brand. We do this with influencers, social media contests, and ads that catch attention.",
     },
     {
       title: "Engagement",
-      content: "", // Content for this stage is not provided in the image
+      content: "We get people to interact with your brand. We use content, videos, and emails to do this.", 
     },
     {
       title: "Conversion",
-      content: "", // Content for this stage is not provided in the image
+      content: "We turn interest into sales. We use landing pages, clear buttons to click, and special offers.", 
     },
     {
       title: "Retention",
-      content: "", // Content for this stage is not provided in the image
+      content: "We keep customers coming back. We give rewards, exclusive programs, and follow-up messages to show you care.",
     },
   ];
 

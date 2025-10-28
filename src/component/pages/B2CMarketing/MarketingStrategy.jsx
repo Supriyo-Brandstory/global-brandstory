@@ -3,24 +3,24 @@ import CommonAccordion2 from '../common/CommonAccordion2';
 export const MarketingStrategy = () => {
   const accordionData = [
     {
-      title: "Tech Data-Driven Consumer Insights",
+      title: "Data-Driven Consumer Insights",
       content:
-        "Utilize advanced technology and data analytics to gain deep insights into consumer behavior and preferences, informing your marketing decisions.",
+        "We use tools like Meta Ads Manager, Google Analytics, Shopify Analytics, and SEMrush to understand consumer behavior. These insights help us identify the right audience, predict buying patterns, and create campaigns that deliver better results.",
     },
     {
       title: "Emotional Storytelling That Sells",
       content:
-        "Craft compelling narratives that resonate with your audience on an emotional level, building brand loyalty and driving sales.",
+        "We craft stories, lifestyle branding, and videos that connect with your audience on an emotional level. This approach makes your brand more relatable, builds stronger connections, and drives higher engagement and sales.",
     },
     {
       title: "Conversion-Focused Campaigns",
       content:
-        "Design and execute campaigns optimized to convert leads into customers, with a focus on clear calls-to-action and streamlined user journeys.",
+        "Our campaigns are designed to maximize ROI through smart planning, targeted offers, influencer collaborations, and seamless user experiences. From landing pages to checkout, every detail is optimized to boost conversions and customer loyalty.",
     },
     {
       title: "Influencer & Community Marketing",
       content:
-        "Partner with key influencers and build a strong brand community to amplify your message and foster organic growth through trusted voices.",
+        "We partner with influencers, encourage user-generated content, and build brand communities. These efforts increase credibility, spark real conversations, and create long-term brand loyalty.",
     },
   ];
 

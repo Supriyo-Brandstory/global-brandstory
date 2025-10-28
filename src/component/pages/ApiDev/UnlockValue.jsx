@@ -2,34 +2,34 @@ import React from 'react'
 import CommonAccordion from '../common/CommonAccordion';
 
 export const UnlockValue = () => {
-     const accordionData = [
+  const accordionData = [
     {
-      title: "1. Third-Party API Integrations",
+      title: "Third-Party API Integrations",
       content:
-        "Seamlessly Connect Your Ecosystem With Powerful Third-Party Tools. Whether You’re Integrating CRMs Like Salesforce Or Zoho, ERPs Such As SAP Or Oracle, Or Secure Payment Gateways Like Stripe And Razorpay – We Ensure Smooth, Stable, And Secure Connectivity Across Platforms. Our Integrations Are Designed To Enhance Functionality While Keeping Your Workflows Intact And User Experience Uninterrupted.",
+        "Seamlessly connect your ecosystem with powerful third-party tools. Whether you're integrating CRMs like Salesforce or Zoho, ERPs such as SAP or Oracle, or secure payment gateways like Stripe and Razorpay — we ensure smooth, stable, and secure connectivity across platforms. Our integrations are designed to enhance functionality while keeping your workflows intact and user experience uninterrupted.",
     },
     {
-      title: "2. API Maintenance & Support",
+      title: "API Maintenance & Support",
       content:
-        "Our API-as-a-Service (APIaaS) includes comprehensive API maintenance and support, ensuring your integrations are always up-to-date, secure, and performing optimally. We handle monitoring, issue resolution, and versioning.",
+        "APIs aren’t “set-and-forget.” Our support team provides 24/7 real-time monitoring, version control, patch management, and performance tuning. We proactively detect issues, ensure zero downtime, and enforce best-in-class security protocols to keep your systems agile, compliant, and customer-ready.",
     },
     {
-      title: "3. Cloud-Based API Solutions",
+      title: "Cloud-Based API Solutions",
       content:
-        "We deliver robust, scalable, and secure cloud-based API solutions, leveraging leading cloud providers to ensure high availability and performance for your mission-critical applications.",
+        "Built for distributed architecture, our cloud-first API solutions support high availability, scalability, and speed. Whether you're launching a SaaS platform or scaling an enterprise application, our APIs are optimized for load balancing, multi-region deployment, and cloud-native performance — ensuring your backend stays fast and fail-proof.",
     },
     {
-      title: "4. Microservices Consulting",
+      title: "Microservices Consulting",
       content:
-        "Get expert guidance on transitioning to a microservices architecture. Our consulting services cover design, development, deployment, and management to enhance agility and scalability.",
+        "Break free from rigid, monolithic systems. Our experts help you transition to a microservices architecture that enhances modularity, accelerates development, and reduces deployment risks. We assist with service discovery, containerization, orchestration (e.g., Kubernetes), and API gateway setup — enabling your business to scale faster and innovate with confidence.",
     },
-    // The image only shows 4 items, so the 5th one is removed to match the visible content.
   ];
+
   return (
-        <CommonAccordion
-        title="Unlock Value Faster with Brandstory APIaaS"
-            subheding2="Our Brandstory API-As-A-Service (APIaaS) Solutions Deliver The Infrastructure, Maintenance, And Innovation You Need – On-Demand."
-            items={accordionData}
-        />
-    )
-}
+    <CommonAccordion
+      title="Unlock Value Faster with Brandstory APIaaS"
+      subheding2="Our Brandstory API-as-a-Service (APIaaS) solutions deliver the infrastructure, maintenance, and innovation you need — on-demand."
+      items={accordionData}
+    />
+  );
+};
