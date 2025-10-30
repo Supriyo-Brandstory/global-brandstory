@@ -44,7 +44,7 @@ const CommonAbout = ({
                                 ))}
                             </ul>
                         )}
-                        {text2 && <h4>{text2}</h4>}
+                        {text2 && <h4 dangerouslySetInnerHTML={{__html: text2}}/>}
                     </div>
                 )}
             </div>

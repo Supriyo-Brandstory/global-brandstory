@@ -6,22 +6,22 @@ export const SMMSpectrum = () => {
     {
       title: "1. Awareness",
       content:
-        "The First Step Is Helping People Discover Your Brand. We Use Posts, Ads, And Influencer Partnerships To Put Your Business In Front Of The Right Audience And Make Sure They Notice You.",
+        "The first step is helping people discover your brand. We use posts, ads, and influencer partnerships to put your business in front of the right audience and make sure they notice you.",
     },
     {
       title: "2. Engagement",
       content:
-        "Build deeper relationships with your audience by encouraging interaction, conversations, and meaningful exchanges with your brand.",
+        "Once people know who you are, the next step is sparking conversations. Polls, stories, and interactive content keep your audience involved and build a stronger connection with your brand.",
     },
     {
       title: "3. Conversion",
       content:
-        "Turn engagement into measurable business outcomes by driving sign-ups, sales, and other valuable customer actions.",
+        "Interest should lead to action. With tailored offers, targeted ads, and smart retargeting, we guide your audience from “just browsing” to becoming paying customers.",
     },
     {
       title: "4. Advocacy",
       content:
-        "Empower satisfied customers to become loyal advocates who actively promote and recommend your brand to others.",
+        "The journey doesn’t end at a sale. Loyal fans are your biggest promoters. We encourage user-generated posts, shoutouts, and brand communities that turn happy customers into long-term advocates.",
     },
   ];
   return (

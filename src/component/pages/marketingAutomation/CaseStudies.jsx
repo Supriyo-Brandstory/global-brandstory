@@ -5,17 +5,17 @@ export const CaseStudies = () => {
     {
       title: "E-commerce client",
       content:
-        "Find search terms that match your audience’s intent and have the best chance of bringing in results.",
+        "Emails were opened 40% more, and sales from abandoned carts doubled. People who almost left without buying came back and completed their orders, showing how reminders and helpful messages work.",
     },
     {
       title: "B2B Client",
       content:
-        "AI-powered content strategies designed to align with audience demand and search trends.",
+        "Lead conversion improved by 35%, and demo sign-ups went up 50%. Automated follow-ups guided potential customers to take the next step and learn more about the product.",
     },
     {
       title: "Retail client",
       content:
-        "Leverage AI forecasts to stay ahead of SEO trends and make proactive adjustments.",
+        "Loyalty campaigns increased repeat purchases by 20%. Customers felt valued and appreciated, which made them come back to shop again.",
     },
   ];
 

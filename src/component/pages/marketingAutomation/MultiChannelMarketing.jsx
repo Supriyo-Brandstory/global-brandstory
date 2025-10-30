@@ -9,13 +9,13 @@ export const MultiChannelMarketing = ()=>{
       img: "/images/MarketingAutomation/multi-channel.jpg",
       alt: "Multi-Channel Marketing",
       text: [
-        "<strong>Email:</strong> Deliver Messages Directly To Recipients' Inboxes.",
-        "<strong>SMS:</strong> Brief Messages That Quickly Grab Attention.",
-        "<strong>WhatsApp:</strong> Communicate With Clients Via WhatsApp, Where They Communicate Daily.",
-        "<strong>Social Media:</strong> Promote Your Brand On Instagram, Facebook, And Other Platforms.",
-        "<strong>Paid Advertising:</strong> Show The Right Ads To The Right People At The Right Moment.",
-        "<strong>Chatbots:</strong> Provide Prompt, Intelligent Assistance To Clients.",
-        "<strong>Push Notifications:</strong> Remind People About Deals Or Updates Via Push Notifications On Their Devices.",
+        "<b>Email:</b> Deliver Messages Directly To Recipients' Inboxes.<br /><br />",
+        "<b>SMS:</b> Brief Messages That Quickly Grab Attention.<br /><br />",
+        "<b>WhatsApp:</b> Communicate With Clients Via WhatsApp, Where They Communicate Daily.<br /><br />",
+        "<b>Social Media:</b> Promote Your Brand On Instagram, Facebook, And Other Platforms.<br /><br />",
+        "<b>Paid Advertising:</b> Show The Right Ads To The Right People At The Right Moment.<br /><br />",
+        "<b>Chatbots:</b> Provide Prompt, Intelligent Assistance To Clients.<br /><br />",
+        "<b>Push Notifications:</b> Remind People About Deals Or Updates Via Push Notifications On Their Devices.<br /><br />",
         "These Channels All Function Together. Your Brand Remains Consistent Everywhere. People Notice, Remember, And Act When Messages Arrive At The Right Time."
       ],
       reverse: true

@@ -9,9 +9,9 @@ export const TrustedChoice = ()=>{
       img: "/images/ppc/ppc-ads.jpg",
       alt: "PPC Campaign",
       text: [
-        "Full-Funnel PPC Advertising Services: We Design Campaigns That Convert Awareness Into Action By Reaching Out To Clients At Each Step Of The Purchasing Process.",
-        "Conversion-Focused Ad Copy And Creative: Every Headline, Image, And Call-To-Action Aims To Draw In Viewers And Encourage Clicks That Result In Conversions.",
-        "Daily Budget Optimizations And Bid Adjustments: In Order To Maximize Results And Cut Down On Waste, We Track Your Campaigns And Modify Bids And Expenditures."
+        "<b>Full-Funnel PPC Advertising Services:</b> We Design Campaigns That Convert Awareness Into Action By Reaching Out To Clients At Each Step Of The Purchasing Process.<br/><br/>",
+        "<b>Conversion-Focused Ad Copy And Creative:</b> Every Headline, Image, And Call-To-Action Aims To Draw In Viewers And Encourage Clicks That Result In Conversions.<br/><br/>",
+        "<b>Daily Budget Optimizations And Bid Adjustments:</b> In Order To Maximize Results And Cut Down On Waste, We Track Your Campaigns And Modify Bids And Expenditures.<br/>"
       ],
       reverse: false
     },
@@ -19,9 +19,9 @@ export const TrustedChoice = ()=>{
       img: "/images/ppc/ppc-report.jpg",
       alt: "PPC Report",
       text: [
-        "Real-Time Campaign Performance Monitoring: To Make Sure That A Campaign Is Always Operating At Its Best, We Monitor Its Performance In Real Time.",
-        "Transparent Reports With Key Metrics: Clear Insights Into CPL, ROAS, CTR, And Other Crucial Data Allow You To Assess How Well Your Campaigns Are Performing.",
-        "Proven Experience Across Industries: Through Clever PPC Management, We Have Helped Businesses In A Variety Of Industries, Including Healthcare, SaaS, B2B, And E-Commerce, Achieve Measurable Growth.",
+        "<b>Real-Time Campaign Performance Monitoring:</b> To Make Sure That A Campaign Is Always Operating At Its Best, We Monitor Its Performance In Real Time.<br/><br/>",
+        "<b>Transparent Reports With Key Metrics:</b> Clear Insights Into CPL, ROAS, CTR, And Other Crucial Data Allow You To Assess How Well Your Campaigns Are Performing.<br/><br/>",
+        "<b>Proven Experience Across Industries:</b> Through Clever PPC Management, We Have Helped Businesses In A Variety Of Industries, Including Healthcare, SaaS, B2B, And E-Commerce, Achieve Measurable Growth.<br/><br/>",
         "Our PPC Experts Combine Experience, Precision, And Measurable Outcomes."
       ],
       reverse: true

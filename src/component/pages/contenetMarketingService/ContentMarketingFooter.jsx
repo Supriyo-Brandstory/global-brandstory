@@ -1,34 +1,34 @@
-import FAQs from '@/component/pages/common/CommonFAQ'
+import FAQs from '@/component/pages/common/CommonFAQ';
 
 export const ContentMarketingFooter = () => {
   const data = [
     {
-      title: "What Is Content Marketing And How Does It Work?",
-      description: "Content marketing is a strategic approach focused on creating and distributing valuable, relevant, and consistent content to attract and retain a clearly defined audience. It works by providing useful information that helps solve problems, educates, or entertains your target audience, ultimately driving profitable customer action through trust and relationship building."
+      title: "What is content marketing and how does it work?",
+      description: "Content marketing is about creating useful, engaging material that attracts, informs, and converts your audience. It works by answering questions, building trust, and guiding people toward your brand."
     },
     {
-      title: "What Industries Do You Specialize In?", 
-      description: "We specialize in content marketing for B2B companies, e-commerce brands, SaaS platforms, healthcare providers, and real estate businesses. Each industry requires unique content strategies, tone, and approaches. Our team understands the specific challenges and opportunities within these sectors to create content that resonates with your target audience."
+      title: "What industries do you specialize in?",
+      description: "We work with B2B, E-commerce, SaaS, Healthcare, Real Estate, Hospitality, and more. Each strategy is tailored to the audience and goals of the industry."
     },
     {
-      title: "How Do You Measure ROI From Content Marketing?",
-      description: "We measure content marketing ROI through multiple metrics including website traffic growth, lead generation, conversion rates, engagement metrics, brand awareness, and revenue attribution. We use advanced analytics tools to track the customer journey from initial content interaction to final purchase, providing clear data on content performance and business impact."
+      title: "How do you measure ROI from content marketing?",
+      description: "We track traffic, engagement, leads, and conversions. Every campaign has clear KPIs so you can see what’s driving growth."
     },
     {
-      title: "What Types Of Content Marketing Services Do You Offer?",
-      description: "Our content marketing services include blog writing, case studies, whitepapers, social media content, video content, infographics, email campaigns, website copywriting, SEO content optimization, content strategy development, and distribution across multiple channels. We tailor our services to match your business goals and audience preferences."
+      title: "What types of content marketing services do you offer?",
+      description: "Blogs, whitepapers, videos, podcasts, social content, infographics, landing page copy, email sequences — everything your brand needs to connect and convert."
     },
     {
-      title: "Can You Handle Global Content Marketing?",
-      description: "Yes, we have extensive experience with global content marketing campaigns. We can create content for multiple markets, handle localization and cultural adaptation, manage different time zones, and ensure your brand message remains consistent while being culturally relevant across different regions and languages."
+      title: "Can you handle global content marketing?",
+      description: "Yes. We create content that adapts to local markets and scales internationally, maintaining your brand voice across cultures and languages."
     },
     {
-      title: "How Experienced Is Your Content Marketing Team?",
-      description: "Our content marketing team consists of experienced strategists, writers, designers, and analysts with years of experience across various industries. Our team members have worked with companies ranging from startups to Fortune 500 enterprises, bringing proven expertise in creating content that drives real business results."
+      title: "How experienced is your content marketing team?",
+      description: "Our team has worked with 500+ clients across 30+ industries. We combine strategy, creativity, and data to deliver measurable results every time."
     }
   ];
 
   return (
-    <FAQs data={data}/>
-  )
-}
+    <FAQs data={data} />
+  );
+};

@@ -1,30 +1,30 @@
-import FAQs from '@/component/pages/common/CommonFAQ'
-export const MarketingAutomationFAQ = () =>{
+import FAQs from '@/component/pages/common/CommonFAQ';
+
+export const MarketingAutomationFAQ = () => {
     const data = [
-  {
-    title: "What's Included In Your Marketing Automation Services?",
-    description: "Our services include strategic planning, platform setup, workflow creation for email and WhatsApp campaigns, lead nurturing, and performance analysis to optimize your marketing efforts and increase conversions."
-  },
-  {
-    title: "Do You Help Choose The Right Platform?",
-    description: "Yes, we work with you to understand your business needs and recommend the best marketing automation platform (e.g., HubSpot, Mailchimp, Marketo) that aligns with your goals and budget."
-  },
-  {
-    title: "Can I Automate Both Emails And WhatsApp Messages?",
-    description: "Absolutely. Our services are designed to create a seamless customer journey across multiple channels, allowing you to automate both email and WhatsApp messaging to engage with your audience effectively."
-  },
-  {
-    title: "Are Your Tools B2B Ready?",
-    description: "Yes, our automation tools and strategies are specifically tailored to meet the unique needs of B2B businesses, focusing on lead generation, nurturing, and sales funnel optimization."
-  },
-  {
-    title: "What Tools Do You Use For Automation?",
-    description: "We work with a variety of industry-leading marketing automation platforms, including but not limited to HubSpot, Marketo, and ActiveCampaign, based on the specific requirements of your business."
-  }
-];
+        {
+            title: "What’s included in your marketing automation services?",
+            description: "We handle everything from sending emails and WhatsApp messages automatically to setting up your CRM, creating campaigns, and providing easy-to-understand reports."
+        },
+        {
+            title: "Do you help choose the right platform?",
+            description: "Yes! We look at your business needs and suggest the best tool for you, whether it’s <b>HubSpot, Zoho, or Mailchimp.</b>"
+        },
+        {
+            title: "Can I automate both emails and WhatsApp messages?",
+            description: "Absolutely. We create workflows that combine both channels so your messages reach people in the right way at the right time."
+        },
+        {
+            title: "Are your tools B2B ready?",
+            description: "Yes. Our automation supports long sales cycles, helps nurture leads, and ensures smooth CRM handoffs for your sales team."
+        },
+        {
+            title: "What tools do you use for automation?",
+            description: "We use <b>Zapier, APIs, and other integrations</b> to connect your existing tools and make everything run seamlessly."
+        }
+    ];
 
-
-return (
-    <FAQs data={data}/>
-)
-}
+    return (
+        <FAQs data={data} />
+    );
+};

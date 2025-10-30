@@ -8,7 +8,7 @@ export const AccelerateGrowth = () =>{
    subtitle='<p>Paid advertising can fast-track business growth, but only when executed strategically. Targeting the right audience with the right message at the right time turns clicks into revenue.</p>'
    text1="As a leading PPC management agency, BrandStory focuses on:"
    points={['Cost-efficient campaigns that maximize ROI','High-quality lead generation instead of vanity traffic','Data-backed decision-making at every stage']}
-   text2='The goal is simple: more engagement, more customers, more growth.'
+   text2='We measure success in conversions, not impressions. Your ad spend becomes a predictable engine for growth.'
    imageSrc='/images/ppc/about.jpg'
    imageAlt='Social-media-marketing-about'
    />

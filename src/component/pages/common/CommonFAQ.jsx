@@ -38,7 +38,7 @@ const CommonFAQ = ({data}) => {
                 openIndex === index ? styles.open : ''
               }`}
             >
-              <p>{item.description}</p>
+              <p dangerouslySetInnerHTML={{__html:item.description}} />
             </div>
           </div>
         ))}

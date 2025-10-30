@@ -43,9 +43,10 @@ const page = () => {
     
     <CommonDivider /><SMMSocialPartner />
 
-    <CommonDivider /><SMMArrowGrid/>
-    
     <CommonDivider /><SMMFaq />
+    
+    <CommonDivider /><SMMArrowGrid/>
+
     <SMMFooter />
     </>
   )

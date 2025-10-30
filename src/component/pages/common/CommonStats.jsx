@@ -6,6 +6,7 @@ const CommonStatsSection = ({
   subtitle = null, 
   description = [],
   stats = [],
+  statsTextBottom,
 }) => {
   return (
     <div className={styles.CommonStatsSection}>
@@ -25,16 +26,34 @@ const CommonStatsSection = ({
 
       {/* Right Stats */}
       {stats && stats.length > 0 && (
-        <div className={styles.statsBox}>
-          {stats.map((item, i) => (
-            <div key={i} className={styles.statItem}>
-              <h3>{item.value}</h3>
-              <p dangerouslySetInnerHTML={{__html: item.label}}/>
-              {/* <p>{item.label}</p> */}
+        <>
+          {statsTextBottom ? (
+            <div className={styles.statsBox2}>
+              <div className={styles.statsBox}>
+                {stats.map((item, i) => (
+                  <div key={i} className={styles.statItem}>
+                    <h3>{item.value}</h3>
+                    <p dangerouslySetInnerHTML={{ __html: item.label }} />
+                  </div>
+                ))}
+              </div>
+              <div className={styles.statsTextBottom} dangerouslySetInnerHTML={{__html:statsTextBottom}} />
             </div>
-          ))}
-        </div>
+          ) : (
+            <div className={styles.statsBox}>
+              {stats.map((item, i) => (
+                <div key={i} className={styles.statItem}>
+                  <h3>{item.value}</h3>
+                  <p dangerouslySetInnerHTML={{ __html: item.label }} />
+                </div>
+              ))}
+            </div>
+          )}
+        </>
       )}
+
+
+
     </div>
     </div>
   );

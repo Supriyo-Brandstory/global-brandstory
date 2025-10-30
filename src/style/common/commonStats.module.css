@@ -17,7 +17,7 @@
 }
 
 .textBox {
-  flex: 1 1 60%;
+  flex: 1 1 55%;
   padding-right: 0px;
   max-width: 60%;
 }
@@ -46,6 +46,21 @@
   overflow: hidden;
   max-width: 30%;
 }
+
+.statsBox2{
+  max-width: 32%;
+  display: block;
+}
+
+.statsBox2 .statsBox{
+  max-width: 100%;
+}
+
+.statsTextBottom{
+  background-color: transparent !important;
+  padding-top: 10px; 
+  /* max-width: 100px; */
+} 
 
 .statItem {
   padding: 20px 40px;

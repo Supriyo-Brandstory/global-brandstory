@@ -38,6 +38,6 @@ export const SMMRoi = () => {
 
 ];
   return (
-  <CommonCard seoData={seoData} heding="What Sets Our SEO Apart in a Crowded Market"/>
+  <CommonCard seoData={seoData} heding="Social Media Strategies That Fit Your Industry" description="Different industries need different approaches. Our industry-specific social media strategies are made for your type of business." footer="We make sure your content fits your audience and works for the platforms they use the most."/>
   )
 }

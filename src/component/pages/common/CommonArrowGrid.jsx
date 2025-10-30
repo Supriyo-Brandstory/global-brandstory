@@ -3,15 +3,12 @@ import styles from "@/style/common/commonArrowGrid.module.css";
 import { useState, useEffect, useRef } from 'react';
 import ArrowBoxDarkBorder from "@/component/pages/common/ArrowBoxDarkBorder";
 
-const CommonArrowGrid = ({ boxes }) => {
+const CommonArrowGrid = ({ boxes, heading, descripton }) => {
     return (
         <div className={styles.frame}>
             <div className={styles.header}>
-                <h1>Explore More of Our SEO Marketing Services</h1>
-                <p>
-                    Our expertise covers every area of search optimisation.
-                    Depending on your business goals, you may also want to explore:
-                </p>
+                <h1 dangerouslySetInnerHTML={{__html: heading}} />
+                <p dangerouslySetInnerHTML={{__html:descripton}}/>
             </div>
 
             <div className={styles.gridContainer}>

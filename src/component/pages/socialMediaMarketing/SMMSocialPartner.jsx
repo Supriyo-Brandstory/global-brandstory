@@ -4,25 +4,30 @@ export const SMMSocialPartner = () =>{
     
     const accordionData = [
     {
-      title: "1. Advanced Keyword Research",
+      title: "Creative postings:",
       content:
-        "Find search terms that match your audience’s intent and have the best chance of bringing in results.",
+        "We create articles, videos, and posts that are visually appealing and consistent with your brand's aesthetic.",
     },
     {
-      title: "2. Content Creation Plans",
+      title: "Daily checks:",
       content:
-        "AI-powered content strategies designed to align with audience demand and search trends.",
+        "We keep an eye on your campaigns each day to determine what is and is not effective.",
     },
     {
-      title: "3. Competitor Tracking",
+      title: "Reach of influencers:",
       content:
-        "Monitor competitors’ strategies and uncover gaps that you can leverage for better visibility.",
+        "We establish connections with influencers to increase brand awareness.",
     },
     {
-      title: "4. Predictive Insights",
+      title: "Making wise decisions:",
       content:
-        "Leverage AI forecasts to stay ahead of SEO trends and make proactive adjustments.",
+        "To avoid wasting money, we base our decisions on facts.",
     },
+    {
+      title: "Clear reporting:",
+      content:
+        "We provide simple reports that highlight events and outcomes.",
+    }
   ];
 
     return ( 
