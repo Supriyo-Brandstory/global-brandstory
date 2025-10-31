@@ -113,7 +113,7 @@ const CommonCard = ({ seoData, heding, description, footer }) => {
 
                 </button>
             </div>
-            {footer && <p className="py-4">{footer}</p>}
+            {footer && <p className="py-4" dangerouslySetInnerHTML={{__html:footer}} />}
         </section>
     );
 };
