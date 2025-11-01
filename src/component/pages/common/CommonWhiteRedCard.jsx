@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import styles from '@/style/common/commonWhiteRedCard.module.css'
 
-export const CommonWhiteRedCard = ({ title, cards }) => {
+export const CommonWhiteRedCard = ({ title, cards, footer }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState(0) // 1 = next, -1 = prev
 
@@ -86,6 +86,7 @@ export const CommonWhiteRedCard = ({ title, cards }) => {
           </div>
         </div>
       </div>
+           {footer && <div className='mx-auto max-w-[1000px] pb-10 text-center text-hero-lg' dangerouslySetInnerHTML={{__html:footer}} />}
 
       {totalCards > 2 && (
         <div className={styles.navigation} style={{ paddingBottom: '60px' }}>

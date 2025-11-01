@@ -1,4 +1,3 @@
-// components/Stories.jsx
 import { CommonWhiteRedCard } from "../common/CommonWhiteRedCard"
 
 export const Stories = () => {
