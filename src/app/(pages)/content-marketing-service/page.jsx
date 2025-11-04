@@ -14,6 +14,7 @@ import {WhyChooseBrandStory} from "@/component/pages/contenetMarketingService/Wh
 import {ContentMarketingFooter} from "@/component/pages/contenetMarketingService/ContentMarketingFooter"
 import {ContentMarketingArrowGrid} from "@/component/pages/contenetMarketingService/ContentMarketingArrowGrid"
 import {ContentMarketingAdvFooter} from "@/component/pages/contenetMarketingService/ContentMarketingAdvFooter"
+import {HowWeMakeContent} from "@/component/pages/contenetMarketingService/HowWeMakeContent"
 
 const page = ()=>{
     return(
@@ -21,15 +22,16 @@ const page = ()=>{
             <CMSbanner />
             <CommonDivider /><WordsToRevenue />
             <CommonDivider /><GrowthFramework />
-            <CommonDivider /><ContentExpertise />
-            <CommonDivider /><ContentMarketing />
-            <CommonDivider /><Storytelling />
-            <CommonDivider /><EffectiveSEO />
-            <CommonDivider /><NurturesLeads />
+            <CommonDivider /><HowWeMakeContent />
             <CommonDivider /><IndustrySpecificContent />
             <CommonDivider /><ContentMarketingFAQ />
             <CommonDivider /><ContentMarketingTools />
             <CommonDivider /><WhyChooseBrandStory />
+            {/* <CommonDivider /><ContentExpertise /> */}
+            {/* <CommonDivider /><ContentMarketing /> */}
+            {/* <CommonDivider /><Storytelling /> */}
+            {/* <CommonDivider /><EffectiveSEO /> */}
+            {/* <CommonDivider /><NurturesLeads /> */}
             <CommonDivider /><ContentMarketingFooter />
             <CommonDivider /><ContentMarketingArrowGrid />
             <CommonDivider /><ContentMarketingAdvFooter />

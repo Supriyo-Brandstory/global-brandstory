@@ -1,0 +1,97 @@
+.frame{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+.title{
+    font-size: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.description{
+    font-size: 18px;
+    text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.optionList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: flex 0.4s ease;
+}
+
+.optionBtn {
+  position: relative;
+  background: transparent;
+  border: 1px solid #913714;
+  color: #bbb;
+  padding: 20px 36px;
+  text-align: left;
+  font-size: 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.optionBtn:hover {
+  color: #913714;
+}
+
+.active {
+  background: linear-gradient(10deg, #211C4B, #F15D22);
+  color: #fff;
+  border: none; 
+  padding: 20px 65px 20px 36px; /* space for larger triangle */
+}
+
+.active:hover {
+  color: white;
+  cursor: auto;
+}
+
+/* ▶ bigger white triangle with spacing */
+.active::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 16px solid white;
+}
+
+.optionContent {
+  min-height: 150px;
+  padding: 25px;
+  border: 1px solid #913714;
+  border-radius: 10px;
+  background-image: url('/images/common-option-selector-bg.png');
+  background-size: cover;
+  background-position: center;
+  text-align: left;
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1.6;
+  transition: opacity 0.4s ease, transform 0.4s ease, flex 0.4s ease;
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: translateY(10px);
+}
