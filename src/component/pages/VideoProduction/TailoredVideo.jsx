@@ -11,27 +11,27 @@ export const TailoredVideo = () => {
     {
       title: "2. Explainer Videos",
       content:
-        "",
+        "Simplify your product or service with clear, visual storytelling that resonates. Perfect for product demos, internal communications, and customer education.",
     },
     {
       title: "3. Animation & Motion Graphics",
       content:
-        "",
+        "Catchy, creative visuals that educate, entertain, and retain viewer attention. Our animations are designed for storytelling with style.",
     },
     {
       title: "4. Event Coverage",
       content:
-        "",
+        "Capture your milestone events with cinematic quality and precision. We provide multi-cam setups, live editing, and post-event trailers.",
     },
     {
       title: "5. Testimonial Videos",
       content:
-        "",
+        "Let your clients do the talking, authentic, relatable, and powerful endorsements build trust and conversion.",
     },
     {
       title: "6. Social Media Videos",
       content:
-        "",
+        "Fast-paced, attention-grabbing content tailored for digital consumption. Optimized formats and storytelling hooks for maximum impact.",
     },
   ];
 

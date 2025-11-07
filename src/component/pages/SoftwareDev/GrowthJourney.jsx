@@ -5,7 +5,7 @@ export const GrowthJourney =()=>{
     // Data updated to match the content from the "What Makes Us the Right Partner for Your Growth Journey" image
     const data = {
     heading: "What Makes Us the Right Partner for",
-    highlight: "Your Growth Journey",
+    // highlight: "Your Growth Journey",
     subheading:
       "Choosing The Right Technology Partner Can Define Your Business Trajectory. Here’s Why Forward-Looking Organizations Trust Us To Drive Meaningful Outcomes:",
     cards: [

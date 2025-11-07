@@ -11,22 +11,22 @@ export const WhyCS = () => {
     {
       title: "2. Blocks harmful attacks",
       content:
-        "",
+        "Viruses, ransomware, phishing,they can bring systems down fast. Cybersecurity keeps them out.",
     },
     {
       title: "3. Helps you stay compliant",
       content:
-        "",
+        "Rules like GDPR, HIPAA, and ISO aren’t just boxes to tick. They’re key to running a trusted business.",
     },
     {
       title: "4. Builds trust",
       content:
-        "",
+        "Clients, partners, and even your own team feel more confident knowing you take security seriously.",
     },
     {
       title: "5. Prevents major damage",
       content:
-        "",
+        "Recovering from a breach is costly. Good protection saves you from financial loss, legal stress, and downtime.",
     }
   ];
   return (

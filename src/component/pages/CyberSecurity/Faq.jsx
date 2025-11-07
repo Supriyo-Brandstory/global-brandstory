@@ -4,27 +4,27 @@ export const Faq = () => {
     const data = [
         {
             title: "What Is Included In Your Cybersecurity Services?",
-            description: "Our comprehensive services typically include **risk assessment and compliance auditing**, **penetration testing**, **managed security services** (like 24/7 monitoring and threat detection), **endpoint protection**, and **incident response** planning and execution."
+            description: "We offer assessments, audits, <b>managed cybersecurity services</b>, compliance reviews, and testing. Everything is built for ongoing protection."
         },
         {
             title: "What Industries Do You Serve With Your Cybersecurity Consulting Services?",
-            description: "We serve a wide range of industries with specialized needs, including **Fintech**, **Healthcare** (HIPAA compliance), **E-commerce**, **SaaS** providers, and **Government/Public Sector** organizations, tailoring our security plans to meet specific regulatory frameworks."
+            description: "We serve BFSI, healthcare, retail, SaaS, manufacturing, and more with <b>cybersecurity consulting services</b> built for each industry."
         },
         {
             title: "How Are Managed Cybersecurity Services Different From In-House Teams?",
-            description: "Managed services offer **24/7 continuous monitoring** and access to a broad team of security experts, often at a lower cost than building a full, dedicated in-house Security Operations Center (SOC). They provide immediate scalability and expertise in the latest threats."
+            description: "With <b>managed cybersecurity services</b>, you get round-the-clock support and quicker threat response, without needing an internal team."
         },
         {
             title: "What’s The Purpose Of A Cybersecurity Assessment Service?",
-            description: "The primary purpose is to get a **snapshot of your current security posture**. It identifies vulnerabilities, gaps in compliance, and potential risks across your systems and infrastructure, providing a roadmap for necessary security improvements."
+            description: "It helps you find weak points, measure risks, and plan fixes. Our <b>cybersecurity assessment services</b> show what matters most."
         },
         {
             title: "Do You Provide Cybersecurity As A Service (CSaaS) For Small Businesses?",
-            description: "Yes, we offer flexible, scalable CSaaS solutions specifically designed for small and medium-sized businesses (SMBs). These services package essential security tools and management (like endpoint protection and managed firewall) into an **affordable, easy-to-manage monthly subscription**."
+            description: "Yes. We have simple <b>cybersecurity as a service</b> options for SMBs that are easy to start and scale as needed."
         },
         {
             title: "How Do I Know If I Need A Penetration Test?",
-            description: "You need a penetration test if you: **handle sensitive data** (like customer or financial information), are preparing for a **major compliance audit** (e.g., PCI-DSS, SOC 2), have recently **made major changes** to your network, or need to verify the effectiveness of your existing defenses against a real-world attack."
+            description: "If you handle sensitive data or run an online platform, <b>penetration testing</b> is a must, especially before launching new features."
         }
     ];
 

@@ -11,22 +11,22 @@ export const DigitalSuccess = () => {
     {
       title: "2. A Cohesive, Future-Proof Codebase",
       content:
-        "Our team of expert mobile app developers possesses deep expertise in native (iOS/Android) and cross-platform development, ensuring your solution is built by specialists with a focus on performance and scalability.",
+        "A full-stack team brings consistency in architecture, naming conventions, data handling, and security standards. That translates to fewer bugs, seamless updates, and easier maintenance as your platform evolves.",
     },
     {
       title: "3. Greater Visibility, Total Accountability",
       content:
-        "We follow an agile, transparent development process with dedicated project managers to ensure on-time delivery, clear communication, and a partnership-focused approach that guarantees client satisfaction.",
+        "With one team overseeing the entire project lifecycle, there’s no confusion over responsibilities. You get real-time visibility into progress, clearer communication, and a strategic partner who understands how every layer of your platform connects.",
     },
     {
       title: "4. Modular Architecture for Long-Term Growth",
       content:
-        "We provide end-to-end services, including native iOS and Android development, cross-platform solutions (like React Native and Flutter), and custom mobile backend engineering, covering every stage of the app lifecycle.",
+        "Leveraging RESTful APIs, MVC frameworks, and modern development patterns, our full-stack builds are designed for flexibility. Add new features, scale across regions, or integrate third-party platforms — without restructuring your core foundation.",
     },
     {
       title: "5. Data-First Engineering",
       content:
-        "We provide end-to-end services, including native iOS and Android development, cross-platform solutions (like React Native and Flutter), and custom mobile backend engineering, covering every stage of the app lifecycle.",
+        "From day one, we architect your solution around clean, scalable data models that support real-time analytics, personalization, and performance insights — giving you the tools to make smarter business decisions.",
     },
   ];
   return (
@@ -35,7 +35,7 @@ export const DigitalSuccess = () => {
             // subheding1 is commented out in the original and will remain so.
             subheding2="When one team owns the entire stack, everything runs smoother — and smarter.<br/><b class='highlited-text'>Choose From Our Full-Spectrum Web Development Solutions:</b>"
             items={accordionData} 
-            // Footer removed as it does not appear in the screenshot's visible area.
+            footer="A major interior brand tripled conversions and saw a 350% organic traffic surge by switching to our modular full stack setup."
         />
     )
 }

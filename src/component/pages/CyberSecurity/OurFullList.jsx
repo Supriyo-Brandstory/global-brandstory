@@ -5,32 +5,32 @@ export const OurFullList = () => {
     {
       title: "Comprehensive Cybersecurity Assessment",
       content:
-        "A thorough evaluation of your organization's security posture to identify vulnerabilities and risks across all systems and operations.",
+        "Through thorough <b>cybersecurity assessment services</b>, we uncover hidden vulnerabilities and blind spots across your systems. You get a full threat and vulnerability review, network and application gap analysis, and a maturity report that provides clear next steps and confidence in your defenses.",
     },
     {
       title: "IT Security Audits And Compliance",
       content:
-        "Detailed audits to ensure your IT infrastructure meets industry security standards and regulatory compliance requirements (e.g., GDPR, HIPAA).",
+        "Our <b>IT security audits</b> ensure your business meets HIPAA, ISO, GDPR, SOC2, and other regulatory standards. We provide a full evaluation of your risk posture, comprehensive checklists, and expert reports, so your operations remain secure and audit-ready.",
     },
     {
       title: "Real-World Penetration Testing",
       content:
-        "Simulated cyberattacks designed to find exploitable weaknesses in your systems and applications before malicious actors do.",
+        "With targeted penetration testing, we simulate real world attack scenarios to expose weaknesses before they can be exploited. Our ethical hacking and red team exercises provide actionable insights, improving resilience and trust across your organization.",
     },
     {
       title: "Managed Cybersecurity Solutions",
       content:
-        "Outsourced security services, including monitoring, threat detection, and incident response, to provide 24/7 protection.",
+        "Our 24/7 managed <b>cybersecurity services</b> keep your systems regularly monitored and protected. From incident detection to rapid response, we operate a dedicated managed SOC, ensuring your business runs smoothly while we handle the security.",
     },
     {
       title: "Ongoing Vulnerability Management",
       content:
-        "Continuous scanning, identification, and remediation of security flaws to maintain a strong defense against emerging threats.",
+        "We help businesses stay ahead of threats with ongoing vulnerability management. By prioritizing critical risks, applying regular patches, and implementing zero-day protection, we strengthen your defenses and reduce exposure to cyber attacks.",
     },
     {
       title: "Tailored Compliance Support",
       content:
-        "Expert assistance in navigating complex compliance frameworks and implementing the necessary controls to achieve and maintain certification.",
+        "Every industry faces unique regulations. Our cybersecurity consulting services provide customized compliance plans, audit ready documentation, and guidance for HIPAA, ISO, SOC2, GDPR, and more, keeping your business secure and regulation-ready.",
     },
   ];
 

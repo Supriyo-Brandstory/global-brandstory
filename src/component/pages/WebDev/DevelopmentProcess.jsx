@@ -3,7 +3,7 @@ import CommonTwoCard from '../common/CommonTwoCard'
 
 export const DevelopmentProcess =()=>{
     const data = {
-    heading: "Our Development Process: Built for Speed, Scale, and Success",
+    heading: "Our Development Process: Built for<br/>Speed, Scale, and Success",
     // highlight: "Your Growth Journey",
     subheading:
       "A seamless development lifecycle is the difference between a great website and an underperforming one. Here's how we make it work:",

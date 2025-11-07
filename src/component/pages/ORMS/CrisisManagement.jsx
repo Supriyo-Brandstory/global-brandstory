@@ -3,19 +3,19 @@ import { CommonThreeCardBlur } from "../common/CommonThreeCardBlur"
 export const CrisisManagement = () => {
     const data = [
         {
-            logo: "images/MarketingAutomation/a-1.png", // Replace with the correct icon path for 24/7 Monitoring
+            logo: "images/rounded-icons/r48.png", 
             title: "24/7 Monitoring",
             description: "In Order To Identify Unfavorable Mentions As Soon As They Surface, We Monitor Online Platforms Continuously",
             bg: "/images/three-card-blur-bg-1.png"
         },
         {
-            logo: "images/MarketingAutomation/a-2.png", // Replace with the correct icon path for Quick Reaction
+            logo: "images/MarketingAutomation/a-2.png", 
             title: "Quick Reaction",
             description: "Our Staff Acts Right Away To Resolve Issues, Dispel Rumors, And Lessen Damage To Our Reputation.",
             bg: "/images/three-card-blur-bg-2.png"
         },
         {
-            logo: "images/MarketingAutomation/a-3.png", // Replace with the correct icon path for Clear Escalation Procedures
+            logo: "images/MarketingAutomation/a-3.png",
             title: "Clear Escalation Procedures",
             description: "We Adhere To Structured Procedures In Critical Situations To Make Sure That No Issues Are Overlooked And That Each One Receives The Appropriate Amount Of Attention.",
             bg: "/images/three-card-blur-bg-3.png"

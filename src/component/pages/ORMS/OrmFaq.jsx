@@ -3,28 +3,28 @@ import FAQs from '@/component/pages/common/CommonFAQ'
 export const OrmFaq = () => {
     const data = [
         {
-            title: "How Long Does It Take To Fix Or Improve My Online Reputation?",
-            description: "The timeline to fix or improve an online reputation can vary widely depending on the severity of the issue, the volume of negative content, and the specific goals. While some improvements can be seen in a few weeks, a comprehensive and lasting change typically takes several months of consistent effort."
+            title: "How long does it take to fix or improve my online reputation?",
+            description: "Minor issues, like a few negative reviews or small search results, can often be fixed within a few weeks. Larger challenges, such as widespread negative content, may take three to six months. After we audit your brand, we provide a clear and realistic timeline so you know what to expect."
         },
         {
-            title: "Is It Possible To Completely Remove Negative Reviews Or Search Results?",
-            description: "It is extremely difficult to completely remove negative reviews or search results from the internet, as most platforms have policies against forced removal. Instead, we focus on a proactive strategy of suppression and displacement, creating and promoting positive, high-quality content that pushes negative results down and out of sight."
+            title: "Is it possible to completely remove negative reviews or search results?",
+            description: "Content that violates platform policies can sometimes be removed. For everything else, we use suppression techniques and promote positive content to improve your overall online presence and reputation."
         },
         {
-            title: "Do You Only Provide Crisis Recovery, Or Do You Also Offer Proactive Reputation Management?",
-            description: "We offer both. Our services include both proactive reputation management, which involves building and maintaining a strong online presence to prevent issues, and reactive crisis recovery, which focuses on swiftly addressing and mitigating damage from negative events."
+            title: "Do you only provide crisis recovery, or do you also offer proactive reputation management?",
+            description: "We handle both. Our strategies prevent potential issues before they escalate, while our crisis management approach quickly restores your brand image if something goes wrong."
         },
         {
-            title: "How Do You Monitor My Brand's Online Reputation?",
-            description: "We use a combination of advanced tools like Brandwatch, Meltwater, and Google Alerts to monitor your brand's online reputation in real-time. This includes tracking mentions, reviews, news articles, and social media conversations to provide a comprehensive view of how your brand is being perceived."
+            title: "How do you monitor my brand’s online reputation?",
+            description: "We use advanced tools to track mentions across search engines, social media, review sites, and news portals. Real-time alerts let us respond immediately to any negative mentions or emerging issues."
         },
         {
-            title: "Is Online Reputation Management Only For Large Brands?",
-            description: "No, online reputation management is crucial for businesses of all sizes, from startups to large corporations, as well as for individuals and executives. The strategies are tailored to the specific needs and scale of each client, ensuring that everyone can benefit from a positive online presence."
+            title: "Is Online Reputation Management only for large brands?",
+            description: "Not at all. Startups, SMBs, and even individuals can benefit from ORM. We create tailored strategies that protect credibility, build trust, and strengthen your presence online regardless of business size."
         },
         {
-            title: "How Do You Measure The Success Of ORM Campaigns?",
-            description: "We measure the success of ORM campaigns using key metrics such as improved search engine rankings for positive content, a higher percentage of positive reviews and sentiment, and increased brand trust. We provide regular reports that show the tangible results of our efforts."
+            title: "How do you measure the success of ORM campaigns?",
+            description: "We track key indicators such as brand sentiment, review ratings, and search result changes. Every month, we provide reports showing measurable improvements and actionable insights to keep your reputation strong."
         }
     ];
 

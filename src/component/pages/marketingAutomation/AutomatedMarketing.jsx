@@ -28,7 +28,7 @@ export const AutomatedMarketing = ()=>{
        subheading="<b class='highlited-text' style='margin-bottom:10px'> Automation is strong. Data makes it smart. </b> <br /> 
                 With data-driven marketing automation, we can do many things: <br /><br/>"
        data={data}
-       footer="<span>Klaviyo</span>, <span>Salesforce</span>, <span>ActiveCampaign</span>, are some of the tools we use to achieve this. We can learn what works and what doesn't from the numbers. We continuously monitor the results and make adjustments to the campaigns to ensure that your marketing continues to improve and produce quantifiable outcomes."
+       footer="<span>Klaviyo</span>, <span>Salesforce</span>, <span>ActiveCampaign</span>, and <span>HubSpot</span> are some of the tools we use to achieve this. We can learn what works and what doesn't from the numbers. We continuously monitor the results and make adjustments to the campaigns to ensure that your marketing continues to improve and produce quantifiable outcomes."
        />
     )
 }

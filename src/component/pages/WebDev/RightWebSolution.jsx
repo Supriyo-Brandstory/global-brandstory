@@ -11,32 +11,32 @@ export const RightWebSolution = () => {
     {
       title: "2. Enterprise Web Portals",
       content:
-        "Develop tailor-made applications designed specifically to meet your unique business requirements and operational workflows.",
+        "Centralized, role-based web portals that streamline internal and external operations. From employee self-service platforms to client dashboards, our web portal development services ensure secure access, seamless workflows, and real-time data exchange.",
     },
     {
       title: "3. eCommerce Website Development",
       content:
-        "Define the structural blueprint and user interface (UI) layout to ensure a robust, scalable, and user-friendly software solution.",
+        "Launch or scale your online business with conversion-optimized eCommerce solutions. We develop storefronts on platforms like Shopify, Magento, and WooCommerce — complete with intuitive navigation, secure payments, and optimized product catalogs.",
     },
     {
       title: "4. Progressive Web Apps (PWAs) & Web Applications",
       content:
-        "Ensure your software runs smoothly, securely, and efficiently with continuous updates, bug fixes, and technical assistance.",
+        "Build interactive, fast, and user-focused web apps that function like native applications. Whether it's a customer dashboard or service utility, we develop custom web applications that enhance engagement and support continuous user interaction.",
     },
     {
       title: "5. Custom Web Development Solutions",
       content:
-        "Design, implement, and manage secure and high-performance databases crucial for storing and retrieving your business-critical data.",
+        "For businesses with complex needs, we offer end-to-end custom web development—including advanced features, third-party integrations, and enterprise-grade performance. Every solution is designed for your unique workflows, audience, and industry.",
     },
     {
       title: "6. Content Management System (CMS) Development",
       content:
-        "Implement large-scale, integrated software systems (like ERP, CRM, etc.) to manage core business processes across the organization.",
+        "Empower your team with a scalable, easy-to-manage CMS solution that eliminates bottlenecks. From WordPress to headless CMS platforms, we create content ecosystems that allow marketers and editors to update content, manage campaigns, and scale quickly.",
     },
     {
       title: "7. Low-Code Web Development Services",
       content:
-        "Implement large-scale, integrated software systems (like ERP, CRM, etc.) to manage core business processes across the organization.",
+        "Accelerate product launches with low-code and no-code web development platforms. We help you build modular, customizable solutions that reduce time to market—without sacrificing performance or flexibility.",
     },
   ];
   return (

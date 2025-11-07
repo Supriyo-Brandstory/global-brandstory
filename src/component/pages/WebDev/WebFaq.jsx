@@ -3,27 +3,27 @@ export const WebFaq = () =>{
 const data = [
   {
     title: "What Are Web Development Services?",
-    description: "Web development services encompass the design, creation, building, and maintenance of all types of websites and web applications, from simple static pages to complex e-commerce platforms and custom-built web apps."
+    description: "Services that handle the full lifecycle of websites and web applications—from planning and design to coding, testing, and maintenance—tailored to your business goals."
   },
   {
     title: "How Much Do Web Development Services Cost?",
-    description: "The cost of web development varies widely based on scope, complexity, and features. A basic site may cost a few thousand dollars, while a complex custom web application can cost tens of thousands or more. We provide a detailed quote after a discovery phase."
+    description: "Costs range from ₹80,000 for basic sites to ₹3 lakhs or more for custom web applications, depending on complexity and technology. Professional partners ensure quality and faster delivery."
   },
   {
     title: "What Is Best For Building Web Apps?",
-    description: "The 'best' tools depend on the app's requirements. Popular modern choices include JavaScript frameworks like React, Angular, or Vue.js for the frontend, and Node.js, Python/Django, or PHP/Laravel for the backend, depending on scalability and feature needs."
+    description: "Frameworks like React, Node.js, and Angular are popular for speed and scalability. Low-code platforms are also useful for faster launches without compromising performance."
   },
   {
     title: "What Are The Benefits Of Web Portals For Businesses?",
-    description: "Web portals (like client or employee portals) centralize information, automate workflows, improve communication, and enhance security. They streamline operations, reduce administrative load, and provide a better, more organized user experience for stakeholders."
+    description: "Web portals centralize data, tools, and services—improving collaboration, workflow efficiency, and user experience for employees, partners, or customers."
   },
   {
     title: "What Do Web Development Services Include?",
-    description: "Services typically include project discovery and planning, UI/UX design, front-end and back-end coding, content management system (CMS) integration, quality assurance (QA) testing, deployment, and ongoing maintenance and support."
+    description: "Strategy, design, front-end and back-end development, testing, deployment, and ongoing support to deliver secure, scalable solutions aligned with business goals."
   },
   {
     title: "Why Hire A Web Development Company?",
-    description: "Hiring a professional company ensures your project is built with expert skills in modern security, performance, scalability, and design. It allows you to focus on your core business while getting a high-quality, growth-focused digital asset."
+    description: "They provide technical expertise, creative design, and strategic execution. A professional partner ensures your digital presence drives measurable business growth."
   }
 ];
 

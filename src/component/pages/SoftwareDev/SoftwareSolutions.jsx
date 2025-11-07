@@ -11,27 +11,27 @@ export const SoftwareSolutions = () => {
     {
       title: "2. Custom Software Development",
       content:
-        "Develop tailor-made applications designed specifically to meet your unique business requirements and operational workflows.",
+        "Our development approach is centered on creating tailored digital solutions that address your specific needs. Whether it’s a web platform, mobile app, or cloud-based tool, our custom software is built to scale with your vision and adapt as your business evolves.",
     },
     {
       title: "3. Architecture & Wireframing",
       content:
-        "Define the structural blueprint and user interface (UI) layout to ensure a robust, scalable, and user-friendly software solution.",
+        "Before writing a single line of code, we focus on planning. Our team creates detailed wireframes and scalable architecture that form the backbone of your product. These early-stage decisions ensure intuitive user experiences and help future-proof the final application — especially critical for complex enterprise software systems.",
     },
     {
       title: "4. Ongoing Maintenance & Support",
       content:
-        "Ensure your software runs smoothly, securely, and efficiently with continuous updates, bug fixes, and technical assistance.",
+        "Post-launch, we continue to support your growth with reliable software support. Our team provides proactive monitoring, performance optimization, version upgrades, and quick issue resolution—ensuring your software remains secure, efficient, and fully functional.",
     },
     {
       title: "5. Database Development",
       content:
-        "Design, implement, and manage secure and high-performance databases crucial for storing and retrieving your business-critical data.",
+        "We build high-performance databases that ensure data integrity, speed, and scalability. From designing the data model to optimizing queries, we implement database solutions that align with your application architecture and support real-time operations across all business functions.",
     },
     {
       title: "6. Enterprise Software Solutions",
       content:
-        "Implement large-scale, integrated software systems (like ERP, CRM, etc.) to manage core business processes across the organization.",
+        "When off-the-shelf solutions fall short, we develop powerful enterprise software systems tailored to your organization’s operations. These platforms are built to manage complex workflows, support multiple users, and integrate seamlessly with your existing IT infrastructure—helping you drive productivity and efficiency at scale.",
     },
   ];
   return (

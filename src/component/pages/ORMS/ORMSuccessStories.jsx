@@ -5,17 +5,17 @@ export const ORMSuccessStories = () => {
     {
       title: "Tech Startup",
       content:
-        "Find search terms that match your audience’s intent and have the best chance of bringing in results.",
+        "Negative search results were replaced with positive content, improving overall brand sentiment by 70% within three months.",
     },
     {
       title: "Corporate Executive",
       content:
-        "AI-powered content strategies designed to align with audience demand and search trends.",
+        "Misleading reviews were removed, LinkedIn visibility restored, and engagement on professional networks increased 5x.",
     },
     {
       title: "E-commerce Brand",
       content:
-        "Leverage AI forecasts to stay ahead of SEO trends and make proactive adjustments.",
+        "Negative press was suppressed while positive reviews and testimonials were promoted, boosting customer trust scores by 60%.",
     },
   ];
 

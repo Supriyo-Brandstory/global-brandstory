@@ -5,22 +5,22 @@ export const FirstSteps = () => {
     {
       title: "Digital Maturity Assessment",
       content:
-        "Utilize advanced technology and data analytics to gain deep insights into consumer behavior and preferences, informing your marketing decisions.",
+        "Our digital transformation consultants begin by evaluating your current digital capabilities, infrastructure, and workflow efficiency — identifying areas with the highest potential for innovation and ROI.",
     },
     {
       title: "Strategic Roadmapping",
       content:
-        "Craft compelling narratives that resonate with your audience on an emotional level, building brand loyalty and driving sales.",
+        "We align your digital strategy with core business objectives. Whether you’re modernizing legacy systems or adopting cloud-native platforms, our roadmap ensures clarity, focus, and cross-functional buy-in.",
     },
     {
       title: "Agile Implementation at Scale",
       content:
-        "Design and execute campaigns optimized to convert leads into customers, with a focus on clear calls-to-action and streamlined user journeys.",
+        "Our digital transformation services are executed in sprints — allowing rapid deployment, stakeholder feedback, and continuous optimization without disrupting daily operations.",
     },
     {
       title: "Outcome Measurement and Optimization",
       content:
-        "Partner with key influencers and build a strong brand community to amplify your message and foster organic growth through trusted voices.",
+        "We don’t just deliver; we track. From improved customer experiences to increased operational efficiency, every phase is tied to KPIs and business value.",
     },
   ];
 

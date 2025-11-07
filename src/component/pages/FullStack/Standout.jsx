@@ -11,9 +11,9 @@ export const Standout = ()=>{
       text: [
         "<span class='highlited-text'>What Sets Us Apart:</span>",
         "<ul>",
-          "<li><b>Strategy-First Development:</b><br/>Every Project Begins With A Clear Understanding Of Your Product Goals, User Behavior, And Business Model – Ensuring That Development Decisions Align With Long-Term Success, Not Just Short-Term Delivery.</li>",
-          "<li><b>Cross-Functional Collaboration:</b><br/> Our Full-Stack Teams Work Seamlessly Across Frontend, Backend, And DevOps – Eliminating Silos, Accelerating Timelines, And Enabling A Faster Path From Ideation To Launch.</li>",
-          "<li><b>Web App Development:</b><br/> High-Performance Web Applications Engineered For Responsiveness, Security, And Long-Term Usability.</li>",
+          "<li><b>Strategy-First Development:</b><br/>Every Project Begins With A Clear Understanding Of Your Product Goals, User Behavior, And Business Model – Ensuring That Development Decisions Align With Long-Term Success, Not Just Short-Term Delivery.</li><br/>",
+          "<li><b>Cross-Functional Collaboration:</b><br/> Our Full-Stack Teams Work Seamlessly Across Frontend, Backend, And DevOps – Eliminating Silos, Accelerating Timelines, And Enabling A Faster Path From Ideation To Launch.</li><br/>",
+          "<li><b>Web App Development:</b><br/> High-Performance Web Applications Engineered For Responsiveness, Security, And Long-Term Usability.</li><br/>",
         "</ul>"
       ],
       reverse: false
@@ -23,9 +23,9 @@ export const Standout = ()=>{
       alt: "Clean, Scalable Engineering - Full Stack Development",
       text: [
         "<ul>",
-          "<li><b>Clean, Scalable Engineering:</b><br/> We Follow Best Practices In Code Architecture, Documentation, And Modular Design – Resulting In Solutions That Are Not Just Functional Today, But Future-Proofed For Tomorrow.</li>",
-          "<li><b>Performance-Centric Sprints:</b><br/> We Integrate Performance Monitoring And Optimization Into Every Sprint Cycle – Ensuring Your Application Loads Fast, Runs Smoothly, And Delivers A Seamless User Experience Across Platforms.</li>",
-          "<li><b>Iterative Growth-Driven Mindset:</b><br/> The Market Moves Fast – And So Do We. With Agile Workflows And Proactive Iterations, We Continuously Evolve Your Product Based On Real-Time Data, User Feedback, And Changing Business Needs.</li>",
+          "<li><b>Clean, Scalable Engineering:</b><br/> We Follow Best Practices In Code Architecture, Documentation, And Modular Design – Resulting In Solutions That Are Not Just Functional Today, But Future-Proofed For Tomorrow.</li><br/>",
+          "<li><b>Performance-Centric Sprints:</b><br/> We Integrate Performance Monitoring And Optimization Into Every Sprint Cycle – Ensuring Your Application Loads Fast, Runs Smoothly, And Delivers A Seamless User Experience Across Platforms.</li><br/>",
+          "<li><b>Iterative Growth-Driven Mindset:</b><br/> The Market Moves Fast – And So Do We. With Agile Workflows And Proactive Iterations, We Continuously Evolve Your Product Based On Real-Time Data, User Feedback, And Changing Business Needs.</li><br/>",
         "</ul>"
       ],
       reverse: true

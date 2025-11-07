@@ -11,12 +11,12 @@ export const WeDoBest = () => {
     {
       title: "2. Cross-functional digital roadmap development",
       content:
-        "Develop tailor-made applications designed specifically to meet your unique business requirements and operational workflows.",
+        "Digital transformation isn't just about IT — it's about unifying your entire organization around a shared vision. We work closely with stakeholders across departments to develop integrated roadmaps that bridge C-suite ambitions, business unit KPIs, and technological capabilities. The result? A clearly prioritized, milestone-driven execution plan that accelerates digital maturity without internal friction.",
     },
     {
       title: "3. Outcome-led, business-aligned IT initiatives",
       content:
-        "Define the structural blueprint and user interface (UI) layout to ensure a robust, scalable, and user-friendly software solution.",
+        "Every solution we design, deploy, or recommend is tied to real, measurable business outcomes. From boosting operational efficiency and reducing technical debt to unlocking new revenue streams or customer experiences, our focus is always on delivering tangible value. No overengineering. No unnecessary tools. Just purposeful execution and visible impact.",
     }
   ];
   return (

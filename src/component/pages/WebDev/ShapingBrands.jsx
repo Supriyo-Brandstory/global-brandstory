@@ -5,27 +5,27 @@ export const ShapingBrands = () => {
     {
       title: "E-Commerce Website – Retail Brand",
       content:
-        "Utilize advanced technology and data analytics to gain deep insights into consumer behavior and preferences, informing your marketing decisions.",
+        "Built a scalable, mobile-first e-commerce platform with secure checkout, advanced filtering, and personalized recommendations to boost engagement and sales. <br/><br/>Services: E-commerce Development, Web Design, Maintenance",
     },
     {
       title: "Professional Services Website Revamp",
       content:
-        "Craft compelling narratives that resonate with your audience on an emotional level, building brand loyalty and driving sales.",
+        "Redesigned a B2B consulting site to improve structure, UX, speed, and SEO for better user flow and visibility.<br/><br/>Services: Website Revamp, Web Design, SEO",
     },
     {
       title: "Fintech Landing Pages",
       content:
-        "Design and execute campaigns optimized to convert leads into customers, with a focus on clear calls-to-action and streamlined user journeys.",
+        "Created responsive, conversion-focused landing pages integrated with marketing automation and optimized for Google Ads.<br/><br/>Services: Landing Page Development, Web Design, SEO",
     },
     {
       title: "Healthcare Platform Support",
       content:
-        "Partner with key influencers and build a strong brand community to amplify your message and foster organic growth through trusted voices.",
+        "Ongoing maintenance, updates, and monitoring to ensure 24/7 uptime, security, and performance. <br/><br/>Services: Web Maintenance, Performance Optimization",
     },
     {
       title: "Product Launch Microsite",
       content:
-        "Partner with key influencers and build a strong brand community to amplify your message and foster organic growth through trusted voices.",
+        "Developed a fast, interactive microsite with strong CTAs to enhance campaign visibility and engagement.<br/><br/>Services: Web Design, Landing Page Development, Maintenance",
     },
   ];
 
