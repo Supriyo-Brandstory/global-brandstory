@@ -96,9 +96,19 @@
 
 @media (max-width: 768px) {
   .seoSection{
-    padding: 10px;
+    margin: 0 8px;
   }
+  
   .grid{
     grid-template-columns: repeat(1, 1fr);
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
   }
+  /* .card{
+    margin-left: 20px;
+    margin-right: 20px;
+  } */
 }

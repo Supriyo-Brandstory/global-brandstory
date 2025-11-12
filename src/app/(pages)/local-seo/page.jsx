@@ -10,6 +10,7 @@ import {CaseStudies} from '@/component/pages/LocalSeo/CaseStudies'
 import {Testimonials} from '@/component/pages/LocalSeo/Testimonials'
 import {Pricing} from '@/component/pages/LocalSeo/Pricing'
 import {Adv} from '@/component/pages/LocalSeo/Adv'
+import {Faq} from '@/component/pages/LocalSeo/Faq'
 
 const page = () =>{
     return(
@@ -25,6 +26,7 @@ const page = () =>{
             <CommonDivider /><Testimonials />
             <CommonDivider /><Pricing />
             <CommonDivider /><Adv />
+            <CommonDivider /><Faq/>
         </>
     )
 }

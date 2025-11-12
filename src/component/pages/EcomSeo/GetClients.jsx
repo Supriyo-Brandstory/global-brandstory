@@ -1,47 +1,39 @@
-import React from 'react'
+import React from 'react';
 import CommonAccordion from '../common/CommonAccordion';
 
 export const GetClients = () => {
-     const accordionData = [
+  const accordionData = [
     {
-      title: "1. Improving Product Discoverability",
-      content:
-        `We help your product pages rank better by using the same words your customers are typing into search. That way, when they're looking for something you sell, your store shows up.
-        `,
+      title: "Improving product discoverability",
+      content: `We help your product pages rank better by using the same words your customers are typing into search. That way, when they’re looking for something you sell, your store shows up.`,
     },
     {
-      title: "2. Fixing Slow-Loading Pages",
-      content:
-        `Slow pages kill sales. We focus on optimizing your store's speed across desktop and mobile, ensuring a seamless user experience that reduces bounce rates and boosts rankings.
-        `,
+      title: "Fixing slow-loading pages",
+      content: `People don’t wait for slow websites. We make sure your pages load quickly on phones and desktops, so you don’t lose a customer before they even see your product.`,
     },
     {
-      title: "3. Removing Duplicate Content",
-      content:
-        `Duplicate content on an eCommerce site (like multiple URLs for the same product) confuses search engines and dilutes your ranking power. We implement canonicalization to consolidate authority.
-        `,
+      title: "Removing duplicate content",
+      content: `If your site has the same content in more than one place, search engines get confused. We clean that up and write clear, unique descriptions for every product and category.`,
     },
     {
-      title: "4. Using Relevant Search Terms And Title Tags",
-      content:
-        `Your title tags and meta descriptions are your store's first impression in the search results. We craft high-converting tags that get clicks from customers ready to buy.
-        `,
+      title: "Using relevant search terms and title tags",
+      content: `We research what people actually search for and include those words naturally in your page titles, headers, and product info. It helps your store get found without sounding forced.`,
     },
     {
-      title: "5. Building A Strong Site Structure",
-      content:
-        `A logical site architecture ensures that both users and search engines can easily find your most important products. This improves crawl efficiency and link equity flow.
-        `,
+      title: "Building a strong site structure",
+      content: `A well-structured site helps both users and Google understand what’s where. We fix broken links, create helpful navigation, and make sure everything is easy to browse.`,
     },
   ];
+
   return (
-        <CommonAccordion
-        title="Get More Clients With eCommerce SEO"
-        // subheding1="Big websites have many pages and teams. To make them work better, we follow five simple steps. This helps your site get more visitors, stay organized, and grow over time."
-            // subheding2="When People Search Online, They're Usually Ready To Buy. With Targeted Keywords And Well-Structured Pages, Your Online Store Can Show Up Right When It Matters Most. That Means More Clicks, More Visits, And More Sales. <br/><p class='highlited-text>eCommerce SEO services focus on:</p>"
-            subheding2="When People Search Online, They're Usually Ready To Buy. With Targeted Keywords And Well-Structured Pages, Your Online Store Can Show Up Right When It Matters Most. That Means More Clicks, More Visits, And More Sales."
-            items={accordionData} 
-            footer="When your store is easy to find and easy to navigate, your visitors stay longer. And more visits turn into actual purchases."
-            />
-    )
-}
+    <CommonAccordion
+      title="Get More Clients With eCommerce SEO"
+      subheding2={`
+        When people search online, they’re usually ready to buy. With targeted keywords and well-structured pages, your online store can show up right when it matters most. That means more clicks, more visits, and more sales.<br/><br/>
+        <b class="highlited-text">eCommerce SEO services focus on:</b>
+      `}
+      items={accordionData}
+      footer="When your store is easy to find and easy to navigate, your visitors stay longer. And more visits turn into actual purchases."
+    />
+  );
+};

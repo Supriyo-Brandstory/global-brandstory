@@ -1,39 +1,36 @@
-import FAQs from '@/component/pages/common/CommonFAQ'
+import FAQs from '@/component/pages/common/CommonFAQ';
 
 export const Faq = () => {
-  // Updated data array to reflect the questions shown in the image
   const data = [
     {
-      title: "What Is International SEO And How Is It Different?", 
-      description: "International SEO is the practice of **optimizing your website for users in different countries and languages**. It's different because it involves technical complexities like **hreflang tags and domain structure**, cultural adaptation (transcreation), and local search behavior that goes beyond simple translation."
+      title: "What is international SEO and how is it different?",
+      description: "International SEO is about making sure your website ranks in different countries and languages. It involves geo-targeting, hreflang tags, local search behavior, and cultural relevance."
     },
     {
-      title: "How Do You Ensure Translation Accuracy?",  
-      description: "We go beyond automated tools. We use a combination of **native-speaking, in-country content writers and ISO-certified translation partners** who understand the cultural context, local search intent, and tone of each market. This process is called **transcreation**, which ensures the content is culturally and linguistically accurate."
+      title: "How do you ensure translation accuracy?",
+      description: "We don’t rely on software. All content is handled by native-language copywriters and ISO-certified translation partners, so it reads naturally and makes sense in context."
     },
     {
-      title: "What Tools Do You Use For Tracking?", 
-      description: "We use the industry's leading tools for comprehensive tracking and reporting, including **Google Analytics 4 (GA4), Google Search Console, SEMrush, Ahrefs, and specialized regional SERP monitoring tools** to measure performance in each target country."
+      title: "What tools do you use for tracking?",
+      description: "We use a mix of industry-standard tools like GA4, Google Search Console International, SEMrush Geo, and Ahrefs. We also create custom dashboards to help you track results by country and language."
     },
     {
-      title: "Do You Support RTL Languages?", 
-      description: "Yes, we fully support **Right-to-Left (RTL) languages** such as Arabic, Hebrew, and Farsi. Our technical team ensures proper implementation of CSS, layout, and user experience considerations necessary for RTL languages."
+      title: "Do you support RTL languages?",
+      description: "Yes. We work with full RTL compatibility including CMS layout, font rendering, and metadata localization. Your site will look and work just as well in RTL as in LTR."
     },
     {
-      title: "Can You Help With Link Building In Each Country?", 
-      description: "Absolutely. Our service includes **country-specific link building**. We have a network of **local publishers and content creators** to secure high-authority backlinks from regional, native-language websites, which is critical for ranking locally."
+      title: "Can you help with link building in each country?",
+      description: "Absolutely. Our outreach team works with regional bloggers, publishers, and media contacts to build country-specific backlinks that improve local authority."
     },
     {
-      title: "How Long Until Results?", 
-      description: "While initial technical fixes and localized content can show small improvements within **3-4 months**, substantial results from an international SEO strategy—especially ranking and traffic growth—typically begin to be seen consistently within **6 to 12 months**, depending on the market competitiveness."
+      title: "How long until results?",
+      description: "Most clients notice early improvements in 3–4 months. Full momentum typically builds between 6 to 9 months, depending on market size, competition, and campaign scale."
     },
     {
-      title: "Is Keyword Strategy Different For Each Market?", 
-      description: "Yes, it is fundamentally different. Keywords must be researched and validated in each language and country because **search intent, terminology, and volume vary dramatically by market**. Simple translation of a keyword will almost always fail to capture the correct local search behavior."
+      title: "Is keyword strategy different for each market?",
+      description: "Yes. Every region gets its own keyword plan based on how people search locally. We align those terms with search intent, language style, and buying behavior."
     }
   ];
 
-  return (
-    <FAQs data={data}/>
-  )
-}
+  return <FAQs data={data} />;
+};

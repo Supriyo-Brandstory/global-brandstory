@@ -99,3 +99,9 @@
 .footer{
     color: #aaa;
 }
+
+@media (max-width: 767px) {
+    .frame{
+        padding: 20px 10px;
+    }
+}

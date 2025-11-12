@@ -53,7 +53,7 @@
   background: linear-gradient(10deg, #211C4B, #F15D22);
   color: #fff;
   border: none; 
-  padding: 20px 65px 20px 36px; /* space for larger triangle */
+  padding: 20px 65px 20px 36px;
 }
 
 .active:hover {
@@ -61,7 +61,6 @@
   cursor: auto;
 }
 
-/* ▶ bigger white triangle with spacing */
 .active::after {
   content: "";
   position: absolute;
@@ -94,4 +93,70 @@
 .fadeOut {
   opacity: 0;
   transform: translateY(10px);
+}
+@media (max-width: 767px) {
+
+  .title{
+    font-size: 28px;
+  }
+  .description{
+    font-size: 18px;
+  }
+
+  .container {
+    flex-direction: column;
+    max-width: 100%;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .optionList {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    -ms-overflow-style: auto;
+    scrollbar-gutter: stable both-edges;
+    padding: 8px 6px;
+  }
+
+  .optionBtn {
+  flex: 0 0 auto;
+  max-width: 90%;
+  font-size: 16px;
+  padding: 12px 20px;
+  white-space: normal;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+
+  .optionContent {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 12px;
+  }
+
+  .optionList::-webkit-scrollbar {
+    height: 10px;
+  }
+  .optionList::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .optionList::-webkit-scrollbar-thumb {
+    background-color: #913714;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+
+  .active {
+    padding-right: 44px;
+  }
 }

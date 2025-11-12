@@ -15,14 +15,14 @@ const CommonAdvertise = ({ btnOneLink, btnTwoLink, btn1, btn2, title1, title2, d
         )}
 
         {(btn1 || btn2) && (
-          <div className="flex gap-x-4">
+          <div className={`flex gap-x-4 ${styles.buttons}`}>
             {btn1 && (
-              <Link href={btnOneLink} className="orange-btn">
+              <Link href={btnOneLink} className={styles.btn1}>
                 {btn1}
               </Link>
             )}
             {btn2 && (
-              <Link href={btnTwoLink} className="orange-btn-transparent">
+              <Link href={btnTwoLink} className={styles.btn2}>
                 {btn2}
               </Link>
             )}

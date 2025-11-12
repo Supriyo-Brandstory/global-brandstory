@@ -1,30 +1,28 @@
-import FAQs from '@/component/pages/common/CommonFAQ'
+import FAQs from '@/component/pages/common/CommonFAQ';
 
 export const Faq = () => {
   const data = [
     {
-      title: "How Long Does ECommerce SEO Take To Show Results?", 
-      description: "Initial results like improved rankings for long-tail keywords and increased organic traffic typically appear within **3-6 months**. More significant results, such as ranking for highly competitive keywords and substantial revenue growth, usually take **6-12 months** as search engines fully index and trust your optimized store."
+      title: "How long does eCommerce SEO take to show results?",
+      description: "You’ll usually start seeing signs of improvement in 3 to 6 months. Bigger stores or tougher markets may take a little longer, but early wins often show up sooner."
     },
     {
-      title: "What Platforms Do You Support?",  
-      description: "We are platform-agnostic and have deep expertise in all major e-commerce systems, including **Shopify, WooCommerce, Magento, BigCommerce, Wix, Squarespace**, and various custom-built platforms. We tailor our SEO strategy to fit the unique technical requirements of your specific store setup."
+      title: "What platforms do you support?",
+      description: "We work across all major ecommerce platforms including Shopify, WooCommerce, Magento, Wix, BigCommerce, and even fully custom-built stores."
     },
     {
-      title: "Do You Offer Product Content Writing Services?", 
-      description: "Yes, absolutely. High-quality, SEO-optimized product content is crucial for e-commerce success. Our services include writing persuasive, keyword-rich **product titles, descriptions, and category pages** that are designed to satisfy both search engine algorithms and prospective customers."
+      title: "Do you offer product content writing services?",
+      description: "Yes. We create clear, search-optimized product descriptions, blog posts, and buying guides that help drive both traffic and sales."
     },
     {
-      title: "Will You Help Improve My Store's Loading Speed?", 
-      description: "Yes, **Site Speed** is a critical component of technical SEO and user experience. We conduct comprehensive audits to identify bottlenecks (e.g., large images, inefficient code, server issues) and provide detailed recommendations or direct implementation support to ensure your store loads quickly on all devices."
+      title: "Will you help improve my store’s loading speed?",
+      description: "Absolutely. Page speed is a major ranking factor, and we include speed fixes as part of our technical SEO service."
     },
     {
-      title: "Can SEO Help Reduce Dependency On Paid Ads?", 
-      description: "Yes, it can significantly. As your organic rankings improve, your store attracts high-intent traffic without paying per click. This organic traffic stream creates a **sustainable, long-term asset** that reduces your reliance on expensive PPC campaigns and lowers your overall customer acquisition cost (CAC)."
+      title: "Can SEO help reduce dependency on paid ads?",
+      description: "Yes. While ads stop when the budget runs out, SEO brings in steady, long-term traffic that costs less over time and builds real value."
     }
   ];
 
-  return (
-    <FAQs data={data}/>
-  )
-}
+  return <FAQs data={data} />;
+};

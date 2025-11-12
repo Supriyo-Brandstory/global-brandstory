@@ -12,13 +12,13 @@ export const WhyEssential = () => {
             `
         },
         {
-            "title": "Long-Term ROI vs. Paid Ads",
+            "title": "Long-Term ROI vs.<br/>Paid Ads",
             "description": `
                 SEO builds long-term visibility. While ads stop the moment you pause spending, SEO keeps working in the background.
             `
         },
         {
-            "title": "Visibility on Google, Amazon & Marketplaces",
+            "title": "Visibility on Google,<br/> Amazon & Marketplaces",
             "description": `
                 We help you appear on Google Shopping, marketplace search, and voice assistants using optimized product feeds and schemas.
             `

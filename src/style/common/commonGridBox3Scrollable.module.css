@@ -4,6 +4,7 @@
   text-align: center;
   margin: 0 auto;
   max-width: 1200px;
+  border: 1px solid red;
 }
 
 .header {
@@ -119,7 +120,8 @@
 
 @media (max-width: 768px) {
   .seoSection {
-    padding: 10px;
+    margin: 20px 10px;
+    border: 1px solid white;
   }
   
   .header {

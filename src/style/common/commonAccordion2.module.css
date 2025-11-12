@@ -117,7 +117,23 @@
   border-radius: 50px;
 }
 
+.accordionContent ul,
+.accordionContent ol {
+  font-size: 18px;
+}
+
+.accordionContent li {
+  font-size: 18px;
+}
+
+
 @media (max-width: 768px) {
+  .title{
+    font-size: 28px;
+  }
+  .description{
+    font-size: 18px;
+  }
   .wrapper {
     padding: 20px;
     margin: 50px 0;
@@ -125,5 +141,9 @@
   }
   .highlited {
     font-size: 20px;
+  }
+
+  .accordionHeader h4{
+    width: 80%;
   }
 }

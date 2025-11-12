@@ -1,42 +1,40 @@
-import FAQs from '@/component/pages/common/CommonFAQ'
+import FAQs from '@/component/pages/common/CommonFAQ';
 
 export const LbFaq = () => {
   const data = [
     {
-      title: "What Is Link Building, And Why Is It Important For SEO?", 
-      description: "Link building is the process of acquiring **hyperlinks (backlinks)** from other websites to your own. It is crucial for SEO because search engines view these links as **'votes of confidence'** or endorsements, which helps establish your site's authority, trustworthiness, and ultimately improves its rankings in search results."
+      title: "What is link building, and why is it important for SEO?",
+      description: "Link building is the process of getting other websites to link back to yours. These links help search engines see your site as trustworthy, which can improve your rankings and bring in more visitors through search."
     },
     {
-      title: "How Do You Find Link Opportunities?",  
-      description: "We use a multi-faceted approach, starting with a **competitive analysis** to find sites linking to your top rivals. We then research high-quality, relevant websites based on **industry niche, Domain Authority (DA), real organic traffic, and low spam scores**. We also look for opportunities like broken link building, resource pages, and guest post placements."
+      title: "How do you find link opportunities?",
+      description: "We combine careful research, proven SEO tools, and our network of trusted sites. Every opportunity is handpicked based on relevance, quality, and real traffic."
     },
     {
-      title: "Will These Links Improve My DA And Rankings?", 
-      description: "The primary goal of building high-quality, relevant links is to **improve your rankings and organic traffic**. As you consistently earn these authoritative links, your **Domain Authority (DA)** will naturally increase over time, signaling to search engines that your site is a trusted source."
+      title: "Will these links improve my DA and rankings?",
+      description: "Yes. We focus on building links that are relevant to your niche and placed naturally within strong content. That’s what Google values and it’s what moves the needle."
     },
     {
-      title: "Can I Approve Sites Before Outreach?", 
-      description: "Yes, absolutely. In **Phase 2**, we provide you with a **handpicked list of quality websites** we plan to reach out to. You will have the opportunity to review and approve this list before our outreach team begins the process."
+      title: "Can I approve sites before outreach?",
+      description: "Of course. Before we start any outreach, we send you a list of potential websites. You can approve or decline any of them, it’s your brand, and you stay in control."
     },
     {
-      title: "What Makes Your Link Building Service Different?", 
-      description: "Our service is different because we focus on **quality over quantity**, ensuring all links are placed on truly relevant, high-traffic sites with low spam scores. We also prioritize **content-led link building**—creating valuable assets that publishers *want* to link to—and provide **transparent, live tracking and reporting** throughout the entire process."
+      title: "What makes your link building service different?",
+      description: "We don’t use shortcuts. No automation. No spam. No private blog networks (PBNs). Everything is manual, human-led, and based on helpful content that earns links the right way."
     },
     {
-      title: "Are These Links Permanent?", 
-      description: "We only secure links that are meant to be **permanent editorial placements**. While we cannot control the independent actions of a third-party website, we avoid temporary or sponsored link types. Furthermore, we include a **replacement guarantee** if a link is removed or broken (see next FAQ)."
+      title: "Are these links permanent?",
+      description: "Most of the time, yes. And if a link does get taken down later, we’ll either replace it or suggest the next best option."
     },
     {
-      title: "Do You Guarantee A Certain Number Of Backlinks Each Month?", 
-      description: "No, we do not. Guaranteeing a specific number of links often leads to placing them on low-quality or irrelevant sites, which is harmful to your SEO. Our focus is on **quality link placements** and measurable results like improved rankings and traffic, not an arbitrary monthly count."
+      title: "Do you guarantee a certain number of backlinks each month?",
+      description: "Yes. Depending on the package you choose, you’ll receive a set number of quality backlinks every month. No surprises."
     },
     {
-      title: "Will You Replace Links That Are Removed Or Broken?", 
-      description: "Yes. As part of our service, we continuously monitor all acquired links. If a link is removed, broken, or changed within the service period, we will actively work to **have it restored or secure a brand new, equivalent-quality link** at no extra cost to you."
+      title: "Will you replace links that are removed or broken?",
+      description: "We track every link we build. If something changes, like a page going offline, we’ll find out quickly and either recover or replace the link."
     }
   ];
 
-  return (
-    <FAQs data={data}/>
-  )
-}
+  return <FAQs data={data} />;
+};

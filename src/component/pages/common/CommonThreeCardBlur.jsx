@@ -4,9 +4,9 @@ import styles from '@/style/common/commonThreeCardBlur.module.css'
 export const CommonThreeCardBlur = ({heading, subheading, data, footer })=>{
     return(
         <div className={styles.frame}>
-            {heading && <h2 className={styles.heading}>{heading}</h2>}
+            {heading && <h2 className={styles.heading} dangerouslySetInnerHTML={{__html:heading}} />}
             {/* {subheading && <p className={styles.subHeading}>{subheading}</p>} */}
-            {subheading && <p className={styles.subHeading} dangerouslySetInnerHTML={{ __html: subheading }}></p>}
+            {subheading && <p className={styles.subHeading} dangerouslySetInnerHTML={{ __html: subheading }} />}
 
             <div className={styles.cards}>
                 {data.map((item, idx)=>(
@@ -16,7 +16,7 @@ export const CommonThreeCardBlur = ({heading, subheading, data, footer })=>{
                         <p>{item.description}</p>
                     </div>
                 ))}
-            </div>
+            </div> 
             <p
               className={styles.footer}
               dangerouslySetInnerHTML={{ __html: String(footer || "") }}
