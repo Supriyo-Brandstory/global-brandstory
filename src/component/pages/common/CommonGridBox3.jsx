@@ -5,7 +5,7 @@ const CommonGridBox3 = ({ title, description, data, footer }) => {
     <section className={styles.seoSection}>
       <div className={styles.header}>
         <h2 dangerouslySetInnerHTML={{__html:title}} />
-        <p dangerouslySetInnerHTML={{__html:description}} className={styles.footer} />
+        {description && <p dangerouslySetInnerHTML={{__html:description}} className={styles.footer} />}
       </div>
  
       <div className={styles.grid}>
