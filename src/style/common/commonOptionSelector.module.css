@@ -90,6 +90,10 @@
   opacity: 1;
 }
 
+.optionContent ul li {
+  font-size: 18px;
+}
+
 .fadeOut {
   opacity: 0;
   transform: translateY(10px);
@@ -159,4 +163,10 @@
   .active {
     padding-right: 44px;
   }
+
+  .active::after {
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 12px solid white;
+}
 }

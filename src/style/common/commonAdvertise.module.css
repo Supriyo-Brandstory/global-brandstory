@@ -78,12 +78,12 @@
   
 @media (max-width: 768px) {
   .frame{
-    margin: 20px;
+    margin: 10px;
     padding: 80px 10px;
   }
   
   .heading{
-    font-size: 36px;
+    font-size: 28px;
   }
 
   .frame p{

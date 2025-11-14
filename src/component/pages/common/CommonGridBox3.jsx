@@ -7,7 +7,7 @@ const CommonGridBox3 = ({ title, description, data, footer }) => {
         <h2 dangerouslySetInnerHTML={{__html:title}} />
         {description && <p dangerouslySetInnerHTML={{__html:description}} className={styles.footer} />}
       </div>
- 
+
       <div className={styles.grid}>
         {data?.map((card, index) => (
           <div key={index} className={`${styles.card}`} style={{ '--card-color': card.bgcolor }}>
