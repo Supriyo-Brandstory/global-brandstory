@@ -1,7 +1,6 @@
 import React from 'react'
 import CommonTwoCard from '../common/CommonTwoCard'
 
-
 export const IndustrySpecefic =()=>{
     const data = {
     heading: "Industry-Specific Facebook Ads Solutions",
