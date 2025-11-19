@@ -74,13 +74,22 @@
 }
 
 .accordionContent {
-  padding: 15px 20px;
+  max-height: 0;
+  padding: 0 20px;
   font-size: 18px;
   line-height: 1.6;
   color: #ccc;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
   backdrop-filter: blur(100px);
   background: linear-gradient(180deg, #00000000, #e63d261f);
 }
+
+.accordionContent.open {
+  max-height: 500px; /* Adjust based on your content height */
+  padding: 15px 20px;
+}
+
 
 .accordionContent ul li{
   font-size: 18px;

@@ -21,27 +21,16 @@ const page = () => {
     <>
     <SeoBanner/>
     <CommonDivider /><Seoabout/>
-
     <CommonDivider /><SeoStats/>
-    
     <CommonDivider /><SeoMethodology/>
-
     <CommonDivider /><PathToProfit />
-    
     <CommonDivider /><SEOApart/>
-    
     <CommonDivider /><SeoRoiSection/>
-    
     <CommonDivider /><SeoStrategies/>
-    
     <CommonDivider /><SeoExpertise />
-    
     <CommonDivider /><SeoResults />
-    
     <CommonDivider /><SeoFaq />
-    
     <CommonDivider /><SeoMarketingService />
-    
     <SeoFooter />
     </>
   )
