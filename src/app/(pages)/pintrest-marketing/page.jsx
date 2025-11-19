@@ -4,6 +4,7 @@ import { WhatIsPintrest } from '@/component/pages/PintrestMarketing/WhatIsPintre
 import { PintrestMarketingPricing } from '@/component/pages/PintrestMarketing/PintrestMarketingPricing'
 import { SmarterPintrest } from '@/component/pages/PintrestMarketing/SmarterPintrest'
 import { IntegratedOrganic } from '@/component/pages/PintrestMarketing/IntegratedOrganic'
+import { Optimize } from '@/component/pages/PintrestMarketing/Optimize'
 import { PintrestForEveryIndustry } from '@/component/pages/PintrestMarketing/PintrestForEveryIndustry'
 import { PintrestAnalytics } from '@/component/pages/PintrestMarketing/PintrestAnalytics'
 import { WhyChooseBs } from '@/component/pages/PintrestMarketing/WhyChooseBs'
@@ -18,6 +19,7 @@ const page = () => {
       <CommonDivider /><PintrestMarketingPricing />
       <CommonDivider /><SmarterPintrest />
       <CommonDivider /><IntegratedOrganic />
+      <CommonDivider /><Optimize/>
       <CommonDivider /><PintrestForEveryIndustry />
       <CommonDivider /><PintrestAnalytics />
       <CommonDivider /><WhyChooseBs />

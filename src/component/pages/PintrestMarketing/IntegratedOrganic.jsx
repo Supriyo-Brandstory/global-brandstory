@@ -1,36 +1,33 @@
 import React from 'react';
-import CommonAccordion2 from '../common/CommonAccordion2';
+import CommonAccordion from '../common/CommonAccordion';
 
 export const IntegratedOrganic = () => {
+
   const accordionData = [
     {
-      title: "Keyword Optimized Pins ",
-      content: `We research trending keywords and include them in pin descriptions and board titles to improve discoverability and ranking.`,
+      title: "Organic + Paid Alignment",
+      content: `We fuse evergreen organic pins with paid campaigns to maintain consistent visibility. This strategy keeps your brand top of mind while engaging audiences at every stage of the customer journey.`,
     },
     {
-      title: "Alt-Text & SEO Best Practices",
-      content: `Every pin includes optimized alternative text and follows Pinterest SEO services frameworks to maximize reach.`,
+      title: "Promoted Pins That Convert",
+      content: `Our promoted pins target the right users based on interests, search behavior, and demographics. This increases discovery for your products and drives meaningful interactions on the visual discovery platform.`,
     },
     {
-      title: "Branded Pin Design",
-      content: `Scroll stopping vertical pins, carousels, and mobile first visuals are crafted with consistent color, storytelling, and CTAs to grab attention instantly.`,
+      title: "Retargeting & Funnel Strategy",
+      content: `We implement retargeting to reconnect with past visitors and build custom funnels guiding users toward conversion. This approach boosts signups, purchases, and leads with precision.`,
     },
     {
-      title: "Board Structuring & Strategy",
-      content: `Thoughtfully organized boards guide users through the customer journey while enhancing searchability on Pinterest.`,
-    },
-    {
-      title: "Tools & Analytics ",
-      content: `We utilize Pinterest approved tools and internal frameworks to track performance, optimize content, and refine creative strategy constantly.`,
+      title: "Campaign Optimization for Maximum ROI",
+      content: `All campaigns are regularly monitored and optimized. Using A/B testing and performance analytics, our Pinterest advertising services ensure your ad spend delivers measurable results.`,
     },
   ];
 
   return (
-    <CommonAccordion2
-      title="Optimize, Design, & Discover: Pinterest Growth Services"
-      description="Our Pinterest SEO services and Pinterest creative services work hand-in-hand to make your brand highly discoverable and visually irresistible. By combining strategic keywords and visual search optimization with scroll stopping branded pins, we ensure your content ranks and also converts.<br/>With us, every pin is a discovery driven and SEO optimized piece of Pinterest marketing strategy which drives traffic, engagement, and conversions. <br/><br/>How we make pins perform:"
+    <CommonAccordion
+      title="Integrated Organic & Paid Pinterest Strategy"
+      subheding2="At BrandStory, we combine organic Pinterest marketing with Pinterest advertising services to drive consistent traffic, engagement, and sales. By integrating both approaches, your brand reaches high intent users across the visual discovery platform while building long term visibility.<br/><br/>Here is how we deliver results:"
       items={accordionData}
-      splitRatio={0.5}
+      footer="Brands we have worked with have seen up to 3x ROAS within a month. Our integrated approach turns pins into traffic, engagement, and revenue while enhancing long term visibility.<br/>With BrandStory, every pin, paid or organic, works together to convert attention into traffic, engagement, and revenue."
     />
   );
 };
