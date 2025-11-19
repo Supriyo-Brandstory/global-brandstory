@@ -1,7 +1,6 @@
 import React from 'react'
 import CommonCard from '../common/CommonCard'
 
-
 export const Process = ()=>{
   const boxHeight = "270px";
     const data = [
