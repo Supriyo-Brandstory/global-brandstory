@@ -8,9 +8,10 @@ export const CommonBigIndex = ({ heading, description, data, footer, caseLabel =
       style={{ paddingBottom: typeof paddingBottom !== "undefined" ? paddingBottom : undefined }}  
     >
       <h1 className={`${styles.heading} ${styles.center}`} dangerouslySetInnerHTML={{__html:heading}} />
-      <p className={styles.center}>
+      {/* <p className={styles.center}>
         {description && description}
-      </p> 
+      </p>  */}
+      {description && <p className={styles.center} dangerouslySetInnerHTML={{__html:description}} />}
 
       <div className={styles.caseWrapper}>
         {data.map((item, index) => (

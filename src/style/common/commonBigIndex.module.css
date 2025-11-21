@@ -81,8 +81,9 @@
 
 .caseDesc {
   font-size: 18px;
-  line-height: 1.6;
   margin-bottom: 15px;
+  font-weight:lighter;
+  color: #FDF6F0;
 }
 
 .caseBox ul {

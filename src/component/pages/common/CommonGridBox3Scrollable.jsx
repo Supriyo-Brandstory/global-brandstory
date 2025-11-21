@@ -7,12 +7,12 @@ import "swiper/css/navigation";
 
 import styles from "@/style/common/commonGridBox3Scrollable.module.css";
 
-const CommonGridBox3Scrollable = ({ title, description, data, boxHeight }) => {
+const CommonGridBox3Scrollable = ({ title, description, data, boxHeight, paddingBottom}) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
   return (
-    <section className={styles.seoSection}>
+    <section className={styles.seoSection}  style={{ paddingBottom: typeof paddingBottom !== "undefined" ? paddingBottom : undefined }} >
       <div className={styles.header}>
         <h2>{title}</h2>
         <p>{description}</p>
