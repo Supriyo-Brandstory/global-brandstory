@@ -14,8 +14,8 @@ const CommonGridBox3Scrollable = ({ title, description, data, boxHeight, padding
   return (
     <section className={styles.seoSection}  style={{ paddingBottom: typeof paddingBottom !== "undefined" ? paddingBottom : undefined }} >
       <div className={styles.header}>
-        <h2>{title}</h2>
-        <p>{description}</p>
+        <h2 dangerouslySetInnerHTML={{__html:title}} />
+        {description && <p dangerouslySetInnerHTML={{__html:description}} className={styles.footer} />}
       </div>
 
       <Swiper

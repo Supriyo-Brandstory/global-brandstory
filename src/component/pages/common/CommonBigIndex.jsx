@@ -26,7 +26,8 @@ export const CommonBigIndex = ({ heading, description, data, footer, caseLabel =
               src={`/images/case-${index+1}.png`}
               alt="image"
             />
-            <h3 className={styles.caseTitle}>{item.title}</h3>
+            {/* <h3 className={styles.caseTitle}>{item.title}</h3> */}
+            <h3 className={styles.caseTitle} dangerouslySetInnerHTML={{__html:item.title}}/>
             <p className={styles.caseDesc} dangerouslySetInnerHTML={{__html: item.description}}></p>
             {item.points && <ul>
               {item.points.map((point, i) => (
