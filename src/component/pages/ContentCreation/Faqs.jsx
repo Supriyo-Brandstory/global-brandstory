@@ -1,7 +1,6 @@
 import FAQs from '@/component/pages/common/CommonFAQ';
 
 export const Faqs = () => {
-    // FAQs related to Content Creation, based on the provided text.
     const data = [
         {
             title: "What is content creation?",

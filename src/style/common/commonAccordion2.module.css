@@ -96,6 +96,7 @@
 
 .accordionContent {
   padding: 16px 20px;
+  font-size: 18px;
   color: #ccc;
   /* border-top: 1px solid #333; */
 }
