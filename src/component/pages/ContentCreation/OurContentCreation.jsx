@@ -3,7 +3,6 @@ import CommonTwoCard from '../common/CommonTwoCard'
 
 export const OurContentCreation =()=>{
     const data = {
-    // UPDATED: Heading and subheading based on the image
     heading: "Our Content Creation Services",
     subheading:
       "We Provide End-to-End Content Creation Services Tailored To Your Goals, Audience, And Industry. Every Service Is Designed To Deliver Real Results:",
