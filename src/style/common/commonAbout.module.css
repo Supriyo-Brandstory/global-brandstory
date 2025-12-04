@@ -31,6 +31,9 @@
     border-radius: 12px;
     overflow: hidden;
 }
+.reverse {
+    flex-direction: row-reverse;
+}
 
 @media (max-width: 768px) {
     .container{

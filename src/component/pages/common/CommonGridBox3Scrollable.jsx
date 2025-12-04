@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 
 import styles from "@/style/common/commonGridBox3Scrollable.module.css";
 
-const CommonGridBox3Scrollable = ({ title, description, data, boxHeight, paddingBottom}) => {
+const CommonGridBox3Scrollable = ({ footer, title, description, data, boxHeight, paddingBottom}) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -157,6 +157,7 @@ const CommonGridBox3Scrollable = ({ title, description, data, boxHeight, padding
           </svg>
         </button>
       </div>
+      {footer && <p className="mt-5" dangerouslySetInnerHTML={{__html:footer}}/>}
     </section>
   );
 };

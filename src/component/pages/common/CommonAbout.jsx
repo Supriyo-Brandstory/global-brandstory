@@ -8,19 +8,18 @@ const CommonAbout = ({
     text1 = null,
     points = [],
     text2 = null,
-    imageSrc = null, // null if no image
+    imageSrc = null,
     imageAlt = "",
+    imageReverse = false,   // <-- added
 }) => {
     return (
         <div className={styles.container}>
-            {/* Text Section */}
             <div className={styles.textBox}>
                 {title && <div dangerouslySetInnerHTML={{ __html: title }}></div>}
                 {subtitle && <div dangerouslySetInnerHTML={{ __html: subtitle }}></div>}
             </div>
 
-            <div className={styles.flexbox}>
-                {/* Image Section */}
+            <div className={`${styles.flexbox} ${imageReverse ? styles.reverse : ""}`}>
                 {imageSrc && (
                     <div className={styles.imageBox}>
                         <Image
@@ -33,23 +32,23 @@ const CommonAbout = ({
                     </div>
                 )}
 
-                {/* Points Section */}
-                {(text1 || (points && points.length > 0) || text2) && (
+                {(text1 || points?.length > 0 || text2) && (
                     <div className={styles.points}>
                         {text1 && <h4 dangerouslySetInnerHTML={{ __html: text1 }}></h4>}
-                        {points && points.length > 0 && (
+                        {points?.length > 0 && (
                             <ul>
                                 {points.map((point, index) => (
-                                    <li key={index} dangerouslySetInnerHTML={{__html:point}}></li>
+                                    <li key={index} dangerouslySetInnerHTML={{ __html: point }} />
                                 ))}
                             </ul>
                         )}
-                        {text2 && <h4 dangerouslySetInnerHTML={{__html: text2}}/>}
+                        {text2 && <h4 dangerouslySetInnerHTML={{ __html: text2 }} />}
                     </div>
                 )}
             </div>
         </div>
     )
 }
+
 
 export default CommonAbout
