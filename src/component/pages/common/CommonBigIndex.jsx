@@ -8,9 +8,7 @@ export const CommonBigIndex = ({ heading, description, data, footer, caseLabel =
       style={{ paddingBottom: typeof paddingBottom !== "undefined" ? paddingBottom : undefined }}  
     >
       <h1 className={`${styles.heading} ${styles.center}`} dangerouslySetInnerHTML={{__html:heading}} />
-      {/* <p className={styles.center}>
-        {description && description}
-      </p>  */}
+      
       {description && <p className={styles.center} dangerouslySetInnerHTML={{__html:description}} />}
 
       <div className={styles.caseWrapper}>
@@ -26,7 +24,6 @@ export const CommonBigIndex = ({ heading, description, data, footer, caseLabel =
               src={`/images/case-${index+1}.png`}
               alt="image"
             />
-            {/* <h3 className={styles.caseTitle}>{item.title}</h3> */}
             <h3 className={styles.caseTitle} dangerouslySetInnerHTML={{__html:item.title}}/>
             <p className={styles.caseDesc} dangerouslySetInnerHTML={{__html: item.description}}></p>
             {item.points && <ul>
