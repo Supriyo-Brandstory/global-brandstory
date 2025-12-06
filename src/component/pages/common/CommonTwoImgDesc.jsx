@@ -7,7 +7,7 @@ const CommonTwoImgDesc = ({ data }) => {
     <section className={styles.frame}>
       {/* Heading */}
       {data.heading && <h2 className={styles.heading} dangerouslySetInnerHTML={{__html:data.heading}}/>}
-      {data.subHeading && <p className={styles.subHeading}>{data.subHeading}</p>}
+      {data.subHeading && <p className={styles.subHeading} dangerouslySetInnerHTML={{__html:data.subHeading}} />}
 
       {/* Dynamic Rows */}
       {data.rows?.map((row, index) => (

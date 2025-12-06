@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 
 import styles from '@/style/common/commonBigIndexScrollable.module.css'
 
-export const CommonBigIndexScrollable = ({ heading, description, data, footer, caseLabel = null, paddingBottom }) => {
+export const CommonBigIndexScrollable = ({ heading, description, data, footer, caseLabel = null,boxHeight, paddingBottom }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
@@ -57,9 +57,11 @@ export const CommonBigIndexScrollable = ({ heading, description, data, footer, c
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className={`${styles.caseBox} ${styles[`case${(index % 3) + 1}`]}`}>
+            <div
+              className={`${styles.caseBox} ${styles[`case${(index % 3) + 1}`]}`}
+              style={{ height: boxHeight }}
+            >
               {caseLabel && <h3 className={styles.label}>{caseLabel}</h3>}
-
               <img
                 className={styles.imageId}
                 src={`/images/case-${index + 1}.png`}

@@ -25,8 +25,6 @@ export const ContentCreation = () => {
         }
     ];
     return (
-        <>
-            <CommonBwThreeCard rightPadding="50px" title={title} description={description}  footer={footer} cardData={data} />
-        </>
+        <CommonBwThreeCard rightPadding="50px" title={title} description={description}  footer={footer} cardData={data} />
     );
 }
