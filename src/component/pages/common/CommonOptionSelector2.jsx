@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import styles from '@/style/common/commonOptionSelector2.module.css'
 
-export const CommonOptionSelector2 = ({ title, description, options, splitRatio = 0.4 }) => {
+export const CommonOptionSelector2 = ({ title, description,footer, options, splitRatio = 0.4 }) => {
   const [selected, setSelected] = useState(0)
   const [fade, setFade] = useState(false)
 
@@ -51,6 +51,7 @@ export const CommonOptionSelector2 = ({ title, description, options, splitRatio 
           dangerouslySetInnerHTML={{ __html: options[selected].description }}
         />
       </div>
+      {footer && <p className={styles.description} dangerouslySetInnerHTML={{__html:footer}} />}
     </div>
   )
 }
