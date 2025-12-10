@@ -85,6 +85,13 @@
   padding: 0 20px;
 }
 
+.faqContent ul,
+.faqContent li,
+.faqContent p {
+  font-size: inherit;
+  color: inherit;
+}
+
 .faqContent.open {
   max-height: 200px;
   padding: 15px 20px;
