@@ -10,7 +10,7 @@ export const AccelerateGrowth = () =>{
             points={['Cost-efficient campaigns that maximize ROI','High-quality lead generation instead of vanity traffic','Data-backed decision-making at every stage']}
             text2='We measure success in conversions, not impressions. Your ad spend becomes a predictable engine for growth.'
             imageSrc='/images/ppc/about.jpg'
-            imageAlt='Social-media-marketing-about'
+            imageAlt='image'
         />
     )
 }
