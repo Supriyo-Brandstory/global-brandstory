@@ -60,6 +60,10 @@
   color: #fff;
 }
 
+.textBox li{
+  margin-left: 30px;
+}
+
 @media (max-width: 768px) {
   .subHeading{
     font-size: 18px;

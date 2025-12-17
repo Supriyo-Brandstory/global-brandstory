@@ -6,7 +6,7 @@
 }
 .wrapper h2{
     width: 1000px;
-    margin: 0 auto 50px;
+    margin: 0 auto 20px;
 }
 .card {
     background: var(--bg);
