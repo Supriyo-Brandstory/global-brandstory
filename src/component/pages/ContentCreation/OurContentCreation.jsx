@@ -38,7 +38,7 @@ export const OurContentCreation =()=>{
 
     return (
         <>
-            <CommonTwoCard {...data} titleClass="text-center" cardLayout="two-col"/>
+            <CommonTwoCard {...data} titleClass="text-center" />
             <p className='max-w-[1200px] text-center mx-auto mb-30'>Every Asset Reflects Your Brand Voice, Speaks To Your Audience, And Contributes To Your Overall Business Strategy.</p>
         </>
     )
