@@ -9,7 +9,7 @@ export const RestApi = ()=>{
         title: "Simplified Mobile and Web App Development",
         // Description derived from the content in the image
         desc: "REST APIs Use Lightweight Protocols Like HTTP And Standard Data Formats Such As JSON Or XML, Which Significantly Streamline Communication Between Frontend And Backend Systems. This Makes Them Ideal For Mobile Apps, Single-Page Applications (SPAs), And Web Platforms That Demand Real-Time Responsiveness And Fast Loading Speeds.",
-        icon: "/images/Webdev/ws-1.png", 
+        icon: "/images/WebDev/ws-1.png", 
         background:"url('/images/ppc/bg-1.png')",
         height: boxHeight
       },
@@ -27,7 +27,7 @@ export const RestApi = ()=>{
         title:"Faster and More Agile Deployment Cycles",
         // Description derived from the content in the image
         desc:"With REST APIs, New Services And Updates Can Be Rolled Out Without Overhauling Existing Infrastructure. This Flexibility Supports Agile Methodologies, Enabling Iterative Development, Faster Go-to-Market Timelines, And Seamless Integration With Legacy Systems Or Third-Party Platforms.",
-        icon:"/images/Webdev/ws-3.png", 
+        icon:"/images/WebDev/ws-3.png", 
         background:"url('/images/ppc/bg-3.png')",
         height: boxHeight
       },
