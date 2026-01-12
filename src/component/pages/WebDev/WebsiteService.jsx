@@ -7,7 +7,7 @@ export const WebsiteService = ()=>{
       {
         title: "Web Design Services",
         desc: "We Craft Mobile-First, UI/UX-Led Website Designs That Resonate With Users And Perform Seamlessly Across Devices. Every Interface Is Built To Enhance Navigation, Reduce Friction, And Inspire Meaningful Interactions—Ultimately Improving Dwell Time And Conversion Rates.",
-        icon: "/images/Webdev/ws-1.png", // Web Design icon (a monitor/browser)
+        icon: "/images/webdev/ws-1.png", // Web Design icon (a monitor/browser)
         background:"url('/images/ppc/bg-1.png')",
         height: boxHeight
       },
@@ -21,21 +21,21 @@ export const WebsiteService = ()=>{
       {
         title:"Landing Page Development",
         desc:"Need To Power A Campaign Or Capture High-Intent Leads? Our SEO-Optimized, Fast-Loading Landing Pages Are Purpose-Built To Support Best Marketing, Product Launches, And Sales Funnels. Every Element—From Copy To CTA—Is Crafted To Maximize ROI.",
-        icon:"/images/Webdev/ws-3.png", // Landing Page icon (a camera/device with an arrow)
+        icon:"/images/webdev/ws-3.png", // Landing Page icon (a camera/device with an arrow)
         background:"url('/images/ppc/bg-3.png')",
         height: boxHeight
       },
       {
         title:"Website Revamp Strategies",
         desc:"Your Website Should Grow With Your Brand. Our Website Redesign Services Focus On Elevating Aesthetics, Modernizing Architecture, And Improving Usability. Whether You're Repositioning Your Brand Or Improving Core Web Vitals, We Ensure Your New Site Delivers Measurable Gains In Engagement And Performance.",
-        icon:"/images/Webdev/ws-4.png", // Website Revamp icon (a refresh/circular arrow)
+        icon:"/images/webdev/ws-4.png", // Website Revamp icon (a refresh/circular arrow)
         background:"url('/images/ppc/bg-1.png')",
         height: boxHeight
       },
       {
         title:"Website Maintenance & Support",
         desc:"We Don't Stop At Launch. With Proactive Website Maintenance Services, We Ensure Your Site Stays Secure, Updated, And Aligned With Evolving Digital Standards. From Performance Monitoring To Plugin Updates And Technical Support, We've Got Your Backend Covered.",
-        icon:"/images/Webdev/ws-5.png", // Maintenance icon (a gear/wrench)
+        icon:"/images/webdev/ws-5.png", // Maintenance icon (a gear/wrench)
         background:"url('/images/ppc/bg-2.png')",
         height: boxHeight
       }
