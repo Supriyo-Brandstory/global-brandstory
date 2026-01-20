@@ -1,0 +1,178 @@
+.bannerWrapper {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background: url('/images/banner2-bg.webp') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  border-bottom: 1px solid #0F0F0F;
+  display: flex;
+  align-items: center;
+}
+
+.layout {
+  /* border: 1px solid white; */
+  max-width: 1200px;           /* slightly wider for big screens */
+  margin: 0 auto;
+  padding: 100px 0 0 0;
+  width: 100%;
+  display: flex;
+  align-items: stretch;        /* make children stretch to full height */
+  gap: 40px;
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.bannerContent {
+  flex: 0 0 65%;               /* ~60% width for content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* vertical center */
+  text-align: left;            /* ← key change: left-aligned text */
+}
+
+.bannerContent h1 {
+  font-size: 61px;
+  /* font-weight: 600; */
+  /* line-height: 0.95; */
+  color: white;
+  letter-spacing: -1px;
+}
+
+.seoBannerParagraph {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  color: #f0f8fd;
+  max-width: 720px;
+}
+
+.seoBannerParagraph div {
+  margin-bottom: 1.2rem;
+}
+
+.pointsList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 10px; */
+  /* font-weight: 700; */
+  font-size: 18px;
+  color: #f0f8fd;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.pointItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  margin-left: 0;
+  margin-right: 20px;
+  font-weight: bold;
+}
+.pointItem li{
+  font-weight: 900;
+  color:scale blue;
+}
+
+.pointBullet {
+  color: #e75921;
+  font-size: 50px;
+}
+
+.btnWrapper {
+  margin-top: 10px;
+}
+
+.bannerButtonLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #E04A2B;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 0 8px 30px rgba(224, 74, 43, 0.35);
+  transition: all 0.3s ease;
+}
+
+.bannerButtonLink:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(224, 74, 43, 0.5);
+}
+
+/* Right side - BR image pinned to bottom right */
+.br {
+  /* border: 1px solid skyblue; */
+  flex: 0 0 32%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;       /* ← pushes image to bottom */
+  justify-content: flex-end;   /* right-aligned */
+}
+
+.brImage {
+  max-width: 100%;
+  height: auto;
+  /* max-height: 80vh;            prevent overflow on smaller screens */
+  object-fit: contain;
+  object-position: bottom right;
+}
+
+.imageBtn{
+  width: 200px;
+  padding: 0px;
+  margin-top: 100px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .layout {
+    flex-direction: column;
+    padding: 100px 6% 60px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .bannerContent {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .br {
+    flex: none;
+    width: 100%;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .brImage {
+    max-height: 50vh;
+  }
+
+  .pointsList {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .bannerContent h1 {
+    font-size: clamp(2.8rem, 10vw, 5rem);
+  }
+
+  .seoBannerParagraph {
+    font-size: 1.15rem;
+  }
+
+  .bannerButtonLink {
+    padding: 14px 48px;
+    font-size: 1.1rem;
+  }
+}

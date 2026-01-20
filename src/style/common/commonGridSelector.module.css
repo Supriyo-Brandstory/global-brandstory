@@ -1,0 +1,145 @@
+.wrapper {
+  background: url('/images/brown-gradient-bg.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.layout {
+  max-width: 1200px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.tabs {
+  background: #1a1a1a;
+  border-radius: 9px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.tabName {
+  flex: 1;
+  padding: 10px 20px;
+  border-radius: 3px;
+  color: #e8e8e8;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tabName:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+.active {
+  background: linear-gradient(90deg, #E73E25 0%, #812315 100%);
+  color: #fff;
+}
+
+.active:hover {
+  background: linear-gradient(90deg, #E73E25 0%, #812315 100%);
+}
+
+.cardsGrid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  height: 100%;
+}
+
+.cardImageWrapper {
+  width: 100%;
+  height: 190px;
+  padding: 16px;                    /* ← Added 16px padding around the image */
+  box-sizing: border-box;
+  background: #111;                 /* keeps consistent bg behind padding */
+  border-radius: 10px;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;              /* keeps rounded corners inside padding */
+  display: block;
+}
+
+.cardContent {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardCategory {
+  color: #E73E25;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.cardDescription {
+  font-size: 18px;
+  color: #ddd;
+  opacity: .8;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.cardButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 16px;
+  color: #fff;
+  border: 1px solid #ffffff;
+  padding: 6px 12px;
+  border-radius: 9px;
+  text-decoration: none;
+  transition: all .5s;
+  margin-top: auto;                 /* still pushes to bottom */
+  width: fit-content;               /* ← Key change: button not full width */
+}
+
+.cardButton:hover {
+  background: rgba(0, 0, 0, 1);
+  box-shadow: -7px 7px 15px -10px #E73D26;
+}
+
+.icon {
+  background-size: cover;
+  transition: all .5s;
+}
+
+.cardButton:hover .icon {
+  background: linear-gradient(to right, #E73D26, #812215);
+  background-size: cover;
+}

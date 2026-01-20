@@ -2,8 +2,8 @@ import React from 'react';
 import styles from '@/style/common/commonBanner.module.css';
 
 export const CommonBanner = ({heading,paragraph,paragraph2,buttonLink,buttonLink2,buttonText,buttonText2}) => {
-  const finalLink1 = buttonLink || 'localhost:3000/our-services';
-  const finalLink2 = buttonLink2 || '/contact';
+  const finalLink1 = (!buttonLink || buttonLink === '#') ? '/our-work' : buttonLink;
+  const finalLink2 = (!buttonLink2 || buttonLink2 === '#') ? '/contact-us' : buttonLink2;
 
   return (
     <div className={styles.seoBanner}>
