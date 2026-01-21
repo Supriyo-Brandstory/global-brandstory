@@ -1,8 +1,7 @@
-import CommonAccordion2 from '../common/CommonAccordion2';
+import CommonAccordion2 from "../common/CommonAccordion2";
 
-export const SMMSocialPartner = () =>{
-    
-    const accordionData = [
+export const SMMSocialPartner = () => {
+  const accordionData = [
     {
       title: "Creative postings:",
       content:
@@ -20,20 +19,19 @@ export const SMMSocialPartner = () =>{
     },
     {
       title: "Making wise decisions:",
-      content:
-        "To avoid wasting money, we base our decisions on facts.",
+      content: "To avoid wasting money, we base our decisions on facts.",
     },
     {
       title: "Clear reporting:",
-      content:
-        "We provide simple reports that highlight events and outcomes.",
-    }
+      content: "We provide simple reports that highlight events and outcomes.",
+    },
   ];
 
-    return ( 
-        <CommonAccordion2
-        title="Why We’re the Social Media Partner Brands Rely On"
-        description="We are chosen by brands because we simplify social media. We ensure that each ad and content adds value."
-        items={accordionData} />
-    )
-}
+  return (
+    <CommonAccordion2
+      title="Why We’re the Social Media Partner Brands Rely On"
+      description="We are chosen by brands because we simplify social media. We ensure that each ad and content adds value.<br><br>We simplify social media for you and use it to propel your company's expansion."
+      items={accordionData}
+    />
+  );
+};

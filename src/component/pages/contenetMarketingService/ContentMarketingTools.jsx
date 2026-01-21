@@ -1,5 +1,5 @@
-import React from 'react'
-import CommonAccordion from '../common/CommonAccordion';
+import React from "react";
+import CommonAccordion from "../common/CommonAccordion";
 
 const ContentMarketingTools = () => {
   const accordionData = [
@@ -31,11 +31,11 @@ const ContentMarketingTools = () => {
         title="Our Content Marketing Tools & Technology"
         subheding1=" "
         subheding2="Tools Help Us Scale, But Strategy Drives Results. Every Tool We Use Has One Purpose: Make Your Content Work Harder For Your Business."
-        items={accordionData} 
+        items={accordionData}
+        footer={`Tools help us scale, but strategy drives results. Every tool we use has one purpose: make your content work harder for your business.`}
       />
-
     </>
-  )
-}
+  );
+};
 
-export default ContentMarketingTools
+export default ContentMarketingTools;
