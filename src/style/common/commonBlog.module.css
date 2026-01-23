@@ -1,0 +1,159 @@
+.wrapper {
+  width: 100%;
+  background: radial-gradient(ellipse 70% 50% at center, #5d1b16, #000 80%);
+  padding: 40px 0 80px 0;
+}
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* FILTER BAR */
+.filters {
+  display: inline-flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 50px;
+  background: rgba(255,255,255,0.1);
+  padding: 10px 50px;
+  border-radius: 12px;
+  white-space: nowrap; /* prevents wrapping */
+}
+
+
+.filterBtn {
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 15px;
+  color: #eee;
+  cursor: pointer;
+  transition: .25s;
+  user-select: none;
+}
+
+.filterBtn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.active {
+  background: #E73E25;
+  border-color: #E73E25;
+  color: #fff;
+}
+
+/* CARDS GRID */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  text-align: left;
+}
+
+/* CARD */
+.card {
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  transition: .3s;
+}
+
+.card:hover {
+  border-color: rgba(255,255,255,0.25);
+}
+
+.cardCategory {
+  color: #E73E25;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.cardTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.cardDescription {
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+
+.cardButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: #fff;
+  border: 1px solid #ffffff;
+  padding: 6px 12px;
+  border-radius: 9px;
+  text-decoration: none;
+  transition: all .3s;
+  margin-top: auto;
+  width: fit-content;
+}
+
+.cardButton:hover {
+  background: rgba(0, 0, 0, 1);
+}
+
+.icon {
+  transition: .3s;
+}
+
+.cardButton:hover .icon {
+  transform: translateX(4px);
+  background: url('/images/box-arrow-hover.svg');
+}
+
+/* PAGINATION */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 45px;
+}
+
+.pageBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 1);
+  color: #000;
+  cursor: pointer;
+  font-size: 24px;
+  transition: .25s;
+}
+
+.pageBtn:hover {
+  background: rgba(255,255,255,0.7);
+}
+
+.activePage {
+  background: #E73E25;
+  border-color: #E73E25;
+  color: #fff;
+}
+
+.activePage:hover {
+  background: #E73E25;
+}

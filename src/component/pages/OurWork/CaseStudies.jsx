@@ -8,7 +8,6 @@ export const CaseStudies = () => {
     cards: [
       {
         category: "Software Company",
-        title: "Website Design & Development For A Platform As A Service (CPaaS) Provider",
         description: "Our client is a Digital Communication Solutions Provider specializing in AI-Powered Communication Platform As A Service (CPaaS). The company offers an AI-powered platform...",
         buttonText: "Read More",
         buttonLink: "#",

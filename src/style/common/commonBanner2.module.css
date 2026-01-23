@@ -130,49 +130,61 @@
   margin-top: 100px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .layout {
-    flex-direction: column;
-    padding: 100px 6% 60px;
-    align-items: center;
-    text-align: center;
-  }
+/* Mobile */
+@media (max-width: 768px) {
 
-  .bannerContent {
-    flex: none;
-    width: 100%;
-    text-align: center;
-    align-items: center;
+  .layout {
+    padding: 60px 20px 40px 20px;
+    flex-direction: column;
+    min-height: auto;
+    height: auto;
+    gap: 20px;
   }
 
   .br {
-    flex: none;
+    display: none; /* hide right image */
+  }
+
+  .bannerContent {
+    flex: unset;
     width: 100%;
-    justify-content: center;
-    margin-top: 3rem;
+    align-items: center;
+    text-align: center;
   }
 
-  .brImage {
-    max-height: 50vh;
-  }
-
-  .pointsList {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 640px) {
   .bannerContent h1 {
-    font-size: clamp(2.8rem, 10vw, 5rem);
+    font-size: 36px; /* smaller */
+    line-height: 1.1;
   }
 
   .seoBannerParagraph {
-    font-size: 1.15rem;
+    max-width: 100%;
+  }
+
+
+  .pointsList {
+    justify-content: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .pointItem {
+    margin-right: 10px;
+    gap: 6px;
+  }
+
+  .pointBullet {
+    font-size: 30px;
   }
 
   .bannerButtonLink {
-    padding: 14px 48px;
-    font-size: 1.1rem;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 14px;
+  }
+
+  .imageBtn {
+    width: 160px;
+    margin-top: 40px;
   }
 }

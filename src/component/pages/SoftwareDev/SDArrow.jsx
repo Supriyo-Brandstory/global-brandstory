@@ -46,6 +46,13 @@ export const SDArrow = () => {
       theme: "dark", // Dark background
       size: "sm",
     },
+    {
+      title: "Full Stack Development",
+      description:
+        "Robust Front-End And Back-End Architecture That Supports Dynamic Business Applications With Future-Ready Scalability.",
+      theme: "dark",
+      size: "lg",
+    },
   ];
 
   return (
