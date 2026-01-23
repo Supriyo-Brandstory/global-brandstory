@@ -7,30 +7,30 @@ export const PPCServices = () => {
 
   const boxesData = [
     {
-      title: "Enterprise SEO",
+      title: "Performance Marketing",
       description:
-        "Scalable Strategies For Large, Complex Websites With Multiple Markets Or Locations.",
+        "Campaigns centered on quantifiable outcomes that increase leads, sales, and return on investment.",
       theme: "light",
       size: "sm",
     },
     {
-      title: "E-Commerce SEO",
+      title: "PPC Strategy & Planning",
       description:
         "Personalized approaches based on your objectives, target market, and sector.",
       theme: "dark",
       size: "md",
     },
     {
-      title: "Link Building",
+      title: "Meta Advertising Services",
       description:
-        "Quality Backlink Strategies That Build Authority And Strengthen Search Rankings.",
+        "Facebook and Instagram ads that are specifically targeted to the proper audience.",
       theme: "dark",
       size: "sm",
     },
     {
-      title: "Local SEO",
+      title: "Google Ads Management",
       description:
-        "Targeted Optimisation To Improve Your Presence In Map Listings And Local Search Results.",
+        "To attract high-intent traffic through search, display, and retail campaigns.",
       theme: "dark",
       size: "md",
     },

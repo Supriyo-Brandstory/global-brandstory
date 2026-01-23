@@ -2,54 +2,55 @@ import CommonArrowGrid from "@/component/pages/common/CommonArrowGrid";
 
 export const SDArrow = () => {
   // Updated Heading and Description based on the screenshot
-  const heading = "Comprehensive Development Services — All Under One Roof";
-  const description = "Our Extended Offerings Include:";
+  const heading = "Complete Software Development Services";
+  const description =
+    "We provide end-to-end software solutions tailored to your business needs. Our services include:";
 
   const boxesData = [
     {
       // 01. Software Development Services
-      title: "Software Development Services",
+      title: "Software Consulting Services",
       description:
-        "Custom-Built Software Tailored To Meet Your Operational, Analytical, And Business-Specific Needs. From Enterprise Platforms To SaaS Products, We Help You Scale With Confidence.",
+        "Expert guidance to help you plan, strategize, and choose the right technology for your business.",
       theme: "light", // Assuming the light background box from the screenshot is 'light'
       size: "sm", // Changed size to 'lg' to represent the large box 01
     },
     {
       // 02. UI/UX Design
-      title: "UI/UX Design",
+      title: "Custom Software Development",
       description:
-        "Intuitive And User-First Design Systems That Improve Engagement, Reduce Churn, And Align Your Digital Product With Brand Expectations.",
+        "Building applications designed specifically for your workflows and goals.",
       theme: "dark", // Dark background
       size: "md", // Medium box 02
     },
     {
       // 03. Web App Development
-      title: "Web App Development",
+      title: "Software Architecture & Wireframing",
       description:
-        "High-Performance Web Applications Engineered For Responsiveness, Security, And Long-Term Usability.",
+        "Designing scalable, efficient structures and prototypes before development begins.",
       theme: "dark", // Dark background
       size: "sm",
     },
     {
       // 04. Website Design
-      title: "Website Design",
+      title: "Software Maintenance & Support",
       description:
-        "Mobile-First, UX-Led Websites Crafted To Convert, Combining Aesthetics, Usability, And SEO Best Practices.",
+        "Keeping your systems updated, secure, and performing smoothly.",
       theme: "dark", // Dark background
       size: "sm",
     },
     {
       // 05. Full Stack Development
-      title: "Full Stack Development",
+      title: "Database Development",
       description:
-        "Robust Front-End And Back-End Architecture That Supports Dynamic Business Applications With Future-Ready Scalability.",
+        "Creating reliable databases that ensure seamless data management and accessibility.",
       theme: "dark", // Dark background
       size: "sm",
     },
     {
-      title: "Full Stack Development",
+      title: "Enterprise Software Development Services",
       description:
-        "Robust Front-End And Back-End Architecture That Supports Dynamic Business Applications With Future-Ready Scalability.",
+        "Delivering large-scale, secure, and scalable solutions for growing businesses.",
       theme: "dark",
       size: "lg",
     },
