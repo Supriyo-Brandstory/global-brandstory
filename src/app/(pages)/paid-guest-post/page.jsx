@@ -13,32 +13,32 @@ const page = () => {
     {
       title: "What exactly are paid guest posts?",
       description:
-        "Paid guest posts are articles that are published on other websites in exchange for a backlink to your website. These backlinks can help improve your website's search engine rankings and increase traffic to your website.",
+        "These are blog articles published on third-party websites that include a backlink to your site. You’re paying for both the writing and the placement, not just a link drop.",
     },
     {
       title: "Is this the same as buying backlinks?",
       description:
-        "No, paid guest posts are different from buying backlinks. Paid guest posts are articles that are published on other websites in exchange for a backlink to your website. These backlinks can help improve your website's search engine rankings and increase traffic to your website.",
+        "Not really. We stay far away from link farms and low-quality networks. Every post we place is a proper editorial feature on a real website with an actual audience.",
     },
     {
       title: "Can I choose where my post goes?",
       description:
-        "Yes, we can help you choose where your post goes. We can help you choose where your post goes. We can help you choose where your post goes.",
+        "Yes. We’ll share a list of suitable websites before anything is published. You can review and approve each one.",
     },
     {
       title: "Who writes the articles?",
       description:
-        "Yes, we can help you choose where your post goes. We can help you choose where your post goes. We can help you choose where your post goes.",
+        "Our in-house writers. They research, write, and tailor every article based on your brand, SEO goals, and the publishing site’s tone.",
     },
     {
       title: "Can you support different regions or languages?",
       description:
-        "Yes, we can help you choose where your post goes. We can help you choose where your post goes. We can help you choose where your post goes.",
+        "Yes, we can. If your audience is global, we offer guest posting in local languages and region-specific blogs.",
     },
     {
       title: "Will this help my Domain Authority or SEO?",
       description:
-        "Yes, paid guest posts can help improve your website's search engine rankings and increase traffic to your website.",
+        "Over time, yes. Consistent guest posts on quality domains build stronger backlink profiles, improve authority, and support long-term search growth.",
     },
   ];
   return (
