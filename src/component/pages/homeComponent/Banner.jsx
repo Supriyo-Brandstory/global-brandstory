@@ -1,12 +1,12 @@
 "use client";
-import React, { useRef, useState } from 'react';
-import styles from '@/style/homepage.module.css';
+import React, { useRef, useState } from "react";
+import styles from "@/style/homepage.module.css";
 
 const Banner = () => {
-const bannerRef = useRef(null);
-  const [images, setImages] = useState([]);
-  const [lastImagePos, setLastImagePos] = useState(null);
-  const fixedDistance = 100; // distance (px)
+  // const bannerRef = useRef(null);
+  // const [images, setImages] = useState([]);
+  // const [lastImagePos, setLastImagePos] = useState(null);
+  // const fixedDistance = 100; // distance (px)
 
   // ✅ Fix: hardcoded image paths
   const imageList = [
@@ -22,47 +22,49 @@ const bannerRef = useRef(null);
     "/images/mouse/img10.svg",
   ];
 
-  const handleMouseMove = (e) => {
-    const rect = bannerRef.current.getBoundingClientRect();
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
+  /*
+  // const handleMouseMove = (e) => {
+  //   const rect = bannerRef.current.getBoundingClientRect();
+  //   const mouseX = e.clientX - rect.left;
+  //   const mouseY = e.clientY - rect.top;
 
-    if (lastImagePos) {
-      const dx = mouseX - lastImagePos.x;
-      const dy = mouseY - lastImagePos.y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
+  //   if (lastImagePos) {
+  //     const dx = mouseX - lastImagePos.x;
+  //     const dy = mouseY - lastImagePos.y;
+  //     const dist = Math.sqrt(dx * dx + dy * dy);
 
-      if (dist < fixedDistance) {
-        return; // too close → no new image
-      }
-    }
+  //     if (dist < fixedDistance) {
+  //       return; // too close → no new image
+  //     }
+  //   }
 
-    const randomIndex = Math.floor(Math.random() * imageList.length);
-    const imageSrc = imageList[randomIndex];
-    const effectClass =
-      Math.random() < 0.5 ? "hoverImageRound" : "hoverImageSquare";
+  //   const randomIndex = Math.floor(Math.random() * imageList.length);
+  //   const imageSrc = imageList[randomIndex];
+  //   const effectClass =
+  //     Math.random() < 0.5 ? "hoverImageRound" : "hoverImageSquare";
 
-    const newImage = {
-      id: Date.now() + Math.random(),
-      x: mouseX,
-      y: mouseY,
-      src: imageSrc,
-      effect: effectClass,
-    };
+  //   const newImage = {
+  //     id: Date.now() + Math.random(),
+  //     x: mouseX,
+  //     y: mouseY,
+  //     src: imageSrc,
+  //     effect: effectClass,
+  //   };
 
-    setImages((prev) => [...prev, newImage]);
-    setLastImagePos({ x: mouseX, y: mouseY });
+  //   setImages((prev) => [...prev, newImage]);
+  //   setLastImagePos({ x: mouseX, y: mouseY });
 
-    setTimeout(() => {
-      setImages((prev) => prev.filter((img) => img.id !== newImage.id));
-    }, 300);
-  };
+  //   setTimeout(() => {
+  //     setImages((prev) => prev.filter((img) => img.id !== newImage.id));
+  //   }, 300);
+  // };
+  // */
 
   return (
     <div
       className={styles.banner}
-      ref={bannerRef}
-      onMouseMove={handleMouseMove}
+      // ref={bannerRef}
+      // onMouseMove={handleMouseMove}
     >
       <div className={styles.bannerContent}>
         <h1 className={styles.bannerHeading}>
@@ -70,21 +72,34 @@ const bannerRef = useRef(null);
           Grow — In One Digital Agency
         </h1>
         <p className={styles.bannerParagraph}>
-          Just one sharp, plugged-in team delivering strategy, design, content, tech, and marketing — all under one roof.
+          Just one sharp, plugged-in team delivering strategy, design, content,
+          tech, and marketing — all under one roof.
         </p>
         <button className={styles.bannerButton}>Let’s Talk</button>
 
         <ul className={styles.bannerList}>
-          <li><img src='/icons/dot.svg' alt='dot' /> Strategy</li>
-          <li><img src='/icons/dot.svg' alt='dot' /> DESIGN</li>
-          <li><img src='/icons/dot.svg' alt='dot' /> MARKETING</li>
-          <li><img src='/icons/dot.svg' alt='dot' /> VIDEO</li>
-          <li><img src='/icons/dot.svg' alt='dot' /> DEVELOPMENT</li>
-          <li><img src='/icons/dot.svg' alt='dot' /> ANALYTICS</li>
+          <li>
+            <img src="/icons/dot.svg" alt="dot" /> Strategy
+          </li>
+          <li>
+            <img src="/icons/dot.svg" alt="dot" /> DESIGN
+          </li>
+          <li>
+            <img src="/icons/dot.svg" alt="dot" /> MARKETING
+          </li>
+          <li>
+            <img src="/icons/dot.svg" alt="dot" /> VIDEO
+          </li>
+          <li>
+            <img src="/icons/dot.svg" alt="dot" /> DEVELOPMENT
+          </li>
+          <li>
+            <img src="/icons/dot.svg" alt="dot" /> ANALYTICS
+          </li>
         </ul>
       </div>
 
-      {images.map((img) => (
+      {/* {images.map((img) => (
         <img
           key={img.id}
           src={img.src}
@@ -95,7 +110,7 @@ const bannerRef = useRef(null);
           }}
           alt="trail"
         />
-      ))}
+      ))} */}
     </div>
   );
 };
