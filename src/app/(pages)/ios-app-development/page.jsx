@@ -22,8 +22,8 @@ const page = () => {
       <IosAppDev />
       <CommonDivider />
       <CommonAccordion2
-        title="How We Plan, Design, and Build Android Apps With Precision and Quality"
-        description="We follow a structured approach that ensures clarity, collaboration, and measurable results."
+        title="The Stages of Our iOS App Development Process"
+        description="Our approach is structured, collaborative, and designed to deliver measurable results."
         items={[
           {
             title: "Phase I: Strategic Discovery & Ideation",
