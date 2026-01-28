@@ -38,8 +38,8 @@ const page = () => {
       <CommonDivider />
       <PPCCampaigns />
       <CommonDivider />
-      {/* <PPCCaseStudies /> */}
-      {/* <CommonDivider /> */}
+      <PPCCaseStudies />
+      <CommonDivider />
       <PPCPerformance />
       <CommonDivider />
       <PPCFaq />
