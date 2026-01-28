@@ -10,6 +10,9 @@
     top: 12%;
     z-index: -1;
 }
+.title{
+    padding: 20px 0;
+}
 .bgImage img{
     height: 100%;
 }
@@ -121,4 +124,60 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
+}
+
+/* ================= MOBILE (max-width: 768px) ================= */
+@media (max-width: 768px) {
+
+  .layout {
+    padding: 40px 16px;
+  }
+
+  .colTwo {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 16px;
+  }
+
+  .form {
+    padding: 20px 16px;
+  }
+
+  .contactBoxes {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  #contactNumbers {
+    width: 100%;
+    margin-left: 0;
+    padding: 24px 16px;
+  }
+
+  .phoneNumbers {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .phoneNumbers div {
+    justify-content: flex-start;
+  }
+
+  .socialIcons img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contactBox {
+    padding: 24px 16px;
+  }
+
+  .bgImage {
+    display: none;
+  }
+  
+  .submitBtn{
+    margin-top: 50px;
+    margin: 20px 0;
+  }
 }

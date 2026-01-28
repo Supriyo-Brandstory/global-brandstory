@@ -11,7 +11,7 @@ export const CommonContactForm = () => {
         <div className={styles.layout}>
             <div className={styles.colTwo}>
                 <form action="" className={styles.form}>
-                    <h2>Request a Consultation</h2>
+                    <h2 className={styles.title}>Request a Consultation</h2>
                     <div className={styles.inputGroup}>
                         <input type="text" placeholder='Your Name' className={styles.textInput}/>
                         <div className={styles.inputHint}>Enter your full name</div>

@@ -143,3 +143,57 @@
   background: linear-gradient(to right, #E73D26, #812215);
   background-size: cover;
 }
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .layout {
+    padding: 0 16px;
+  }
+
+  .tabs {
+    padding: 6px;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .tabName {
+    flex: 1 1 auto;
+    font-size: 16px;
+    padding: 8px 14px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 28px;
+  }
+
+  .cardImageWrapper {
+    height: 160px;
+    padding: 12px;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+  }
+
+  .cardDescription {
+    font-size: 16px;
+  }
+
+  .cardCategory {
+    font-size: 16px;
+  }
+
+  .cardButton {
+    font-size: 15px;
+    padding: 6px 10px;
+  }
+}
