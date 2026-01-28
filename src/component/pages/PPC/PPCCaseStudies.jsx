@@ -3,6 +3,7 @@ import CommonGridBox3 from "../common/CommonGridBox3";
 export const PPCCaseStudies = () => {
   const title = "PPC Case Studies with Measurable Results";
   const description = "";
+
   const data = [
     {
       title: "Ecommerce Client",
@@ -26,5 +27,12 @@ export const PPCCaseStudies = () => {
       logo: "/images/seo/expertise-3.webp",
     },
   ];
-  return <CommonGridBox3 title={title} description={description} data={data} />;
+  return (
+    <CommonGridBox3
+      title={title}
+      description={description}
+      data={data}
+      footer={`Each case demonstrates how PPC campaign management drives real ROI.`}
+    />
+  );
 };
