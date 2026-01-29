@@ -3,70 +3,117 @@ import React, { useState } from "react";
 import styles from "@/style/common/commonBlog.module.css";
 
 export const CommonBlog = () => {
+  const BLOGS_PER_PAGE = 6;
+
   const filters = ["All", "UI / UX", "Branding", "Technology", "Digital Marketing", "Strategy"];
   const [activeFilter, setActiveFilter] = useState("All");
+  const [currentPage, setCurrentPage] = useState(1);
 
   const blogs = [
     {
-      filter: "UI / UX",
-      category: "UX • Experience Design",
+      filter: "Experience Design",
+      categories: ["Experience Design", "UX"],
       title: "What Makes Digital Experiences Truly Human",
-      description:
-        "Technology Evolves Fast, But Human Expectations Evolve Faster. Here’s How We Design Experiences That Feel Intuitive, Inclusive, And Meaningful.",
+      date: "January 3, 2026",
+      image: "https://picsum.photos/id/1/600/400",
       buttonText: "Read More",
-      buttonLink: "#"
+      buttonLink: "#",
     },
     {
       filter: "Branding",
-      category: "Branding • Strategy",
+      categories: ["Branding", "Strategy"],
       title: "Brand Strategy Is Not A Logo",
-      description:
-        "A Strong Brand Is Built On Clarity, Consistency, And Conviction—Not Visuals Alone. Let’s Break Down What Actually Drives Brand Recall And Trust.",
+      date: "January 17, 2026",
+      image: "https://picsum.photos/id/2/600/400",
       buttonText: "Read More",
-      buttonLink: "#"
+      buttonLink: "#",
     },
     {
-      filter: "Technology",
-      category: "Web Development • Design Systems",
+      filter: "Web Development",
+      categories: ["Web Development", "Design Systems"],
       title: "Scaling Websites Without Breaking Experience",
-      description:
-        "As Businesses Grow, Websites Often Get Complex. Learn How Scalable Design Systems Keep Things Simple, Fast, And Flexible.",
+      date: "January 9, 2026",
+      image: "https://picsum.photos/id/3/600/400",
       buttonText: "Read More",
-      buttonLink: "#"
+      buttonLink: "#",
     },
     {
       filter: "Digital Marketing",
-      category: "Digital Marketing • Analytics",
+      categories: ["Digital Marketing", "Analytics"],
       title: "Data-Led Creativity: Where Logic Meets Imagination",
-      description:
-        "Creative Decisions Backed By Insights Lead To Measurable Impact. This Is How Data Strengthens—Not Limits—Creativity.",
+      date: "February 26, 2026",
+      image: "https://picsum.photos/id/4/600/400",
       buttonText: "Read More",
-      buttonLink: "#"
+      buttonLink: "#",
     },
     {
-      filter: "UI / UX",
-      category: "Product • UX Strategy",
+      filter: "Product",
+      categories: ["Product", "UX Strategy"],
       title: "Why Every Growing Business Needs UX Thinking",
-      description:
-        "UX Isn’t Just For Apps. It’s A Mindset That Helps Businesses Reduce Friction, Increase Conversions, And Build Loyalty.",
+      date: "February 6, 2026",
+      image: "https://picsum.photos/id/5/600/400",
       buttonText: "Read More",
-      buttonLink: "#"
+      buttonLink: "#",
     },
     {
-      filter: "Strategy",
-      category: "Digital Strategy",
+      filter: "Digital Strategy",
+      categories: ["Digital Strategy"],
       title: "From Campaigns To Ecosystems",
-      description:
-        "Why Modern Brands Must Think Beyond One-Off Campaigns And Build Connected Digital Ecosystems Instead.",
+      date: "January 12, 2026",
+      image: "https://picsum.photos/id/6/600/400",
       buttonText: "Read More",
-      buttonLink: "#"
+      buttonLink: "#",
+    },
+    {
+      filter: "Digital Marketing",
+      categories: ["Digital Marketing", "Analytics"],
+      title: "Another Marketing Insight",
+      date: "March 1, 2026",
+      image: "https://picsum.photos/id/7/600/400",
+      buttonText: "Read More",
+      buttonLink: "#",
+    },
+    {
+      filter: "Product",
+      categories: ["Product", "UX"],
+      title: "Product Thinking 101",
+      date: "March 5, 2026",
+      image: "https://picsum.photos/id/8/600/400",
+      buttonText: "Read More",
+      buttonLink: "#",
+    },
+    {
+      filter: "Branding",
+      categories: ["Branding"],
+      title: "Brand Consistency Matters",
+      date: "March 8, 2026",
+      image: "https://picsum.photos/id/9/600/400",
+      buttonText: "Read More",
+      buttonLink: "#",
     },
   ];
 
+  /* ---------------- FILTER ---------------- */
   const filteredBlogs =
     activeFilter === "All"
       ? blogs
       : blogs.filter((b) => b.filter === activeFilter);
+
+  /* ---------------- PAGINATION ---------------- */
+  const totalPages = Math.ceil(filteredBlogs.length / BLOGS_PER_PAGE);
+
+  const startIndex = (currentPage - 1) * BLOGS_PER_PAGE;
+  const paginatedBlogs = filteredBlogs.slice(
+    startIndex,
+    startIndex + BLOGS_PER_PAGE
+  );
+
+  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+
+  const handleFilterChange = (filter) => {
+    setActiveFilter(filter);
+    setCurrentPage(1);
+  };
 
   return (
     <div className={styles.wrapper}>
@@ -78,8 +125,10 @@ export const CommonBlog = () => {
           {filters.map((item, i) => (
             <div
               key={i}
-              className={`${styles.filterBtn} ${activeFilter === item ? styles.active : ""}`}
-              onClick={() => setActiveFilter(item)}
+              className={`${styles.filterBtn} ${
+                activeFilter === item ? styles.active : ""
+              }`}
+              onClick={() => handleFilterChange(item)}
             >
               {item}
             </div>
@@ -88,16 +137,28 @@ export const CommonBlog = () => {
 
         {/* BLOG CARDS */}
         <div className={styles.cardsGrid}>
-          {filteredBlogs.map((card, i) => (
+          {paginatedBlogs.map((card, i) => (
             <div key={i} className={styles.card}>
+              <div className={styles.imageWrap}>
+                <img src={card.image} alt={card.title} />
+                <div className={styles.pills}>
+                  {card.categories.map((cat, idx) => (
+                    <span key={idx} className={styles.pill}>{cat}</span>
+                  ))}
+                </div>
+              </div>
+
               <div className={styles.cardContent}>
-                <p className={styles.cardCategory}>{card.category}</p>
                 <h3 className={styles.cardTitle}>{card.title}</h3>
-                <p className={styles.cardDescription}>{card.description}</p>
+                <p className={styles.date}>{card.date}</p>
 
                 <a href={card.buttonLink} className={styles.cardButton}>
                   <span>{card.buttonText}</span>
-                  <img src="/images/box-arrow.svg" alt="arrow" className={styles.icon} />
+                  <img
+                    src="/images/box-arrow.svg"
+                    alt="arrow"
+                    className={styles.icon}
+                  />
                 </a>
               </div>
             </div>
@@ -105,12 +166,37 @@ export const CommonBlog = () => {
         </div>
 
         {/* PAGINATION */}
-        <div className={styles.pagination}>
-          <button className={styles.pageBtn}>«</button>
-          <button className={`${styles.pageBtn} ${styles.activePage}`}>1</button>
-          <button className={styles.pageBtn}>2</button>
-          <button className={styles.pageBtn}>»</button>
-        </div>
+        {totalPages > 1 && (
+          <div className={styles.pagination}>
+            <button
+              className={styles.pageBtn}
+              disabled={currentPage === 1}
+              onClick={() => setCurrentPage((p) => p - 1)}
+            >
+              «
+            </button>
+
+            {pageNumbers.map((page) => (
+              <button
+                key={page}
+                className={`${styles.pageBtn} ${
+                  currentPage === page ? styles.activePage : ""
+                }`}
+                onClick={() => setCurrentPage(page)}
+              >
+                {page}
+              </button>
+            ))}
+
+            <button
+              className={styles.pageBtn}
+              disabled={currentPage === totalPages}
+              onClick={() => setCurrentPage((p) => p + 1)}
+            >
+              »
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

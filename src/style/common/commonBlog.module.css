@@ -63,38 +63,84 @@
 
 /* CARD */
 .card {
-  background: rgba(0,0,0,0.6);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 12px;
-  padding: 18px;
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: .3s;
+  border: 1px solid grey;
+}
+
+/* IMAGE */
+.imageWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.imageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CATEGORY PILLS */
+.pills {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.pill {
+  background: rgba(255,255,255,1);
+  color: #E73E25;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-weight: 500;
+}
+
+/* CONTENT */
+.cardContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  padding: 24px;
+  /* background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.7) 30%,
+    rgba(0,0,0,0.9) 100%
+  ); */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  transition: .3s;
-}
-
-.card:hover {
-  border-color: rgba(255,255,255,0.25);
-}
-
-.cardCategory {
-  color: #E73E25;
-  font-size: 15px;
-  margin-bottom: 20px;
+  justify-content: flex-end;
+  z-index: 1;
 }
 
 .cardTitle {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   color: #fff;
   margin-bottom: 10px;
+  line-height: 1.3;
 }
 
-.cardDescription {
+.date {
+  font-size: 18px;
   color: #ccc;
-  font-size: 16px;
-  line-height: 1.4;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
+
 
 .cardButton {
   display: inline-flex;
@@ -112,14 +158,16 @@
 }
 
 .cardButton:hover {
-  background: rgba(0, 0, 0, 1);
+  /* background: rgba(0, 0, 0, 1); */
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5);
 }
 
 .icon {
+  
   transition: .3s;
 }
 
-.cardButton:hover .icon {
+.cardButton:hover .icon{
   transform: translateX(4px);
   background: url('/images/box-arrow-hover.svg');
 }
@@ -156,4 +204,86 @@
 
 .activePage:hover {
   background: #E73E25;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .layout {
+    padding: 0 16px;
+  }
+
+  .sectionTitle {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  /* Make filters horizontally scrollable */
+  .filters {
+    display: flex;
+    justify-content: flex-start;   /* important */
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;                   /* important */
+    padding: 10px 16px;
+    gap: 10px;
+    border-radius: 8px;
+    margin: 0 auto 32px auto;
+    scrollbar-width: none;
+  }
+
+  .filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filterBtn {
+    flex: 0 0 auto;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .cardCategory {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .cardDescription {
+    font-size: 15px;
+    margin-bottom: 16px;
+  }
+
+  .cardButton {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .pagination {
+    gap: 6px;
+    margin-top: 30px;
+  }
+
+  .pageBtn {
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+  }
 }

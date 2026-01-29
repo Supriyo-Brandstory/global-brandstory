@@ -25,7 +25,7 @@ export const CommonClients = () => {
               With experience across 30+ industries, BrandStory brings the right insight — we live it, breathe it, and know how to move it forward. 
               From tech to education, fintech to fashion — we know how to make stories stick and strategies scale.
             </div>
-
+            <div className={styles.mobileGap} />
             <div className={styles.sliderWrapper}>
               <div className={styles.logoSlider} ref={sliderRef}>
                   <img src="/images/ClientSlider/wg.svg" alt="" />

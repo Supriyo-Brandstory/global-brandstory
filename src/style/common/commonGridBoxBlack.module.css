@@ -7,7 +7,7 @@
 
 .heading {
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 60px;
   color: #fff;
 }
@@ -81,14 +81,13 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 786px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 16px;
+  }
+  .heading{
+    font-size: 28px;
   }
 }
 
-@media (max-width: 600px) {
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
