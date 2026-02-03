@@ -1,7 +1,21 @@
 import styles from '@/style/common/commonAdvertise.module.css';
 import Link from 'next/link';
 
-const CommonAdvertise = ({ btnOneLink, btnTwoLink, btn1, btn2, title1, title2, description, footerText }) => {
+const CommonAdvertise = ({
+  btnOneLink,
+  btnTwoLink,
+  btn1,
+  btn2,
+  title1,
+  title2,
+  description,
+  footerText,
+}) => {
+  const getSafeLink = (link) => {
+    if (!link || link === '#') return '/contact-us';
+    return link;
+  };
+
   return (
     <div className={styles.frame}>
       <div className={styles.innerFrame}>
@@ -11,19 +25,17 @@ const CommonAdvertise = ({ btnOneLink, btnTwoLink, btn1, btn2, title1, title2, d
         </span>
 
         {description && (
-          <p dangerouslySetInnerHTML={{ __html: description }}></p>
+          <p dangerouslySetInnerHTML={{ __html: description }} />
         )}
 
         {(btn1 || btn2) && (
           <div className={`flex gap-x-4 ${styles.buttons}`}>
             {btn1 && (
-              <Link href={btnOneLink} className={styles.btn1}>
+              <Link
+                href={getSafeLink(btnOneLink)}
+                className={styles.btn1}
+              >
                 {btn1}
-              </Link>
-            )}
-            {btn2 && (
-              <Link href={btnTwoLink} className={styles.btn2}>
-                {btn2}
               </Link>
             )}
           </div>
@@ -33,7 +45,7 @@ const CommonAdvertise = ({ btnOneLink, btnTwoLink, btn1, btn2, title1, title2, d
           <p
             className={styles.footertext}
             dangerouslySetInnerHTML={{ __html: footerText }}
-          ></p>
+          />
         )}
       </div>
     </div>

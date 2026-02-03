@@ -41,3 +41,8 @@ const page = () => {
 }
 
 export default page
+
+export const metadata = {
+  title: "BrandStory - Your Partner in Digital Success",
+  description: "BrandStory - Your Partner in Digital Success",
+};

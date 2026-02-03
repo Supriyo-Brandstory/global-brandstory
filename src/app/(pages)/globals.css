@@ -90,7 +90,7 @@ body {
 }
 
 .headerLogo {
-  width: 50%;
+  width: 80%;
 }
 
 .logo span {
@@ -106,13 +106,15 @@ body {
    Contact Button
    =========== */
 .contactButton {
+  min-width: 180px;
   background: #E75921;
   color: var(--color-foreground);
   font-family: var(--font-family-regular);
   font-size: var(--font-size-base);
-  padding: 14px 30px;
+  margin-left: 20px;
+  padding: 8px 30px;
   border: none;
-  border-radius: 18px;
+  border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -512,6 +514,838 @@ body {
     margin-left: 10px;
   }
 }
+
+/* new menu */
+.topMenu {
+  background: #1f1f1f;
+  border-radius: 14px;
+  padding: 15px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3000;
+}
+
+.menuList {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuItem {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.menuItem:hover,
+.menuItem.active {
+  color: #ff5a2c;
+}
+
+/* arrow */
+.arrow {
+  height: 8px;
+  width: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  margin-left: 10px;
+  transition: transform 0.25s ease;
+}
+
+.menuItem:hover .arrow,
+.menuItem.active .arrow {
+  transform: rotate(-135deg);
+}
+
+/* Hover buffer zone to prevent flicker */
+.megaMenuHoverZone {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 10px;
+  z-index: 2000;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Actual mega menu box */
+.megaMenu {
+  background: #1b1b1b;
+  border-radius: 8px;
+  min-width: 1200px;
+  margin: 0 auto;
+  height: 75vh;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Inner grid */
+.megaMenuInner {
+  display: grid;
+  grid-template-columns: 380px 1fr 1fr;
+  height: 100%;
+}
+
+.megaMenuInner .megaCol:first-child {
+  background: #2E2221;
+}
+
+/* Columns */
+.megaCol {
+  border-right: 1px solid #BCBCBC;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.megaCol:last-child {
+  border-right: none;
+}
+
+.megaCol::-webkit-scrollbar {
+  width: 6px;
+}
+
+.megaCol::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+/* ───────────────────────────────────────────────
+   UNDERLINE ANIMATION - ONLY UNDER THE TEXT
+─────────────────────────────────────────────── */
+
+/* Base styling for all column items */
+.megaCol .colItem {
+  position: relative;
+  display: flex;                  
+  align-items: center;
+  gap: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 13px 28px;            
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.25s ease;
+}
+
+/* For column 2 & 3 (text-only items) */
+.megaCol:nth-child(2) .colItem,
+.megaCol:nth-child(3) .colItem {
+  padding: 11px 28px;              
+  font-size: 15px;
+  display: block;                   
+}
+
+.megaCol .colItem .text {
+  position: relative;
+  display: inline-block;            
+}
+
+.megaCol .colItem .text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;                  
+  width: 0;
+  height: 2px;                    
+  background: #ff5a2c;
+  border-radius: 1px;
+  transition: width 0.5s ease;      
+  transform-origin: left;
+}
+
+/* Grow on hover */
+.megaCol .colItem:hover .text::after {
+  width: 100%;
+}
+
+/* Also show when item is active/selected */
+.megaCol .colItem.active .text::after {
+  width: 100%;
+}
+
+/* Optional: make it slightly more visible / premium feel */
+.megaCol .colItem:hover .text,
+.megaCol .colItem.active .text {
+  color: #ff5a2c;
+}
+
+/* Titles */
+.colTitle {
+  position: sticky;
+  top: 0;
+  font-size: 17px;
+  color: #ff5a2c;
+  font-weight: 600;
+  padding: 28px 28px 18px;
+  z-index: 1;
+  background: inherit;
+  margin: 0;
+}
+
+.megaCol:first-child .colTitle {
+  background: #2E2221;
+}
+
+.megaCol:nth-child(2) .colTitle,
+.megaCol:nth-child(3) .colTitle {
+  background: #1b1b1b;
+}
+
+/* Lists */
+.megaCol ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 20px;
+  flex: 1;
+}
+
+/* COLUMN 1 ITEMS - with icon and arrow */
+.megaCol:first-child .colItem {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 13px 28px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+  transition: all 0.2s ease;
+  position: relative;
+  background: transparent;
+}
+
+.megaCol:first-child .colItem:hover {
+  color: #ff5a2c;
+  /* background: rgba(255, 90, 44, 0.12); */
+  background: #1F1F1F;
+}
+
+.megaCol:first-child .colItem.active {
+  color: #ff5a2c;
+  /* background: rgba(255, 90, 44, 0.12); */
+  background: #1F1F1F;
+}
+
+/* COLUMN 2 & 3 ITEMS - no icon, simpler style */
+.megaCol:nth-child(2) .colItem,
+.megaCol:nth-child(3) .colItem {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 11px 28px;
+  cursor: pointer;
+  font-size: 15px;
+  display: block;
+  margin: 0;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.megaCol:nth-child(2) .colItem:hover,
+.megaCol:nth-child(3) .colItem:hover {
+  color: #ff5a2c;
+  /* background: rgba(255, 255, 255, 0.03); */
+}
+
+.megaCol:nth-child(2) .colItem.active,
+.megaCol:nth-child(3) .colItem.active {
+  color: #ff5a2c;
+  font-weight: 600;
+}
+
+/* Icon styling */
+.colItemIcon {
+  width: 26px;
+  height: 26px;
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+.colItem:hover .colItemIcon,
+.colItem.active .colItemIcon {
+  opacity: 1;
+}
+
+
+
+/* Arrow styling */
+.colItemArrow {
+  width: 16px;
+  height: 16px;
+  display: none;
+  margin-left: auto;
+  flex-shrink: 0;
+  /* filter: brightness(0) saturate(100%) invert(48%) sepia(79%) saturate(2476%) hue-rotate(346deg) brightness(98%) contrast(119%); */
+}
+
+.megaCol:first-child .colItem:hover .colItemIcon{
+  filter: invert(53%) sepia(87%) saturate(3501%) hue-rotate(341deg) brightness(101%) contrast(101%);
+}
+.megaCol:first-child .colItem:hover .colItemArrow {
+  display: inline-block;
+}
+
+.megaCol:first-child .colItem.active .colItemArrow {
+  display: inline-block;
+}
+
+.caseBox {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.caseBox:hover {
+  background: rgba(255, 90, 44, 0.08);
+  border-color: rgba(255, 90, 44, 0.3);
+}
+
+.ctaBtn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #ff5a2c;
+  color: #ffffff;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.ctaBtn:hover {
+  background: #e04a1c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 90, 44, 0.3);
+}
+
+/* ===============================
+   COMPANY MEGA MENU (STRUCTURE)
+================================ */
+.companyMega {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 100%;
+}
+
+/* LEFT GRID */
+.companyWrapper{
+  background: #2E2221;
+}
+
+.companyWrapper h2{
+  font-size: 16px;
+  color: var(--color-nav-hover);
+  padding-left: 30px;
+  padding-top: 20px;
+  font-weight: bolder;
+}
+
+.companyGrid {
+  padding: 28px 28px 10px 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-auto-rows: 90px; */
+  gap: 9px;
+  grid-auto-flow: dense;
+}
+
+/* BASE CARD */
+.companyCard {
+  position: relative;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 90, 44, 0.35);
+  background: #1f1f1f;
+  color: #ffffff;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+
+  transition: all 0.25s ease;
+}
+
+.companyCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: radial-gradient(
+    120% 120% at 90% 95%,
+    rgba(231, 61, 38, 0.45) 0%,
+    rgba(231, 61, 38, 0.30) 25%,
+    rgba(231, 61, 38, 0.15) 45%,
+    rgba(231, 61, 38, 0.05) 60%,
+    transparent 72%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+/* Hover state */
+.companyCard:hover::before {
+  opacity: 1;
+}
+
+/* Border + lift */
+.companyCard:hover {
+  border-color: rgba(255, 90, 44, 0.65);
+  /* transform: translateY(-2px); */
+  /* box-shadow:
+    0 10px 30px rgba(255, 90, 44, 0.15),
+    inset 0 0 0 1px rgba(255, 90, 44, 0.25); */
+}
+
+/* TEXT */
+.companyCard h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.companyCard p {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* ICON */
+.companyCard img {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  width: 48px;
+  height: 48px;
+  opacity: 0.9;
+}
+
+.companyCard:hover h3{
+  color: var(--color-nav-hover);
+}
+
+/* ===============================
+   FIGMA SPANS (IMPORTANT)
+================================ */
+
+/* Tall cards */
+.companyCard.about {
+  grid-row: span 2;
+}
+
+.companyCard.clients {
+  grid-row: span 2;
+}
+
+/* Stacked middle */
+.companyCard.works {
+  grid-column: 2;
+}
+
+.companyCard.partners {
+  grid-column: 2;
+}
+
+/* Bottom row */
+.companyGridLow{
+  padding: 0px 28px;
+  display: flex;
+  gap: 10px;
+}
+
+.companyGridLow a{
+  width: 49%;
+}
+
+/* ===============================
+   RIGHT SIDE – FEATURED PANEL
+   (keeps your existing styles)
+================================ */
+
+.companyFeatured {
+  background: #1b1b1b;
+  overflow: scroll;
+  /* padding: 28px; */
+  height: 100%;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.companyFeatured h4 {
+  font-size: 17px;
+  font-weight: 600;
+  padding: 24px;
+  color: #ffffff;
+}
+
+/* FEATURED CARD */
+.featuredCard {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 16px;
+  margin-left: 24px;
+  margin-right: 24px;
+  transition: all 0.25s ease;
+}
+
+.featuredCard:hover {
+  border-color: rgba(255, 90, 44, 0.4);
+  background: rgba(255, 90, 44, 0.08);
+  transform: translateY(-2px);
+}
+
+.featuredCard span:first-child {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ff5a2c;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(255, 90, 44, 0.15);
+  border-radius: 6px;
+}
+
+.featuredCard p {
+  font-size: 14px;
+  margin: 12px 0 10px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.featuredCard span:last-child {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ff5a2c;
+}
+
+/* CTA */
+.ctaRow {
+  /* padding: 24px; */
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #2E2221;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.ctaRow span {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+.ctaBtn {
+  max-width: 50%;
+  /* padding: 10px 24px; */
+  border-radius: 12px;
+  background: #ff5a2c;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.ctaRow .ctaBtn:hover {
+  background: #e04a1c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 90, 44, 0.3);
+}
+
+
+/* ===============================
+   INDUSTRIES MEGA MENU
+================================ */
+
+.industriesMega {
+  padding: 28px;
+  height: 100%;
+  background: #2E2221;
+  overflow-y: auto;
+}
+
+.industriesTitle {
+  color: #ff5a2c;
+  margin-bottom: 24px;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* Multi-column vertical flow */
+.industriesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px 36px;
+  max-height: 100%;
+  padding-right: 10px;
+}
+
+.industriesGrid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.industriesGrid::-webkit-scrollbar-thumb {
+  background: rgba(255, 90, 44, 0.4);
+  border-radius: 6px;
+}
+
+.industriesGrid::-webkit-scrollbar-thumb:hover {
+  background: #ff5a2c;
+}
+
+/* Item */
+.industryItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 12px 14px;
+  border-radius: 8px;
+
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.industryItem:hover {
+  background: #1f1f1f;
+  color: #ff5a2c;
+}
+
+
+/* Icon placeholder */
+.industryIcon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+/* Update the industry icon hover state */
+.industryItem:hover .industryIcon {
+  /* This is the same filter you used above for the first-child menu items */
+  filter: invert(53%) sepia(87%) saturate(3501%) hue-rotate(341deg) brightness(101%) contrast(101%);
+  opacity: 1; /* Ensures the icon is fully visible on hover */
+}
+
+/* Optional: Add a transition for a smoother color shift */
+.industryIcon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  flex-shrink: 0;
+  transition: opacity 0.25s ease; /* Smooth transition */
+}
+
+.industryName {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* underline */
+.industryName::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 2px;
+  background: #ff5a2c;
+  border-radius: 2px;
+
+  transition: width 0.45s ease;
+  transform-origin: left;
+}
+
+.industryItem:hover .industryName::after {
+  width: 100%;
+}
+
+
+
+/* ===============================
+   MOBILE NAV (OLD)
+=============================== */
+
+.mobileNavOld {
+  position: fixed;
+  /* top: 10%; */
+  inset: 0;
+  background: #2E2221;
+  z-index: 9999;
+  overflow-y: auto;
+  padding: 20px;
+  margin-top: 100px;
+}
+
+/* Container */
+.mobileMenuContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Top menu item */
+.mobileMenuItem {
+  /* border-bottom: 1px solid rgba(255,255,255,0.12); */
+  padding-bottom: 12px;
+}
+
+/* Header row */
+.mobileMenuHeader,
+.mobileSectionHeader,
+.mobileSubItemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+}
+
+
+.mobileMenuHeader{
+  font-size: 20px;
+}
+
+/* Titles */
+.mobileMenuTitle {
+  font-weight: 600;
+}
+
+/* Toggle button */
+.mobileMenuToggle {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Rotate arrow */
+.mobileMenuToggle .rotate {
+  transform: rotate(90deg);
+}
+
+/* Content */
+.mobileMenuContent {
+  margin-top: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-left: 1px solid #E73D26;
+}
+
+/* Sections */
+.mobileSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Sub-items */
+.mobileSubItems {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #E73D26;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Level 3 */
+.mobileSubChildren {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #E73D26;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Links */
+.mobileLink {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.mobileLink:hover {
+  color: #ff5c39;
+}
+
+.mobileLink.sub {
+  padding-top: 10px
+  /* font-size: 14px; */
+  /* opacity: 0.85; */
+}
+
+/* Active top-level menu */
+.mobileMenuItem:has(.mobileMenuToggle .rotate) 
+.mobileMenuTitle {
+  color: var(--color-nav-hover);
+}
+
+
+.mobileSection:has(.mobileMenuToggle .rotate)
+> .mobileSectionHeader a {
+  color: var(--color-nav-hover);
+}
+
+/* Active child header */
+.mobileSubItem:has(.mobileMenuToggle .rotate)
+> .mobileSubItemHeader a {
+  color: var(--color-nav-hover);
+}
+
+
+.mobileMenuToggle .rotate {
+  color: var(--color-nav-hover);
+}
+
+
+/* new menu end */
 
 /* Show on tablet and up (from 769px) */
 @media (min-width: 769px) {
