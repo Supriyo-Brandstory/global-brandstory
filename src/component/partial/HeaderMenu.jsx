@@ -135,7 +135,7 @@ if (isMobile) {
 
                     <a href="/our-clients" className="companyCard clients">
                       <h3>Our Clients</h3>
-                      <p>Strategic alliances that strengthen our ecosystem.</p>
+                      <p>Strategic alliances that strengthen our ecosystem and help us deliver smarter, scalable solutions.</p>
                       <img src="/images/HeaderIcons/company/4.svg" alt="" />
                     </a>
                   </div>
