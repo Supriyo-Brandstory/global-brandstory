@@ -129,7 +129,7 @@ if (isMobile) {
 
                     <a href="" className="companyCard partners">
                       <h3>Partners</h3>
-                      <p>Strong alliances that power better solutions.</p>
+                      <p>Strong alliances that <br /> power better solutions.</p>
                       <img src="/images/HeaderIcons/company/3.svg" alt="" />
                     </a>
 
