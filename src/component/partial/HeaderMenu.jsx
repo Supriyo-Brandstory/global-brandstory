@@ -115,19 +115,19 @@ if (isMobile) {
                   <h2><b>Company</b></h2>
 
                   <div className="companyGrid">
-                    <a href="/about" className="companyCard about">
+                    <a href="/about-us" className="companyCard about">
                       <h3>About Us</h3>
                       <p>Who we are, what we believe in, and how we create meaningful digital impact for brands worldwide.</p>
                       <img src="/images/HeaderIcons/company/1.svg" alt="" />
                     </a>
 
-                    <a href="/our-works" className="companyCard works">
+                    <a href="/our-work" className="companyCard works">
                       <h3>Our Works</h3>
                       <p>Real products. Real results.<br/> Crafted for growth.</p>
                       <img src="/images/HeaderIcons/company/2.svg" alt="" />
                     </a>
 
-                    <a href="/partners" className="companyCard partners">
+                    <a href="" className="companyCard partners">
                       <h3>Partners</h3>
                       <p>Strong alliances that power better solutions.</p>
                       <img src="/images/HeaderIcons/company/3.svg" alt="" />
