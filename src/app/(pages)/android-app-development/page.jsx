@@ -11,6 +11,9 @@ import {HowOurAndroid} from '@/component/pages/AndroidAppDevelopment/HowOurAndro
 import {ClientStories} from '@/component/pages/AndroidAppDevelopment/ClientStories'
 import {Faq} from '@/component/pages/AndroidAppDevelopment/Faq'
 import {Adv} from '@/component/pages/AndroidAppDevelopment/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("android-app-development");
 
 const page = () =>{
     return(

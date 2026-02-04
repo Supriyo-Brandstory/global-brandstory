@@ -11,6 +11,9 @@ import { Standout } from '@/component/pages/FullStack/Standout'
 import { FullStackFaq } from '@/component/pages/FullStack/FullStackFaq'
 import { FullStackArrow } from '@/component/pages/FullStack/FullStackArrow'
 import { FullStackAdv } from '@/component/pages/FullStack/FullStackAdv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("full-stack-development");
 
 const page = () =>{
     return(

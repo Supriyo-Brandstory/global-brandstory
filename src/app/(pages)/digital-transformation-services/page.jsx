@@ -11,6 +11,9 @@ import {Technology} from '@/component/pages/DTS/Technology'
 import {ClientsAchivement} from '@/component/pages/DTS/ClientsAchivement'
 import {Faq} from '@/component/pages/DTS/Faq'
 import {Adv} from '@/component/pages/DTS/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("digital-transformation-services");
 
 const page = () =>{
     return(

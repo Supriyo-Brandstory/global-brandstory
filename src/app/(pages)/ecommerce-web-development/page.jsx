@@ -10,6 +10,9 @@ import {HelpingBrands} from '@/component/pages/EcomWebDev/HelpingBrands'
 import {ClientStories} from '@/component/pages/EcomWebDev/ClientStories'
 import {Faqs} from '@/component/pages/EcomWebDev/Faqs'
 import {Adv} from '@/component/pages/EcomWebDev/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("ecommerce-web-development");
 
 const page = () =>{
     return(

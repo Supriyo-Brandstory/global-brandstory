@@ -10,6 +10,9 @@ import { LeadingBrands } from "@/component/pages/B2BMarketing/LeadingBrands";
 import { B2BFaq } from "@/component/pages/B2BMarketing/B2BFaq";
 import { B2BArrow } from "@/component/pages/B2BMarketing/B2BArrow";
 import { B2BFooter } from "@/component/pages/B2BMarketing/B2BFooter";
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("b2b-marketing");
 
 const page =()=>{
     return (

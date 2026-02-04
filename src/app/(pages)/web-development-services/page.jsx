@@ -9,6 +9,9 @@ import { Difference } from '@/component/pages/WebDev/Difference'
 import { WebFaq } from '@/component/pages/WebDev/WebFaq'
 import { WebArrow } from '@/component/pages/WebDev/WebArrow'
 import { WebFooter } from '@/component/pages/WebDev/WebFooter'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("web-development-services");
 
 const page =()=>{
     return (

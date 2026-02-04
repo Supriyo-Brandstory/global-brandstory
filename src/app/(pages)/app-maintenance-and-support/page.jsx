@@ -9,6 +9,9 @@ import {WhyBs} from '@/component/pages/AppMaintenanceAndSupport/WhyBs'
 import {TheProcess} from '@/component/pages/AppMaintenanceAndSupport/TheProcess'
 import {Faqs} from '@/component/pages/AppMaintenanceAndSupport/Faqs'
 import {Adv} from '@/component/pages/AppMaintenanceAndSupport/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("app-maintenance-and-support");
 
 const page = () =>{
     return(

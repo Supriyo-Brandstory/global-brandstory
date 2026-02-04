@@ -11,6 +11,9 @@ import {CustomWordpress} from '@/component/pages/WordpressWebDevelopment/CustomW
 import {Client} from '@/component/pages/WordpressWebDevelopment/Client'
 import {Faqs} from '@/component/pages/WordpressWebDevelopment/Faqs'
 import {Adv} from '@/component/pages/WordpressWebDevelopment/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("wordpress-web-development");
 
 const page = () =>{
     return(

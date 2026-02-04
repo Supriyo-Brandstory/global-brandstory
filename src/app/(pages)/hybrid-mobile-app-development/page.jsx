@@ -11,6 +11,9 @@ import {HybridMobile} from '@/component/pages/HybridMobileAppDevelopment/HybridM
 import {ClientStories} from '@/component/pages/HybridMobileAppDevelopment/ClientStories'
 import {Faqs} from '@/component/pages/HybridMobileAppDevelopment/Faqs'
 import {Adv} from '@/component/pages/HybridMobileAppDevelopment/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("hybrid-mobile-app-development");
 
 const page = () =>{
     return(

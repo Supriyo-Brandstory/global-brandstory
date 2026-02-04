@@ -10,6 +10,9 @@ import {DeliverResults} from '@/component/pages/FacebookMarketing/DeliverResults
 import {ProvenResults} from '@/component/pages/FacebookMarketing/ProvenResults'
 import {Faq} from '@/component/pages/FacebookMarketing/Faq'
 import {Adv} from '@/component/pages/FacebookMarketing/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("facebook-marketing");
 
 const page = () =>{
     return(

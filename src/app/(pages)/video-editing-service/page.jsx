@@ -11,6 +11,9 @@ import {DeliveringVideo} from '@/component/pages/VideoEditingServices/Delivering
 import {Client} from '@/component/pages/VideoEditingServices/Client'
 import {Faq} from '@/component/pages/VideoEditingServices/Faq'
 import {Adv} from '@/component/pages/VideoEditingServices/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("video-editing-service");
 
 const page = () =>{
     return(

@@ -10,6 +10,9 @@ import { SuccessStories } from '@/component/pages/Aeo/SuccessStories'
 import { WhyBrandsChoose } from '@/component/pages/Aeo/WhyBrandsChoose'
 import { Faq } from '@/component/pages/Aeo/Faq'
 import { Adv } from '@/component/pages/Aeo/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("aeo-optimization");
 
 const page = () => {
   return (

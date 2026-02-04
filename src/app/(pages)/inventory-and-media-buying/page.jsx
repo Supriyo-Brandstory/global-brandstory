@@ -12,6 +12,9 @@ import {WhyBs} from '@/component/pages/InventoryAndMediaByuing/WhyBs'
 import {ClientCaseStudies} from '@/component/pages/InventoryAndMediaByuing/ClientCaseStudies'
 import {Faq} from '@/component/pages/InventoryAndMediaByuing/Faq'
 import {Adv} from '@/component/pages/InventoryAndMediaByuing/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("inventory-and-media-buying");
 
 const page = () =>{
     return(

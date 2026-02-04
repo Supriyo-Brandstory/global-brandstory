@@ -10,6 +10,9 @@ import {LinkedinAd} from '@/component/pages/LinkedinAdvertisement/LinkedinAd'
 import {YourStrategies} from '@/component/pages/LinkedinAdvertisement/YourStrategies'
 import {Adv} from '@/component/pages/LinkedinAdvertisement/Adv'
 import {Faq} from '@/component/pages/LinkedinAdvertisement/Faq'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("linkedin-advertisement");
 
 const page = () =>{
     return(

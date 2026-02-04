@@ -10,6 +10,9 @@ import {WhoWeEmpower} from '@/component/pages/SoftwareMaintenanceAndSupport/WhoW
 import {ClientStories} from '@/component/pages/SoftwareMaintenanceAndSupport/ClientStories'
 import {Faq} from '@/component/pages/SoftwareMaintenanceAndSupport/Faq'
 import {Adv} from '@/component/pages/SoftwareMaintenanceAndSupport/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("software-maintenance-and-support");
 
 const page = () =>{
     return(

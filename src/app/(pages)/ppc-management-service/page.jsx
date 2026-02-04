@@ -14,6 +14,9 @@ import { PPCServices } from "@/component/pages/PPC/PPCServices";
 import { PPCFooter } from "@/component/pages/PPC/PPCFooter";
 import { PPCPerformance } from "@/component/pages/PPC/PPCPerformance";
 import CommonDivider from "@/component/pages/common/CommonDivider";
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("ppc-management-service");
 
 const page = () => {
   return (

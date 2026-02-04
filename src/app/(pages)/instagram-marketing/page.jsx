@@ -6,6 +6,9 @@ import {InstagramCampaigns} from '@/component/pages/InstagramMarketing/Instagram
 import {Industries} from '@/component/pages/InstagramMarketing/Industries'
 import {Adv} from '@/component/pages/InstagramMarketing/Adv'
 import {FAQ} from '@/component/pages/InstagramMarketing/FAQ'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("instagram-marketing");
 
 const page = () =>{
     return(

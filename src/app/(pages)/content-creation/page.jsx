@@ -11,6 +11,9 @@ import {Portfolio} from '@/component/pages/ContentCreation/Portfolio'
 import {ContentCreation} from '@/component/pages/ContentCreation/ContentCreation'
 import {Faqs} from '@/component/pages/ContentCreation/Faqs'
 import {Adv} from '@/component/pages/ContentCreation/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("content-creation");
 
 const page = () =>{
     return(

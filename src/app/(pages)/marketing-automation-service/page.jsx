@@ -13,6 +13,9 @@ import { MarketingAutomationFAQ } from "@/component/pages/marketingAutomation/Ma
 import { MarketingAutomationArrowGrid } from "@/component/pages/marketingAutomation/MarketingAutomationArrowGrid";
 import { MarketingAutomationFooter } from "@/component/pages/marketingAutomation/MarketingAutomationFooter";
 import CommonDivider from "@/component/pages/common/CommonDivider";
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("marketing-automation-service");
 
 const page = () => {
   return (

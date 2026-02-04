@@ -9,6 +9,9 @@ import {IndustriesBenefeting} from '@/component/pages/EnterpriseSoftwareDevelopm
 import {ClientStories} from '@/component/pages/EnterpriseSoftwareDevelopment/ClientStories'
 import {Faqs} from '@/component/pages/EnterpriseSoftwareDevelopment/Faqs'
 import {Adv} from '@/component/pages/EnterpriseSoftwareDevelopment/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("enterprise-software-development");
 
 const page = () =>{
     return(

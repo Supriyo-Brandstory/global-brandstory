@@ -10,6 +10,9 @@ import {B2bSocialMedia} from '@/component/pages/SocialMediaManagement/B2bSocialM
 import {IndustriesWeHave} from '@/component/pages/SocialMediaManagement/IndustriesWeHave'
 import {Adv} from '@/component/pages/SocialMediaManagement/Adv'
 import {Faq} from '@/component/pages/SocialMediaManagement/Faq'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("social-media-management");
 
 const page = () =>{
     return(

@@ -12,6 +12,9 @@ import {WhyBrandsChoose} from '@/component/pages/MarketplaceAdvertisement/WhyBra
 import {FlexibleReddit} from '@/component/pages/MarketplaceAdvertisement/FlexibleReddit'
 import {Faqs} from '@/component/pages/MarketplaceAdvertisement/Faqs'
 import {Adv} from '@/component/pages/MarketplaceAdvertisement/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("marketplace-advertisement");
 
 const page = () =>{
     return(

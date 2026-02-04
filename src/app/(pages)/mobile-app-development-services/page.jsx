@@ -11,6 +11,9 @@ import { ExpertPartners } from "@/component/pages/MobDev/ExpertPartners";
 import { MobFaq } from "@/component/pages/MobDev/MobFaq";
 import { MobArrow } from "@/component/pages/MobDev/MobArrow";
 import { MobFooter } from "@/component/pages/MobDev/MobFooter";
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("mobile-app-development-services");
 
 const page = () => {
   return (

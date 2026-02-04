@@ -11,6 +11,9 @@ import { ClientStories } from "@/component/pages/IosAppDevelopment/ClientStories
 import { Faqs } from "@/component/pages/IosAppDevelopment/Faqs";
 import { Adv } from "@/component/pages/IosAppDevelopment/Adv";
 import CommonAccordion2 from "@/component/pages/common/CommonAccordion2";
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("ios-app-development");
 
 const page = () => {
   return (

@@ -11,6 +11,9 @@ import { WhyChooseB2C } from "@/component/pages/B2CMarketing/WhyChooseB2C";
 import { B2CFaq } from "@/component/pages/B2CMarketing/B2CFaq";
 import { B2CArrowGrid } from "@/component/pages/B2CMarketing/B2CArrowGrid";
 import { B2CAdvertise } from "@/component/pages/B2CMarketing/B2CAdvertise";
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("b-to-c-marketing");
 
 const page =()=>{
     return(

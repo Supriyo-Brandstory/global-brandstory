@@ -10,6 +10,9 @@ import {OurExpertise} from '@/component/pages/CustomSoftwareDevelopment/OurExper
 import {ClientStories} from '@/component/pages/CustomSoftwareDevelopment/ClientStories'
 import {Faq} from '@/component/pages/CustomSoftwareDevelopment/Faq'
 import {Adv} from '@/component/pages/CustomSoftwareDevelopment/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("custom-software-development");
 
 const page = () =>{
     return(

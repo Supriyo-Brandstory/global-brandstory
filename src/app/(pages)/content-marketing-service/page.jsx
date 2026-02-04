@@ -15,6 +15,9 @@ import { ContentMarketingFooter } from "@/component/pages/contenetMarketingServi
 import { ContentMarketingArrowGrid } from "@/component/pages/contenetMarketingService/ContentMarketingArrowGrid";
 import { ContentMarketingAdvFooter } from "@/component/pages/contenetMarketingService/ContentMarketingAdvFooter";
 import { HowWeMakeContent } from "@/component/pages/contenetMarketingService/HowWeMakeContent";
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("content-marketing-service");
 
 const page = () => {
   return (

@@ -9,6 +9,9 @@ import {IndustriesWeServe} from '@/component/pages/TiktokMarketing/IndustriesWeS
 import {HowMuch} from '@/component/pages/TiktokMarketing/HowMuch'
 import {Faq} from '@/component/pages/TiktokMarketing/Faq'
 import {Adv} from '@/component/pages/TiktokMarketing/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("tiktok-marketing");
 
 const page = () =>{
     return(

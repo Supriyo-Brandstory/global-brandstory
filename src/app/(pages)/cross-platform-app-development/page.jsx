@@ -11,6 +11,9 @@ import {ServingBusiness} from '@/component/pages/CrossPlatformAppDevelopment/Ser
 import {ClientStories} from '@/component/pages/CrossPlatformAppDevelopment/ClientStories'
 import {Faqs} from '@/component/pages/CrossPlatformAppDevelopment/Faqs'
 import {Adv} from '@/component/pages/CrossPlatformAppDevelopment/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("cross-platform-app-development");
 
 const page = () =>{
     return(

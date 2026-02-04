@@ -11,6 +11,9 @@ import {ServingDiverse} from '@/component/pages/WebMaintenenceSupport/ServingDiv
 import {ClientStories} from '@/component/pages/WebMaintenenceSupport/ClientStories'
 import {Faqs} from '@/component/pages/WebMaintenenceSupport/Faqs'
 import {Adv} from '@/component/pages/WebMaintenenceSupport/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("web-maintenance-support");
 
 const page = () =>{
     return(

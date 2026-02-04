@@ -10,6 +10,9 @@ import {BusinessBenefiting} from '@/component/pages/DatabaseDevelopmentServices/
 import {ClientStories} from '@/component/pages/DatabaseDevelopmentServices/ClientStories'
 import {Faqs} from '@/component/pages/DatabaseDevelopmentServices/Faqs'
 import {Adv} from '@/component/pages/DatabaseDevelopmentServices/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("database-development-services");
 
 const page = () =>{
     return(

@@ -9,6 +9,9 @@ import { LlmSeo } from '@/component/pages/SeoForLlm/LlmSeo'
 import { BrandstorysAi } from '@/component/pages/SeoForLlm/BrandstorysAi'
 import { Faq } from '@/component/pages/SeoForLlm/Faq'
 import { Adv } from '@/component/pages/SeoForLlm/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("seo-for-llm");
 
 const page = () => {
   return (

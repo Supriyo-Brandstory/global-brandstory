@@ -10,6 +10,9 @@ import {SupportingBusiness} from '@/component/pages/WebDesignServices/Supporting
 import {ClientStories} from '@/component/pages/WebDesignServices/ClientStories'
 import {Faqs} from '@/component/pages/WebDesignServices/Faqs'
 import {Adv} from '@/component/pages/WebDesignServices/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("web-design-services");
 
 const page = () =>{
     return(

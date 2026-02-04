@@ -7,6 +7,9 @@ import { WhyChooseBS } from '@/component/pages/LinkedinMarketing/WhyChooseBS'
 import { CaseStudies } from '@/component/pages/LinkedinMarketing/CaseStudies'
 import { Faq } from '@/component/pages/LinkedinMarketing/Faq'
 import { Adv } from '@/component/pages/LinkedinMarketing/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("linkedin-marketing");
 
 const page = () => {
   return (

@@ -9,6 +9,9 @@ import { ClientSuccess } from "@/component/pages/Consulting/ClientSuccess";
 import { Faq } from "@/component/pages/Consulting/Faq";
 import { Adv } from "@/component/pages/Consulting/Adv";
 import CommonArrowGrid from "@/component/pages/common/CommonArrowGrid";
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("consulting");
 
 const page = () => {
   return (

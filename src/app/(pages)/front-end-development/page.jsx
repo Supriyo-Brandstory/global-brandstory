@@ -11,6 +11,9 @@ import {Industries} from '@/component/pages/FrontEndDevelopment/Industries'
 import {ClientSuccess} from '@/component/pages/FrontEndDevelopment/ClientSuccess'
 import {Faqs} from '@/component/pages/FrontEndDevelopment/Faqs'
 import {Adv} from '@/component/pages/FrontEndDevelopment/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("front-end-development");
 
 const page = () =>{
     return(

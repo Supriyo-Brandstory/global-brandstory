@@ -8,6 +8,9 @@ import {SamplePackages} from '@/component/pages/InternationalSeo/SamplePackages'
 import {Clients} from '@/component/pages/InternationalSeo/Clients'
 import {Faq} from '@/component/pages/InternationalSeo/Faq'
 import {Adv} from '@/component/pages/InternationalSeo/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("international-seo");
 
 const page = () =>{
     return(

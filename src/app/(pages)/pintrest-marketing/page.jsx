@@ -10,6 +10,9 @@ import { PintrestAnalytics } from '@/component/pages/PintrestMarketing/PintrestA
 import { WhyChooseBs } from '@/component/pages/PintrestMarketing/WhyChooseBs'
 import { Faq } from '@/component/pages/PintrestMarketing/Faq'
 import { Adv } from '@/component/pages/PintrestMarketing/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("pintrest-marketing");
 
 const page = () => {
   return (

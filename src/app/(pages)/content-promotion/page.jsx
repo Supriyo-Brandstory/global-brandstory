@@ -10,6 +10,9 @@ import {TailoredStrategies} from '@/component/pages/ContentPromotion/TailoredStr
 import {WhyChoose} from '@/component/pages/ContentPromotion/WhyChoose'
 import {Faq} from '@/component/pages/ContentPromotion/Faq'
 import {Adv} from '@/component/pages/ContentPromotion/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("content-promotion");
 
 const page = () =>{
     return(

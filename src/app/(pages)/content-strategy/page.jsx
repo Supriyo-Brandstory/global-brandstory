@@ -10,6 +10,9 @@ import {MeetOurExperts} from '@/component/pages/ContentStrategy/MeetOurExperts'
 import {HowBs} from '@/component/pages/ContentStrategy/HowBs'
 import {Faq} from '@/component/pages/ContentStrategy/Faq'
 import {Adv} from '@/component/pages/ContentStrategy/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("content-strategy");
 
 const page = () =>{
     return(

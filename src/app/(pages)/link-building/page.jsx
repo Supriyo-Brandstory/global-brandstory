@@ -9,6 +9,9 @@ import {IndustriesWeHelp} from '@/component/pages/LinkBuilding/IndustriesWeHelp'
 import {CertifiedExperts} from '@/component/pages/LinkBuilding/CertifiedExperts'
 import {LbFaq} from '@/component/pages/LinkBuilding/LbFaq'
 import {LbAdv} from '@/component/pages/LinkBuilding/LbAdv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("link-building");
 
 const page = () =>{
     return(

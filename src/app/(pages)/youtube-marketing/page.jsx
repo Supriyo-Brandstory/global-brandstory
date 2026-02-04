@@ -10,6 +10,9 @@ import {AdvancedAnalytics} from '@/component/pages/YoutubeMarketing/AdvancedAnal
 import {YoutubeCampaign} from '@/component/pages/YoutubeMarketing/YoutubeCampaign'
 import {Faq} from '@/component/pages/YoutubeMarketing/Faq'
 import {Adv} from '@/component/pages/YoutubeMarketing/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("youtube-marketing");
 
 const page = () =>{
     return(

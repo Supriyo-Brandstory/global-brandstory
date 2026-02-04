@@ -11,6 +11,9 @@ import {Delivering} from '@/component/pages/BackEndDevelopment/Delivering'
 import {ClientStories} from '@/component/pages/BackEndDevelopment/ClientStories'
 import {Faqs} from '@/component/pages/BackEndDevelopment/Faqs'
 import {Adv} from '@/component/pages/BackEndDevelopment/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("back-end-development");
 
 const page = () =>{
     return(

@@ -14,6 +14,9 @@ import {TiktokAdvertising} from '@/component/pages/TiktokAdvertisement/TiktokAdv
 import {ClientTestimonials} from '@/component/pages/TiktokAdvertisement/ClientTestimonials'
 import {Adv} from '@/component/pages/TiktokAdvertisement/Adv'
 import {Faq} from '@/component/pages/TiktokAdvertisement/Faq'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("tiktok-advertisement");
 
 const page = () =>{
     return(

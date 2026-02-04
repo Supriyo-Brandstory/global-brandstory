@@ -10,6 +10,9 @@ import { WhyChooseUs } from "@/component/pages/VideoProduction/WhyChooseUs"
 import { WhatClientSay } from "@/component/pages/VideoProduction/WhatClientSay"
 import { Faq } from "@/component/pages/VideoProduction/Faq"
 import { Adv } from "@/component/pages/VideoProduction/Adv"
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("video-production");
 
 const page = ()=>{
     return(

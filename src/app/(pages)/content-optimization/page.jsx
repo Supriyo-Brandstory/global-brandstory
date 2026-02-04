@@ -9,6 +9,9 @@ import {TheValue} from '@/component/pages/ContentOptimization/TheValue'
 import {OptimizedContent} from '@/component/pages/ContentOptimization/OptimizedContent'
 import {Faq} from '@/component/pages/ContentOptimization/Faq'
 import {Adv} from '@/component/pages/ContentOptimization/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("content-optimization");
 
 const page = () =>{
     return(

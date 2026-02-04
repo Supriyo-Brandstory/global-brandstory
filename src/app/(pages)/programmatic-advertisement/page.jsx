@@ -10,6 +10,9 @@ import {IndustriesWeServe} from '@/component/pages/ProgrammaticAdvertisement/Ind
 import {OurProgrametic} from '@/component/pages/ProgrammaticAdvertisement/OurProgrametic'
 import {WhyChooseBs} from '@/component/pages/ProgrammaticAdvertisement/WhyChooseBs'
 import {Faq} from '@/component/pages/ProgrammaticAdvertisement/Faq'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("programmatic-advertisement");
 
 const page = () =>{
     return(

@@ -9,6 +9,9 @@ import {CustomContent} from '@/component/pages/ContentDevelopment/CustomContent'
 import {MeetOur} from '@/component/pages/ContentDevelopment/MeetOur'
 import {Faq} from '@/component/pages/ContentDevelopment/Faq'
 import {Adv} from '@/component/pages/ContentDevelopment/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("content-development");
 
 const page = () =>{
     return(

@@ -10,6 +10,9 @@ import {IndustriesWeServe} from '@/component/pages/AppStoreOptimization/Industri
 import {ClientStories} from '@/component/pages/AppStoreOptimization/ClientStories'
 import {Faq} from '@/component/pages/AppStoreOptimization/Faq'
 import {Adv} from '@/component/pages/AppStoreOptimization/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("app-store-optimization");
 
 const page = () =>{
     return(

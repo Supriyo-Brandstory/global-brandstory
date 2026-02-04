@@ -10,6 +10,9 @@ import { WhatMakesUs } from "@/component/pages/CyberSecurity/WhatMakesUs"
 import { CaseStudies } from "@/component/pages/CyberSecurity/CaseStudies"
 import { Faq } from "@/component/pages/CyberSecurity/Faq"
 import { Adv } from "@/component/pages/CyberSecurity/Adv"
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("cybersecurity-services");
 
 const page = ()=>{
     return(

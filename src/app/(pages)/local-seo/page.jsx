@@ -11,6 +11,9 @@ import {Testimonials} from '@/component/pages/LocalSeo/Testimonials'
 import {Pricing} from '@/component/pages/LocalSeo/Pricing'
 import {Adv} from '@/component/pages/LocalSeo/Adv'
 import {Faq} from '@/component/pages/LocalSeo/Faq'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("local-seo");
 
 const page = () =>{
     return(

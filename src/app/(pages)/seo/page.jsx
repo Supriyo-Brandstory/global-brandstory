@@ -14,6 +14,9 @@ import CommonDivider from "@/component/pages/common/CommonDivider";
 import { SeoFooter } from "@/component/pages/seoComponent/SeoFooter";
 import { PathToProfit } from "@/component/pages/seoComponent/PathToProfit";
 import { SeoMeet } from "@/component/pages/seoComponent/SeoMeet";
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("seo");
 
 const page = () => {
   return (

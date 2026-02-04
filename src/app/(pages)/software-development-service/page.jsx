@@ -12,6 +12,9 @@ import { BehindTech } from '@/component/pages/SoftwareDev/BehindTech'
 import { SDFaq } from '@/component/pages/SoftwareDev/SDFaq'
 import { SDArrow } from '@/component/pages/SoftwareDev/SDArrow'
 import { SDAdv } from '@/component/pages/SoftwareDev/SDAdv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("software-development-service");
 
 const page = () => {
   return (

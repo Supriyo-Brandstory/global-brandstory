@@ -11,6 +11,9 @@ import {IntegrateApi} from '@/component/pages/ApiDev/IntegrateApi'
 import {ApiFaq} from '@/component/pages/ApiDev/ApiFaq'
 import {ApiArrwow} from '@/component/pages/ApiDev/ApiArrwow'
 import {ApiAd} from '@/component/pages/ApiDev/ApiAd'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("api-development");
 
 const page =()=>{
     return (

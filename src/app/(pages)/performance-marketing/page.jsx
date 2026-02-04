@@ -10,6 +10,9 @@ import {WhyChooseBs} from '@/component/pages/PerformanceMarketing/WhyChooseBs'
 import {SuccessStories} from '@/component/pages/PerformanceMarketing/SuccessStories'
 import {Adv} from '@/component/pages/PerformanceMarketing/Adv'
 import {Faqs} from '@/component/pages/PerformanceMarketing/Faqs'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("performance-marketing");
 
 const page = () =>{
     return(

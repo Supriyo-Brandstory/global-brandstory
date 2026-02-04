@@ -11,6 +11,9 @@ import {Industries} from '@/component/pages/MarketingVideoService/Industries'
 import {ClientStories} from '@/component/pages/MarketingVideoService/ClientStories'
 import {Faqs} from '@/component/pages/MarketingVideoService/Faqs'
 import {Adv} from '@/component/pages/MarketingVideoService/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("marketing-video-service");
 
 const page = () =>{
     return(

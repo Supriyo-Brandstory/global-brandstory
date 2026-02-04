@@ -8,6 +8,9 @@ import {WhyChooseOur} from '@/component/pages/ContentReporting/WhyChooseOur'
 import {ExampleOf} from '@/component/pages/ContentReporting/ExampleOf'
 import {Faq} from '@/component/pages/ContentReporting/Faq'
 import {Adv} from '@/component/pages/ContentReporting/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("content-reporting");
 
 const page = () =>{
     return(

@@ -10,6 +10,9 @@ import { OurExpertise } from "@/component/pages/SoftwareArchitectureAndWireframe
 import { ClientStories } from "@/component/pages/SoftwareArchitectureAndWireframe/ClientStories";
 import { Faq } from "@/component/pages/SoftwareArchitectureAndWireframe/Faq";
 import { Adv } from "@/component/pages/SoftwareArchitectureAndWireframe/Adv";
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("software-architecture-and-wireframe");
 
 const page = () => {
   return (

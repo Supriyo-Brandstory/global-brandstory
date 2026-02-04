@@ -11,6 +11,9 @@ import {Industries} from '@/component/pages/WebsiteRevamp/Industries'
 import {ClientStories} from '@/component/pages/WebsiteRevamp/ClientStories'
 import {Faqs} from '@/component/pages/WebsiteRevamp/Faqs'
 import {Adv} from '@/component/pages/WebsiteRevamp/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("website-revamp");
 
 const page = () =>{
     return(

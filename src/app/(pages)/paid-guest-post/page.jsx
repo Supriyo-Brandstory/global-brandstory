@@ -7,6 +7,9 @@ import { GetPostingService } from "@/component/pages/PaidGuestPost/GetPostingSer
 import { Clients } from "@/component/pages/PaidGuestPost/Clients";
 import { Adv } from "@/component/pages/PaidGuestPost/Adv";
 import CommonFAQ from "@/component/pages/common/CommonFAQ";
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("paid-guest-post");
 
 const page = () => {
   const data = [

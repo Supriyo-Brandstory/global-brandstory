@@ -8,6 +8,9 @@ import { ClientGrowth } from "@/component/pages/EnterpriseSeo/ClientGrowth";
 import { LeadingBrands } from "@/component/pages/EnterpriseSeo/LeadingBrands";
 import { ESFaq } from "@/component/pages/EnterpriseSeo/ESFaq";
 import { EsAdv } from "@/component/pages/EnterpriseSeo/EsAdv";
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("enterprise-seo");
 
 const page = () => {
   return (

@@ -10,6 +10,9 @@ import {WhyChooseBs} from '@/component/pages/GoogleAdsManagement/WhyChooseBs'
 import {ClientSuccessStories} from '@/component/pages/GoogleAdsManagement/ClientSuccessStories'
 import {Adv} from '@/component/pages/GoogleAdsManagement/Adv'
 import {Faq} from '@/component/pages/GoogleAdsManagement/Faq'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("google-ads-management");
 
 const page = () =>{
     return(

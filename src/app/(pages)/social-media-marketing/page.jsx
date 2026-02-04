@@ -1,4 +1,3 @@
-"use client";
 import { SMMBanner } from "@/component/pages/socialMediaMarketing/SMMBanner";
 import { SMMAbout } from "@/component/pages/socialMediaMarketing/SMMAbout";
 import { SMMSpectrum } from "@/component/pages/socialMediaMarketing/SMMSpectrum";
@@ -15,6 +14,9 @@ import { SMMFaq } from "@/component/pages/socialMediaMarketing/SMMFaq";
 import { SMMFooter } from "@/component/pages/socialMediaMarketing/SMMFooter";
 import { SMMArrowGrid } from "@/component/pages/socialMediaMarketing/SMMArrowGrid";
 import CommonDivider from "@/component/pages/common/CommonDivider";
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("social-media-marketing");
 
 const page = () => {
   return (

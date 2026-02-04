@@ -16,6 +16,9 @@ import {RealInsights} from '@/component/pages/DataAnalyticsServices/RealInsights
 import {SuccessStories} from '@/component/pages/DataAnalyticsServices/SuccessStories'
 import {Faq} from '@/component/pages/DataAnalyticsServices/Faq'
 import {Adv} from '@/component/pages/DataAnalyticsServices/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("data-analytics-services");
 
 const page = () =>{
     return(

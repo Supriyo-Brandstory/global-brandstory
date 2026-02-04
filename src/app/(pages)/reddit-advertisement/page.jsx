@@ -11,6 +11,9 @@ import {TheIndustries} from '@/component/pages/RedditAdvertisement/TheIndustries
 import {FlexibleReddit} from '@/component/pages/RedditAdvertisement/FlexibleReddit'
 import {RealResults} from '@/component/pages/RedditAdvertisement/RealResults'
 import {Faq} from '@/component/pages/RedditAdvertisement/Faq'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("reddit-advertisement");
 
 const page = () =>{
     return(

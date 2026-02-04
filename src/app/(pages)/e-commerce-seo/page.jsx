@@ -11,6 +11,9 @@ import {EcomCost} from '@/component/pages/EcomSeo/EcomCost'
 import {Technologies} from '@/component/pages/EcomSeo/Technologies'
 import {Faq} from '@/component/pages/EcomSeo/Faq'
 import {Adv} from '@/component/pages/EcomSeo/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("e-commerce-seo");
 
 const page = () =>{
     return(

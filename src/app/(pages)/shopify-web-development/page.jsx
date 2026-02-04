@@ -11,6 +11,9 @@ import { ClientStories } from "@/component/pages/ShopifyWebDevelopment/ClientSto
 import { Faq } from "@/component/pages/ShopifyWebDevelopment/Faq";
 import { Adv } from "@/component/pages/ShopifyWebDevelopment/Adv";
 import CommonAccordion from "@/component/pages/common/CommonAccordion";
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("shopify-web-development");
 
 const page = () => {
   return (

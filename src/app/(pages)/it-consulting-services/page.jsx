@@ -11,6 +11,9 @@ import {WhyUs} from '@/component/pages/ItConsultingServices/WhyUs'
 import {CaseStudies} from '@/component/pages/ItConsultingServices/CaseStudies'
 import {Faq} from '@/component/pages/ItConsultingServices/Faq'
 import {Adv} from '@/component/pages/ItConsultingServices/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("it-consulting-services");
 
 const page = () =>{
     return(

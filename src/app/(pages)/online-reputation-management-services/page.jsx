@@ -14,6 +14,9 @@ import {SelectionOfOrm} from "@/component/pages/ORMS/SelectionOfOrm"
 import {OrmFaq} from "@/component/pages/ORMS/OrmFaq"
 import {OrmArrowGrid} from "@/component/pages/ORMS/OrmArrowGrid"
 import {OrmFooter} from "@/component/pages/ORMS/OrmFooter"
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("online-reputation-management-services");
 
 const page = ()=>{
     return(

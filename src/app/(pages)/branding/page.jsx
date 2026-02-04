@@ -9,6 +9,9 @@ import {ImpactfulBranding} from "@/component/pages/Branding/ImpactfulBranding";
 import {BrandingFaq} from "@/component/pages/Branding/BrandingFaq";
 import {BrandingArrow} from "@/component/pages/Branding/BrandingArrow";
 import {BrandingAdv} from "@/component/pages/Branding/BrandingAdv";
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("branding");
 
 const page =()=>{
     return(

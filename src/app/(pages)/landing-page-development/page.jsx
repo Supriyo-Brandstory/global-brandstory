@@ -11,6 +11,9 @@ import {OurLandingPage} from '@/component/pages/LandingPageDev/OurLandingPage'
 import {ClientStories} from '@/component/pages/LandingPageDev/ClientStories'
 import {Faqs} from '@/component/pages/LandingPageDev/Faqs'
 import {Adv} from '@/component/pages/LandingPageDev/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("landing-page-development");
 
 const page = () =>{
     return(

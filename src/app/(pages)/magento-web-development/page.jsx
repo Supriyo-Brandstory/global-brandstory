@@ -11,6 +11,9 @@ import {MagentoWeb} from '@/component/pages/MagentoWebDevelopment/MagentoWeb'
 import {ClientStories} from '@/component/pages/MagentoWebDevelopment/ClientStories'
 import {Faq} from '@/component/pages/MagentoWebDevelopment/Faq'
 import {Adv} from '@/component/pages/MagentoWebDevelopment/Adv'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("magento-web-development");
 
 const page = () =>{
     return(

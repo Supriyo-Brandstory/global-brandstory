@@ -11,6 +11,9 @@ import {PinterestSeo} from '@/component/pages/PinterestAdvertising/PinterestSeo'
 import {BsPinterest} from '@/component/pages/PinterestAdvertising/BsPinterest'
 import {Adv} from '@/component/pages/PinterestAdvertising/Adv'
 import {Faq} from '@/component/pages/PinterestAdvertising/Faq'
+import { getPageMetadata } from "@/app/(pages)/metadata";
+
+export const metadata = getPageMetadata("pinterest-advertising");
 
 const page = () =>{
     return(
