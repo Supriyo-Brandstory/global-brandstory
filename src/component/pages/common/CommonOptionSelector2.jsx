@@ -1,8 +1,9 @@
 'use client'
 import { useState } from 'react'
 import styles from '@/style/common/commonOptionSelector2.module.css'
+import { BlocksRenderer } from '@strapi/blocks-react-renderer'
 
-export const CommonOptionSelector2 = ({ title, description,footer, options, splitRatio = 0.4 }) => {
+export const CommonOptionSelector2 = ({ title, description, footer, options, splitRatio = 0.4 }) => {
   const [selected, setSelected] = useState(0)
   const [fade, setFade] = useState(false)
 
@@ -45,13 +46,26 @@ export const CommonOptionSelector2 = ({ title, description,footer, options, spli
           ))}
         </div>
 
-        <div
-          className={`${styles.optionContent} ${fade ? styles.fadeOut : ''}`}
-          style={{ flex: 1 - safeRatio }}
-          dangerouslySetInnerHTML={{ __html: options[selected].description }}
-        />
+        {options[selected]?.description &&
+          (typeof options[selected].description === "string" ? (
+            <div
+              className={`${styles.optionContent} ${fade ? styles.fadeOut : ''}`}
+              style={{ flex: 1 - safeRatio }}
+              dangerouslySetInnerHTML={{ __html: options[selected].description }}
+            />
+          ) : (
+            <BlocksRenderer
+              content={options[selected].description}
+              blocks={{
+                paragraph: ({ children }) => (
+                  <p className="!text-white">{children}</p>
+                ),
+              }}
+            />
+          ))}
+
       </div>
-      {footer && <p className={styles.description} dangerouslySetInnerHTML={{__html:footer}} />}
+      {footer && <p className={styles.description} dangerouslySetInnerHTML={{ __html: footer }} />}
     </div>
   )
 }

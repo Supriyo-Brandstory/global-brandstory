@@ -12,8 +12,10 @@ import { WhyPartner } from "@/component/pages/Photography/WhyPartner";
 import { OurCommitment } from "@/component/pages/Photography/OurCommitment";
 import { Adv } from "@/component/pages/Photography/Adv";
 import CommonFAQ from "@/component/pages/common/CommonFAQ";
+import { fetchStrapi } from "@/lib/strapi";
 
-const page = () => {
+const page = async () => {
+
   return (
     <>
       <Banner />

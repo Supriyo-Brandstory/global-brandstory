@@ -2,8 +2,9 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import styles from '@/style/common/commonFAQs.module.css';
+import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 
-const CommonFAQ = ({data}) => {
+const CommonFAQ = ({ data }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -27,18 +28,17 @@ const CommonFAQ = ({data}) => {
                   alt="arrow down"
                   width={24}
                   height={24}
-                  className={`${styles.arrow} ${
-                    openIndex === index ? styles.flip : ''
-                  }`}
+                  className={`${styles.arrow} ${openIndex === index ? styles.flip : ''
+                    }`}
                 />
               </div>
             </button>
             <div
-              className={`${styles.faqContent} ${
-                openIndex === index ? styles.open : ''
-              }`}
+              className={`${styles.faqContent} ${openIndex === index ? styles.open : ''
+                }`}
             >
-              <p dangerouslySetInnerHTML={{__html:item.description}} />
+              {/* <p dangerouslySetInnerHTML={{__html:item.description}} /> */}
+              {item.description && (typeof item.description === 'string' ? (<p dangerouslySetInnerHTML={{ __html: item.description }} />):(<BlocksRenderer content={item?.description}/>))}
             </div>
           </div>
         ))}

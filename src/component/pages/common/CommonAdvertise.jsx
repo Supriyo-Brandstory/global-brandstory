@@ -1,4 +1,5 @@
 import styles from '@/style/common/commonAdvertise.module.css';
+import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 import Link from 'next/link';
 
 const CommonAdvertise = ({
@@ -24,8 +25,9 @@ const CommonAdvertise = ({
           {title2 && <h2 className={styles.heading}>{title2}</h2>}
         </span>
 
-        {description && (
-          <p dangerouslySetInnerHTML={{ __html: description }} />
+        {description && (typeof description === "string" ? (
+          <p dangerouslySetInnerHTML={{ __html: description }}></p>
+        ) : (<BlocksRenderer content={description} />)
         )}
 
         {(btn1 || btn2) && (

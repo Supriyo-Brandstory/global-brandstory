@@ -6,40 +6,51 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import styles from "@/style/common/commonCard.module.css";
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 
- 
+
 const CommonCard = ({ seoData, heding, description, footer }) => {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
 
     return (
         <section className={styles.wrapper}>
-            <h2 dangerouslySetInnerHTML={{__html: heding}} className={styles.heading} />
+            <h2 dangerouslySetInnerHTML={{ __html: heding }} className={styles.heading} />
 
-            {description && <p className={styles.description} dangerouslySetInnerHTML={{ __html: description }}></p>}
+            {description && (typeof description === "string" ? (<p className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />) : (<BlocksRenderer content={description} blocks={{ paragraph: ({ children }) => (<p className='!text-white'>{children}</p>) }} />))}
 
             <Swiper
                 modules={[Navigation]}
                 spaceBetween={20}
                 slidesPerView={3}
                 loop={false}
+                // navigation={{
+                //     prevEl: prevRef.current,
+                //     nextEl: nextRef.current,
+                // }}
+                // onSwiper={(swiper) => {
+                //     // Delay setting navigation until refs are ready
+                //     setTimeout(() => {
+                //         swiper.params.navigation.prevEl = prevRef.current;
+                //         swiper.params.navigation.nextEl = nextRef.current;
+
+                //         // Re-init navigation
+                //         swiper.navigation.destroy();
+                //         swiper.navigation.init();
+                //         swiper.navigation.update();
+                //     });
+                // }}
                 navigation={{
                     prevEl: prevRef.current,
                     nextEl: nextRef.current,
                 }}
-                onSwiper={(swiper) => {
-                    // Delay setting navigation until refs are ready
-                    setTimeout(() => {
-                        swiper.params.navigation.prevEl = prevRef.current;
-                        swiper.params.navigation.nextEl = nextRef.current;
-
-                        // Re-init navigation
-                        swiper.navigation.destroy();
-                        swiper.navigation.init();
-                        swiper.navigation.update();
-                    });
+                onBeforeInit={(swiper) => {
+                    swiper.params.navigation = swiper.params.navigation || {};
+                    swiper.params.navigation.prevEl = prevRef.current;
+                    swiper.params.navigation.nextEl = nextRef.current;
                 }}
+
                 breakpoints={{
                     320: { slidesPerView: 1 },
                     768: { slidesPerView: 1 },
@@ -53,7 +64,7 @@ const CommonCard = ({ seoData, heding, description, footer }) => {
                                 <img src={item.icon} alt="icon" className={styles.icon} />
                             </div>
                             <h4 className={styles.title}>{item.title}</h4>
-                            <h5 className={styles.desc} dangerouslySetInnerHTML={{ __html: item.desc }}></h5>
+                            {item.desc && (typeof item.desc === "string" ? (<h5 className={styles.desc} dangerouslySetInnerHTML={{ __html: item.desc }}></h5>) : (<BlocksRenderer content={item.desc} blocks={{ paragraph: ({ children }) => (<p className={'!text-white !text-[18px]'}>{children}</p>) }} />))}
                         </div>
                     </SwiperSlide>
                 ))}
@@ -113,7 +124,7 @@ const CommonCard = ({ seoData, heding, description, footer }) => {
 
                 </button>
             </div>
-            {footer && <p className="py-4" dangerouslySetInnerHTML={{__html:footer}} />}
+            {footer && (typeof footer === "string" ? (<p className="py-4" dangerouslySetInnerHTML={{ __html: footer }} />) : (<BlocksRenderer content={footer} blocks={{ paragraph: ({ children }) => (<p className='!text-white !mt-8'>{children}</p>) }} />))}
         </section>
     );
 };
