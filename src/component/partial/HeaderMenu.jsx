@@ -121,7 +121,7 @@ if (isMobile) {
                       <img src="/images/HeaderIcons/company/1.svg" alt="" />
                     </a>
 
-                    <a href="/our-work" className="companyCard works">
+                    <a href="/our-works" className="companyCard works">
                       <h3>Our Works</h3>
                       <p>Real products. Real results.<br/> Crafted for growth.</p>
                       <img src="/images/HeaderIcons/company/2.svg" alt="" />
