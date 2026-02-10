@@ -6,7 +6,7 @@ export const menuData = [
       {
         name: "Launch a Digital Product",
         link: "",
-        image: "images/HeaderIcons/i-want-to/1.svg",
+        image: "/images/HeaderIcons/i-want-to/1.svg",
         children: [
           { name: "Software Development Services", link: "/software-development-service", image: "/icons/menuicon.png" },
           { name: "Web Development Services", link: "/web-development-services", image: "/icons/menuicon.png" },
@@ -24,7 +24,7 @@ export const menuData = [
       {
         name: "Grow My Business",
         link: "",
-        image: "images/HeaderIcons/i-want-to/2.svg",
+        image: "/images/HeaderIcons/i-want-to/2.svg",
         children: [
           {
             name: "Get Found Online",
@@ -42,7 +42,7 @@ export const menuData = [
           {
             name: "Drive Immediate Results",
             link: "",
-            image: "images/HeaderIcons/i-want-to/3.svg",
+            image: "/images/HeaderIcons/i-want-to/3.svg",
             children: [
               { name: "Google Ads Management", link: "/google-ads-management", image: "/icons/menuicon.png" },
               { name: "Meta (Facebook/Instagram) Ads Management", link: "", image: "/icons/menuicon.png" }, // page not created
@@ -103,7 +103,7 @@ export const menuData = [
       {
         name: "Improve My Online Presence",
         link: "",
-        image: "images/HeaderIcons/i-want-to/1.svg",
+        image: "/images/HeaderIcons/i-want-to/1.svg",
         children: [
           {
             name: "Redesign My Website",
@@ -159,7 +159,7 @@ export const menuData = [
       {
         name: "Rebrand My Company",
         link: "",
-        image: "images/HeaderIcons/i-want-to/4.svg",
+        image: "/images/HeaderIcons/i-want-to/4.svg",
         children: [
           { name: "Branding Services", link: "/branding", image: "/icons/menuicon.png" },
           { name: "Packaging & Product Design", link: "", image: "/icons/menuicon.png" }, // page not created
@@ -177,7 +177,7 @@ export const menuData = [
       {
         name: "Automate Operations & Marketing",
         link: "",
-        image: "images/HeaderIcons/i-want-to/5.svg",
+        image: "/images/HeaderIcons/i-want-to/5.svg",
         children: [
           {
             name: "Platform-Based Automation",
@@ -202,7 +202,7 @@ export const menuData = [
       {
         name: "Modernize My Tech Stack",
         link: "",
-        image: "images/HeaderIcons/i-want-to/6.svg",
+        image: "/images/HeaderIcons/i-want-to/6.svg",
         children: [
           {
             name: "Audit Your Existing Stack",
@@ -254,7 +254,7 @@ export const menuData = [
       {
         name: "Use AI in My Business",
         link: "",
-        image: "images/HeaderIcons/i-want-to/7.svg",
+        image: "/images/HeaderIcons/i-want-to/7.svg",
         children: [
           { name: "AI Consulting & Opportunity Mapping", link: "", image: "/icons/menuicon.png" }, // page not created
           { name: "Artificial Intelligence Development", link: "", image: "/icons/menuicon.png" }, // page not created
@@ -269,7 +269,7 @@ export const menuData = [
       {
         name: "Improve My Brand Reputation",
         link: "",
-        image: "images/HeaderIcons/i-want-to/8.svg",
+        image: "/images/HeaderIcons/i-want-to/8.svg",
         children: [
           {
             name: "Monitor Your Brand Online",
@@ -329,7 +329,7 @@ export const menuData = [
       {
         name: "Development",
         link: "",
-        image: "images/HeaderIcons/what-we-do/1.svg",
+        image: "/images/HeaderIcons/what-we-do/1.svg",
         children: [
           {
             name: "Software Development Services",
@@ -402,7 +402,7 @@ export const menuData = [
       {
         name: "Branding",
         link: "/branding",
-        image: "images/HeaderIcons/what-we-do/2.svg",
+        image: "/images/HeaderIcons/what-we-do/2.svg",
         children: [
           {
             name: "Branding Services",
@@ -426,7 +426,7 @@ export const menuData = [
       {
         name: "Consulting",
         link: "/consulting",
-        image: "images/HeaderIcons/what-we-do/3.svg",
+        image: "/images/HeaderIcons/what-we-do/3.svg",
         children: [
           {
             name: "Digital Transformation Services",
@@ -480,7 +480,7 @@ export const menuData = [
       {
         name: "Digital Marketing",
         link: "",
-        image: "images/HeaderIcons/what-we-do/4.svg",
+        image: "/images/HeaderIcons/what-we-do/4.svg",
         children: [
           {
             name: "SEO Services",
@@ -633,7 +633,7 @@ export const menuData = [
       {
         name: "Creative & Media Production",
         link: "",
-        image: "images/HeaderIcons/what-we-do/5.svg",
+        image: "/images/HeaderIcons/what-we-do/5.svg",
         children: [
           {
             name: "Video Production",
@@ -674,7 +674,7 @@ export const menuData = [
       {
         name: "Local Businesses",
         link: "",
-        image: "images/HeaderIcons/who-we-help/1.svg",
+        image: "/images/HeaderIcons/who-we-help/1.svg",
         children: [
           { name: "Local SEO Services", link: "/local-seo", image: "/icons/menuicon.png" },
           { name: "GMB Profile Setup & Management", link: "", image: "/icons/menuicon.png" }, // page not created
@@ -686,7 +686,7 @@ export const menuData = [
       {
         name: "Startups",
         link: "",
-        image: "images/HeaderIcons/who-we-help/2.svg",
+        image: "/images/HeaderIcons/who-we-help/2.svg",
         children: [
           { name: "Branding Services", link: "/branding", image: "/icons/menuicon.png" },
           { name: "Web Development Services", link: "/web-development-services", image: "/icons/menuicon.png" },
@@ -698,7 +698,7 @@ export const menuData = [
       {
         name: "Ecommerce Stores",
         link: "",
-        image: "images/HeaderIcons/who-we-help/3.svg",
+        image: "/images/HeaderIcons/who-we-help/3.svg",
         children: [
           { name: "Ecommerce SEO Services", link: "/e-commerce-seo", image: "/icons/menuicon.png" },
           { name: "Performance Marketing", link: "/performance-marketing", image: "/icons/menuicon.png" },
@@ -714,7 +714,7 @@ export const menuData = [
       {
         name: "SaaS Businesses",
         link: "",
-        image: "images/HeaderIcons/who-we-help/4.svg",
+        image: "/images/HeaderIcons/who-we-help/4.svg",
         children: [
           { name: "SaaS Web App Development", link: "", image: "/icons/menuicon.png" }, // page not created
           { name: "UI/UX for SaaS Products", link: "", image: "/icons/menuicon.png" }, // page not created
@@ -727,7 +727,7 @@ export const menuData = [
       {
         name: "Enterprises",
         link: "",
-        image: "images/HeaderIcons/who-we-help/5.svg",
+        image: "/images/HeaderIcons/who-we-help/5.svg",
         children: [
           { name: "Cloud Transformation (AWS, Azure, GCP)", link: "", image: "/icons/menuicon.png" }, // page not created
           { name: "Machine Learning & Predictive Analytics (ML)", link: "", image: "/icons/menuicon.png" }, // page not created
