@@ -2,7 +2,7 @@
 import styles from "@/style/common/commonTwoCard.module.css";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
-const CommonTwoCard = ({ heading, subheading, highlight, cards, subheadingMaxWidth }) => {
+const CommonTwoCard = ({ heading, subheading, highlight, cards, subheadingMaxWidth, renderType }) => {
   return (
     <section className={styles.seoSection}>
       <div className={styles.header}>
@@ -17,8 +17,20 @@ const CommonTwoCard = ({ heading, subheading, highlight, cards, subheadingMaxWid
         {cards?.map((card, index) => (
           <div key={index} className={`${styles.card} ${index == 0 ? styles.local : ""}`}>
             <h4>{card.title}</h4>
-            {card?.description || card?.para && (typeof card.para === "string" ? (<p dangerouslySetInnerHTML={{ __html: card.description }} />
-            ) : (<BlocksRenderer content={card.para} />))}
+            {renderType === "dynamic" && card.para ? (
+              <BlocksRenderer content={card.para} />
+
+            ) : card.para ? (
+              <p
+                dangerouslySetInnerHTML={{ __html: card.description }}
+              />
+            ) : card.description ? (
+              <p
+                dangerouslySetInnerHTML={{ __html: card.description }}
+              />
+            ) : null}
+            {/* {card?.description || card?.para && (typeof card.para === "string" ? (<p dangerouslySetInnerHTML={{ __html: card.description }} />
+            ) : (<BlocksRenderer content={card.para} />))} */}
           </div>
         ))}
       </div>

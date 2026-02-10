@@ -3,9 +3,13 @@ import React from 'react';
 import styles from '@/style/common/commonBanner.module.css';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 
-export const CommonBanner = ({heading,paragraph,paragraph2,buttonLink,buttonLink2,buttonText,buttonText2}) => {
+export const CommonBanner = ({ heading, paragraph, paragraph2, buttonLink, buttonLink2, buttonText, buttonText2, renderType }) => {
   const finalLink1 = (!buttonLink || buttonLink === '#') ? '/our-work' : buttonLink;
   const finalLink2 = (!buttonLink2 || buttonLink2 === '#') ? '/contact-us' : buttonLink2;
+
+  const isHTML = (value) => /<\/?[a-z][\s\S]*>/i.test(value);
+
+  // console.log(renderType)
 
   return (
     <div className={styles.seoBanner}>
@@ -15,8 +19,19 @@ export const CommonBanner = ({heading,paragraph,paragraph2,buttonLink,buttonLink
         </h1>
 
         <div className={styles.seoBannerParagraph}>
-          <div className='highlited-text' dangerouslySetInnerHTML={{ __html: paragraph }} />
-          {paragraph2 && (typeof paragraph2 === 'string' ? (<div dangerouslySetInnerHTML={{ __html: paragraph2 }} />) : (<BlocksRenderer content={paragraph2} blocks={{paragraph : ({children})=>(<p className='!text-[20px]'>{children}</p>)}} />))}
+          {/* <div className='highlited-text' dangerouslySetInnerHTML={{ __html: paragraph }} /> */}
+          {paragraph && (
+            renderType === "dynamic" ? (
+              <div className="highlited-text">
+                {paragraph}
+              </div>
+            ) : (
+              <div dangerouslySetInnerHTML={{ __html: paragraph }} />
+            )
+          )}
+
+
+          {paragraph2 && (typeof paragraph2 === 'string' ? (<div dangerouslySetInnerHTML={{ __html: paragraph2 }} />) : (<BlocksRenderer content={paragraph2} blocks={{ paragraph: ({ children }) => (<p className='!text-[20px]'>{children}</p>) }} />))}
         </div>
 
         <div className={styles.btnWrapper}>

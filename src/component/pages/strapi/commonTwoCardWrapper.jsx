@@ -13,6 +13,7 @@ export const CommonTwoCardWrapper = ({ data }) => {
         heading: data?.title,
         highlight: data?.orangeText,
         subheading: data?.para,
+        renderType:"dynamic",
         cards: data?.card || [
             {
                 title: "Consultation & Planning",

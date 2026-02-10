@@ -88,8 +88,8 @@ const GridBox = ({ index, title, description, size = "md", height=null }) => {
             </div>
 
             <div className={styles.arrow}>
-                <img src="images/arrow-right.png" alt="arrow" className={styles.arrowDark} />
-                <img src="images/arrow-top-right.png" alt="arrow" className={styles.arrowLight} />
+                <img src="/images/arrow-right.png" alt="arrow" className={styles.arrowDark} />
+                <img src="/images/arrow-top-right.png" alt="arrow" className={styles.arrowLight} />
             </div>
         </div>
     );

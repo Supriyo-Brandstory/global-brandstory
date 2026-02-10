@@ -3,12 +3,15 @@ import React, { useState } from "react";
 import styles from "@/style/common/commonAccordion.module.css";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
-const CommonAccordion = ({ title, subheding1, subheding2, items, footer, paddingBottom }) => {
+const CommonAccordion = ({ title, subheding1, subheding2, items, footer, paddingBottom, renderType }) => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleItem = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
+  const isHTML = (value) => /<\/?[a-z][\s\S]*>/i.test(value);
+
 
   return (
     <div
@@ -17,13 +20,31 @@ const CommonAccordion = ({ title, subheding1, subheding2, items, footer, padding
     >
       {title && <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>}
       {subheding1 && <p dangerouslySetInnerHTML={{ __html: subheding1 }} />}
+
       {subheding2 && (
-        typeof subheding2 === "string" ? (
-          // HTML string
-          <p
-            className={styles.subheding2}
+        renderType === "dynamic" ? (
+          < BlocksRenderer blocks={{ paragraph: ({ children }) => (<p className="!text-white !font-normal">{children}</p>) }} content={subheding2} />
+
+        ) : (
+          <div className="text-[20px] mt-4"
             dangerouslySetInnerHTML={{ __html: subheding2 }}
           />
+        )
+      )}
+
+      {/* {subheding2 && (
+        typeof subheding2 === "string" ? (
+          // HTML string
+          isHTML(subheding2) ? (
+            <div className="text-[20px] mt-4"
+              dangerouslySetInnerHTML={{ __html: subheding2 }}
+            />
+          ) : (
+            <div className="highlited-text">
+              {subheding2}
+            </div>
+          )
+
         ) : (
 
           // Strapi Blocks : this is a demo for customizing the blocks
@@ -45,9 +66,9 @@ const CommonAccordion = ({ title, subheding1, subheding2, items, footer, padding
           //   ),
           // }} content={subheding2} />
 
-          <BlocksRenderer blocks={{ paragraph: ({ children }) => (<p className="!text-white">{children}</p>) }} content={subheding2} />
+          < BlocksRenderer blocks={{ paragraph: ({ children }) => (<p className="!text-white">{children}</p>) }} content={subheding2} />
         )
-      )}
+      )} */}
 
       <div className={styles.accordionWrapper}>
         {items?.map((item, index) => (

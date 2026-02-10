@@ -18,14 +18,14 @@ export const CommonThreeCardBlur = ({ heading, subheading, data, footer }) => {
                         <h3>{item.title}</h3>
                         {/* <p>{item.description}</p> */}
                         {item?.description && (typeof item?.description === "string" ? (<p>{item.description}</p>
-                        ) : (<BlocksRenderer content={item.description} blocks={{paragraph:({children})=>(<p className='!text-white'>{children}</p>)}} />))}
+                        ) : (<BlocksRenderer content={item.description} blocks={{paragraph:({children})=>(<p className='!text-[#ccc]'>{children}</p>)}} />))}
                     </div>
                 ))}
             </div>
             {footer && (typeof footer === "string" ? (<p
                 className={styles.footer}
                 dangerouslySetInnerHTML={{ __html: String(footer || "") }}
-            ></p>) : (<BlocksRenderer content={footer} blocks={{ paragraph: ({ children }) => (<p className='!text-white'>{children}</p>) }} />))}
+            ></p>) : (<BlocksRenderer content={footer} blocks={{ paragraph: ({ children }) => (<p className='!text-[#ccc]'>{children}</p>) }} />))}
         </div>
     )
 }

@@ -3,7 +3,6 @@ import styles from '@/style/common/commonBigIndex.module.css'
 import { BlocksRenderer } from '@strapi/blocks-react-renderer'
 
 export const CommonBigIndex = ({ heading, description, data, footer, caseLabel = null, paddingBottom }) => {
-  console.log("consoling bottom para from real results : ", footer)
   return (
     <div
       className={styles.frame}
@@ -37,7 +36,7 @@ export const CommonBigIndex = ({ heading, description, data, footer, caseLabel =
         ))}
       </div>
 
-      {footer && (typeof footer === "string" ? (<p className={styles.center} style={{marginTop:"20px;"}} dangerouslySetInnerHTML={{ __html: footer }} />) : (<BlocksRenderer content={footer} blocks={{ paragraph: ({ children }) => (<p className='!text-white !mt-8'>{children}</p>) }} />))}
+      {footer && (typeof footer === "string" ? (<p className={styles.center} style={{marginTop:"20px"}} dangerouslySetInnerHTML={{ __html: footer }} />) : (<BlocksRenderer content={footer} blocks={{ paragraph: ({ children }) => (<p className='!text-white !mt-8'>{children}</p>) }} />))}
     </div>
   )
 }

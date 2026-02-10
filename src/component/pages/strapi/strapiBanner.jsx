@@ -16,6 +16,7 @@ export const StrapiBanner = ({ data }) => {
             buttonText2={buttons[1]?.buttonLabel}
             buttonLink={buttons[0]?.buttonUrl}
             buttonLink2={buttons[1]?.buttonUrl}
+            renderType="dynamic"
         />
     )
 }
