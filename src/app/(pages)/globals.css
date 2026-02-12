@@ -962,10 +962,11 @@ body {
 .companyCard img {
   position: absolute;
   right: 20px;
-  bottom: 30px;
+  bottom: 0;
   width: 48px;
   height: 48px;
   opacity: 0.9;
+  height: 100%;
 }
 
 .companyCard:hover h3{
@@ -981,8 +982,20 @@ body {
   grid-row: span 2;
 }
 
+.companyCard.about img{
+  height: auto;
+  width: 60px;
+  margin-bottom: 20px;
+}
+
 .companyCard.clients {
   grid-row: span 2;
+}
+
+.companyCard.clients img{
+  height: auto;
+  width: 60px;
+  margin-bottom: 20px;
 }
 
 /* Stacked middle */
@@ -1019,6 +1032,14 @@ body {
   border-left: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.companyFeatured::-webkit-scrollbar {
+  display: none;
 }
 
 .companyFeatured h4 {
@@ -1125,6 +1146,26 @@ body {
   height: 100%;
   background: #2E2221;
   overflow-y: auto;
+
+  /* Firefox Support (Thumb color, Track color) */
+  scrollbar-color: #ff5a2c transparent;
+  scrollbar-width: thin;
+}
+
+/* Chrome, Edge, and Safari Support */
+.industriesMega::-webkit-scrollbar {
+  width: 8px; /* Adjust width as needed */
+}
+
+.industriesMega::-webkit-scrollbar-track {
+  background: transparent; /* Makes the track invisible */
+}
+
+.industriesMega::-webkit-scrollbar-thumb {
+  background-color: #ff5a2c; /* Your thumb color */
+  border-radius: 10px;       /* Makes the thumb rounded */
+  border: 2px solid transparent; /* Optional: adds 'padding' around thumb */
+  background-clip: content-box;
 }
 
 .industriesTitle {
@@ -1238,13 +1279,8 @@ body {
 
 
 
-/* ===============================
-   MOBILE NAV (OLD)
-=============================== */
-
 .mobileNavOld {
   position: fixed;
-  /* top: 10%; */
   inset: 0;
   background: #2E2221;
   z-index: 9999;
@@ -1262,7 +1298,6 @@ body {
 
 /* Top menu item */
 .mobileMenuItem {
-  /* border-bottom: 1px solid rgba(255,255,255,0.12); */
   padding-bottom: 12px;
 }
 

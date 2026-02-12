@@ -1,0 +1,388 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  color: #fff;
+  overflow-x: hidden;
+  overflow-y: visible;
+  background: url('/images/Blog/blog-bg-2.webp');
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  background-position: top center;
+}
+
+.bg{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+.bg img{
+  width: 100%;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 14% auto 0;
+}
+
+/* =========================
+   GRID
+========================= */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 361px;
+  align-items: start;
+}
+
+/* =========================
+   ARTICLE
+========================= */
+.article {
+  max-width: 720px;
+  position: relative;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.article h1 {
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+
+.date {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.bookmark {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 60px;
+  height: 60px;
+  /* transform: translateY(-50%); */
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: none;
+  padding: 8px;
+  cursor: pointer;
+  /* opacity: 0.7; */
+}
+
+.bookmark img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  margin: auto;
+  /* border: 1px solid red; */
+  padding-right: 2px;
+}
+
+.bookmark:hover {
+  opacity: 1;
+}
+
+.heroImage {
+  width: 100%;
+  border-radius: 16px;
+  margin: 24px 0 32px;
+  object-fit: cover;
+}
+
+.intro {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 16px;
+}
+
+.article section {
+  margin-top: 48px;
+}
+
+.article h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.article p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 16px;
+}
+
+/* =========================
+   🔴 BULLET
+========================= */
+.accentList {
+  list-style: none !important;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.accentList li {
+  list-style: none !important;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.accentList li::marker {
+  content: none;
+}
+
+.accentList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: #ff5a2e;
+  border-radius: 50%;
+}
+
+/* =========================
+   IMAGES
+========================= */
+.inlineImage {
+  width: 100%;
+  border-radius: 16px;
+  margin: 40px 0;
+  object-fit: cover;
+}
+
+/* =========================
+   CLOSING
+========================= */
+.closingThought {
+  margin-top: 48px;
+}
+
+.closingThought h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.highlightText{
+  color: #ff5a2e !important;
+  font-weight: 700 !important;
+}
+
+.quoteBlock {
+  margin: 40px 0;
+  padding: 32px;
+  background: url('/images/Blog/gradient-2.jpg');
+  background-size: 100% 100%;
+  border-left: 4px solid #ffffff;
+  border-radius: 16px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.sidebarCard {
+  background: url('/images/Blog/gradient.webp');
+  background-size: 100% 100%;
+  /* padding: 30px; */
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.sidebarCard h4 {
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  /* margin-bottom: 16px; */
+  padding-top: 20px;
+  padding-bottom: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ffffff7f;
+}
+
+.tocList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid red; */
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+
+.tocList li {
+  display: flex;
+  /* border: 1px solid blue; */
+  /* gap: 10px; */
+  padding: 10px 0;
+  font-size: 17px;
+  margin-right: 20px;
+  color: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px dashed rgba(255, 64, 0, 0.5);
+  cursor: pointer;
+}
+
+.tocList li:last-child {
+  border-bottom: none;
+}
+
+.tocList li span {
+  /* color: #ff5a2e; */
+  min-width: 20px;
+}
+
+/* =========================
+   SOCIALS
+========================= */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 60px;
+  padding-bottom: 40px;
+}
+
+.socials img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    margin: 120px 24px 0;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .article {
+    max-width: 100%;
+  }
+
+  .sidebar {
+    position: relative;
+    top: unset;
+  }
+
+  .bookmark {
+    right: 0;
+    top: -20px;
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  /* .page {
+    background-size: cover;
+  } */
+
+  .container {
+    margin: 100px 16px 0;
+  }
+
+  .bg{
+    height: 80%;
+  }
+
+  .article h1 {
+    font-size: 30px;
+    line-height: 1.25;
+  }
+
+  .article h2 {
+    font-size: 20px;
+  }
+
+  .article p,
+  .intro,
+  .accentList li {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .heroImage,
+  .inlineImage {
+    border-radius: 12px;
+  }
+
+  .bookmark {
+    width: 48px;
+    height: 48px;
+    top: -16px;
+  }
+
+  .sidebarCard h4 {
+    font-size: 20px;
+  }
+
+  .tocList li {
+    font-size: 15px;
+  }
+
+  .socials img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+/* @media (max-width: 480px) {
+  .article h1 {
+    font-size: 26px;
+  }
+
+  .quoteBlock {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  .accentList li::before {
+    top: 7px;
+  }
+
+  .socials {
+    margin-top: 40px;
+    gap: 4px;
+  }
+} */
