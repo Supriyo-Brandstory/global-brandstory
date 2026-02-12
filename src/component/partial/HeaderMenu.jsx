@@ -23,11 +23,9 @@ const HeaderMenu = ({ mobileMenuOpen }) => {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  if (!mounted) return null; // 👈 IMPORTANT
+  if (!mounted) return null; 
 
-  /* ===============================
-     MOBILE RETURN
-  =============================== */
+  //  =============================== MOBILE RETURN =============================== 
 if (isMobile) {
   return (
     <MobileMenu
@@ -37,9 +35,7 @@ if (isMobile) {
 }
 
 
-  /* ===============================
-     DESKTOP LOGIC 
-  =============================== */
+  /* =============================== DESKTOP LOGIC =============================== */
   const resetMenu = () => {
     setIsMenuOpen(false);
     setActiveTopMenu(null);
@@ -80,9 +76,7 @@ if (isMobile) {
   const isCompanyMenu = activeTopMenu?.title === "Company";
   const isIndustriesMenu = activeTopMenu?.title === "Industries";
 
-  /* ===============================
-     DESKTOP
-  =============================== */
+  //  =============================== DESKTOP =============================== 
   return (
     <>
       {/* ================= TOP NAV ================= */}
@@ -252,9 +246,7 @@ if (isMobile) {
   );
 };
 
-/* ===============================
-   FEATURED
-=============================== */
+/* =============================== FEATURED =============================== */
 const FeaturedCaseStudies = () => {
   return (
     <div className="companyFeatured">
