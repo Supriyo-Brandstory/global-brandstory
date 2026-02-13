@@ -454,7 +454,8 @@ body {
   }
 
   .header {
-    padding: 1.5rem 1rem
+    padding: 1.5rem 1rem;
+    position: block !important;
   }
 
   .mobileMenuHeader {
@@ -864,6 +865,68 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(255, 90, 44, 0.3);
 }
+
+/* Column 2 base styling (text-only, 15px) */
+
+.megaCol:nth-child(2).has-children,
+.megaCol:nth-child(2).has-children .colTitle {
+  background:#2E2321;
+}
+
+.megaCol:nth-child(2) .colItem {
+  color: rgba(255, 255, 255, 0.85);
+  /* padding: 11px 28px; */
+  cursor: pointer;
+  font-size: 15px;
+  display: block;
+  margin: 0;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+/* When Column 3 has children, Column 2 gets Column 1's layout */
+.megaCol:nth-child(2).has-children .colItem {
+  display: flex;
+  align-items: center;
+  /* gap: 14px; */
+  /* padding: 13px 28px; */
+  font-size: 15px; /* Keep text size unchanged */
+}
+
+/* Apply hover/active states like Column 1 when has-children */
+.megaCol:nth-child(2).has-children .colItem:hover {
+  color: #ff5a2c;
+  background: #1F1F1F;
+}
+
+.megaCol:nth-child(2).has-children .colItem.active {
+  color: #ff5a2c;
+  background: #1F1F1F;
+}
+
+/* Icon and arrow visibility in has-children mode */
+.megaCol:nth-child(2).has-children .colItem .colItemIcon,
+.megaCol:nth-child(2).has-children .colItem .colItemArrow {
+  display: inline-block;
+}
+
+/* Arrow only shows on hover/active like Column 1 */
+.megaCol:nth-child(2).has-children .colItem .colItemArrow {
+  display: none;
+  margin-left: auto;
+}
+
+.megaCol:nth-child(2).has-children .colItem:hover .colItemArrow,
+.megaCol:nth-child(2).has-children .colItem.active .colItemArrow {
+  display: inline-block;
+}
+
+/* Icon filter on hover/active */
+.megaCol:nth-child(2).has-children .colItem:hover .colItemIcon,
+.megaCol:nth-child(2).has-children .colItem.active .colItemIcon {
+  filter: invert(53%) sepia(87%) saturate(3501%) hue-rotate(341deg) brightness(101%) contrast(101%);
+}
+
 
 /* ===============================
    COMPANY MEGA MENU (STRUCTURE)
