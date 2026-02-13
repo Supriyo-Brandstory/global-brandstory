@@ -197,28 +197,28 @@ if (isMobile) {
                 </div>
 
                 {/* Column 2 - Modified with conditional class */}
-<div className={`megaCol ${activeChild?.children?.length ? 'has-children' : ''}`}>
-  <h4 className="colTitle">{activeSection?.name}</h4>
-  <ul>
-    {activeSection?.children?.map((child, index) => (
-      <li
-        key={index}
-        className={`colItem ${activeChild?.name === child.name ? 'active' : ''}`}
-        onMouseEnter={() =>
-          child.children?.length
-            ? setActiveChild(child)
-            : setActiveChild(null)
-        }
-        onClick={() => handleItemClick(child.link)}
-      >
-        <span className="text">{child.name}</span>
-        {activeChild?.children?.length && (
-          <img src="/images/HeaderIcons/arrow-right.svg" alt="" className="colItemArrow" />
-        )}
-      </li>
-    ))}
-  </ul>
-</div>
+                <div className={`megaCol ${activeChild?.children?.length ? 'has-children' : ''}`}>
+                  <h4 className="colTitle">{activeSection?.name}</h4>
+                  <ul>
+                    {activeSection?.children?.map((child, index) => (
+                      <li
+                        key={index}
+                        className={`colItem ${activeChild?.name === child.name ? 'active' : ''}`}
+                        onMouseEnter={() =>
+                          child.children?.length
+                            ? setActiveChild(child)
+                            : setActiveChild(null)
+                        }
+                        onClick={() => handleItemClick(child.link)}
+                      >
+                        <span className="text">{child.name}</span>
+                        {activeChild?.children?.length && (
+                          <img src="/images/HeaderIcons/arrow-right.svg" alt="" className="colItemArrow" />
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
                 <div className="megaCol">
                   {activeChild?.children?.length ? (
@@ -270,7 +270,7 @@ const FeaturedCaseStudies = () => {
 
       <div className="ctaRow">
         <span><b>Ready to Grow?</b></span>
-        <a href="/contact" className="ctaBtn">Contact Us</a>
+        <a href="/contact-us" className="ctaBtn">Contact Us</a>
       </div>
     </div>
   );

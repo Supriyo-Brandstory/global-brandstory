@@ -4,7 +4,7 @@ import styles from '@/style/common/commonBanner.module.css';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 
 export const CommonBanner = ({ heading, paragraph, paragraph2, buttonLink, buttonLink2, buttonText, buttonText2, renderType }) => {
-  const finalLink1 = (!buttonLink || buttonLink === '#') ? '/our-work' : buttonLink;
+  const finalLink1 = (!buttonLink || buttonLink === '#') ? '/our-works' : buttonLink;
   const finalLink2 = (!buttonLink2 || buttonLink2 === '#') ? '/contact-us' : buttonLink2;
 
   const isHTML = (value) => /<\/?[a-z][\s\S]*>/i.test(value);

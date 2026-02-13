@@ -26,7 +26,7 @@ const Header = () => {
         </button>
 
        <HeaderMenu mobileMenuOpen={mobileMenuOpen}/>
-        <button className="contactButton mobile-hidden">Contact Us</button>
+        <button className="contactButton mobile-hidden" onClick={() => window.location.href = '/contact-us'}>Contact Us</button>
 
       </div>
     </header>
