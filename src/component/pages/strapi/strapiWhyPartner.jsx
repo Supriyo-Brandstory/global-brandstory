@@ -3,7 +3,7 @@ import { CommonThreeCardBlur } from "../common/CommonThreeCardBlur"
 export const StrapiWhyPartner = ({ data }) => {
 
     // console.log("Consoling the StrapiWhyPartner data : ", data);
-    const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
+    const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL ;
 
     const newData = data?.cards?.map((card) => ({
         title: card?.title,

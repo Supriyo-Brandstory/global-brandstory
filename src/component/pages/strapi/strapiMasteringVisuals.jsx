@@ -39,7 +39,7 @@ export const StrapiMasteringVisuals = ({ data }) => {
         <CommonOptionSelector2
             title={title}
             description={desc}
-            options={options}
+            options={dataOptions}
         />
     );
 };
