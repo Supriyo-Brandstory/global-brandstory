@@ -4,8 +4,11 @@ import styles from '@/style/common/commonBanner.module.css';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 
 export const CommonBanner = ({ heading, paragraph, paragraph2, buttonLink, buttonLink2, buttonText, buttonText2, renderType }) => {
-  const finalLink1 = (!buttonLink || buttonLink === '#') ? '/our-works' : buttonLink;
-  const finalLink2 = (!buttonLink2 || buttonLink2 === '#') ? '/contact-us' : buttonLink2;
+  // const finalLink1 = (!buttonLink || buttonLink === '#') ? '/our-works' : buttonLink;
+  // const finalLink2 = (!buttonLink2 || buttonLink2 === '#') ? '/contact-us' : buttonLink2;
+  
+  const finalLink1 = '/contact-us'
+  const finalLink2 = '/our-works'
 
   const isHTML = (value) => /<\/?[a-z][\s\S]*>/i.test(value);
 
@@ -38,7 +41,7 @@ export const CommonBanner = ({ heading, paragraph, paragraph2, buttonLink, butto
           {/* Primary button - always shown */}
           <div className={styles.seoBannerButton}>
             <a href={finalLink1} className={styles.seoBannerButtonLink}>
-              {buttonText || 'Learn More'} {/* optional fallback text */}
+              {'Contact Us'} {/* optional fallback text */}
               <img
                 src="/images/triangle-btn.png"
                 alt="btn img"
@@ -48,13 +51,13 @@ export const CommonBanner = ({ heading, paragraph, paragraph2, buttonLink, butto
           </div>
 
           {/* Secondary button - only shown if buttonText2 exists */}
-          {buttonText2 && (
+          {/* {buttonText2 && ( */}
             <div className={styles.seoBannerButton}>
               <a href={finalLink2} className={styles.seoBannerButtonLink2}>
-                {buttonText2}
+                {'Our Works'}
               </a>
             </div>
-          )}
+          {/* )} */}
         </div>
       </div>
 
