@@ -4,7 +4,7 @@ export default function StrapiServicesWrapper({ data }) {
 
     // console.log("Consoling the StrapiServicesWrapper image cards : ", data?.imgcards);
 
-    const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
+    const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
 
     const boxHeight = '270px';
 

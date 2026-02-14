@@ -39,7 +39,7 @@ export const CommonOptionSelector2 = ({ title, description, footer, options, spl
             <button
               key={index}
               onClick={() => handleSelect(index)}
-              className={`${styles.optionBtn} ${selected === index ? styles.active : ''}`}
+              className={`${styles.optionBtn} !text-[16px] ${selected === index ? styles.active : ''}`}
             >
               {opt.heading}
             </button>
@@ -54,14 +54,17 @@ export const CommonOptionSelector2 = ({ title, description, footer, options, spl
               dangerouslySetInnerHTML={{ __html: options[selected].description }}
             />
           ) : (
-            <BlocksRenderer
-              content={options[selected].description}
-              blocks={{
-                paragraph: ({ children }) => (
-                  <p className="!text-white">{children}</p>
-                ),
-              }}
-            />
+            <div className={`${styles.optionContent} ${fade ? styles.fadeOut : ''}`}
+              style={{ flex: 1 - safeRatio }}>
+              <BlocksRenderer
+                content={options[selected].description}
+                blocks={{
+                  paragraph: ({ children }) => (
+                    <p className="!text-white">{children}</p>
+                  ),
+                }}
+              />
+            </div>
           ))}
 
       </div>
