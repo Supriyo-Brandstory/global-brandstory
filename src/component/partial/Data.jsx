@@ -334,7 +334,7 @@ export const menuData = [
             children: [
               { name: "Software Consulting Services", link: "/services/software-development/consulting" },
               { name: "Custom Software Development", link: "/services/software-development/custom" },
-              { name: "Software Architecture & Wireframe", link: "/software-architecture-and-wireframe" },
+              { name: "Software Architecture & Wireframe", link: "services/software-architecture-and-wireframe" },
               { name: "Software Maintenance & Support", link: "/services/software-development/support" },
               { name: "Database Development", link: "/services/database-developments" },
               { name: "Enterprise Software Development Services", link: "/services/software-development/enterprise", image: "/icons/menuicon.png" }
@@ -386,8 +386,8 @@ export const menuData = [
             link: "/services/full-stack-development",
             image: "/icons/menuicon.png",
             children: [
-              { name: "Front-End Development", link: "/services/front-end-development" },
-              { name: "Back-End Development", link: "/services/back-end-development" }
+              { name: "Front-End Development", link: "/services/full-stack-development/front-end" },
+              { name: "Back-End Development", link: "/services/full-stack-development/back-end" }
             ]
           },
           { name: "API Development & Integration", link: "/services/api-development-and-integration", image: "/icons/menuicon.png", children: [] },
