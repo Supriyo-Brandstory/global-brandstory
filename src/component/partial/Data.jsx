@@ -386,8 +386,8 @@ export const menuData = [
             link: "/services/full-stack-development",
             image: "/icons/menuicon.png",
             children: [
-              { name: "Front-End Development", link: "/services/full-stack-development/front-end" },
-              { name: "Back-End Development", link: "/services/full-stack-development/back-end" }
+              { name: "Front-End Development", link: "/services/front-end-development" },
+              { name: "Back-End Development", link: "/services/back-end-development" }
             ]
           },
           { name: "API Development & Integration", link: "/services/api-development-and-integration", image: "/icons/menuicon.png", children: [] },
