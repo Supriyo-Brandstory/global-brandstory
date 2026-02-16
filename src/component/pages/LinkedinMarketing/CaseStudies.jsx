@@ -32,8 +32,8 @@ export const CaseStudies = () => {
             items={accordionData}
             footer="These LinkedIn case studies prove that with the right strategy, B2B lead generation becomes predictable."
         />
-        <div className='flex justify-center'>
-            <a href="#" className='orange-btn'>Get Custom Quote</a>
+        <div className='flex justify-center mb-10'>
+            <a href="/contact-us" className='orange-btn'>Get Custom Quote</a>
         </div>
     </>
   );

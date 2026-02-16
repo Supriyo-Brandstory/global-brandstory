@@ -1,3 +1,5 @@
+'use client';
+import { useRouter } from "next/navigation";
 import { CommonBwThreeCard } from "../common/CommonBwThreeCard";
 
 export const Pricing = () => {
@@ -25,6 +27,12 @@ export const Pricing = () => {
             `,
     },
   ];
+
+  const navigation = useRouter();
+  const handleOnClick =()=>{
+    navigation.push('/contact-us')
+  }
+
   return (
     <>
       <CommonBwThreeCard
@@ -45,9 +53,11 @@ export const Pricing = () => {
                     py-4 px-10 
                     rounded-[20px]
                     whitespace-nowrap
+                    cursor-pointer
                 "
           style={{ backgroundColor: "#E73D26", border: "none" }}
           aria-label="Book a Free Strategy Call"
+          onClick={handleOnClick}
         >
           Get Your Free Ads Audit
         </button>

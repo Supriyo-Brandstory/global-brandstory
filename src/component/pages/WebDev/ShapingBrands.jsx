@@ -35,7 +35,7 @@ export const ShapingBrands = () => {
       description="We bring strategy, design, and technology together to create digital experiences that perform. While some of our work is under NDA, here’s a glimpse into the kind of solutions we’ve successfully delivered for clients across industries:"
       items={accordionData}
       button="View Portfolio"
-      buttonLink=""
+      buttonLink="/our-works"
     />
   );
 };

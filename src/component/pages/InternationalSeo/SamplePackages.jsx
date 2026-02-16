@@ -34,7 +34,7 @@ export const SamplePackages = () => {
             boxHeight="350px"
             title={title} description={description} data={data} />
             <div className="mx-auto mb-30 text-center">
-                <a className="orange-btn">
+                <a className="orange-btn" href="/contact-us">
                 Book Your Global SEO Strategy Session
                 </a>
             </div>

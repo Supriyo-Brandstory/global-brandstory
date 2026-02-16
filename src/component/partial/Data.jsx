@@ -390,7 +390,7 @@ export const menuData = [
               { name: "Back-End Development", link: "/services/back-end-development" }
             ]
           },
-          { name: "API Development & Integration", link: "/services/api-development-and-integration", image: "/icons/menuicon.png", children: [] },
+          { name: "API Development & Integration", link: "/services/api-development", image: "/icons/menuicon.png", children: [] },
           { name: "CRM Integration", link: "/services/crm-integration", image: "/icons/menuicon.png", children: [] },
           { name: "UI/UX Design Services", link: "/services/ui-ux-design", image: "/icons/menuicon.png", children: [] }
         ]
@@ -580,7 +580,7 @@ export const menuData = [
             image: "/icons/menuicon.png",
             children: [
               { name: "Email Marketing", link: "/services/email-marketing" },
-              { name: "WhatsApp Marketing", link: "" }
+              { name: "WhatsApp Marketing", link: "/services/whatsapp-marketing" }
             ]
           },
           {
@@ -713,9 +713,9 @@ export const menuData = [
         image: "/images/HeaderIcons/who-we-help/4.svg",
         children: [
           { name: "SaaS Web App Development", link: "/services/web-application-development/saas" },
-          { name: "UI/UX for SaaS Products", link: "" },
+          { name: "UI/UX for SaaS Products", link: "/services/ui-ux-design/saas" },
           { name: "API Development & Integration", link: "/services/software-development/api-development" },
-          { name: "SEO for SaaS Products", link: "" },
+          { name: "SEO for SaaS Products", link: "/services/seo/saas" },
           { name: "Performance Marketing for SaaS Products", link: "" },
           { name: "Marketing Automation", link: "/services/marketing-automation" }
         ]
@@ -725,15 +725,15 @@ export const menuData = [
         link: "",
         image: "/images/HeaderIcons/who-we-help/5.svg",
         children: [
-          { name: "Cloud Transformation (AWS, Azure, GCP)", link: "" },
+          { name: "Cloud Transformation (AWS, Azure, GCP)", link: "/services/cloud-transformation" },
           { name: "Machine Learning & Predictive Analytics (ML)", link: "" },
-          { name: "Enterprise CRM & ERP Integration", link: "" },
-          { name: "Cybersecurity Services (Audit, PenTest, MSS)", link: "/services/cyber-security-services" },
-          { name: "ABM & B2B Lead Generation", link: "" },
-          { name: "DevOps & CI/CD Setup", link: "" },
-          { name: "AI & Machine Learning Development", link: "" },
+          { name: "Enterprise CRM & ERP Integration", link: "/services/enterprise-crm-integration" },
+          { name: "Cybersecurity Services (Audit, PenTest, MSS)", link: "/services/cyber-security" },
+          { name: "ABM & B2B Lead Generation", link: "/services/b2b-marketing/abm" },
+          { name: "DevOps & CI/CD Setup", link: "/services/cloud/devops" },
+          { name: "AI & Machine Learning Development", link: "/services/ai-development" },
           { name: "Marketing Automation", link: "/services/marketing-automation" },
-          { name: "Global SEO Strategy", link: "" }
+          { name: "Global SEO Strategy", link: "/services/seo/global-strategy " }
         ]
       }
     ]

@@ -1,6 +1,10 @@
+'use client';
+import { useRouter } from "next/navigation";
+
 import { CommonBigIndex } from "../common/CommonBigIndex"
 
 export const InstagramCampaigns = () => {
+  const router = useRouter();
   const heading = "Instagram Campaigns with Real Business Results"
   const description = "We Don’t Just Talk Performance—We Deliver It. These Instagram Marketing Case Studies Highlight How The Right Mix Of Content, Targeting, And Funnel Strategy Drives Strong ROI And Measurable Business Outcomes."
   const footer = "Let Us Show You What Your Next Campaign Could Look Like"
@@ -40,6 +44,14 @@ export const InstagramCampaigns = () => {
     },
   ]
   
+  const handleClick = () => {
+    router.push("/contact-us");
+  };
+
+  const handleClick2 = () => {
+    router.push("/our-works");
+  };
+
   return (
     <>
         <CommonBigIndex 
@@ -62,9 +74,11 @@ export const InstagramCampaigns = () => {
                     py-4 px-10 
                     rounded-[20px]
                     whitespace-nowrap
+                    cursor-pointer
                 "
                 style={{ backgroundColor: '#E73D26', border: 'none' }}
                 aria-label="Book a Free Strategy Call"
+                onClick={handleClick}
             >
                 Book Free Strategy Call
             </button>
@@ -79,8 +93,10 @@ export const InstagramCampaigns = () => {
                     rounded-[20px]
                     border border-white
                     whitespace-nowrap
+                    cursor-pointer
                 "
                 aria-label="Get a Custom Quote"
+                onClick={handleClick2}
             >
                 Get Custom Quote
             </button>

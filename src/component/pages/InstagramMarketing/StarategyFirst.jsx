@@ -48,7 +48,7 @@ export const StarategyFirst = () => {
         paddingBottom={0}
       />
       <div className="mx-auto mb-30 text-center">
-        <a href="#" className="orange-btn">
+        <a href="/contact-us" className="orange-btn">
           Get Custom Quote
         </a>
       </div>
