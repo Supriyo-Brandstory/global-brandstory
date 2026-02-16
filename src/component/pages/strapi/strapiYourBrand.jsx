@@ -4,7 +4,7 @@ import CommonGridBox3 from "../common/CommonGridBox3";
 export const StrapiYourBrand = ({ data }) => {
 
     // console.log("Consoling the Strapi Your Brand data : ", data);
-    const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
+    const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL_IMAGE;
     const title = data?.title;
     const description = "";
 
