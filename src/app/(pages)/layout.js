@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/component/partial/Header";
 import Footer from "@/component/partial/Footer";
-
+import Script from "next/script";
 
 
 export const metadata = {
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <script
+        <Script
       dangerouslySetInnerHTML={{
         __html: `
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -27,8 +27,12 @@ export default function RootLayout({ children }) {
       }}
     />
       </head>
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWWSNR99"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <noscript dangerouslySetInnerHTML={{
+        __html:`
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWWSNR99"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        `
+      }} />
       <body>
          <Header/>
         {children}
