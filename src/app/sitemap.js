@@ -4,6 +4,8 @@ import path from "path";
 
 const BASE_URL = 'https://brandstoryglobal.com';
 
+export const dynamic = 'force-dynamic';
+
 /**
  * Automatically crawls the local filesystem to find static routes.
  * This ensures that renaming a folder or adding a new page locally 
