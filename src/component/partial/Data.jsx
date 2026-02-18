@@ -390,7 +390,7 @@ export const menuData = [
               { name: "Back-End Development", link: "/services/back-end-development" }
             ]
           },
-          { name: "API Development & Integration", link: "/services/api-development", image: "/icons/menuicon.png", children: [] },
+          { name: "API Development & Integration", link: "/services/software-development/api-development", image: "/icons/menuicon.png", children: [] },
           { name: "CRM Integration", link: "/services/crm-integration", image: "/icons/menuicon.png", children: [] },
           { name: "UI/UX Design Services", link: "/services/ui-ux-design", image: "/icons/menuicon.png", children: [] }
         ]
