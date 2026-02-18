@@ -1541,7 +1541,7 @@ b{
 
 @media (max-width: 768px) {
   h1{
-    font-size: 32px;
+    font-size: 36px;
   }
 
   h2{
@@ -1553,7 +1553,7 @@ b{
   }
 
   p{
-    font-size: 19px;
+    font-size: 16px;
   }
 
   ul li{

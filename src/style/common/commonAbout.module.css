@@ -11,6 +11,7 @@
     flex-direction: column;
     gap: 20px;
 }
+
 .flexbox{
     display: flex;
     justify-content: center;
@@ -38,10 +39,15 @@
 @media (max-width: 768px) {
     .container{
         width: 100%;
+        padding: 0 16px;
     }
 
     .textBox{
         width: 100%;
+    }
+    
+    .points{
+        margin-left: 0;
     }
     
     .flexbox{
