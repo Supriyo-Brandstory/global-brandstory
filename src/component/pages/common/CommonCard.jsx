@@ -25,31 +25,31 @@ const CommonCard = ({ seoData, heding, description, footer }) => {
                 spaceBetween={20}
                 slidesPerView={3}
                 loop={false}
-                // navigation={{
-                //     prevEl: prevRef.current,
-                //     nextEl: nextRef.current,
-                // }}
-                // onSwiper={(swiper) => {
-                //     // Delay setting navigation until refs are ready
-                //     setTimeout(() => {
-                //         swiper.params.navigation.prevEl = prevRef.current;
-                //         swiper.params.navigation.nextEl = nextRef.current;
-
-                //         // Re-init navigation
-                //         swiper.navigation.destroy();
-                //         swiper.navigation.init();
-                //         swiper.navigation.update();
-                //     });
-                // }}
                 navigation={{
                     prevEl: prevRef.current,
                     nextEl: nextRef.current,
                 }}
-                onBeforeInit={(swiper) => {
-                    swiper.params.navigation = swiper.params.navigation || {};
-                    swiper.params.navigation.prevEl = prevRef.current;
-                    swiper.params.navigation.nextEl = nextRef.current;
+                onSwiper={(swiper) => {
+                    // Delay setting navigation until refs are ready
+                    setTimeout(() => {
+                        swiper.params.navigation.prevEl = prevRef.current;
+                        swiper.params.navigation.nextEl = nextRef.current;
+
+                        // Re-init navigation
+                        swiper.navigation.destroy();
+                        swiper.navigation.init();
+                        swiper.navigation.update();
+                    });
                 }}
+                // navigation={{
+                //     prevEl: prevRef.current,
+                //     nextEl: nextRef.current,
+                // }}
+                // onBeforeInit={(swiper) => {
+                //     swiper.params.navigation = swiper.params.navigation || {};
+                //     swiper.params.navigation.prevEl = prevRef.current;
+                //     swiper.params.navigation.nextEl = nextRef.current;
+                // }}
 
                 breakpoints={{
                     320: { slidesPerView: 1 },
