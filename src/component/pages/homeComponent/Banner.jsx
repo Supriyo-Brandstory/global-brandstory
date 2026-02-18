@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
 import styles from "@/style/homepage.module.css";
+import Link from 'next/link';
 
 const Banner = () => {
   // const bannerRef = useRef(null);
@@ -75,7 +76,9 @@ const Banner = () => {
           Just one sharp, plugged-in team delivering strategy, design, content,
           tech, and marketing — all under one roof.
         </p>
-        <button className={styles.bannerButton}>Let’s Talk</button>
+        <Link href="/contact-us">
+          <button className={styles.bannerButton}>Let’s Talk</button>
+        </Link>
 
         <ul className={styles.bannerList}>
           <li>

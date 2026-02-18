@@ -1,0 +1,160 @@
+.banner {
+  background: url("/images/seo/seo-banner.png") no-repeat;
+  background-size: cover;
+  background-position: 80% 40%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.heading {
+  margin-bottom: 60px;
+}
+
+.metaGrid {
+  display: flex;
+  gap: 100px;
+  margin-bottom: 60px;
+}
+
+.metaItem{
+    
+}
+
+.metaGrid span {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.metaGrid p {
+  margin-top: 6px;
+  font-size: 18px;
+  color: #848484;
+}
+
+.description {
+  max-width: 60%;
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #848484;
+}
+
+.stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.statItem{
+  max-width: 190px;
+}
+
+.stats h3 {
+  font-size: 42px;
+  color: #F15D22;
+  font-family: Gilroy-Bold;
+  /* font-weight: bolder; */
+}
+
+.stats b {
+    color: #848484;
+  font-size: 18px;
+}
+
+.btnWrapper {
+  display: flex;
+  gap: 16px;
+}
+
+.primaryBtn {
+  background: #f15d22;
+  color: #fff;
+  padding: 14px 48px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 0 20px rgba(241, 93, 34, 0.4);
+}
+
+.secondaryBtn {
+  border: 2px solid #fff;
+  padding: 14px 48px;
+  border-radius: 40px;
+}
+
+/* Decorative boxes (same as before) */
+.boxes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.boxes div {
+  position: absolute;
+  height: 78px;
+  width: 78px;
+  background: url("/images/banner-sm-box.png");
+  background-size: cover;
+}
+
+.box1 {
+  top: 425px;
+  left: 145px;
+}
+.box2 {
+  top: 500px;
+  left: 63px;
+  transform: rotate(180deg);
+}
+.box3 {
+  top: 300px;
+  right: 65px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .container {
+    padding: 80px 16px 60px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .metaGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .btnWrapper {
+    flex-direction: column;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .boxes {
+    display: none;
+  }
+}

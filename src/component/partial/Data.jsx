@@ -672,7 +672,7 @@ export const menuData = [
         link: "",
         image: "/images/HeaderIcons/who-we-help/1.svg",
         children: [
-          { name: "Local SEO Services", link: "/services/seo/local-seo" },
+          { name: "Local SEO Services", link: "/services/seo/local" },
           { name: "GMB Profile Setup & Management", link: "/services/seo/gmb" },
           { name: "Review & Rating Monitoring", link: "/services/seo/review-and-rating" },
           { name: "Local Event Marketing", link: "/services/seo/local-event-marketing" },
