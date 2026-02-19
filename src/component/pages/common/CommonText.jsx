@@ -10,7 +10,7 @@ const CommonText = ({
         <h2 className={styles.title}>
             {title}
         </h2>
-        <p dangerouslySetInnerHTML={{__html:description}} />
+        <p className={styles.description} dangerouslySetInnerHTML={{__html:description}} />
     </div>
   );
 };

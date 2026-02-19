@@ -29,7 +29,6 @@ export const CommonBigIndexScrollable = ({ heading, description, data, footer, c
         />
       )}
 
-      {/* ---------------------- SWIPER ------------------------ */}
       <Swiper
         modules={[Navigation]}
         spaceBetween={25}

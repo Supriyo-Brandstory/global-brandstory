@@ -1,0 +1,203 @@
+.frame {
+  display: flex;
+  align-items: stretch; /* both columns stretch to tallest child */
+  gap: 0;              /* no gap — left panel butts up to cards */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+  color: #fff;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.frame p {
+  font-size: 18px;
+}
+
+/* ─── LEFT PANEL ─── */
+.leftPanel {
+  /* border: 1px solid red; */
+  flex: 0 0 376px;
+  min-width: 376px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between; /* heading top, arrows bottom */
+  padding-right: 48px;            /* breathing room before cards start */
+  padding-top: 0;
+  padding-bottom: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #0F0F0F 50%, #0f0f0fdf 75%, transparent 100%);            /* solid — matches page bg, masks sliding cards */
+  position: relative;
+  z-index: 20;                    /* sits above Swiper cards */
+}
+
+.heading {
+  font-size: 42px;
+  line-height: 1.15;
+  margin: 0;
+  font-weight: 700;
+  text-align: left;
+}
+
+.leftPanel p {
+  font-size: 16px;
+  color: #ccc;
+  margin: 0;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* ─── RIGHT PANEL (Swiper overflows right) ─── */
+.swiperOuter {
+  flex: 1;
+  min-width: 0;
+  overflow: visible; /* allow cards to bleed off right edge */
+}
+
+/* Override Swiper's own overflow clip */
+.caseWrapper {
+  overflow: visible !important;
+}
+
+/* Each slide = fixed 376px width */
+.caseWrapper :global(.swiper-slide) {
+  width: 376px;
+  height: auto; /* all slides auto-size to tallest */
+}
+
+/* ─── CARD BOX ─── */
+.caseBox {
+  padding: 25px;
+  width: 376px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-size: 104%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: relative;
+  border: 1px solid #8e8e8e;
+  text-align: left;
+  transition: transform 0.3s ease;
+  height: 100%; /* stretch to match tallest sibling */
+  background: url('/images/CaseStudy/scroll-3-bg.webp');
+  background-size: cover;
+  border: 1px solid #aaaaaa8a;
+}
+
+
+.label {
+  font-family: Gilroy-Bold;
+  font-size: 30px !important;
+}
+
+.imageId {
+  width: 20%;
+  margin-bottom: 20px;
+}
+
+.caseTitle {
+  font-size: 62px !important;
+  font-family: Gilroy-Bold;
+  margin-bottom: 15px;
+  color: #F15D22;
+}
+
+.caseDesc {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: lighter;
+  color: #FDF6F0;
+  line-height: 1.6;
+}
+
+.caseBox ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.caseBox li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* ─── NAVIGATION (inside left panel) ─── */
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prevBtn,
+.nextBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.25s ease;
+}
+
+.prevBtn svg,
+.nextBtn svg {
+  width: 74px;
+  height: 74px;
+}
+
+
+/* ─── FOOTER ─── */
+.footer {
+  color: #bbb;
+  font-size: 18px;
+  margin: 50px auto;
+  max-width: 800px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.footerWrap {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 34px;
+  }
+  .leftPanel {
+    flex: 0 0 300px;
+    min-width: 300px;
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .frame {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 16px;
+    gap: 32px;
+  }
+  .leftPanel {
+    flex: unset;
+    width: 100%;
+    min-width: unset;
+    background: transparent;
+    padding-right: 0;
+    gap: 24px;
+  }
+  .heading {
+    font-size: 30px;
+  }
+  .swiperOuter {
+    width: 100%;
+  }
+  .caseWrapper :global(.swiper-slide) {
+    width: 300px;
+  }
+  .caseBox {
+    width: 300px;
+  }
+}

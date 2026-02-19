@@ -1,0 +1,283 @@
+.container {
+  padding: 80px 20px;
+}
+
+/* ─── VISIBILITY HELPERS ─── */
+.desktopOnly {
+  display: grid;
+}
+
+.mobileOnly {
+  display: none;
+}
+
+/* ─── DESKTOP WRAPPER ─── */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 60px;
+}
+
+/* LEFT */
+.left {
+  color: #ffffff;
+}
+
+.title {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.description {
+  font-size: 18px;
+  color: #cfcfcf;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+.points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0px;
+}
+
+.points li {
+  position: relative;
+  color: #e5e5e5;
+  font-size: 18px;
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.points li::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background: #ff6a00;
+  border-radius: 50%;
+}
+
+/* RIGHT */
+.right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  grid-auto-rows: max-content;
+  align-items: start;
+}
+
+/* CARD */
+.card {
+  position: relative;
+  padding: 18px;
+  color: #fff;
+  overflow: hidden;
+  background: url('/images/CaseStudy/bg.webp');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('/images/CaseStudy/bg-hover.webp');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+.cardTitle,
+.metric {
+  position: relative;
+  z-index: 2;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-family: Gilroy-Bold;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.metric {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.number {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.metricDesc {
+  font-size: 18px;
+  color: #e0e0e0;
+}
+
+.rightWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.imageRight {
+  width: 100%;
+  height: auto;
+}
+
+.cta {
+  background-color: #f15d22;
+  color: #fff;
+  padding: 16px 23px;
+  font-size: 16px;
+  box-shadow: 0px 0px 8px 0px #fdf6f0;
+  border-radius: 18px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ─── MOBILE LAYOUT ─── */
+@media (max-width: 768px) {
+  .container {
+    padding: 48px 16px;
+  }
+
+  /* Flip visibility */
+  .desktopOnly {
+    display: none !important;
+  }
+
+  .mobileOnly {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* Title & description */
+  .mobileTitle {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .mobileDescription {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 24px;
+    max-width: 100%;
+  }
+
+  /* Image (shown between description and points) */
+  .mobileImage {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 28px;
+    object-fit: cover;
+  }
+
+  /* Stats swipe block */
+  .mobileStatsBlock {
+    width: 100%;
+    margin-bottom: 28px;
+  }
+.metric{
+  align-items: start;
+}
+  /* Horizontal scroll container */
+  .mobileStatsScroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+
+  .mobileStatsScroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobileStatSlide {
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    box-sizing: border-box;
+  }
+
+  .mobileStatCard {
+    border-radius: 12px;
+    min-width: 0; /* prevents grid blowout */
+    padding: 12px;
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ddd;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .dotActive {
+    transform: scale(1.5);
+  }
+
+  /* Points */
+  .mobilePoints {
+    margin-bottom: 10px;
+  }
+
+  .mobilePoints li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .cardTitle {
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+
+  .number {
+    font-size: 24px;
+  }
+
+  .metricDesc {
+    font-size: 12px;
+  }
+
+  .card::after {
+    opacity: 1;
+  }
+}
