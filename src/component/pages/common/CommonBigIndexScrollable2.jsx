@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import styles from '@/style/common/commonBigIndexScrollable2.module.css'
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 export const CommonBigIndexScrollable2 = ({
   heading,
@@ -42,7 +43,13 @@ export const CommonBigIndexScrollable2 = ({
             dangerouslySetInnerHTML={{ __html: heading }}
           />
           {description && (
-            <p dangerouslySetInnerHTML={{ __html: description }} />
+            typeof description === "string" ? (
+              <p dangerouslySetInnerHTML={{ __html: description }} />
+            ) : (
+              <div>
+                <BlocksRenderer content={description} />
+              </div>
+            )
           )}
 
           {/* Custom navigation arrows live here */}
@@ -197,10 +204,16 @@ export const CommonBigIndexScrollable2 = ({
                     className={styles.caseTitle}
                     dangerouslySetInnerHTML={{ __html: item.title }}
                   />
-                  <p
-                    className={styles.caseDesc}
-                    dangerouslySetInnerHTML={{ __html: item.description }}
-                  />
+                  {item.description && (typeof item.description === "string" ? (
+                    <p
+                      className={styles.caseDesc}
+                      dangerouslySetInnerHTML={{ __html: item.description }}
+                    />
+                  ) : (
+                    <div className={styles.caseDesc} >
+                      <BlocksRenderer content={item?.description} />
+                    </div>
+                  ))}
                   {item.points && (
                     <ul>
                       {item.points.map((point, i) => (

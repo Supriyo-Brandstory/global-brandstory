@@ -1,6 +1,6 @@
 import CommonImages from "../common/CommonImages";
 
-export const Images = () => {
+export const Images = ({ data }) => {
   const imageList = [
     "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSEDaMEoX0Tkzqw74YSBab3HI2czZ14hUpGxq1Wuko5h6hGPVhF",
     "https://thumbs.dreamstime.com/b/beautiful-rain-forest-ang-ka-nature-trail-doi-inthanon-national-park-thailand-36703721.jpg",
@@ -9,5 +9,11 @@ export const Images = () => {
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTaYVG_iCjqtC3bXEKrVyw1a1VUNpkA7fViw&s",
   ];
 
-  return <CommonImages images={imageList} />;
+  const imageBaseUrl = process.env.NEXT_PUBLIC_STRAPI_URL_IMAGE;
+
+  const newImageList = data?.images?.map((image) =>
+    `${imageBaseUrl}${image?.url}`
+  ) || [];
+
+  return <CommonImages images={newImageList} />;
 };

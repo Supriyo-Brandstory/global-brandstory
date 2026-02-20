@@ -3,6 +3,8 @@ import React from "react";
 import Link from "next/link";
 import styles from "@/style/common/commonBanner3.module.css";
 
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+
 export const CommonBanner3 = ({
   heading,
   meta = [],
@@ -15,6 +17,14 @@ export const CommonBanner3 = ({
   primaryCtaLink = "/contact-us",
   secondaryCtaLink = "/our-works",
 }) => {
+  const renderContent = (content) => {
+    if (!content) return null;
+    if (typeof content === "string") {
+      return content;
+    }
+    return <BlocksRenderer content={content} />;
+  };
+
   return (
     <section className={styles.banner}>
       <div className={styles.container}>
@@ -33,6 +43,8 @@ export const CommonBanner3 = ({
                   <b>{item.title}</b>
                 </span>
                 <p>{item.value}</p>
+                <span><b>{item.title}</b></span>
+                <p>{renderContent(item.value)}</p>
               </div>
             ))}
           </div>
@@ -53,7 +65,7 @@ export const CommonBanner3 = ({
 )}
         {/* Description */}
         {description && (
-          <p className={styles.description} dangerouslySetInnerHTML={{__html:description}} />
+          <p className={styles.description}>{renderContent(description)}</p>
         )}
 
         {/* Stats */}

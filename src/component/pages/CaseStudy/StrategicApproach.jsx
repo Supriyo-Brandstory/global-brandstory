@@ -1,21 +1,29 @@
 import { CommonBigIndexScrollable2 } from "../common/CommonBigIndexScrollable2";
 
-export const StrategicApproach = () => {
-  const heading = "Strategic Approach";
+export const StrategicApproach = ({ data }) => {
+  if (!data) return null;
+  const { title, description, card } = data;
 
-const cases = [
+  const heading = title || "Strategic Approach - fallback";
+
+  const newCases = card?.map((item) => ({
+    title: item?.title,
+    description: item?.description
+  })) || [];
+
+  const cases = [
     {
-        title:"User-first architecture",
+      title: "User-first architecture",
       description:
         "reorganized navigation around buyer journeys instead of features"
     },
     {
-        title:"Message hierarchy",
+      title: "Message hierarchy",
       description:
         "simplified copy to highlight outcomes over technical complexity"
     },
     {
-        title:"Conversion pathways",
+      title: "Conversion pathways",
       description:
         "embedded CTAs and micro-conversions across the funnel"
     }
@@ -23,9 +31,9 @@ const cases = [
 
   return (
     <CommonBigIndexScrollable2
-      data={cases}
+      data={newCases}
       heading={heading}
-      description="We focused on aligning clarity, structure, and intent before execution."
+      description={description || "We focused on aligning clarity, structure, and intent before execution. - fallback"}
     //   caseLabel="Outcome"
     />
   );
