@@ -2,7 +2,6 @@ import CommonMetrix from "../common/CommonMetrix";
 
 export const Implementaion = ({ data }) => {
   if (!data) return null;
-  console.log("implementation", data)
 
   const { title, image, description } = data;
 

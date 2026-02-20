@@ -17,12 +17,11 @@ export const Objectives = ({ data }) => {
   ) || [];
 
   const newStatsData = metric.map((stats) => ({
-    title: stats?.metricValue,
-    number: stats?.caseMetric,
+    title: stats?.caseMetric,
+    number: stats?.metricValue,
     description: stats?.description
   }))
 
-  console.log(newStatsData)
 
   const statsData = [
     {
