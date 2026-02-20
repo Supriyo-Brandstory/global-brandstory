@@ -14,10 +14,19 @@ export const CommonBigIndexScrollable2 = ({
   footer,
   caseLabel = null,
   boxHeight,
-  paddingBottom
+  paddingBottom,
+  leftPanelWidth
 }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const leftPanelStyle =
+  typeof leftPanelWidth !== "undefined"
+    ? {
+        flex: `0 0 ${typeof leftPanelWidth === "number" ? `${leftPanelWidth}px` : leftPanelWidth}`,
+        minWidth: typeof leftPanelWidth === "number" ? `${leftPanelWidth}px` : leftPanelWidth,
+      }
+    : undefined;
 
   return (
     <>
@@ -27,7 +36,7 @@ export const CommonBigIndexScrollable2 = ({
         style={{ paddingBottom: typeof paddingBottom !== "undefined" ? paddingBottom : undefined }}
       >
         {/* ── LEFT PANEL: heading + description + arrows ── */}
-        <div className={styles.leftPanel}>
+        <div className={styles.leftPanel} style={leftPanelStyle}>
           <h1
             className={styles.heading}
             dangerouslySetInnerHTML={{ __html: heading }}
@@ -135,43 +144,43 @@ export const CommonBigIndexScrollable2 = ({
         {/* ── RIGHT PANEL: Swiper cards (overflows to the right) ── */}
         <div className={styles.swiperOuter}>
           <Swiper
-  modules={[Navigation, Pagination]}
-  spaceBetween={25}
-  slidesPerView="auto"
-  loop={false}
-  navigation={{
-    prevEl: prevRef.current,
-    nextEl: nextRef.current,
-  }}
-  pagination={{
-    clickable: true,
-    enabled: false,   // ⬅ default OFF (desktop)
-  }}
-  breakpoints={{
-    320: {
-      spaceBetween: 16,
-      pagination: { enabled: true }, // ⬅ mobile ON
-    },
-    768: {
-      spaceBetween: 20,
-      pagination: { enabled: false }, // ⬅ tablet OFF
-    },
-    1024: {
-      spaceBetween: 25,
-      pagination: { enabled: false }, // ⬅ desktop OFF
-    },
-  }}
-  onSwiper={(swiper) => {
-    setTimeout(() => {
-      swiper.params.navigation.prevEl = prevRef.current;
-      swiper.params.navigation.nextEl = nextRef.current;
-      swiper.navigation.destroy();
-      swiper.navigation.init();
-      swiper.navigation.update();
-    });
-  }}
-  className={styles.caseWrapper}
->
+            modules={[Navigation, Pagination]}
+            spaceBetween={25}
+            slidesPerView="auto"
+            loop={false}
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
+            pagination={{
+              clickable: true,
+              enabled: false,   // ⬅ default OFF (desktop)
+            }}
+            breakpoints={{
+              320: {
+                spaceBetween: 16,
+                pagination: { enabled: true }, // ⬅ mobile ON
+              },
+              768: {
+                spaceBetween: 20,
+                pagination: { enabled: false }, // ⬅ tablet OFF
+              },
+              1024: {
+                spaceBetween: 25,
+                pagination: { enabled: false }, // ⬅ desktop OFF
+              },
+            }}
+            onSwiper={(swiper) => {
+              setTimeout(() => {
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.navigation.destroy();
+                swiper.navigation.init();
+                swiper.navigation.update();
+              });
+            }}
+            className={styles.caseWrapper}
+          >
             {data.map((item, index) => (
               <SwiperSlide key={index}>
                 <div

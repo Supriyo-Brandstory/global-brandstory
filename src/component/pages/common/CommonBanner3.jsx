@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import styles from "@/style/common/commonBanner3.module.css";
 
 export const CommonBanner3 = ({
@@ -7,6 +8,12 @@ export const CommonBanner3 = ({
   meta = [],
   description,
   stats = [],
+  highlights = [],
+  /* CTA PROPS */
+  primaryCtaText,
+  secondaryCtaText,
+  primaryCtaLink = "/contact-us",
+  secondaryCtaLink = "/our-works",
 }) => {
   return (
     <section className={styles.banner}>
@@ -22,16 +29,31 @@ export const CommonBanner3 = ({
           <div className={styles.metaGrid}>
             {meta.map((item, index) => (
               <div key={index} className={styles.metaItem}>
-                <span><b>{item.title}</b></span>
+                <span>
+                  <b>{item.title}</b>
+                </span>
                 <p>{item.value}</p>
               </div>
             ))}
           </div>
         )}
 
+{/* Highlights strip */}
+{highlights.length > 0 && (
+  <div className={styles.highlights}>
+    {highlights.map((text, index) => (
+      <React.Fragment key={index}>
+        <span className={styles.highlightText}>{text}</span>
+        {index !== highlights.length - 1 && (
+          <span className={styles.dot} />
+        )}
+      </React.Fragment>
+    ))}
+  </div>
+)}
         {/* Description */}
         {description && (
-          <p className={styles.description}>{description}</p>
+          <p className={styles.description} dangerouslySetInnerHTML={{__html:description}} />
         )}
 
         {/* Stats */}
@@ -43,6 +65,30 @@ export const CommonBanner3 = ({
                 <b>{stat.label}</b>
               </div>
             ))}
+          </div>
+        )}
+
+        {/* CTA BUTTONS */}
+        {(primaryCtaText || secondaryCtaText) && (
+          <div className={styles.ctaWrapper}>
+            {primaryCtaText && (
+              <Link
+                href={primaryCtaLink}
+                className={`${styles.ctaBtn} ${styles.primaryBtn}`}
+              >
+                {primaryCtaText}
+                <span className={styles.arrow}>▶</span>
+              </Link>
+            )}
+
+            {secondaryCtaText && (
+              <Link
+                href={secondaryCtaLink}
+                className={`${styles.ctaBtn} ${styles.secondaryBtn}`}
+              >
+                {secondaryCtaText}
+              </Link>
+            )}
           </div>
         )}
       </div>

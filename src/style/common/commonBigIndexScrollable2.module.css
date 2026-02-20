@@ -21,6 +21,7 @@
   flex: 0 0 376px;
   min-width: 376px;
   display: flex;
+  gap: 10px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between; /* heading top, arrows bottom */
