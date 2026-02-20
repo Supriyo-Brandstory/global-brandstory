@@ -209,6 +209,7 @@
 
   /* Hide navigation arrows entirely on mobile */
   .navigation {
+    margin: auto 0;
     display: none;
   }
   

@@ -180,6 +180,10 @@ export const CommonBigIndexScrollable3 = ({
                     className={styles.caseTitle}
                     dangerouslySetInnerHTML={{ __html: item.title }}
                   />
+                  <h3
+                    className={styles.caseSubTitle}
+                    dangerouslySetInnerHTML={{ __html: item.subTitle }}
+                  />
                   <p
                     className={styles.caseDesc}
                     dangerouslySetInnerHTML={{ __html: item.description }}
