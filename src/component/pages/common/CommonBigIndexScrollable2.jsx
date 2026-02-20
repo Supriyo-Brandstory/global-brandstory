@@ -135,33 +135,43 @@ export const CommonBigIndexScrollable2 = ({
         {/* ── RIGHT PANEL: Swiper cards (overflows to the right) ── */}
         <div className={styles.swiperOuter}>
           <Swiper
-            modules={[Navigation, Pagination]}
-            spaceBetween={25}
-            slidesPerView="auto"
-            loop={false}
-            navigation={{
-              prevEl: prevRef.current,
-              nextEl: nextRef.current,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            onSwiper={(swiper) => {
-              setTimeout(() => {
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
-            }}
-            breakpoints={{
-              320: { spaceBetween: 16 },
-              768: { spaceBetween: 20 },
-              1024: { spaceBetween: 25 },
-            }}
-            className={styles.caseWrapper}
-          >
+  modules={[Navigation, Pagination]}
+  spaceBetween={25}
+  slidesPerView="auto"
+  loop={false}
+  navigation={{
+    prevEl: prevRef.current,
+    nextEl: nextRef.current,
+  }}
+  pagination={{
+    clickable: true,
+    enabled: false,   // ⬅ default OFF (desktop)
+  }}
+  breakpoints={{
+    320: {
+      spaceBetween: 16,
+      pagination: { enabled: true }, // ⬅ mobile ON
+    },
+    768: {
+      spaceBetween: 20,
+      pagination: { enabled: false }, // ⬅ tablet OFF
+    },
+    1024: {
+      spaceBetween: 25,
+      pagination: { enabled: false }, // ⬅ desktop OFF
+    },
+  }}
+  onSwiper={(swiper) => {
+    setTimeout(() => {
+      swiper.params.navigation.prevEl = prevRef.current;
+      swiper.params.navigation.nextEl = nextRef.current;
+      swiper.navigation.destroy();
+      swiper.navigation.init();
+      swiper.navigation.update();
+    });
+  }}
+  className={styles.caseWrapper}
+>
             {data.map((item, index) => (
               <SwiperSlide key={index}>
                 <div

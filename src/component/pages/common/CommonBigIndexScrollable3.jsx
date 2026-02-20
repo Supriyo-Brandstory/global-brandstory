@@ -1,10 +1,14 @@
 'use client'
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+// import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import styles from '@/style/common/commonBigIndexScrollable3.module.css'
+
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css/pagination";
+
 
 export const CommonBigIndexScrollable3 = ({
   heading,
@@ -130,30 +134,43 @@ export const CommonBigIndexScrollable3 = ({
         {/* ── RIGHT PANEL: Swiper cards (overflows to the right) ── */}
         <div className={styles.swiperOuter}>
           <Swiper
-            modules={[Navigation]}
-            spaceBetween={25}
-            slidesPerView="auto"
-            loop={false}
-            navigation={{
-              prevEl: prevRef.current,
-              nextEl: nextRef.current,
-            }}
-            onSwiper={(swiper) => {
-              setTimeout(() => {
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
-            }}
-            breakpoints={{
-    320: { spaceBetween: 16 },
-    768: { spaceBetween: 20 },
-    1024: { spaceBetween: 25 },
+  modules={[Navigation, Pagination]}
+  spaceBetween={25}
+  slidesPerView="auto"
+  loop={false}
+  navigation={{
+    prevEl: prevRef.current,
+    nextEl: nextRef.current,
   }}
-            className={styles.caseWrapper}
-          >
+  pagination={{
+    clickable: true,
+    enabled: false, // ⬅ desktop OFF
+  }}
+  breakpoints={{
+    320: {
+      spaceBetween: 16,
+      pagination: { enabled: true }, // ⬅ mobile ON
+    },
+    768: {
+      spaceBetween: 20,
+      pagination: { enabled: false },
+    },
+    1024: {
+      spaceBetween: 25,
+      pagination: { enabled: false },
+    },
+  }}
+  onSwiper={(swiper) => {
+    setTimeout(() => {
+      swiper.params.navigation.prevEl = prevRef.current;
+      swiper.params.navigation.nextEl = nextRef.current;
+      swiper.navigation.destroy();
+      swiper.navigation.init();
+      swiper.navigation.update();
+    });
+  }}
+  className={styles.caseWrapper}
+>
             {data.map((item, index) => (
               <SwiperSlide key={index}>
                 <div

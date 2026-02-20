@@ -300,4 +300,27 @@
     width: 56px;
     height: 56px;
   }
+
+    /* Pagination container spacing */
+  .caseWrapper :global(.swiper-pagination) {
+    position: relative;
+    margin-top: 20px;
+  }
+
+  /* Base bullet */
+  .caseWrapper :global(.swiper-pagination-bullet) {
+    width: 5px;
+    height: 5px;
+    background: #ffffff;
+    opacity: 0.6;
+    margin: 0 4px !important;
+    border-radius: 50%;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  /* Active bullet (1.5x) */
+  .caseWrapper :global(.swiper-pagination-bullet-active) {
+    opacity: 1;
+    transform: scale(1.5);
+  }
 }
