@@ -2,12 +2,22 @@
 import React from "react";
 import styles from "@/style/common/commonBanner3.module.css";
 
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+
 export const CommonBanner3 = ({
   heading,
   meta = [],
   description,
   stats = [],
 }) => {
+  const renderContent = (content) => {
+    if (!content) return null;
+    if (typeof content === "string") {
+      return content;
+    }
+    return <BlocksRenderer content={content} />;
+  };
+
   return (
     <section className={styles.banner}>
       <div className={styles.container}>
@@ -23,7 +33,7 @@ export const CommonBanner3 = ({
             {meta.map((item, index) => (
               <div key={index} className={styles.metaItem}>
                 <span><b>{item.title}</b></span>
-                <p>{item.value}</p>
+                <p>{renderContent(item.value)}</p>
               </div>
             ))}
           </div>
@@ -31,7 +41,7 @@ export const CommonBanner3 = ({
 
         {/* Description */}
         {description && (
-          <p className={styles.description}>{description}</p>
+          <div className={styles.description}>{renderContent(description)}</div>
         )}
 
         {/* Stats */}

@@ -1,6 +1,11 @@
 import CommonMetrix from "../common/CommonMetrix";
 
-export const Implementaion = () => {
+export const Implementaion = ({ data }) => {
+  if (!data) return null;
+  console.log("implementation", data)
+
+  const { title, image, description } = data;
+
   const pointList = [
     "Conducted stakeholder interviews and user journey mapping",
     "Rebuilt sitemap and information architecture",
@@ -10,15 +15,19 @@ export const Implementaion = () => {
     "Implemented analytics and heatmap tracking"
   ];
 
+  const imageBaseUrl = process.env.NEXT_PUBLIC_STRAPI_URL_IMAGE;
+  const imageURL = `${imageBaseUrl}${image?.url}`;
+
 
   return (
     <CommonMetrix
-      title="Implementation Highlights"
-    //   description="Primary goal was to transform the website into a consistent lead-generation channel."
-    image='/images/CaseStudy/img-3.png'
-      points={pointList}
-    //   stats={statsData}
-    ratio="4:3"
+      title={title || "fallback - Implementation Highlights"}
+      //   description="Primary goal was to transform the website into a consistent lead-generation channel."
+      image={imageURL || '/images/CaseStudy/img-3.png'}
+      // points={pointList}
+      description={description}
+      //   stats={statsData}
+      ratio="4:3"
     />
   );
 };

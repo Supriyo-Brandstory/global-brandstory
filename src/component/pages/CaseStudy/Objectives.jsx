@@ -1,6 +1,9 @@
 import CommonMetrix from "../common/CommonMetrix";
 
-export const Objectives = () => {
+export const Objectives = ({ data }) => {
+  if (!data) return null;
+  const { title, points, description, metric } = data;
+
   const pointList = [
     "Increase demo requests by 60%",
     "Reduce bounce rate below 45%",
@@ -8,6 +11,18 @@ export const Objectives = () => {
     "Increase organic landing page conversions",
     "Create a scalable web foundation for future campaigns",
   ];
+
+  const newPointlist = points.map((point) =>
+    `${point?.point}`
+  ) || [];
+
+  const newStatsData = metric.map((stats) => ({
+    title: stats?.metricValue,
+    number: stats?.caseMetric,
+    description: stats?.description
+  }))
+
+  console.log(newStatsData)
 
   const statsData = [
     {
@@ -34,10 +49,10 @@ export const Objectives = () => {
 
   return (
     <CommonMetrix
-      title="Objectives and Success Metrics"
-      description="Primary goal was to transform the website into a consistent lead-generation channel."
-      points={pointList}
-      stats={statsData}
+      title={title || "Objectives and Success Metrics - fallback"}
+      description={description || "Primary goal was to transform the website into a consistent lead-generation channel. - fallback"}
+      points={newPointlist}
+      stats={newStatsData}
     />
   );
 };

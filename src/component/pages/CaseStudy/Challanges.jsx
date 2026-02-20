@@ -1,9 +1,17 @@
 import { CommonBigIndexScrollable2 } from "../common/CommonBigIndexScrollable2";
 
-export const Challanges = () => {
-  const heading = "Challenges and Resolutions";
+export const Challanges = ({ data }) => {
+  if (!data) return null;
+  const { title, csCards } = data;
 
-const cases = [
+
+  const heading = title || "fallback - Challenges and Resolutions";
+
+  const newCases = csCards.map((item) => ({
+    description: `<b>Challenge</b><br/>${item.csChallenge}<br/><br/><b>Resolution</b><br/>${item.csResolution}<br/><br/><b>Result</b><br/>${item.csResult}`
+  })) || [];
+
+  const cases = [
     {
       description:
         "<b>Challenge</b><br/>Product Messaging Felt Too Technical For Decision-Makers<br/><br/><b>Resolution</b><br/>Reframed Content Around Business Outcomes And Use Cases<br/><br/><b>Result</b><br/>+52% Improvement In Time On Page"
@@ -20,7 +28,7 @@ const cases = [
 
   return (
     <CommonBigIndexScrollable2
-      data={cases}
+      data={newCases}
       heading={heading}
       caseLabel="Outcome"
     />

@@ -1,6 +1,7 @@
 'use client'
 import React, { useRef, useState } from "react";
 import styles from "@/style/common/commonMetrix.module.css";
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 /**
  * Converts "1:2" → "1fr 2fr"
@@ -57,7 +58,29 @@ const CommonMetrix = ({
   const TextContent = ({ mobile = false }) => (
     <>
       {title && <h2 className={`${styles.title} ${mobile ? styles.mobileTitle : ""}`}>{title}</h2>}
-      {description && <p className={`${styles.description} ${mobile ? styles.mobileDescription : ""}`}>{description}</p>}
+      {description && (typeof description === "string" ? (
+        <p className={`${styles.description} ${mobile ? styles.mobileDescription : ""}`}>{description}</p>
+      ) : (
+        <div className={`${styles.description} ${mobile ? styles.mobileDescription : ""}`}>
+          <BlocksRenderer
+            content={description}
+            blocks={{
+              list: ({ children }) => (
+                <ul className={`${styles.points} ${mobile ? styles.mobilePoints : ""}`}>
+                  {children}
+                </ul>
+              ),
+              listItem: ({ children }) => (
+                <li className={styles.pointItem}>{children}</li>
+              ),
+              paragraph: ({ children }) => (
+                <p className={`${styles.description} ${mobile ? styles.mobileDescription : ""}`}>{children}</p>
+              ),
+            }}
+          />
+
+        </div>
+      ))}
     </>
   );
 

@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import styles from '@/style/common/commonBigIndexScrollable2.module.css'
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 export const CommonBigIndexScrollable2 = ({
   heading,
@@ -33,7 +34,13 @@ export const CommonBigIndexScrollable2 = ({
             dangerouslySetInnerHTML={{ __html: heading }}
           />
           {description && (
-            <p dangerouslySetInnerHTML={{ __html: description }} />
+            typeof description === "string" ? (
+              <p dangerouslySetInnerHTML={{ __html: description }} />
+            ) : (
+              <div>
+                <BlocksRenderer content={description} />
+              </div>
+            )
           )}
 
           {/* Custom navigation arrows live here */}
@@ -135,43 +142,43 @@ export const CommonBigIndexScrollable2 = ({
         {/* ── RIGHT PANEL: Swiper cards (overflows to the right) ── */}
         <div className={styles.swiperOuter}>
           <Swiper
-  modules={[Navigation, Pagination]}
-  spaceBetween={25}
-  slidesPerView="auto"
-  loop={false}
-  navigation={{
-    prevEl: prevRef.current,
-    nextEl: nextRef.current,
-  }}
-  pagination={{
-    clickable: true,
-    enabled: false,   // ⬅ default OFF (desktop)
-  }}
-  breakpoints={{
-    320: {
-      spaceBetween: 16,
-      pagination: { enabled: true }, // ⬅ mobile ON
-    },
-    768: {
-      spaceBetween: 20,
-      pagination: { enabled: false }, // ⬅ tablet OFF
-    },
-    1024: {
-      spaceBetween: 25,
-      pagination: { enabled: false }, // ⬅ desktop OFF
-    },
-  }}
-  onSwiper={(swiper) => {
-    setTimeout(() => {
-      swiper.params.navigation.prevEl = prevRef.current;
-      swiper.params.navigation.nextEl = nextRef.current;
-      swiper.navigation.destroy();
-      swiper.navigation.init();
-      swiper.navigation.update();
-    });
-  }}
-  className={styles.caseWrapper}
->
+            modules={[Navigation, Pagination]}
+            spaceBetween={25}
+            slidesPerView="auto"
+            loop={false}
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
+            }}
+            pagination={{
+              clickable: true,
+              enabled: false,   // ⬅ default OFF (desktop)
+            }}
+            breakpoints={{
+              320: {
+                spaceBetween: 16,
+                pagination: { enabled: true }, // ⬅ mobile ON
+              },
+              768: {
+                spaceBetween: 20,
+                pagination: { enabled: false }, // ⬅ tablet OFF
+              },
+              1024: {
+                spaceBetween: 25,
+                pagination: { enabled: false }, // ⬅ desktop OFF
+              },
+            }}
+            onSwiper={(swiper) => {
+              setTimeout(() => {
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.navigation.destroy();
+                swiper.navigation.init();
+                swiper.navigation.update();
+              });
+            }}
+            className={styles.caseWrapper}
+          >
             {data.map((item, index) => (
               <SwiperSlide key={index}>
                 <div
@@ -188,10 +195,16 @@ export const CommonBigIndexScrollable2 = ({
                     className={styles.caseTitle}
                     dangerouslySetInnerHTML={{ __html: item.title }}
                   />
-                  <p
-                    className={styles.caseDesc}
-                    dangerouslySetInnerHTML={{ __html: item.description }}
-                  />
+                  {item.description && (typeof item.description === "string" ? (
+                    <p
+                      className={styles.caseDesc}
+                      dangerouslySetInnerHTML={{ __html: item.description }}
+                    />
+                  ) : (
+                    <div className={styles.caseDesc} >
+                      <BlocksRenderer content={item?.description} />
+                    </div>
+                  ))}
                   {item.points && (
                     <ul>
                       {item.points.map((point, i) => (
