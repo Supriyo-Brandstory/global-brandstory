@@ -43,29 +43,27 @@ export const CommonBanner3 = ({
                   <b>{item.title}</b>
                 </span>
                 <p>{item.value}</p>
-                <span><b>{item.title}</b></span>
-                <p>{renderContent(item.value)}</p>
               </div>
             ))}
           </div>
         )}
 
-{/* Highlights strip */}
-{highlights.length > 0 && (
-  <div className={styles.highlights}>
-    {highlights.map((text, index) => (
-      <React.Fragment key={index}>
-        <span className={styles.highlightText}>{text}</span>
-        {index !== highlights.length - 1 && (
-          <span className={styles.dot} />
+        {/* Highlights strip */}
+        {highlights.length > 0 && (
+          <div className={styles.highlights}>
+            {highlights.map((text, index) => (
+              <React.Fragment key={index}>
+                <span className={styles.highlightText}>{text}</span>
+                {index !== highlights.length - 1 && (
+                  <span className={styles.dot} />
+                )}
+              </React.Fragment>
+            ))}
+          </div>
         )}
-      </React.Fragment>
-    ))}
-  </div>
-)}
         {/* Description */}
         {description && (
-          <p className={styles.description}>{renderContent(description)}</p>
+          <div className={styles.description}>{renderContent(description)}</div>
         )}
 
         {/* Stats */}

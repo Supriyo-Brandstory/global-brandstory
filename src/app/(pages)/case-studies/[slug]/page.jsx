@@ -33,7 +33,6 @@ const page = async ({ params }) => {
     }
 
     const sections = pageData.caseSections || [];
-    console.log("sections", sections);
 
     return (
         <main>
