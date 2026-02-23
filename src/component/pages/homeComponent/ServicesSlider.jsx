@@ -1,6 +1,7 @@
 "use client";
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import styles from "@/style/homepage.module.css";
+import React, { useState, useRef } from "react";
 
 const serviceData = [
     {
@@ -43,18 +44,46 @@ export default function ServicesSlider() {
     const prev = () =>
         setActiveIndex((prev) => (prev - 1 + serviceData.length) % serviceData.length);
 
+    const touchStartX = useRef(0);
+    const touchEndX = useRef(0);
+
+    const handleTouchStart = (e) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchMove = (e) => {
+        touchEndX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+        const delta = touchStartX.current - touchEndX.current;
+
+        if (Math.abs(delta) < 50) return; // ignore small swipes
+
+        if (delta > 0) {
+            next(); // swipe left
+        } else {
+            prev(); // swipe right
+        }
+    };
+
     return (
         <div className={styles.servicesSlider}>
             <h2 className={styles.servicesSlider_heading}>50+ Solutions. Endless Possibilities.</h2>
 
-            <div className={styles.servicesSlider_sliderWrapper}>
+            <div 
+                className={styles.servicesSlider_sliderWrapper}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+            >
 
                 <div className={styles.servicesSlider_leftContent}>
                     <div className={styles.servicesSlider_contentBox}>
                         <div className={styles.servicesSlider_number}>
                             {String(serviceData[activeIndex].id).padStart(2, "0")}.
                         </div>
-                        <div>
+                        <div className={styles.servicesSlider_content}>
                             <h2 className={styles.servicesSlider_title}>{serviceData[activeIndex].title}</h2>
                             <h3 className={styles.servicesSlider_subtitle}>{serviceData[activeIndex].subtitle}</h3>
                             <p className={styles.servicesSlider_description}>{serviceData[activeIndex].description}</p>

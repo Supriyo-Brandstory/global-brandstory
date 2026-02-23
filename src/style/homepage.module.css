@@ -832,6 +832,9 @@
     border-color: #F15D22;
 }
 
+
+
+
 /* section 6  */
 .techtab_containerbg {
     background: #3b35851a;
@@ -983,35 +986,47 @@
     }
 
     .servicesSlider_leftContent {
-        padding: 20px 0;
+        padding: 0px;
         order: 2;
     }
 
     .servicesSlider_contentBox {
         min-height: auto;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .servicesSlider_content{
+        padding: 20px 10px 0 0;
+     border-right: 1px solid grey;   
     }
 
     .servicesSlider_number {
         font-size: 48px;
+        padding: 20px 0;
         text-align: left;
     }
 
     .servicesSlider_title {
-        font-size: 20px;
+        font-size: 16px;
+        color: #F15D22;
     }
 
     .servicesSlider_subtitle {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .servicesSlider_description {
-        font-size: 16px;
+        font-size: 12px;
         margin-top: 10px;
     }
 
     .servicesSlider_navButtons {
-        justify-content: center;
-        margin-top: 20px;
+        justify-content: left;
+        margin-top: 0px;
+    }
+
+    .servicesSlider_navButtons button{
+        display: none;
     }
 
     .servicesSlider_arrowBtn {
@@ -1023,13 +1038,11 @@
     .servicesSlider_dots {
         justify-content: center;
         margin-top: 10px;
+        padding-left: 0;
     }
 
     .servicesSlider_rightVisual {
-        order: 1;
-        padding: 20px 0;
-        justify-content: center;
-        align-items: end;
+        display: none;
     }
 
     .servicesSlider_stackContainer {
@@ -1252,7 +1265,68 @@
     margin: 20px 0;
   }
 }
+  .mobileOnly {
+    display: none;
+}
+@media (max-width: 768px) {
 
+  /* visibility */
+  .desktopOnly {
+    display: none;
+  }
+
+  .mobileOnly {
+    display: block;
+    overflow: hidden;
+    margin-top: 32px;
+  }
+
+  /* slider */
+  .industries_slider {
+    display: flex;
+    width: 100%;
+    transition: transform 0.35s ease-in-out;
+    will-change: transform;
+    touch-action: pan-y;
+  }
+
+  .industries_slide {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 0 10px;
+  }
+
+  .industries_item {
+    background: #212025;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* dots */
+  .industries_dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    background: #555;
+    border-radius: 50%;
+  }
+
+  .activeDot {
+    background: #fff;
+    width: 22px;
+    border-radius: 6px;
+  }
+}
 
 /* section 7  */
 /* components/HowWeWork.module.css */
@@ -2676,3 +2750,79 @@
     border-radius: 10px;
   }
 }
+
+
+/* WhyBrandStory — Mobile swipeable card */
+.WhyBrandStoryMobileCard {
+  width: 100%;
+  border-radius: 40px;
+  padding: 28px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  position: relative;
+  transition: background-color 0.35s ease;
+}
+
+.WhyBrandStoryMobileCardContent {
+  flex: 1;
+  text-align: center;
+}
+
+.WhyBrandStoryMobileCardTitle {
+  font-family: var(--font-family-bold);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.WhyBrandStoryMobileCardTitle span {
+  font-family: var(--font-family-gilory-regular);
+}
+
+.WhyBrandStoryMobileCardDesc {
+  font-family: var(--font-family-gilory-regular);
+  font-size: 12px;
+  line-height: 140%;
+  color: #000;
+}
+
+/* Icon selector row */
+.WhyBrandStoryMobileIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  /* margin-top: 28px; */
+  padding-top: 16px;
+}
+
+.WhyBrandStoryMobileIconBtn {
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  /* opacity: 0.5; */
+  transition: opacity 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+
+.WhyBrandStoryMobileIconBtn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.WhyBrandStoryMobileIconBtnActive {
+  /* opacity: 1; */
+  transform: scale(1.2);
+}
+
+
