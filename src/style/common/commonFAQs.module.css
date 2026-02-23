@@ -29,7 +29,7 @@
 
 .faqItem:hover {
   background: url('/images/faq-bg-lg.png');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
 }

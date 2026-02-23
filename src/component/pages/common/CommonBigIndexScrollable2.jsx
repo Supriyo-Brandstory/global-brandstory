@@ -11,7 +11,7 @@ import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 export const CommonBigIndexScrollable2 = ({
   heading,
   description,
-  data,
+  data = [],
   footer,
   caseLabel = null,
   boxHeight,
@@ -22,12 +22,12 @@ export const CommonBigIndexScrollable2 = ({
   const nextRef = useRef(null);
 
   const leftPanelStyle =
-  typeof leftPanelWidth !== "undefined"
-    ? {
+    typeof leftPanelWidth !== "undefined"
+      ? {
         flex: `0 0 ${typeof leftPanelWidth === "number" ? `${leftPanelWidth}px` : leftPanelWidth}`,
         minWidth: typeof leftPanelWidth === "number" ? `${leftPanelWidth}px` : leftPanelWidth,
       }
-    : undefined;
+      : undefined;
 
   return (
     <>
@@ -179,11 +179,13 @@ export const CommonBigIndexScrollable2 = ({
             }}
             onSwiper={(swiper) => {
               setTimeout(() => {
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
+                if (swiper.params?.navigation && swiper.navigation) {
+                  swiper.params.navigation.prevEl = prevRef.current;
+                  swiper.params.navigation.nextEl = nextRef.current;
+                  swiper.navigation.destroy();
+                  swiper.navigation.init();
+                  swiper.navigation.update();
+                }
               });
             }}
             className={styles.caseWrapper}

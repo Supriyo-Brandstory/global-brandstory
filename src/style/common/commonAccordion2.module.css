@@ -49,7 +49,7 @@
 
 .accordionItem:hover {
   background: url('/images/faq-bg-lg.png');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -85,6 +85,7 @@
   transition: transform 0.3s ease;
   transform-origin: center;
 }
+
 .accordionItem:hover .arrow {
   filter: brightness(0) invert(1);
 }
@@ -101,15 +102,15 @@
   /* border-top: 1px solid #333; */
 }
 
-.accordionHeader h4{
+.accordionHeader h4 {
   text-align: left;
 }
 
 .accordionContent p {
-    font-size: 18px;
+  font-size: 18px;
 }
 
-.btn{
+.btn {
   border: 1px solid #F15D22;
   color: #F15D22;
   padding: 10px 50px;
@@ -129,22 +130,25 @@
 
 
 @media (max-width: 768px) {
-  .title{
+  .title {
     font-size: 28px;
   }
-  .description{
+
+  .description {
     font-size: 18px;
   }
+
   .wrapper {
     padding: 20px;
     margin: 50px 0;
     flex-direction: column;
   }
+
   .highlited {
     font-size: 20px;
   }
 
-  .accordionHeader h4{
+  .accordionHeader h4 {
     width: 80%;
   }
 }

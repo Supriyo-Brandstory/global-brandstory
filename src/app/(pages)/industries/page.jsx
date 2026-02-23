@@ -9,18 +9,18 @@ import { Results } from '@/component/pages/RealEstate/Results';
 import { Faq } from '@/component/pages/RealEstate/Faq';
 import { Adv } from '@/component/pages/RealEstate/Adv';
 
-const page= ()=>{
-    return(
+const page = () => {
+    return (
         <>
-            <Banner /><CommonDivider/>
-            <Objectives /><CommonDivider/>
+            <Banner /><CommonDivider />
+            <Objectives /><CommonDivider />
             <KeyChallenges />
-            <OurGrowth /><CommonDivider/>
-            <DigitalMarketing /><CommonDivider/>
-            <Growth /><CommonDivider/>
-            <Results /><CommonDivider/>
-            <Faq /><CommonDivider/>
-            <Adv /><CommonDivider/>
+            <OurGrowth /><CommonDivider />
+            <DigitalMarketing /><CommonDivider />
+            <Growth /><CommonDivider />
+            <Results /><CommonDivider />
+            <Faq /><CommonDivider />
+            <Adv /><CommonDivider />
         </>
     )
 }

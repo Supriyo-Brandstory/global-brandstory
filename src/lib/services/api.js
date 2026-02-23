@@ -171,3 +171,57 @@ export async function getCaseStudyBySlug(caseStudySlug) {
 
   return fetchStrapi(`casestudies?${query}`);
 }
+
+export async function getIndustriesBySlug(pageSlug) {
+  const query = qs.stringify(
+    {
+      filters: {
+        pageSlug: {
+          $eq: pageSlug,
+        },
+      },
+      populate: {
+        sections: {
+          on: {
+            "section.ind-banner": {
+              populate: "*",
+            },
+            "section.ind-objectives": {
+              populate: "*",
+            },
+            "section.accordion2": {
+              populate: "*",
+            },
+            "section.ind-growth": {
+              populate: "*",
+            },
+            'section.ind-digital-marketing': {
+              populate: {
+                dmcase: {
+                  populate: {
+                    services: "*",
+                  },
+                },
+              },
+            },
+            'section.horizontaltab': {
+              populate: '*',
+            },
+            'section.ind-results': {
+              populate: '*',
+            },
+            'section.faq': {
+              populate: '*',
+            },
+            'section.adv': {
+              populate: '*',
+            },
+          },
+        },
+      },
+    },
+    { encodeValuesOnly: true }
+  );
+
+  return fetchStrapi(`industries?${query}`);
+}

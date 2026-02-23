@@ -3,7 +3,7 @@ import { useState } from 'react'
 import styles from '@/style/common/commonOptionSelector.module.css'
 import { BlocksRenderer } from '@strapi/blocks-react-renderer'
 
-export const CommonOptionSelector = ({ title, description, options, footer, splitRatio = 0.4 }) => {
+export const CommonOptionSelector = ({ title, description, options = [], footer, splitRatio = 0.4 }) => {
   const [selected, setSelected] = useState(0)
   const [fade, setFade] = useState(false)
 

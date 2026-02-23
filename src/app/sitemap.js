@@ -63,31 +63,69 @@ export default async function sitemap() {
     let dynamicRoutes = [];
     try {
         const response = await fetchStrapi('landing-pages?fields[0]=fullPath&pagination[limit]=1000');
-        dynamicRoutes = response?.data?.map((page) => ({
-            url: `${BASE_URL}/${page.fullPath}`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.7,
-        })) || [];
+        dynamicRoutes = response?.data?.map((page) => {
+            const data = page.attributes || page;
+            return {
+                url: `${BASE_URL}/${data.fullPath}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly',
+                priority: 0.7,
+            };
+        }) || [];
     } catch (error) {
         console.error('Error fetching dynamic landing pages for sitemap:', error);
+    }
+
+    let caseRoutes = [];
+    try {
+        const response = await fetchStrapi('casestudies?fields[0]=caseStudySlug&pagination[limit]=1000');
+        caseRoutes = response?.data?.map((page) => {
+            const data = page.attributes || page;
+            return {
+                url: `${BASE_URL}/case-studies/${data.caseStudySlug}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly',
+                priority: 0.7,
+            };
+        }) || [];
+    } catch (error) {
+        console.error('Error fetching dynamic case studies for sitemap:', error);
+    }
+
+    let indRoutes = [];
+    try {
+        const response = await fetchStrapi('industries?fields[0]=pageSlug&pagination[limit]=1000');
+        indRoutes = response?.data?.map((page) => {
+            const data = page.attributes || page;
+            return {
+                url: `${BASE_URL}/industries/${data.pageSlug}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly',
+                priority: 0.7,
+            };
+        }) || [];
+    } catch (error) {
+        console.error('Error fetching dynamic case studies for sitemap:', error);
     }
 
     // 3. Fetch Blogs from Strapi (If any)
     let blogRoutes = [];
     try {
         const response = await fetchStrapi('blogs?fields[0]=slug&pagination[limit]=1000');
-        blogRoutes = response?.data?.map((blog) => ({
-            url: `${BASE_URL}/blogs/${blog.slug}`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.6,
-        })) || [];
+        blogRoutes = response?.data?.map((blog) => {
+            const data = blog.attributes || blog;
+            return {
+                url: `${BASE_URL}/blogs/${data.slug}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly',
+                priority: 0.6,
+            };
+        }) || [];
     } catch (error) {
         // Blogs collection might not exist yet or have different structure
-        console.warn('Sitemap: Blogs collection fetch skipped.');
+        console.warn('Sitemap: Blogs collection fetch failed or returned invalid structure.');
     }
 
-    // Combine everything: Local Pages + Strapi Landing Pages + Strapi Blogs
-    return [...staticSitemap, ...dynamicRoutes, ...blogRoutes];
+    // Combine everything: Local Pages + Strapi Landing Pages + Strapi Case Studies + Strapi Blogs
+    return [...staticSitemap, ...dynamicRoutes, ...caseRoutes, ...blogRoutes, ...indRoutes];
 }
