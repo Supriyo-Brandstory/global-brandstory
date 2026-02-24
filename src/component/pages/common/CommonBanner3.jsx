@@ -62,8 +62,26 @@ export const CommonBanner3 = ({
           </div>
         )}
         {/* Description */}
-        {description && (
+        {/* {description && (
           <div className={styles.description}>{renderContent(description)}</div>
+        )} */}
+        {description && (
+          <div className={styles.description}>
+            {typeof description === "string" ? (
+              <p>{description}</p>
+            ) : (
+              <BlocksRenderer
+                content={description}
+                blocks={{
+                  paragraph: ({ children }) => (
+                    <p className="!text-[18px] !leading-[22px]">
+                      {children}
+                    </p>
+                  ),
+                }}
+              />
+            )}
+          </div>
         )}
 
         {/* Stats */}
