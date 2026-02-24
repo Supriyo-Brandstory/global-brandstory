@@ -29,7 +29,7 @@
   padding-top: 0;
   padding-bottom: 0;
   box-sizing: border-box;
-  background: linear-gradient(to right, #0F0F0F 50%, #0f0f0fdf 75%, transparent 100%);            /* solid — matches page bg, masks sliding cards */
+  background: linear-gradient(to right, #0F0F0F 85%, #0f0f0fdf 90%, transparent 100%);            /* solid — matches page bg, masks sliding cards */
   position: relative;
   z-index: 20;                    /* sits above Swiper cards */
 }
