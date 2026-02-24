@@ -225,3 +225,28 @@ export async function getIndustriesBySlug(pageSlug) {
 
   return fetchStrapi(`industries?${query}`);
 }
+
+export async function getAllCaseStudies(page = 1, pageSize = 12) {
+  const query = qs.stringify(
+    {
+      fields: ["caseStudyTitle", "caseStudySlug", "publishedAt"],
+      populate: {
+        caseSections: {
+          on: {
+            "section.case-banner": {
+              populate: "*"
+            },
+          }
+        }
+      },
+      sort: ["publishedAt:desc"],
+      pagination: {
+        page: page,
+        pageSize: pageSize,
+      },
+    },
+    { encodeValuesOnly: true }
+  );
+
+  return fetchStrapi(`casestudies?${query}`);
+}
