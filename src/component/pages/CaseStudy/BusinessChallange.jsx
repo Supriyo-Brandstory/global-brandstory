@@ -6,8 +6,8 @@ export const BusinessChallange = ({ data }) => {
 
   return (
     <CommonText
-      title={title || "Business Challenge - dummy"}
-      description={description || "dummy_para inside the businessChallenge"}
+      title={title}
+      description={description}
     />
   );
 };

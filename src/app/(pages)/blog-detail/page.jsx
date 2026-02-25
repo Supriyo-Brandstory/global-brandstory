@@ -4,7 +4,7 @@ import styles from '@/style/blogdetail.module.css';
 export default function Page() {
   return (
     <div className={styles.page}>
-      
+
       <div className={styles.bg}>
         <img src="/images/Blog/blog-bg-top.webp" alt="image" />
       </div>
@@ -21,9 +21,9 @@ export default function Page() {
 
               </div>
             </header>
-                <button className={styles.bookmark}>
-                  <img src="/images/share.png" alt="Bookmark" />
-                </button>
+            <button className={styles.bookmark}>
+              <img src="/images/share.png" alt="Bookmark" />
+            </button>
 
             <img
               className={styles.heroImage}
@@ -32,7 +32,7 @@ export default function Page() {
             />
 
             <p className={styles.intro}>
-              Digital products today are everywhere—but very few feel human. Most are built for systems, not for people. 
+              Digital products today are everywhere—but very few feel human. Most are built for systems, not for people.
               A truly human digital experience connects with users emotionally, understands their context, and reduces cognitive effort.
             </p>
             <p className={styles.intro}>
@@ -42,10 +42,10 @@ export default function Page() {
             <section id="empathy">
               <h2>Start With Empathy, Not Features</h2>
               <p>
-                Human experiences begin by understanding people, not requirements. Instead of asking "What should this product do?", 
-                great design asks "Who is this for, and what are they going through right now?" Empathy-driven design comes from 
-                observing real behavior, listening to real problems, and mapping emotional journeys. When we design around feelings 
-                like confusion, urgency, or hesitation, interfaces stop feeling mechanical and start feeling responsive. This shift 
+                Human experiences begin by understanding people, not requirements. Instead of asking "What should this product do?",
+                great design asks "Who is this for, and what are they going through right now?" Empathy-driven design comes from
+                observing real behavior, listening to real problems, and mapping emotional journeys. When we design around feelings
+                like confusion, urgency, or hesitation, interfaces stop feeling mechanical and start feeling responsive. This shift
                 turns digital products from tools into companions that guide users rather than overwhelm them.
               </p>
             </section>
@@ -53,7 +53,7 @@ export default function Page() {
             <section id="clarity">
               <h2>Clarity Is Kindness</h2>
               <p>
-                Digital products today are everywhere—but very few feel human. Most are built for systems, not for people. 
+                Digital products today are everywhere—but very few feel human. Most are built for systems, not for people.
                 A truly human digital experience connects with users emotionally, understands their context, and reduces cognitive effort.
               </p>
               <ul className={styles.accentList}>
@@ -86,10 +86,10 @@ export default function Page() {
             <section id="design-everyone">
               <h2>Design for Everyone</h2>
               <p>
-                A truly human experience is one that makes everyone feel included. Design should not assume a single type of user—it 
-                must consider different abilities, environments, and contexts. From readable typography and strong color contrast to 
-                keyboard navigation and screen reader support, inclusive design removes invisible barriers. When products account for 
-                vision, motion, language, and cognitive diversity, they quietly say, "You belong here." Accessibility is not a 
+                A truly human experience is one that makes everyone feel included. Design should not assume a single type of user—it
+                must consider different abilities, environments, and contexts. From readable typography and strong color contrast to
+                keyboard navigation and screen reader support, inclusive design removes invisible barriers. When products account for
+                vision, motion, language, and cognitive diversity, they quietly say, "You belong here." Accessibility is not a
                 compliance task; it's empathy expressed through interface decisions.
               </p>
             </section>
@@ -113,7 +113,7 @@ export default function Page() {
                 The real challenge is making it kinder.
               </p>
               <p>
-                When digital experiences respect time, emotion, and individuality, they stop feeling like tools and start feeling 
+                When digital experiences respect time, emotion, and individuality, they stop feeling like tools and start feeling
                 like companions. That's what makes them truly human.
               </p>
             </section>
@@ -121,7 +121,7 @@ export default function Page() {
             <blockquote className={styles.quoteBlock}>
               "Design that listens to people, builds trust through every interaction, and turns technology into something truly human."
             </blockquote>
-            
+
             <Footer />
           </article>
 
@@ -143,9 +143,9 @@ export default function Page() {
               <h4>Share</h4>
               <div className={styles.socials}>
                 <img src="/images/contact-ico-facebook.svg" alt="Facebook" />
-                  <img src="/images/contact-ico-instagram.svg" alt="Instagram" />
-                  <img src="/images/contact-ico-linkedin.svg" alt="LinkedIn" />
-                  <img src="/images/contact-ico-youtube.svg" alt="YouTube" />
+                <img src="/images/contact-ico-instagram.svg" alt="Instagram" />
+                <img src="/images/contact-ico-linkedin.svg" alt="LinkedIn" />
+                <img src="/images/contact-ico-youtube.svg" alt="YouTube" />
               </div>
             </div>
           </aside>

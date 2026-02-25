@@ -7,7 +7,7 @@ export const StrapiObjectives = ({ data }) => {
 
     const { title, description, cards } = data;
 
-    const heading = title || "fallback - title";
+    const heading = title;
 
     const cases = cards?.map((card) => ({
         title: card.title,
@@ -18,7 +18,7 @@ export const StrapiObjectives = ({ data }) => {
         <CommonBigIndexScrollable2
             data={cases}
             heading={heading}
-            description={description || "fallback - description"}
+            description={description}
             //   caseLabel="Outcome"
             leftPanelWidth="50%"
         />

@@ -3,7 +3,7 @@ import { CommonBigIndexScrollable3 } from "../common/CommonBigIndexScrollable3";
 export const Results = ({ data }) => {
   if (!data) return null;
   const { title, impactCards } = data;
-  const heading = title || "fallback - Results and Business Impact";
+  const heading = title;
 
   const newLabels = impactCards.map((item) => ({
     title: item?.impactPerc,

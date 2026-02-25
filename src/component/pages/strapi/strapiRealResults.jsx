@@ -40,7 +40,7 @@ export const StrapiRealResults = ({ data }) => {
     ];
 
     const footer = data?.bottomPara;
-    console.log("Consoling footer from real results : ", footer)
+    // console.log("Consoling footer from real results : ", footer)
 
     return (
         <CommonBigIndex

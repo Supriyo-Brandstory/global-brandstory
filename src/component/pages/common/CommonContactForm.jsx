@@ -90,15 +90,15 @@ export const CommonContactForm = () => {
                 <div style={{ marginTop: '20px' }} className={styles.contactBox} id={styles.contactNumbers}>
                     <p style={{ textAlign: 'center', paddingBottom: '10px' }}>Call Us</p>
                     <div className={styles.phoneNumbers}>
-                        <div>
+                        <div style={{ display: "none" }}>
                             <img src="/images/mobile-ico.svg" alt="mobile-ico" />
                             <span>India: </span> <a style={{ color: '#F15D22' }} href="tel:+919876543210"> +91 98765 43210</a>
                         </div>
                         <div>
                             <img src="/images/mobile-ico.svg" alt="mobile-ico" />
-                            <span>USA: </span> <a style={{ color: '#F15D22' }} href="tel:+1234567890"> +1 234 567 890</a>
+                            <span>USA: </span> <a style={{ color: '#F15D22' }} href="tel:+17145990207"> +1 7145990207</a>
                         </div>
-                        <div>
+                        <div style={{ display: "none" }}>
                             <img src="/images/mobile-ico.svg" alt="mobile-ico" />
                             <span>UK: </span> <a style={{ color: '#F15D22' }} href="tel:+441234567890"> +44 1234 567890</a>
                         </div>

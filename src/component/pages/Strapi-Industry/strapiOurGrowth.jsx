@@ -42,7 +42,7 @@ export const StrapiOurGrowth = ({ data }) => {
 
   return (
     <section className={styles.howwework_container}>
-      <h2 className={styles.howwework_heading}>{title || "fallback - title"}</h2>
+      <h2 className={styles.howwework_heading}>{title}</h2>
       <div className={styles.steps_wrapper}>
         {step?.map((step) => (
           <div key={step.number} className={styles.howwework_step}>

@@ -15,13 +15,13 @@ export const WhyThisWorked = ({ data }) => {
 
   return (
     <CommonMetrix
-      title={title || "fallback - Why This Worked"}
-      description={description || "fallback - description = A clear structure replaced cluttered messaging, helping visitors quickly understand value and take action. Consistent components reduced friction across pages, while measurable goals kept design and development aligned with outcomes."}
+      title={title}
+      description={description}
       image={imageURL || '/images/CaseStudy/img-3.png'}
       // points={pointList}
       // stats={statsData}
       ratio="4:3"
-      button={button?.buttonLabel || 'fallback - btnLabel'}
+      button={button?.buttonLabel}
       butnLink={button?.buttonUrl || '#'}
     />
   );

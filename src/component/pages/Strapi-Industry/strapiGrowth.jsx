@@ -4,7 +4,7 @@ export const StrapiGrowth = ({ data }) => {
     if (!data) return null;
     const { title, description, tabs } = data;
 
-    const desc = description || "fallback"
+    const desc = description;
 
     const options = tabs?.map((tab) => ({
         heading: tab.title,

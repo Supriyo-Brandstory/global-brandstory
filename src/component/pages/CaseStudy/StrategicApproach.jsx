@@ -4,7 +4,7 @@ export const StrategicApproach = ({ data }) => {
   if (!data) return null;
   const { title, description, card } = data;
 
-  const heading = title || "Strategic Approach - fallback";
+  const heading = title;
 
   const newCases = card?.map((item) => ({
     title: item?.title,
@@ -33,7 +33,7 @@ export const StrategicApproach = ({ data }) => {
     <CommonBigIndexScrollable2
       data={newCases}
       heading={heading}
-      description={description || "We focused on aligning clarity, structure, and intent before execution. - fallback"}
+      description={description}
     //   caseLabel="Outcome"
     />
   );

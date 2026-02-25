@@ -20,7 +20,7 @@ export const Implementaion = ({ data }) => {
 
   return (
     <CommonMetrix
-      title={title || "fallback - Implementation Highlights"}
+      title={title}
       //   description="Primary goal was to transform the website into a consistent lead-generation channel."
       image={imageURL || '/images/CaseStudy/img-3.png'}
       // points={pointList}

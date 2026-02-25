@@ -48,8 +48,8 @@ export const Objectives = ({ data }) => {
 
   return (
     <CommonMetrix
-      title={title || "Objectives and Success Metrics - fallback"}
-      description={description || "Primary goal was to transform the website into a consistent lead-generation channel. - fallback"}
+      title={title}
+      description={description}
       points={newPointlist}
       stats={newStatsData}
     />

@@ -12,7 +12,7 @@ export const StrapiKeyChallenges = ({ data }) => {
 
     return (
         <CommonAccordion2
-            title={title || "fallback - title"}
+            title={title}
             items={accordionData}
         />
     );

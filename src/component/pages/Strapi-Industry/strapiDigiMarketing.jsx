@@ -4,7 +4,7 @@ export const StrapiDigitalMarketing = ({ data }) => {
     if (!data) return null;
 
     const { title, description, dmcase } = data;
-    const heading = title || "fallback - heading";
+    const heading = title;
 
     const newCases = dmcase?.map((item) => ({
         title: item.title,
@@ -15,7 +15,7 @@ export const StrapiDigitalMarketing = ({ data }) => {
         <CommonBigIndexScrollable2
             data={newCases}
             heading={heading}
-            description={description || 'fallback - description'}
+            description={description}
             leftPanelWidth="50%"
         />
     );

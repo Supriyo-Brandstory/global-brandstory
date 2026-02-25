@@ -12,7 +12,7 @@ export const StrapiResults = ({ data }) => {
     return (
         <CommonBigIndexScrollable3
             data={labels}
-            heading={title || "fallback - title"}
+            heading={title}
         />
     );
 };

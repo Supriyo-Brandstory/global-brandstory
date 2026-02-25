@@ -12,6 +12,13 @@ export const metadata = {
   verification: {
     google: "X2GZd5fccCp2LKMZqSoTyGSxXE91RM7aF9t70UKwEjQ",
   },
+  icons: {
+    icon: [
+      { url: "/favicon-24x24.png", sizes: "24x24", type: "image/png" },
+      { url: "/favicon-50x50.png", sizes: "50x50", type: "image/png" },
+      { url: "/favicon-150x150.png", sizes: "150x150", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {

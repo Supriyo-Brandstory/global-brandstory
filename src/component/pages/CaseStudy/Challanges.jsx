@@ -5,7 +5,7 @@ export const Challanges = ({ data }) => {
   const { title, csCards } = data;
 
 
-  const heading = title || "fallback - Challenges and Resolutions";
+  const heading = title;
 
   const newCases = csCards.map((item) => ({
     description: `<b>Challenge</b><br/>${item.csChallenge}<br/><br/><b>Resolution</b><br/>${item.csResolution}<br/><br/><b>Result</b><br/>${item.csResult}`

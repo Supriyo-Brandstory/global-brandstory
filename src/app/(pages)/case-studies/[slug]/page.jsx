@@ -23,6 +23,53 @@ const componentMap = {
     "section.section-whythis-worked": WhyThisWorked, //done
 };
 
+/* ---------------- METADATA ---------------- */
+
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+    const response = await getCaseStudyBySlug(slug);
+    const pageData = response?.data?.[0]?.attributes || response?.data?.[0];
+
+    if (!pageData) {
+        return {
+            title: "Case Study Not Found",
+            robots: { index: false, follow: false },
+        };
+    }
+
+    const {
+        seoTitle,
+        seoDescription,
+        canonical,
+        noindex,
+        nofollow,
+        ogimage,
+    } = pageData;
+
+    const title = seoTitle || `Case Study - ${slug}`;
+    const description = seoDescription || "";
+
+    const canonicalUrl = canonical || `https://brandstoryglobal.com/case-studies/${slug}`;
+
+    return {
+        title,
+        description,
+        alternates: { canonical: canonicalUrl },
+        robots: {
+            index: !noindex,
+            follow: !nofollow,
+        },
+        openGraph: {
+            title,
+            description,
+            url: canonicalUrl,
+            images: ogimage ? [{ url: ogimage.url }] : [],
+        },
+    };
+}
+
+/* ---------------- PAGE ---------------- */
+
 const page = async ({ params }) => {
     const { slug } = await params;
     const response = await getCaseStudyBySlug(slug);

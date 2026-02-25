@@ -5,9 +5,9 @@ export const StrapiBanner = ({ data }) => {
     const { title, description, highlights, button1, button2 } = data;
     return (
         <CommonBanner3
-            heading={title || "fallback - title"}
+            heading={title}
 
-            description={description || "fallback - description"}
+            description={description}
 
             highlights={highlights?.map((item => item.highlight)) || []}
             primaryCtaText={button1?.buttonLabel}
