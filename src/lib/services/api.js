@@ -168,7 +168,6 @@ export async function getCaseStudyBySlug(caseStudySlug) {
     },
     { encodeValuesOnly: true }
   );
-
   return fetchStrapi(`casestudies?${query}`);
 }
 
@@ -249,4 +248,32 @@ export async function getAllCaseStudies(page = 1, pageSize = 12) {
   );
 
   return fetchStrapi(`casestudies?${query}`);
+}
+
+export async function getBlogBySlug(slug) {
+  const query = qs.stringify(
+    {
+      filters: {
+        blogSlug: {
+          $eq: slug,
+        },
+      },
+      populate: {
+        blogImage: { populate: "*" },
+        contentSection: {
+          on: {
+            "element.blog-content": { populate: "*" },
+            "element.blog-image": {
+              populate: {
+                blogImage: { populate: "*" }
+              }
+            }
+          }
+        }
+      }
+    },
+    { encodeValuesOnly: true }
+  );
+
+  return fetchStrapi(`blogs?${query}`);
 }

@@ -1,100 +1,151 @@
-// app/blog/[slug]/page.jsx  (or pages/blog/[slug].js)
+import { Footer } from '@/component/pages/PrivacyPolicy/Footer';
+import styles from '@/style/blogdetail.module.css';
+import { getBlogBySlug } from '@/lib/services/api';
+import TableOfContents from '@/component/pages/Blogs/blogTableOfContent';
+import BlogContentRenderer from '@/component/pages/Blogs/BlogContentRenderer';
+import { notFound } from 'next/navigation';
 
-import BlogDetailContent from "@/component/pages/Blogs/BlogDetailContent";
-import ShareButtons from "@/component/pages/Blogs/blogShareButton";
-import TableOfContents from "@/component/pages/Blogs/blogTableOfContent";
-import Image from "next/image";
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+    const response = await getBlogBySlug(slug);
+    const blog = response?.data?.[0]?.attributes || response?.data?.[0];
 
-export default function DynamicBlogPage() {
-    // dummy headings (later generate from content)
-    const headings = [
-        { id: "intro", text: "Introduction" },
-        { id: "benefits", text: "Benefits" },
-        { id: "features", text: "Features" },
-        { id: "conclusion", text: "Conclusion" },
-    ];
+    if (!blog) {
+        return {
+            title: "Blog Not Found",
+        };
+    }
+
+    const { blogTitle, blogMetaTitle, blogMetaDescription, blogImage } = blog;
+    const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://127.0.0.1:1337';
+    const ogImageUrl = blogImage ? (blogImage.url.startsWith('http') ? blogImage.url : `${STRAPI_URL}${blogImage.url}`) : "";
+
+    return {
+        title: blogMetaTitle || blogTitle || "Blog Detail",
+        description: blogMetaDescription || "Read our latest blog post.",
+        alternates: {
+            canonical: `https://globalbrandstory.com/blogs/${slug}`,
+        },
+        robots: {
+            index: true,
+            follow: true,
+        },
+        openGraph: {
+            title: blogMetaTitle || blogTitle,
+            description: blogMetaDescription,
+            url: `https://globalbrandstory.com/blogs/${slug}`,
+            images: ogImageUrl ? [{ url: ogImageUrl }] : [],
+        },
+    };
+}
+
+export default async function Page({ params }) {
+    const { slug } = await params;
+    const blogData = await getBlogBySlug(slug);
+    const blog = blogData?.data?.[0]?.attributes || blogData?.data?.[0];
+
+    if (!blog) {
+        notFound();
+    }
+
+    const { blogTitle, blogDate, blogImage, contentSection, blogQuote } = blog;
+
+    // Extract headings for Table of Content from Dynamic Zone
+    const dynamicHeadings = contentSection
+        ?.filter(section => section.__component === 'element.blog-content')
+        ?.flatMap(section =>
+            section.blogContent
+                ?.filter(block => block.type === 'heading' && block.level === 2)
+                ?.map((block, index) => {
+                    const text = block.children?.map(child => child.text).join('') || '';
+                    const id = text.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+                    return { id: id || `heading-${index}`, text };
+                })
+        ) || [];
+
+    const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://127.0.0.1:1337';
+    const heroImageUrl = blogImage ? (blogImage.url.startsWith('http') ? blogImage.url : `${STRAPI_URL}${blogImage.url}`) : "/images/Blog/content-img-1.png";
 
     return (
-        <main className="py-20">
-            <div className="container px-4 mx-auto">
-                <div className="mb-8 max-w-5xl mt-10">
-                    {/* title, tag and share button content */}
-                    <div className="space-y-4">
-                        <div className="">
-                            <div className="tag-cards flex flex-wrap gap-3">
-                                <div className="bg-[#FDF6F0] px-3 py-2">
-                                    <h3 className="text-[#F15D22] text-[14px]">Experience Design</h3>
-                                </div>
-                                <div className="bg-[#FDF6F0] px-3 py-2">
-                                    <h3 className="text-[#F15D22] text-[14px]">UX</h3>
-                                </div>
-                            </div>
-                            <div>
-                                {/* <Image src={""}/> */}
-                            </div>
-                        </div>
-                        <div>
-                            <h1 className="text-3xl ">What Makes Digital <br />Experiences Truly Human</h1>
-                        </div>
-                        <div className="flex flex-wrap gap-3">
-                            <div className="rounded-full">
-                                <Image
-                                    src={"/assets/images/blogs/author.png"}
-                                    alt="Author Image"
-                                    width={28}
-                                    height={28}
-                                    className="rounded-full"
-                                />
-                            </div>
-                            <div>
-                                <p className="text-[#696A75] text-[24px] font-regular">Brandstory</p>
-                            </div>
-                            <div>
-                                <p className="text-[#696A75] text-[18px] font-regular">January 3, 2026</p>
-                            </div>
-                        </div>
+        <div className={styles.page}>
 
-                    </div>
-                </div>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-                    {/* Left Content */}
-                    <div className="lg:col-span-2">
-                        <div className="mb-3">
-                            <Image
-                                src={"/assets/images/blogs/blog-detail.png"}
-                                alt="Blog Preview Image"
-                                width={800}
-                                height={400}
-                                className="w-full h-auto rounded-lg mb-8"
-                            />
-                        </div>
-                        <BlogDetailContent
-                            content={
-                                <>
-                                    <h1 id="intro">Introduction</h1>
-                                    <p>This is your blog content from Strapi.</p>
-
-                                    <h2 id="benefits">Benefits</h2>
-                                    <p>Benefits section content...</p>
-
-                                    <h2 id="features">Features</h2>
-                                    <p>Features section content...</p>
-
-                                    <h2 id="conclusion">Conclusion</h2>
-                                    <p>Conclusion content...</p>
-                                </>
-                            }
-                        />
-                    </div>
-
-                    {/* Right Sidebar */}
-                    <div className="lg:col-span-1">
-                        <TableOfContents headings={headings} />
-                        <ShareButtons/>
-                    </div>
-                </div>
-
+            <div className={styles.bg}>
+                <img src="/images/Blog/blog-bg-top.webp" alt="image" />
             </div>
-        </main>
+
+            <main className={styles.container}>
+                <div className={styles.layout}>
+
+                    {/* LEFT – ARTICLE */}
+                    <article className={styles.article}>
+                        <header className={styles.header}>
+                            <h1>{blogTitle || "What Makes Digital Experiences Truly Human"}</h1>
+                            <div className={styles.meta}>
+                                <span className={styles.date}>{blogDate || "January 2, 2026"}</span>
+                            </div>
+                        </header>
+                        <button className={styles.bookmark}>
+                            <img src="/images/share.png" alt="Bookmark" />
+                        </button>
+
+                        <img
+                            className={styles.heroImage}
+                            src={heroImageUrl}
+                            alt={blogTitle || "Blog Hero"}
+                        />
+
+                        {/* RENDER DYNAMIC ZONE */}
+                        {contentSection?.map((section, index) => {
+                            if (section.__component === 'element.blog-content') {
+                                return (
+                                    <BlogContentRenderer
+                                        key={index}
+                                        content={section.blogContent}
+                                        strapiUrl={STRAPI_URL}
+                                    />
+                                );
+                            }
+                            if (section.__component === 'element.blog-image') {
+                                const sectionImg = section.blogImage;
+                                if (!sectionImg) return null;
+                                const sectionImgUrl = sectionImg.url.startsWith('http') ? sectionImg.url : `${STRAPI_URL}${sectionImg.url}`;
+                                return (
+                                    <img
+                                        key={index}
+                                        className={styles.inlineImage}
+                                        src={sectionImgUrl}
+                                        alt={sectionImg.alternativeText || ""}
+                                    />
+                                );
+                            }
+                            return null;
+                        })}
+                        <blockquote className={styles.quoteBlock}>
+                            {`"${blogQuote}"`}
+                        </blockquote>
+
+                        <Footer />
+                    </article>
+
+                    {/* RIGHT – SIDEBAR */}
+                    <aside className={styles.sidebar}>
+
+                        <div className={styles.sidebarCard}>
+                            <TableOfContents headings={dynamicHeadings} />
+                        </div>
+
+                        <div className={styles.sidebarCard}>
+                            <h4>Share</h4>
+                            <div className={styles.socials}>
+                                <img src="/images/contact-ico-facebook.svg" alt="Facebook" />
+                                <img src="/images/contact-ico-instagram.svg" alt="Instagram" />
+                                <img src="/images/contact-ico-linkedin.svg" alt="LinkedIn" />
+                                <img src="/images/contact-ico-youtube.svg" alt="YouTube" />
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </main>
+        </div>
     );
 }
