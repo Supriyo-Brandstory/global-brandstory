@@ -18,7 +18,8 @@ export async function generateMetadata({ params }) {
 
     const { blogTitle, blogMetaTitle, blogMetaDescription, blogImage } = blog;
     const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://127.0.0.1:1337';
-    const ogImageUrl = blogImage ? (blogImage.url.startsWith('http') ? blogImage.url : `${STRAPI_URL}${blogImage.url}`) : "";
+    const STRAPI_IMG_URL = process.env.NEXT_PUBLIC_STRAPI_URL_IMAGE;
+    const ogImageUrl = blogImage ? (blogImage.url.startsWith('http') ? blogImage.url : `${STRAPI_IMG_URL}${blogImage.url}`) : "";
 
     return {
         title: blogMetaTitle || blogTitle || "Blog Detail",
@@ -64,7 +65,8 @@ export default async function Page({ params }) {
         ) || [];
 
     const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://127.0.0.1:1337';
-    const heroImageUrl = blogImage ? (blogImage.url.startsWith('http') ? blogImage.url : `${STRAPI_URL}${blogImage.url}`) : "/images/Blog/content-img-1.png";
+    const STRAPI_IMG_URL = process.env.NEXT_PUBLIC_STRAPI_URL_IMAGE;
+    const heroImageUrl = blogImage ? (blogImage.url.startsWith('http') ? blogImage.url : `${STRAPI_IMG_URL}${blogImage.url}`) : "/images/Blog/content-img-1.png";
 
     return (
         <div className={styles.page}>
@@ -108,7 +110,7 @@ export default async function Page({ params }) {
                             if (section.__component === 'element.blog-image') {
                                 const sectionImg = section.blogImage;
                                 if (!sectionImg) return null;
-                                const sectionImgUrl = sectionImg.url.startsWith('http') ? sectionImg.url : `${STRAPI_URL}${sectionImg.url}`;
+                                const sectionImgUrl = sectionImg.url.startsWith('http') ? sectionImg.url : `${STRAPI_IMG_URL}${sectionImg.url}`;
                                 return (
                                     <img
                                         key={index}
