@@ -24,6 +24,7 @@ export const ClientStories =()=>{
   ]
   const footer = "Our work speaks through measurable results. Every project tells a story of transformation."
     return <CommonBigIndex 
+    caseLabel="Case"
         data={cases}
         description={description}
         heading={heading}

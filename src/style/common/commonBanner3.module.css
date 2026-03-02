@@ -215,7 +215,7 @@
   }
 
   .heading {
-    font-size: 32px;
+    font-size: 36px;
     line-height: 1.2;
     margin-bottom: 40px;
   }
@@ -261,6 +261,7 @@
 
   .statItem {
     max-width: none;
+    line-height: 1;
     /* width: 45%; */
   }
 

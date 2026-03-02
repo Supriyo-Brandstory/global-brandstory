@@ -52,41 +52,77 @@ const TechTabs = () => {
     const [activeTab, setActiveTab] = useState('Frontend');
 
     return (
-        <div className={`${styles.techtab_containerbg}`}>
+        <div className={styles.techtab_containerbg}>
             <div className={styles.techtab_container}>
                 <h2 className={styles.techtab_title}>Built With the Tools That Build Today's Brands</h2>
                 <p className={styles.techtab_subtitle}>
                     Not Every Agency Gets Tech Right – Or Makes It Work For Your Business. At BrandStory, We Use The Kind Of Technology That
-                    Doesn’t Just Sound Smart, It Actually Helps You Grow.
+                    Doesn't Just Sound Smart, It Actually Helps You Grow.
                 </p>
 
-                <div className={styles.techtab_tabContainer}>
-                    {Object.keys(techData).map((tab) => (
-                        <div
-                            key={tab}
-                            className={`${styles.techtab_tab} ${activeTab === tab ? styles.techtab_active : ''}`}
-                            onClick={() => setActiveTab(tab)}
-                        >
-                            <img src={techData[tab].icon} alt={tab} className={styles.techtab_tabIcon} />
-                            <span>{tab}</span>
-                        </div>
-                    ))}
-                </div>
-
-                <hr className={styles.techtab_separator} />
-
-                <div className={styles.techtab_items}>
-                    {techData[activeTab].items.map((tool) => (
-                        <div className={styles.techtab_itemContainer} key={tool.name}>
-                            <div className={styles.techtab_item}>
-                                <img src={tool.icon} alt={tool.name} className={styles.techtab_itemIcon} />
-
+                {/* DESKTOP VIEW - Hidden on mobile */}
+                <div className={styles.desktopView}>
+                    <div className={styles.techtab_tabContainer}>
+                        {Object.keys(techData).map((tab) => (
+                            <div
+                                key={tab}
+                                className={`${styles.techtab_tab} ${activeTab === tab ? styles.techtab_active : ''}`}
+                                onClick={() => setActiveTab(tab)}
+                            >
+                                <img src={techData[tab].icon} alt={tab} className={styles.techtab_tabIcon} />
+                                <span>{tab}</span>
                             </div>
-                            <div className={styles.techtab_tabText} dangerouslySetInnerHTML={{__html: tool.name}}></div>
-                        </div>
+                        ))}
+                    </div>
 
-                    ))}
+                    <hr className={styles.techtab_separator} />
+
+                    <div className={styles.techtab_items}>
+                        {techData[activeTab].items.map((tool) => (
+                            <div className={styles.techtab_itemContainer} key={tool.name}>
+                                <div className={styles.techtab_item}>
+                                    <img src={tool.icon} alt={tool.name} className={styles.techtab_itemIcon} />
+                                </div>
+                                <div className={styles.techtab_tabText} dangerouslySetInnerHTML={{__html: tool.name}}></div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
+
+                {/* MOBILE VIEW - Hidden on desktop */}
+                <div className={styles.mobileView}>
+                    <div className={styles.mobileTabContainer}>
+                        {Object.keys(techData).map((tab) => (
+                            <div key={tab} className={styles.mobileTabWrapper}>
+                                <div
+                                    className={`${styles.mobileTab} ${activeTab === tab ? styles.mobileTabActive : ''}`}
+                                    onClick={() => setActiveTab(tab)}
+                                >
+                                    <img src={techData[tab].icon} alt={tab} className={styles.mobileTabIcon} />
+                                    <span>{tab}</span>
+                                </div>
+                                
+                                {/* Icons appear right after each button when active */}
+                                {activeTab === tab && (
+                                    <div className={styles.mobileItems}>
+                                        {techData[tab].items.map((tool) => (
+                                            <div className={styles.mobileItemContainer} key={tool.name}>
+                                                <div className={styles.mobileItem}>
+                                                    <img src={tool.icon} alt={tool.name} className={styles.mobileItemIcon} />
+                                                </div>
+                                                <div 
+                                                    className={styles.mobileItemText} 
+                                                    dangerouslySetInnerHTML={{__html: tool.name}}
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
             </div>
         </div>
     );

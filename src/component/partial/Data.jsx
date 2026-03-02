@@ -467,7 +467,7 @@ export const menuData = [
               { name: "Data Visualization Services", link: "/services/data-analytics/data-visualization" }
             ]
           },
-          { name: "cloud consulting", link: "/services/cloud-consulting", image: "/icons/menuicon.png", children: [] },
+          { name: "Cloud Consulting", link: "/services/cloud-consulting", image: "/icons/menuicon.png", children: [] },
           { name: "Managed Services", link: "/services/managed-services", image: "/icons/menuicon.png", children: [] },
           { name: "Enterprise Mobility", link: "/services/enterprise-mobility", image: "/icons/menuicon.png", children: [] },
           { name: "Data Management", link: "/services/data-management", image: "/icons/menuicon.png", children: [] }
@@ -478,6 +478,10 @@ export const menuData = [
         link: "/services/digital-marketing",
         image: "/images/HeaderIcons/what-we-do/4.svg",
         children: [
+          {
+            name: "Digital Marketing",
+            link: '/services/digital-marketing'
+          },
           {
             name: "SEO Services",
             link: "/services/seo",

@@ -1328,6 +1328,130 @@
   }
 }
 
+
+/* ============================================
+   DESKTOP VIEW - Keep existing styles as is
+   ============================================ */
+
+/* Hide mobile view on desktop */
+.desktopView {
+    display: block;
+}
+
+.mobileView {
+    display: none;
+}
+
+/* ============================================
+   MOBILE VIEW - New accordion style
+   ============================================ */
+
+@media (max-width: 768px) {
+    /* Toggle visibility */
+    .desktopView {
+        display: none;
+    }
+
+    .mobileView {
+        display: block;
+    }
+
+    /* Container */
+    .mobileTabContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .mobileTabWrapper {
+        width: 100%;
+    }
+
+    /* Tab button */
+    .mobileTab {
+        width: 100%;
+        padding: 16px 20px;
+        border-radius: 12px;
+        background-color: #FFEEC2;
+        color: #444;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-family: var(--font-family-gilory-regular);
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .mobileTabIcon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .mobileTabActive {
+        background-color: #FFD675;
+        color: #0F0F0F;
+        font-family: var(--font-family-bold);
+    }
+
+    /* Icons row - appears below active button */
+    .mobileItems {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        padding: 20px 10px;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .mobileItemContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 70px;
+    }
+
+    .mobileItem {
+        background-color: #FFFFFF;
+        border-radius: 12px;
+        padding: 12px;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobileItemIcon {
+        width: 46px;
+        height: 46px;
+        object-fit: contain;
+    }
+
+    .mobileItemText {
+        margin-top: 8px;
+        font-family: var(--font-family-gilory-regular);
+        font-size: 11px;
+        line-height: 1.2;
+        color: #FFFFFF;
+        text-align: center;
+    }
+}
 /* section 7  */
 /* components/HowWeWork.module.css */
 

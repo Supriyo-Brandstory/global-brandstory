@@ -280,4 +280,8 @@
   .card::after {
     opacity: 1;
   }
+
+  .mobileStatSlide{
+    margin-right: 12px;
+  }
 }

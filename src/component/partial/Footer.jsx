@@ -124,7 +124,7 @@ export default function Footer() {
               <li><Link href="/services/back-end-development">Backend</Link></li>
               <li><Link href="/services/mobile-app-development">Mobile App</Link></li>
               <li><Link href="/services/cloud">Cloud</Link></li>
-              <li><Link href="/services/ai-ml">AI / ML & Data</Link></li>
+              <li><Link href="/services/ai-development">AI / ML & Data</Link></li>
             </ul>
           </div>
 

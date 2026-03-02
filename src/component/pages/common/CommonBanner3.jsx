@@ -74,7 +74,7 @@ export const CommonBanner3 = ({
                 content={description}
                 blocks={{
                   paragraph: ({ children }) => (
-                    <p className="!text-[18px] !leading-[22px]">
+                    <p>
                       {children}
                     </p>
                   ),
