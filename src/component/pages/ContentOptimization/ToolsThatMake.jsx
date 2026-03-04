@@ -40,8 +40,6 @@ export const ToolsThatMake = () => {
                 title={title}
                 description={description}
                 data={data} 
-                paddingBottom="10px"
-                footer="These Tools Allow Us To Deliver Precision-Driven Improvements Without Overcomplicating The Process." 
             />
             <p className='max-w-[1200px] text-center mx-auto mb-30'>
                 These tools allow us to deliver precision-driven improvements without overcomplicating the process.
