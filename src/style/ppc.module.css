@@ -43,9 +43,24 @@
     .frame {
         text-align: center;
     }
-
+    .heading{
+        font-size: 28px;
+    }
+    .subtext{
+        font-size: 18px;
+    }
+    .description{
+        font-size: 18px;
+    }
     .list {
-        padding-left: 0; /* remove left padding for center alignment */
-        list-style-position: inside; /* keep bullets aligned with text */
+        text-align: left;
+        padding-left: 0;
+        list-style-position: inside;
+    }
+    .highlight{
+        font-size: 18px;
+    }
+    .list li{
+        margin: 0 0 8px 0;
     }
 }

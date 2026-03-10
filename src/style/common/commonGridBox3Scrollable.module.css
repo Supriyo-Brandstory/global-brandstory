@@ -8,12 +8,12 @@
 
 .header {
   max-width: 1000px;
-  margin: 0 auto 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.header h2 {
-  margin-bottom: 15px;
-}
 
 .header p {
   color: #ccc;
@@ -22,7 +22,7 @@
 .swiperContainer {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0;
+  padding: 40px 0;
 }
 
 .card {
@@ -33,7 +33,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 320px;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-clip: padding-box;
@@ -68,7 +67,7 @@
 }
 
 .card p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
   color: #cccccc;
   margin: 0;
@@ -87,8 +86,9 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
+
 
 .prevBtn,
 .nextBtn {
@@ -117,43 +117,86 @@
   cursor: not-allowed;
 }
 
+.footer{
+  margin-top: 30px;
+}
+
+.swiperContainer :global(.swiper-pagination) {
+  display: none;
+}
+
+/* Hide pagination on desktop */
+.swiperContainer :global(.swiper-pagination) {
+  display: none;
+}
+
+/* Mobile pagination */
+@media (max-width: 768px) {
+  .swiperContainer{
+    padding: 20px 0 40px 0;
+  }
+  .swiperContainer :global(.swiper-pagination) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    /* margin-top: 20px; */
+  }
+
+  .swiperContainer :global(.swiper-pagination-bullet) {
+    width: 5px;
+    height: 5px;
+    background: white;
+    opacity: 0.6;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .swiperContainer :global(.swiper-pagination-bullet-active) {
+    width: 10px;
+    height: 10px;
+    opacity: 1;
+  }
+
+  /* Hide arrows on mobile */
+  .navigation {
+    display: none;
+  }
+
+}
 @media (max-width: 768px) {
   .seoSection {
-    margin: 20px 10px;
+    padding: 30px 16px;
   }
+
   
   .header {
     width: 100%;
-    margin-top: 60px;
-    margin-bottom: 0px;
+    gap:8px;
   }
   
   .card h4 {
-    font-size: 20px;
-  }
-  
-  .card p {
     font-size: 16px;
   }
   
-  .navigation {
-    margin-top: 30px;
+  .card p {
+    font-size: 12px;
   }
+  
 }
 
-@media (max-width: 480px) {
-  .prevBtn svg,
-  .nextBtn svg {
-    width: 60px;
-    height: 60px;
-  }
-}
 
-.swiper-slide {
-  display: flex;
+.swiperContainer :global(.swiper-wrapper) {
   align-items: stretch;
 }
 
-.swiper-slide > div {
-  flex: 1;
+.swiperContainer :global(.swiper-slide) {
+  height: auto;
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }

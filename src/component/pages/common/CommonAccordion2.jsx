@@ -49,7 +49,7 @@ const CommonAccordion2 = ({ title, highlited, description, items, button, button
                         {activeIndex === index && (
                             <div className={styles.accordionContent}>
                                 {/* <div dangerouslySetInnerHTML={{__html:item.content}} /> */}
-                                {(item.content || item.para) && (typeof item.content === 'string' ? (<div dangerouslySetInnerHTML={{__html:item.content}} />) : (<BlocksRenderer content={item.para} blocks={{ paragraph: ({ children }) => (<p className="!text-white">{children}</p>) }} />))}
+                                {(item.content || item.para) && (typeof item.content === 'string' ? (<div dangerouslySetInnerHTML={{__html:item.content}} />) : (<BlocksRenderer content={item.para} blocks={{ paragraph: ({ children }) => (<p>{children}</p>) }} />))}
                             </div>
                         )}
                     </div>

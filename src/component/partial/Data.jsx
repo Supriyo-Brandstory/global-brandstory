@@ -133,7 +133,7 @@ export const menuData = [
             image: "/icons/menuicon.png",
             children: [
               { name: "SEO Services (Local, Enterprise, Ecommerce)", link: "/services/seo" },
-              { name: "AEO Optimization (Answer Engine Optimization)", link: "/services/seo/aeo-optimization" },
+              { name: "AEO Optimization (Answer Engine Optimization)", link: "/services/seo/aeo" },
               { name: "SEO for LLMs (AI-first content discoverability)", link: "/services/seo/llm" },
               { name: "Multilingual SEO", link: "/services/seo/international" }
             ]

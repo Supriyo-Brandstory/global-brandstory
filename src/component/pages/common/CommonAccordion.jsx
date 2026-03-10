@@ -23,10 +23,10 @@ const CommonAccordion = ({ title, subheding1, subheding2, items, footer, padding
 
       {subheding2 && (
         renderType === "dynamic" ? (
-          < BlocksRenderer blocks={{ paragraph: ({ children }) => (<p className="!text-white !font-normal">{children}</p>) }} content={subheding2} />
+          < BlocksRenderer blocks={{ paragraph: ({ children }) => (<p>{children}</p>) }} content={subheding2} />
 
         ) : (
-          <div className="text-[20px] mt-4"
+          <div className={styles.subheding2}
             dangerouslySetInnerHTML={{ __html: subheding2 }}
           />
         )
@@ -95,14 +95,14 @@ const CommonAccordion = ({ title, subheding1, subheding2, items, footer, padding
                 </div>
               </button>
               <div className={`${styles.accordionContent} ${activeIndex === index ? styles.open : ''}`}>
-                {item.content && (typeof item.content == "string" ? (<h5 dangerouslySetInnerHTML={{ __html: item.content }} />) : (<BlocksRenderer blocks={{ paragraph: ({ children }) => (<p className="!text-white !w-auto !text-[18px] !font-normal">{children}</p>) }} content={item.content} />))}
+                {item.content && (typeof item.content == "string" ? (<h5 dangerouslySetInnerHTML={{ __html: item.content }} />) : (<BlocksRenderer blocks={{ paragraph: ({ children }) => (<p>{children}</p>) }} content={item.content} />))}
                 {/* {item.content && <h5 dangerouslySetInnerHTML={{ __html: item.content }} />} */}
               </div>
             </div>
           </div>
         ))}
       </div>
-      {footer && (typeof footer == "string" ? <span dangerouslySetInnerHTML={{ __html: footer }} className="pt-10"></span> : <BlocksRenderer blocks={{ paragraph: ({ children }) => (<p className="!text-white">{children}</p>) }} content={footer} />)}
+      {footer && (typeof footer == "string" ? <span dangerouslySetInnerHTML={{ __html: footer }}></span> : <BlocksRenderer blocks={{ paragraph: ({ children }) => (<p className="!text-white">{children}</p>) }} content={footer} />)}
     </div>
   );
 };

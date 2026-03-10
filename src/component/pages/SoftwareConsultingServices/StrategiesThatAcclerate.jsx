@@ -28,13 +28,14 @@ export const StrategiesThatAcclerate =()=>{
                 "Systems are designed to adapt, grow, and evolve alongside your business, ensuring you remain flexible in a changing market.",
             },
         ],
+        footer:'Every strategy is actionable, measurable, and designed for long-term impact.'
     };
 
 
     return (
         <>
             <CommonTwoCard {...data} titleClass="text-center" cardLayout="two-col"/>
-            <p className='max-w-[1200px] text-center mx-auto mb-30'>Every strategy is actionable, measurable, and designed for long-term impact.</p>
+            {/* <p className='max-w-[1200px] text-center mx-auto mb-30'>Every strategy is actionable, measurable, and designed for long-term impact.</p> */}
         </>
     )
 }

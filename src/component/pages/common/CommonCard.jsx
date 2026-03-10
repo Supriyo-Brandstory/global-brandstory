@@ -1,14 +1,13 @@
 "use client";
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import styles from "@/style/common/commonCard.module.css";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
-
-
 
 const CommonCard = ({ seoData, heding, description, footer }) => {
     const prevRef = useRef(null);
@@ -21,41 +20,34 @@ const CommonCard = ({ seoData, heding, description, footer }) => {
             {description && (typeof description === "string" ? (<p className={styles.description} dangerouslySetInnerHTML={{ __html: description }} />) : (<BlocksRenderer content={description} blocks={{ paragraph: ({ children }) => (<p className='!text-white'>{children}</p>) }} />))}
 
             <Swiper
-                modules={[Navigation]}
-                spaceBetween={20}
-                slidesPerView={3}
-                loop={false}
-                navigation={{
-                    prevEl: prevRef.current,
-                    nextEl: nextRef.current,
-                }}
-                onSwiper={(swiper) => {
-                    // Delay setting navigation until refs are ready
-                    setTimeout(() => {
-                        swiper.params.navigation.prevEl = prevRef.current;
-                        swiper.params.navigation.nextEl = nextRef.current;
-
-                        // Re-init navigation
-                        swiper.navigation.destroy();
-                        swiper.navigation.init();
-                        swiper.navigation.update();
-                    });
-                }}
-                // navigation={{
-                //     prevEl: prevRef.current,
-                //     nextEl: nextRef.current,
-                // }}
-                // onBeforeInit={(swiper) => {
-                //     swiper.params.navigation = swiper.params.navigation || {};
-                //     swiper.params.navigation.prevEl = prevRef.current;
-                //     swiper.params.navigation.nextEl = nextRef.current;
-                // }}
-
-                breakpoints={{
-                    320: { slidesPerView: 1 },
-                    768: { slidesPerView: 1 },
-                    1024: { slidesPerView: 3 },
-                }}
+              className={styles.boxWrapper}
+              modules={[Navigation, Pagination]}
+              spaceBetween={20}
+              slidesPerView={3}
+              loop={false}
+              navigation={{
+                prevEl: prevRef.current,
+                nextEl: nextRef.current,
+              }}
+              pagination={{
+                clickable: true,
+                el: `.${styles.customPagination}`,
+              }}
+              onSwiper={(swiper) => {
+                setTimeout(() => {
+                  swiper.params.navigation.prevEl = prevRef.current;
+                  swiper.params.navigation.nextEl = nextRef.current;
+                
+                  swiper.navigation.destroy();
+                  swiper.navigation.init();
+                  swiper.navigation.update();
+                });
+              }}
+              breakpoints={{
+                320: { slidesPerView: 1 },
+                768: { slidesPerView: 1 },
+                1024: { slidesPerView: 3 },
+              }}
             >
                 {seoData.map((item, index) => (
                     <SwiperSlide key={index}>
@@ -124,7 +116,8 @@ const CommonCard = ({ seoData, heding, description, footer }) => {
 
                 </button>
             </div>
-            {footer && (typeof footer === "string" ? (<p className="py-4" dangerouslySetInnerHTML={{ __html: footer }} />) : (<BlocksRenderer content={footer} blocks={{ paragraph: ({ children }) => (<p className='!text-white !mt-8'>{children}</p>) }} />))}
+            <div className={styles.customPagination}></div>
+            {footer && (typeof footer === "string" ? (<p className={styles.footer} dangerouslySetInnerHTML={{ __html: footer }} />) : (<BlocksRenderer content={footer} blocks={{ paragraph: ({ children }) => (<p>{children}</p>) }} />))}
         </section>
     );
 };

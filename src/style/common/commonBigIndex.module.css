@@ -5,14 +5,17 @@
   color: #fff;
   text-align: center;
   font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .frame p{
   font-size: 18px;
 }
+
 .heading {
   font-size: 50px;
-  margin-bottom: 20px;
 }
 
 .center {
@@ -25,18 +28,17 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin-top: 60px;
 }
 
 .label{
   font-size: 24px !important;
-  font-weight: 700;
+  font-family: "Gilroy-Bold";
 }
 
 .caseBox {
   flex: 0 1 calc(33.333% - 30px);
   box-sizing: border-box;
-  padding: 25px;
+  padding: 23px;
   border-radius: 12px;
   background-size: 104%;
   background-position: bottom;
@@ -46,10 +48,6 @@
   border: 1px solid #8e8e8e;
   text-align: left !important;
   transition: transform 0.3s ease;
-}
-
-.caseBox:hover {
-  transform: translateY(-5px);
 }
 
 /* Backgrounds */
@@ -71,6 +69,7 @@
 
 .caseBox h3 {
   font-size: 30px;
+  font-family: "Gilroy-Bold";
 }
 
 .caseTitle {
@@ -99,12 +98,14 @@
 .footer {
   color: #bbb;
   font-size: 18px;
-  margin: 50px auto;
   max-width: 800px;
   line-height: 1.6;
 }
 
-/* Responsive */
+.dots {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .caseBox {
     flex: 0 1 calc(45% - 20px);
@@ -112,14 +113,88 @@
 }
 
 @media (max-width: 768px) {
-  .caseWrapper {
+  .frame{
+    gap: 8px;
+    margin: 30px 0;
+  }
+  .frame p{
+  font-size: 16px;
+}
+  /* .caseWrapper {
     flex-direction: column;
     align-items: center;
   }
-
   .caseBox {
     flex: 0 1 100%;
+  } */
+
+   .caseWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 0;
+    width: 100%;
   }
+
+  .caseWrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .caseBox {
+    flex: 0 0 100%;
+    width: 100%;
+    margin-right: 10px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    box-sizing: border-box;
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #FDF6F0;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: width 0.25s ease, height 0.25s ease, background 0.25s ease;
+  }
+
+  .dotActive {
+    width: 10px;
+    height: 10px;
+  }
+
+  .caseBox h3{
+    font-size: 16px !important;
+
+  }
+
+  .label{
+    font-size: 18px !important;
+  }
+
+  .caseTitle{
+  margin-bottom: 8px;
+  }
+  .caseDesc{
+    font-size: 12px !important;
+  }
+
 
   .heading {
     font-size: 32px;

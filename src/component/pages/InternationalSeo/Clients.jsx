@@ -16,6 +16,16 @@ export const Clients = () => {
         name: "Kenji",
         role: "eCom Director (Japan)",
         testimonial: "From hreflang to local link building, they handled everything with precision."
+      },
+      {
+        name: "Marie",
+        role: "Head of SEO, D2C Brand (France)",
+        testimonial: "With their multilingual SEO, we finally ranked on Google.de and .fr with native content."
+      },
+      {
+        name: "Kenji",
+        role: "eCom Director (Japan)",
+        testimonial: "From hreflang to local link building, they handled everything with precision."
       }
     ]
   }

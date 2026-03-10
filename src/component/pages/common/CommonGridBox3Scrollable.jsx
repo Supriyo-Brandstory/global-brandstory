@@ -1,9 +1,10 @@
 "use client";
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import styles from "@/style/common/commonGridBox3Scrollable.module.css";
 
@@ -15,17 +16,21 @@ const CommonGridBox3Scrollable = ({ footer, title, description, data, boxHeight,
     <section className={styles.seoSection}  style={{ paddingBottom: typeof paddingBottom !== "undefined" ? paddingBottom : undefined }} >
       <div className={styles.header}>
         <h2 dangerouslySetInnerHTML={{__html:title}} />
-        {description && <p dangerouslySetInnerHTML={{__html:description}} className={styles.footer} />}
+        {description && <p dangerouslySetInnerHTML={{__html:description}} />}
       </div>
 
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Pagination]}
         spaceBetween={25}
         slidesPerView={3}
         loop={false}
+        autoHeight={false}
         navigation={{
           prevEl: prevRef.current,
           nextEl: nextRef.current,
+        }}
+        pagination={{
+          clickable: true,
         }}
         onSwiper={(swiper) => {
           setTimeout(() => {
@@ -49,7 +54,6 @@ const CommonGridBox3Scrollable = ({ footer, title, description, data, boxHeight,
               className={styles.card}
               style={{
                 "--card-color": card.bgcolor,
-                height: boxHeight || "320px", // 👈 dynamic control
               }}
             >
               {card.logo && (
@@ -157,7 +161,7 @@ const CommonGridBox3Scrollable = ({ footer, title, description, data, boxHeight,
           </svg>
         </button>
       </div>
-      {footer && <p className="mt-5" dangerouslySetInnerHTML={{__html:footer}}/>}
+      {footer && <p className={styles.footer} dangerouslySetInnerHTML={{__html:footer}}/>}
     </section>
   );
 };

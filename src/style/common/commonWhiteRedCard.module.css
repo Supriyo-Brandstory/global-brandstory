@@ -1,16 +1,17 @@
+/* ─── DESKTOP ─────────────────────────────────────────── */
+
 .container {
   max-width: 1200px;
-  margin: 30px auto;
-  padding: 50px 20px;
-  padding-bottom: 100px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
 .title {
-  color: #fff;
+  color: white;
+  text-align: center;
   font-size: 50px;
   font-weight: 700;
-  text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .cardsContainer {
@@ -19,12 +20,12 @@
 
 .redBg {
   position: absolute;
-  top: 50px;
+  top: 100px;
   width: 100%;
-  height: 100%;
-  background-color: #D9D9D9;
+  height: calc(100% - 90px);
+  background: #d9d9d9;
   border-radius: 40px;
-  border-top: 10px solid #D0161B;
+  border-top: 10px solid #d0161b;
 }
 
 .cardsWrapper {
@@ -32,45 +33,50 @@
   margin: 0 50px;
 }
 
-/* Animation container */
-.cardsMotionWrapper {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
+.swiper {
+  padding: 40px 0;
+}
+
+/* ✅ Hide dots on desktop */
+.swiper :global(.swiper-pagination) {
+  display: none;
+}
+
+.swiper :global(.swiper-wrapper) {
   align-items: stretch;
 }
 
-/* Two equal cards side by side on desktop */
-.cardsMotionWrapper .card {
-  flex: 0 0 calc(50% - 12px);
-  min-width: 0;
+.swiper :global(.swiper-slide) {
+  height: auto;
 }
 
-/* Card styling */
 .card {
   background: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
   border-radius: 20px;
   padding: 30px 0;
-  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .cardHeader {
-  margin-bottom: 20px;
   padding: 0 30px;
+  margin-bottom: 20px;
+  color: #000;
+  font-family: "Gilroy-Bold";
 }
 
 .name {
-  color: #000;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0 0 5px 0;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .role {
+  font-family: "Gilroy-Bold";
+  font-size: 18px;
   color: #dc2626;
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0;
+  font-weight: 700;
 }
 
 .divider {
@@ -78,8 +84,8 @@
   height: 1px;
   background: repeating-linear-gradient(
     to right,
-    #000 0,
-    #000 2px,
+    black 0,
+    black 2px,
     transparent 2px,
     transparent 4px
   );
@@ -87,81 +93,106 @@
 }
 
 .testimonial {
-  color: #333;
-  font-size: 1rem;
-  line-height: 1.6;
   padding: 0 30px;
-  margin: 0;
+  font-size: 18px;
+  color: #333;
+  flex: 1;
 }
 
-/* Navigation buttons */
 .navigation {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 20px;
   margin-top: 40px;
+  margin-bottom: 60px;
 }
 
 .prevBtn,
 .nextBtn {
   background: transparent;
   border: none;
+  width: 74px;
+  height: 74px;
   cursor: pointer;
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.prevBtn:hover:not(:disabled),
-.nextBtn:hover:not(:disabled) {
-  transform: scale(1.05);
-}
 
-.prevBtn:disabled,
-.nextBtn:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
+.card{
+  /* border: 1px solid red; */
 }
+/* ─── MOBILE ───────────────────────────────────────────── */
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
-  .title{
+  .container {
+    margin: 60px 0;
+    padding: 0;
+    background: #d9d9d9;
+    border-top: 10px solid #d0161b;
+  }
+
+  .title {
+    color: #000;
     font-size: 28px;
-  }
-  
-  .cardsWrapper {
-    margin: 0 10px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 24px 16px 16px;
+    margin: 0 0 16px;
+    text-align: center;
   }
 
-  .cardsMotionWrapper {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-
-  .cardsMotionWrapper .card {
-    flex: none;
-    width: 100%;
-    max-width: 90%;
-  }
-
-  .card {
-    padding: 20px 0;
-  }
-
-  .cardHeader {
-    padding: 0 15px;
-  }
-
-  .testimonial {
-    padding: 0 15px;
+  .cardsContainer {
+    padding: 0;
   }
 
   .redBg {
-    top: 0;
-    width: 80%;
-    border-top: 0px solid white;
-    border-right: 10px solid #D0161B;
+    display: none;
+  }
+  .cardsWrapper{
+    margin: 0;
+  }
+  .card{
+    margin: 0 16px;
+  }
+
+  .swiper {
+    padding: 8px 0 52px;
+  }
+
+  /* ✅ Show and style dots only on mobile */
+  .swiper :global(.swiper-pagination) {
+    display: block;
+    bottom: 16px;
+    text-align: center;
+  }
+
+  .swiper :global(.swiper-pagination-bullet) {
+    background: #e73d26;
+    opacity: 0.4;
+    width: 10px;
+    height: 10px;
+  }
+
+  .swiper :global(.swiper-pagination-bullet-active) {
+    opacity: 1;
+    background: #e73d26;
+  }
+
+  .card {
+    padding: 20px 26px;
+  }
+
+  .cardHeader {
+    padding: 0;
+    margin-bottom: 8px;
+  }
+
+  .divider {
+    margin: 8px 0;
+  }
+
+  .testimonial {
+    padding: 0;
+  }
+
+  .navigation {
+    display: none;
   }
 }

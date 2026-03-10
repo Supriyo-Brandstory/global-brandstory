@@ -18,10 +18,10 @@ export const CommonBanner = ({ heading, paragraph, paragraph2, buttonLink, butto
     <div className={styles.seoBanner}>
       <div className={styles.seoBannerContent}>
         <h1>
-          <div dangerouslySetInnerHTML={{ __html: heading }} />
+          <div className='title1' dangerouslySetInnerHTML={{ __html: heading }} />
         </h1>
 
-        <div className={styles.seoBannerParagraph}>
+        <div className={styles.seoBannerParagraph }>
           {/* <div className='highlited-text' dangerouslySetInnerHTML={{ __html: paragraph }} /> */}
           {paragraph && (
             renderType === "dynamic" ? (

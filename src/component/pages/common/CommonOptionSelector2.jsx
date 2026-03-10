@@ -36,25 +36,42 @@ export const CommonOptionSelector2 = ({ title, description, footer, options, spl
           style={{ flex: safeRatio }}
         >
           {options.map((opt, index) => (
-            <button
-              key={index}
-              onClick={() => handleSelect(index)}
-              className={`${styles.optionBtn} !text-[16px] ${selected === index ? styles.active : ''}`}
-            >
-              {opt.heading}
-            </button>
+            <div key={index} className={styles.optionWrapper}>
+              <button
+                onClick={() => handleSelect(index)}
+                className={`${styles.optionBtn} ${selected === index ? styles.active : ''}`}
+              >
+                {opt.heading}
+              </button>
+              {selected === index && (
+                <div className={`${styles.optionContentMobile} ${fade ? styles.fadeOut : ''}`}>
+                  {typeof opt.description === "string" ? (
+                    <div dangerouslySetInnerHTML={{ __html: opt.description }} />
+                  ) : (
+                    <BlocksRenderer
+                      content={opt.description}
+                      blocks={{
+                        paragraph: ({ children }) => (
+                          <p className="!text-white">{children}</p>
+                        ),
+                      }}
+                    />
+                  )}
+                </div>
+              )}
+            </div>
           ))}
         </div>
 
         {options[selected]?.description &&
           (typeof options[selected].description === "string" ? (
             <div
-              className={`${styles.optionContent} ${fade ? styles.fadeOut : ''}`}
+              className={`${styles.optionContent} ${styles.desktopOnly} ${fade ? styles.fadeOut : ''}`}
               style={{ flex: 1 - safeRatio }}
               dangerouslySetInnerHTML={{ __html: options[selected].description }}
             />
           ) : (
-            <div className={`${styles.optionContent} ${fade ? styles.fadeOut : ''}`}
+            <div className={`${styles.optionContent} ${styles.desktopOnly} ${fade ? styles.fadeOut : ''}`}
               style={{ flex: 1 - safeRatio }}>
               <BlocksRenderer
                 content={options[selected].description}

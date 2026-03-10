@@ -12,11 +12,8 @@
 .text {
   display: flex;
   flex-direction: column;
-  flex: 1 1 55%;
-}
-
-.title {
-  padding-bottom: 20px;
+  /* flex: 1 1 55%; */
+  gap: 28px;
 }
 
 .highlited {
@@ -130,25 +127,39 @@
 
 
 @media (max-width: 768px) {
+  .wrapper{
+    padding: 30px 16px;
+    gap: 8px;
+    flex-direction: column;
+  }
+
+  .text{
+    gap: 8px;
+    text-align: center;
+  }
   .title {
     font-size: 28px;
   }
 
   .description {
-    font-size: 18px;
+    font-size: 16px;
   }
 
-  .wrapper {
+  /* .wrapper {
     padding: 20px;
-    margin: 50px 0;
     flex-direction: column;
-  }
+  } */
 
   .highlited {
     font-size: 20px;
   }
 
+  .accordionContent, .accordionContent li, .accordionContent p, .accordionContent ol{
+    font-size: 12px;
+  }
+
   .accordionHeader h4 {
     width: 80%;
+    font-size: 16px;
   }
 }

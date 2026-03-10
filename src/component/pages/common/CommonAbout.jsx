@@ -10,7 +10,7 @@ const CommonAbout = ({
     text2 = null,
     imageSrc = null,
     imageAlt = "",
-    imageReverse = false,   // <-- added
+    imageReverse = false,
 }) => {
     return (
         <div className={styles.container}>

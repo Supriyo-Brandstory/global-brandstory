@@ -1,28 +1,27 @@
-.seoSection {
+.wrapper {
   color: #fff;
   padding: 60px 0px;
   text-align: center;
   margin: 0 auto;
   max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .header {
-  /* max-width: 1200px; */
-  margin: 0 auto 50px;
-}
-
-.header h2 {
-  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .header p {
   color: #ccc;
 }
 
-.header h3{
+.header h3 {
   color: #F15D22;
   font-size: 24px;
-  margin-bottom: 10px;
 }
 
 .grid {
@@ -43,7 +42,6 @@
 }
 
 .card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
   background: linear-gradient(218.29deg, #F15D22 -37.24%, #211C4B 123.84%);
 }
@@ -59,28 +57,89 @@
   color: #FFFFFF;
 }
 
-.description{
+.description {
   font-size: 18px;
 }
 
-.description ul li{
+.description ul li {
   font-size: 18px;
-
 }
 
 /* Special gradient for Local SEO */
 .local {
-  /* border: none; */
   color: #fff;
 }
 
-@media (max-width: 768px) {
-  .seoSection{
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
+/* Dots — hidden on desktop */
+.dots {
+  display: none;
 }
 
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 30px 16px;
+    gap: 21px;
+  }
+  .header{
+    gap: 8px;
+  }
+  .card h4{
+    font-size: 16px;
+  }
+  .card p{
+    font-size: 12px;
+  }
+  /* Horizontal scroll container */
+  .grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;        /* Firefox */
+    gap: 0;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .grid::-webkit-scrollbar {
+    display: none;                /* Chrome/Safari */
+  }
+
+  /* Each card takes full width, snaps into place */
+  .card {
+    flex: 0 0 100%;
+    width: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    box-sizing: border-box;
+    margin-right: 10px;
+    background: linear-gradient(218.29deg, #F15D22 -37.24%, #211C4B 123.84%);
+  }
+
+  /* Dot indicators — visible only on mobile */
+  .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+  }
+
+  .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #FDF6F0;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: width 0.25s ease, height 0.25s ease, background 0.25s ease;
+  }
+
+  .dotActive {
+    width: 10px;
+    height: 10px;
+    background: #FDF6F0;
+  }
+}

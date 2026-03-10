@@ -13,7 +13,8 @@ const CommonDivider = () => {
                 }
                 @media (max-width: 768px) {
                     .container {
-                        display: none;
+                        // display: none;
+                        width: calc(100% - 32px);
                     }
                 }
             `}</style>
