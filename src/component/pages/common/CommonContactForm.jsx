@@ -1,7 +1,71 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 import styles from '@/style/common/commonContactForm.module.css';
 
 export const CommonContactForm = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        mail: '',
+        mobile: '',
+        brandName: '',
+        budgetRange: '',
+        services: '',
+        isHappyToContact: false
+    });
+
+    const handleChange = (e) => {
+        const { name, value, type, checked } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: type === 'checkbox' ? checked : value
+        }));
+    };
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [toast, setToast] = useState({ show: false, message: '', type: '' });
+
+    const showToast = (message, type) => {
+        setToast({ show: true, message, type });
+        setTimeout(() => {
+            setToast({ show: false, message: '', type: '' });
+        }, 4000);
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        try {
+            const response = await fetch('/api/monday-common', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                showToast('Form submitted successfully!', 'success');
+                setFormData({
+                    name: '',
+                    mail: '',
+                    mobile: '',
+                    brandName: '',
+                    budgetRange: '',
+                    services: '',
+                    isHappyToContact: false
+                });
+            } else {
+                const errorData = await response.json();
+                console.error('Submission failed:', errorData);
+                showToast('Failed to submit form. Please try again later.', 'error');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            showToast('An error occurred during submission.', 'error');
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
     return (
         <div className={styles.wrapper}>
@@ -10,27 +74,66 @@ export const CommonContactForm = () => {
             </div>
             <div className={styles.layout}>
                 <div className={styles.colTwo}>
-                    <form action="" className={styles.form}>
+                    <form onSubmit={handleSubmit} className={styles.form}>
                         <h2 className={styles.title}>Request a Consultation</h2>
                         <div className={styles.inputGroup}>
-                            <input type="text" placeholder='Your Name' className={styles.textInput} />
+                            <input
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                type="text"
+                                placeholder='Your Name'
+                                className={styles.textInput}
+                                required
+                            />
                             <div className={styles.inputHint}>Enter your full name</div>
                         </div>
                         <div className={styles.inputGroup}>
-                            <input type="text" placeholder='Your Mail' className={styles.textInput} />
+                            <input
+                                name="mail"
+                                value={formData.mail}
+                                onChange={handleChange}
+                                type="email"
+                                placeholder='Your Mail'
+                                className={styles.textInput}
+                                required
+                            />
                             <div className={styles.inputHint}>Preferably use company mail</div>
                         </div>
                         <div className={styles.inputGroup}>
-                            <input prefix='+91' type="text" placeholder='Your mobile number' className={styles.textInput} />
+                            <input
+                                name="mobile"
+                                value={formData.mobile}
+                                onChange={handleChange}
+                                prefix='+91'
+                                type="text"
+                                placeholder='Your mobile number'
+                                className={styles.textInput}
+                                required
+                            />
                             <div className={styles.inputHint}>Give your phone number</div>
                         </div>
                         <div className={styles.inputGroup}>
-                            <input type="text" placeholder='Company / Brand name' className={styles.textInput} />
+                            <input
+                                name="brandName"
+                                value={formData.brandName}
+                                onChange={handleChange}
+                                type="text"
+                                placeholder='Company / Brand name'
+                                className={styles.textInput}
+                                required
+                            />
                             <div className={styles.inputHint}>Type your brand name  or company</div>
                         </div>
                         <div className={styles.inputGroup}>
-                            <select className={styles.textInput}>
-                                <option value="" disabled selected>BrandStory Global Budget Range</option>
+                            <select
+                                name="budgetRange"
+                                value={formData.budgetRange}
+                                onChange={handleChange}
+                                className={styles.textInput}
+                                required
+                            >
+                                <option value="" disabled>BrandStory Global Budget Range</option>
                                 <option value="USD 1000 - 2500">USD 1000 - 2500</option>
                                 <option value="USD 2500 - 5000">USD 2500 - 5000</option>
                                 <option value="USD 5000 - 7500">USD 5000 - 7500</option>
@@ -40,16 +143,29 @@ export const CommonContactForm = () => {
                             <div className={styles.inputHint}>Select your budget range</div>
                         </div>
                         <div className={styles.inputGroup}>
-                            <input type="text" placeholder='Select services' className={styles.textInput} />
+                            <input
+                                name="services"
+                                value={formData.services}
+                                onChange={handleChange}
+                                type="text"
+                                placeholder='Select services'
+                                className={styles.textInput}
+                                required
+                            />
                             <div className={styles.inputHint}>Select the services you are looking for</div>
                         </div>
                         <div className={styles.inputGroup} style={{ paddingTop: '10px' }}>
-                            <input type="checkbox" /> Yes, I’m happy to be contacted by Brandstory Global. I’ve read the <span style={{ color: '#F15D22' }}>Privacy Policy</span>
+                            <input
+                                name="isHappyToContact"
+                                checked={formData.isHappyToContact}
+                                onChange={handleChange}
+                                type="checkbox"
+                            /> Yes, I’m happy to be contacted by Brandstory Global. I’ve read the <span style={{ color: '#F15D22' }}>Privacy Policy</span>
                         </div>
                         <br />
-                        <a href="#" className={styles.submitBtn}>
-                            Start My Project
-                        </a>
+                        <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
+                            {isSubmitting ? 'Submitting...' : 'Start My Project'}
+                        </button>
                     </form>
                     <div className={styles.contactBoxes}>
                         <div className={styles.contactBox}
@@ -105,6 +221,34 @@ export const CommonContactForm = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Custom Toast Notification */}
+            {toast.show && (
+                <div style={{
+                    position: 'fixed',
+                    bottom: '20px',
+                    right: '20px',
+                    backgroundColor: toast.type === 'success' ? '#4CAF50' : '#F44336',
+                    color: 'white',
+                    padding: '16px 24px',
+                    borderRadius: '8px',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+                    zIndex: 1000,
+                    fontSize: '16px',
+                    fontWeight: '500',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    animation: 'slideIn 0.3s ease-out forwards'
+                }}>
+                    {toast.type === 'success' ? (
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    ) : (
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    )}
+                    {toast.message}
+                </div>
+            )}
         </div>
     );
 };

@@ -111,11 +111,11 @@ export default async function sitemap() {
     // 3. Fetch Blogs from Strapi (If any)
     let blogRoutes = [];
     try {
-        const response = await fetchStrapi('blogs?fields[0]=slug&pagination[limit]=1000');
+        const response = await fetchStrapi('blogs?fields[0]=blogSlug&pagination[limit]=1000');
         blogRoutes = response?.data?.map((blog) => {
             const data = blog.attributes || blog;
             return {
-                url: `${BASE_URL}/blogs/${data.slug}`,
+                url: `${BASE_URL}/blogs/${data.blogSlug }`,
                 lastModified: new Date(),
                 changeFrequency: 'weekly',
                 priority: 0.6,
