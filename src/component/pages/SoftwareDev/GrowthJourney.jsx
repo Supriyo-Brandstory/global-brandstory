@@ -5,6 +5,7 @@ export const GrowthJourney =()=>{
     const data = {
     heading: "What Makes Us the Right Partner for<br/>Your Growth Journey",
     // highlight: "Your Growth Journey",
+    footer:"We Are Trusted Developers And Certified Experts Who Deliver Measurable Software Solutions—Not Just Code.",
     subheading:
       "Choosing The Right Technology Partner Can Define Your Business Trajectory. Here’s Why Forward-Looking Organizations Trust Us To Drive Meaningful Outcomes:",
     cards: [
@@ -34,7 +35,6 @@ export const GrowthJourney =()=>{
     return (
         <>
             <CommonTwoCard {...data}/>
-            <p className='max-w-[1200px] text-center mx-auto mb-30'>We Are Trusted Developers And Certified Experts Who Deliver Measurable Software Solutions—Not Just Code.</p>
         </>
     )
 }
