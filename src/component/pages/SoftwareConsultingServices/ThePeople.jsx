@@ -3,7 +3,7 @@ import styles from '@/style/ppc.module.css'
 export const ThePeople = ()=>{
     return (
         <div className={styles.frame}>
-            <h1 className={styles.heading}>The People Powering Our Projects</h1>
+            <h2 className={styles.heading}>The People Powering Our Projects</h2>
             <p className={styles.description}>
                 Behind every successful engagement is a team of consultants who combine business intelligence with technical depth.
             </p>

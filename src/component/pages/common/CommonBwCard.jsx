@@ -4,9 +4,9 @@ import styles from "@/style/common/commonBwCard.module.css";
 export const CommonBwCrd = ({title, description, footer, cardData }) => {
   return (
     <div className={styles.frame}>
-      <h1 className={styles.heading}>
+      <h2 className={styles.heading}>
         {title}
-      </h1>
+      </h2>
       <p className={styles.subHeading}>
         {description}
       </p>

@@ -7,7 +7,7 @@ export const CommonBwThreeCard = ({ title, description, footer, cardData, rightP
       className={styles.frame} 
       style={{ paddingBottom: typeof paddingBottom !== "undefined" ? paddingBottom : undefined }}   
     >
-      <h1 className={styles.heading} dangerouslySetInnerHTML={{__html:title}}></h1>
+      <h2 className={styles.heading} dangerouslySetInnerHTML={{__html:title}}></h2>
       <p className={styles.subHeading} dangerouslySetInnerHTML={{__html: description}}></p>
 
       <div className={styles.cardWrapper}>

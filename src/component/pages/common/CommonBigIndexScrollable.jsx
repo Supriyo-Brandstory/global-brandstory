@@ -17,7 +17,7 @@ export const CommonBigIndexScrollable = ({ heading, description, data, footer, c
       className={styles.frame}
       style={{ paddingBottom: typeof paddingBottom !== "undefined" ? paddingBottom : undefined }}
     >
-      <h1
+      <h2
         className={`${styles.heading} ${styles.center}`}
         dangerouslySetInnerHTML={{ __html: heading }}
       />

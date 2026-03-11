@@ -27,7 +27,7 @@ export const CommonBigIndexScrollable3 = ({
       >
         {/* ── LEFT PANEL: heading + description + arrows ── */}
         <div className={styles.leftPanel}>
-          <h1
+          <h2
             className={styles.heading}
             dangerouslySetInnerHTML={{ __html: heading }}
           />

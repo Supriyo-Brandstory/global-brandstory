@@ -29,7 +29,7 @@ const scrollToCard = (index) => {
       className={styles.frame}
       style={{ paddingBottom: typeof paddingBottom !== "undefined" ? paddingBottom : undefined }}
     >
-      <h1 className={`${styles.heading} ${styles.center}`} dangerouslySetInnerHTML={{ __html: heading }} />
+      <h2 className={`${styles.heading} ${styles.center}`} dangerouslySetInnerHTML={{ __html: heading }} />
 
       {description && (typeof description === "string" ? (<p className={styles.center} dangerouslySetInnerHTML={{ __html: description }} />) : (<BlocksRenderer content={description} blocks={{ paragraph: ({ children }) => (<p className='!text-white'>{children}</p>) }} />))}
 

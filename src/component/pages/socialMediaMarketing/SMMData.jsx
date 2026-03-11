@@ -3,9 +3,9 @@ import styles from '@/style/smm.module.css'
 export const SMMData = () =>{
     return(
         <div className={styles.frame}>
-            <h1 className={styles.heading}>
+            <h2 className={styles.heading}>
                 Data-Driven Social Media Marketing Strategies
-            </h1>
+            </h2>
             <p className='py-3 font-light'>Instead of publishing frequently, publish with purpose if you want to succeed on social media. To build a real relationship with people, you must understand what draws their attention and inspires them to act.</p>
             <p className='py-3 font-light'>Real numbers are used to inform every step of our data-driven social media strategy. Every article and advertisement is examined to see how your audience responds, including what they like, share, click on, and scroll past. These insights help us make content that consistently performs better by directing our next course of action.</p>
             <p className='py-3 font-light'>Some of the tools we use include:</p>

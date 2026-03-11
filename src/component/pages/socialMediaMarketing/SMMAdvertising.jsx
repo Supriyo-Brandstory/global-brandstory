@@ -3,7 +3,7 @@ import styles from '@/style/smm.module.css'
 export const SMMAdvertising = ()=>{
     return(
         <div className={styles.frame}>
-            <h1 className={`${styles.heading} ${styles.center}`}>Paid Social Advertising for Conversions</h1>
+            <h2 className={`${styles.heading} ${styles.center}`}>Paid Social Advertising for Conversions</h2>
             <p className={styles.center}>
                 Sometimes organic posts aren’t enough to reach new customers. That’s where paid social advertising comes in.
             </p>

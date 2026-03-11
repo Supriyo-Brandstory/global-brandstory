@@ -3,7 +3,7 @@ import styles from '@/style/ppc.module.css'
 export const PPCCampaigns = ()=>{
     return (
         <div className={styles.frame}>
-            <h1 className={styles.heading}>Industry-Specific PPC Campaigns</h1>
+            <h2 className={styles.heading}>Industry-Specific PPC Campaigns</h2>
             <p className={styles.subtext}>
                 We Adapt Campaigns For Different Verticals:
             </p>

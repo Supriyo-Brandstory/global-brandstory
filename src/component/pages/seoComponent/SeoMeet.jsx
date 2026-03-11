@@ -3,9 +3,9 @@ import styles from "@/style/smm.module.css";
 export const SeoMeet = () => {
   return (
     <div className={styles.frame}>
-      <h1 className={`${styles.heading} ${styles.center}`}>
+      <h2 className={`${styles.heading} ${styles.center}`}>
         Meet the Experts: Your Team for Digital Growth
-      </h1>
+      </h2>
       <p className={styles.center}>
         Our team is made up of SEO strategists, technical specialists, content
         creators, and analysts. Each brings a unique skill set and a shared

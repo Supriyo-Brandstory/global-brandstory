@@ -7,7 +7,7 @@ const CommonArrowGrid = ({ boxes, heading, descripton }) => {
     return (
         <div className={styles.frame}>
             <div className={styles.header}>
-                <h1 dangerouslySetInnerHTML={{__html: heading}} />
+                <h2 dangerouslySetInnerHTML={{__html: heading}} />
                 <p dangerouslySetInnerHTML={{__html:descripton}}/>
             </div>
 

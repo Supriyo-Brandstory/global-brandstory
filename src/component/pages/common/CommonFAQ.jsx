@@ -13,7 +13,7 @@ const CommonFAQ = ({ data }) => {
 
   return (
     <div className={styles.frame}>
-      <h1 className={styles.heading}>FAQs</h1>
+      <h2 className={styles.heading}>FAQs</h2>
       <div className={styles.faqList}>
         {data.map((item, index) => (
           <div key={index} className={styles.faqItem}>
