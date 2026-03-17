@@ -108,3 +108,51 @@
     grid-column: unset;
   }
 }
+
+.mobileSlider {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .gridWrapper {
+    display: none;
+  }
+
+  .mobileSlider {
+    display: block;
+    padding: 0 16px;
+  }
+}
+
+/* Pagination container */
+.mobileSlider :global(.swiper-pagination) {
+  margin-top: 16px; /* gap from cards */
+  position: relative;
+}
+
+/* Default dot */
+.mobileSlider :global(.swiper-pagination-bullet) {
+  background: #ffffff;
+  opacity: 0.5;
+  width: 8px;
+  height: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Active dot */
+.mobileSlider :global(.swiper-pagination-bullet-active) {
+  opacity: 1;
+  transform: scale(1.25); /* 1.25x bigger */
+}
+
+.mobileSlider :global(.swiper-slide) {
+  display: flex;
+}
+
+.mobileSlider .card {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
