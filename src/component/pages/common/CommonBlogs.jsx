@@ -14,7 +14,7 @@ export const CommonBlog = () => {
       filter: "Experience Design",
       categories: ["Experience Design", "UX"],
       title: "What Makes Digital Experiences Truly Human",
-      date: "January 3, 2026",
+      date: " January 3, 2026",
       image: "https://picsum.photos/id/1/600/400",
       buttonText: "Read More",
       buttonLink: "#",

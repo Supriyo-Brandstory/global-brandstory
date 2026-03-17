@@ -17,19 +17,21 @@ export const CommonBanner2 = ({
   const hasPoints = points.length > 0;
 
   return (
-    <div className={styles.bannerWrapper}>
+    <div className={styles.bannerWrapper      
+    }>
       <div className={styles.layout}>
-        {/* Left - Content */}
+        {/* Left - Content */
+        }
         <div className={styles.bannerContent}>
-          <h1 dangerouslySetInnerHTML={{ __html: heading }} />
           
+          <h1 dangerouslySetInnerHTML={{ __html: heading }} />
           <div className={styles.seoBannerParagraph}>
             <div dangerouslySetInnerHTML={{ __html: paragraph }} />
             {paragraph2 && <div dangerouslySetInnerHTML={{ __html: paragraph2 }} />}
           </div>
-
           {/* Dynamic points list — only render if points exist */}
-          {hasPoints && (
+          {hasPoints && 
+          (
             <ul className={styles.pointsList}>
               {points.map((point, index) => (
                 <li key={index} className={styles.pointItem}>

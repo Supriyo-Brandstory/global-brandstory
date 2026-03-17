@@ -46,13 +46,11 @@ export const CommonBwThreeCard = ({
       />
 
       <div
-        className={styles.cardWrapper}
-        ref={scrollRef}
+        className={styles.cardWrapper} ref={scrollRef}
         onScroll={handleScroll}
       >
         {cardData?.map((item, index) => (
-          <div
-            key={index}
+          <div     key={index}
             className={`
               ${styles.card}
               ${index === 0 ? styles.firstBox : ""}

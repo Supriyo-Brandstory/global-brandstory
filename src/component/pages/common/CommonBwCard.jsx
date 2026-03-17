@@ -9,31 +9,31 @@ export const CommonBwCrd = ({ title, description, footer, cardData }) => {
   const [active, setActive] = useState(0);
 
   const handleScroll = () => {
-    const el = scrollRef.current;
-    if (!el) return;
 
+    const el = scrollRef.current;
+
+    if (!el) return;
     const cardWidth =
       el.querySelector(`.${styles.card}`)?.offsetWidth || el.clientWidth;
-
     const index = Math.round(el.scrollLeft / cardWidth);
 
     setActive(index);
   };
 
   return (
-    <div className={styles.frame}>
+    <div 
+    className={styles.frame}>
       <h2 className={styles.heading}>{title}</h2>
 
-      <p className={styles.subHeading}>{description}</p>
+      <p 
+      className={styles.subHeading}>{description}</p>
 
-      <div
-        className={styles.cardWrapper}
+      <div className={styles.cardWrapper}
         ref={scrollRef}
         onScroll={handleScroll}
       >
         {cardData?.map((item, index) => (
-          <div
-            key={index}
+          <div key={index}
             className={`${styles.card} ${
               index === 0 ? styles.firstBox : ""
             }`}
