@@ -103,3 +103,9 @@
   margin: 0;
   /* line-height: 1.5; */
 }
+
+@media (max-width: 786px) {
+  .faqHeader span{
+    width: 80%;
+  }
+}
