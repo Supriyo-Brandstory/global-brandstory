@@ -115,7 +115,7 @@ export default async function sitemap() {
         blogRoutes = response?.data?.map((blog) => {
             const data = blog.attributes || blog;
             return {
-                url: `${BASE_URL}/blogs/${data.blogSlug }`,
+                url: `${BASE_URL}/blogs/${data.blogSlug}`,
                 lastModified: new Date(),
                 changeFrequency: 'weekly',
                 priority: 0.6,
@@ -126,6 +126,25 @@ export default async function sitemap() {
         console.warn('Sitemap: Blogs collection fetch failed or returned invalid structure.');
     }
 
+    // 3. Fetch Blogs from Strapi (If any)
+    let locationRoutes = [];
+    try {
+        const response = await fetchStrapi('location-pages?fields[0]=fullPath&pagination[limit]=1000');
+        locationRoutes = response?.data?.map((blog) => {
+            const data = blog.attributes || blog;
+            return {
+                url: `${BASE_URL}/${data.fullPath}`,
+                lastModified: new Date(),
+                changeFrequency: 'weekly',
+                priority: 0.6,
+            };
+        }) || [];
+    } catch (error) {
+        // Blogs collection might not exist yet or have different structure
+        console.warn('Sitemap: Blogs collection fetch failed or returned invalid structure.');
+    }
+
+
     // Combine everything: Local Pages + Strapi Landing Pages + Strapi Case Studies + Strapi Blogs
-    return [...staticSitemap, ...dynamicRoutes, ...caseRoutes, ...blogRoutes, ...indRoutes];
+    return [...staticSitemap, ...dynamicRoutes, ...caseRoutes, ...blogRoutes, ...indRoutes, ...locationRoutes];
 }

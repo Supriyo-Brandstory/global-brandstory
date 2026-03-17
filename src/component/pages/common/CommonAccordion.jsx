@@ -15,7 +15,7 @@ const CommonAccordion = ({ title, subheding1, subheding2, items, footer, padding
 
   return (
     <div
-      className={styles.CommonAccordion}
+      className={`${styles.CommonAccordion} items-center`}
       style={{ paddingBottom: typeof paddingBottom !== "undefined" ? paddingBottom : undefined }}
     >
       {title && <h2 dangerouslySetInnerHTML={{ __html: title }}></h2>}
@@ -23,7 +23,7 @@ const CommonAccordion = ({ title, subheding1, subheding2, items, footer, padding
 
       {subheding2 && (
         renderType === "dynamic" ? (
-          < BlocksRenderer blocks={{ paragraph: ({ children }) => (<p>{children}</p>) }} content={subheding2} />
+          < BlocksRenderer blocks={{ paragraph: ({ children }) => (<p className="!text-white !text-[20px]">{children}</p>) }} content={subheding2} />
 
         ) : (
           <div className={styles.subheding2}
@@ -95,7 +95,7 @@ const CommonAccordion = ({ title, subheding1, subheding2, items, footer, padding
                 </div>
               </button>
               <div className={`${styles.accordionContent} ${activeIndex === index ? styles.open : ''}`}>
-                {item.content && (typeof item.content == "string" ? (<h5 dangerouslySetInnerHTML={{ __html: item.content }} />) : (<BlocksRenderer blocks={{ paragraph: ({ children }) => (<p>{children}</p>) }} content={item.content} />))}
+                {item.content && (typeof item.content == "string" ? (<h5 dangerouslySetInnerHTML={{ __html: item.content }} />) : (<BlocksRenderer blocks={{ paragraph: ({ children }) => (<p className="!w-auto !text-[18px] !text-white">{children}</p>) }} content={item.content} />))}
                 {/* {item.content && <h5 dangerouslySetInnerHTML={{ __html: item.content }} />} */}
               </div>
             </div>
