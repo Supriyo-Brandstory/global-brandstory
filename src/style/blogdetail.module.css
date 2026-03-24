@@ -2,7 +2,7 @@
   position: relative;
   min-height: 100vh;
   color: #fff;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */ /* Removing this as it breaks position: sticky */
   overflow-y: visible;
   background: url('/images/Blog/blog-bg-2.webp');
   background-size: 100% auto;
@@ -126,9 +126,9 @@
 }
 
 .article p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 1);
   margin-bottom: 16px;
 }
 
@@ -148,7 +148,7 @@
   margin-bottom: 12px;
   font-size: 15px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 1);
 }
 
 .accentList li::marker {
@@ -211,8 +211,9 @@
 ========================= */
 .sidebar {
   position: sticky;
-  top: 100px;
+  top: 20px;
   height: fit-content;
+  z-index: 10;
 }
 
 .sidebarCard {
