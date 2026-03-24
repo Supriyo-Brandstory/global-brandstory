@@ -9,7 +9,6 @@ export async function generateMetadata({ params }) {
     const { slug } = await params;
     const response = await getBlogBySlug(slug);
     const blog = response?.data?.[0]?.attributes || response?.data?.[0];
-    console.log("Blog Data for Metadata:", blog); // Debug log
 
     if (!blog) {
         return {
@@ -87,7 +86,7 @@ export default async function Page({ params }) {
                                 <span className={styles.date}>{blogDate || "January 2, 2026"}</span>
                             </div>
                         </header>
-                        <button className={styles.bookmark} style={{display:"none"}}>
+                        <button className={styles.bookmark} style={{ display: "none" }}>
                             <img src="/images/share.png" alt="Bookmark" />
                         </button>
 
