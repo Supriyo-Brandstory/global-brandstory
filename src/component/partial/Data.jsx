@@ -516,7 +516,7 @@ export const menuData = [
             link: "/services/ppc-management",
             image: "/icons/menuicon.png",
             children: [
-              { name: "Performance Marketing", link: "/services/performance-marketing" },
+              { name: "Performance Marketing", link: "/services/ppc-management/performance-marketing" },
               { name: "PPC Strategy & Planning", link: "/services/ppc-management/strategy-and-planning" },
               { name: "Meta Advertising Services", link: "/services/ppc-management/meta-ads" },
               { name: "Google Ads Management", link: "/services/ppc-management/google-ads" },
