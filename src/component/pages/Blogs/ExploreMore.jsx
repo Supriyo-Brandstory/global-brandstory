@@ -9,9 +9,9 @@ export const ExploreMore = () => {
           Tell us what you want to learn, build, or explore.
         </p>
         <p style={styles.mail}>
-           We’re always thinking—and writing—about what’s next.
+          We’re always thinking—and writing—about what’s next.
         </p>
-        <button style={styles.btn}>Explore More Insights</button>
+        <button className="cursor-pointer" style={styles.btn}>Explore More Insights</button>
       </div>
     </div>
   );
@@ -47,7 +47,7 @@ const styles = {
   highlight: {
     fontWeight: "700",
   },
-  btn:{
+  btn: {
     margin: '20px 0 0 0',
     background: "#E73E25",
     padding: '12px 30px',

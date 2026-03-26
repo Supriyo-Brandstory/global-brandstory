@@ -8,7 +8,8 @@ const page = async ({ searchParams }) => {
     const currentPage = parseInt(params.page) || 1;
     const pageSize = 12;
 
-    const caseStudiesData = await getAllCaseStudies(currentPage, pageSize);
+    const query = params.query || "";
+    const caseStudiesData = await getAllCaseStudies(currentPage, pageSize, query);
     return (
         <>
             <Banner />

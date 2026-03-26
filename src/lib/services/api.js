@@ -225,7 +225,14 @@ export async function getIndustriesBySlug(pageSlug) {
   return fetchStrapi(`industries?${query}`);
 }
 
-export async function getAllCaseStudies(page = 1, pageSize = 12) {
+export async function getAllCaseStudies(page = 1, pageSize = 12, search = "") {
+  const filters = {};
+  if (search) {
+    filters.$or = [
+      { caseStudyTitle: { $containsi: search } },
+    ];
+  }
+
   const query = qs.stringify(
     {
       fields: ["caseStudyTitle", "caseStudySlug", "publishedAt"],
@@ -238,6 +245,7 @@ export async function getAllCaseStudies(page = 1, pageSize = 12) {
           }
         }
       },
+      filters,
       sort: ["publishedAt:desc"],
       pagination: {
         page: page,
@@ -271,6 +279,43 @@ export async function getBlogBySlug(slug) {
           }
         }
       }
+    },
+    { encodeValuesOnly: true }
+  );
+
+  return fetchStrapi(`blogs?${query}`);
+}
+
+export async function getAllBlogs(page = 1, pageSize = 6, category = "All") {
+  const filters = {};
+  if (category && category !== "All") {
+    filters.blog_categories = {
+      catName: {
+        $eq: category,
+      },
+    };
+  }
+
+  const query = qs.stringify(
+    {
+      fields: [
+        "blogTitle",
+        "blogSlug",
+        "blogMetaTitle",
+        "blogMetaDescription",
+        "blogDate",
+        "publishedAt"
+      ],
+      populate: {
+        blogImage: true,
+        blog_categories: true,
+      },
+      filters,
+      sort: ["publishedAt:desc"],
+      pagination: {
+        page: page,
+        pageSize: pageSize,
+      },
     },
     { encodeValuesOnly: true }
   );

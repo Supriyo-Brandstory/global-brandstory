@@ -9,20 +9,35 @@ import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 export default function CaseStudySearchGrid({ title, tabs, pagination = {} }) {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const [searchQuery, setSearchQuery] = useState("");
-    const [debouncedQuery, setDebouncedQuery] = useState("");
+    const queryFromUrl = searchParams.get("query") || "";
+    const [searchQuery, setSearchQuery] = useState(queryFromUrl);
 
     const { page = 1, pageSize = 12, pageCount = 1, total = 0 } = pagination;
 
     React.useEffect(() => {
+        setSearchQuery(queryFromUrl);
+    }, [queryFromUrl]);
+
+    React.useEffect(() => {
+        if (searchQuery === queryFromUrl) return;
+
         const handler = setTimeout(() => {
-            setDebouncedQuery(searchQuery);
-        }, 300);
+            const params = new URLSearchParams(searchParams.toString());
+            const trimmedQuery = searchQuery.trim();
+
+            if (trimmedQuery) {
+                params.set("query", trimmedQuery);
+            } else {
+                params.delete("query");
+            }
+
+            params.set("page", "1");
+            router.push(`?${params.toString()}`, { scroll: false });
+        }, 500);
 
         return () => clearTimeout(handler);
-    }, [searchQuery]);
+    }, [searchQuery, router, searchParams, queryFromUrl]);
 
-    // Flatten all cards from all tabs into a single array
     const allCards = useMemo(() => {
         const flattened = tabs.flatMap(tab =>
             tab.cards.map(card => ({
@@ -35,19 +50,6 @@ export default function CaseStudySearchGrid({ title, tabs, pagination = {} }) {
             (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
         );
     }, [tabs]);
-
-    // Local filter based on search query
-    // Note: In a fully server-side paginated app, search should also be server-side.
-    // However, since we are doing local filtering on the current page's cards, we keep this.
-    const filteredCards = useMemo(() => {
-        const query = debouncedQuery.trim().toLowerCase();
-        if (!query) return allCards;
-
-        return allCards.filter(card =>
-            card.title?.toLowerCase().includes(query) ||
-            card.category?.toLowerCase().includes(query)
-        );
-    }, [allCards, debouncedQuery]);
 
     const handlePageChange = (newPage) => {
         if (newPage < 1 || newPage > pageCount) return;
@@ -108,8 +110,8 @@ export default function CaseStudySearchGrid({ title, tabs, pagination = {} }) {
                     </div>
 
                     <div className={styles.cardsGrid}>
-                        {filteredCards.length > 0 ? (
-                            filteredCards.map((card, i) => (
+                        {allCards.length > 0 ? (
+                            allCards.map((card, i) => (
                                 <div key={i} className={styles.card}>
                                     {card.image && (
                                         <div className={styles.cardImageWrapper}>

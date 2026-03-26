@@ -1,118 +1,64 @@
 'use client';
-import React, { useState } from "react";
+import React from "react";
 import styles from "@/style/common/commonBlog.module.css";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
-export const CommonBlog = () => {
-  const BLOGS_PER_PAGE = 6;
+export const CommonBlog = ({ blogData }) => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const filters = ["All", "UI / UX", "Branding", "Technology", "Digital Marketing", "Strategy"];
-  const [activeFilter, setActiveFilter] = useState("All");
-  const [currentPage, setCurrentPage] = useState(1);
 
-  const blogs = [
-    {
-      filter: "Experience Design",
-      categories: ["Experience Design", "UX"],
-      title: "What Makes Digital Experiences Truly Human",
-      date: " January 3, 2026",
-      image: "https://picsum.photos/id/1/600/400",
-      buttonText: "Read More",
-      buttonLink: "#",
-    },
-    {
-      filter: "Branding",
-      categories: ["Branding", "Strategy"],
-      title: "Brand Strategy Is Not A Logo",
-      date: "January 17, 2026",
-      image: "https://picsum.photos/id/2/600/400",
-      buttonText: "Read More",
-      buttonLink: "#",
-    },
-    {
-      filter: "Web Development",
-      categories: ["Web Development", "Design Systems"],
-      title: "Scaling Websites Without Breaking Experience",
-      date: "January 9, 2026",
-      image: "https://picsum.photos/id/3/600/400",
-      buttonText: "Read More",
-      buttonLink: "#",
-    },
-    {
-      filter: "Digital Marketing",
-      categories: ["Digital Marketing", "Analytics"],
-      title: "Data-Led Creativity: Where Logic Meets Imagination",
-      date: "February 26, 2026",
-      image: "https://picsum.photos/id/4/600/400",
-      buttonText: "Read More",
-      buttonLink: "#",
-    },
-    {
-      filter: "Product",
-      categories: ["Product", "UX Strategy"],
-      title: "Why Every Growing Business Needs UX Thinking",
-      date: "February 6, 2026",
-      image: "https://picsum.photos/id/5/600/400",
-      buttonText: "Read More",
-      buttonLink: "#",
-    },
-    {
-      filter: "Digital Strategy",
-      categories: ["Digital Strategy"],
-      title: "From Campaigns To Ecosystems",
-      date: "January 12, 2026",
-      image: "https://picsum.photos/id/6/600/400",
-      buttonText: "Read More",
-      buttonLink: "#",
-    },
-    {
-      filter: "Digital Marketing",
-      categories: ["Digital Marketing", "Analytics"],
-      title: "Another Marketing Insight",
-      date: "March 1, 2026",
-      image: "https://picsum.photos/id/7/600/400",
-      buttonText: "Read More",
-      buttonLink: "#",
-    },
-    {
-      filter: "Product",
-      categories: ["Product", "UX"],
-      title: "Product Thinking 101",
-      date: "March 5, 2026",
-      image: "https://picsum.photos/id/8/600/400",
-      buttonText: "Read More",
-      buttonLink: "#",
-    },
-    {
-      filter: "Branding",
-      categories: ["Branding"],
-      title: "Brand Consistency Matters",
-      date: "March 8, 2026",
-      image: "https://picsum.photos/id/9/600/400",
-      buttonText: "Read More",
-      buttonLink: "#",
-    },
-  ];
+  // Get current state from URL
+  const activeFilter = searchParams.get("category") || "All";
+  const currentPage = parseInt(searchParams.get("page")) || 1;
 
-  /* ---------------- FILTER ---------------- */
-  const filteredBlogs =
-    activeFilter === "All"
-      ? blogs
-      : blogs.filter((b) => b.filter === activeFilter);
+  const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL_IMAGE;
 
-  /* ---------------- PAGINATION ---------------- */
-  const totalPages = Math.ceil(filteredBlogs.length / BLOGS_PER_PAGE);
+  const blogs = (blogData?.data || []).map((blog) => {
+    const item = blog.attributes || blog;
+    const categories = (item.blog_categories || []).map(cat => cat.catName).filter(Boolean);
+    const blogImage = item.blogImage?.data?.attributes || item.blogImage;
+    const imageUrl = blogImage?.url
+      ? (blogImage.url.startsWith('http') ? blogImage.url : `${STRAPI_URL}${blogImage.url}`)
+      : "https://picsum.photos/id/1/600/400";
+    return {
+      filter: categories[0] || "Uncategorized",
+      categories: categories.length > 0 ? categories : ["Uncategorized"],
+      title: item.blogTitle,
+      date: item.blogDate
+        ? new Date(item.blogDate).toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" })
+        : new Date(item.publishedAt).toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" }),
+      image: imageUrl,
+      buttonText: "Read More",
+      buttonLink: `/blogs/${item.blogSlug}`,
+    };
+  });
 
-  const startIndex = (currentPage - 1) * BLOGS_PER_PAGE;
-  const paginatedBlogs = filteredBlogs.slice(
-    startIndex,
-    startIndex + BLOGS_PER_PAGE
-  );
-
+  /* ---------------- PAGINATION META FROM API ---------------- */
+  const pagination = blogData?.meta?.pagination || {};
+  const totalPages = pagination.pageCount || 1;
   const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
 
+  const updateParams = (newParams) => {
+    const params = new URLSearchParams(searchParams);
+    Object.entries(newParams).forEach(([key, value]) => {
+      if (value === null) {
+        params.delete(key);
+      } else {
+        params.set(key, value);
+      }
+    });
+    router.push(`${pathname}?${params.toString()}`, { scroll: false });
+  };
+
   const handleFilterChange = (filter) => {
-    setActiveFilter(filter);
-    setCurrentPage(1);
+    updateParams({ category: filter === "All" ? null : filter, page: 1 });
+  };
+
+  const handlePageChange = (page) => {
+    updateParams({ page });
   };
 
   return (
@@ -125,9 +71,8 @@ export const CommonBlog = () => {
           {filters.map((item, i) => (
             <div
               key={i}
-              className={`${styles.filterBtn} ${
-                activeFilter === item ? styles.active : ""
-              }`}
+              className={`${styles.filterBtn} ${activeFilter === item ? styles.active : ""
+                }`}
               onClick={() => handleFilterChange(item)}
             >
               {item}
@@ -137,7 +82,7 @@ export const CommonBlog = () => {
 
         {/* BLOG CARDS */}
         <div className={styles.cardsGrid}>
-          {paginatedBlogs.map((card, i) => (
+          {blogs.map((card, i) => (
             <div key={i} className={styles.card}>
               <div className={styles.imageWrap}>
                 <img src={card.image} alt={card.title} />
@@ -171,7 +116,7 @@ export const CommonBlog = () => {
             <button
               className={styles.pageBtn}
               disabled={currentPage === 1}
-              onClick={() => setCurrentPage((p) => p - 1)}
+              onClick={() => handlePageChange(currentPage - 1)}
             >
               «
             </button>
@@ -179,10 +124,9 @@ export const CommonBlog = () => {
             {pageNumbers.map((page) => (
               <button
                 key={page}
-                className={`${styles.pageBtn} ${
-                  currentPage === page ? styles.activePage : ""
-                }`}
-                onClick={() => setCurrentPage(page)}
+                className={`${styles.pageBtn} ${currentPage === page ? styles.activePage : ""
+                  }`}
+                onClick={() => handlePageChange(page)}
               >
                 {page}
               </button>
@@ -191,7 +135,7 @@ export const CommonBlog = () => {
             <button
               className={styles.pageBtn}
               disabled={currentPage === totalPages}
-              onClick={() => setCurrentPage((p) => p + 1)}
+              onClick={() => handlePageChange(currentPage + 1)}
             >
               »
             </button>

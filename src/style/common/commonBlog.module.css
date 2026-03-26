@@ -287,3 +287,11 @@
     font-size: 20px;
   }
 }
+
+.loading {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  padding: 50px 0;
+  width: 100%;
+}
