@@ -1,25 +1,26 @@
-.frame{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 0;
+.frame {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 20px;
 }
 
-.title{
-    font-size: 50px;
-    margin: 0 auto;
-    text-align: center;
+.title {
+  font-size: clamp(32px, 5vw, 50px);
+  margin: 0 auto;
+  text-align: center;
 }
 
-.description{
-    font-size: 24px;
-    padding-top: 10px;
-    text-align: center;
+.description {
+  font-size: 24px;
+  padding-top: 10px;
+  text-align: center;
 }
 
-.footer{
-    font-size: 24px;
-    padding-top: 30px;
-    text-align: center;
+.footer {
+  font-size: 24px;
+  padding-top: 30px;
+  text-align: center;
 }
 
 .container {
@@ -46,7 +47,7 @@
   color: #bbb;
   padding: 20px 36px;
   text-align: left;
-  font-size: 24px;
+  font-size: 20px;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.4s ease;
@@ -59,7 +60,7 @@
 .active {
   background: linear-gradient(10deg, #211C4B, #F15D22);
   color: #fff;
-  border: none; 
+  border: none;
   padding: 20px 65px 20px 36px;
 }
 
@@ -105,6 +106,7 @@
   opacity: 0;
   transform: translateY(10px);
 }
+
 .desktopOnly {
   display: block;
 }
@@ -161,37 +163,38 @@
   }
 
   .optionContentMobile {
-  display: block;
-  padding: 20px;
-  border: 1px solid #913714;
-  border-top: none;
-  background-image: url('/images/common-option-selector-bg.png');
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  border-radius: 0 0 8px 8px;
-  margin-bottom: 10px;
+    display: block;
+    padding: 20px;
+    border: 1px solid #913714;
+    border-top: none;
+    background-image: url('/images/common-option-selector-bg.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 10px;
 
-  overflow: hidden;
+    overflow: hidden;
 
-  max-height: 0;
-  opacity: 0;
-
-  animation: expandMobile 0.5s ease forwards;
-}
-@keyframes expandMobile {
-  from {
     max-height: 0;
     opacity: 0;
-    transform: translateY(-5px);
+
+    animation: expandMobile 0.5s ease forwards;
   }
 
-  to {
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
+  @keyframes expandMobile {
+    from {
+      max-height: 0;
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+
+    to {
+      max-height: 500px;
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-}
 
   .optionBtn {
     width: 100%;

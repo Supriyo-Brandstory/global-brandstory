@@ -9,7 +9,7 @@
 .title {
   color: white;
   text-align: center;
-  font-size: 50px;
+  font-size: clamp(32px, 5vw, 50px);
   font-weight: 700;
   margin-bottom: 40px;
 }
@@ -116,10 +116,6 @@
   cursor: pointer;
 }
 
-
-.card{
-  /* border: 1px solid red; */
-}
 /* ─── MOBILE ───────────────────────────────────────────── */
 
 @media (max-width: 768px) {

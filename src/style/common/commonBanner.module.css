@@ -24,7 +24,8 @@
 }
 
 .seoBannerParagraph div{
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
     margin: 0 auto;
     gap: 20px;
     display: flex;

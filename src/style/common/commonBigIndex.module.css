@@ -1,7 +1,8 @@
 .frame {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 70px 0;
+  padding: 70px 20px;
   color: #fff;
   text-align: center;
   font-size: 18px;
@@ -10,7 +11,7 @@
   gap: 40px;
 }
 
-.frame p{
+.frame p {
   font-size: 18px;
 }
 
@@ -30,7 +31,7 @@
   gap: 30px;
 }
 
-.label{
+.label {
   font-size: 24px !important;
   font-family: "Gilroy-Bold";
 }
@@ -54,9 +55,11 @@
 .case1 {
   background-image: url('/images/SMM/case-bg-1.webp');
 }
+
 .case2 {
   background-image: url('/images/SMM/case-bg-2.webp');
 }
+
 .case3 {
   background-image: url('/images/SMM/case-bg-3.webp');
 }
@@ -81,7 +84,7 @@
 .caseDesc {
   font-size: 18px;
   margin-bottom: 15px;
-  font-weight:lighter;
+  font-weight: lighter;
   color: #FDF6F0;
 }
 
@@ -113,13 +116,19 @@
 }
 
 @media (max-width: 768px) {
-  .frame{
+  .frame {
     gap: 8px;
     margin: 30px 0;
   }
-  .frame p{
-  font-size: 16px;
-}
+
+  .frame p {
+    font-size: 16px;
+  }
+
+  .imageId {
+    width: 10%;
+  }
+
   /* .caseWrapper {
     flex-direction: column;
     align-items: center;
@@ -128,7 +137,7 @@
     flex: 0 1 100%;
   } */
 
-   .caseWrapper {
+  .caseWrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -179,19 +188,20 @@
     height: 10px;
   }
 
-  .caseBox h3{
+  .caseBox h3 {
     font-size: 16px !important;
 
   }
 
-  .label{
+  .label {
     font-size: 18px !important;
   }
 
-  .caseTitle{
-  margin-bottom: 8px;
+  .caseTitle {
+    margin-bottom: 8px;
   }
-  .caseDesc{
+
+  .caseDesc {
     font-size: 12px !important;
   }
 
@@ -202,5 +212,11 @@
 
   .frame {
     padding: 0 10px;
+  }
+}
+
+@media (max-width:650px) {
+  .imageId {
+    width: 20%;
   }
 }

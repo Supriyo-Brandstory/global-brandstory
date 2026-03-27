@@ -1,7 +1,8 @@
 .frame {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 60px 20px;
 }
 
 .title {
@@ -45,10 +46,11 @@
     scrollbar-gutter: stable both-edges;
     /* padding: 8px 6px; */
     margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 .optionBtn {
-    height: 82px;
+    height: 100%;
     width: 275px;
     position: relative;
     background: transparent;
@@ -57,8 +59,8 @@
     flex: 0 0 auto;
     line-height: normal;
     max-width: 90%;
-    font-size: 24px;
-    padding: 12px 60px 12px 20px;
+    font-size: 20px;
+    padding: 12px;
     text-align: left;
     white-space: normal;
     font-weight: normal;
@@ -66,9 +68,7 @@
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.4s ease;
-    background-image: url('/images/selector-button-bg-transparent.png');
-    background-size: contain;
-    background-repeat: no-repeat;
+    border: 1px solid brown;
 }
 
 .optionBtn:hover {
@@ -76,8 +76,8 @@
 }
 
 .active {
-    /* background: linear-gradient(10deg, #211C4B, #F15D22); */
-    background-image: url('/images/selector-button-bg.png');
+    background: linear-gradient(10deg, #211C4B, #F15D22);
+    /* background-image: url('/images/selector-button-bg.png'); */
     color: #fff;
     border: none;
     font-weight: bold;
@@ -155,20 +155,24 @@
 
 
 @media (max-width: 767px) {
-    .frame{
+    .frame {
         padding: 30px 0;
     }
+
     .desktopOnly {
         display: none;
     }
-    .description{
+
+    .description {
         font-size: 18px;
         margin-top: 8px;
     }
-    .container{
+
+    .container {
         margin-top: 20px;
     }
-    .optionBtn{
+
+    .optionBtn {
         height: 42px !important;
         font-size: 16px !important;
     }
@@ -188,7 +192,11 @@
         width: 100%;
         max-width: 100%;
         padding: 12px 20px;
+        background-image: url('/images/selector-button-bg-transparent.png');
+        background-repeat: no-repeat;
         background-size: 100% 100%;
+        border: none;
+
     }
 
     .active {
