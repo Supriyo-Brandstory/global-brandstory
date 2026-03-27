@@ -13,7 +13,7 @@ export const CommonTwoCardWrapper = ({ data }) => {
         heading: data?.title,
         highlight: data?.orangeText,
         subheading: data?.para,
-        renderType:"dynamic",
+        renderType: "dynamic",
         cards: data?.card || [
             {
                 title: "Consultation & Planning",
@@ -43,7 +43,11 @@ export const CommonTwoCardWrapper = ({ data }) => {
         <>
             <CommonTwoCard {...data1} titleClass="text-center" cardLayout="two-col" />
             {/* <p className='max-w-[1200px] text-center mx-auto mb-30'>{}</p> */}
-            {data?.bottomPara && (<BlocksRenderer content={data?.bottomPara} blocks={blocks} />)}
+            <div className='flex items-center justify-center '>
+                <div className='max-w-7xl'>
+                    {data?.bottomPara && (<BlocksRenderer content={data?.bottomPara} blocks={blocks} />)}
+                </div>
+            </div>
         </>
     )
 }

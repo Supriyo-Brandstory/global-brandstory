@@ -1,9 +1,10 @@
 .seoSection {
   color: #fff;
-  padding: 60px 0px;
+  padding: 60px 20px;
   text-align: center;
   margin: 0 auto;
   max-width: 1200px;
+  width: 100%;
 }
 
 .header {
@@ -19,9 +20,9 @@
   color: #fbfbfb;
 }
 
-.footer{
+.footer {
   font-size: 18px;
-  color: #FDF6F0;  
+  color: #FDF6F0;
 }
 
 .grid {
@@ -42,8 +43,10 @@
   flex-direction: column;
   align-items: center;
   min-height: 320px;
-  max-width: 360px; /* Fixed width for consistent sizing */
-  flex-shrink: 0; /* Prevents cards from shrinking */
+  max-width: 360px;
+  /* Fixed width for consistent sizing */
+  flex-shrink: 0;
+  /* Prevents cards from shrinking */
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-clip: padding-box;
@@ -65,7 +68,7 @@
   pointer-events: none;
 }
 
-.card > * {
+.card>* {
   position: relative;
   z-index: 5;
 }
@@ -93,49 +96,49 @@
   border-radius: 8px;
 }
 
-.indicators{
-  display:none;
-  justify-content:center;
-  gap:8px;
-  margin-top:15px;
+.indicators {
+  display: none;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
 }
 
-.dot{
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:#555;
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #555;
 }
 
-.activeDot{
-  background:#fff;
+.activeDot {
+  background: #fff;
 }
 
 @media (max-width: 768px) {
 
-  .seoSection{
+  /* .seoSection{
     margin:0 8px;
+  } */
+
+  .indicators {
+    display: flex;
   }
 
-  .indicators{
-    display:flex;
-  }
-
-  .grid{
+  .grid {
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     justify-content: flex-start;
-    gap:16px;
-    padding-bottom:10px;
+    gap: 16px;
+    padding-bottom: 10px;
   }
 
-  .grid::-webkit-scrollbar{
-    display:none;
+  .grid::-webkit-scrollbar {
+    display: none;
   }
 
-  .card{
+  .card {
     flex: 0 0 100%;
     max-width: 400px;
     scroll-snap-align: center;

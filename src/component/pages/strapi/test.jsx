@@ -36,8 +36,10 @@ export default function StrapiTest({ data }) {
         },
     ];
     return (
-        <section>
-            <CommonAccordion title={data?.title} subheding1={data?.orangeText} subheding2={data?.para} items={accordionData} footer={data?.bottomPara} renderType="dynamic" />
+        <section className="flex justify-center items-center">
+            <div className="px-4">
+                <CommonAccordion title={data?.title} subheding1={data?.orangeText} subheding2={data?.para} items={accordionData} footer={data?.bottomPara} renderType="dynamic" />
+            </div>
         </section>
     )
 }

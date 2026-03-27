@@ -76,6 +76,7 @@ body {
 
 .headerContainer {
   max-width: var(--max-width);
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -143,7 +144,7 @@ body {
 .navLinks {
   position: absolute;
   left: 50%;
-  transform: translateX(-45%);
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -585,9 +586,10 @@ body {
 .megaMenu {
   background: #1b1b1b;
   border-radius: 8px;
-  min-width: 1200px;
+  max-width: var(--max-width);
+  width: 100%;
   margin: 0 auto;
-  height: 75vh;
+  height: clamp(500px, 75vh, 800px);
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
@@ -595,7 +597,7 @@ body {
 /* Inner grid */
 .megaMenuInner {
   display: grid;
-  grid-template-columns: 380px 1fr 1fr;
+  grid-template-columns: minmax(300px, 1.2fr) 1fr 1fr;
   height: 100%;
 }
 

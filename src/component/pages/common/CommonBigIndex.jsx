@@ -1,29 +1,29 @@
-'use client' 
+'use client'
 import styles from '@/style/common/commonBigIndex.module.css'
 import { useRef, useState, useEffect } from "react";
 import { BlocksRenderer } from '@strapi/blocks-react-renderer'
 
 export const CommonBigIndex = ({ heading, description, data, footer, caseLabel = null, paddingBottom }) => {
   const caseRef = useRef(null);
-const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-useEffect(() => {
-  const el = caseRef.current;
-  if (!el) return;
-  const handleScroll = () => {
-    const index = Math.round(el.scrollLeft / el.offsetWidth);
-    setActiveIndex(index);
+  useEffect(() => {
+    const el = caseRef.current;
+    if (!el) return;
+    const handleScroll = () => {
+      const index = Math.round(el.scrollLeft / el.offsetWidth);
+      setActiveIndex(index);
+    };
+    el.addEventListener("scroll", handleScroll, { passive: true });
+    return () => el.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToCard = (index) => {
+    const el = caseRef.current;
+    if (!el) return;
+    el.scrollTo({ left: el.offsetWidth * index, behavior: "smooth" });
   };
-  el.addEventListener("scroll", handleScroll, { passive: true });
-  return () => el.removeEventListener("scroll", handleScroll);
-}, []);
 
-const scrollToCard = (index) => {
-  const el = caseRef.current;
-  if (!el) return;
-  el.scrollTo({ left: el.offsetWidth * index, behavior: "smooth" });
-};
-  
   return (
     <div
       className={styles.frame}
@@ -57,17 +57,17 @@ const scrollToCard = (index) => {
         ))}
       </div>
       {data?.length > 1 && (
-  <div className={styles.dots}>
-    {data.map((_, index) => (
-      <button
-        key={index}
-        className={`${styles.dot} ${index === activeIndex ? styles.dotActive : ""}`}
-        onClick={() => scrollToCard(index)}
-        aria-label={`Go to card ${index + 1}`}
-      />
-    ))}
-  </div>
-)}
+        <div className={styles.dots}>
+          {data.map((_, index) => (
+            <button
+              key={index}
+              className={`${styles.dot} ${index === activeIndex ? styles.dotActive : ""}`}
+              onClick={() => scrollToCard(index)}
+              aria-label={`Go to card ${index + 1}`}
+            />
+          ))}
+        </div>
+      )}
 
       {footer && (typeof footer === "string" ? (<p className={styles.center} dangerouslySetInnerHTML={{ __html: footer }} />) : (<BlocksRenderer content={footer} blocks={{ paragraph: ({ children }) => (<p className='!text-white !mt-8'>{children}</p>) }} />))}
     </div>

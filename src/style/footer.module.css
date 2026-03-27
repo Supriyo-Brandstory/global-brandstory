@@ -3,7 +3,8 @@
  padding: 80px 0px;
 }
 .footer_container {
-  width: var(--max-width);
+  max-width: var(--max-width);
+  width: 100%;
  margin: 0 auto;
 }
 
@@ -45,8 +46,8 @@ color: #FDF6F0;
 
 .mainContent {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
   margin-bottom: 40px;
 }
 
@@ -56,7 +57,8 @@ color: #FDF6F0;
 }
 
 .brandSection {
-     width: 480px;
+     max-width: 480px;
+     width: 100%;
 }
 
 .brandSection h2 {

@@ -1,13 +1,16 @@
-.wrapper{
-    width: 1200px;
-    padding: 60px 0;
+.wrapper {
+    max-width: 1200px;
+    width: 100%;
+    padding: 60px 20px;
     margin: 0 auto;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
+
 .wrapper h2{
+    width: 100%;
     max-width: 1000px;
     margin: 0 auto;
 }
