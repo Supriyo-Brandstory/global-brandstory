@@ -78,8 +78,8 @@ export const CommonContactForm = () => {
                         <h2 className={styles.title}>Request a Consultation</h2>
                         <div className={styles.inputGroup}>
                             <input
-                                name="name"
-                                value={formData.name}
+                                name="brandName"
+                                value={formData.brandName}
                                 onChange={handleChange}
                                 type="text"
                                 placeholder='Your Name'
@@ -115,8 +115,8 @@ export const CommonContactForm = () => {
                         </div>
                         <div className={styles.inputGroup}>
                             <input
-                                name="brandName"
-                                value={formData.brandName}
+                                name="name"
+                                value={formData.name}
                                 onChange={handleChange}
                                 type="text"
                                 placeholder='Company / Brand name'
