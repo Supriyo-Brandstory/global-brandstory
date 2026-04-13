@@ -1,0 +1,188 @@
+.section {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.container {
+    max-width: var(--max-width, 1200px);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.mainHeading {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.index {
+    color: #fff;
+    font-size: 24px;
+    font-family: var(--font-family-gilory-regular);
+}
+
+.headingText {
+    font-size: clamp(32px, 4vw, 42px);
+    font-family: var(--font-family-bold);
+}
+
+.card {
+    background: #1c1c1c;
+    border-radius: 14px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.statCard {
+    border: 1.5px solid transparent;
+}
+
+.statCardHighlight {
+    border: 1.5px solid #FF5C39; /* Initial state if it was highlighted in the image */
+}
+
+.statCard:hover,
+.statCardHighlight:hover {
+    border: 1.5px solid #FF5C39;
+    box-shadow: 0 0 15px rgba(255, 92, 57, 0.1);
+    background: #000;
+}
+
+.statNumber {
+    font-size: 48px;
+    font-family: var(--font-family-bold);
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.statNumberOrange {
+    color: #FF5C39;
+}
+
+.statLabel {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.4;
+}
+
+.intentCard {
+    padding: 40px;
+}
+
+.intentTitle {
+    color: #DCBC65;
+    font-family: var(--font-family-bold);
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.intentGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.intentSubCard {
+    background: #121212;
+    padding: 32px 24px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.intentSubCard:hover {
+    border: 1px solid #DCBC65;
+    box-shadow: 0 0 10px rgba(220, 188, 101, 0.1);
+}
+
+.intentSubCard:hover .intentSubTitleGold {
+    color: #fff;
+}
+
+.intentSubTitle {
+    font-size: 24px;
+    font-family: var(--font-family-gilory-regular);
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.intentSubTitleGold {
+    color: #DCBC65;
+}
+
+.intentSubDesc {
+    font-size: 14px;
+    color: #666;
+    font-family: var(--font-family-gilory-regular);
+}
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 80px 0;
+    }
+    .statsGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .intentGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .intentCard {
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+    .container {
+        padding: 0 1.5rem;
+    }
+    .mainHeading {
+        margin-bottom: 32px;
+        gap: 16px;
+    }
+    .index {
+        font-size: 20px;
+    }
+    .headingText {
+        font-size: clamp(24px, 5vw, 28px);
+    }
+    .card {
+        padding: 24px;
+    }
+    .statNumber {
+        font-size: 40px;
+    }
+    .intentTitle {
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+    .intentSubCard {
+        padding: 24px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .statNumber {
+        font-size: 32px;
+    }
+    .intentSubTitle {
+        font-size: 20px;
+    }
+}

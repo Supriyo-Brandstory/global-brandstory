@@ -1,0 +1,183 @@
+.section {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.container {
+    max-width: var(--max-width, 1200px);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.mainHeading {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.index {
+    color: #fff;
+    font-size: 24px;
+    font-family: var(--font-family-gilory-regular);
+}
+
+.headingText {
+    font-size: clamp(32px, 4vw, 42px);
+    font-family: var(--font-family-bold);
+}
+
+.card {
+    background: #1c1c1c;
+    border-radius: 14px;
+    padding: 40px 32px;
+    border: 1.5px solid rgba(255, 255, 255, 0.05);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.futureGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.iconBrain { color: #F08722; }
+.iconSparkle { color: #DCBC65; }
+
+.cardTitle {
+    color: #FFD675;
+    font-family: var(--font-family-bold);
+    font-size: 24px;
+}
+
+.cardDesc {
+    color: #D1D5DC;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: var(--font-family-bold);
+}
+
+.badgeBlue {
+    background: #3C358A;
+    color: #fff;
+}
+
+.badgeGray {
+    background: #18181b;
+    color: #71717A;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.growthNumber {
+    font-size: 64px;
+    font-family: var(--font-family-bold);
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.growthLabel {
+    font-size: 14px;
+    color: #999;
+    font-family: var(--font-family-gilory-regular);
+}
+
+.statCard {
+    border-color: #F08722;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.multiLingualCard {
+    border-color: #3C358A;
+}
+
+.multiLingualCard .cardTitle {
+    margin-bottom: 16px;
+}
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    .mainHeading {
+        margin-bottom: 40px;
+    }
+    .headingText {
+        font-size: 28px;
+    }
+    .futureGrid {
+        grid-template-columns: 1fr;
+    }
+    .growthNumber {
+        font-size: 54px;
+    }
+    .card {
+        padding: 32px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .mainHeading {
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .index {
+        font-size: 20px;
+    }
+
+    .headingText {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 24px 18px;
+    }
+
+    .cardTitle {
+        font-size: 20px;
+    }
+
+    .cardDesc {
+        font-size: 14px;
+    }
+
+    .growthNumber {
+        font-size: 46px;
+    }
+
+    .badge {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,216 @@
+.section {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.container {
+    max-width: var(--max-width, 1200px);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.mainHeading {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.index {
+    color: #fff;
+    font-size: 24px;
+    font-family: var(--font-family-gilory-regular);
+}
+
+.headingText {
+    font-size: clamp(32px, 4vw, 42px);
+    font-family: var(--font-family-bold);
+}
+
+.card {
+    background: #1c1c1c;
+    border-radius: 14px;
+    padding: 40px 32px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.statCard {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.statNumber {
+    font-size: 54px;
+    font-family: var(--font-family-bold);
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.statLabel {
+    font-size: 14px;
+    color: #999;
+    line-height: 1.4;
+    font-family: var(--font-family-gilory-regular);
+}
+
+/* Specific Stat Card Variants */
+.statCardOrange {
+    /* background: black; */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.statCardGray {
+    background: #1c1c1c;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.statCardOrange:hover {
+    border: 1px solid #F08722;
+    box-shadow: 0 0 20px rgba(240, 135, 34, 0.1);
+}
+
+.statCardGray:hover {
+    background: #000;
+    border-color: #F08722;
+}
+
+.insightsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.insightCard {
+    border: 1px solid #3C358A;
+    background: black;
+}
+
+.insightTitle {
+    color: #DCBC65;
+    font-family: var(--font-family-bold);
+    font-size: 22px;
+    margin-bottom: 24px;
+}
+
+.bulletList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bulletItem {
+    display: flex;
+    gap: 12px;
+    color: #D1D5DC;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: #FF5C39;
+    border-radius: 50%;
+    margin-top: 8px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .insightsGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .mainHeading {
+        margin-bottom: 40px;
+    }
+
+    .headingText {
+        font-size: 28px;
+    }
+
+    .statNumber {
+        font-size: 42px;
+    }
+
+    .card {
+        padding: 32px 24px;
+    }
+
+    .insightTitle {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .mainHeading {
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .index {
+        font-size: 20px;
+    }
+
+    .headingText {
+        font-size: 24px;
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 24px 18px;
+    }
+
+    .statNumber {
+        font-size: 36px;
+    }
+
+    .insightTitle {
+        font-size: 18px;
+    }
+
+    .bulletItem {
+        font-size: 14px;
+    }
+}

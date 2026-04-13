@@ -35,7 +35,7 @@ export const CommonContactForm = () => {
         e.preventDefault();
         setIsSubmitting(true);
         try {
-            const response = await fetch('/api/monday-common', {
+            const response = await fetch('/monday-common', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

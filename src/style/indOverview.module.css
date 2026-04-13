@@ -1,0 +1,192 @@
+.section {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.container {
+    max-width: var(--max-width, 1200px);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.mainHeading {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.index {
+    color: #fff;
+    font-size: 24px;
+    font-family: var(--font-family-gilory-regular);
+}
+
+.headingText {
+    font-size: clamp(32px, 4vw, 42px);
+    font-family: var(--font-family-bold);
+}
+
+.card {
+    background: #1c1c1c;
+    border-radius: 14px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    height: 100%;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.statCard {
+    border: 1.5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.statCard:hover {
+    border: 1.5px solid #F08722;
+    box-shadow: 0 0 15px rgba(255, 92, 57, 0.1);
+    background: black;
+}
+
+.statNumber {
+    font-size: 42px;
+    font-family: var(--font-family-bold);
+    color: #FF5C39;
+    margin-bottom: 12px;
+}
+
+.statLabel {
+    font-size: 14px;
+    color: #999;
+    line-height: 1.4;
+}
+
+.detailGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.detailCard {
+    padding: 24px;
+    background: black;
+    border: 1px solid #3C358A
+}
+
+.detailTitle {
+    color: #DCBC65;
+    font-family: var(--font-family-bold);
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+
+.bulletList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bulletItem {
+    display: flex;
+    gap: 12px;
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background-color: #FF5C39;
+    border-radius: 50%;
+    margin-top: 10px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .detailGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .mainHeading {
+        margin-bottom: 32px;
+        gap: 16px;
+    }
+
+    .index {
+        font-size: 20px;
+    }
+
+    .headingText {
+        font-size: 28px;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .statNumber {
+        font-size: 36px;
+    }
+
+    .detailTitle {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .statNumber {
+        font-size: 32px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .headingText {
+        font-size: 24px;
+    }
+
+    .bulletItem {
+        font-size: 14px;
+    }
+
+    .bulletList {
+        gap: 16px;
+    }
+}

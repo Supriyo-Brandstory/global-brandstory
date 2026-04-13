@@ -1,0 +1,151 @@
+/* ========================================
+   Section 12 – Appendix / Data Sources
+   ======================================== */
+
+.section {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.container {
+    max-width: var(--max-width, 1200px);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+/* ---- Section Header ---- */
+.mainHeading {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.index {
+    color: #fff;
+    font-size: 24px;
+    font-family: var(--font-family-gilory-regular);
+}
+
+.headingText {
+    font-size: clamp(32px, 4vw, 42px);
+    font-family: var(--font-family-bold);
+}
+
+/* ---- Card ---- */
+.card {
+    background: #1c1c1c;
+    border-radius: 14px;
+    padding: 40px 32px;
+    border: 1.5px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ---- Two-Column Sources Grid ---- */
+.sourcesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+/* ---- Source Group ---- */
+.groupTitle {
+    color: #DCBC65;
+    font-family: var(--font-family-bold);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sourceList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sourceItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #D1D5DC;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.bullet {
+    color: #D1D5DC;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* ========================================
+   Responsive — Tablet (≤1024px)
+   ======================================== */
+@media (max-width: 1024px) {
+    .section {
+        padding: 80px 0;
+    }
+}
+
+/* ========================================
+   Responsive — Mobile (≤768px)
+   ======================================== */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .mainHeading {
+        margin-bottom: 40px;
+    }
+
+    .headingText {
+        font-size: 28px;
+    }
+
+    .card {
+        padding: 28px 22px;
+    }
+
+    .sourcesGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+/* ========================================
+   Responsive — Small Mobile (≤480px)
+   ======================================== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .mainHeading {
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .index {
+        font-size: 20px;
+    }
+
+    .headingText {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 24px 18px;
+    }
+
+    .groupTitle {
+        font-size: 18px;
+    }
+}

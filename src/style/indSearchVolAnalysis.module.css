@@ -1,0 +1,320 @@
+.section {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.container {
+    max-width: var(--max-width, 1200px);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.mainHeading {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.index {
+    color: #fff;
+    font-size: 24px;
+    font-family: var(--font-family-gilory-regular);
+}
+
+.headingText {
+    font-size: clamp(32px, 4vw, 42px);
+    font-family: var(--font-family-bold);
+}
+
+.subSectionHeading {
+    font-size: 20px;
+    font-family: var(--font-family-bold);
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.card {
+    background: #1c1c1c;
+    border-radius: 14px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.trendsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.trendCard {
+    border: 1.5px solid transparent;
+}
+
+.trendCardHighlighted {
+    border: 1.5px solid #F08722;
+    background: black;
+    box-shadow: 0 0 15px rgba(255, 92, 57, 0.1);
+}
+
+.trendCard:hover {
+    border: 1.5px solid #F08722;
+    box-shadow: 0 0 15px rgba(255, 92, 57, 0.1);
+    background: #000;
+}
+
+.trendNumber {
+    font-size: 38px;
+    font-family: var(--font-family-bold);
+    color: #FF5C39;
+    margin-bottom: 12px;
+}
+
+.trendLabel {
+    font-size: 13px;
+    color: #999;
+    font-family: var(--font-family-gilory-regular);
+}
+
+.totalVolumeCard {
+    background: #1c1c1c;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: clamp(20px, 4vw, 32px);
+    font-family: var(--font-family-gilory-regular);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.seasonalityTitle {
+    color: #FFD675;
+    margin-bottom: 10px;
+}
+
+.totalVolumeLabel {
+    color: #FFD675;
+}
+
+.totalVolumeValue {
+    color: #FF5C39;
+    font-family: var(--font-family-bold);
+}
+
+.seasonalityCard {
+    background: #1c1c1c;
+    border-radius: 12px;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.seasonalityText {
+    font-size: 16px;
+    color: #ccc;
+    font-family: var(--font-family-gilory-regular);
+}
+
+.seasonalityBadge {
+    background: #3F3D99;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: var(--font-family-bold);
+}
+
+.citiesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.cityCard {
+    padding: 40px;
+    background: #1c1c1c;
+}
+
+.cityHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.cityLine {
+    width: 2px;
+    height: 24px;
+    background: #FF5C39;
+}
+
+.cityName {
+    font-size: 24px;
+    font-family: var(--font-family-bold);
+    color: #fff;
+}
+
+.tableHeaderRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #FF5C39;
+    font-family: var(--font-family-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dataRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dataLabel {
+    color: #D1D5DC;
+    font-size: 15px;
+}
+
+.dataValue {
+    color: #FFCB43;
+    font-family: var(--font-family-bold);
+    font-size: 15px;
+}
+
+.cityTotalRow {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    padding-top: 24px;
+}
+
+.cityTotalLabel {
+    font-size: 18px;
+    font-family: var(--font-family-bold);
+    color: #FF5C39;
+}
+
+.cityTotalValue {
+    font-size: 18px;
+    font-family: var(--font-family-bold);
+    color: #FFCB43;
+}
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .trendsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .citiesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .seasonalityCard {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .mainHeading {
+        margin-bottom: 40px;
+    }
+
+    .headingText {
+        font-size: 28px;
+    }
+
+    .seasonalityCard {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 24px;
+    }
+
+    .benchmarkValue {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .mainHeading {
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .index {
+        font-size: 20px;
+    }
+
+    .headingText {
+        font-size: 24px;
+    }
+
+    .trendsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .cityCard {
+        padding: 20px;
+    }
+
+    .trendNumber {
+        font-size: 32px;
+    }
+
+    .totalVolumeCard {
+        padding: 20px;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .seasonalityCard {
+        padding: 20px;
+    }
+
+    .seasonalityText {
+        font-size: 14px;
+    }
+
+    .cityName {
+        font-size: 20px;
+    }
+
+    .dataLabel,
+    .dataValue {
+        font-size: 14px;
+    }
+
+    .subSectionHeading {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,163 @@
+/* ========================================
+   Section 11 – Actionable Recommendations
+   ======================================== */
+
+.section {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.container {
+    max-width: var(--max-width, 1200px);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+/* ---- Section Header ---- */
+.mainHeading {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.index {
+    color: #fff;
+    font-size: 24px;
+    font-family: var(--font-family-gilory-regular);
+}
+
+.headingText {
+    font-size: clamp(32px, 4vw, 42px);
+    font-family: var(--font-family-bold);
+}
+
+/* ---- Recommendations Grid ---- */
+.recGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* ---- Card ---- */
+.card {
+    background: #1c1c1c;
+    border-radius: 14px;
+    padding: 32px;
+    border: 1.5px solid rgba(255, 255, 255, 0.05);
+    transition: border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ---- Card Icon ---- */
+.cardIcon {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* ---- Card Title ---- */
+.cardTitle {
+    color: #DCBC65;
+    font-family: var(--font-family-bold);
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+/* ---- Bullet Points ---- */
+.pointsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.pointItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #D1D5DC;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.bullet {
+    color: #D1D5DC;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* ========================================
+   Responsive — Tablet (≤1024px)
+   ======================================== */
+@media (max-width: 1024px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .recGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* ========================================
+   Responsive — Mobile (≤768px)
+   ======================================== */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .mainHeading {
+        margin-bottom: 40px;
+    }
+
+    .headingText {
+        font-size: 28px;
+    }
+
+    .recGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 28px 22px;
+    }
+}
+
+/* ========================================
+   Responsive — Small Mobile (≤480px)
+   ======================================== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .mainHeading {
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .index {
+        font-size: 20px;
+    }
+
+    .headingText {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 24px 18px;
+    }
+}

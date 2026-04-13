@@ -23,8 +23,9 @@ const CommonAccordion = ({ title, subheding1, subheding2, items, footer, padding
 
       {subheding2 && (
         renderType === "dynamic" ? (
-          < BlocksRenderer blocks={{ paragraph: ({ children }) => (<p className="!text-white !text-[20px]">{children}</p>) }} content={subheding2} />
-
+          <div className={styles.subheding2}>
+            < BlocksRenderer blocks={{ paragraph: ({ children }) => (children) }} content={subheding2} />
+          </div>
         ) : (
           <div className={styles.subheding2}
             dangerouslySetInnerHTML={{ __html: subheding2 }}
@@ -102,7 +103,7 @@ const CommonAccordion = ({ title, subheding1, subheding2, items, footer, padding
           </div>
         ))}
       </div>
-      {footer && (typeof footer == "string" ? <span dangerouslySetInnerHTML={{ __html: footer }}></span> : <BlocksRenderer blocks={{ paragraph: ({ children }) => (<p className="!text-white">{children}</p>) }} content={footer} />)}
+      {footer && (typeof footer == "string" ? <span dangerouslySetInnerHTML={{ __html: footer }}></span> : <div className={styles.subheding2}><BlocksRenderer blocks={{ paragraph: ({ children }) => (children) }} content={footer} /></div>)}
     </div>
   );
 };

@@ -1,0 +1,226 @@
+/* ========================================
+   Section 10 – AEO & GEO Strategy
+   ======================================== */
+
+.section {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.container {
+    max-width: var(--max-width, 1200px);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+/* ---- Section Header ---- */
+.mainHeading {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.index {
+    color: #fff;
+    font-size: 24px;
+    font-family: var(--font-family-gilory-regular);
+}
+
+.headingText {
+    font-size: clamp(32px, 4vw, 42px);
+    font-family: var(--font-family-bold);
+}
+
+/* ---- Two-Column Grid ---- */
+.strategyGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+/* ---- Base Card ---- */
+.card {
+    background: #1c1c1c;
+    border-radius: 14px;
+    padding: 40px 32px;
+    border: 1.5px solid rgba(255, 255, 255, 0.05);
+    transition: border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ---- Card Title & Subtitle ---- */
+.cardTitle {
+    color: #DCBC65;
+    font-family: var(--font-family-bold);
+    font-size: clamp(20px, 2.5vw, 24px);
+    margin-bottom: 12px;
+}
+
+.cardSubtitle {
+    color: #D1D5DC;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+/* ---- AEO Example Boxes ---- */
+.examplesGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.exampleBox {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    padding: 16px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.exampleText {
+    color: #D1D5DC;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* ---- Bullet List (AEO actions) ---- */
+.bulletList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bulletItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #D1D5DC;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #F08722;
+    border-radius: 50%;
+    margin-top: 7px;
+    flex-shrink: 0;
+}
+
+/* ---- Arrow List (GEO opportunities) ---- */
+.oppLabel {
+    color: #D1D5DC;
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.arrowList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.arrowItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #D1D5DC;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.arrow {
+    color: #999;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* ========================================
+   Responsive — Tablet (≤1024px)
+   ======================================== */
+@media (max-width: 1024px) {
+    .section {
+        padding: 80px 0;
+    }
+}
+
+/* ========================================
+   Responsive — Mobile (≤768px)
+   ======================================== */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .mainHeading {
+        margin-bottom: 40px;
+    }
+
+    .headingText {
+        font-size: 28px;
+    }
+
+    .strategyGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 28px 22px;
+    }
+
+    .cardSubtitle {
+        margin-bottom: 22px;
+    }
+
+    .examplesGroup {
+        margin-bottom: 22px;
+    }
+}
+
+/* ========================================
+   Responsive — Small Mobile (≤480px)
+   ======================================== */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .mainHeading {
+        gap: 16px;
+        margin-bottom: 32px;
+    }
+
+    .index {
+        font-size: 20px;
+    }
+
+    .headingText {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 24px 18px;
+    }
+
+    .exampleBox {
+        padding: 14px 16px;
+    }
+}

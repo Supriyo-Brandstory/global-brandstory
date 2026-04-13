@@ -1,0 +1,225 @@
+.section {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.container {
+    max-width: var(--max-width, 1200px);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.mainHeading {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.index {
+    color: #fff;
+    font-size: 24px;
+    font-family: var(--font-family-gilory-regular);
+}
+
+.headingText {
+    font-size: clamp(32px, 4vw, 42px);
+    font-family: var(--font-family-bold);
+}
+
+.card {
+    background: #1c1c1c;
+    border-radius: 14px;
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    height: 100%;
+}
+
+.purposeCard {
+    margin-bottom: 24px;
+}
+
+.cardTitleGold {
+    color: #DCBC65;
+    font-family: var(--font-family-bold);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cardDesc {
+    color: #999;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 110px;
+}
+
+.statCardHighlight {
+    border: 1.5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.statCardHighlight:hover {
+    border: 1.5px solid #FF5C39;
+    box-shadow: 0 0 15px rgba(255, 92, 57, 0.1);
+}
+
+.statNumber {
+    font-size: 48px;
+    font-family: var(--font-family-bold);
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.statLabel {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.4;
+}
+
+.subSectionHeading {
+    font-size: 24px;
+    font-family: var(--font-family-bold);
+    margin-bottom: 40px;
+    color: #efefef;
+}
+
+.findingsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 110px;
+}
+
+.findingCard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.iconWrapper {
+    margin-bottom: 8px;
+}
+
+.badge {
+    background: #4A47A3;
+    color: #fff;
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    width: fit-content;
+    font-family: var(--font-family-gilory-regular);
+}
+
+.opportunitiesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.oppoCard {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.oppoIcon {
+    color: #FF5C39;
+}
+
+.oppoTitleBadge {
+    background: #383585;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: var(--font-family-gilory-regular);
+    width: fit-content;
+}
+
+.oppoDesc {
+    color: #ccc;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 80px 0;
+    }
+
+    .statsGrid,
+    .findingsGrid,
+    .opportunitiesGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .mainHeading {
+        margin-bottom: 32px;
+        gap: 16px;
+    }
+
+    .index {
+        font-size: 20px;
+    }
+
+    .headingText {
+        font-size: 28px;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .statNumber {
+        font-size: 40px;
+    }
+
+    .statLabel {
+        font-size: 13px;
+    }
+
+    .subSectionHeading {
+        font-size: 22px;
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .statNumber {
+        font-size: 32px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .headingText {
+        font-size: 24px;
+    }
+
+    .badge {
+        font-size: 13px;
+        padding: 4px 10px;
+    }
+}

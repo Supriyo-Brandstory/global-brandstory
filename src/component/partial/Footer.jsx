@@ -144,7 +144,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className={styles.bottomBar}>
-          <p>END-TO-END BRILLIANCE, POWERED BY BRANDSTORY</p>
+          <p className='text-center'>END-TO-END BRILLIANCE, POWERED BY BRANDSTORY</p>
 
           <div className={styles.bottomLinks}>
             <div className={styles.policyLinks}>

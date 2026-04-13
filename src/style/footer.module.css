@@ -1,11 +1,12 @@
 .footer {
- background: #3B35851A;
- padding: 80px 0px;
+  background: #3B35851A;
+  padding: 80px 0px;
 }
+
 .footer_container {
   max-width: var(--max-width);
   width: 100%;
- margin: 0 auto;
+  margin: 0 auto;
 }
 
 .topStats {
@@ -16,32 +17,33 @@
   margin-bottom: 40px;
   gap: 20px;
 }
-.logo{
+
+.logo {
   width: 90%;
   margin-bottom: 20px;
 }
 
-.stat{
+.stat {
   border-right: 1px solid #FFFFFF57;
-      padding: 0 18px;
+  padding: 0 18px;
 }
 
 .stat h3 {
-font-family: var(--font-family-bold);
-font-weight: 400;
-font-size: 32px;
-line-height: 120%;
-letter-spacing: 0%;
-color: #FDF6F0;
+  font-family: var(--font-family-bold);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #FDF6F0;
 }
 
 .stat p {
- font-family: var(--font-family-bold);
-font-weight: 400;
-font-size: 20px;
-line-height: 120%;
-letter-spacing: 0%;
-color: #FDF6F0;
+  font-family: var(--font-family-bold);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #FDF6F0;
 }
 
 .mainContent {
@@ -51,14 +53,15 @@ color: #FDF6F0;
   margin-bottom: 40px;
 }
 
-.mainContent > * {
-  min-width: 200px; /* Ensures columns don't shrink too small */
+.mainContent>* {
+  min-width: 200px;
+  /* Ensures columns don't shrink too small */
   box-sizing: border-box;
 }
 
 .brandSection {
-     max-width: 480px;
-     width: 100%;
+  max-width: 480px;
+  width: 100%;
 }
 
 .brandSection h2 {
@@ -68,20 +71,21 @@ color: #FDF6F0;
 
 .brandSection p {
   font-family: var(--font-family-gilory-regular);
-font-weight: 400;
-font-size: 24px;
-line-height: 120%;
-letter-spacing: 0%;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0%;
   margin: 5px 0;
   color: #FDF6F0;
 }
-.callButtontext{
-font-family: var(--font-family-bold) !important;
-font-weight: 400;
-font-size: 24px;
-line-height: 120%;
-letter-spacing: 0%;
-color: #FDF6F0;
+
+.callButtontext {
+  font-family: var(--font-family-bold) !important;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #FDF6F0;
 }
 
 .callButton {
@@ -93,24 +97,24 @@ color: #FDF6F0;
   cursor: pointer;
   margin-top: 10px;
   font-family: var(--font-family-bold);
-font-weight: 400;
-font-size: 24px;
-line-height: 120%;
-letter-spacing: 0%;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0%;
 }
 
 .column {
-     width: auto;
+  width: auto;
 }
 
 .column h4 {
   font-family: var(--font-family-bold);
-font-weight: 400;
-font-size: 25px;
-line-height: 120%;
-letter-spacing: 0%;
-text-transform: uppercase;
-color: #FDF6F0;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  color: #FDF6F0;
   margin-bottom: 15px;
 }
 
@@ -121,10 +125,10 @@ color: #FDF6F0;
 
 .column ul li {
   font-family: var(--font-family-gilory-regular);
-font-weight: 400;
-font-size: 22px;
-line-height: 120%;
-letter-spacing: 0%;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 120%;
+  letter-spacing: 0%;
   margin-bottom: 10px;
   color: #FDF6F0;
 }
@@ -139,11 +143,11 @@ letter-spacing: 0%;
 
 .bottomBar p {
   font-family: var(--font-family-bold);
-font-weight: 400;
-font-size: 24px;
-line-height: 120%;
-letter-spacing: 0%;
-color: #FDF6F0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #FDF6F0;
 }
 
 .bottomLinks {
@@ -152,7 +156,8 @@ color: #FDF6F0;
   flex-direction: column;
   gap: 20px;
 }
-.policyLinks{
+
+.policyLinks {
   display: flex;
   gap: 20px;
 }
@@ -161,10 +166,10 @@ color: #FDF6F0;
   color: #FDF6F0;
   text-decoration: none;
   font-family: var(--font-family-gilory-regular);
-font-weight: 400;
-font-size: 20px;
-line-height: 120%;
-letter-spacing: 0%;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0%;
 }
 
 .socialIcons {
@@ -181,10 +186,11 @@ letter-spacing: 0%;
 
 @media (max-width: 768px) {
   .footer_container {
-   
+
     margin: 0 auto;
     width: 100%;
-}
+  }
+
   .footer {
     padding: 40px 20px;
   }
@@ -264,10 +270,11 @@ letter-spacing: 0%;
     width: 100%;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
   }
 
   .policyLinks {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
   }
 

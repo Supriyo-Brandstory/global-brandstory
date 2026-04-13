@@ -1,0 +1,185 @@
+.banner {
+    background: url("/images/seo/seo-banner.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0; /* Standardized vertical padding */
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+    min-height: 80vh; /* Ensure it takes substantial space */
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.container {
+    max-width: var(--max-width, 1200px);
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 1.5rem; /* Slightly tighter mobile padding */
+    position: relative;
+    z-index: 2;
+    margin-top: 40px; /* Reduced from 80px for a more balanced look with the new padding */
+}
+
+.subtitleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.line {
+    width: 40px;
+    height: 2px;
+    background-color: #E75921;
+    display: inline-block;
+}
+
+.subtitle {
+    font-family: var(--font-family-gilory-regular);
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+.title {
+    font-family: var(--font-family-bold);
+    font-size: clamp(32px, 6vw, 76px); /* Fluid size */
+    line-height: 1.1;
+    margin-bottom: 40px;
+    max-width: 900px;
+    letter-spacing: -1px;
+}
+
+.ctaButton {
+    background-color: #E75921;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(231, 89, 33, 0.3);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.ctaButton:hover {
+    background-color: #f16a35;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 89, 33, 0.4);
+}
+
+/* Decorative elements */
+.decoration {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.glow {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #E75921;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px rgba(231, 89, 33, 0.6);
+}
+
+.glow1 { top: 20%; left: 5%; }
+.glow2 { top: 70%; right: 10%; }
+.glow3 { bottom: 15%; left: 15%; }
+
+.square {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.sq1 {
+    width: 80px;
+    height: 80px;
+    bottom: 10%;
+    left: 5%;
+}
+
+.sq2 {
+    width: 120px;
+    height: 120px;
+    top: 30%;
+    right: 3%;
+    opacity: 0.4;
+}
+
+/* Response Breakpoints */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 3rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .banner {
+        padding: 140px 0 100px; /* More space for absolute header */
+    }
+    .title {
+        max-width: 100%;
+        font-size: clamp(32px, 8vw, 64px);
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 120px 0 80px;
+    }
+    .container {
+        padding: 0 1.5rem;
+    }
+    .subtitle {
+        font-size: 16px;
+    }
+    .title {
+        margin-bottom: 32px;
+    }
+    .ctaButton {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        padding: 100px 0 60px;
+    }
+    .line {
+        width: 30px;
+    }
+    .subtitle {
+        font-size: 14px;
+    }
+    .title {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+    .ctaButton {
+        font-size: 14px;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .sq1, .sq2 {
+        display: none; /* Hide decorative items on very small screens to clear the view */
+    }
+}
