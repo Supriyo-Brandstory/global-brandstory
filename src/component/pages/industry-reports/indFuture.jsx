@@ -2,14 +2,34 @@ import React from 'react';
 import styles from '@/style/indFuture.module.css';
 import { Brain, Sparkles } from 'lucide-react';
 
-export default function IndFuture() {
+export default function IndFuture({ data }) {
+    const sectionTitle = data?.sectionTitle ;
+    const impactCard = data?.impactCard || {
+        title: 'null',
+        description: 'null',
+        tag: 'null',
+    };
+    const growthCard = data?.growthCard || {
+        title: 'null',
+        description: 'null',
+        tag: 'null',
+    };
+    const numComp = data?.numComp || {
+        number: '0',
+        description: 'null',
+    };
+    const techCard = data?.techCard || {
+        number: 'null',
+        description: 'null',
+    };
+
     return (
         <section className={styles.section}>
             <div className={styles.container}>
                 {/* Header with index */}
                 <div className={styles.mainHeading}>
                     <span className={styles.index}>09</span>
-                    <h2 className={styles.headingText}>Future of SEO in Indian Real Estate</h2>
+                    <h2 className={styles.headingText}>{sectionTitle}</h2>
                 </div>
 
                 {/* Future Insights Grid */}
@@ -18,13 +38,13 @@ export default function IndFuture() {
                     <div className={styles.card}>
                         <div className={styles.cardHeader}>
                             <Brain className={styles.iconBrain} size={32} />
-                            <h3 className={styles.cardTitle}>AI & SGE Impact</h3>
+                            <h3 className={styles.cardTitle}>{impactCard.title}</h3>
                         </div>
                         <p className={styles.cardDesc}>
-                            Google and Bing increasingly summarize listings in generative answers. Portals risk traffic cannibalization as AI presents information without clicks.
+                            {impactCard.description}
                         </p>
                         <div className={`${styles.badge} ${styles.badgeBlue}`}>
-                            Prepare for zero-click searches
+                            {impactCard.tag}
                         </div>
                     </div>
 
@@ -32,27 +52,27 @@ export default function IndFuture() {
                     <div className={styles.card}>
                         <div className={styles.cardHeader}>
                             <Sparkles className={styles.iconSparkle} size={32} />
-                            <h3 className={styles.cardTitle}>Voice Search Growth</h3>
+                            <h3 className={styles.cardTitle}>{growthCard.title}</h3>
                         </div>
                         <p className={styles.cardDesc}>
-                            Growing rapidly in vernacular. Queries like "Bangalore mein 2BHK flat" or "Hyderabad lo villa" becoming mainstream.
+                            {growthCard.description}
                         </p>
                         <div className={`${styles.badge} ${styles.badgeGray}`}>
-                            Optimize for conversational queries in regional languages
+                            {growthCard.tag}
                         </div>
                     </div>
 
                     {/* Tier-2 Growth Card */}
                     <div className={`${styles.card} ${styles.statCard}`}>
-                        <h4 className={styles.growthNumber}>2x</h4>
-                        <p className={styles.growthLabel}>Tier-2 search growth vs metros</p>
+                        <h4 className={styles.growthNumber}>{numComp.number}</h4>
+                        <p className={styles.growthLabel}>{numComp.description}</p>
                     </div>
 
                     {/* Multilingual SEO Card */}
                     <div className={`${styles.card} ${styles.multiLingualCard}`}>
-                        <h3 className={styles.cardTitle}>Multilingual SEO</h3>
+                        <h3 className={styles.cardTitle}>{techCard.number}</h3>
                         <p className={styles.cardDesc}>
-                            Most portals operate in English/Hindi. Huge untapped demand exists in Kannada, Tamil, Telugu
+                            {techCard.description}
                         </p>
                     </div>
                 </div>

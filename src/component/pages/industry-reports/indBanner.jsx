@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from '@/style/indBanner.module.css';
 
-export default function IndBanner() {
+export default function IndBanner({ data }) {
+    const { title, preparedBy, cta } = data;
     return (
         <section className={styles.banner}>
             <div className={styles.decoration}>
@@ -11,19 +12,19 @@ export default function IndBanner() {
                 <div className={`${styles.square} ${styles.sq1}`}></div>
                 <div className={`${styles.square} ${styles.sq2}`}></div>
             </div>
-            
+
             <div className={styles.container}>
                 <div className={styles.subtitleWrapper}>
                     <span className={styles.line}></span>
-                    <span className={styles.subtitle}>Prepared by Brandstory Unit</span>
+                    <span className={styles.subtitle}>{preparedBy}</span>
                 </div>
-                
+
                 <h1 className={styles.title}>
-                    Indian Real Estate SEO <br /> Industry Report 2025
+                    {title}
                 </h1>
-                
-                <a href="/contact-us" className={styles.ctaButton}>
-                    Market Intelligence & Strategic Insights
+
+                <a href={cta?.buttonUrl} className={styles.ctaButton}>
+                    {cta?.buttonLabel}
                 </a>
             </div>
         </section>

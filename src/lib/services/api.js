@@ -398,3 +398,132 @@ export async function getLocationPageByPath(fullPath) {
 
   return fetchStrapi(`location-pages?${query}`);
 }
+
+export async function getIndustryReportBySlug(slugArray) {
+  if (!Array.isArray(slugArray) || slugArray.length === 0 || slugArray.length > 2) {
+    return null;
+  }
+
+  const processPage = (page) => {
+    if (!page) return null;
+    return {
+      ...page,
+      fullSlug: page.parentSlug ? `${page.parentSlug}/${page.slug}` : page.slug,
+    };
+  };
+
+  const [firstSlug, secondSlug] = slugArray;
+  const filters =
+    slugArray.length === 1
+      ? {
+        parentSlug: { $eq: firstSlug },
+        slug: { $null: true },
+      }
+      : {
+        parentSlug: { $eq: firstSlug },
+        slug: { $eq: secondSlug },
+      };
+
+  const query = qs.stringify(
+    {
+      filters,
+      populate: {
+        sections: {
+          on: {
+            "industry-reports.rep-banner": { populate: "*" },
+            "industry-reports.rep-exc-summary": {
+              populate: {
+                snapshotOfOpportunities: { populate: "*" },
+                keyfindings: { populate: "*" },
+              }
+            },
+            "industry-reports.rep-ind-overview": { populate: "*" },
+            "industry-reports.rep-perf-bench-mark": { populate: "*" },
+            "industry-reports.rep-comp-and-market-leaders": {
+              populate: {
+                perfTable: {
+                  populate: {
+                    heading: "*",
+                    Row: {
+                      populate: {
+                        cells: "*"
+                      }
+                    }
+                  }
+                },
+                points: "*",
+                emergingCompetitor: "*",
+                benchmark: "*",
+              }
+            },
+            "industry-reports.rep-search-volume-analysis": {
+              populate: {
+                cityCards: {
+                  populate: {
+                    cityTable: {
+                      populate: {
+                        heading: "*",
+                        Row: {
+                          populate: {
+                            cells: "*",
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+                searchValues: "*"
+              },
+            },
+            "industry-reports.rep-content-and-insights": {
+              populate: {
+                adoptCard: { populate: "*" },
+                listCards: { populate: "*" }
+              }
+            },
+            "industry-reports.rep-optimization": { populate: "*" },
+            "industry-reports.rep-tech-bench-mark": {
+              populate: {
+                listicles: {
+                  populate: "*"
+                },
+                cards: { populate: "*" }
+              }
+            },
+            "industry-reports.rep-future": { populate: "*" },
+            "industry-reports.rep-strategy": {
+              populate: {
+                cards: {
+                  populate: {
+                    text: "*",
+                    points: "*"
+                  }
+                }
+              }
+            },
+            "element.rep-recommendations": {
+              populate: {
+                cards: {
+                  populate: "*",
+                }
+              }
+            },
+            "industry-reports.rep-appendix": {
+              populate: {
+                sources: { populate: "*" }
+              }
+            },
+          },
+          // populate: "*",
+        },
+      },
+    },
+    { encodeValuesOnly: true }
+  );
+
+  const response = await fetchStrapi(`industry-reports?${query}`);
+  const page = processPage(response?.data?.[0]);
+
+  if (!page) return null;
+  return { page };
+}
