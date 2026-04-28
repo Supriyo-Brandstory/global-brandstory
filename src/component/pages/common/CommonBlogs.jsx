@@ -8,7 +8,7 @@ export const CommonBlog = ({ blogData }) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const filters = ["All", "UI / UX", "Branding", "Technology", "Digital Marketing", "Strategy"];
+  const filters = ["All", "UI / UX", "Creative Production", "Branding", "Web App Development", "Technology", "Consulting", "Digital Marketing", "Strategy", "SEO", "Performance Marketing", "Web Development"];
 
   // Get current state from URL
   const activeFilter = searchParams.get("category") || "All";
@@ -39,7 +39,35 @@ export const CommonBlog = ({ blogData }) => {
   /* ---------------- PAGINATION META FROM API ---------------- */
   const pagination = blogData?.meta?.pagination || {};
   const totalPages = pagination.pageCount || 1;
-  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+
+  const getPageNumbers = () => {
+    const delta = 1; // Number of pages to show on each side of the current page
+    const range = [];
+    const rangeWithDots = [];
+    let l;
+
+    for (let i = 1; i <= totalPages; i++) {
+      if (i === 1 || i === totalPages || (i >= currentPage - delta && i <= currentPage + delta)) {
+        range.push(i);
+      }
+    }
+
+    for (let i of range) {
+      if (l) {
+        if (i - l === 2) {
+          rangeWithDots.push(l + 1);
+        } else if (i - l !== 1) {
+          rangeWithDots.push('...');
+        }
+      }
+      rangeWithDots.push(i);
+      l = i;
+    }
+
+    return rangeWithDots;
+  };
+
+  const pageNumbers = getPageNumbers();
 
   const updateParams = (newParams) => {
     const params = new URLSearchParams(searchParams);
@@ -121,15 +149,19 @@ export const CommonBlog = ({ blogData }) => {
               «
             </button>
 
-            {pageNumbers.map((page) => (
-              <button
-                key={page}
-                className={`${styles.pageBtn} ${currentPage === page ? styles.activePage : ""
-                  }`}
-                onClick={() => handlePageChange(page)}
-              >
-                {page}
-              </button>
+            {pageNumbers.map((page, index) => (
+              page === '...' ? (
+                <span key={`dots-${index}`} className={styles.dots}>...</span>
+              ) : (
+                <button
+                  key={page}
+                  className={`${styles.pageBtn} ${currentPage === page ? styles.activePage : ""
+                    }`}
+                  onClick={() => handlePageChange(page)}
+                >
+                  {page}
+                </button>
+              )
             ))}
 
             <button
