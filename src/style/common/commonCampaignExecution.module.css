@@ -1,0 +1,136 @@
+.section {
+  background-color: #0a0a0a;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: 70px;
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 2;
+}
+
+.title .accent {
+  color: #ff4d00;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 40px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.iconContainer {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 77, 0, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff4d00;
+}
+
+.cardContent h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+}
+
+.cardContent p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+/* Specific layout for the 5-card grid */
+@media (min-width: 1025px) {
+  .grid > div:nth-child(4),
+  .grid > div:nth-child(5) {
+    grid-column: span 1;
+  }
+  
+  /* If we want it to look exactly like the image with 3 on top and 2 centered on bottom */
+  /* .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .card:nth-child(1), .card:nth-child(2), .card:nth-child(3) {
+    grid-column: span 2;
+  }
+  .card:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+  .card:nth-child(5) {
+    grid-column: 4 / span 2;
+  } */
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .bgNumber {
+    font-size: 300px;
+  }
+  .title {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bgNumber {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+  .title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 30px;
+  }
+}
