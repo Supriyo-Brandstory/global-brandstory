@@ -2,149 +2,211 @@ import { fetchStrapi } from "@/lib/strapi";
 import fs from "fs";
 import path from "path";
 
-const BASE_URL = 'https://brandstoryglobal.com';
+const BASE_URL = "https://brandstoryglobal.com";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 /**
- * Automatically crawls the local filesystem to find static routes.
- * This ensures that renaming a folder or adding a new page locally 
- * is reflected in the sitemap without manual code changes.
+ * Automatically fetch ALL entries from Strapi
+ * without pagination limitations.
+ */
+async function fetchAllStrapiEntries(endpoint, field) {
+    let allData = [];
+    let start = 0;
+    const limit = 100;
+    let total = 0;
+    do {
+        const response = await fetchStrapi(
+            `${endpoint}?fields[0]=${field}&pagination[start]=${start}&pagination[limit]=${limit}`
+        );
+        total = response?.meta?.pagination?.total || 0;
+        allData.push(...(response?.data || []));
+        start += limit;
+    } while (start < total);
+    return allData;
+}
+
+/**
+ * Automatically crawl local filesystem
+ * and generate static routes.
  */
 function getLocalPages(dir, currentRoute = "") {
     let results = [];
     if (!fs.existsSync(dir)) return results;
-
     const list = fs.readdirSync(dir);
     list.forEach((file) => {
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
-
         if (stat && stat.isDirectory()) {
-            // Skip dynamic routes like [[...slug]] or [slug] as these are handled by Strapi fetch
+            // Skip dynamic routes
             if (file.startsWith("[") && file.endsWith("]")) return;
-
             let nextRoute;
             if (file === "(home)") {
-                // (home) is a route group, its content is at the root level
                 nextRoute = currentRoute;
             } else if (file.startsWith("(") && file.endsWith(")")) {
-                // Skip other route groups but process their nested content
+                // Skip route groups
                 nextRoute = currentRoute;
             } else {
-                // Build the URL path
-                nextRoute = currentRoute ? `${currentRoute}/${file}` : file;
+                nextRoute = currentRoute
+                    ? `${currentRoute}/${file}`
+                    : file;
             }
-            results = results.concat(getLocalPages(filePath, nextRoute));
+            results = results.concat(
+                getLocalPages(filePath, nextRoute)
+            );
         } else if (file === "page.jsx" || file === "page.js") {
-            // We found a page! Add it to the list.
-            results.push(currentRoute === "" ? "/" : `/${currentRoute}`);
+            results.push(
+                currentRoute === ""
+                    ? "/"
+                    : `/${currentRoute}`
+            );
         }
     });
     return results;
 }
 
 export default async function sitemap() {
-    // 1. Get Local Static Routes automatically
-    // This looks inside src/app/(pages) for any page.jsx files
-    const pagesDir = path.join(process.cwd(), "src", "app", "(pages)");
-    const localRoutes = getLocalPages(pagesDir);
 
-    // Map local routes to the sitemap format
+    /**
+     * LOCAL STATIC PAGES
+     */
+    const pagesDir = path.join(
+        process.cwd(),
+        "src",
+        "app",
+        "(pages)"
+    );
+    const localRoutes = getLocalPages(pagesDir);
     const staticSitemap = localRoutes.map((route) => ({
         url: `${BASE_URL}${route}`,
         lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: route === '/' ? 1 : 0.8,
+        changeFrequency: "monthly",
+        priority: route === "/" ? 1 : 0.8,
     }));
 
-    // 2. Fetch Dynamic Pages from Strapi (Landing Pages)
-    // This runs every time the sitemap is generated, so it's always up-to-date
+    /**
+     * FETCH ALL STRAPI COLLECTIONS
+     */
     let dynamicRoutes = [];
-    try {
-        const response = await fetchStrapi('landing-pages?fields[0]=fullPath&pagination[limit]=1000');
-        dynamicRoutes = response?.data?.map((page) => {
-            const data = page.attributes || page;
-            return {
-                url: `${BASE_URL}/${data.fullPath}`,
-                lastModified: new Date(),
-                changeFrequency: 'weekly',
-                priority: 0.7,
-            };
-        }) || [];
-    } catch (error) {
-        console.error('Error fetching dynamic landing pages for sitemap:', error);
-    }
-
     let caseRoutes = [];
-    try {
-        const response = await fetchStrapi('casestudies?fields[0]=caseStudySlug&pagination[limit]=1000');
-        caseRoutes = response?.data?.map((page) => {
-            const data = page.attributes || page;
-            return {
-                url: `${BASE_URL}/case-studies/${data.caseStudySlug}`,
-                lastModified: new Date(),
-                changeFrequency: 'weekly',
-                priority: 0.7,
-            };
-        }) || [];
-    } catch (error) {
-        console.error('Error fetching dynamic case studies for sitemap:', error);
-    }
-
     let indRoutes = [];
-    try {
-        const response = await fetchStrapi('industries?fields[0]=pageSlug&pagination[limit]=1000');
-        indRoutes = response?.data?.map((page) => {
-            const data = page.attributes || page;
-            return {
-                url: `${BASE_URL}/industries/${data.pageSlug}`,
-                lastModified: new Date(),
-                changeFrequency: 'weekly',
-                priority: 0.7,
-            };
-        }) || [];
-    } catch (error) {
-        console.error('Error fetching dynamic case studies for sitemap:', error);
-    }
-
-    // 3. Fetch Blogs from Strapi (If any)
     let blogRoutes = [];
-    try {
-        const response = await fetchStrapi('blogs?fields[0]=blogSlug&pagination[limit]=1000');
-        blogRoutes = response?.data?.map((blog) => {
-            const data = blog.attributes || blog;
-            return {
-                url: `${BASE_URL}/blogs/${data.blogSlug}`,
-                lastModified: new Date(),
-                changeFrequency: 'weekly',
-                priority: 0.6,
-            };
-        }) || [];
-    } catch (error) {
-        // Blogs collection might not exist yet or have different structure
-        console.warn('Sitemap: Blogs collection fetch failed or returned invalid structure.');
-    }
-
-    // 3. Fetch Blogs from Strapi (If any)
     let locationRoutes = [];
+
     try {
-        const response = await fetchStrapi('location-pages?fields[0]=fullPath&pagination[limit]=1000');
-        locationRoutes = response?.data?.map((blog) => {
-            const data = blog.attributes || blog;
-            return {
-                url: `${BASE_URL}/${data.fullPath}`,
+        const [
+            landingPages,
+            caseStudies,
+            industries,
+            blogs,
+            locationPages,
+        ] = await Promise.all([
+            fetchAllStrapiEntries(
+                "landing-pages",
+                "fullPath"
+            ),
+            fetchAllStrapiEntries(
+                "casestudies",
+                "caseStudySlug"
+            ),
+            fetchAllStrapiEntries(
+                "industries",
+                "pageSlug"
+            ),
+            fetchAllStrapiEntries(
+                "blogs",
+                "blogSlug"
+            ),
+            fetchAllStrapiEntries(
+                "location-pages",
+                "fullPath"
+            ),
+        ]);
+
+
+        /**
+         * LANDING PAGES
+         */
+        dynamicRoutes = landingPages
+            .filter((page) => page.fullPath)
+            .map((page) => ({
+                url: `${BASE_URL}/${page.fullPath}`,
                 lastModified: new Date(),
-                changeFrequency: 'weekly',
+                changeFrequency: "weekly",
+                priority: 0.7,
+            }));
+
+        /**
+         * CASE STUDIES
+         */
+        caseRoutes = caseStudies
+            .filter((page) => page.caseStudySlug)
+            .map((page) => ({
+                url: `${BASE_URL}/case-studies/${page.caseStudySlug}`,
+                lastModified: new Date(),
+                changeFrequency: "weekly",
+                priority: 0.7,
+            }));
+
+        /**
+         * INDUSTRIES
+         */
+        indRoutes = industries
+            .filter((page) => page.pageSlug)
+            .map((page) => ({
+                url: `${BASE_URL}/industries/${page.pageSlug}`,
+                lastModified: new Date(),
+                changeFrequency: "weekly",
+                priority: 0.7,
+            }));
+
+        /**
+         * BLOGS
+         */
+        blogRoutes = blogs
+            .filter((blog) => blog.blogSlug)
+            .map((blog) => ({
+                url: `${BASE_URL}/blogs/${blog.blogSlug}`,
+                lastModified: new Date(),
+                changeFrequency: "weekly",
                 priority: 0.6,
-            };
-        }) || [];
+            }));
+
+        /**
+         * LOCATION PAGES
+         */
+        locationRoutes = locationPages
+            .filter((page) => page.fullPath)
+            .map((page) => ({
+                url: `${BASE_URL}/${page.fullPath}`,
+                lastModified: new Date(),
+                changeFrequency: "weekly",
+                priority: 0.6,
+            }));
+
+        /**
+         * LOGS
+         */
+        // console.log("Static Pages:", staticSitemap.length);
+        // console.log("Landing Pages:", dynamicRoutes.length);
+        // console.log("Case Studies:", caseRoutes.length);
+        // console.log("Industries:", indRoutes.length);
+        // console.log("Blogs:", blogRoutes.length);
+        // console.log("Location Pages:", locationRoutes.length);
+
     } catch (error) {
-        // Blogs collection might not exist yet or have different structure
-        console.warn('Sitemap: Blogs collection fetch failed or returned invalid structure.');
+        console.error("Sitemap generation error:", error);
     }
 
-
-    // Combine everything: Local Pages + Strapi Landing Pages + Strapi Case Studies + Strapi Blogs
-    return [...staticSitemap, ...dynamicRoutes, ...caseRoutes, ...blogRoutes, ...indRoutes, ...locationRoutes];
+    /**
+     * FINAL SITEMAP
+     */
+    return [
+        ...staticSitemap,
+        ...dynamicRoutes,
+        ...caseRoutes,
+        ...blogRoutes,
+        ...indRoutes,
+        ...locationRoutes,
+    ];
 }
