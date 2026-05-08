@@ -238,7 +238,35 @@ const page = () => {
         ]}
       />
       <CommonDivider />
-
+      <CsPerformance
+        title="Results /"
+        titleHighlight="Impact"
+        stats={[
+          {
+            label: "CTR IMPROVED",
+            oldValue: "2.09%",
+            newValue: "4.61%",
+            badges: ["+121% growth", "consistent click volume"],
+          },
+          {
+            label: "ENGAGEMENT INCREASED",
+            oldValue: "5.98%",
+            newValue: "7.55%",
+            badges: ["+26% growth", "consistent click volume"],
+          },
+        ]}
+        highlights={[
+          "Improved reach and visibility across platforms",
+          "Stronger audience interaction and response consistency",
+        ]}
+        details={[
+          {
+            content:
+              "Later-phase content consistently delivered higher engagement and improved audience response compared to the initial phase.",
+            fullWidth: true,
+          },
+        ]}
+      />
       <CsResults
         title="Results and Business Impact"
         results={[
