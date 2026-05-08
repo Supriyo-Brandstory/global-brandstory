@@ -5,6 +5,7 @@ import { BusinessContext } from "@/component/pages/Bhive/BusinessContext";
 import { ChallengesObjectives } from "@/component/pages/Bhive/ChallengesObjectives";
 import { StrategyPlanning } from "@/component/pages/Bhive/StrategyPlanning";
 import { CampaignExecution } from "@/component/pages/Bhive/CampaignExecution";
+import StaticPaidCampaignPerformance from "@/component/pages/common/StaticPaidCampaignPerformance";
 
 const BhivePage = () => {
   return (
@@ -16,6 +17,7 @@ const BhivePage = () => {
       <ChallengesObjectives />
       <StrategyPlanning />
       <CampaignExecution />
+      <StaticPaidCampaignPerformance />
     </>
   );
 };
