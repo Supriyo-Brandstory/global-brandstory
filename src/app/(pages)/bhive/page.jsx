@@ -3,6 +3,7 @@ import { Stats } from "@/component/pages/Bhive/Stats";
 import { ImageSection } from "@/component/pages/Bhive/ImageSection";
 import { BusinessContext } from "@/component/pages/Bhive/BusinessContext";
 import { ChallengesObjectives } from "@/component/pages/Bhive/ChallengesObjectives";
+import { StrategyPlanning } from "@/component/pages/Bhive/StrategyPlanning";
 import { CampaignExecution } from "@/component/pages/Bhive/CampaignExecution";
 
 const BhivePage = () => {
@@ -13,6 +14,7 @@ const BhivePage = () => {
       <ImageSection />
       <BusinessContext />
       <ChallengesObjectives />
+      <StrategyPlanning />
       <CampaignExecution />
     </>
   );

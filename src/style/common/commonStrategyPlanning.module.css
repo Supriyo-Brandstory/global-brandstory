@@ -1,0 +1,167 @@
+.section {
+  background-color: #0a0a0a;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.title {
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: 70px;
+  letter-spacing: -1px;
+}
+
+.title span {
+  color: #9a9a9a;
+  font-weight: 400;
+}
+
+.title .accent {
+  color: #ff4d00;
+}
+
+.timelineContainer {
+  position: relative;
+  padding-left: 60px;
+}
+
+.timelineLine {
+  position: absolute;
+  left: 7px;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 77, 0, 0.3) 10%, rgba(255, 77, 0, 0.3) 90%, transparent);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.itemWrapper {
+  position: relative;
+}
+
+.dot {
+  position: absolute;
+  left: -60px;
+  top: 22px;
+  width: 15px;
+  height: 15px;
+  background: #0a0a0a;
+  border: 2px solid #ff4d00;
+  border-radius: 50%;
+  z-index: 3;
+  box-shadow: 0 0 10px rgba(255, 77, 0, 0.5);
+}
+
+.dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 3px;
+  background: #ff4d00;
+  border-radius: 50%;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 35px 40px;
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(10px);
+}
+
+.iconContainer {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 77, 0, 0.08);
+  border: 1px solid rgba(255, 77, 0, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff4d00;
+}
+
+.content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  max-width: 900px;
+}
+
+
+@media (max-width: 1024px) {
+
+  .title {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+  .title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+  .timelineContainer {
+    padding-left: 40px;
+  }
+  .dot {
+    left: -40px;
+    width: 12px;
+    height: 12px;
+  }
+  .timelineLine {
+    left: 5px;
+  }
+  .card {
+    padding: 25px;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .content h3 {
+    font-size: 18px;
+  }
+  .content p {
+    font-size: 14px;
+  }
+}
