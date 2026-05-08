@@ -14,6 +14,7 @@ import styles from "@/style/common/csSEOBanner.module.css";
 export const CsSEOBanner = ({
   heading,
   description,
+  description2,
   meta = [],
   stats = [],
 }) => {
@@ -32,6 +33,14 @@ export const CsSEOBanner = ({
           className={styles.heading}
           dangerouslySetInnerHTML={{ __html: heading }}
         />
+        
+        {/* Description2 paragraph */}
+        {description2 && (
+          <h4
+            dangerouslySetInnerHTML={{ __html: description2 }}
+          />
+        )}
+
 
         {/* Metadata grid (Industry, Market, Business Model, Services) */}
         {meta.length > 0 && (
@@ -48,6 +57,7 @@ export const CsSEOBanner = ({
         {/* Description paragraph */}
         {description && (
           <p
+            style={{ maxWidth: description2 ? '100%' : '' }}
             className={styles.description}
             dangerouslySetInnerHTML={{ __html: description }}
           />

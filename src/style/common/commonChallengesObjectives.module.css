@@ -1,5 +1,5 @@
 .section {
-  background-color: #0a0a0a;
+  /* background-color: #0a0a0a; */
   padding: 120px 0;
   position: relative;
   overflow: hidden;
@@ -18,10 +18,12 @@
 .title {
   font-size: 52px;
   font-weight: 800;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
   letter-spacing: -1px;
 }
-
+.gap{
+  margin-bottom: 50px;
+}
 .title span {
   color: #9a9a9a;
   font-weight: 400;

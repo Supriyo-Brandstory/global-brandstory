@@ -4,6 +4,7 @@ import { CommonChallengesObjectives } from "../common/CommonChallengesObjectives
 export const ChallengesObjectives = () => {
   const data = {
     title: "Challenges <span>&</span> <span class='accent'>Objectives</span>",
+    desc: "",
     challenges: {
       title: "Key Challenges",
       items: [

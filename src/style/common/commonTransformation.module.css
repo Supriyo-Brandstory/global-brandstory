@@ -1,0 +1,144 @@
+.transformationSection {
+  /* background-color: #000; */
+  padding: 80px 10%;
+  color: #fff;
+}
+
+.mainTitle {
+  max-width: 1200px;
+  font-size: 48px;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.cardsContainer {
+  max-width: 1200px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #111;
+  border-radius: 20px;
+  padding: 40px;
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #222;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #d93d2666;
+}
+
+.iconBox {
+  width: 44px;
+  height: 44px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  background: #d93d26;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(217, 61, 38, 0.6);
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.cardContent {
+  font-size: 16px !important;
+  line-height: 1.6;
+  color: #aaa;
+  flex-grow: 1;
+}
+
+.cardContent p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Fixed Bullet Points */
+.list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list li {
+  position: relative;
+  /* padding-left: 18px; */
+  margin-bottom: 10px;
+  /* line-height: 1.6; */
+  color: #e5e5e5;
+  font-size: 16px;
+}
+
+/* .list li::before {
+  content: "";
+  position: absolute;
+  left: -5px;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  border-radius: 50%;
+} */
+
+.bottomLine {
+  height: 5px;
+  background: #d93d26;
+  width: 100%;
+  margin-top: 40px;
+  border-radius: 2px;
+}
+
+.arrowContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowContainer svg {
+  filter: drop-shadow(0 0 5px rgba(217, 61, 38, 0.3));
+}
+
+@media (max-width: 1024px) {
+  .transformationSection {
+    padding: 60px 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardsContainer {
+    flex-direction: column;
+  }
+
+  .arrowContainer {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+
+  .mainTitle {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+}

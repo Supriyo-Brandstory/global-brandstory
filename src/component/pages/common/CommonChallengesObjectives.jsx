@@ -4,6 +4,7 @@ import { XCircle, CheckCircle2 } from "lucide-react";
 
 export const CommonChallengesObjectives = ({ 
   title, 
+  desc,
   challenges, 
   objectives 
 }) => {
@@ -11,7 +12,8 @@ export const CommonChallengesObjectives = ({
     <section className={styles.section}>
       <div className={styles.container}>
         <h2 className={styles.title} dangerouslySetInnerHTML={{ __html: title }} />
-        
+        <p className={styles.desc} dangerouslySetInnerHTML={{ __html: desc }} />
+        <div className={styles.gap}></div>
         <div className={styles.grid}>
           {/* Challenges Card */}
           <div className={styles.card} data-type="challenges">

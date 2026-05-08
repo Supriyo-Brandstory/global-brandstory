@@ -37,7 +37,7 @@ export const CommonStrategyPlanning = ({
                     </div>
                     <div className={styles.content}>
                       <h3>{item.title}</h3>
-                      <p>{item.description}</p>
+                      <p dangerouslySetInnerHTML={{ __html: item.description }} />
                     </div>
                   </div>
                 </div>
