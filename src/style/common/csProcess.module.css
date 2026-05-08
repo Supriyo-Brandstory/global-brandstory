@@ -1,0 +1,119 @@
+.howwework_container {
+  background-color: #0f0f0f;
+  color: white;
+  padding: 100px 0px 0px;
+  margin: auto;
+}
+
+.howwework_heading {
+  font-family: var(--font-family-bold);
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: left;
+  color: #FDF6F0;
+  width: var(--max-width);
+  margin: 0 auto 20px;
+}
+
+.howwework_subheading {
+  font-family: var(--font-family-gilory-regular);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: -2%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  color: #FDF6F0;
+}
+
+.howwework_step {
+  display: flex;
+  gap: 100px;
+  border-top: 1px dashed #FFFFFF;
+  padding: 3% 8%;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.howwework_step:hover {
+  background: #F15D22;
+  color: #0F0F0F;
+  cursor: pointer;
+}
+
+.howwework_step:last-child {
+  border-bottom: 1px dashed #FFFFFF;
+}
+
+.howwework_number {
+  font-family: var(--font-family-gilory-regular);
+  font-weight: 400;
+  font-size: 88px;
+  line-height: 130%;
+  letter-spacing: -2%;
+  vertical-align: middle;
+  text-transform: capitalize;
+  min-width: 120px;
+}
+
+.howwework_title {
+  font-family: var(--font-family-bold);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  margin-bottom: 10px;
+}
+
+.howwework_description {
+  font-family: var(--font-family-gilory-regular);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 180%;
+  letter-spacing: -2%;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .howwework_step {
+    gap: 40px;
+    padding: 3% 5%;
+  }
+
+  .howwework_number {
+    font-size: 64px;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .howwework_container {
+    padding: 60px 0;
+  }
+
+  .howwework_heading {
+    font-size: 32px;
+  }
+
+  .howwework_subheading {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .howwework_step {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 30px 20px;
+  }
+
+  .howwework_number {
+    font-size: 48px;
+  }
+}

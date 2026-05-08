@@ -1,0 +1,178 @@
+/* ─── Wrapper ─────────────────────────────────────────────── */
+.csBanner {
+    position: relative;
+    width: 100%;
+    background: url('/images/seo/seo-banner.png') no-repeat;
+    background-size: cover;
+    background-position: 80% 40%;
+    min-height: 100vh;
+    padding: 120px 0 80px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #0F0F0F;
+    overflow: hidden;
+}
+
+/* ─── Content container ───────────────────────────────────── */
+.csBannerContent {
+    position: relative;
+    z-index: 2;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ─── Heading ─────────────────────────────────────────────── */
+.heading {
+    margin-bottom: 20px;
+}
+
+/* ─── Metadata grid (Industry / Market / Business / Services) */
+.metaGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px 32px;
+    width: 80%;
+    margin: 50px 0;
+}
+
+.metaItem {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.metaLabel {
+
+    color: #FDF6F0;
+
+}
+
+.metaValue {
+    color: #AEAEAE;
+}
+
+/* ─── Description ─────────────────────────────────────────── */
+.description {
+    color: #AEAEAE;
+    max-width: 56%;
+    margin: 50px 0;
+    font-size: 18px;
+}
+
+/* ─── Stats row (104% / 113% / 23%) ──────────────────────── */
+.statsRow {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.statValue {
+    color: #F15D22;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1;
+
+}
+
+.statLabel {
+    color: #AEAEAE;
+    max-width: 170px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* ─── Decorative boxes (inherited from CommonBanner) ─────── */
+.boxes {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.boxes div {
+    position: absolute;
+    height: 78px;
+    width: 78px;
+    background: url('/images/banner-sm-box.png');
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.box1 {
+    top: 519px;
+    left: 135px;
+}
+
+.box2 {
+    top: 599px;
+    left: 68px;
+    transform: rotate(180deg);
+}
+
+.box3 {
+    top: 300px;
+    right: 65px;
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1024px) {
+    .metaGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .csBanner {
+        padding: 80px 15px 50px 15px;
+    }
+
+    .metaGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 16px;
+    }
+
+    .statsRow {
+        gap: 28px;
+    }
+
+    .boxes {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .metaGrid {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
+    .description {
+        max-width: 100%;
+    }
+
+    .statsRow {
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .statItem {
+        align-items: center;
+        text-align: center;
+    }
+
+    .statValue {
+        font-size: 1.8rem;
+    }
+}
