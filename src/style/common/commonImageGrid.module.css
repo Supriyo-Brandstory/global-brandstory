@@ -108,3 +108,23 @@
     object-fit: contain;
   }
 }
+
+/* =========================
+   SWIPER STYLES
+========================= */
+
+.mySwiper {
+  padding-bottom: 50px !important;
+}
+
+.mySwiper :global(.swiper-pagination-bullet) {
+  background: #fff;
+  opacity: 0.3;
+  width: 10px;
+  height: 10px;
+}
+
+.mySwiper :global(.swiper-pagination-bullet-active) {
+  background: #E73D26;
+  opacity: 1;
+}

@@ -65,6 +65,17 @@ const page = () => {
   }}
 />
 
+      <CommonDivider />
+      <CommonImageGrid 
+        images={[
+          "/images/case-study/linkedin-ctr-engagement-optimization/Earth day=1.jpg",
+          "/images/case-study/linkedin-ctr-engagement-optimization/PN-1 Branding.jpg",
+          "/images/case-study/linkedin-ctr-engagement-optimization/PN-10.jpg",
+          "/images/case-study/linkedin-ctr-engagement-optimization/PN-8.jpg",
+          "/images/case-study/linkedin-ctr-engagement-optimization/Women_s Day-1.jpg",
+        ]}
+      />
+
 <CsStepCards
   title="Strategic Approach"
   description="The strategy focused on refining content relevance, improving messaging clarity, and aligning communication with audience behavior on LinkedIn."
@@ -90,6 +101,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CommonStrategyPlanning
   title="Campaign Execution"
   items={[
@@ -201,6 +213,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CsPerformance
   title="Results /"
   titleHighlight="Impact"
@@ -230,6 +243,8 @@ const page = () => {
     },
   ]}
 />
+      <CommonDivider />
+      <StaticPaidCampaignPerformance ctaText={"Looking to improve engagement, visibility, and content performance on LinkedIn? Let’s connect and build a strategy that drives measurable results."}/>
     </div>
   );
 };

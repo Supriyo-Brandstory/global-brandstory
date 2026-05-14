@@ -65,6 +65,15 @@ const page = () => {
   }}
 />
 
+      <CommonDivider />
+      <CommonImageGrid 
+        images={[
+          "/images/case-study/manufacturing-linkedin-ctr-growth/1.png",
+          "/images/case-study/manufacturing-linkedin-ctr-growth/2.png",
+          "/images/case-study/manufacturing-linkedin-ctr-growth/3.png",
+        ]}
+      />
+
 <CsStepCards
   title="Strategic Approach"
   description="The strategy focused on implementing a structured content framework designed to improve engagement, click behavior, and audience relevance across LinkedIn."
@@ -90,6 +99,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CommonStrategyPlanning
   title="Campaign Execution"
   items={[
@@ -201,6 +211,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CsPerformance
   title="Results /"
   titleHighlight="Impact"
@@ -230,6 +241,8 @@ const page = () => {
     },
   ]}
 />
+      <CommonDivider />
+      <StaticPaidCampaignPerformance ctaText={"Looking to improve your social media performance, audience engagement, and content visibility? Let’s connect and build a strategy designed for measurable growth."} />
     </div>
   );
 };

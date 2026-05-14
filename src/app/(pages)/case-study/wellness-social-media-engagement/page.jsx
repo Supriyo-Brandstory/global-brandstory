@@ -65,6 +65,21 @@ const page = () => {
   }}
 />
 
+      <CommonDivider />
+      <CommonImageGrid 
+        images={[
+          "/images/case-study/wellness-social-media-engagement/image (8).png",
+          "/images/case-study/wellness-social-media-engagement/image (9).png",
+          "/images/case-study/wellness-social-media-engagement/image (10).png",
+          "/images/case-study/wellness-social-media-engagement/image (11).png",
+          "/images/case-study/wellness-social-media-engagement/image (12).png",
+          "/images/case-study/wellness-social-media-engagement/image (13).png",
+          "/images/case-study/wellness-social-media-engagement/image (15).png",
+          "/images/case-study/wellness-social-media-engagement/image (16).png",
+          "/images/case-study/wellness-social-media-engagement/image (17).png",
+        ]}
+      />
+
 <CsStepCards
   title="Strategic Approach"
   description="The strategy focused on implementing a structured content framework designed to improve consistency, audience alignment, and engagement performance across Instagram and LinkedIn."
@@ -90,6 +105,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CommonStrategyPlanning
   title="Campaign Execution"
   items={[
@@ -201,6 +217,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CsPerformance
   title="Results /"
   titleHighlight="Impact"
@@ -230,6 +247,8 @@ const page = () => {
     },
   ]}
 />
+      <CommonDivider />
+      <StaticPaidCampaignPerformance ctaText={"Looking to improve your social media engagement, consistency, and brand visibility? Let’s connect and build a strategy designed for long-term growth." }/>
     </div>
   );
 };

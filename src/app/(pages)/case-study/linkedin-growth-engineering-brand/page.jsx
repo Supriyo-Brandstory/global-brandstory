@@ -65,6 +65,16 @@ const page = () => {
   }}
 />
 
+      <CommonDivider />
+      <CommonImageGrid 
+        images={[
+          "/images/case-study/linkedin-growth-engineering-brand/Copy of Image 1.jpg",
+          "/images/case-study/linkedin-growth-engineering-brand/Copy of Image 2.jpg",
+          "/images/case-study/linkedin-growth-engineering-brand/Copy of image (36).png",
+          "/images/case-study/linkedin-growth-engineering-brand/Copy of image (37).png",
+        ]}
+      />
+
 <CsStepCards
   title="Strategic Approach"
   description="The strategy focused on revamping the content framework to recover performance, improve engagement quality, and scale audience interaction across LinkedIn."
@@ -90,6 +100,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CommonStrategyPlanning
   title="Campaign Execution"
   items={[
@@ -200,6 +211,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CsPerformance
   title="Results /"
   titleHighlight="Impact"
@@ -235,6 +247,8 @@ const page = () => {
     },
   ]}
 />
+      <CommonDivider />
+      <StaticPaidCampaignPerformance ctaText={"Looking to recover declining social media performance and scale audience engagement with a structured content strategy? Let’s connect and build a growth-focused approach designed for measurable results."}/>
     </div>
   );
 };

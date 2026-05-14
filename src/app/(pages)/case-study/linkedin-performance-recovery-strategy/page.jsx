@@ -65,6 +65,18 @@ const page = () => {
   }}
 />
 
+      <CommonDivider />
+      <CommonImageGrid 
+        images={[
+          "/images/case-study/linkedin-performance-recovery-strategy/Ads.jpg",
+          "/images/case-study/linkedin-performance-recovery-strategy/Earth Day-1.jpg",
+          "/images/case-study/linkedin-performance-recovery-strategy/Engineers.jpg",
+          "/images/case-study/linkedin-performance-recovery-strategy/Holi-2.jpg",
+          "/images/case-study/linkedin-performance-recovery-strategy/Idex pump copy.png",
+          "/images/case-study/linkedin-performance-recovery-strategy/Paintindia.jpg",
+        ]}
+      />
+
 <CsStepCards
   title="Strategic Approach"
   description="The strategy focused on optimizing content structure, messaging, and audience alignment to improve engagement quality and click behavior across LinkedIn."
@@ -90,6 +102,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CommonStrategyPlanning
   title="Campaign Execution"
   items={[
@@ -201,6 +214,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CsPerformance
   title="Results /"
   titleHighlight="Impact"
@@ -230,6 +244,8 @@ const page = () => {
     },
   ]}
 />
+      <CommonDivider />
+      <StaticPaidCampaignPerformance ctaText={"Looking to improve your social media performance, engagement, and content impact? Let’s connect and build a strategy that drives measurable results."} />
     </div>
   );
 };

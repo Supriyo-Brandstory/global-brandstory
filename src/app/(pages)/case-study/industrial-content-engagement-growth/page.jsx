@@ -64,6 +64,16 @@ const page = () => {
   }}
 />
 
+      <CommonDivider />
+      <CommonImageGrid 
+        images={[
+          "/images/case-study/industrial-content-engagement-growth/Artboard 1.png",
+          "/images/case-study/industrial-content-engagement-growth/Artboard 2.png",
+          "/images/case-study/industrial-content-engagement-growth/Artboard 3.png",
+          "/images/case-study/industrial-content-engagement-growth/dOVER VICE PRESIDENT.png",
+        ]}
+      />
+
 <CsStepCards
   title="Strategic Approach"
   description="The strategy focused on refining content structure, messaging, and audience alignment to improve LinkedIn performance and engagement consistency."
@@ -89,6 +99,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CommonStrategyPlanning
   title="Campaign Execution"
   items={[
@@ -199,6 +210,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CsPerformance
   title="Results /"
   titleHighlight="Impact"
@@ -240,6 +252,8 @@ const page = () => {
     },
   ]}
 />
+      <CommonDivider />
+      <StaticPaidCampaignPerformance ctaText={"Looking to improve your social media performance, audience engagement, and LinkedIn visibility? Let’s connect and build a strategy designed for measurable growth." }/>
     </div>
   );
 };

@@ -65,6 +65,17 @@ const page = () => {
   }}
 />
 
+      <CommonDivider />
+      <CommonImageGrid 
+        images={[
+          "/images/case-study/edtech-social-media-engagement-growth/4.Design Verification Online 21 March .png",
+          "/images/case-study/edtech-social-media-engagement-growth/Budget 2026.png",
+          "/images/case-study/edtech-social-media-engagement-growth/DV offline 16 mar.png",
+          "/images/case-study/edtech-social-media-engagement-growth/PD offline.png",
+          "/images/case-study/edtech-social-media-engagement-growth/ugadi.png",
+        ]}
+      />
+
 <CsStepCards
   title="Strategic Approach"
   description="The strategy focused on aligning content with user intent while improving consistency and relevance across platforms."
@@ -90,6 +101,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CommonStrategyPlanning
   title="Campaign Execution"
   items={[
@@ -201,6 +213,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CsPerformance
   title="Results /"
   titleHighlight="Impact"
@@ -230,6 +243,8 @@ const page = () => {
     },
   ]}
 />
+      <CommonDivider />
+      <StaticPaidCampaignPerformance />
     </div>
   );
 };

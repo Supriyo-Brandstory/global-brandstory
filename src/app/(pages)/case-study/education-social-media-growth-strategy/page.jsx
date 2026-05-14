@@ -64,6 +64,16 @@ const page = () => {
   }}
 />
 
+      <CommonDivider />
+      <CommonImageGrid 
+        images={[
+          "/images/case-study/education-social-media-growth-strategy/Motivational.png",
+          "/images/case-study/education-social-media-growth-strategy/Post 10- Admissions Open.png",
+          "/images/case-study/education-social-media-growth-strategy/Post 12 - Admissions Open.png",
+          "/images/case-study/education-social-media-growth-strategy/Post 12- Quotes..png",
+        ]}
+      />
+
 <CsStepCards
   title="Strategic Approach"
   description="The strategy focused on aligning content with student demand cycles, educational intent, and platform behavior to improve engagement and visibility."
@@ -89,6 +99,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CommonStrategyPlanning
   title="Campaign Execution"
   items={[
@@ -199,6 +210,7 @@ const page = () => {
   ]}
 />
 
+      <CommonDivider />
 <CsPerformance
   title="Results /"
   titleHighlight="Impact"
@@ -228,6 +240,8 @@ const page = () => {
     },
   ]}
 />
+      <CommonDivider />
+      <StaticPaidCampaignPerformance ctaText={"Looking to improve your social media performance, audience engagement, and content reach? Let’s connect and build a strategy designed for measurable growth." }/>
     </div>
   );
 };

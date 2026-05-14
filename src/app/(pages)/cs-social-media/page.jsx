@@ -73,6 +73,8 @@ const page = () => {
             "/images/cs-social-media/1.png",
         "/images/cs-social-media/2.png",
         "/images/cs-social-media/3.png",
+        "/images/cs-social-media/2.png",
+        "/images/cs-social-media/3.png",
         ]}
       />
       <CsStepCards
