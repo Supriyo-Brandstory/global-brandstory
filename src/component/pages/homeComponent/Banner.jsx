@@ -1,119 +1,81 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React from "react";
 import styles from "@/style/homepage.module.css";
 import Link from 'next/link';
 
 const Banner = () => {
-  // const bannerRef = useRef(null);
-  // const [images, setImages] = useState([]);
-  // const [lastImagePos, setLastImagePos] = useState(null);
-  // const fixedDistance = 100; // distance (px)
-
-  // ✅ Fix: hardcoded image paths
-  const imageList = [
-    "/images/mouse/img1.svg",
-    "/images/mouse/img2.svg",
-    "/images/mouse/img3.svg",
-    "/images/mouse/img4.svg",
-    "/images/mouse/img5.svg",
-    "/images/mouse/img6.svg",
-    "/images/mouse/img7.svg",
-    "/images/mouse/img8.svg",
-    "/images/mouse/img9.svg",
-    "/images/mouse/img10.svg",
-  ];
-
-  /*
-  // const handleMouseMove = (e) => {
-  //   const rect = bannerRef.current.getBoundingClientRect();
-  //   const mouseX = e.clientX - rect.left;
-  //   const mouseY = e.clientY - rect.top;
-
-  //   if (lastImagePos) {
-  //     const dx = mouseX - lastImagePos.x;
-  //     const dy = mouseY - lastImagePos.y;
-  //     const dist = Math.sqrt(dx * dx + dy * dy);
-
-  //     if (dist < fixedDistance) {
-  //       return; // too close → no new image
-  //     }
-  //   }
-
-  //   const randomIndex = Math.floor(Math.random() * imageList.length);
-  //   const imageSrc = imageList[randomIndex];
-  //   const effectClass =
-  //     Math.random() < 0.5 ? "hoverImageRound" : "hoverImageSquare";
-
-  //   const newImage = {
-  //     id: Date.now() + Math.random(),
-  //     x: mouseX,
-  //     y: mouseY,
-  //     src: imageSrc,
-  //     effect: effectClass,
-  //   };
-
-  //   setImages((prev) => [...prev, newImage]);
-  //   setLastImagePos({ x: mouseX, y: mouseY });
-
-  //   setTimeout(() => {
-  //     setImages((prev) => prev.filter((img) => img.id !== newImage.id));
-  //   }, 300);
-  // };
-  // */
-
   return (
-    <div
-      className={styles.banner}
-      // ref={bannerRef}
-      // onMouseMove={handleMouseMove}
-    >
+    <div className={styles.banner}>
       <div className={styles.bannerContent}>
         <h1 className={styles.bannerHeading}>
-          Everything Your Brand Needs to <br />
-          Grow — In One Digital Agency
+          Everything Your Brand Needs to <br /> Grow — In One Digital Agency
         </h1>
         <p className={styles.bannerParagraph}>
-          Just one sharp, plugged-in team delivering strategy, design, content,
-          tech, and marketing — all under one roof.
+          Just One Sharp, Plugged-In Team Delivering Strategy, Design, Content,
+          Tech, And Marketing — All Under One Roof.
         </p>
         <Link href="/contact-us">
-          <button className={styles.bannerButton}>Let’s Talk</button>
+          <button className={styles.bannerButton}>Let's Talk</button>
         </Link>
-
-        <ul className={styles.bannerList}>
-          <li>
-            <img src="/icons/dot.svg" alt="dot" /> Strategy
-          </li>
-          <li>
-            <img src="/icons/dot.svg" alt="dot" /> DESIGN
-          </li>
-          <li>
-            <img src="/icons/dot.svg" alt="dot" /> MARKETING
-          </li>
-          <li>
-            <img src="/icons/dot.svg" alt="dot" /> VIDEO
-          </li>
-          <li>
-            <img src="/icons/dot.svg" alt="dot" /> DEVELOPMENT
-          </li>
-          <li>
-            <img src="/icons/dot.svg" alt="dot" /> ANALYTICS
-          </li>
-        </ul>
       </div>
 
-      {/* {images.map((img) => (
-        <img
-          key={img.id}
-          src={img.src}
-           className={`${styles.hoverImage} ${styles[img.effect]}`}
-          style={{
-            left: `${img.x}px`,
-            top: `${img.y}px`,
-          }}
-          alt="trail"
-        />
-      ))} */}
+      <div className={styles.bannerGrid}>
+
+        {/* ── COL 1: two cards stacked flush, no gap ── */}
+        <div className={styles.colStack1}>
+          <div className={`${styles.statCard} ${styles.stackTop}`}>
+            <span className={styles.number}>500+</span>
+            <span className={styles.label}>Clients Worldwide</span>
+          </div>
+          <div className={`${styles.statCard} ${styles.stackBottom}`}>
+            <span className={styles.number}>150+</span>
+            <span className={styles.label}>Creative Minds</span>
+          </div>
+        </div>
+
+        {/* ── SERVICE PILLS ── */}
+        <div className={styles.serviceListCell}>
+          <ul className={styles.serviceList}>
+            <li><span className={styles.dot} /> STRATEGY</li>
+            <li><span className={styles.dot} /> DESIGN</li>
+            <li><span className={styles.dot} /> MARKETING</li>
+            <li><span className={styles.dot} /> VIDEO</li>
+            <li><span className={styles.dot} /> DEVELOPMENT</li>
+            <li><span className={styles.dot} /> ANALYTICS</li>
+          </ul>
+        </div>
+
+        {/* ── COL 6: two cards stacked flush, no gap ── */}
+        <div className={styles.colStack6}>
+          <div className={`${styles.statCard} ${styles.stackTop}`}>
+            <span className={styles.number}>92%</span>
+            <span className={styles.label}>Client Retention</span>
+          </div>
+          <div className={`${styles.statCard} ${styles.stackBottom}`}>
+            <span className={styles.number}>10M+</span>
+            <span className={styles.label}>Million Leads Generated</span>
+          </div>
+        </div>
+
+        {/* ── ARCH WAVE CARDS: row 2, cols 2–5 ── */}
+        <div className={`${styles.statCard} ${styles.archCol2}`}>
+          <span className={styles.number}>1200+</span>
+          <span className={styles.label}>Projects Delivered</span>
+        </div>
+        <div className={`${styles.statCard} ${styles.archCol3}`}>
+          <span className={styles.number}>30+</span>
+          <span className={styles.label}>Industries Served</span>
+        </div>
+        <div className={`${styles.statCard} ${styles.archCol4}`}>
+          <span className={styles.number}>11+</span>
+          <span className={styles.label}>Years Of Experience</span>
+        </div>
+        <div className={`${styles.statCard} ${styles.archCol5}`}>
+          <span className={styles.number}>1M+</span>
+          <span className={styles.label}>Billion Revenue Generated</span>
+        </div>
+
+      </div>
     </div>
   );
 };

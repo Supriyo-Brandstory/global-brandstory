@@ -21,7 +21,7 @@ const page = () => {
   return (
     <>
    <Banner/> 
-   <StatsCard/>
+   {/* <StatsCard/> */}
    <HeroSection/>
    <WhyBrandStory/>
    <ServicesSlider/>
