@@ -50,9 +50,10 @@ const BhivePage = () => {
       {/* <ImageSection /> */}
       <CommonImageGrid 
         images={[
-          "/images/bhive/b1.png",
-          "/images/bhive/b2.png",
-          "/images/bhive/b3.png",
+          "/images/case-study/ppc/coworking-lead-generation-growth/image1.png",
+          "/images/case-study/ppc/coworking-lead-generation-growth/image2.png",
+          "/images/case-study/ppc/coworking-lead-generation-growth/image3.png",
+          "/images/case-study/ppc/coworking-lead-generation-growth/image4.png",
         ]}
       />
       {/* <BusinessContext /> */}
