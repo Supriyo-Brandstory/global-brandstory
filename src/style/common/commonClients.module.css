@@ -1,83 +1,239 @@
+
 .container{
-    min-height: 50vh;
+    width: 100%;
+    background: #000;
+    overflow: hidden;
 }
 
 .layout{
-    max-width: 1200px;
+    max-width: 1320px;
     margin: 0 auto;
-    padding: 60px 0 80px 0;
+    padding: 100px 24px;
 }
 
-.mobileGap{
-    height: 80px;
-    display: none;
+.topSection{
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .title{
-    font-size: 50px;
-    font-weight: bolder;
+    font-size: 64px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -2px;
 }
+
 .desc{
-    font-size: 18px;
-}
-.title, .desc{
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
+    margin-top: 24px;
+
+    font-size: 19px;
+    line-height: 1.8;
+
+    color: rgba(255,255,255,0.72);
 }
 
-/* OUTER WRAPPER */
-.sliderWrapper {
-    overflow: hidden;
-    width: 100%;
-    border-radius: 70px;
-    margin-top: 40px;
-    padding: 90px 0;
-    box-shadow: 0 0 0 0.2px #E73D26;
-    position: relative;
-}
+.sliderSection{
+    margin-top: 80px;
 
-/* SCROLLING ROW */
-.logoSlider {
     display: flex;
-    gap: 60px;
-    white-space: nowrap;
-    animation: scroll 20s linear infinite;
+    flex-direction: column;
+    gap: 28px;
 }
 
-/* IMAGES */
-.logoSlider img {
-    height: 46px;
+/* SLIDER WRAPPER */
+.sliderWrapper{
+    width: 100%;
+    overflow: hidden;
+
+    position: relative;
+
+    border-radius: 999px;
+
+    padding: 34px 0;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(255,255,255,0.04),
+        rgba(255,255,255,0.02)
+    );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+}
+
+/* EDGE FADE */
+.sliderWrapper::before,
+.sliderWrapper::after{
+    content: '';
+
+    position: absolute;
+    top: 0;
+    z-index: 2;
+
+    width: 120px;
+    height: 100%;
+}
+
+.sliderWrapper::before{
+    left: 0;
+
+    background: linear-gradient(
+        to right,
+        #000,
+        transparent
+    );
+}
+
+.sliderWrapper::after{
+    right: 0;
+
+    background: linear-gradient(
+        to left,
+        #000,
+        transparent
+    );
+}
+
+/* MOVING ROW */
+.logoSlider{
+    display: flex;
+    align-items: center;
+
+    width: max-content;
+
+    animation: scrollLeft 100s linear infinite;
+}
+
+.logoTrack{
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding-right: 26px;
+}
+
+.reverse{
+    animation: scrollRight 100s linear infinite;
+}
+
+/* LOGO BOX */
+.logoItem{
+    width: 252px;
+    height: 78px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.03);
+
+    border: 1px solid rgba(255,255,255,0.05);
+
+    transition: all 0.35s ease;
+}
+
+.logoItem:hover{
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(255,255,255,0.12);
+
+    transform: translateY(-2px);
+}
+
+/* IMAGE */
+.logoItem img{
+    max-width: 150px;
+    max-height: 38px;
+
+    width: auto;
+    height: auto;
+
     object-fit: contain;
-    opacity: 0.8;
-    transition: opacity 0.3s;
+
+    opacity: 0.7;
+
+    filter: grayscale(100%);
+
+    transition: all 0.35s ease;
 }
 
-.logoSlider img:hover {
+.logoItem:hover img{
     opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.04);
 }
 
-/* KEYFRAMES */
-@keyframes scroll {
-    from {
+/* ANIMATION */
+@keyframes scrollLeft{
+    from{
         transform: translateX(0);
     }
-    to {
+
+    to{
         transform: translateX(-50%);
     }
 }
 
-
-@media (max-width: 786px) {
-    .sliderWrapper{
-        padding: 40px 0;
-        /* width: calc(100% - 32px); */
-        /* margin: 30px 16px; */
-        margin-top: 10px;
-        border-radius: 0;
-        box-shadow: none;
+@keyframes scrollRight{
+    from{
+        transform: translateX(-50%);
     }
-    .mobileGap{
-        display: block;
+
+    to{
+        transform: translateX(0);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px){
+
+    .layout{
+        padding: 70px 16px;
+    }
+
+    .title{
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+
+    .desc{
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .sliderSection{
+        margin-top: 50px;
+        gap: 18px;
+    }
+
+    .sliderWrapper{
+        padding: 22px 0;
+        border-radius: 30px;
+    }
+
+    .logoTrack{
+        gap: 16px;
+        padding-right: 16px;
+    }
+
+    .logoItem{
+        width: 180px;
+        height: 64px;
+    }
+
+    .logoItem img{
+        max-width: 110px;
+        max-height: 30px;
+    }
+
+    .sliderWrapper::before,
+    .sliderWrapper::after{
+        width: 40px;
     }
 }
