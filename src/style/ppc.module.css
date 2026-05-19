@@ -3,7 +3,7 @@
     margin: 0 auto;
     padding: 50px 20px;
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-family-gilory-regular), sans-serif;
 }
 
 .heading {
