@@ -48,13 +48,13 @@ const BhivePage = () => {
       ]}
       />
       {/* <ImageSection /> */}
-      {/* <CommonImageGrid 
+      <CommonImageGrid 
         images={[
           "/images/bhive/b1.png",
           "/images/bhive/b2.png",
           "/images/bhive/b3.png",
         ]}
-      /> */}
+      />
       {/* <BusinessContext /> */}
       <CommonBusinessContext 
         title= "Business <span>Context</span>"
