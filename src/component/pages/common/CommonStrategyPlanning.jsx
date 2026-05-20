@@ -10,19 +10,18 @@ const iconMap = {
   dollar: DollarSign,
 };
 
-export const CommonStrategyPlanning = ({ 
-  title, 
-  index, 
-  items = [] 
+export const CommonStrategyPlanning = ({
+  title,
+  items = []
 }) => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h2 
-          className={styles.title} 
-          dangerouslySetInnerHTML={{ __html: title }} 
+        <h2
+          className={styles.title}
+          dangerouslySetInnerHTML={{ __html: title }}
         />
-        
+
         <div className={styles.timelineContainer}>
           <div className={styles.timelineLine}></div>
           <div className={styles.list}>
@@ -37,7 +36,7 @@ export const CommonStrategyPlanning = ({
                     </div>
                     <div className={styles.content}>
                       <h3>{item.title}</h3>
-                      <p dangerouslySetInnerHTML={{ __html: item.description }} />
+                      <div dangerouslySetInnerHTML={{ __html: item.description }} />
                     </div>
                   </div>
                 </div>
