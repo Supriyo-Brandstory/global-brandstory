@@ -13,42 +13,42 @@ const BhivePage = () => {
   return (
     <>
       {/* <Banner /> */}
-      <CommonBanner4 
-      heading="Car Rental Leads Scaled with <span>42% Cost Efficiency Gain</span>"
-      tags = {[
-        { icon: "Globe", text: "Car Rental / Mobility Services" },
-        { icon: "Target", text: "Lead Generation" },
-        { icon: "Briefcase", text: "B2C" },
-        { icon: "Share2", text: "Google · Meta" },
-        { icon: "Calendar", text: "₹10K – ₹5.6L / month" },
-        { icon: "Clock", text: "Multi-phase campaign" },
-      ]}
-      googleLogo = "/images/commonBanner4/google-logo.png"
+      <CommonBanner4
+        heading="Car Rental Leads Scaled with <span>42% Cost Efficiency Gain</span>"
+        tags={[
+          { icon: "Globe", text: "Car Rental / Mobility Services" },
+          { icon: "Target", text: "Lead Generation" },
+          { icon: "Briefcase", text: "B2C" },
+          { icon: "Share2", text: "Google · Meta" },
+          { icon: "Calendar", text: "₹10K – ₹5.6L / month" },
+          { icon: "Clock", text: "Multi-phase campaign" },
+        ]}
+        googleLogo="/images/commonBanner4/google-logo.png"
       />
       {/* <Stats /> */}
-      <CommonStats2 
-        summaryLabel= "EXECUTIVE SUMMARY"
-        summaryQuote= "Scaled high-volume lead generation through multi-platform campaigns, optimizing cost efficiency while maintaining strong conversion performance across hiring-focused campaigns."
-        stats= {[
-        {
-          value: "2",
-          title: "PLATFORMS",
-          subText: "Google · Meta",
-        },
-        {
-          value: "PPC",
-          title: "CAMPAIGN TYPE",
-          subText: "Lead Generation Focus",
-        },
-        {
-          value: "B2C",
-          title: "BUSINESS MODEL",
-          subText: "Car Rental & Mobility Services",
-        },
-      ]}
+      <CommonStats2
+        summaryLabel="EXECUTIVE SUMMARY"
+        summaryQuote="Scaled high-volume lead generation through multi-platform campaigns, optimizing cost efficiency while maintaining strong conversion performance across hiring-focused campaigns."
+        stats={[
+          {
+            value: "2",
+            title: "PLATFORMS",
+            subText: "Google · Meta",
+          },
+          {
+            value: "PPC",
+            title: "CAMPAIGN TYPE",
+            subText: "Lead Generation Focus",
+          },
+          {
+            value: "B2C",
+            title: "BUSINESS MODEL",
+            subText: "Car Rental & Mobility Services",
+          },
+        ]}
       />
       {/* <ImageSection /> */}
-      <CommonImageGrid 
+      <CommonImageGrid
         images={[
           "/images/bhive/b1.png",
           "/images/bhive/b2.png",
@@ -56,9 +56,9 @@ const BhivePage = () => {
         ]}
       />
       {/* <BusinessContext /> */}
-      <CommonBusinessContext 
-        title= "Business <span>Context</span>"
-        cards= {[
+      <CommonBusinessContext
+        title="Business <span>Context</span>"
+        cards={[
           {
             icon: "Building2",
             number: "01",
@@ -86,10 +86,10 @@ const BhivePage = () => {
         ]}
       />
       {/* <ChallengesObjectives /> */}
-      <CommonChallengesObjectives 
-        title=  "Challenges <span>&</span> <span class='accent'>Objectives</span>"
-        desc= ""
-        challenges= {{
+      <CommonChallengesObjectives
+        title="Challenges <span>&</span> <span class='accent'>Objectives</span>"
+        desc=""
+        challenges={{
           title: "Key Challenges",
           items: [
             "Highly competitive rental market",
@@ -99,7 +99,7 @@ const BhivePage = () => {
             "Maintaining conversion consistency during scaling",
           ],
         }}
-        objectives= {{
+        objectives={{
           title: "Campaign Objectives",
           items: [
             "Scale qualified lead generation",
@@ -111,9 +111,9 @@ const BhivePage = () => {
         }}
       />
       {/* <StrategyPlanning /> */}
-      <CommonStrategyPlanning 
-        title = "Strategy <span>&</span> <span class='accent'>Planning</span>"
-        items= {[
+      <CommonStrategyPlanning
+        title="Strategy <span>&</span> <span class='accent'>Planning</span>"
+        items={[
           {
             icon: "users",
             title: "Audience Targeting Strategy",
@@ -142,9 +142,9 @@ const BhivePage = () => {
         ]}
       />
       {/* <CampaignExecution /> */}
-      <CommonCampaignExecution 
-        title= "Campaign <span class='accent'>Execution</span>"
-        cards= {[
+      <CommonCampaignExecution
+        title="Campaign <span class='accent'>Execution</span>"
+        cards={[
           {
             icon: "chart",
             title: "Ad Structure",
@@ -172,71 +172,71 @@ const BhivePage = () => {
           }
         ]}
       />
-      <CsProcess  
+      <CsProcess
         title="Our Process"
         steps={[
-    {
-        number: "01",
-        title: "Process Overview",
-        description:
-        "A structured multi-platform lead generation framework was implemented to scale conversions efficiently while maintaining cost-effective acquisition performance.",
-        points: [
-            "Integrated search and retargeting strategies across platforms",
-            "Aligned audience intent with conversion-focused campaigns",
-            "Focused on balancing scale with acquisition efficiency",
-            "Designed for consistent and scalable lead generation",
-        ],
-    },
-    {
-        number: "02",
-        title: "Content Planning",
-        description:
-            "Campaign messaging was structured around convenience, pricing, flexibility, and booking ease.",
-        points: [
-            "Focused on affordability and rental accessibility",
-            "Highlighted flexibility and vehicle availability",
-            "Mapped messaging across awareness and conversion stages",
-            "Ensured relevance across Google and Meta platforms",
-        ],
-    },
-    {
-        number: "03",
-        title: "Distribution & Attribution (What Worked)",
-        description:
-            "Each platform contributed differently toward conversion scale and audience acquisition.",
-        points: [
-            "Google Ads captured high-intent rental demand",
-            "Meta Ads strengthened retargeting and campaign scale",
-            "Location-based targeting improved lead relevance",
-            "Multi-platform execution improved funnel consistency",
-        ],
-    },
-    {
-        number: "04",
-        title: "Best Practices Implemented",
-        description:
-            "Structured execution and continuous optimization improved overall campaign efficiency.",
-        points: [
-            "Funnel segmentation across TOFU, MOFU, and BOFU stages",
-            "Continuous testing of creatives and messaging",
-            "Audience optimization using behavioral targeting",
-            "Bid adjustments focused on maintaining low CPL",
-            "Platform-specific creative alignment",
-        ],
-    },
-    {
-        number: "05",
-        title: "Governance & Growth",
-        description:
-        "Performance was managed through ongoing monitoring and controlled scaling strategies.",
-        points: [
-            "Budget allocation optimized across platforms",
-            "Bid strategies refined for efficiency and scale",
-            "Regular performance reviews and campaign audits",
-            "Continuous optimization implemented for sustained growth",
-        ],
-    },
-]}
+          {
+            number: "01",
+            title: "Process Overview",
+            description:
+              "A structured multi-platform lead generation framework was implemented to scale conversions efficiently while maintaining cost-effective acquisition performance.",
+            points: [
+              "Integrated search and retargeting strategies across platforms",
+              "Aligned audience intent with conversion-focused campaigns",
+              "Focused on balancing scale with acquisition efficiency",
+              "Designed for consistent and scalable lead generation",
+            ],
+          },
+          {
+            number: "02",
+            title: "Content Planning",
+            description:
+              "Campaign messaging was structured around convenience, pricing, flexibility, and booking ease.",
+            points: [
+              "Focused on affordability and rental accessibility",
+              "Highlighted flexibility and vehicle availability",
+              "Mapped messaging across awareness and conversion stages",
+              "Ensured relevance across Google and Meta platforms",
+            ],
+          },
+          {
+            number: "03",
+            title: "Distribution & Attribution (What Worked)",
+            description:
+              "Each platform contributed differently toward conversion scale and audience acquisition.",
+            points: [
+              "Google Ads captured high-intent rental demand",
+              "Meta Ads strengthened retargeting and campaign scale",
+              "Location-based targeting improved lead relevance",
+              "Multi-platform execution improved funnel consistency",
+            ],
+          },
+          {
+            number: "04",
+            title: "Best Practices Implemented",
+            description:
+              "Structured execution and continuous optimization improved overall campaign efficiency.",
+            points: [
+              "Funnel segmentation across TOFU, MOFU, and BOFU stages",
+              "Continuous testing of creatives and messaging",
+              "Audience optimization using behavioral targeting",
+              "Bid adjustments focused on maintaining low CPL",
+              "Platform-specific creative alignment",
+            ],
+          },
+          {
+            number: "05",
+            title: "Governance & Growth",
+            description:
+              "Performance was managed through ongoing monitoring and controlled scaling strategies.",
+            points: [
+              "Budget allocation optimized across platforms",
+              "Bid strategies refined for efficiency and scale",
+              "Regular performance reviews and campaign audits",
+              "Continuous optimization implemented for sustained growth",
+            ],
+          },
+        ]}
       />
       <CsPerformance
         title="Results &"
