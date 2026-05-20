@@ -312,3 +312,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata = {
+  title:"Turning Local Search Demand into Dermatology Growth",
+  description:"Localized SEO optimization improved treatment visibility, strengthened Page 1 rankings, and increased appointment-focused organic traffic."
+}

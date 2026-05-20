@@ -286,6 +286,6 @@ const BhivePage = () => {
 export default BhivePage;
 
 export const metadata = {
-  title: "Bhive | Global Brandstory",
-  description: "Bhive page for Global Brandstory",
+  title: "Scaling Jewellery E-commerce Revenue Growth",
+  description: "Performance-driven Google and Meta campaigns improved jewellery sales, strengthened conversion efficiency, and increased e-commerce revenue growth.",
 };

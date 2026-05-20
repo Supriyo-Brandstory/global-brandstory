@@ -299,3 +299,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata = { 
+  title:"Doubling Organic Visibility for a Gold Buying Brand",
+  description:"Geo-focused SEO optimization strengthened visibility for high-intent gold resale searches and increased qualified walk-in inquiries across South India."
+}

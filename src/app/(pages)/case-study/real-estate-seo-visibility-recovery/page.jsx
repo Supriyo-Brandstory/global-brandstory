@@ -314,3 +314,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata ={
+  title:"Rebuilding Search Visibility for a Real Estate Project",
+  description:"Technical SEO restructuring improved property search visibility, strengthened Page 1 rankings, and increased qualified real estate enquiries."
+}

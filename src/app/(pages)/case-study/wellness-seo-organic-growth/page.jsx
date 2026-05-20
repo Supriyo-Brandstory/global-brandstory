@@ -307,3 +307,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata = {
+  title: "Strengthening Organic Visibility for a Wellness Brand",
+  description: "Search-focused SEO improvements increased wellness search visibility, strengthened local rankings, and improved appointment-focused organic engagement."
+}

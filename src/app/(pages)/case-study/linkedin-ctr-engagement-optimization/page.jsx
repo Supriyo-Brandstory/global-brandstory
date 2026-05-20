@@ -250,3 +250,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata = {
+  title:"Boosting LinkedIn CTR and Engagement Through Content Optimization",
+  description:"Strategic LinkedIn content optimization improved CTR, strengthened engagement, and increased professional audience interaction through clearer communication."
+}

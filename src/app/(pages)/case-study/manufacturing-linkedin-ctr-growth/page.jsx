@@ -248,3 +248,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata = {
+  title:"Increasing LinkedIn CTR for a Manufacturing Brand",
+  description:"Consistent LinkedIn storytelling and structured communication improved CTR, strengthened engagement, and increased audience interaction over time."
+}

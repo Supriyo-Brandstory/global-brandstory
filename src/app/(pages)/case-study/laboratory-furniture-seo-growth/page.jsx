@@ -321,3 +321,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata = {
+  title:"Scaling Organic Growth for a Laboratory Furniture Brand",
+  description:"Technical and content-led SEO optimization improved laboratory search visibility, strengthened B2B discoverability, and increased qualified organic traffic."
+}

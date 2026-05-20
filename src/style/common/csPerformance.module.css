@@ -131,9 +131,8 @@
 .badge {
   background: #1A1A1A;
   border-radius: 100px;
-
   padding: 8px 16px;
-  font-size: 12px;
+  font-size: 16px;
   color: #fff;
 }
 
@@ -170,7 +169,7 @@
 
 .highlightText {
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 16px;
   color: #ffffff;
 }
 
@@ -200,7 +199,7 @@
 }
 
 .detailContent {
-  font-size: 14px;
+  font-size: 16px;
   color: #FAFAFA;
   line-height: 1.6;
 }

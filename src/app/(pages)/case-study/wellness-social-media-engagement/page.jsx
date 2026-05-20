@@ -254,3 +254,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata = {
+  title:"Strengthening Social Media Engagement for a Wellness Brand",
+  description:"Platform-focused storytelling and consistent communication improved engagement stability, audience connection, and brand visibility."
+}
