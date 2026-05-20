@@ -4,7 +4,7 @@
   position: relative;
   overflow: hidden;
   color: #ffffff;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family-gilory-regular), sans-serif;
 }
 
 .container {
