@@ -319,3 +319,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata = {
+  title:"Securing Top Rankings for Interior Design Searches",
+  description:"Intent-driven SEO optimization improved apartment design search visibility and secured Top 3 rankings across competitive metro markets."
+}

@@ -254,3 +254,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata = {
+  title:"Transforming LinkedIn Growth for a Technology Brand",
+  description:"Performance-driven LinkedIn optimization transformed declining visibility into scalable engagement, stronger reach, and sustained audience growth."
+}

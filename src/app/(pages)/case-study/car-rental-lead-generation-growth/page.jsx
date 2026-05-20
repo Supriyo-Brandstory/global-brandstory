@@ -286,6 +286,6 @@ const BhivePage = () => {
 export default BhivePage;
 
 export const metadata = {
-  title: "Bhive | Global Brandstory",
-  description: "Bhive page for Global Brandstory",
+  title: "Scaling Car Rental Lead Generation",
+  description: "Multi-platform paid campaigns increased car rental lead volume while improving conversion consistency and acquisition efficiency across high-intent audiences.",
 };

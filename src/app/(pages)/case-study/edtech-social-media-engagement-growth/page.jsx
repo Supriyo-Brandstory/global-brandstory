@@ -250,3 +250,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata = {
+  title: "Scaling Social Media Engagement for an EdTech Brand",
+  description: "Structured social media optimization increased engagement, improved reach, and strengthened audience interaction across Instagram and LinkedIn.",
+};

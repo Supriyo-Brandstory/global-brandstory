@@ -322,3 +322,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata = {
+  title:"Capturing Qualified Clinic Leads Through Organic Search",
+  description:"City-focused SEO optimization improved healthcare search visibility, strengthened inbound lead quality, and increased conversion-focused engagement."
+}

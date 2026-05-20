@@ -328,3 +328,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata = {
+  title:"Scaling High-Intent Organic Growth for a SaaS Platform",
+  description:"Cluster-led SEO optimization improved commercial keyword visibility, strengthened AI-driven discoverability, and increased qualified organic traffic."
+}

@@ -259,3 +259,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata = {
+  title:"Improving LinkedIn Reach and Engagement for an Industrial Brand",
+  description:"Industry-focused LinkedIn communication increased reach, strengthened engagement, and improved audience interaction through structured content optimization."
+}

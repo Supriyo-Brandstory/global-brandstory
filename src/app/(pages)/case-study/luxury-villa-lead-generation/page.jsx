@@ -286,6 +286,6 @@ const BhivePage = () => {
 export default BhivePage;
 
 export const metadata = {
-  title: "Bhive | Global Brandstory",
-  description: "Bhive page for Global Brandstory",
+  title: "Driving Luxury Villa Lead Generation",
+  description: "High-intent Google and Meta campaigns improved luxury real estate lead generation while reducing acquisition costs across premium villa searches.",
 };

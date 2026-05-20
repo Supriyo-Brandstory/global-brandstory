@@ -326,3 +326,8 @@ const page = () => {
 };
 
 export default page;
+
+export const metadata = {
+  title:"Strengthening Luxury Housing Visibility in Search",
+  description:"Precision-led SEO improvements strengthened premium housing discoverability, improved keyword rankings, and increased qualified property enquiries."
+}

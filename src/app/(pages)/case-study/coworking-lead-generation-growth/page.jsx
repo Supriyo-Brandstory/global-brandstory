@@ -287,6 +287,6 @@ const BhivePage = () => {
 export default BhivePage;
 
 export const metadata = {
-  title: "Bhive | Global Brandstory",
-  description: "Bhive page for Global Brandstory",
+  title: "Scaling High-Intent Coworking Lead Generation",
+  description: "Multi-platform campaigns increased coworking lead volume, improved conversion efficiency, and strengthened high-intent acquisition across Google, Meta, and LinkedIn.",
 };
