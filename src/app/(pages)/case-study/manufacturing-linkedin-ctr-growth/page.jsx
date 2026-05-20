@@ -13,6 +13,7 @@ import { CommonImageGrid } from "@/component/pages/common/CommonImageGrid";
 import { CommonStrategyPlanning } from "@/component/pages/common/CommonStrategyPlanning";
 import CommonTransformation from "@/component/pages/common/CommonTransformation";
 import StaticPaidCampaignPerformance from "@/component/pages/common/StaticPaidCampaignPerformance";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const page = () => {
   return (
@@ -251,5 +252,19 @@ export default page;
 
 export const metadata = {
   title:"Increasing LinkedIn CTR for a Manufacturing Brand",
-  description:"Consistent LinkedIn storytelling and structured communication improved CTR, strengthened engagement, and increased audience interaction over time."
+  description:"Consistent LinkedIn storytelling and structured communication improved CTR, strengthened engagement, and increased audience interaction over time.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }

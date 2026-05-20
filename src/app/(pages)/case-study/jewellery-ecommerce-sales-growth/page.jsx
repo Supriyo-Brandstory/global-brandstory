@@ -8,6 +8,7 @@ import { CommonBusinessContext } from "@/component/pages/common/CommonBusinessCo
 import { CommonChallengesObjectives } from "@/component/pages/common/CommonChallengesObjectives";
 import { CommonStrategyPlanning } from "@/component/pages/common/CommonStrategyPlanning";
 import { CommonCampaignExecution } from "@/component/pages/common/CommonCampaignExecution";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const BhivePage = () => {
   return (
@@ -48,13 +49,13 @@ const BhivePage = () => {
       ]}
       />
       {/* <ImageSection /> */}
-      <CommonImageGrid 
+      {/* <CommonImageGrid 
         images={[
           "/images/bhive/b1.png",
           "/images/bhive/b2.png",
           "/images/bhive/b3.png",
         ]}
-      />
+      /> */}
       {/* <BusinessContext /> */}
       <CommonBusinessContext 
         title= "Business <span>Context</span>"
@@ -252,7 +253,7 @@ const BhivePage = () => {
             label: "COST PER ACQUISITION",
             oldValue: "₹9887",
             newValue: "₹2260",
-            badges: ["23% reduction", "Sustained gains"],
+            badges: ["77% reduction", "Sustained gains"],
           },
         ]}
         highlights={[
@@ -288,4 +289,18 @@ export default BhivePage;
 export const metadata = {
   title: "Scaling Jewellery E-commerce Revenue Growth",
   description: "Performance-driven Google and Meta campaigns improved jewellery sales, strengthened conversion efficiency, and increased e-commerce revenue growth.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };

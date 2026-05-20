@@ -13,6 +13,7 @@ import { CommonImageGrid } from "@/component/pages/common/CommonImageGrid";
 import { CommonStrategyPlanning } from "@/component/pages/common/CommonStrategyPlanning";
 import CommonTransformation from "@/component/pages/common/CommonTransformation";
 import StaticPaidCampaignPerformance from "@/component/pages/common/StaticPaidCampaignPerformance";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const page = () => {
   return (
@@ -253,5 +254,19 @@ export default page;
 
 export const metadata = {
   title:"Boosting LinkedIn CTR and Engagement Through Content Optimization",
-  description:"Strategic LinkedIn content optimization improved CTR, strengthened engagement, and increased professional audience interaction through clearer communication."
+  description:"Strategic LinkedIn content optimization improved CTR, strengthened engagement, and increased professional audience interaction through clearer communication.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }

@@ -13,6 +13,7 @@ import { CommonImageGrid } from "@/component/pages/common/CommonImageGrid";
 import { CommonStrategyPlanning } from "@/component/pages/common/CommonStrategyPlanning";
 import CommonTransformation from "@/component/pages/common/CommonTransformation";
 import StaticPaidCampaignPerformance from "@/component/pages/common/StaticPaidCampaignPerformance";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const page = () => {
   return (
@@ -250,5 +251,19 @@ export default page;
 
 export const metadata = {
   title: "Scaling Social Media Growth for an Education Brand",
-  description: "Educational storytelling and platform-specific content increased engagement, strengthened reach, and improved student interaction across key channels."
+  description: "Educational storytelling and platform-specific content increased engagement, strengthened reach, and improved student interaction across key channels.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }

@@ -8,47 +8,48 @@ import { CommonBusinessContext } from "@/component/pages/common/CommonBusinessCo
 import { CommonChallengesObjectives } from "@/component/pages/common/CommonChallengesObjectives";
 import { CommonStrategyPlanning } from "@/component/pages/common/CommonStrategyPlanning";
 import { CommonCampaignExecution } from "@/component/pages/common/CommonCampaignExecution";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const BhivePage = () => {
   return (
     <>
       {/* <Banner /> */}
-      <CommonBanner4 
-      heading="Driving 7X Growth in Coworking <span>Lead Generation Strategy</span>"
-      tags = {[
-        { icon: "Globe", text: "Coworking / Managed Offices" },
-        { icon: "Target", text: "Lead Generation" },
-        { icon: "Briefcase", text: "B2B" },
-        { icon: "Share2", text: "Google · Meta · LinkedIn" },
-        { icon: "Calendar", text: "₹5L - ₹15L / month" },
-        { icon: "Clock", text: "Multi-phase campaign" },
-      ]}
-      googleLogo = "/images/commonBanner4/google-logo.png"
+      <CommonBanner4
+        heading="Driving 7X Growth in Coworking <span>Lead Generation Strategy</span>"
+        tags={[
+          { icon: "Globe", text: "Coworking / Managed Offices" },
+          { icon: "Target", text: "Lead Generation" },
+          { icon: "Briefcase", text: "B2B" },
+          { icon: "Share2", text: "Google · Meta · LinkedIn" },
+          { icon: "Calendar", text: "₹5L - ₹15L / month" },
+          { icon: "Clock", text: "Multi-phase campaign" },
+        ]}
+        googleLogo="/images/commonBanner4/google-logo.png"
       />
       {/* <Stats /> */}
-      <CommonStats2 
-        summaryLabel= "EXECUTIVE SUMMARY"
-        summaryQuote= "Scaled high-intent lead generation through a multi-channel PPC strategy, significantly increasing conversion volume while improving cost efficiency across platforms."
-        stats= {[
-        {
-          value: "3",
-          title: "PLATFORMS",
-          subText: "Google · Meta · LinkedIn",
-        },
-        {
-          value: "PPC",
-          title: "CAMPAIGN TYPE",
-          subText: "Lead Generation Focus",
-        },
-        {
-          value: "B2B",
-          title: "BUSINESS MODEL",
-          subText: "Workspace Solutions",
-        },
-      ]}
+      <CommonStats2
+        summaryLabel="EXECUTIVE SUMMARY"
+        summaryQuote="Scaled high-intent lead generation through a multi-channel PPC strategy, significantly increasing conversion volume while improving cost efficiency across platforms."
+        stats={[
+          {
+            value: "3",
+            title: "PLATFORMS",
+            subText: "Google · Meta · LinkedIn",
+          },
+          {
+            value: "PPC",
+            title: "CAMPAIGN TYPE",
+            subText: "Lead Generation Focus",
+          },
+          {
+            value: "B2B",
+            title: "BUSINESS MODEL",
+            subText: "Workspace Solutions",
+          },
+        ]}
       />
       {/* <ImageSection /> */}
-      <CommonImageGrid 
+      <CommonImageGrid
         images={[
           "/images/case-study/ppc/coworking-lead-generation-growth/image1.png",
           "/images/case-study/ppc/coworking-lead-generation-growth/image2.png",
@@ -57,9 +58,9 @@ const BhivePage = () => {
         ]}
       />
       {/* <BusinessContext /> */}
-      <CommonBusinessContext 
-        title= "Business <span>Context</span>"
-        cards= {[
+      <CommonBusinessContext
+        title="Business <span>Context</span>"
+        cards={[
           {
             icon: "Building2",
             number: "01",
@@ -87,10 +88,10 @@ const BhivePage = () => {
         ]}
       />
       {/* <ChallengesObjectives /> */}
-      <CommonChallengesObjectives 
-        title=  "Challenges <span>&</span> <span class='accent'>Objectives</span>"
-        desc= ""
-        challenges= {{
+      <CommonChallengesObjectives
+        title="Challenges <span>&</span> <span class='accent'>Objectives</span>"
+        desc=""
+        challenges={{
           title: "Key Challenges",
           items: [
             "High competition in workspace-related keywords",
@@ -100,7 +101,7 @@ const BhivePage = () => {
             "Limited funnel segmentation in earlier campaigns",
           ],
         }}
-        objectives= {{
+        objectives={{
           title: "Campaign Objectives",
           items: [
             "Scale qualified leads",
@@ -112,9 +113,9 @@ const BhivePage = () => {
         }}
       />
       {/* <StrategyPlanning /> */}
-      <CommonStrategyPlanning 
-        title = "Strategy <span>&</span> <span class='accent'>Planning</span>"
-        items= {[
+      <CommonStrategyPlanning
+        title="Strategy <span>&</span> <span class='accent'>Planning</span>"
+        items={[
           {
             icon: "users",
             title: "Audience Targeting Strategy",
@@ -143,9 +144,9 @@ const BhivePage = () => {
         ]}
       />
       {/* <CampaignExecution /> */}
-      <CommonCampaignExecution 
-        title= "Campaign <span class='accent'>Execution</span>"
-        cards= {[
+      <CommonCampaignExecution
+        title="Campaign <span class='accent'>Execution</span>"
+        cards={[
           {
             icon: "chart",
             title: "Ad Structure",
@@ -173,71 +174,71 @@ const BhivePage = () => {
           }
         ]}
       />
-      <CsProcess  
+      <CsProcess
         title="Our Process"
         steps={[
-    {
-        number: "01",
-        title: "Process Overview",
-        description:
-        "A Structured Multi-Channel System Was Built To Scale High-Intent Lead Generation Efficiently.",
-        points: [
-            "Integrated Search, Retargeting, And B2B Targeting Layers",
-            "Aligned Audience Intent With Funnel Stages",
-            "Focused On Balancing Scale With Cost Control",
-            "Designed For Consistent And Scalable Performance",
-        ],
-    },
-    {
-        number: "02",
-        title: "Content Planning",
-        description:
-            "Content Was Designed To Drive Conversion By Aligning Messaging With User Intent.",
-        points: [
-            "Focused On Workspace Flexibility And Business Scalability",
-            "Highlighted Infrastructure Quality And Location Advantages",
-            "Mapped Messaging Across Awareness To Conversion Stages",
-            "Ensured Clarity And Relevance Across Platforms",
-        ],
-    },
-    {
-        number: "03",
-        title: "Distribution & Attribution (What Worked)",
-        description:
-            "Each Platform Played A Distinct Role In Driving Performance And Lead Quality.",
-        points: [
-            "Google Ads Drove High-Intent Conversion Traffic",
-            "Meta Ads Strengthened Retargeting And Scale",
-            "LinkedIn Delivered High-Quality B2B Leads",
-            "Combined Channels Improved Funnel Consistency",
-        ],
-    },
-    {
-        number: "04",
-        title: "Best Practices Implemented",
-        description:
-            "Structured Execution And Continuous Optimization Improved Campaign Performance.",
-        points: [
-            "Funnel Segmentation Across TOFU, MOFU, BOFU",
-            "Continuous Testing Of Creatives And Messaging",
-            "Keyword Refinement For High-Intent Targeting",
-            "Audience Optimization Using Behavioral Signals",
-            "Platform-Specific Creative Alignment",
-        ],
-    },
-    {
-        number: "05",
-        title: "Governance & Growth",
-        description:
-        "Performance Was Managed Through Continuous Monitoring And Controlled Scaling.",
-        points: [
-            "Budget Allocation Optimized Across Platforms",
-            "Bid Strategies Refined For Efficiency",
-            "Regular Performance Reviews And Audits",
-            "Continuous Optimization For Sustained Growth",
-        ],
-    },
-]}
+          {
+            number: "01",
+            title: "Process Overview",
+            description:
+              "A Structured Multi-Channel System Was Built To Scale High-Intent Lead Generation Efficiently.",
+            points: [
+              "Integrated Search, Retargeting, And B2B Targeting Layers",
+              "Aligned Audience Intent With Funnel Stages",
+              "Focused On Balancing Scale With Cost Control",
+              "Designed For Consistent And Scalable Performance",
+            ],
+          },
+          {
+            number: "02",
+            title: "Content Planning",
+            description:
+              "Content Was Designed To Drive Conversion By Aligning Messaging With User Intent.",
+            points: [
+              "Focused On Workspace Flexibility And Business Scalability",
+              "Highlighted Infrastructure Quality And Location Advantages",
+              "Mapped Messaging Across Awareness To Conversion Stages",
+              "Ensured Clarity And Relevance Across Platforms",
+            ],
+          },
+          {
+            number: "03",
+            title: "Distribution & Attribution (What Worked)",
+            description:
+              "Each Platform Played A Distinct Role In Driving Performance And Lead Quality.",
+            points: [
+              "Google Ads Drove High-Intent Conversion Traffic",
+              "Meta Ads Strengthened Retargeting And Scale",
+              "LinkedIn Delivered High-Quality B2B Leads",
+              "Combined Channels Improved Funnel Consistency",
+            ],
+          },
+          {
+            number: "04",
+            title: "Best Practices Implemented",
+            description:
+              "Structured Execution And Continuous Optimization Improved Campaign Performance.",
+            points: [
+              "Funnel Segmentation Across TOFU, MOFU, BOFU",
+              "Continuous Testing Of Creatives And Messaging",
+              "Keyword Refinement For High-Intent Targeting",
+              "Audience Optimization Using Behavioral Signals",
+              "Platform-Specific Creative Alignment",
+            ],
+          },
+          {
+            number: "05",
+            title: "Governance & Growth",
+            description:
+              "Performance Was Managed Through Continuous Monitoring And Controlled Scaling.",
+            points: [
+              "Budget Allocation Optimized Across Platforms",
+              "Bid Strategies Refined For Efficiency",
+              "Regular Performance Reviews And Audits",
+              "Continuous Optimization For Sustained Growth",
+            ],
+          },
+        ]}
       />
       <CsPerformance
         title="Results &"
@@ -289,4 +290,18 @@ export default BhivePage;
 export const metadata = {
   title: "Scaling High-Intent Coworking Lead Generation",
   description: "Multi-platform campaigns increased coworking lead volume, improved conversion efficiency, and strengthened high-intent acquisition across Google, Meta, and LinkedIn.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };

@@ -8,47 +8,48 @@ import { CommonBusinessContext } from "@/component/pages/common/CommonBusinessCo
 import { CommonChallengesObjectives } from "@/component/pages/common/CommonChallengesObjectives";
 import { CommonStrategyPlanning } from "@/component/pages/common/CommonStrategyPlanning";
 import { CommonCampaignExecution } from "@/component/pages/common/CommonCampaignExecution";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const BhivePage = () => {
   return (
     <>
       {/* <Banner /> */}
-      <CommonBanner4 
-      heading="82% Cost Efficiency in <span>B2B Insurance Lead Generation</span>"
-      tags = {[
-        { icon: "Globe", text: "Insurance / Financial Services" },
-        { icon: "Target", text: "Lead Generation" },
-        { icon: "Briefcase", text: "B2B" },
-        { icon: "Share2", text: "Meta · LinkedIn" },
-        { icon: "Calendar", text: "AED 5K – AED 12K / month" },
-        { icon: "Clock", text: "Multi-phase campaign" },
-      ]}
-      googleLogo = "/images/commonBanner4/google-logo.png"
+      <CommonBanner4
+        heading="82% Cost Efficiency in <span>B2B Insurance Lead Generation</span>"
+        tags={[
+          { icon: "Globe", text: "Insurance / Financial Services" },
+          { icon: "Target", text: "Lead Generation" },
+          { icon: "Briefcase", text: "B2B" },
+          { icon: "Share2", text: "Meta · LinkedIn" },
+          { icon: "Calendar", text: "AED 5K – AED 12K / month" },
+          { icon: "Clock", text: "Multi-phase campaign" },
+        ]}
+        googleLogo="/images/commonBanner4/google-logo.png"
       />
       {/* <Stats /> */}
-      <CommonStats2 
-        summaryLabel= "EXECUTIVE SUMMARY"
-        summaryQuote= "Generated consistent B2B leads through targeted Meta and LinkedIn campaigns, improving conversion volume while maintaining strong cost efficiency within a specialized insurance segment."
-        stats= {[
-        {
-          value: "2",
-          title: "PLATFORMS",
-          subText: "Meta · LinkedIn",
-        },
-        {
-          value: "PPC",
-          title: "CAMPAIGN TYPE",
-          subText: "Lead Generation Focus",
-        },
-        {
-          value: "B2B",
-          title: "BUSINESS MODEL",
-          subText: "Insurance & Financial Services",
-        },
-      ]}
+      <CommonStats2
+        summaryLabel="EXECUTIVE SUMMARY"
+        summaryQuote="Generated consistent B2B leads through targeted Meta and LinkedIn campaigns, improving conversion volume while maintaining strong cost efficiency within a specialized insurance segment."
+        stats={[
+          {
+            value: "2",
+            title: "PLATFORMS",
+            subText: "Meta · LinkedIn",
+          },
+          {
+            value: "PPC",
+            title: "CAMPAIGN TYPE",
+            subText: "Lead Generation Focus",
+          },
+          {
+            value: "B2B",
+            title: "BUSINESS MODEL",
+            subText: "Insurance & Financial Services",
+          },
+        ]}
       />
       {/* <ImageSection /> */}
-      <CommonImageGrid 
+      <CommonImageGrid
         images={[
           "/images/case-study/ppc/b2b-insurance-lead-generation/image1.png",
           "/images/case-study/ppc/b2b-insurance-lead-generation/image2.png",
@@ -57,9 +58,9 @@ const BhivePage = () => {
         ]}
       />
       {/* <BusinessContext /> */}
-      <CommonBusinessContext 
-        title= "Business <span>Context</span>"
-        cards= {[
+      <CommonBusinessContext
+        title="Business <span>Context</span>"
+        cards={[
           {
             icon: "Building2",
             number: "01",
@@ -87,10 +88,10 @@ const BhivePage = () => {
         ]}
       />
       {/* <ChallengesObjectives /> */}
-      <CommonChallengesObjectives 
-        title=  "Challenges <span>&</span> <span class='accent'>Objectives</span>"
-        desc= ""
-        challenges= {{
+      <CommonChallengesObjectives
+        title="Challenges <span>&</span> <span class='accent'>Objectives</span>"
+        desc=""
+        challenges={{
           title: "Key Challenges",
           items: [
             "Niche B2B target audience",
@@ -100,7 +101,7 @@ const BhivePage = () => {
             "Conversion variability during early campaign phases",
           ],
         }}
-        objectives= {{
+        objectives={{
           title: "Campaign Objectives",
           items: [
             "Increase qualified B2B lead volume",
@@ -112,9 +113,9 @@ const BhivePage = () => {
         }}
       />
       {/* <StrategyPlanning /> */}
-      <CommonStrategyPlanning 
-        title = "Strategy <span>&</span> <span class='accent'>Planning</span>"
-        items= {[
+      <CommonStrategyPlanning
+        title="Strategy <span>&</span> <span class='accent'>Planning</span>"
+        items={[
           {
             icon: "users",
             title: "Audience Targeting Strategy",
@@ -143,9 +144,9 @@ const BhivePage = () => {
         ]}
       />
       {/* <CampaignExecution /> */}
-      <CommonCampaignExecution 
-        title= "Campaign <span class='accent'>Execution</span>"
-        cards= {[
+      <CommonCampaignExecution
+        title="Campaign <span class='accent'>Execution</span>"
+        cards={[
           {
             icon: "chart",
             title: "Ad Structure",
@@ -173,71 +174,71 @@ const BhivePage = () => {
           }
         ]}
       />
-      <CsProcess  
+      <CsProcess
         title="Our Process"
         steps={[
-    {
-        number: "01",
-        title: "Process Overview",
-        description:
-        "A structured multi-platform lead generation framework was implemented to improve B2B acquisition performance while maintaining cost-efficient lead generation.",
-        points: [
-            "Integrated awareness and retargeting strategies across platforms",
-            "Aligned audience targeting with business insurance intent",
-            "Focused on balancing lead quality with CPL efficiency",
-            "Designed for scalable and consistent lead generation",
-        ],
-    },
-    {
-        number: "02",
-        title: "Content Planning",
-        description:
-            "Campaign messaging was aligned around trust, risk protection, business continuity, and simplified insurance solutions.",
-        points: [
-            "Focused on SME and startup insurance requirements",
-            "Highlighted business protection and onboarding simplicity",
-            "Mapped messaging across awareness and conversion stages",
-            "Ensured consistency across Meta and LinkedIn campaigns",
-        ],
-    },
-    {
-        number: "03",
-        title: "Distribution & Attribution (What Worked)",
-        description:
-            "Each platform contributed differently toward lead generation and acquisition quality.",
-        points: [
-            "Meta Ads improved campaign scale and retargeting performance",
-            "LinkedIn strengthened niche B2B audience acquisition",
-            "Audience segmentation improved lead relevance",
-            "Multi-platform execution improved funnel consistency",
-        ],
-    },
-    {
-        number: "04",
-        title: "Best Practices Implemented",
-        description:
-            "Structured execution and continuous optimization improved campaign efficiency and lead quality.",
-        points: [
-            "Funnel segmentation across TOFU, MOFU, and BOFU stages",
-            "Continuous testing of creatives and messaging",
-            "Audience refinement using behavioral targeting",
-            "Bid optimization focused on reducing CPL",
-            "Platform-specific campaign structuring",
-        ],
-    },
-    {
-        number: "05",
-        title: "Governance & Growth",
-        description:
-        "Performance was managed through ongoing optimization, audience refinement, and campaign scaling strategies.",
-        points: [
-            "Budget allocation optimized based on conversion trends",
-            "Bid strategies refined for acquisition efficiency",
-            "Campaign audits conducted regularly",
-            "Continuous improvements implemented using performance insights",
-        ],
-    },
-]}
+          {
+            number: "01",
+            title: "Process Overview",
+            description:
+              "A structured multi-platform lead generation framework was implemented to improve B2B acquisition performance while maintaining cost-efficient lead generation.",
+            points: [
+              "Integrated awareness and retargeting strategies across platforms",
+              "Aligned audience targeting with business insurance intent",
+              "Focused on balancing lead quality with CPL efficiency",
+              "Designed for scalable and consistent lead generation",
+            ],
+          },
+          {
+            number: "02",
+            title: "Content Planning",
+            description:
+              "Campaign messaging was aligned around trust, risk protection, business continuity, and simplified insurance solutions.",
+            points: [
+              "Focused on SME and startup insurance requirements",
+              "Highlighted business protection and onboarding simplicity",
+              "Mapped messaging across awareness and conversion stages",
+              "Ensured consistency across Meta and LinkedIn campaigns",
+            ],
+          },
+          {
+            number: "03",
+            title: "Distribution & Attribution (What Worked)",
+            description:
+              "Each platform contributed differently toward lead generation and acquisition quality.",
+            points: [
+              "Meta Ads improved campaign scale and retargeting performance",
+              "LinkedIn strengthened niche B2B audience acquisition",
+              "Audience segmentation improved lead relevance",
+              "Multi-platform execution improved funnel consistency",
+            ],
+          },
+          {
+            number: "04",
+            title: "Best Practices Implemented",
+            description:
+              "Structured execution and continuous optimization improved campaign efficiency and lead quality.",
+            points: [
+              "Funnel segmentation across TOFU, MOFU, and BOFU stages",
+              "Continuous testing of creatives and messaging",
+              "Audience refinement using behavioral targeting",
+              "Bid optimization focused on reducing CPL",
+              "Platform-specific campaign structuring",
+            ],
+          },
+          {
+            number: "05",
+            title: "Governance & Growth",
+            description:
+              "Performance was managed through ongoing optimization, audience refinement, and campaign scaling strategies.",
+            points: [
+              "Budget allocation optimized based on conversion trends",
+              "Bid strategies refined for acquisition efficiency",
+              "Campaign audits conducted regularly",
+              "Continuous improvements implemented using performance insights",
+            ],
+          },
+        ]}
       />
       <CsPerformance
         title="Results &"
@@ -288,5 +289,20 @@ export default BhivePage;
 
 export const metadata = {
   title: "Increasing B2B Insurance Lead Generation",
-  description: "Targeted Meta and LinkedIn campaigns improved B2B insurance lead generation while strengthening acquisition efficiency across SME audiences.",
+  description:
+    "Targeted Meta and LinkedIn campaigns improved B2B insurance lead generation while strengthening acquisition efficiency across SME audiences.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };

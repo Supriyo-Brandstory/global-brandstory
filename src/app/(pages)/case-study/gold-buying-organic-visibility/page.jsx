@@ -8,6 +8,7 @@ import CsResults from "@/component/pages/common/CsResults";
 import CsPerformance from "@/component/pages/common/CsPerformance";
 import React from "react";
 import CommonDivider from "@/component/pages/common/CommonDivider";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const page = () => {
   return (
@@ -302,5 +303,19 @@ export default page;
 
 export const metadata = { 
   title:"Doubling Organic Visibility for a Gold Buying Brand",
-  description:"Geo-focused SEO optimization strengthened visibility for high-intent gold resale searches and increased qualified walk-in inquiries across South India."
+  description:"Geo-focused SEO optimization strengthened visibility for high-intent gold resale searches and increased qualified walk-in inquiries across South India.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }

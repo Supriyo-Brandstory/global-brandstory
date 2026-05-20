@@ -13,6 +13,7 @@ import { CommonImageGrid } from "@/component/pages/common/CommonImageGrid";
 import { CommonStrategyPlanning } from "@/component/pages/common/CommonStrategyPlanning";
 import CommonTransformation from "@/component/pages/common/CommonTransformation";
 import StaticPaidCampaignPerformance from "@/component/pages/common/StaticPaidCampaignPerformance";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const page = () => {
   return (
@@ -254,5 +255,19 @@ export default page;
 
 export const metadata = {
   title: "Recovering LinkedIn Performance with Strategic Content",
-  description: "Audience-focused content restructuring strengthened LinkedIn engagement, improved CTR, and restored consistent content performance."
+  description: "Audience-focused content restructuring strengthened LinkedIn engagement, improved CTR, and restored consistent content performance.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }

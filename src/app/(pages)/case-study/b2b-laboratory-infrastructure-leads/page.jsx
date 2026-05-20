@@ -8,6 +8,7 @@ import { CommonBusinessContext } from "@/component/pages/common/CommonBusinessCo
 import { CommonChallengesObjectives } from "@/component/pages/common/CommonChallengesObjectives";
 import { CommonStrategyPlanning } from "@/component/pages/common/CommonStrategyPlanning";
 import { CommonCampaignExecution } from "@/component/pages/common/CommonCampaignExecution";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const BhivePage = () => {
     return (
@@ -290,4 +291,18 @@ export const metadata = {
     title: "Improving B2B Laboratory Lead Generation | Global Brandstory",
     description:
         "High-intent Google Ads campaigns improved B2B lead quality, strengthened conversion consistency, and reduced acquisition costs in a niche laboratory market.",
+    alternates: {
+        canonical: getPageUrl(import.meta.url),
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
 };

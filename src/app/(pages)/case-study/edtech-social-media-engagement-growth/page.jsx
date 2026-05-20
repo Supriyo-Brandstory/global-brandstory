@@ -13,6 +13,7 @@ import { CommonImageGrid } from "@/component/pages/common/CommonImageGrid";
 import { CommonStrategyPlanning } from "@/component/pages/common/CommonStrategyPlanning";
 import CommonTransformation from "@/component/pages/common/CommonTransformation";
 import StaticPaidCampaignPerformance from "@/component/pages/common/StaticPaidCampaignPerformance";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const page = () => {
   return (
@@ -254,4 +255,18 @@ export default page;
 export const metadata = {
   title: "Scaling Social Media Engagement for an EdTech Brand",
   description: "Structured social media optimization increased engagement, improved reach, and strengthened audience interaction across Instagram and LinkedIn.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };

@@ -8,6 +8,7 @@ import CsResults from "@/component/pages/common/CsResults";
 import CsPerformance from "@/component/pages/common/CsPerformance";
 import React from "react";
 import CommonDivider from "@/component/pages/common/CommonDivider";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const page = () => {
   return (
@@ -322,5 +323,19 @@ export default page;
 
 export const metadata = {
   title:"Securing Top Rankings for Interior Design Searches",
-  description:"Intent-driven SEO optimization improved apartment design search visibility and secured Top 3 rankings across competitive metro markets."
+  description:"Intent-driven SEO optimization improved apartment design search visibility and secured Top 3 rankings across competitive metro markets.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }

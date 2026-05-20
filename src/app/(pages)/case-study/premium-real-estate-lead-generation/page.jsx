@@ -8,6 +8,7 @@ import { CommonBusinessContext } from "@/component/pages/common/CommonBusinessCo
 import { CommonChallengesObjectives } from "@/component/pages/common/CommonChallengesObjectives";
 import { CommonStrategyPlanning } from "@/component/pages/common/CommonStrategyPlanning";
 import { CommonCampaignExecution } from "@/component/pages/common/CommonCampaignExecution";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const BhivePage = () => {
   return (
@@ -252,7 +253,7 @@ const BhivePage = () => {
             label: "COST PER ACQUISITION",
             oldValue: "₹4200",
             newValue: "₹1800",
-            badges: ["43% reduction", "Sustained gains"],
+            badges: ["57% reduction", "Sustained gains"],
           },
         ]}
         highlights={[
@@ -288,4 +289,18 @@ export default BhivePage;
 export const metadata = {
   title: "Scaling Premium Real Estate Lead Generation",
   description: "Strategic Google and Meta campaigns improved luxury villa lead quality, strengthened conversion consistency, and optimized acquisition efficiency.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };

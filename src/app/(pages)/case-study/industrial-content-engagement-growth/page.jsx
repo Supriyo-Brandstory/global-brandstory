@@ -13,6 +13,7 @@ import { CommonImageGrid } from "@/component/pages/common/CommonImageGrid";
 import { CommonStrategyPlanning } from "@/component/pages/common/CommonStrategyPlanning";
 import CommonTransformation from "@/component/pages/common/CommonTransformation";
 import StaticPaidCampaignPerformance from "@/component/pages/common/StaticPaidCampaignPerformance";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const page = () => {
   return (
@@ -262,5 +263,19 @@ export default page;
 
 export const metadata = {
   title:"Improving LinkedIn Reach and Engagement for an Industrial Brand",
-  description:"Industry-focused LinkedIn communication increased reach, strengthened engagement, and improved audience interaction through structured content optimization."
+  description:"Industry-focused LinkedIn communication increased reach, strengthened engagement, and improved audience interaction through structured content optimization.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }

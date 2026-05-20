@@ -8,6 +8,7 @@ import CsResults from "@/component/pages/common/CsResults";
 import CsPerformance from "@/component/pages/common/CsPerformance";
 import React from "react";
 import CommonDivider from "@/component/pages/common/CommonDivider";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const page = () => {
   return (
@@ -331,5 +332,19 @@ export default page;
 
 export const metadata = {
   title:"Scaling High-Intent Organic Growth for a SaaS Platform",
-  description:"Cluster-led SEO optimization improved commercial keyword visibility, strengthened AI-driven discoverability, and increased qualified organic traffic."
+  description:"Cluster-led SEO optimization improved commercial keyword visibility, strengthened AI-driven discoverability, and increased qualified organic traffic.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }

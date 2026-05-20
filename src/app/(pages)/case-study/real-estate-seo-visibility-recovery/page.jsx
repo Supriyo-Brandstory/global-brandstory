@@ -8,6 +8,7 @@ import CsResults from "@/component/pages/common/CsResults";
 import CsPerformance from "@/component/pages/common/CsPerformance";
 import React from "react";
 import CommonDivider from "@/component/pages/common/CommonDivider";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const page = () => {
   return (
@@ -317,5 +318,19 @@ export default page;
 
 export const metadata ={
   title:"Rebuilding Search Visibility for a Real Estate Project",
-  description:"Technical SEO restructuring improved property search visibility, strengthened Page 1 rankings, and increased qualified real estate enquiries."
+  description:"Technical SEO restructuring improved property search visibility, strengthened Page 1 rankings, and increased qualified real estate enquiries.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }

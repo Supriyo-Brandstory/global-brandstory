@@ -8,6 +8,7 @@ import { CommonBusinessContext } from "@/component/pages/common/CommonBusinessCo
 import { CommonChallengesObjectives } from "@/component/pages/common/CommonChallengesObjectives";
 import { CommonStrategyPlanning } from "@/component/pages/common/CommonStrategyPlanning";
 import { CommonCampaignExecution } from "@/component/pages/common/CommonCampaignExecution";
+import { getPageUrl } from "@/utils/getPageUrl";
 
 const BhivePage = () => {
   return (
@@ -253,7 +254,7 @@ const BhivePage = () => {
             label: "COST PER ACQUISITION",
             oldValue: "₹820",
             newValue: "₹40",
-            badges: ["35% reduction", "Sustained gains"],
+            badges: ["95% reduction", "Sustained gains"],
           },
         ]}
         highlights={[
@@ -289,4 +290,18 @@ export default BhivePage;
 export const metadata = {
   title: "Improving VLSI Training Lead Generation",
   description: "Performance-focused Google and Meta campaigns scaled student enquiries while improving acquisition efficiency across competitive VLSI training searches.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
