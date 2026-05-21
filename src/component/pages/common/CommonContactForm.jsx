@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import styles from '@/style/common/commonContactForm.module.css';
 
 export const CommonContactForm = () => {
+    const router = useRouter();
     const [formData, setFormData] = useState({
         name: '',
         mail: '',
@@ -54,6 +56,7 @@ export const CommonContactForm = () => {
                     services: '',
                     isHappyToContact: false
                 });
+                router.push('/thank-you');
             } else {
                 const errorData = await response.json();
                 console.error('Submission failed:', errorData);
