@@ -14,52 +14,52 @@ const BhivePage = () => {
   return (
     <>
       {/* <Banner /> */}
-      <CommonBanner4 
-      heading="108% Revenue Growth in <span>D2C Jewellery Campaigns</span>"
-      tags = {[
-        { icon: "Globe", text: "Jewellery / D2C E-commerce" },
-        { icon: "Target", text: "Sales / Conversion" },
-        { icon: "Briefcase", text: "B2C" },
-        { icon: "Share2", text: "Google · Meta" },
-        { icon: "Calendar", text: "₹15K / month" },
-        { icon: "Clock", text: "Multi-phase campaign" },
-      ]}
-      googleLogo = "/images/commonBanner4/google-logo.png"
+      <CommonBanner4
+        heading="108% Revenue Growth in <span>D2C Jewellery Campaigns</span>"
+        tags={[
+          { icon: "Globe", text: "Jewellery / D2C E-commerce" },
+          { icon: "Target", text: "Sales / Conversion" },
+          { icon: "Briefcase", text: "B2C" },
+          { icon: "Share2", text: "Google · Meta" },
+          { icon: "Calendar", text: "₹15K / month" },
+          { icon: "Clock", text: "Multi-phase campaign" },
+        ]}
+        googleLogo="/images/commonBanner4/google-logo.png"
       />
       {/* <Stats /> */}
-      <CommonStats2 
-        summaryLabel= "EXECUTIVE SUMMARY"
-        summaryQuote= "Scaled online jewellery sales through performance marketing campaigns, improving conversion efficiency while maintaining strong cost control across Google and Meta platforms."
-        stats= {[
-        {
-          value: "2",
-          title: "PLATFORMS",
-          subText: "Google · Meta",
-        },
-        {
-          value: "PPC",
-          title: "CAMPAIGN TYPE",
-          subText: "Sales & Conversion Focus",
-        },
-        {
-          value: "B2C",
-          title: "BUSINESS MODEL",
-          subText: "D2C Jewellery E-commerce",
-        },
-      ]}
+      <CommonStats2
+        summaryLabel="EXECUTIVE SUMMARY"
+        summaryQuote="Scaled online jewellery sales through performance marketing campaigns, improving conversion efficiency while maintaining strong cost control across Google and Meta platforms."
+        stats={[
+          {
+            value: "2",
+            title: "PLATFORMS",
+            subText: "Google · Meta",
+          },
+          {
+            value: "PPC",
+            title: "CAMPAIGN TYPE",
+            subText: "Sales & Conversion Focus",
+          },
+          {
+            value: "B2C",
+            title: "BUSINESS MODEL",
+            subText: "D2C Jewellery E-commerce",
+          },
+        ]}
       />
       {/* <ImageSection /> */}
-      {/* <CommonImageGrid 
+      <CommonImageGrid
         images={[
           "/images/bhive/b1.png",
           "/images/bhive/b2.png",
           "/images/bhive/b3.png",
         ]}
-      /> */}
+      />
       {/* <BusinessContext /> */}
-      <CommonBusinessContext 
-        title= "Business <span>Context</span>"
-        cards= {[
+      <CommonBusinessContext
+        title="Business <span>Context</span>"
+        cards={[
           {
             icon: "Building2",
             number: "01",
@@ -87,10 +87,10 @@ const BhivePage = () => {
         ]}
       />
       {/* <ChallengesObjectives /> */}
-      <CommonChallengesObjectives 
-        title=  "Challenges <span>&</span> <span class='accent'>Objectives</span>"
-        desc= ""
-        challenges= {{
+      <CommonChallengesObjectives
+        title="Challenges <span>&</span> <span class='accent'>Objectives</span>"
+        desc=""
+        challenges={{
           title: "Key Challenges",
           items: [
             "Highly competitive jewellery e-commerce market",
@@ -100,7 +100,7 @@ const BhivePage = () => {
             "Balancing platform performance and budget allocation",
           ],
         }}
-        objectives= {{
+        objectives={{
           title: "Campaign Objectives",
           items: [
             "Increase online sales volume",
@@ -112,9 +112,9 @@ const BhivePage = () => {
         }}
       />
       {/* <StrategyPlanning /> */}
-      <CommonStrategyPlanning 
-        title = "Strategy <span>&</span> <span class='accent'>Planning</span>"
-        items= {[
+      <CommonStrategyPlanning
+        title="Strategy <span>&</span> <span class='accent'>Planning</span>"
+        items={[
           {
             icon: "users",
             title: "Audience Targeting Strategy",
@@ -143,9 +143,9 @@ const BhivePage = () => {
         ]}
       />
       {/* <CampaignExecution /> */}
-      <CommonCampaignExecution 
-        title= "Campaign <span class='accent'>Execution</span>"
-        cards= {[
+      <CommonCampaignExecution
+        title="Campaign <span class='accent'>Execution</span>"
+        cards={[
           {
             icon: "chart",
             title: "Ad Structure",
@@ -173,71 +173,71 @@ const BhivePage = () => {
           }
         ]}
       />
-      <CsProcess  
+      <CsProcess
         title="Our Process"
         steps={[
-    {
-        number: "01",
-        title: "Process Overview",
-        description:
-        "A structured multi-platform e-commerce framework was implemented to scale online jewellery sales while maintaining acquisition efficiency and conversion stability.",
-        points: [
-            "Integrated conversion and retargeting strategies across platforms",
-            "Aligned campaigns with shopping intent and buying behavior",
-            "Focused on balancing sales scale with ROAS efficiency",
-            "Designed for consistent purchase-driven campaign performance",
-        ],
-    },
-    {
-        number: "02",
-        title: "Content Planning",
-        description:
-            "Campaign messaging was aligned around jewellery craftsmanship, premium quality, gifting appeal, and lifestyle positioning.",
-        points: [
-            "Focused on fashion and jewellery buying intent",
-            "Highlighted handcrafted collections and premium designs",
-            "Mapped messaging across awareness and purchase stages",
-            "Ensured consistency across Google and Meta campaigns",
-        ],
-    },
-    {
-        number: "03",
-        title: "Distribution & Attribution (What Worked)",
-        description:
-            "Each platform contributed differently toward revenue generation and conversion performance.",
-        points: [
-            "Google Ads captured high-intent purchase demand",
-            "Meta Ads improved discovery, engagement, and retargeting",
-            "Product-focused creatives improved shopping engagement",
-            "Multi-platform execution strengthened conversion consistency",
-        ],
-    },
-    {
-        number: "04",
-        title: "Best Practices Implemented",
-        description:
-            "Structured execution and continuous optimization improved campaign efficiency and revenue performance.",
-        points: [
-            "Funnel segmentation across TOFU, MOFU, and BOFU stages",
-            "Continuous testing of creatives and product messaging",
-            "Audience refinement using behavioral targeting",
-            "Bid optimization focused on improving ROAS",
-            "Platform-specific campaign structuring",
-        ],
-    },
-    {
-        number: "05",
-        title: "Governance & Growth",
-        description:
-        "Performance was managed through ongoing optimization, audience analysis, and campaign scaling strategies.",
-        points: [
-            "Budget allocation optimized based on platform performance",
-            "Bid strategies refined for acquisition efficiency",
-            "Campaign audits conducted regularly",
-            "Continuous improvements implemented using conversion insights",
-        ],
-    },
-]}
+          {
+            number: "01",
+            title: "Process Overview",
+            description:
+              "A structured multi-platform e-commerce framework was implemented to scale online jewellery sales while maintaining acquisition efficiency and conversion stability.",
+            points: [
+              "Integrated conversion and retargeting strategies across platforms",
+              "Aligned campaigns with shopping intent and buying behavior",
+              "Focused on balancing sales scale with ROAS efficiency",
+              "Designed for consistent purchase-driven campaign performance",
+            ],
+          },
+          {
+            number: "02",
+            title: "Content Planning",
+            description:
+              "Campaign messaging was aligned around jewellery craftsmanship, premium quality, gifting appeal, and lifestyle positioning.",
+            points: [
+              "Focused on fashion and jewellery buying intent",
+              "Highlighted handcrafted collections and premium designs",
+              "Mapped messaging across awareness and purchase stages",
+              "Ensured consistency across Google and Meta campaigns",
+            ],
+          },
+          {
+            number: "03",
+            title: "Distribution & Attribution (What Worked)",
+            description:
+              "Each platform contributed differently toward revenue generation and conversion performance.",
+            points: [
+              "Google Ads captured high-intent purchase demand",
+              "Meta Ads improved discovery, engagement, and retargeting",
+              "Product-focused creatives improved shopping engagement",
+              "Multi-platform execution strengthened conversion consistency",
+            ],
+          },
+          {
+            number: "04",
+            title: "Best Practices Implemented",
+            description:
+              "Structured execution and continuous optimization improved campaign efficiency and revenue performance.",
+            points: [
+              "Funnel segmentation across TOFU, MOFU, and BOFU stages",
+              "Continuous testing of creatives and product messaging",
+              "Audience refinement using behavioral targeting",
+              "Bid optimization focused on improving ROAS",
+              "Platform-specific campaign structuring",
+            ],
+          },
+          {
+            number: "05",
+            title: "Governance & Growth",
+            description:
+              "Performance was managed through ongoing optimization, audience analysis, and campaign scaling strategies.",
+            points: [
+              "Budget allocation optimized based on platform performance",
+              "Bid strategies refined for acquisition efficiency",
+              "Campaign audits conducted regularly",
+              "Continuous improvements implemented using conversion insights",
+            ],
+          },
+        ]}
       />
       <CsPerformance
         title="Results &"

@@ -14,52 +14,52 @@ const BhivePage = () => {
   return (
     <>
       {/* <Banner /> */}
-      <CommonBanner4 
-      heading="73% Cost Efficiency in <span>Enterprise SaaS Lead Generation</span>"
-      tags = {[
-        { icon: "Globe", text: "ERP / SaaS / Digital Transformation" },
-        { icon: "Target", text: "Lead Generation" },
-        { icon: "Briefcase", text: "B2B" },
-        { icon: "Share2", text: "Google Ads" },
-        { icon: "Calendar", text: "₹97K – ₹2.9L / month" },
-        { icon: "Clock", text: "Multi-phase campaign" },
-      ]}
-      googleLogo = "/images/commonBanner4/google-logo.png"
+      <CommonBanner4
+        heading="73% Cost Efficiency in <span>Enterprise SaaS Lead Generation</span>"
+        tags={[
+          { icon: "Globe", text: "ERP / SaaS / Digital Transformation" },
+          { icon: "Target", text: "Lead Generation" },
+          { icon: "Briefcase", text: "B2B" },
+          { icon: "Share2", text: "Google Ads" },
+          { icon: "Calendar", text: "₹97K – ₹2.9L / month" },
+          { icon: "Clock", text: "Multi-phase campaign" },
+        ]}
+        googleLogo="/images/commonBanner4/google-logo.png"
       />
       {/* <Stats /> */}
-      <CommonStats2 
-        summaryLabel= "EXECUTIVE SUMMARY"
-        summaryQuote= "Generated high-intent enterprise leads through structured Google Ads campaigns, improving conversion volume while optimizing cost efficiency across competitive ERP and SaaS keywords."
-        stats= {[
-        {
-          value: "1",
-          title: "PLATFORM",
-          subText: "Google Ads",
-        },
-        {
-          value: "PPC",
-          title: "CAMPAIGN TYPE",
-          subText: "Lead Generation Focus",
-        },
-        {
-          value: "B2B",
-          title: "BUSINESS MODEL",
-          subText: "ERP & SaaS Solutions",
-        },
-      ]}
+      <CommonStats2
+        summaryLabel="EXECUTIVE SUMMARY"
+        summaryQuote="Generated high-intent enterprise leads through structured Google Ads campaigns, improving conversion volume while optimizing cost efficiency across competitive ERP and SaaS keywords."
+        stats={[
+          {
+            value: "1",
+            title: "PLATFORM",
+            subText: "Google Ads",
+          },
+          {
+            value: "PPC",
+            title: "CAMPAIGN TYPE",
+            subText: "Lead Generation Focus",
+          },
+          {
+            value: "B2B",
+            title: "BUSINESS MODEL",
+            subText: "ERP & SaaS Solutions",
+          },
+        ]}
       />
       {/* <ImageSection /> */}
-      {/* <CommonImageGrid 
+      <CommonImageGrid
         images={[
           "/images/bhive/b1.png",
           "/images/bhive/b2.png",
           "/images/bhive/b3.png",
         ]}
-      /> */}
+      />
       {/* <BusinessContext /> */}
-      <CommonBusinessContext 
-        title= "Business <span>Context</span>"
-        cards= {[
+      <CommonBusinessContext
+        title="Business <span>Context</span>"
+        cards={[
           {
             icon: "Building2",
             number: "01",
@@ -87,10 +87,10 @@ const BhivePage = () => {
         ]}
       />
       {/* <ChallengesObjectives /> */}
-      <CommonChallengesObjectives 
-        title=  "Challenges <span>&</span> <span class='accent'>Objectives</span>"
-        desc= ""
-        challenges= {{
+      <CommonChallengesObjectives
+        title="Challenges <span>&</span> <span class='accent'>Objectives</span>"
+        desc=""
+        challenges={{
           title: "Key Challenges",
           items: [
             "Highly competitive ERP and SaaS keywords",
@@ -100,7 +100,7 @@ const BhivePage = () => {
             "Low initial conversion consistency",
           ],
         }}
-        objectives= {{
+        objectives={{
           title: "Campaign Objectives",
           items: [
             "Increase qualified enterprise lead volume",
@@ -112,9 +112,9 @@ const BhivePage = () => {
         }}
       />
       {/* <StrategyPlanning /> */}
-      <CommonStrategyPlanning 
-        title = "Strategy <span>&</span> <span class='accent'>Planning</span>"
-        items= {[
+      <CommonStrategyPlanning
+        title="Strategy <span>&</span> <span class='accent'>Planning</span>"
+        items={[
           {
             icon: "users",
             title: "Audience Targeting Strategy",
@@ -143,9 +143,9 @@ const BhivePage = () => {
         ]}
       />
       {/* <CampaignExecution /> */}
-      <CommonCampaignExecution 
-        title= "Campaign <span class='accent'>Execution</span>"
-        cards= {[
+      <CommonCampaignExecution
+        title="Campaign <span class='accent'>Execution</span>"
+        cards={[
           {
             icon: "chart",
             title: "Ad Structure",
@@ -173,71 +173,71 @@ const BhivePage = () => {
           }
         ]}
       />
-      <CsProcess  
+      <CsProcess
         title="Our Process"
         steps={[
-    {
-        number: "01",
-        title: "Process Overview",
-        description:
-        "A structured Google Ads framework was implemented to improve enterprise lead quality while maintaining acquisition efficiency across competitive ERP and SaaS campaigns.",
-        points: [
-            "Focused on high-intent enterprise search targeting",
-            "Aligned keyword intent with conversion-focused campaigns",
-            "Structured campaigns for precision and scalability",
-            "Designed for consistent enterprise lead generation",
-        ],
-    },
-    {
-        number: "02",
-        title: "Content Planning",
-        description:
-            "Campaign messaging was aligned around operational efficiency, automation, business scalability, and digital transformation outcomes.",
-        points: [
-            "Focused on ERP and CRM implementation intent",
-            "Highlighted efficiency, automation, and scalability benefits",
-            "Mapped messaging across awareness and conversion stages",
-            "Ensured consistency across enterprise search campaigns",
-        ],
-    },
-    {
-        number: "03",
-        title: "Distribution & Attribution (What Worked)",
-        description:
-            "Google Ads served as the primary acquisition channel for capturing high-intent enterprise demand.",
-        points: [
-            "High-intent keywords improved enterprise lead quality",
-            "Service-specific targeting strengthened conversion relevance",
-            "Structured campaigns improved CTR and funnel consistency",
-            "Continuous optimization supported scalable lead generation",
-        ],
-    },
-    {
-        number: "04",
-        title: "Best Practices Implemented",
-        description:
-            "Structured execution and continuous optimization improved campaign efficiency and enterprise acquisition performance.",
-        points: [
-            "Keyword segmentation based on enterprise search intent",
-            "Continuous testing of ad messaging and CTAs",
-            "Optimization focused on reducing CPL",
-            "Conversion-focused landing page alignment",
-            "Search-intent-driven campaign structuring",
-        ],
-    },
-    {
-        number: "05",
-        title: "Governance & Growth",
-        description:
-        "Performance was managed through ongoing optimization, campaign audits, and enterprise-focused scaling strategies.",
-        points: [
-            "Bid strategies refined for acquisition efficiency",
-            "Keyword performance monitored continuously",
-            "Campaign structures optimized for scalability",
-            "Continuous improvements implemented using conversion insights",
-        ],
-    },
-]}
+          {
+            number: "01",
+            title: "Process Overview",
+            description:
+              "A structured Google Ads framework was implemented to improve enterprise lead quality while maintaining acquisition efficiency across competitive ERP and SaaS campaigns.",
+            points: [
+              "Focused on high-intent enterprise search targeting",
+              "Aligned keyword intent with conversion-focused campaigns",
+              "Structured campaigns for precision and scalability",
+              "Designed for consistent enterprise lead generation",
+            ],
+          },
+          {
+            number: "02",
+            title: "Content Planning",
+            description:
+              "Campaign messaging was aligned around operational efficiency, automation, business scalability, and digital transformation outcomes.",
+            points: [
+              "Focused on ERP and CRM implementation intent",
+              "Highlighted efficiency, automation, and scalability benefits",
+              "Mapped messaging across awareness and conversion stages",
+              "Ensured consistency across enterprise search campaigns",
+            ],
+          },
+          {
+            number: "03",
+            title: "Distribution & Attribution (What Worked)",
+            description:
+              "Google Ads served as the primary acquisition channel for capturing high-intent enterprise demand.",
+            points: [
+              "High-intent keywords improved enterprise lead quality",
+              "Service-specific targeting strengthened conversion relevance",
+              "Structured campaigns improved CTR and funnel consistency",
+              "Continuous optimization supported scalable lead generation",
+            ],
+          },
+          {
+            number: "04",
+            title: "Best Practices Implemented",
+            description:
+              "Structured execution and continuous optimization improved campaign efficiency and enterprise acquisition performance.",
+            points: [
+              "Keyword segmentation based on enterprise search intent",
+              "Continuous testing of ad messaging and CTAs",
+              "Optimization focused on reducing CPL",
+              "Conversion-focused landing page alignment",
+              "Search-intent-driven campaign structuring",
+            ],
+          },
+          {
+            number: "05",
+            title: "Governance & Growth",
+            description:
+              "Performance was managed through ongoing optimization, campaign audits, and enterprise-focused scaling strategies.",
+            points: [
+              "Bid strategies refined for acquisition efficiency",
+              "Keyword performance monitored continuously",
+              "Campaign structures optimized for scalability",
+              "Continuous improvements implemented using conversion insights",
+            ],
+          },
+        ]}
       />
       <CsPerformance
         title="Results &"

@@ -14,52 +14,52 @@ const BhivePage = () => {
   return (
     <>
       {/* <Banner /> */}
-      <CommonBanner4 
-      heading="Scaling Online Saree Sales Through <span>Performance Marketing</span>"
-      tags = {[
-        { icon: "Globe", text: "Textile / Saree Retail" },
-        { icon: "Target", text: "Sales / Conversion" },
-        { icon: "Briefcase", text: "B2C" },
-        { icon: "Share2", text: "Google · Meta" },
-        { icon: "Calendar", text: "₹97K – ₹2.9L / month" },
-        { icon: "Clock", text: "Multi-phase campaign" },
-      ]}
-      googleLogo = "/images/commonBanner4/google-logo.png"
+      <CommonBanner4
+        heading="Scaling Online Saree Sales Through <span>Performance Marketing</span>"
+        tags={[
+          { icon: "Globe", text: "Textile / Saree Retail" },
+          { icon: "Target", text: "Sales / Conversion" },
+          { icon: "Briefcase", text: "B2C" },
+          { icon: "Share2", text: "Google · Meta" },
+          { icon: "Calendar", text: "₹97K – ₹2.9L / month" },
+          { icon: "Clock", text: "Multi-phase campaign" },
+        ]}
+        googleLogo="/images/commonBanner4/google-logo.png"
       />
       {/* <Stats /> */}
-      <CommonStats2 
-        summaryLabel= "EXECUTIVE SUMMARY"
-        summaryQuote= "Scaled online saree sales through performance-driven campaigns, improving conversion volume and cost efficiency while driving consistent revenue growth across Google and Meta platforms."
-        stats= {[
-        {
-          value: "2",
-          title: "PLATFORMS",
-          subText: "Google · Meta",
-        },
-        {
-          value: "PPC",
-          title: "CAMPAIGN TYPE",
-          subText: "Sales & Conversion Focus",
-        },
-        {
-          value: "B2C",
-          title: "BUSINESS MODEL",
-          subText: "Textile & Saree Retail",
-        },
-      ]}
+      <CommonStats2
+        summaryLabel="EXECUTIVE SUMMARY"
+        summaryQuote="Scaled online saree sales through performance-driven campaigns, improving conversion volume and cost efficiency while driving consistent revenue growth across Google and Meta platforms."
+        stats={[
+          {
+            value: "2",
+            title: "PLATFORMS",
+            subText: "Google · Meta",
+          },
+          {
+            value: "PPC",
+            title: "CAMPAIGN TYPE",
+            subText: "Sales & Conversion Focus",
+          },
+          {
+            value: "B2C",
+            title: "BUSINESS MODEL",
+            subText: "Textile & Saree Retail",
+          },
+        ]}
       />
       {/* <ImageSection /> */}
-      {/* <CommonImageGrid 
+      <CommonImageGrid
         images={[
           "/images/bhive/b1.png",
           "/images/bhive/b2.png",
           "/images/bhive/b3.png",
         ]}
-      /> */}
+      />
       {/* <BusinessContext /> */}
-      <CommonBusinessContext 
-        title= "Business <span>Context</span>"
-        cards= {[
+      <CommonBusinessContext
+        title="Business <span>Context</span>"
+        cards={[
           {
             icon: "Building2",
             number: "01",
@@ -87,10 +87,10 @@ const BhivePage = () => {
         ]}
       />
       {/* <ChallengesObjectives /> */}
-      <CommonChallengesObjectives 
-        title=  "Challenges <span>&</span> <span class='accent'>Objectives</span>"
-        desc= ""
-        challenges= {{
+      <CommonChallengesObjectives
+        title="Challenges <span>&</span> <span class='accent'>Objectives</span>"
+        desc=""
+        challenges={{
           title: "Key Challenges",
           items: [
             "Highly competitive textile and saree market",
@@ -100,7 +100,7 @@ const BhivePage = () => {
             "Conversion optimization for e-commerce purchases",
           ],
         }}
-        objectives= {{
+        objectives={{
           title: "Campaign Objectives",
           items: [
             "Increase online sales volume",
@@ -112,9 +112,9 @@ const BhivePage = () => {
         }}
       />
       {/* <StrategyPlanning /> */}
-      <CommonStrategyPlanning 
-        title = "Strategy <span>&</span> <span class='accent'>Planning</span>"
-        items= {[
+      <CommonStrategyPlanning
+        title="Strategy <span>&</span> <span class='accent'>Planning</span>"
+        items={[
           {
             icon: "users",
             title: "Audience Targeting Strategy",
@@ -143,9 +143,9 @@ const BhivePage = () => {
         ]}
       />
       {/* <CampaignExecution /> */}
-      <CommonCampaignExecution 
-        title= "Campaign <span class='accent'>Execution</span>"
-        cards= {[
+      <CommonCampaignExecution
+        title="Campaign <span class='accent'>Execution</span>"
+        cards={[
           {
             icon: "chart",
             title: "Ad Structure",
@@ -173,71 +173,71 @@ const BhivePage = () => {
           }
         ]}
       />
-      <CsProcess  
+      <CsProcess
         title="Our Process"
         steps={[
-    {
-        number: "01",
-        title: "Process Overview",
-        description:
-        "A structured multi-platform e-commerce framework was implemented to scale saree sales while maintaining acquisition efficiency and revenue growth consistency.",
-        points: [
-            "Integrated shopping and retargeting strategies across platforms",
-            "Aligned campaigns with purchase intent and festive demand",
-            "Focused on balancing sales scale with ROAS efficiency",
-            "Designed for consistent conversion-driven performance",
-        ],
-    },
-    {
-        number: "02",
-        title: "Content Planning",
-        description:
-            "Campaign messaging was aligned around premium craftsmanship, festive shopping, wedding collections, and traditional elegance.",
-        points: [
-            "Focused on saree shopping and bridal purchase intent",
-            "Highlighted silk collections and handcrafted quality",
-            "Mapped messaging across awareness and purchase stages",
-            "Ensured consistency across Google and Meta campaigns",
-        ],
-    },
-    {
-        number: "03",
-        title: "Distribution & Attribution (What Worked)",
-        description:
-            "Each platform contributed differently toward revenue generation and conversion growth.",
-        points: [
-            "Google Ads captured high-intent shopping demand",
-            "Meta Ads improved product discovery and retargeting",
-            "Product-focused creatives improved shopping engagement",
-            "Multi-platform execution strengthened funnel consistency",
-        ],
-    },
-    {
-        number: "04",
-        title: "Best Practices Implemented",
-        description:
-            "Structured execution and continuous optimization improved campaign efficiency and conversion performance.",
-        points: [
-            "Funnel segmentation across TOFU, MOFU, and BOFU stages",
-            "Continuous testing of creatives and audience segments",
-            "Audience refinement using behavioral targeting",
-            "Bid optimization focused on improving ROAS",
-            "Platform-specific campaign structuring",
-        ],
-    },
-    {
-        number: "05",
-        title: "Governance & Growth",
-        description:
-        "Performance was managed through ongoing optimization, scaling strategies, and campaign performance reviews.",
-        points: [
-            "Budget allocation optimized based on platform performance",
-            "Bid strategies refined for acquisition efficiency",
-            "Campaign audits conducted regularly",
-            "Continuous improvements implemented using conversion insights",
-        ],
-    },
-]}
+          {
+            number: "01",
+            title: "Process Overview",
+            description:
+              "A structured multi-platform e-commerce framework was implemented to scale saree sales while maintaining acquisition efficiency and revenue growth consistency.",
+            points: [
+              "Integrated shopping and retargeting strategies across platforms",
+              "Aligned campaigns with purchase intent and festive demand",
+              "Focused on balancing sales scale with ROAS efficiency",
+              "Designed for consistent conversion-driven performance",
+            ],
+          },
+          {
+            number: "02",
+            title: "Content Planning",
+            description:
+              "Campaign messaging was aligned around premium craftsmanship, festive shopping, wedding collections, and traditional elegance.",
+            points: [
+              "Focused on saree shopping and bridal purchase intent",
+              "Highlighted silk collections and handcrafted quality",
+              "Mapped messaging across awareness and purchase stages",
+              "Ensured consistency across Google and Meta campaigns",
+            ],
+          },
+          {
+            number: "03",
+            title: "Distribution & Attribution (What Worked)",
+            description:
+              "Each platform contributed differently toward revenue generation and conversion growth.",
+            points: [
+              "Google Ads captured high-intent shopping demand",
+              "Meta Ads improved product discovery and retargeting",
+              "Product-focused creatives improved shopping engagement",
+              "Multi-platform execution strengthened funnel consistency",
+            ],
+          },
+          {
+            number: "04",
+            title: "Best Practices Implemented",
+            description:
+              "Structured execution and continuous optimization improved campaign efficiency and conversion performance.",
+            points: [
+              "Funnel segmentation across TOFU, MOFU, and BOFU stages",
+              "Continuous testing of creatives and audience segments",
+              "Audience refinement using behavioral targeting",
+              "Bid optimization focused on improving ROAS",
+              "Platform-specific campaign structuring",
+            ],
+          },
+          {
+            number: "05",
+            title: "Governance & Growth",
+            description:
+              "Performance was managed through ongoing optimization, scaling strategies, and campaign performance reviews.",
+            points: [
+              "Budget allocation optimized based on platform performance",
+              "Bid strategies refined for acquisition efficiency",
+              "Campaign audits conducted regularly",
+              "Continuous improvements implemented using conversion insights",
+            ],
+          },
+        ]}
       />
       <CsPerformance
         title="Results &"
