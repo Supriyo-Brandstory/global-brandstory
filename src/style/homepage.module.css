@@ -130,9 +130,9 @@
 .statCard {
   /* background: rgba(255, 255, 255, 0.1); */
   /* background: linear-gradient(to bottom,rgba(0, 0, 0, 1),rgba(255, 255, 255, 0.2)); */
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(102, 102, 102, 0.3) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(102, 102, 102, 0.1) 100%);
 
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 18px;
   padding: 20px 14px;
   backdrop-filter: blur(10px);
@@ -140,6 +140,34 @@
   flex-direction: column;
   justify-content: end;
   transition: border 0.3s ease;
+}
+
+.b-1 {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/images/bannerHome/b-1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.b-2 {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/images/bannerHome/b-2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.b-3 {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/images/bannerHome/b-3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.b-4 {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/images/bannerHome/b-4.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .statCard:hover{

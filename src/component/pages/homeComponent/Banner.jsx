@@ -23,7 +23,7 @@ const Banner = () => {
 
         {/* ── COL 1: two cards stacked flush, no gap ── */}
         <div className={styles.colStack1}>
-          <div className={`${styles.statCard} ${styles.stackTop}`}>
+          <div className={`${styles.statCard} ${styles.stackTop} ${styles['b-1']}`}>
             <span className={styles.number}>500+</span>
             <span className={styles.label}>Clients Worldwide</span>
           </div>
@@ -47,7 +47,7 @@ const Banner = () => {
 
         {/* ── COL 6: two cards stacked flush, no gap ── */}
         <div className={styles.colStack6}>
-          <div className={`${styles.statCard} ${styles.stackTop}`}>
+          <div className={`${styles.statCard} ${styles.stackTop} ${styles['b-4']}`}>
             <span className={styles.number}>92%</span>
             <span className={styles.label}>Client Retention</span>
           </div>
@@ -58,7 +58,7 @@ const Banner = () => {
         </div>
 
         {/* ── ARCH WAVE CARDS: row 2, cols 2–5 ── */}
-        <div className={`${styles.statCard} ${styles.archCol2}`}>
+        <div className={`${styles.statCard} ${styles.archCol2} ${styles['b-2']}`}>
           <span className={styles.number}>1200+</span>
           <span className={styles.label}>Projects Delivered</span>
         </div>
@@ -70,7 +70,7 @@ const Banner = () => {
           <span className={styles.number}>11+</span>
           <span className={styles.label}>Years Of Experience</span>
         </div>
-        <div className={`${styles.statCard} ${styles.archCol5}`}>
+        <div className={`${styles.statCard} ${styles.archCol5} ${styles['b-3']}`}>
           <span className={styles.number}>1M+</span>
           <span className={styles.label}>Billion Revenue Generated</span>
         </div>

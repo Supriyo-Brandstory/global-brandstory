@@ -159,16 +159,16 @@ export default function Footer() {
 
         {/* Social Icons Pill on Bottom Center Border */}
         <div className={styles.socialPill}>
-          <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/brandstory.in/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
             <img src="/icons/facebook-icon.svg" alt="Facebook" />
           </a>
-          <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/brandstorydigital/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
             <img src="/icons/instagram-icon.svg" alt="Instagram" />
           </a>
           <a href="#" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
             <img src="/icons/youtube-icon.svg" alt="YouTube" />
           </a>
-          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/company/brandstory-in/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
             <img src="/icons/linkedin-icon.svg" alt="LinkedIn" />
           </a>
         </div>
