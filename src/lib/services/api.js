@@ -323,6 +323,33 @@ export async function getAllBlogs(page = 1, pageSize = 6, category = "All") {
   return fetchStrapi(`blogs?${query}`);
 }
 
+export async function getLastThreeBlogs() {
+  const query = qs.stringify(
+    {
+      fields: [
+        "blogTitle",
+        "blogSlug",
+        "blogMetaTitle",
+        "blogMetaDescription",
+        "blogDate",
+        "publishedAt",
+      ],
+      populate: {
+        blogImage: true,
+        blog_categories: true,
+      },
+      sort: ["publishedAt:desc"],
+      pagination: {
+        page: 1,
+        pageSize: 3,
+      },
+    },
+    { encodeValuesOnly: true }
+  );
+
+  return fetchStrapi(`blogs?${query}`);
+}
+
 export async function getLocationPageByPath(fullPath) {
   const query = qs.stringify(
     {

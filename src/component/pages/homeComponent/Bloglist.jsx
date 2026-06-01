@@ -1,22 +1,32 @@
 // components/TwoMinuteTips.jsx
+import { getLastThreeBlogs } from '@/lib/services/api';
 import styles from '@/style/homepage.module.css';
 
-const blogPosts = [
-  {
-    title: "Everyone’s Chasing Keywords—Here’s What Smart Brands Are Doing Instead",
-    link: "#",
-  },
-  {
-    title: "Why Views Don’t Equal Value—and What You Should Be Measuring Instead",
-    link: "#",
-  },
-  {
-    title: "Why Your Google Ads Campaign Is Bleeding Budget and the Fix You’re Missing",
-    link: "#",
-  },
-];
+// const blogPostsStat = [
+//   {
+//     title: "Everyone’s Chasing Keywords—Here’s What Smart Brands Are Doing Instead",
+//     link: "#",
+//   },
+//   {
+//     title: "Why Views Don’t Equal Value—and What You Should Be Measuring Instead",
+//     link: "#",
+//   },
+//   {
+//     title: "Why Your Google Ads Campaign Is Bleeding Budget and the Fix You’re Missing",
+//     link: "#",
+//   },
+// ];
 
-export default function Bloglist() {
+export default async function Bloglist() {
+
+  const lastThreeBlogs = await getLastThreeBlogs();
+  // console.log(lastThreeBlogs);
+
+  const blogPosts = lastThreeBlogs.data.map((blog) => ({
+    title: blog.blogTitle,
+    link: `/blogs/${blog.blogSlug}`,
+  }));
+
   return (
     <section className={styles.Bloglist_section}>
            

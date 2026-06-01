@@ -258,14 +258,14 @@ const FeaturedCaseStudies = () => {
 
       <div className="featuredCard">
         <span>Case Study</span>
-        <p>Everyone’s Chasing Keywords — Here’s What Smart Brands Do</p>
-        <span>Read More</span>
+        <p>How PR helped a Real Estate Developer grow 85% Project Bookings</p>
+        <span><a href="https://brandstoryglobal.com/case-studies/pr-helped-real-estate-developer-grow-project-bookings" className="hover:underline">Read More</a></span>
       </div>
 
       <div className="featuredCard">
         <span>Case Study</span>
-        <p>How Smart Brands Scale Without Burning Ad Budgets</p>
-        <span>Read More</span>
+        <p>Scaling high-intent organic growth for a US SaaS platform</p>
+        <span><a href="https://brandstoryglobal.com/case-studies/scaling-high-intent-organic-growth-for-a-us-saas-platform" className="hover:underline">Read More</a></span>
       </div>
 
       <div className="ctaRow">

@@ -26,17 +26,17 @@ export default function ClientStories() {
         Stories of Growth, Success, and <br /> Partnership
       </h2>
 
-<div className={styles.clientStories_cardsContainer}>
-      <div className={styles.clientStories_cards}>
-        {testimonials.map((item, index) => (
-          <div key={index} className={styles.clientStories_card}>
-            <div className={styles.clientStories_topbar}></div>
-            <p className={styles.clientStories_name}>{item.name}</p>
-            <p className={styles.clientStories_role}>{item.role}</p>
-            <p className={styles.clientStories_text}>{item.content}</p>
-          </div>
-        ))}
-      </div>
+      <div className={styles.clientStories_cardsContainer}>
+        <div className={styles.clientStories_cards}>
+          {testimonials.map((item, index) => (
+            <div key={index} className={styles.clientStories_card}>
+              <div className={styles.clientStories_topbar}></div>
+              <p className={styles.clientStories_name}>{item.name}</p>
+              <p className={styles.clientStories_role}>{item.role}</p>
+              <p className={styles.clientStories_text}>{item.content}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className={styles.clientStories_ctaBox}>
@@ -44,7 +44,7 @@ export default function ClientStories() {
         <p className={styles.clientStories_ctaSubtext}>
           Tell us what’s on your mind — we’ll bring the strategy,<br /> design, and code.
         </p>
-        <button className={styles.clientStories_ctaButton}>Talk it out here.</button>
+        <button className={styles.clientStories_ctaButton}><a href="/contact-us">Talk it out here.</a></button>
       </div>
     </section>
   );

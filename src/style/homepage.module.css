@@ -2785,6 +2785,10 @@
     letter-spacing: 0%;
     display: inline-block;
 }
+
+.Bloglist_readMore:hover{
+  text-decoration: underline;
+}
 @media (max-width: 768px) {
   .Bloglist_section {
     padding: 40px 20px;
