@@ -90,7 +90,13 @@ if (isMobile) {
               }`}
               onMouseEnter={() => handleTopMenuEnter(item)}
             >
-              <span>{item.title}</span>
+              {item?.link ? (
+                <a href={item.link}>
+                  <span>{item.title}</span>
+                </a>
+              ) : (
+                <span>{item.title}</span>
+              )}
               {(item.sections || item.items) && <span className="arrow" />}
             </li>
           ))}

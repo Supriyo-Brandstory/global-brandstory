@@ -775,5 +775,10 @@ export const menuData = [
       { name: "Renewable Energy", link: "/industries/renewable-energy", image: "/images/HeaderIcons/industries/27.svg" },
       { name: "Green & Sustainable Brands", link: "/industries/green-and-sustainable-brands", image: "/images/HeaderIcons/industries/28.svg" }
     ]
+  },
+  {
+    title: "Case Studies",
+    image: "/icons/menuicon.png",
+    link: "/case-study",
   }
 ];

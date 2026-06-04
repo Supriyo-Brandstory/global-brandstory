@@ -45,16 +45,22 @@ const MobileMenu = ({ isOpen, onClose }) => {
             <div className="mobileMenuHeader">
               <span className="mobileMenuTitle">{menu.title}</span>
 
-              {(menu.sections || menu.items) && (
-                <button
-                  className="mobileMenuToggle"
-                  onClick={() => toggleMenu(i)}
-                >
-                  <ChevronRight
-                    size={16}
-                    className={state.menu === i ? "rotate" : ""}
-                  />
-                </button>
+              {menu?.link ? (
+                <a href={menu.link} className="mobileMenuToggle">
+                  <ChevronRight size={16} />
+                </a>
+              ) : (
+                (menu.sections || menu.items) && (
+                  <button
+                    className="mobileMenuToggle"
+                    onClick={() => toggleMenu(i)}
+                  >
+                    <ChevronRight
+                      size={16}
+                      className={state.menu === i ? "rotate" : ""}
+                    />
+                  </button>
+                )
               )}
             </div>
 
