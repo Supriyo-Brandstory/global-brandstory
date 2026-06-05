@@ -112,6 +112,7 @@ const services = [
 export default function MarketingServices() {
   return (
     <section className={styles.MarketingServices_container}>
+      <div className={`${styles.homeContainer} ${styles.MarketingServices_inner}`}>
       <div className={styles.MarketingServices_left}>
         <h2>Clicks, Leads, Sales — All in Sync</h2>
         <p>
@@ -141,6 +142,7 @@ export default function MarketingServices() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

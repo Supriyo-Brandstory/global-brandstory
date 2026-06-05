@@ -38,20 +38,24 @@ const steps = [
 export default function HowWeWork() {
   return (
     <section className={styles.howwework_container}>
-      <h2 className={styles.howwework_heading}>How We Get Things Done — Together</h2>
-      <p className={styles.howwework_subheading}>
-        No Jargon. No Chaos. Just A Smart, Simple Way To Build Great Things.<br />
-        Here’s How We Turn Your Ideas Into Impact — Step By Step, Side By Side.
-      </p>
-      {steps.map(step => (
-        <div key={step.number} className={styles.howwework_step}>
-          <div className={styles.howwework_number}>{step.number}</div>
-          <div>
-            <h3 className={styles.howwework_title}>{step.title}</h3>
-            <div className={styles.howwework_description} dangerouslySetInnerHTML={{ __html: step.description }}></div>
+      <div className={styles.homeContainer}>
+        <h2 className={styles.howwework_heading}>How We Get Things Done — Together</h2>
+        <p className={styles.howwework_subheading}>
+          No Jargon. No Chaos. Just A Smart, Simple Way To Build Great Things.<br />
+          Here’s How We Turn Your Ideas Into Impact — Step By Step, Side By Side.
+        </p>
+      </div>
+      <div className={styles.howwework_steps}>
+        {steps.map(step => (
+          <div key={step.number} className={styles.howwework_step}>
+            <div className={styles.howwework_number}>{step.number}</div>
+            <div>
+              <h3 className={styles.howwework_title}>{step.title}</h3>
+              <div className={styles.howwework_description} dangerouslySetInnerHTML={{ __html: step.description }}></div>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 }

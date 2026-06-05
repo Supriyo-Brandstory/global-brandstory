@@ -4,6 +4,10 @@ import Header from "@/component/partial/Header";
 import Footer from "@/component/partial/Footer";
 import Script from "next/script";
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata = {
   title: "BrandStory Global",

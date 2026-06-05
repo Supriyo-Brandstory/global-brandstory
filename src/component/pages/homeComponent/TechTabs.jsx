@@ -53,7 +53,7 @@ const TechTabs = () => {
 
     return (
         <div className={styles.techtab_containerbg}>
-            <div className={styles.techtab_container}>
+            <div className={`${styles.homeContainer} ${styles.techtab_container}`}>
                 <h2 className={styles.techtab_title}>Built With the Tools That Build Today's Brands</h2>
                 <p className={styles.techtab_subtitle}>
                     Not Every Agency Gets Tech Right – Or Makes It Work For Your Business. At BrandStory, We Use The Kind Of Technology That

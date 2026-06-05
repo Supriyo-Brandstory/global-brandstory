@@ -22,6 +22,7 @@ const testimonials = [
 export default function ClientStories() {
   return (
     <section className={styles.clientStories_section}>
+      <div className={styles.homeContainer}>
       <h2 className={styles.clientStories_heading}>
         Stories of Growth, Success, and <br /> Partnership
       </h2>
@@ -45,6 +46,7 @@ export default function ClientStories() {
           Tell us what’s on your mind — we’ll bring the strategy,<br /> design, and code.
         </p>
         <button className={styles.clientStories_ctaButton}><a href="/contact-us">Talk it out here.</a></button>
+      </div>
       </div>
     </section>
   );

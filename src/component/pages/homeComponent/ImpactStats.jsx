@@ -42,6 +42,7 @@ const stats = [
 export default function ImpactStats() {
   return (
     <section className={styles.impact_container}>
+      <div className={styles.homeContainer}>
       <h2 className={styles.impact_heading}>How Do We Make a Difference?</h2>
       <div className={styles.impact_grid}>
         {stats.map((stat, index) => (
@@ -52,6 +53,7 @@ export default function ImpactStats() {
             <div className={styles.impact_text}>{stat.text}</div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

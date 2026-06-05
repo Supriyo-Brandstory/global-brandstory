@@ -33,7 +33,7 @@ const clientsRow3 = [
 export default function ClientLogosSection() {
     return (
         <section className={styles.ClientLogosSection_wrapper}>
-            <div className={styles.ClientLogosSection_headingContainer}>
+            <div className={`${styles.homeContainer} ${styles.ClientLogosSection_headingContainer}`}>
                 <h2 className={styles.ClientLogosSection_mainHeading}>
                     Your Next Big Move Starts Here.
                 </h2>

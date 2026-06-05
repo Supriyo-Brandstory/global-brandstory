@@ -30,7 +30,7 @@ export default async function Bloglist() {
   return (
     <section className={styles.Bloglist_section}>
            
-      <div className={styles.Bloglist_container}>
+      <div className={`${styles.homeContainer} ${styles.Bloglist_container}`}>
         
         <div className={styles.Bloglist_leftSticky}>
           <h2>

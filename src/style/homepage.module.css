@@ -1,3 +1,15 @@
+/* Shared container for all homepage sections */
+.homeContainer {
+  --container-inline-padding: clamp(16px, 4vw, 24px);
+  max-width: var(--max-width);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-inline-padding);
+  padding-right: var(--container-inline-padding);
+  box-sizing: border-box;
+}
+
 .banner {
   text-align: center;
   width: 100%;
@@ -10,9 +22,9 @@
 }
 
 .bannerContent {
-  max-width: var(--width-1024);
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem clamp(16px, 4vw, 24px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,9 +63,9 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto auto;
   gap: 14px;
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: 50px auto 0;
-  padding: 0 20px;
+  padding: 0 clamp(16px, 4vw, 24px);
   align-items: end;
   height: 364px;
 }
@@ -319,6 +331,10 @@
   .label {
     font-size: 10px;
   }
+
+  .bannerGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
    
 
@@ -429,8 +445,7 @@
 }
 
 .heroContainer {
-    max-width: var(--max-width);
-    margin: 0 auto;
+    width: 100%;
     align-items: center;
 }
 
@@ -555,7 +570,7 @@
     background: #3B35851A;
     color: #fff;
     text-align: center;
-    padding: 80px 20px;
+    padding: 80px 0;
 }
 
 .WhyBrandStoryTitle {
@@ -665,9 +680,25 @@
     height: 40px;
 }
 
-@media (max-width: 768px) {
+.WhyBrandStoryMobileLayout {
+    display: none;
+}
+
+.WhyBrandStoryDesktopLayout {
+    display: block;
+}
+
+@media (max-width: 850px) {
+    .WhyBrandStoryMobileLayout {
+        display: block;
+    }
+
+    .WhyBrandStoryDesktopLayout {
+        display: none;
+    }
+
     .WhyBrandStorySection {
-        padding: 40px 16px;
+        padding: 40px 0;
     }
 
     .WhyBrandStoryTitle {
@@ -1004,12 +1035,9 @@
 }
 
 .techtab_container {
-
     color: #fff;
     text-align: center;
-    padding: 80px 0px;
-    max-width: var(--max-width);
-    margin: 0 auto;
+    padding: 80px 0;
 }
 
 .techtab_title {
@@ -1351,7 +1379,7 @@
 
   /* TechTabs-specific styles */
   .techtab_containerbg {
-    padding: 40px 15px;
+    padding: 0;
   }
 
   .techtab_title {
@@ -1427,8 +1455,14 @@
   .techtab_separator {
     margin: 20px 0;
   }
+
+  .techtab_container{
+    padding: 60px 10px;
+  }
+
 }
-  .mobileOnly {
+
+.mobileOnly {
     display: none;
 }
 @media (max-width: 768px) {
@@ -1621,9 +1655,10 @@
 .howwework_container {
     background-color: #0d0d0d;
     color: white;
-    padding: 80px 0px;
+    padding: 80px 0;
     margin: auto;
     font-family: var(--font-family-gilory-regular), sans-serif;
+    --container-inline-padding: clamp(16px, 4vw, 24px);
 }
 
 .howwework_heading {
@@ -1651,12 +1686,22 @@
 }
 
 .howwework_step {
+    border-top: 1px dashed #FFFFFF;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: max(
+        var(--container-inline-padding),
+        calc((100vw - var(--max-width)) / 2 + var(--container-inline-padding))
+    );
+    padding-right: max(
+        var(--container-inline-padding),
+        calc((100vw - var(--max-width)) / 2 + var(--container-inline-padding))
+    );
     display: flex;
     gap: 100px;
-    border-top: 1px dashed #FFFFFF;
-    padding: 30px 0;
     align-items: center;
-    padding: 3% 8%;
+    box-sizing: border-box;
 }
 
 .howwework_step:hover {
@@ -1664,6 +1709,12 @@
     color: #0F0F0F;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.howwework_step:hover .howwework_number,
+.howwework_step:hover .howwework_title,
+.howwework_step:hover .howwework_description {
+    color: #0F0F0F;
 }
 
 .howwework_step:last-child {
@@ -1703,7 +1754,7 @@
 }
 @media (max-width: 768px) {
   .howwework_container {
-    padding: 40px 20px;
+    padding: 40px 0;
   }
 
   .howwework_heading {
@@ -1723,7 +1774,10 @@
   .howwework_step {
     flex-direction: column;
     gap: 20px;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: var(--container-inline-padding);
+    padding-right: var(--container-inline-padding);
     text-align: center;
   }
 
@@ -1749,7 +1803,7 @@
 /* components/ImpactStats.module.css */
 
 .impact_container {
-    padding: 80px 0px;
+    padding: 80px 0;
     text-align: center;
     border-block-end: 1px solid #fff;
 }
@@ -1766,10 +1820,9 @@
 
 .impact_grid {
     display: grid;
-    max-width: var(--max-width);
-    grid-template-columns: repeat(auto-fit, minmax(399px, 1fr));
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
     gap: 0;
-    margin: 0 auto;
     border-radius: 10px !important;
     overflow: hidden;
 
@@ -1778,8 +1831,9 @@
 .impact_box {
     padding: 50px;
     position: relative;
-    width: 400px;
-    height: 320px;
+    width: 100%;
+    min-height: 320px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1841,7 +1895,7 @@
 }
 @media (max-width: 768px) {
   .impact_container {
-    padding: 40px 20px;
+    padding: 40px 0;
   }
 
   .impact_heading {
@@ -1885,10 +1939,14 @@
     background-position: -400px 1000px, -400px 3800px, 1000px 300px, 1000px 2200px;
     background-repeat: no-repeat, no-repeat;
     background-size: auto 17%, auto 17%;
-    gap: 40px;
-    padding: 80px 8.3%;
-    display: flex;
+    padding: 80px 0;
     position: relative;
+}
+
+.MarketingServices_inner {
+    display: flex;
+    gap: 40px;
+    width: 100%;
 }
 
 
@@ -1995,10 +2053,15 @@
 @media (max-width: 768px) {
   .MarketingServices_container {
     flex-direction: column;
-    padding: 40px 5%;
+    padding: 40px 0;
     gap: 30px;
     background-position: -841px 1500px, -841px 3700px, 292px 300px, 292px 2600px;
     background-size: auto 20%, auto 20%;
+  }
+
+  .MarketingServices_inner {
+    flex-direction: column;
+    gap: 30px;
   }
 
   .MarketingServices_left {
@@ -2297,11 +2360,10 @@
 
 /* section 11  */
 .StoriesSection_section {
-    padding: 60px 20px;
+    padding: 60px 0;
     text-align: center;
     color: white;
-    width: var(--max-width);
-    margin: 0 auto;
+    width: 100%;
 }
 
 .StoriesSection_heading {
@@ -2470,8 +2532,8 @@
 
 @media (max-width: 768px) {
     .StoriesSection_section {
-
     width: 100%;
+    padding: 40px 0;
 }
 .StoriesSection_heading {
     font-size: 28px;
@@ -2640,7 +2702,7 @@
 }
 @media (max-width: 768px) {
   .ClientLogosSection_wrapper {
-    padding: 40px 16px;
+    padding: 40px 0;
     text-align: center;
   }
 
@@ -2676,7 +2738,7 @@
 /* section 13  */
 /* components/TwoMinuteTips.module.css */
 .Bloglist_section {
-    padding: 80px 0px;
+    padding: 80px 0;
     background-image: url('/images/bloglist-bg.svg');
     background-repeat: no-repeat;
     background-size: contain;
@@ -2689,8 +2751,7 @@
 .Bloglist_container {
     display: flex;
     gap: 20px;
-    width: var(--max-width);
-    margin: 0 auto;
+    width: 100%;
 }
 
 .Bloglist_leftSticky {
@@ -2791,7 +2852,7 @@
 }
 @media (max-width: 768px) {
   .Bloglist_section {
-    padding: 40px 20px;
+    padding: 40px 0;
     background-size: cover;
     background-attachment: scroll;
   }
@@ -2799,7 +2860,6 @@
   .Bloglist_container {
     flex-direction: column;
     gap: 40px;
-    width: 100%;
   }
 
   .Bloglist_leftSticky {
@@ -2844,10 +2904,9 @@
 
 /* section 14  */
 .clientStories_section {
-    padding: 80px 0px;
+    padding: 80px 0;
     color: #fff;
-    max-width: var(--max-width);
-    margin: 0 auto;
+    width: 100%;
 }
 
 .clientStories_heading {
@@ -2984,7 +3043,7 @@
 }
 @media (max-width: 768px) {
   .clientStories_section {
-    padding: 40px 16px;
+    padding: 40px 0;
   }
 
   .clientStories_heading {
@@ -3039,6 +3098,13 @@
     font-size: 18px;
     padding: 10px 20px;
     border-radius: 10px;
+  }
+
+  .b-1,
+  .b-2,
+  .b-3,
+  .b-4{
+    background-position: top;
   }
 }
 
@@ -3116,4 +3182,70 @@
   transform: scale(1.2);
 }
 
+/* Tablet & medium screens */
+@media (max-width: 1024px) {
+  .bannerHeading {
+    font-size: 48px;
+  }
 
+  .heroTitle {
+    font-size: 40px;
+    margin-right: 0;
+  }
+
+  .heroSubtitle {
+    font-size: 40px;
+  }
+
+  .WhyBrandStoryCardActive {
+    width: 280px;
+  }
+
+  .servicesSlider_heading {
+    font-size: 40px;
+  }
+
+  .impact_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .StoriesSection_cardhover {
+    flex: 0 0 320px;
+  }
+
+  .howwework_step {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bannerHeading {
+    font-size: 28px;
+  }
+
+  .bannerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .techtab_tab {
+    flex: 1 1 100%;
+  }
+
+  .MarketingServices_card ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .banner {
+    min-height: unset;
+  }
+}
+
+@media (min-width:1200px){
+  .clientStories_cards{
+    flex-wrap: nowrap;
+  }
+}

@@ -35,6 +35,7 @@ export default function StoriesSection() {
 
     return (
         <section className={styles.StoriesSection_section}>
+            <div className={styles.homeContainer}>
             <h2 className={styles.StoriesSection_heading}>Stories That Travel Across Screens</h2>
             <p className={styles.StoriesSection_subheading}>
                 It’s More Than Content — It’s Storytelling That Clicks.
@@ -87,6 +88,7 @@ export default function StoriesSection() {
                 What's the Outcome? <br/><br/>
                 140M+ Views Across YouTube, Reels, And OTT | 12x Avg. Retention Improvement For Video-First Landing Pages | 40% Boost In Click-Through Rates When Video Is Used In Ads
             </p>
+            </div>
         </section>
     );
 }

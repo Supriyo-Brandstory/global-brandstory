@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import styles from '@/style/homepage.module.css';
 
 const cardData = [
@@ -46,22 +46,11 @@ const cardData = [
 ];
 
 export default function WhyBrandStory() {
-  const [isMobile, setIsMobile] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Touch swipe state
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
   const MIN_SWIPE_DISTANCE = 50;
-
-  useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-    checkIsMobile();
-    window.addEventListener('resize', checkIsMobile);
-    return () => window.removeEventListener('resize', checkIsMobile);
-  }, []);
 
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
@@ -77,10 +66,8 @@ export default function WhyBrandStory() {
     const distance = touchStartX.current - touchEndX.current;
     if (Math.abs(distance) >= MIN_SWIPE_DISTANCE) {
       if (distance > 0) {
-        // Swipe left → next
         setActiveIndex((prev) => (prev + 1) % cardData.length);
       } else {
-        // Swipe right → prev
         setActiveIndex((prev) => (prev - 1 + cardData.length) % cardData.length);
       }
     }
@@ -90,10 +77,9 @@ export default function WhyBrandStory() {
 
   const activeCard = cardData[activeIndex];
 
-  /* ─── MOBILE LAYOUT ─── */
-  if (isMobile) {
-    return (
-      <section className={styles.WhyBrandStorySection}>
+  return (
+    <section className={styles.WhyBrandStorySection}>
+      <div className={styles.homeContainer}>
         <h2 className={styles.WhyBrandStoryTitle}>Why BrandStory</h2>
         <p className={styles.WhyBrandStorySubtitle}>
           One Team. Every Capability. Zero Micro-Management. <br />
@@ -101,84 +87,75 @@ export default function WhyBrandStory() {
           We Bring:
         </p>
 
-        {/* Swipeable card area */}
-        <div
-          className={styles.WhyBrandStoryMobileCard}
-          style={{ backgroundColor: activeCard.bgColor }}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-          <div className={styles.WhyBrandStoryMobileCardContent}>
-            <h3 className={styles.WhyBrandStoryMobileCardTitle}>
-              {activeCard.title}
-              {activeCard.subtitle && (
-                <>
-                  <br />
-                  <span>{activeCard.subtitle}</span>
-                </>
-              )}
-            </h3>
-            <p className={styles.WhyBrandStoryMobileCardDesc}>{activeCard.description}</p>
-          </div>
+        <div className={styles.WhyBrandStoryMobileLayout}>
+          <div
+            className={styles.WhyBrandStoryMobileCard}
+            style={{ backgroundColor: activeCard.bgColor }}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div className={styles.WhyBrandStoryMobileCardContent}>
+              <h3 className={styles.WhyBrandStoryMobileCardTitle}>
+                {activeCard.title}
+                {activeCard.subtitle && (
+                  <>
+                    <br />
+                    <span>{activeCard.subtitle}</span>
+                  </>
+                )}
+              </h3>
+              <p className={styles.WhyBrandStoryMobileCardDesc}>{activeCard.description}</p>
+            </div>
 
-          {/* Icon selector row */}
-          <div className={styles.WhyBrandStoryMobileIcons}>
+            <div className={styles.WhyBrandStoryMobileIcons}>
+              {cardData.map((card, index) => (
+                <button
+                  key={card.id}
+                  type="button"
+                  className={`${styles.WhyBrandStoryMobileIconBtn} ${
+                    index === activeIndex ? styles.WhyBrandStoryMobileIconBtnActive : ''
+                  }`}
+                  onClick={() => setActiveIndex(index)}
+                  aria-label={`Select card ${index + 1}`}
+                >
+                  <img src={card.icon} alt="" />
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.WhyBrandStoryDesktopLayout}>
+          <div className={styles.WhyBrandStoryCards}>
             {cardData.map((card, index) => (
-              <button
+              <div
                 key={card.id}
-                className={`${styles.WhyBrandStoryMobileIconBtn} ${
-                  index === activeIndex ? styles.WhyBrandStoryMobileIconBtnActive : ''
+                className={`${styles.WhyBrandStoryCard} ${
+                  index === activeIndex ? styles.WhyBrandStoryCardActive : ''
                 }`}
+                style={{ backgroundColor: card.bgColor }}
                 onClick={() => setActiveIndex(index)}
-                aria-label={`Select card ${index + 1}`}
               >
-                <img src={card.icon} alt="" />
-              </button>
+                <div className={styles.WhyBrandStoryCardContent}>
+                  <h3>
+                    {card.title}
+                    {card.subtitle && (
+                      <span>
+                        <br />
+                        {card.subtitle}
+                      </span>
+                    )}
+                  </h3>
+                  <p>{card.description}</p>
+                </div>
+                <div className={styles.icon}>
+                  <img src={card.icon} alt={card.title} />
+                </div>
+              </div>
             ))}
           </div>
         </div>
-      </section>
-    );
-  }
-
-  /* ─── DESKTOP LAYOUT (unchanged) ─── */
-  return (
-    <section className={styles.WhyBrandStorySection}>
-      <h2 className={styles.WhyBrandStoryTitle}>Why BrandStory</h2>
-      <p className={styles.WhyBrandStorySubtitle}>
-        One Team. Every Capability. Zero Micro-Management. <br />
-        Your Brand Doesn't Have Time For Scattered Vendors And Guesswork. <br />
-        We Bring:
-      </p>
-
-      <div className={styles.WhyBrandStoryCards}>
-        {cardData.map((card, index) => (
-          <div
-            key={card.id}
-            className={`${styles.WhyBrandStoryCard} ${
-              index === activeIndex ? styles.WhyBrandStoryCardActive : ''
-            }`}
-            style={{ backgroundColor: card.bgColor }}
-            onClick={() => setActiveIndex(index)}
-          >
-            <div className={styles.WhyBrandStoryCardContent}>
-              <h3>
-                {card.title}
-                {card.subtitle && (
-                  <span>
-                    <br />
-                    {card.subtitle}
-                  </span>
-                )}
-              </h3>
-              <p>{card.description}</p>
-            </div>
-            <div className={styles.icon}>
-              <img src={card.icon} alt={card.title} />
-            </div>
-          </div>
-        ))}
       </div>
     </section>
   );
