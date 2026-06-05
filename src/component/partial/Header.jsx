@@ -21,11 +21,22 @@ const Header = () => {
           </Link>
         </div>
 
-        <button className="mobileMenuButton" onClick={toggleMobileMenu}>
-          <Menu />
+        <button
+          className="mobileMenuButton"
+          onClick={toggleMobileMenu}
+          aria-expanded={mobileMenuOpen}
+          aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+        >
+          {mobileMenuOpen ? (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+          ) : (
+            <Menu />
+          )}
         </button>
 
-       <HeaderMenu mobileMenuOpen={mobileMenuOpen}/>
+       <HeaderMenu mobileMenuOpen={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} />
         <button className="contactButton mobile-hidden" onClick={() => window.location.href = '/contact-us'}>Contact Us</button>
 
       </div>

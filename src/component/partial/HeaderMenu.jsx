@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import MobileMenu from "./MobileMenu";
 import { menuData } from "./Data";
 
-const HeaderMenu = ({ mobileMenuOpen }) => { 
+const HeaderMenu = ({ mobileMenuOpen, onClose }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [mounted, setMounted] = useState(false);
 
@@ -30,6 +30,7 @@ if (isMobile) {
   return (
     <MobileMenu
       isOpen={mobileMenuOpen}
+      onClose={onClose}
     />
   );
 }

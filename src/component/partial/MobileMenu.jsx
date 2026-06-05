@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronRight } from "lucide-react";
 import { menuData } from "./Data";
 
@@ -11,139 +11,253 @@ const MobileMenu = ({ isOpen, onClose }) => {
     child: null,
   });
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      setState({ menu: null, section: null, child: null });
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
+  const handleNavigate = () => {
+    onClose?.();
+  };
+
   const toggleMenu = (index) => {
-    setState({
-      menu: state.menu === index ? null : index,
+    setState((prev) => ({
+      menu: prev.menu === index ? null : index,
       section: null,
       child: null,
-    });
+    }));
   };
 
-  const toggleSection = (section) => {
-    setState({
-      ...state,
-      section: state.section === section ? null : section,
+  const toggleSection = (sectionIndex) => {
+    setState((prev) => ({
+      ...prev,
+      section: prev.section === sectionIndex ? null : sectionIndex,
       child: null,
-    });
+    }));
   };
 
-  const toggleChild = (child) => {
-    setState({
-      ...state,
-      child: state.child === child ? null : child,
-    });
+  const toggleChild = (childKey) => {
+    setState((prev) => ({
+      ...prev,
+      child: prev.child === childKey ? null : childKey,
+    }));
   };
-
-  if (!isOpen) return null;
 
   return (
-    <nav className="mobileNavOld">
-      <div className="mobileMenuContainer">
-        {menuData.map((menu, i) => (
-          <div key={i} className="mobileMenuItem">
-            {/* TOP LEVEL */}
-            <div className="mobileMenuHeader">
-              <span className="mobileMenuTitle">{menu.title}</span>
+    <nav
+      className={`mobileNav ${isOpen ? "mobileNavOpen" : ""}`}
+      aria-hidden={!isOpen}
+    >
+      <div
+        className="mobileNavPanel"
+        onClick={(e) => e.stopPropagation()}
+        onKeyDown={(e) => e.stopPropagation()}
+      >
+        <div className="mobileMenuContainer">
+          {menuData.map((menu, i) => {
+            const isMenuOpen = state.menu === i;
+            const hasSubmenu = !!(menu.sections || menu.items);
 
-              {menu?.link ? (
-                <a href={menu.link} className="mobileMenuToggle">
-                  <ChevronRight size={16} />
-                </a>
-              ) : (
-                (menu.sections || menu.items) && (
-                  <button
-                    className="mobileMenuToggle"
-                    onClick={() => toggleMenu(i)}
-                  >
-                    <ChevronRight
-                      size={16}
-                      className={state.menu === i ? "rotate" : ""}
-                    />
-                  </button>
-                )
-              )}
-            </div>
-
-            {/* LEVEL 1 */}
-            {state.menu === i && (
-              <div className="mobileMenuContent">
-                {menu.items ? (
-                  menu.items.map((item, idx) => (
-                    <a key={idx} href={item.link} className="mobileLink">
-                      {item.name}
+            return (
+              <div
+                key={menu.title}
+                className={`mobileMenuItem ${isMenuOpen ? "mobileMenuItemOpen" : ""}`}
+              >
+                <div className="mobileMenuHeader">
+                  {menu.link ? (
+                    <a
+                      href={menu.link}
+                      className="mobileMenuTitle mobileMenuTitleLink"
+                      onClick={handleNavigate}
+                    >
+                      {menu.title}
                     </a>
-                  ))
-                ) : (
-                  menu.sections.map((section, sIdx) => (
-                    <div key={sIdx} className="mobileSection">
-                      <div className="mobileSectionHeader">
-                        <a href={section.link}>{section.name}</a>
+                  ) : (
+                    <span className="mobileMenuTitle">{menu.title}</span>
+                  )}
 
-                        {section.children && (
-                          <button
-                            className="mobileMenuToggle"
-                            onClick={() => toggleSection(section)}
-                          >
-                            <ChevronRight
-                              size={16}
-                              className={
-                                state.section === section ? "rotate" : ""
-                              }
-                            />
-                          </button>
-                        )}
-                      </div>
+                  {menu.link && !hasSubmenu ? (
+                    <a
+                      href={menu.link}
+                      className="mobileMenuToggle"
+                      onClick={handleNavigate}
+                      aria-label={`Go to ${menu.title}`}
+                    >
+                      <ChevronRight size={18} />
+                    </a>
+                  ) : (
+                    hasSubmenu && (
+                      <button
+                        type="button"
+                        className="mobileMenuToggle"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleMenu(i);
+                        }}
+                        aria-expanded={isMenuOpen}
+                        aria-label={`Toggle ${menu.title} submenu`}
+                      >
+                        <ChevronRight
+                          size={18}
+                          className={isMenuOpen ? "rotate" : ""}
+                        />
+                      </button>
+                    )
+                  )}
+                </div>
 
-                      {/* LEVEL 2 */}
-                      {state.section === section && section.children && (
-                        <div className="mobileSubItems">
-                          {section.children.map((child, cIdx) => (
-                            <div key={cIdx} className="mobileSubItem">
-                              <div className="mobileSubItemHeader">
-                                <a href={child.link}>{child.name}</a>
+                {hasSubmenu && (
+                  <div
+                    className={`mobileMenuContent ${isMenuOpen ? "mobileMenuContentOpen" : ""}`}
+                  >
+                    <div className="mobileMenuContentInner">
+                      {menu.items
+                        ? menu.items.map((item) => (
+                            <a
+                              key={item.name}
+                              href={item.link}
+                              className="mobileLink"
+                              onClick={handleNavigate}
+                            >
+                              {item.name}
+                            </a>
+                          ))
+                        : menu.sections.map((section, sIdx) => {
+                            const isSectionOpen = state.section === sIdx;
+                            const sectionKey = `${menu.title}-${section.name}`;
 
-                                {child.children && (
-                                  <button
-                                    className="mobileMenuToggle"
-                                    onClick={() => toggleChild(child)}
+                            return (
+                              <div
+                                key={sectionKey}
+                                className={`mobileSection ${isSectionOpen ? "mobileSectionOpen" : ""}`}
+                              >
+                                <div className="mobileSectionHeader">
+                                  <a
+                                    href={section.link}
+                                    className="mobileSectionLink"
+                                    onClick={handleNavigate}
                                   >
-                                    <ChevronRight
-                                      size={16}
-                                      className={
-                                        state.child === child ? "rotate" : ""
-                                      }
-                                    />
-                                  </button>
-                                )}
-                              </div>
+                                    {section.name}
+                                  </a>
 
-                              {/* LEVEL 3 */}
-                              {state.child === child &&
-                                child.children && (
-                                  <div className="mobileSubChildren">
-                                    {child.children.map((sub, x) => (
-                                      <a
-                                        key={x}
-                                        href={sub.link}
-                                        className="mobileLink sub"
-                                      >
-                                        {sub.name}
-                                      </a>
-                                    ))}
+                                  {section.children && (
+                                    <button
+                                      type="button"
+                                      className="mobileMenuToggle"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        toggleSection(sIdx);
+                                      }}
+                                      aria-expanded={isSectionOpen}
+                                      aria-label={`Toggle ${section.name} submenu`}
+                                    >
+                                      <ChevronRight
+                                        size={16}
+                                        className={isSectionOpen ? "rotate" : ""}
+                                      />
+                                    </button>
+                                  )}
+                                </div>
+
+                                {section.children && (
+                                  <div
+                                    className={`mobileSubItems ${isSectionOpen ? "mobileSubItemsOpen" : ""}`}
+                                  >
+                                    <div className="mobileSubItemsInner">
+                                      {section.children.map((child, cIdx) => {
+                                        const childKey = `${sectionKey}-${child.name}-${cIdx}`;
+                                        const isChildOpen = state.child === childKey;
+
+                                        return (
+                                          <div
+                                            key={childKey}
+                                            className={`mobileSubItem ${isChildOpen ? "mobileSubItemOpen" : ""}`}
+                                          >
+                                            <div className="mobileSubItemHeader">
+                                              <a
+                                                href={child.link}
+                                                className="mobileSubItemLink"
+                                                onClick={handleNavigate}
+                                              >
+                                                {child.name}
+                                              </a>
+
+                                              {child.children && (
+                                                <button
+                                                  type="button"
+                                                  className="mobileMenuToggle"
+                                                  onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    toggleChild(childKey);
+                                                  }}
+                                                  aria-expanded={isChildOpen}
+                                                  aria-label={`Toggle ${child.name} submenu`}
+                                                >
+                                                  <ChevronRight
+                                                    size={16}
+                                                    className={isChildOpen ? "rotate" : ""}
+                                                  />
+                                                </button>
+                                              )}
+                                            </div>
+
+                                            {child.children && (
+                                              <div
+                                                className={`mobileSubChildren ${isChildOpen ? "mobileSubChildrenOpen" : ""}`}
+                                              >
+                                                <div className="mobileSubChildrenInner">
+                                                  {child.children.map((sub) => (
+                                                    <a
+                                                      key={sub.name}
+                                                      href={sub.link}
+                                                      className="mobileLink mobileLinkSub"
+                                                      onClick={handleNavigate}
+                                                    >
+                                                      {sub.name}
+                                                    </a>
+                                                  ))}
+                                                </div>
+                                              </div>
+                                            )}
+                                          </div>
+                                        );
+                                      })}
+                                    </div>
                                   </div>
                                 )}
-                            </div>
-                          ))}
-                        </div>
-                      )}
+                              </div>
+                            );
+                          })}
                     </div>
-                  ))
+                  </div>
                 )}
               </div>
-            )}
-          </div>
-        ))}
+            );
+          })}
+        </div>
+
+        <div className="mobileMenuFooter">
+          <a href="/contact-us" className="mobileMenuContactBtn" onClick={handleNavigate}>
+            Contact Us
+          </a>
+        </div>
       </div>
+
+      <button
+        type="button"
+        className="mobileNavOverlay"
+        aria-label="Close menu"
+        onClick={onClose}
+        tabIndex={isOpen ? 0 : -1}
+      />
     </nav>
   );
 };
