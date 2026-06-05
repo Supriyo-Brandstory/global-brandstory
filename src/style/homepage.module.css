@@ -1161,7 +1161,7 @@
 /* ===========
    Mobile Styles
    =========== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .servicesSlider {
         padding: 40px 20px;
     }
@@ -3199,10 +3199,6 @@
 
   .WhyBrandStoryCardActive {
     width: 280px;
-  }
-
-  .servicesSlider_heading {
-    font-size: 40px;
   }
 
   .impact_grid {
