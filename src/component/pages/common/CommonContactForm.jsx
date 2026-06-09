@@ -56,7 +56,14 @@ export const CommonContactForm = () => {
                     services: '',
                     isHappyToContact: false
                 });
-                router.push('/thank-you');
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    event: 'contact_form_submit_success',
+                    form_name: 'contact_us'
+                });
+                setTimeout(() => {
+                    window.location.href = '/thank-you';
+                }, 1500);
             } else {
                 const errorData = await response.json();
                 console.error('Submission failed:', errorData);
@@ -182,7 +189,7 @@ export const CommonContactForm = () => {
                             <p style={{ margin: 0, fontSize: '18px' }}>
                                 Not ready for a form? Email us at{' '}
                                 <span style={{ color: '#F15D22', fontWeight: 'bold' }}>
-                                    info@brandstory.in
+                                    <a href="mailto:contact@brandstoryglobal.com">contact@brandstoryglobal.com</a>
                                 </span>
                             </p>
                         </div>
@@ -191,10 +198,18 @@ export const CommonContactForm = () => {
                                 Conect on Socials
                             </p>
                             <div className={styles.socialIcons}>
-                                <img src="/images/contact-ico-facebook.svg" alt="Facebook" />
-                                <img src="/images/contact-ico-instagram.svg" alt="Instagram" />
-                                <img src="/images/contact-ico-linkedin.svg" alt="LinkedIn" />
-                                <img src="/images/contact-ico-youtube.svg" alt="YouTube" />
+                                <a href="https://www.facebook.com/brandstory.in/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/contact-ico-facebook.svg" alt="Facebook" />
+                                </a>
+                                <a href="https://www.instagram.com/brandstorydigital/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/contact-ico-instagram.svg" alt="Instagram" />
+                                </a>
+                                <a href="https://in.linkedin.com/company/brandstory-digital" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/contact-ico-linkedin.svg" alt="LinkedIn" />
+                                </a>
+                                <a href="https://youtube.com/@brandstorysolutionsprivate7689?si=bUPEY4PVc7wtm7Ku" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/contact-ico-youtube.svg" alt="YouTube" />
+                                </a>
                             </div>
                         </div>
                         <div className={styles.contactBox} id={styles.schedule}>
