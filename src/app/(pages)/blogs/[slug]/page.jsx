@@ -139,10 +139,18 @@ export default async function Page({ params }) {
                         <div className={styles.sidebarCard}>
                             <h4>Share</h4>
                             <div className={styles.socials}>
-                                <img src="/images/contact-ico-facebook.svg" alt="Facebook" />
-                                <img src="/images/contact-ico-instagram.svg" alt="Instagram" />
-                                <img src="/images/contact-ico-linkedin.svg" alt="LinkedIn" />
-                                <img src="/images/contact-ico-youtube.svg" alt="YouTube" />
+                                <a href="https://www.facebook.com/brandstory.in/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/contact-ico-facebook.svg" alt="Facebook" />
+                                </a>
+                                <a href="https://www.instagram.com/brandstorydigital/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/contact-ico-instagram.svg" alt="Instagram" />
+                                </a>
+                                <a href="https://in.linkedin.com/company/brandstory-digital" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/contact-ico-linkedin.svg" alt="LinkedIn" />
+                                </a>
+                                <a href="https://www.youtube.com/@brandstorysolutionsprivate7689" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                                    <img src="/images/contact-ico-youtube.svg" alt="YouTube" />
+                                </a>
                             </div>
                         </div>
                     </aside>
