@@ -23,17 +23,17 @@ const HeaderMenu = ({ mobileMenuOpen, onClose }) => {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  if (!mounted) return null; 
+  if (!mounted) return null;
 
   //  =============================== MOBILE RETURN =============================== 
-if (isMobile) {
-  return (
-    <MobileMenu
-      isOpen={mobileMenuOpen}
-      onClose={onClose}
-    />
-  );
-}
+  if (isMobile) {
+    return (
+      <MobileMenu
+        isOpen={mobileMenuOpen}
+        onClose={onClose}
+      />
+    );
+  }
 
 
   /* =============================== DESKTOP LOGIC =============================== */
@@ -76,6 +76,55 @@ if (isMobile) {
 
   const isCompanyMenu = activeTopMenu?.title === "Company";
   const isIndustriesMenu = activeTopMenu?.title === "Industries";
+  const caseStudyofIwant = [
+    {
+      title: "How PR helped a Real Estate Developer grow 85% Project Bookings",
+      link: "https://brandstoryglobal.com/case-studies/pr-helped-real-estate-developer-grow-project-bookings",
+    },
+    {
+      title: "Scaling high-intent organic growth for a US SaaS platform",
+      link: "https://brandstoryglobal.com/case-studies/scaling-high-intent-organic-growth-for-a-us-saas-platform",
+    },
+  ]
+  const caseStudyofCompany = [
+    {
+      title: "Rebuilding search visibility for a real estate project",
+      link: "https://brandstoryglobal.com/case-studies/rebuilding-search-visibility-for-a-real-estate-project",
+    },
+    {
+      title: "How PR helped a Book Launch grow 2X Media Coverage",
+      link: "https://brandstoryglobal.com/case-studies/pr-2x-media-coverage-book-launch",
+    },
+  ]
+  const caseStudyofWhatWeDo = [
+    {
+      title: "Capturing qualified clinic leads through SEO",
+      link: "https://brandstoryglobal.com/case-studies/capturing-qualified-clinic-leads-through-seo",
+    },
+    {
+      title: "Scaling insurance reach by 57% across UAE buyers",
+      link: "https://brandstoryglobal.com/case-studies/scaling-insurance-reach-across-uae-buyers",
+    },
+  ]
+  const caseStudyofWhoWeHelp = [
+    {
+      title: "Driving 2.8× enquiry growth in a competitive education market",
+      link: "https://brandstoryglobal.com/case-studies/2.8x-enquiry-growth-education-market",
+    },
+    {
+      title: "31+ Media Features Boosting Wellness Enquiries",
+      link: "https://brandstoryglobal.com/case-studies/media-features-boosting-wellness-enquiries",
+    },
+  ]
+
+  const featuredCaseStudiesForMenu =
+    activeTopMenu?.title === "I Want To…"
+      ? caseStudyofIwant
+      : activeTopMenu?.title === "What We Do"
+        ? caseStudyofWhatWeDo
+        : activeTopMenu?.title === "Who We Help"
+          ? caseStudyofWhoWeHelp
+          : null;
 
   //  =============================== DESKTOP =============================== 
   return (
@@ -86,9 +135,8 @@ if (isMobile) {
           {menuData.map((item, index) => (
             <li
               key={index}
-              className={`menuItem ${
-                activeTopMenu?.title === item.title ? "active" : ""
-              }`}
+              className={`menuItem ${activeTopMenu?.title === item.title ? "active" : ""
+                }`}
               onMouseEnter={() => handleTopMenuEnter(item)}
             >
               {item?.link ? (
@@ -124,7 +172,7 @@ if (isMobile) {
 
                     <a href="/our-works" className="companyCard works">
                       <h3>Our Works</h3>
-                      <p>Real products. Real results.<br/> Crafted for growth.</p>
+                      <p>Real products. Real results.<br /> Crafted for growth.</p>
                       <img src="/images/HeaderIcons/company/2.svg" alt="" />
                     </a>
 
@@ -156,7 +204,7 @@ if (isMobile) {
                   </div>
                 </div>
 
-                <FeaturedCaseStudies />
+                <FeaturedCaseStudies caseStudies={caseStudyofCompany} />
               </div>
             )}
 
@@ -187,9 +235,8 @@ if (isMobile) {
                     {activeTopMenu.sections.map((section, index) => (
                       <li
                         key={index}
-                        className={`colItem ${
-                          activeSection?.name === section.name ? "active" : ""
-                        }`}
+                        className={`colItem ${activeSection?.name === section.name ? "active" : ""
+                          }`}
                         onMouseEnter={() => {
                           setActiveSection(section);
                           setActiveChild(null);
@@ -243,9 +290,9 @@ if (isMobile) {
                         ))}
                       </ul>
                     </>
-                  ) : (
-                    <FeaturedCaseStudies />
-                  )}
+                  ) : featuredCaseStudiesForMenu ? (
+                    <FeaturedCaseStudies caseStudies={featuredCaseStudiesForMenu} />
+                  ) : null}
                 </div>
               </div>
             )}
@@ -258,22 +305,19 @@ if (isMobile) {
 };
 
 /* =============================== FEATURED =============================== */
-const FeaturedCaseStudies = () => {
+const FeaturedCaseStudies = ({ caseStudies }) => {
+
   return (
     <div className="companyFeatured">
       <h4>Featured Case Studies</h4>
 
-      <div className="featuredCard">
-        <span>Case Study</span>
-        <p>How PR helped a Real Estate Developer grow 85% Project Bookings</p>
-        <span><a href="https://brandstoryglobal.com/case-studies/pr-helped-real-estate-developer-grow-project-bookings" className="hover:underline">Read More</a></span>
-      </div>
-
-      <div className="featuredCard">
-        <span>Case Study</span>
-        <p>Scaling high-intent organic growth for a US SaaS platform</p>
-        <span><a href="https://brandstoryglobal.com/case-studies/scaling-high-intent-organic-growth-for-a-us-saas-platform" className="hover:underline">Read More</a></span>
-      </div>
+      {caseStudies.map((caseStudy) => (
+        <div className="featuredCard" key={caseStudy.id}>
+          <span>Case Study</span>
+          <p>{caseStudy.title}</p>
+          <span><a href={caseStudy.link} className="hover:underline">Read More</a></span>
+        </div>))
+      }
 
       <div className="ctaRow">
         <span><b>Ready to Grow?</b></span>
