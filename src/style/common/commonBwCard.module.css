@@ -1,25 +1,32 @@
+.section {
+  width: 100%;
+  background: #111;
+}
+
 .frame {
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 50px 16px;
+  padding: clamp(32px, 5vw, 50px) var(--container-inline-padding);
   text-align: center;
-  background: #111; /* solid dark background */
   color: #fff;
+  box-sizing: border-box;
 }
 
 .heading {
-  font-size: 50px;
+  font-size: clamp(28px, 4vw, 50px);
   font-weight: 700;
   padding-bottom: 20px;
   margin: 0 auto;
   max-width: 900px;
+  line-height: 1.2;
 }
 
 .subHeading {
-  font-size: 18px;
+  font-size: clamp(15px, 2vw, 18px);
   color: #ccc;
   max-width: 800px;
   margin: 0 auto 20px auto;
+  line-height: 1.5;
 }
 
 .small {
@@ -37,111 +44,140 @@
 }
 
 .card {
-  flex: 1;
-  min-width: 280px;
-  /* max-width: 500px; */
+  flex: 1 1 calc(50% - 10px);
+  min-width: min(100%, 280px);
   background: url('/images/SMM/white-card.webp');
-  background-size: 109%;
   background-size: cover;
   background-position: center;
   color: #111;
-  padding: 50px 20px;
+  padding: clamp(28px, 4vw, 50px) clamp(16px, 3vw, 20px);
   border-radius: 20px;
   text-align: left;
   transition: transform 0.3s ease, background 0.3s ease;
   border: 1px solid #a5a5a5;
+  box-sizing: border-box;
 }
 
-.card h3{
-    font-size: 24px;
-    padding-bottom: 15px;
-    margin-bottom: 10px;
-}
-
-.card p{
-    font-size: 18px;
-    width: 80%;
-}
-
-.description{
-  font-size: 18px;
-}
-.description ul{
-  font-size: 18px;
-}
-.description ul li{
-  font-size: 18px;
-}
-
-.firstBox{
-    background-color: transparent;
-    background: url('/images/SMM/black-card.png');
-    background-repeat: no-repeat;
-    background-size: 30%;
-    background-position: right top;
-
-    color: #fff;
+.card h3 {
+  font-size: clamp(20px, 2.5vw, 24px);
+  padding-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .card p {
-  /* font-size: 0.95rem; */
+  font-size: clamp(15px, 2vw, 18px);
+  width: 80%;
   line-height: 1.5;
+}
+
+.description {
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.5;
+}
+
+.description h2 {
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 700;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+.description p {
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: 1.5;
+  margin: 0 0 12px;
+  width: 100%;
+}
+
+.description ul {
+  font-size: clamp(15px, 2vw, 18px);
+}
+
+.description ul li {
+  font-size: clamp(15px, 2vw, 18px);
+}
+
+.firstBox {
+  background-color: transparent;
+  background: url('/images/SMM/black-card.png');
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: right top;
+  color: #fff;
 }
 
 .footer {
   padding-top: 40px;
-  font-size: 18px;
+  font-size: clamp(15px, 2vw, 18px);
   color: #aaa;
   max-width: 700px;
   margin: 0 auto;
+  line-height: 1.5;
 }
 
-.indicators{
+.indicators {
   display: none;
-  justify-content:center;
-  gap:8px;
-  margin-top:20px;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
 }
 
-.dot{
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:#555;
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #555;
 }
 
-.activeDot{
-  background:#fff;
+.activeDot {
+  background: #fff;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 calc(50% - 10px);
+  }
 }
 
 @media (max-width: 768px) {
-
-  .cardWrapper{
+  .cardWrapper {
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     justify-content: flex-start;
-    gap:16px;
-    padding-bottom:10px;
+    gap: 16px;
+    padding-bottom: 10px;
+    margin-left: calc(-1 * var(--container-inline-padding));
+    margin-right: calc(-1 * var(--container-inline-padding));
+    padding-left: var(--container-inline-padding);
+    padding-right: var(--container-inline-padding);
   }
 
-  .cardWrapper::-webkit-scrollbar{
-    display:none;
+  .cardWrapper::-webkit-scrollbar {
+    display: none;
   }
 
-  .card{
+  .card {
     flex: 0 0 100%;
+    min-width: 100%;
     scroll-snap-align: center;
     scroll-snap-stop: always;
   }
 
-  .indicators{
+  .indicators {
     display: flex;
   }
 
   .card p {
     width: 100%;
   }
+}
 
+@media (max-width: 480px) {
+  .card {
+    flex: 0 0 100%;
+    min-width: 100%;
+    padding: 24px 16px;
+  }
 }

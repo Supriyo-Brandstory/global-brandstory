@@ -16,6 +16,7 @@
 
 
   --max-width: 1200px;
+  --container-inline-padding: clamp(16px, 4vw, 24px);
   --width-765: 765px;
   --width-1024: 1024px;
 

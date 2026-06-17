@@ -21,12 +21,13 @@ export const CommonBwCrd = ({ title, description, footer, cardData }) => {
   };
 
   return (
-    <div 
-    className={styles.frame}>
-      <h2 className={styles.heading}>{title}</h2>
+    <section className={styles.section}>
+    <div className={styles.frame}>
+      {title ? <h2 className={styles.heading}>{title}</h2> : null}
 
-      <p 
-      className={styles.subHeading}>{description}</p>
+      {description ? (
+        <p className={styles.subHeading}>{description}</p>
+      ) : null}
 
       <div className={styles.cardWrapper}
         ref={scrollRef}
@@ -60,7 +61,8 @@ export const CommonBwCrd = ({ title, description, footer, cardData }) => {
         ))}
       </div>
 
-      <p className={styles.footer}>{footer}</p>
+      {footer ? <p className={styles.footer}>{footer}</p> : null}
     </div>
+    </section>
   );
 };
