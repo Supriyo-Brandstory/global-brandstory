@@ -585,3 +585,15 @@ export function formatLlmsTxt(pages) {
 export function getLocalPages() {
   return getLocalPageEntries().map(({ route }) => (route === "" ? "/" : route));
 }
+
+export function groupSitePagesForDisplay(pages) {
+  const grouped = groupPagesByCategory(pages);
+
+  return SECTION_ORDER.filter((category) => grouped[category]?.length).map(
+    (category) => ({
+      category,
+      label: SECTION_LABELS[category] || category,
+      pages: grouped[category].sort((a, b) => a.pathname.localeCompare(b.pathname)),
+    })
+  );
+}
