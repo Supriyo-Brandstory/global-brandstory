@@ -123,6 +123,67 @@
   opacity: 0.9;
 }
 
+.addressGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.addressSection {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px 28px;
+}
+
+.addressTitle {
+  font-family: var(--font-family-bold);
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ffffff;
+  display: inline-block;
+}
+
+.addressText {
+  font-family: var(--font-family-gilory-regular);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 16px 0 20px;
+}
+
+.addressContacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 32px;
+}
+
+.addressContactItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-family-gilory-regular);
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.addressContactItem:hover {
+  color: #ffffff;
+}
+
+.addressContactItem img {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 /* ─── Links Grid: 4 columns × 2 rows ─── */
 .linksGrid {
   display: grid;
@@ -313,6 +374,20 @@
   .callButton {
     width: 100%;
     text-align: center;
+  }
+
+  .addressGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .addressSection {
+    padding: 20px;
+  }
+
+  .addressContacts {
+    flex-direction: column;
+    gap: 14px;
   }
 
   .linksGrid {
