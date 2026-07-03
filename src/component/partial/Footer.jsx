@@ -44,52 +44,6 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className={styles.addressGrid}>
-          <div className={styles.addressSection}>
-            <h4 className={styles.addressTitle}>USA</h4>
-            <p className={styles.addressText}>
-              39109 Guardino Dr, Fremont,
-              <br />
-              CA 94538
-            </p>
-            <div className={styles.addressContacts}>
-              <a href="tel:+17145990207" className={styles.addressContactItem}>
-                <img src="/images/mobile-ico.svg" alt="" aria-hidden="true" />
-                <span>+1 7145990207</span>
-              </a>
-              <a
-                href="mailto:contact@brandstoryglobal.com"
-                className={styles.addressContactItem}
-              >
-                <img src="/images/email-ico.svg" alt="" aria-hidden="true" />
-                <span>contact@brandstoryglobal.com</span>
-              </a>
-            </div>
-          </div>
-
-          <div className={styles.addressSection}>
-            <h4 className={styles.addressTitle}>INDIA</h4>
-            <p className={styles.addressText}>
-              No 5, 3rd Floor, 1st Cross, Krishna Reddy Colony,
-              <br />
-              Domlur Layout, Bangalore, Karnataka-560071
-            </p>
-            <div className={styles.addressContacts}>
-              <a href="tel:+919008504821" className={styles.addressContactItem}>
-                <img src="/images/mobile-ico.svg" alt="" aria-hidden="true" />
-                <span>+91 9008504821</span>
-              </a>
-              <a
-                href="mailto:contact@brandstoryglobal.com"
-                className={styles.addressContactItem}
-              >
-                <img src="/images/email-ico.svg" alt="" aria-hidden="true" />
-                <span>contact@brandstoryglobal.com</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
         {/* Links Grid — 4 columns × 2 rows */}
         <div className={styles.linksGrid}>
           {/* Column 1 */}
@@ -188,6 +142,32 @@ export default function Footer() {
               <li><Link href="/industries/real-estate">Real Estate</Link></li>
               <li><Link href="/industries/finance-and-banking">Finance & Banking</Link></li>
             </ul>
+          </div>
+        </div>
+
+        <div className={styles.addressBlock}>
+          <div className={styles.addressSection}>
+            <div className={styles.addressInfo}>
+              <h4 className={styles.addressTitle}>USA</h4>
+              <p className={styles.addressText}>
+                39109 Guardino Dr, Fremont,
+                <br />
+                CA 94538
+              </p>
+            </div>
+            <div className={styles.addressContacts}>
+              <a href="tel:+17145990207" className={styles.addressContactItem}>
+                <img src="/images/mobile-ico.svg" alt="" aria-hidden="true" />
+                <span>+1 7145990207</span>
+              </a>
+              <a
+                href="mailto:contact@brandstoryglobal.com"
+                className={styles.addressContactItem}
+              >
+                <img src="/images/email-ico.svg" alt="" aria-hidden="true" />
+                <span>contact@brandstoryglobal.com</span>
+              </a>
+            </div>
           </div>
         </div>
 

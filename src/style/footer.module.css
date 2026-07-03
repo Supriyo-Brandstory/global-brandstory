@@ -123,18 +123,21 @@
   opacity: 0.9;
 }
 
-.addressGrid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+.addressBlock {
   margin-bottom: 50px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .addressSection {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.addressInfo {
+  min-width: 0;
 }
 
 .addressTitle {
@@ -154,13 +157,14 @@
   font-size: 15px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.75);
-  margin: 16px 0 20px;
+  margin: 14px 0 0;
 }
 
 .addressContacts {
   display: flex;
   flex-wrap: wrap;
   gap: 20px 32px;
+  flex-shrink: 0;
 }
 
 .addressContactItem {
@@ -376,18 +380,20 @@
     text-align: center;
   }
 
-  .addressGrid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .addressBlock {
+    padding-top: 28px;
+    margin-bottom: 40px;
   }
 
   .addressSection {
-    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
   }
 
   .addressContacts {
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
   }
 
   .linksGrid {
