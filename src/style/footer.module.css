@@ -219,14 +219,15 @@
 
 .column ul li {
   margin-bottom: 10px;
-}
-
-.column ul li a {
   font-family: var(--font-family-gilory-regular);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.4;
   color: rgba(255, 255, 255, 0.55);
+}
+
+.column ul li a {
+  color: inherit;
   text-decoration: none;
   transition: color 0.2s ease;
 }
