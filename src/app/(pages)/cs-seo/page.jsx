@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { CsSEOBanner } from "@/component/pages/common/CsSEOBanner";
 import CsChallenge from "@/component/pages/common/CsChallenge";
 import CsObjectives from "@/component/pages/common/CsObjectives";
@@ -10,6 +11,8 @@ import React from "react";
 import CommonDivider from "@/component/pages/common/CommonDivider";
 
 const page = () => {
+  notFound();
+
   return (
     <div>
       <CsSEOBanner

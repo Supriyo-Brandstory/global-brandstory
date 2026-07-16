@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
         title: blogMetaTitle || blogTitle || "Blog Detail",
         description: blogMetaDescription || "Read our latest blog post.",
         alternates: {
-            canonical: `https://globalbrandstory.com/blogs/${slug}`,
+            canonical: `https://brandstoryglobal.com/blogs/${slug}`,
         },
         robots: {
             index: true,
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }) {
         openGraph: {
             title: blogMetaTitle || blogTitle,
             description: blogMetaDescription,
-            url: `https://globalbrandstory.com/blogs/${slug}`,
+            url: `https://brandstoryglobal.com/blogs/${slug}`,
             images: ogImageUrl ? [{ url: ogImageUrl }] : [],
         },
     };

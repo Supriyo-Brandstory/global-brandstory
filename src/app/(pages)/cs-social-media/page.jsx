@@ -13,6 +13,15 @@ import { CommonImageGrid } from "@/component/pages/common/CommonImageGrid";
 import { CommonStrategyPlanning } from "@/component/pages/common/CommonStrategyPlanning";
 import CommonTransformation from "@/component/pages/common/CommonTransformation";
 import StaticPaidCampaignPerformance from "@/component/pages/common/StaticPaidCampaignPerformance";
+import { getPageUrl } from "@/utils/getPageUrl";
+
+export const metadata = {
+  title: "Social Media Success Stories | BrandStory Global",
+  description: "See how our social media marketing campaigns helped brands increase engagement, grow online communities, improve reach, and generate quality business leads.",
+  alternates: {
+    canonical: getPageUrl(import.meta.url),
+  },
+}
 
 const page = () => {
   return (
@@ -23,7 +32,7 @@ const page = () => {
           "Achieved 2–3X growth in engagement with improved reach and interaction"
         }
         description={
-            "An EdTech brand focused on VLSI training and career-focused technical education, aiming to build awareness, engage students, and drive interest in technical learning programs."
+          "An EdTech brand focused on VLSI training and career-focused technical education, aiming to build awareness, engage students, and drive interest in technical learning programs."
         }
         meta={[
           { label: "Industry", value: "Education / EdTech" },
@@ -31,20 +40,20 @@ const page = () => {
             label: "Project Type",
             value: "Social Media Optimization",
           },
-          { 
-            label: "Platform Targeted", 
-            value: "Instagram & LinkedIn" 
+          {
+            label: "Platform Targeted",
+            value: "Instagram & LinkedIn"
           },
         ]}
-        // stats={[
-        //   { value: "104%", label: "Increase in Organic Traffic" },
-        //   { value: "113%", label: "Growth in Keyword Rankings" },
-        //   { value: "23%", label: "Increase in Organic Traffic Value" },
-        // ]}
+      // stats={[
+      //   { value: "104%", label: "Increase in Organic Traffic" },
+      //   { value: "113%", label: "Growth in Keyword Rankings" },
+      //   { value: "23%", label: "Increase in Organic Traffic Value" },
+      // ]}
       />
-      <CommonChallengesObjectives 
-      desc={"The brand’s social media presence lacked consistency in engagement and reach, resulting in low audience interaction and limited content impact despite regular posting."}
-      title="The Challenges and Objectives"
+      <CommonChallengesObjectives
+        desc={"The brand’s social media presence lacked consistency in engagement and reach, resulting in low audience interaction and limited content impact despite regular posting."}
+        title="The Challenges and Objectives"
         challenges={{
           title: "Key Challenges",
           items: [
@@ -68,13 +77,13 @@ const page = () => {
       />
 
       <CommonDivider />
-      <CommonImageGrid 
+      <CommonImageGrid
         images={[
-            "/images/cs-social-media/1.png",
-        "/images/cs-social-media/2.png",
-        "/images/cs-social-media/3.png",
-        "/images/cs-social-media/2.png",
-        "/images/cs-social-media/3.png",
+          "/images/cs-social-media/1.png",
+          "/images/cs-social-media/2.png",
+          "/images/cs-social-media/3.png",
+          "/images/cs-social-media/2.png",
+          "/images/cs-social-media/3.png",
         ]}
       />
       <CsStepCards
@@ -102,96 +111,96 @@ const page = () => {
         ]}
       />
       <CommonDivider />
-      <CommonStrategyPlanning 
-            title="Campaign Execution"
-            items={[
-                {
-                    icon: "users",
-                    title: "Content Execution Strategy",
-                    description: "<ul><li>Developed educational posts focused on VLSI learning concepts</li><li>Created career-driven content highlighting industry opportunities</li><li>Used structured content formats such as carousels and informative posts</li><li>Maintained a consistent posting cadence</li></ul>"
-                },
-                {
-                    icon: "users",
-                    title: "Creative Approach",
-                    description: "<ul><li>Visual-first content for Instagram engagement</li><li>Informational and authority-driven content for LinkedIn</li><li>Clean, structured layouts for better readability</li><li>Messaging aligned with career outcomes</li></ul>"
-                },
-                {
-                    icon: "users",
-                    title: "Optimization Approach",
-                    description: "<ul><li>Continuous monitoring of engagement metrics</li><li>Refinement of content topics based on performance</li><li>Improvement of format and clarity for better interaction</li><li>Iterative updates based on audience response</li></ul>"
-                }
-            ]}
+      <CommonStrategyPlanning
+        title="Campaign Execution"
+        items={[
+          {
+            icon: "users",
+            title: "Content Execution Strategy",
+            description: "<ul><li>Developed educational posts focused on VLSI learning concepts</li><li>Created career-driven content highlighting industry opportunities</li><li>Used structured content formats such as carousels and informative posts</li><li>Maintained a consistent posting cadence</li></ul>"
+          },
+          {
+            icon: "users",
+            title: "Creative Approach",
+            description: "<ul><li>Visual-first content for Instagram engagement</li><li>Informational and authority-driven content for LinkedIn</li><li>Clean, structured layouts for better readability</li><li>Messaging aligned with career outcomes</li></ul>"
+          },
+          {
+            icon: "users",
+            title: "Optimization Approach",
+            description: "<ul><li>Continuous monitoring of engagement metrics</li><li>Refinement of content topics based on performance</li><li>Improvement of format and clarity for better interaction</li><li>Iterative updates based on audience response</li></ul>"
+          }
+        ]}
       />
 
       <CsProcess
         title="Our Process"
         steps={[
-            {
-                number: "01",
-                title: "Process Overview",
-                description:
-                "A Structured Content System Was Built To Improve Engagement By Aligning Audience Intent With Platform Behavior.",
-                points: [
-                    "Focused On Student-Driven Content Strategy",
-                    "Aligned Content With Learning And Career Goals",
-                    "Structured For Consistent Engagement Growth",
-                    "Designed To Scale Interaction Across Platforms",
-                ],
-            },
-            {
-                number: "02",
-                title: "Content Planning",
-                description:
-                    "Content Was Planned To Engage Users Across Learning, Career, And Aspirational Stages.",
-                points: [
-                    "Educational Content Around VLSI Concepts And Technical Learning",
-                    "Career-Focused Content Highlighting Job Opportunities And Industry Relevance",
-                    "Aspirational Content To Strengthen Emotional Connection",
-                    "Covered Awareness, Engagement, And Consideration Stages",
-                ],
-            },
-            {
-                number: "03",
-                title: "Distribution & Attribution (What Worked)",
-                description:
-                    "Each Platform Contributed Differently To Engagement And Audience Interaction.",
-                points: [
-                    "Instagram Drove Higher Engagement Through Visual And Short-Format Content.",
-                    "LinkedIn Improved Credibility And Professional Audience Interaction",
-                    "Carousel Formats Delivered Stronger Engagement Due To Content Depth",
-                    "Consistent Posting Improved Reach Stability And Visibility",
-                ],
-            },
-            {
-                number: "04",
-                title: "Best Practices Implemented",
-                description:
-                    "Execution Focused On Structured Content Delivery And Continuous Improvement.",
-                points: [
-                    "Audience-First Content Aligned With Student Intent",
-                    "Platform-Specific Messaging For Instagram And LinkedIn",
-                    "Consistent Publishing Frequency To Improve Reach",
-                    "Structured Formats For Better Readability And Interaction",
-                    "Educational Storytelling To Improve Engagement",
-                ],
-            },
-            {
-                number: "05",
-                title: "Governance & Growth",
-                description:
-                "Performance Was Maintained Through Continuous Monitoring And Optimization.",
-                points: [
-                    "Engagement Metrics Used To Refine Content Direction",
-                    "High-Performing Topics Scaled Across Formats",
-                    "Regular Reviews Ensured Content Consistency",
-                    "Iterative Improvements Based On Audience Response",
-                ],
-            },
+          {
+            number: "01",
+            title: "Process Overview",
+            description:
+              "A Structured Content System Was Built To Improve Engagement By Aligning Audience Intent With Platform Behavior.",
+            points: [
+              "Focused On Student-Driven Content Strategy",
+              "Aligned Content With Learning And Career Goals",
+              "Structured For Consistent Engagement Growth",
+              "Designed To Scale Interaction Across Platforms",
+            ],
+          },
+          {
+            number: "02",
+            title: "Content Planning",
+            description:
+              "Content Was Planned To Engage Users Across Learning, Career, And Aspirational Stages.",
+            points: [
+              "Educational Content Around VLSI Concepts And Technical Learning",
+              "Career-Focused Content Highlighting Job Opportunities And Industry Relevance",
+              "Aspirational Content To Strengthen Emotional Connection",
+              "Covered Awareness, Engagement, And Consideration Stages",
+            ],
+          },
+          {
+            number: "03",
+            title: "Distribution & Attribution (What Worked)",
+            description:
+              "Each Platform Contributed Differently To Engagement And Audience Interaction.",
+            points: [
+              "Instagram Drove Higher Engagement Through Visual And Short-Format Content.",
+              "LinkedIn Improved Credibility And Professional Audience Interaction",
+              "Carousel Formats Delivered Stronger Engagement Due To Content Depth",
+              "Consistent Posting Improved Reach Stability And Visibility",
+            ],
+          },
+          {
+            number: "04",
+            title: "Best Practices Implemented",
+            description:
+              "Execution Focused On Structured Content Delivery And Continuous Improvement.",
+            points: [
+              "Audience-First Content Aligned With Student Intent",
+              "Platform-Specific Messaging For Instagram And LinkedIn",
+              "Consistent Publishing Frequency To Improve Reach",
+              "Structured Formats For Better Readability And Interaction",
+              "Educational Storytelling To Improve Engagement",
+            ],
+          },
+          {
+            number: "05",
+            title: "Governance & Growth",
+            description:
+              "Performance Was Maintained Through Continuous Monitoring And Optimization.",
+            points: [
+              "Engagement Metrics Used To Refine Content Direction",
+              "High-Performing Topics Scaled Across Formats",
+              "Regular Reviews Ensured Content Consistency",
+              "Iterative Improvements Based On Audience Response",
+            ],
+          },
         ]}
       />
 
 
-      <CommonTransformation 
+      <CommonTransformation
         title="The Transformation"
         cards={[
           {
