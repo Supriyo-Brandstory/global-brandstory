@@ -9,6 +9,14 @@ import { Results } from '@/component/pages/RealEstate/Results';
 import { Faq } from '@/component/pages/RealEstate/Faq';
 import { Adv } from '@/component/pages/RealEstate/Adv';
 
+export const metadata = {
+    title: "Industries We Serve | BrandStory Global",
+    description: "Explore industry-specific digital marketing solutions designed for healthcare, ecommerce, SaaS, manufacturing, finance, retail, and more.",
+    alternates: {
+        canonical: '/industries',
+    },
+}
+
 const page = () => {
     return (
         <>

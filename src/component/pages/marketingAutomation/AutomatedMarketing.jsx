@@ -3,19 +3,19 @@ import { CommonThreeCardBlur } from "../common/CommonThreeCardBlur"
 export const AutomatedMarketing = ()=>{
     const data = [
         {
-            logo: "images/MarketingAutomation/am-1.png", 
+            logo: "/images/MarketingAutomation/am-1.png", 
             title: "Segment your audience",
             description: "We split your audience into groups so each person sees messages that matter most to them. This way, people get information that is useful and relevant, not random.",
             bg: "/images/three-card-blur-bg-1.png"
         },
         {
-            logo: "images/MarketingAutomation/am-2.png", 
+            logo: "/images/MarketingAutomation/am-2.png", 
             title: "Trigger actions based on behavior",
             description: "Our system initiates the subsequent action automatically when a user clicks a link, makes a purchase, or visits your website. For instance, it could display a special offer or send a helpful email without human intervention.",
             bg: "/images/three-card-blur-bg-2.png"
         },
         {
-            logo: "images/MarketingAutomation/am-3.png", 
+            logo: "/images/MarketingAutomation/am-3.png", 
             title: "Personalize messages",
             description: "Each one seems as though it was written especially for the recipient. They are more likely to act if it mentions their name, displays goods they like, or makes offers that align with their interests.",
             bg: "/images/three-card-blur-bg-3.png"

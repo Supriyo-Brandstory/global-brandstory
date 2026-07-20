@@ -1,6 +1,14 @@
 import { Footer } from '@/component/pages/PrivacyPolicy/Footer';
 import styles from '@/style/blogdetail.module.css';
 
+export const metadata = {
+  title: "Digital Marketing Insights | BrandStory Global Blog",
+  description: "Read expert insights, marketing strategies, SEO tips, PPC guides, branding ideas, and industry updates to help your business achieve sustainable growth.",
+  alternates: {
+    canonical: '/blog-detail',
+  },
+}
+
 export default function Page() {
   return (
     <div className={styles.page}>

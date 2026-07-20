@@ -69,7 +69,7 @@ const page = () => {
       <CommonDivider />
       <CommonImageGrid 
         images={[
-          "/images/case-study/linkedin-ctr-engagement-optimization/Earth day=1.jpg",
+          "/images/case-study/linkedin-ctr-engagement-optimization/Earth-day=1.jpg",
           "/images/case-study/linkedin-ctr-engagement-optimization/PN-1 Branding.jpg",
           "/images/case-study/linkedin-ctr-engagement-optimization/PN-10.jpg",
           "/images/case-study/linkedin-ctr-engagement-optimization/PN-8.jpg",

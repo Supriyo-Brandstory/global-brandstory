@@ -9,6 +9,14 @@ import { Challanges } from '@/component/pages/CaseStudy/Challanges';
 import { Results } from '@/component/pages/CaseStudy/Results';
 import { WhyThisWorked } from '@/component/pages/CaseStudy/WhyThisWorked';
 
+export const metadata = {
+    title: "Case Studies | BrandStory Global Success Stories",
+    description: "Discover how BrandStory Global has helped businesses achieve measurable growth through SEO, PPC, branding, web development, and digital marketing.",
+    alternates: {
+        canonical: '/case-studies',
+    },
+}
+
 const page= ()=>{
     return(
         <>

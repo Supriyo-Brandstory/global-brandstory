@@ -13,13 +13,12 @@ import { CommonImageGrid } from "@/component/pages/common/CommonImageGrid";
 import { CommonStrategyPlanning } from "@/component/pages/common/CommonStrategyPlanning";
 import CommonTransformation from "@/component/pages/common/CommonTransformation";
 import StaticPaidCampaignPerformance from "@/component/pages/common/StaticPaidCampaignPerformance";
-import { getPageUrl } from "@/utils/getPageUrl";
 
 export const metadata = {
   title: "Social Media Success Stories | BrandStory Global",
   description: "See how our social media marketing campaigns helped brands increase engagement, grow online communities, improve reach, and generate quality business leads.",
   alternates: {
-    canonical: getPageUrl(import.meta.url),
+    canonical: '/cs-social-media',
   },
 }
 
