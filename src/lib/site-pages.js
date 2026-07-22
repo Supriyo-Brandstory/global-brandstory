@@ -9,6 +9,9 @@ export const SITE_DESCRIPTION =
 
 const PAGES_DIR = path.join(process.cwd(), "src", "app", "(pages)");
 
+/** Routes that 404 / draft — keep out of XML + HTML sitemaps */
+const SITEMAP_EXCLUDED_ROUTES = new Set(["/cs-seo"]);
+
 async function fetchStrapiSafe(endpoint) {
   const STRAPI_URL = process.env.NEXT_PUBLIC_STRAPI_URL || "http://127.0.0.1:1337";
   const STRAPI_TOKEN = process.env.STRAPI_PROD_API_TOKEN;
@@ -94,8 +97,11 @@ export function getLocalPageEntries(dir = PAGES_DIR, currentRoute = "") {
     }
 
     if (file === "page.jsx" || file === "page.js") {
+      const route = currentRoute === "" ? "/" : `/${currentRoute}`;
+      if (SITEMAP_EXCLUDED_ROUTES.has(route)) continue;
+
       results.push({
-        route: currentRoute === "" ? "/" : `/${currentRoute}`,
+        route,
         filePath,
       });
     }

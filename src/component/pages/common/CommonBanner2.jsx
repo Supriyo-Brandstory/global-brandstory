@@ -11,7 +11,7 @@ export const CommonBanner2 = ({
   imageBtn = null
 }) => {
   const finalLink = (!buttonLink || buttonLink === '#') 
-    ? '/our-work' 
+    ? '/our-works' 
     : buttonLink;
 
   const hasPoints = points.length > 0;
