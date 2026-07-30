@@ -1,0 +1,124 @@
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 20px 80px;
+  color: #ffffff;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+  color: #ffffff;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label,
+.fieldset legend,
+.checkbox,
+.radio {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+  padding: 12px;
+  font: inherit;
+  min-height: 44px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.field select option {
+  color: #111111;
+  background: #ffffff;
+}
+
+.fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 4px;
+  padding: 12px;
+  color: #ffffff;
+}
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 16px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.checkbox span {
+  color: #ffffff;
+}
+
+.checkbox input {
+  margin-top: 3px;
+}
+
+.note,
+.notice,
+.fine,
+.status {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.notice a,
+.fine a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.submit {
+  justify-self: start;
+  background: #f15d22;
+  color: #ffffff;
+  border: 0;
+  border-radius: 4px;
+  padding: 12px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+.submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.status {
+  min-height: 1.4em;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.status[data-type="success"],
+.status[data-type="error"] {
+  color: #ffffff;
+}

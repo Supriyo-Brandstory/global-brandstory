@@ -1,5 +1,6 @@
 import styles from '@/style/footer.module.css';
 import Link from 'next/link';
+import { FooterLegalControls } from '@/component/partial/FooterLegalControls';
 
 export default function Footer() {
   return (
@@ -177,8 +178,7 @@ export default function Footer() {
 
           <div className={styles.bottomLinks}>
             <div className={styles.policyLinks}>
-              <Link href="/sitemap">Sitemap</Link>
-              <Link href="/privacy-policy">Privacy & Terms of Use</Link>
+              <FooterLegalControls />
             </div>
           </div>
         </div>

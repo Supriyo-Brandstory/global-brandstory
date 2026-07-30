@@ -122,9 +122,11 @@ export default async function Page({ params }) {
                             }
                             return null;
                         })}
-                        <blockquote className={styles.quoteBlock}>
-                            {`"${blogQuote}"`}
-                        </blockquote>
+                        {blogQuote && (
+                            <blockquote className={styles.quoteBlock}>
+                                {`"${blogQuote}"`}
+                            </blockquote>
+                        )}
 
                         <Footer />
                     </article>

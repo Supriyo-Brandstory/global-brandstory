@@ -45,7 +45,7 @@ const CommonTextOnly = ({ data }) => {
         </div>
       ))}
     </div>
-    </ div>
+    </div>
   );
 };
 

@@ -264,10 +264,14 @@
 
 .policyLinks {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  justify-content: flex-end;
+  max-width: 720px;
 }
 
-.policyLinks a {
+.policyLinks a,
+.policyLinks button {
   font-family: var(--font-family-gilory-regular);
   font-weight: 400;
   font-size: 13px;
@@ -276,7 +280,8 @@
   transition: color 0.2s ease;
 }
 
-.policyLinks a:hover {
+.policyLinks a:hover,
+.policyLinks button:hover {
   color: #ffffff;
 }
 

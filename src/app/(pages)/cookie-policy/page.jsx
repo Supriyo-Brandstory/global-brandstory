@@ -1,10 +1,10 @@
 import { LegalPageLayout } from "@/component/pages/Legal/LegalPageLayout";
-import content from "@/content/legal/privacy-policy";
+import content from "@/content/legal/cookie-policy";
 
 export const metadata = {
   title: content.metaTitle,
   description: content.metaDescription,
-  alternates: { canonical: "/privacy-policy" },
+  alternates: { canonical: "/cookie-policy" },
 };
 
 export default function Page() {

@@ -25,7 +25,7 @@ export default function TableOfContents({ headings }) {
 
   return (
     <div className="rounded-[20px] max-h-[450px]" style={{ overflow: "hidden" }}>
-      <div className="toc-scroll rounded-[8px] p-6 shadow-xl mb-4 max-h-[450px] overflow-y-auto" style={{ background: "linear-gradient(45deg, rgba(241, 93, 34, 0.20), rgb(0, 0, 0), rgb(0, 0, 0), rgba(241, 93, 34, 0.20))", borderRadius: "24px", width: "100%", padding: '30px 20px' }}>
+      <div className="toc-scroll rounded-[10px] p-6 shadow-xl max-h-[450px] overflow-y-auto" style={{ background: "linear-gradient(45deg, rgba(241, 93, 34, 0.20), rgb(0, 0, 0), rgb(0, 0, 0), rgba(241, 93, 34, 0.20))", borderRadius: "24px", width: "100%", padding: '30px 20px' }}>
         {/* Title */}
         <h3 className="text-2xl font-medium text-center text-white mb-4">
           Table of Content

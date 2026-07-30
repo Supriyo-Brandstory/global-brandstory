@@ -1,10 +1,16 @@
 "use client";
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import styles from '@/style/common/commonContactForm.module.css';
+import { LEGAL_CONFIG } from '@/config/legal';
+import { buildLeadAnalyticsEvent } from '@/lib/consent/gcm';
+import {
+    createSubmissionId,
+    readUtmParams,
+    stripSensitiveQuery,
+} from '@/lib/forms/enquiryMeta';
 
 export const CommonContactForm = () => {
-    const router = useRouter();
     const [formData, setFormData] = useState({
         name: '',
         mail: '',
@@ -12,7 +18,8 @@ export const CommonContactForm = () => {
         brandName: '',
         budgetRange: '',
         services: '',
-        isHappyToContact: false
+        emailMarketingConsent: false,
+        phoneWhatsappConsent: false,
     });
 
     const handleChange = (e) => {
@@ -37,12 +44,34 @@ export const CommonContactForm = () => {
         e.preventDefault();
         setIsSubmitting(true);
         try {
+            const utm = readUtmParams();
+            const submissionId = createSubmissionId();
+            const consentTimestamp = new Date().toISOString();
+            const pageUrl =
+                typeof window !== 'undefined'
+                    ? stripSensitiveQuery(window.location.href)
+                    : '/contact-us';
+
+            const payload = {
+                ...formData,
+                submissionId,
+                formId: 'contact_us',
+                pageUrl,
+                noticeVersion: LEGAL_CONFIG.ENQUIRY_NOTICE_VERSION,
+                emailMarketingConsent: Boolean(formData.emailMarketingConsent),
+                phoneWhatsappConsent: LEGAL_CONFIG.FEATURE_MARKETING_PHONE_WHATSAPP
+                    ? Boolean(formData.phoneWhatsappConsent)
+                    : false,
+                consentTimestamp,
+                ...utm,
+            };
+
             const response = await fetch('/monday-common', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(payload),
             });
 
             if (response.ok) {
@@ -54,13 +83,17 @@ export const CommonContactForm = () => {
                     brandName: '',
                     budgetRange: '',
                     services: '',
-                    isHappyToContact: false
+                    emailMarketingConsent: false,
+                    phoneWhatsappConsent: false,
                 });
                 window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                    event: 'contact_form_submit_success',
-                    form_name: 'contact_us'
-                });
+                window.dataLayer.push(
+                    buildLeadAnalyticsEvent({
+                        formId: 'contact_us',
+                        pageType: 'contact',
+                        serviceCategory: 'general',
+                    })
+                );
                 setTimeout(() => {
                     window.location.href = '/thank-you';
                 }, 1500);
@@ -84,7 +117,11 @@ export const CommonContactForm = () => {
             </div>
             <div className={styles.layout}>
                 <div className={styles.colTwo}>
-                    <form onSubmit={handleSubmit} className={styles.form}>
+                    <form
+                        onSubmit={handleSubmit}
+                        className={styles.form}
+                        data-clarity-mask="true"
+                    >
                         <h2 className={styles.title}>Request a Consultation</h2>
                         <div className={styles.inputGroup}>
                             <input
@@ -95,6 +132,7 @@ export const CommonContactForm = () => {
                                 placeholder='Your Name'
                                 className={styles.textInput}
                                 required
+                                data-clarity-mask="true"
                             />
                             <div className={styles.inputHint}>Enter your full name</div>
                         </div>
@@ -107,6 +145,7 @@ export const CommonContactForm = () => {
                                 placeholder='Your Mail'
                                 className={styles.textInput}
                                 required
+                                data-clarity-mask="true"
                             />
                             <div className={styles.inputHint}>Preferably use company mail</div>
                         </div>
@@ -115,11 +154,11 @@ export const CommonContactForm = () => {
                                 name="mobile"
                                 value={formData.mobile}
                                 onChange={handleChange}
-                                prefix='+91'
                                 type="text"
                                 placeholder='Your mobile number'
                                 className={styles.textInput}
                                 required
+                                data-clarity-mask="true"
                             />
                             <div className={styles.inputHint}>Give your phone number</div>
                         </div>
@@ -132,6 +171,7 @@ export const CommonContactForm = () => {
                                 placeholder='Company / Brand name'
                                 className={styles.textInput}
                                 required
+                                data-clarity-mask="true"
                             />
                             <div className={styles.inputHint}>Type your brand name  or company</div>
                         </div>
@@ -161,17 +201,46 @@ export const CommonContactForm = () => {
                                 placeholder='Select services'
                                 className={styles.textInput}
                                 required
+                                data-clarity-mask="true"
                             />
                             <div className={styles.inputHint}>Select the services you are looking for</div>
                         </div>
+
+                        <p style={{ fontSize: '13px', lineHeight: 1.5, color: '#444', margin: '8px 0 0' }}>
+                            By submitting this form, you agree that BrandStory Global may use the information you provide to respond to your enquiry and manage the potential business relationship. Your information will be stored in monday CRM and handled as described in our{' '}
+                            <Link href="/privacy-policy" style={{ color: '#F15D22' }}>Privacy Policy</Link>.
+                        </p>
+
                         <div className={styles.inputGroup} style={{ paddingTop: '10px' }}>
-                            <input
-                                name="isHappyToContact"
-                                checked={formData.isHappyToContact}
-                                onChange={handleChange}
-                                type="checkbox"
-                            /> Yes, I’m happy to be contacted by Brandstory Global. I’ve read the <span style={{ color: '#F15D22' }}>Privacy Policy</span>
+                            <label style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', fontSize: '14px' }}>
+                                <input
+                                    name="emailMarketingConsent"
+                                    checked={formData.emailMarketingConsent}
+                                    onChange={handleChange}
+                                    type="checkbox"
+                                />
+                                <span>
+                                    I would like to receive useful marketing insights, service updates and invitations from BrandStory Global by email. I can unsubscribe at any time.
+                                </span>
+                            </label>
                         </div>
+
+                        {LEGAL_CONFIG.FEATURE_MARKETING_PHONE_WHATSAPP ? (
+                            <div className={styles.inputGroup} style={{ paddingTop: '10px' }}>
+                                <label style={{ display: 'flex', gap: '10px', alignItems: 'flex-start', fontSize: '14px' }}>
+                                    <input
+                                        name="phoneWhatsappConsent"
+                                        checked={formData.phoneWhatsappConsent}
+                                        onChange={handleChange}
+                                        type="checkbox"
+                                    />
+                                    <span>
+                                        I agree to receive marketing calls and WhatsApp messages from BrandStory Global at the number provided. Consent is not a condition of purchasing services. Message and data rates may apply. I can opt out at any time.
+                                    </span>
+                                </label>
+                            </div>
+                        ) : null}
+
                         <br />
                         <button type="submit" className={styles.submitBtn} disabled={isSubmitting}>
                             {isSubmitting ? 'Submitting...' : 'Start My Project'}
@@ -240,7 +309,6 @@ export const CommonContactForm = () => {
                 </div>
             </div>
 
-            {/* Custom Toast Notification */}
             {toast.show && (
                 <div style={{
                     position: 'fixed',
@@ -258,12 +326,7 @@ export const CommonContactForm = () => {
                     alignItems: 'center',
                     gap: '8px',
                     animation: 'slideIn 0.3s ease-out forwards'
-                }}>
-                    {toast.type === 'success' ? (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    ) : (
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-                    )}
+                }} role="status" aria-live="polite">
                     {toast.message}
                 </div>
             )}
