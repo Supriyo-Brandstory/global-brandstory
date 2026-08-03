@@ -5,14 +5,15 @@ const privacyPolicy = {
   metaDescription:
     "How BrandStory Global collects, uses, discloses, retains and protects personal information on brandstoryglobal.com.",
   intro:
-    "[INSERT FULL LEGAL ENTITY NAME] (doing business as “BrandStory Global”, “BrandStory”, “we”, “us” or “our”) respects your privacy. This Privacy Policy explains how we collect, use, disclose, retain and protect personal information when you visit brandstoryglobal.com, contact us, request information, submit a business enquiry, apply for a role, or otherwise interact with our website.<br/><br/>This website promotes professional agency services. It does not provide a consumer account, subscription product or SaaS platform. This Policy covers the website and website-generated enquiries. Client-project data is also governed by the applicable contract, statement of work and data processing terms.",
+    "[LEGAL_ENTITY_NAME] (doing business as “BrandStory Global”, “BrandStory”, “we”, “us” or “our”) respects your privacy. This Privacy Policy explains how we collect, use, disclose, retain and protect personal information when you visit brandstoryglobal.com, contact us, request information, submit a business enquiry, apply for a role, or otherwise interact with our website.<br/><br/>This website promotes professional agency services. It does not provide a consumer account, subscription product or SaaS platform. This Policy covers the website and website-generated enquiries. Client-project data is also governed by the applicable contract, statement of work and data processing terms.",
   sections: [
     {
       title: "1. Who is responsible for your information?",
       paragraphs: [
-        "Data controller / data fiduciary: [INSERT FULL LEGAL ENTITY NAME]",
-        "Registered address: [INSERT REGISTERED BUSINESS ADDRESS]",
-        "Privacy contact: [INSERT PRIVACY EMAIL, RECOMMENDED: privacy@brandstoryglobal.com]",
+        "Data controller / data fiduciary: [LEGAL_ENTITY_NAME]",
+        "Registered address: [REGISTERED_ADDRESS]",
+        "US registered office: [US_ADDRESS]",
+        "Privacy contact: <a href=\"mailto:[PRIVACY_EMAIL]\">[PRIVACY_EMAIL]</a>",
         "If a different BrandStory entity contracts with you or determines the purpose of a particular processing activity, that entity may be identified in the relevant proposal, contract, form notice or regional supplement.",
       ],
     },
@@ -43,7 +44,7 @@ const privacyPolicy = {
         "<strong>Microsoft Clarity</strong>",
         "With consent where required, Microsoft Clarity helps us understand how visitors use pages through interaction analytics, heatmaps and session playback. Clarity may process clicks, scrolling, mouse movement, page structure, device information, performance information and masked page content. We configure form fields and other sensitive elements to be masked and instruct visitors not to submit sensitive personal information in free-text fields.",
         "<strong>Forms and monday CRM</strong>",
-        "When you submit an enquiry form, the information you enter is transmitted to monday CRM (part of monday.com Work OS) so authorised team members can respond, qualify the enquiry, assign follow-up tasks, maintain communication history and manage the potential client relationship. Form metadata may include the page URL, submission time, campaign attribution, consent record and technical identifiers needed for security and troubleshooting.",
+        "When you submit an enquiry form, the information you enter is transmitted to monday CRM so authorised team members can respond, qualify the enquiry, assign follow-up tasks, maintain communication history and manage the potential client relationship. Form metadata may include the page URL, submission time, campaign attribution, consent record and technical identifiers needed for security and troubleshooting.",
       ],
     },
     {
@@ -88,15 +89,15 @@ const privacyPolicy = {
       title: "7. Retention",
       paragraphs: [
         "We retain personal information only for as long as reasonably necessary for the purpose described, including to respond to an enquiry, maintain appropriate business records, resolve disputes, enforce agreements and meet legal, accounting or security requirements.",
-        "Proposed operating rules (confirm internally before relying on them as final published commitments):",
+        "Typical retention practices include:",
       ],
       list: [
         "Unqualified website enquiries — delete or anonymise after 12 months unless follow-up remains active or law requires longer.",
         "Qualified sales opportunities and proposal records — retain through the sales cycle and for up to 3 years after the last meaningful interaction, unless converted to a client or required longer.",
         "Client contract and billing records — retain for the contract term and applicable legal/tax limitation period.",
-        "Analytics and Clarity data — use the shortest useful vendor setting; document the selected setting internally.",
+        "Analytics and Clarity data — retained according to the shortest useful vendor setting we operate.",
         "Consent and suppression records — retain while consent is relied on and for a reasonable period needed to demonstrate compliance or honour opt-outs.",
-        "Unsuccessful candidate records — locally approved period; proposed default 12 months unless the candidate agrees to longer talent-pool retention.",
+        "Unsuccessful candidate records — generally up to 12 months unless the candidate agrees to longer talent-pool retention or law requires otherwise.",
       ],
       paragraphsAfter: [
         "Backup copies may remain for a limited cycle before secure overwriting.",
@@ -112,7 +113,7 @@ const privacyPolicy = {
       title: "9. Your rights and choices",
       paragraphs: [
         "Depending on your location, you may have rights to request access, correction, deletion, restriction, objection, portability, consent withdrawal, an explanation of certain processing, or an appeal of a decision. You may also opt out of marketing at any time and change cookie choices through Cookie Preferences.",
-        "Submit a request at <a href=\"/data-rights-request\">/data-rights-request</a> or email [INSERT PRIVACY EMAIL, RECOMMENDED: privacy@brandstoryglobal.com]. We may need to verify your identity and authority. We will not discriminate against you for exercising an applicable privacy right.",
+        "Submit a request at <a href=\"/data-rights-request\">/data-rights-request</a> or email <a href=\"mailto:[PRIVACY_EMAIL]\">[PRIVACY_EMAIL]</a>. We may need to verify your identity and authority. We will not discriminate against you for exercising an applicable privacy right.",
       ],
     },
     {
@@ -142,8 +143,9 @@ const privacyPolicy = {
     {
       title: "14. Contact and complaints",
       paragraphs: [
-        "Privacy contact: [INSERT PRIVACY EMAIL, RECOMMENDED: privacy@brandstoryglobal.com]",
-        "Postal address: [INSERT REGISTERED BUSINESS ADDRESS]",
+        "Privacy contact: <a href=\"mailto:[PRIVACY_EMAIL]\">[PRIVACY_EMAIL]</a>",
+        "Postal address: [REGISTERED_ADDRESS]",
+        "US registered office: [US_ADDRESS]",
         "You may also complain to the privacy or data-protection authority in your jurisdiction. India and US-specific information appears in the <a href=\"/india-privacy-notice\">India Privacy Notice</a> and <a href=\"/us-state-privacy-notice\">US State Privacy Notice</a>.",
       ],
     },

@@ -39,13 +39,13 @@ const careersPrivacy = {
     {
       title: "Your choices and rights",
       paragraphs: [
-        "You may request access, correction or deletion, withdraw an application, object to certain processing, or exercise another applicable right by contacting [INSERT PRIVACY EMAIL, RECOMMENDED: privacy@brandstoryglobal.com]. Rights may be limited by law or the need to establish, exercise or defend legal claims.",
+        "You may request access, correction or deletion, withdraw an application, object to certain processing, or exercise another applicable right by contacting <a href=\"mailto:[PRIVACY_EMAIL]\">[PRIVACY_EMAIL]</a>. Rights may be limited by law or the need to establish, exercise or defend legal claims.",
       ],
     },
     {
       title: "Automated decisions",
       paragraphs: [
-        "BrandStory should not state that recruitment decisions are automated unless a verified tool does so. If a tool makes or materially supports a solely automated decision with legal or similarly significant effects, provide the required specific notice and safeguards.",
+        "BrandStory does not make recruitment decisions solely by automated means on this website. If that changes, we will provide the required notice and safeguards.",
       ],
     },
   ],

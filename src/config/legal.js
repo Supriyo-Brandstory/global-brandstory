@@ -1,23 +1,27 @@
 /**
  * Legal / privacy configuration.
- * Replace placeholders before public launch. Do not invent certifications or vendor claims.
+ * Publish-ready values — do not leave [INSERT]/[CONFIRM]/[VERIFY] tokens in content.
  */
 
 export const LEGAL_CONFIG = {
   LEGAL_ENTITY_NAME: "BrandStory, PVT LTD",
-  REGISTERED_ADDRESS: "No. 4 & 5, 3rd Floor, 1st Cross Road, Krishna Reddy Colony, Domlur Layout, Bengaluru, Karnataka, 560071",
+  REGISTERED_ADDRESS:
+    "No. 4 & 5, 3rd Floor, 1st Cross Road, Krishna Reddy Colony, Domlur Layout, Bengaluru, Karnataka, 560071",
   US_ADDRESS: "39109 Guardino Dr, Fremont, CA 94538",
-  US_ADDRESS_ROLE: "[CONFIRM: registered office | business office | mailing address]",
+  US_ADDRESS_ROLE: "registered office",
   COMPANY_REGISTRATION: "Private Limited Company",
-  PRIVACY_EMAIL: "info@brandstory.in",
-  CONTACT_EMAIL: "info@brandstory.in",
-  INDIA_GRIEVANCE_CONTACT: "info@brandstory.in",
-  ACCESSIBILITY_EMAIL: "info@brandstory.in",
-  SECURITY_EMAIL: "info@brandstory.in",
+  PRIVACY_EMAIL: "contact@brandstoryglobal.com",
+  CONTACT_EMAIL: "contact@brandstoryglobal.com",
+  INDIA_GRIEVANCE_CONTACT: "contact@brandstoryglobal.com",
+  ACCESSIBILITY_EMAIL: "contact@brandstoryglobal.com",
+  SECURITY_EMAIL: "contact@brandstoryglobal.com",
   PHONE_US: "+1 714 599 0207",
   EFFECTIVE_DATE: "July 28, 2026",
   LAST_UPDATED_DATE: "July 28, 2026",
-  GOVERNING_LAW: "Indian law",
+  GOVERNING_LAW: "the laws of India, and the courts in Bengaluru, Karnataka",
+  HOSTING_PROVIDER: "DigitalOcean",
+  EMAIL_PROVIDER: "Google Workspace",
+  CRM_PROVIDER: "monday.com (monday CRM)",
   BANNER_VERSION: "1.0.0",
   ENQUIRY_NOTICE_VERSION: "1.0.0",
   FEATURE_MARKETING_PHONE_WHATSAPP: false,
@@ -38,31 +42,35 @@ export const LEGAL_FOOTER_LINKS = [
   { href: "/india-privacy-notice", label: "India Privacy Notice" },
   { href: "/data-rights-request", label: "Data Rights Request" },
   { href: "/accessibility", label: "Accessibility" },
-  { href: "/security", label: "Security" },
-  { href: "/subprocessors", label: "Subprocessors" },
 ];
 
 export function resolveLegalToken(text) {
   if (!text) return text;
+  const c = LEGAL_CONFIG;
   return text
-    .replaceAll("[INSERT FULL LEGAL ENTITY NAME]", LEGAL_CONFIG.LEGAL_ENTITY_NAME)
-    .replaceAll("[INSERT REGISTERED BUSINESS ADDRESS]", LEGAL_CONFIG.REGISTERED_ADDRESS)
-    .replaceAll(
-      "[INSERT PRIVACY EMAIL, RECOMMENDED: privacy@brandstoryglobal.com]",
-      LEGAL_CONFIG.PRIVACY_EMAIL
-    )
-    .replaceAll("[INSERT PRIVACY EMAIL]", LEGAL_CONFIG.PRIVACY_EMAIL)
-    .replaceAll("[INSERT ACCESSIBILITY EMAIL]", LEGAL_CONFIG.ACCESSIBILITY_EMAIL)
-    .replaceAll("[INSERT SECURITY EMAIL]", LEGAL_CONFIG.SECURITY_EMAIL)
-    .replaceAll("[INSERT INDIA GRIEVANCE CONTACT]", LEGAL_CONFIG.INDIA_GRIEVANCE_CONTACT)
-    .replaceAll("[INSERT EFFECTIVE DATE]", LEGAL_CONFIG.EFFECTIVE_DATE)
-    .replaceAll("[INSERT LAST UPDATED DATE]", LEGAL_CONFIG.LAST_UPDATED_DATE)
-    .replaceAll(
-      "[INSERT GOVERNING LAW AND COURTS FROM COUNSEL]",
-      LEGAL_CONFIG.GOVERNING_LAW
-    );
+    .replaceAll("[LEGAL_ENTITY_NAME]", c.LEGAL_ENTITY_NAME)
+    .replaceAll("[REGISTERED_ADDRESS]", c.REGISTERED_ADDRESS)
+    .replaceAll("[US_ADDRESS]", c.US_ADDRESS)
+    .replaceAll("[US_ADDRESS_ROLE]", c.US_ADDRESS_ROLE)
+    .replaceAll("[PRIVACY_EMAIL]", c.PRIVACY_EMAIL)
+    .replaceAll("[CONTACT_EMAIL]", c.CONTACT_EMAIL)
+    .replaceAll("[ACCESSIBILITY_EMAIL]", c.ACCESSIBILITY_EMAIL)
+    .replaceAll("[SECURITY_EMAIL]", c.SECURITY_EMAIL)
+    .replaceAll("[INDIA_GRIEVANCE_CONTACT]", c.INDIA_GRIEVANCE_CONTACT)
+    .replaceAll("[EFFECTIVE_DATE]", c.EFFECTIVE_DATE)
+    .replaceAll("[LAST_UPDATED_DATE]", c.LAST_UPDATED_DATE)
+    .replaceAll("[GOVERNING_LAW]", c.GOVERNING_LAW)
+    .replaceAll("[PHONE_US]", c.PHONE_US)
+    .replaceAll("[HOSTING_PROVIDER]", c.HOSTING_PROVIDER)
+    .replaceAll("[EMAIL_PROVIDER]", c.EMAIL_PROVIDER)
+    .replaceAll("[CRM_PROVIDER]", c.CRM_PROVIDER);
 }
 
 export function isPlaceholder(value) {
-  return !value || String(value).includes("[INSERT") || String(value).includes("[CONFIRM");
+  return (
+    !value ||
+    String(value).includes("[INSERT") ||
+    String(value).includes("[CONFIRM") ||
+    String(value).includes("[VERIFY")
+  );
 }

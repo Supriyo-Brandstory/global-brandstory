@@ -19,42 +19,36 @@ const cookiePolicy = {
         "<strong>Strictly necessary</strong> — Security, consent records, form operation and other functions required for a service the visitor requests. Always active where genuinely necessary.",
         "<strong>Analytics</strong> — Measure visits, page use, conversions, technical performance and aggregated trends, including GA4. Off until consent where required.",
         "<strong>Experience / session analytics</strong> — Understand page interactions, heatmaps and session playback, including Microsoft Clarity. Off until consent where required.",
-        "<strong>Advertising</strong> — Measure or personalise ads, build audiences or support cross-site advertising. Do not activate unless actually installed, disclosed and permitted by the visitor's choices.",
+        "<strong>Advertising</strong> — Measure or personalise ads, build audiences or support cross-site advertising. Only used if such tags are installed and permitted by your choices.",
       ],
     },
     {
       title: "3. Tools currently identified",
       paragraphs: [
-        "<strong>Google Tag Manager</strong> — Used to manage website tags. It should be configured so tags in optional categories do not fire before the required permission is available. The production tag inventory is the controlling record.",
-        "<strong>Google Analytics 4</strong> — Used to measure traffic, engagement and enquiry conversions. Consent Mode should default optional storage signals to denied where prior consent is required.",
-        "<strong>Microsoft Clarity</strong> — Interaction analytics, heatmaps and session playback. Form fields and sensitive areas must be masked, and Clarity must be held until applicable consent is received.",
+        "<strong>Google Tag Manager</strong> — Used to manage website tags. Optional-category tags are intended to fire only after the required permission is available.",
+        "<strong>Google Analytics 4</strong> — Used to measure traffic, engagement and enquiry conversions. Consent Mode defaults optional storage signals to denied until you consent.",
+        "<strong>Microsoft Clarity</strong> — Interaction analytics, heatmaps and session playback. Form fields and sensitive areas are masked, and Clarity loads only after the applicable consent is received.",
         "<strong>monday CRM</strong> — Receives information only after a visitor chooses to submit a form. It is a business system for the submitted enquiry rather than a general tracking cookie.",
+        "<strong>First-party consent record</strong> — Stores your cookie and privacy choices in the browser so we can honour them on later visits.",
       ],
     },
     {
-      title: "4. Cookie inventory",
+      title: "4. Cookie details",
       paragraphs: [
-        "<strong>Developer action required before publication:</strong> Run an automated cookie scan on production before consent, after accepting each category, and after rejecting optional categories. Replace the placeholders below with actual cookie name, provider, host, purpose, category, duration and first/third-party status.",
-      ],
-      list: [
-        "[CMP consent record] — Stores consent choices and proof of consent — Strictly necessary — [VERIFY duration]",
-        "[GA4 cookies found by scan] — Google — Website analytics and conversion measurement — Analytics — [VERIFY]",
-        "[Clarity cookies found by scan] — Microsoft — Interaction analytics, heatmaps and session playback — Experience / analytics — [VERIFY]",
-        "[Form security/integration technology] — [VERIFY] — Submits and protects enquiry forms — Strictly necessary — [VERIFY]",
-        "[Any advertising tags] — [VERIFY OR REMOVE ROW] — Advertising measurement or audience use — Advertising — [VERIFY]",
+        "Exact cookie names, hosts and lifetimes can vary as tags and vendor settings change. We do not publish a static invented inventory. The categories and tools above describe what may be used. Use Cookie Preferences to see and change optional categories at any time. If you need a current technical listing for compliance review, contact <a href=\"mailto:[PRIVACY_EMAIL]\">[PRIVACY_EMAIL]</a>.",
       ],
     },
     {
       title: "5. Managing your choices",
       paragraphs: [
-        "Use the “Cookie Preferences” control in the footer to accept, reject or change optional categories. Rejecting optional cookies must be as easy as accepting them. Changing a preference should stop future optional collection and, where technically possible, clear non-essential first-party cookies already set.",
+        "Use the “Cookie Preferences” control in the footer to accept, reject or change optional categories. Rejecting optional cookies is as easy as accepting them. Changing a preference stops future optional collection and, where technically possible, clears non-essential first-party cookies already set.",
         "Browser settings can also block or delete cookies, although parts of the website may work differently. Where applicable, the website recognises Global Privacy Control as an opt-out of sale, sharing or targeted advertising.",
       ],
     },
     {
       title: "6. Changes and contact",
       paragraphs: [
-        "We may update this Cookie Policy when tools or practices change. For questions, contact [INSERT PRIVACY EMAIL, RECOMMENDED: privacy@brandstoryglobal.com].",
+        "We may update this Cookie Policy when tools or practices change. For questions, contact <a href=\"mailto:[PRIVACY_EMAIL]\">[PRIVACY_EMAIL]</a>.",
       ],
     },
   ],

@@ -5,7 +5,7 @@ const termsOfUse = {
   metaDescription:
     "Terms governing access to brandstoryglobal.com and BrandStory Global’s public website content.",
   intro:
-    "These Terms of Use govern access to brandstoryglobal.com, operated by [INSERT FULL LEGAL ENTITY NAME] under the BrandStory Global brand. By using the website, you agree to these Terms. If you do not agree, do not use the website.",
+    "These Terms of Use govern access to brandstoryglobal.com, operated by [LEGAL_ENTITY_NAME] under the BrandStory Global brand. By using the website, you agree to these Terms. If you do not agree, do not use the website.",
   sections: [
     {
       title: "1. About this website",
@@ -85,7 +85,7 @@ const termsOfUse = {
     {
       title: "12. Governing law and disputes",
       paragraphs: [
-        "These Terms are governed by [INSERT GOVERNING LAW AND COURTS FROM COUNSEL], without regard to conflict-of-law rules. Before starting formal proceedings, the parties should attempt in good faith to resolve a website-related dispute by written notice. Mandatory consumer or privacy rights in your jurisdiction remain unaffected.",
+        "These Terms are governed by [GOVERNING_LAW], without regard to conflict-of-law rules. Before starting formal proceedings, the parties should attempt in good faith to resolve a website-related dispute by written notice. Mandatory consumer or privacy rights in your jurisdiction remain unaffected.",
       ],
     },
     {
@@ -97,10 +97,11 @@ const termsOfUse = {
     {
       title: "14. Contact",
       paragraphs: [
-        "[INSERT FULL LEGAL ENTITY NAME]",
-        "[INSERT REGISTERED BUSINESS ADDRESS]",
-        "Email: contact@brandstoryglobal.com",
-        "Phone: +1 714 599 0207 [VERIFY]",
+        "[LEGAL_ENTITY_NAME]",
+        "[REGISTERED_ADDRESS]",
+        "US registered office: [US_ADDRESS]",
+        "Email: <a href=\"mailto:[CONTACT_EMAIL]\">[CONTACT_EMAIL]</a>",
+        "Phone: [PHONE_US]",
       ],
     },
   ],

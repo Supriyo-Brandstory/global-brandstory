@@ -10,9 +10,9 @@ const indiaPrivacyNotice = {
     {
       title: "1. Data fiduciary",
       paragraphs: [
-        "[INSERT FULL LEGAL ENTITY NAME]",
-        "Address: [INSERT REGISTERED BUSINESS ADDRESS]",
-        "Privacy contact: [INSERT PRIVACY EMAIL, RECOMMENDED: privacy@brandstoryglobal.com]",
+        "[LEGAL_ENTITY_NAME]",
+        "Address: [REGISTERED_ADDRESS]",
+        "Privacy contact: <a href=\"mailto:[PRIVACY_EMAIL]\">[PRIVACY_EMAIL]</a>",
       ],
     },
     {
@@ -30,13 +30,13 @@ const indiaPrivacyNotice = {
     {
       title: "4. Your rights",
       paragraphs: [
-        "Subject to applicable law and its commencement, you may request a summary of personal data and processing activities, correction, completion, updating or erasure, withdraw consent, use grievance redressal and nominate another individual to exercise rights in specified circumstances. Use <a href=\"/data-rights-request\">/data-rights-request</a> or contact the privacy email above.",
+        "Subject to applicable law and its commencement, you may request a summary of personal data and processing activities, correction, completion, updating or erasure, withdraw consent, use grievance redressal and nominate another individual to exercise rights in specified circumstances. Use <a href=\"/data-rights-request\">/data-rights-request</a> or contact <a href=\"mailto:[PRIVACY_EMAIL]\">[PRIVACY_EMAIL]</a>.",
       ],
     },
     {
       title: "5. Grievance redressal",
       paragraphs: [
-        "India grievance contact: [INSERT INDIA GRIEVANCE CONTACT]",
+        "India grievance contact: <a href=\"mailto:[INDIA_GRIEVANCE_CONTACT]\">[INDIA_GRIEVANCE_CONTACT]</a>",
         "If you have a grievance about our handling of personal data, contact the grievance officer using the details above. We will acknowledge and address grievances in line with applicable requirements and our internal procedures.",
       ],
     },
@@ -49,7 +49,7 @@ const indiaPrivacyNotice = {
     {
       title: "7. Contact",
       paragraphs: [
-        "Privacy contact: [INSERT PRIVACY EMAIL, RECOMMENDED: privacy@brandstoryglobal.com]",
+        "Privacy contact: <a href=\"mailto:[PRIVACY_EMAIL]\">[PRIVACY_EMAIL]</a>",
         "See also the main <a href=\"/privacy-policy\">Privacy Policy</a>.",
       ],
     },

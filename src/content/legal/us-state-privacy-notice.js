@@ -26,7 +26,7 @@ const usStatePrivacyNotice = {
     {
       title: "3. Sale, sharing and targeted advertising",
       paragraphs: [
-        "We do not sell personal information for money. If analytics or advertising technologies are configured in a way that constitutes “sale”, “sharing” or targeted advertising under an applicable state law, you may opt out through “Your Privacy Choices.” BrandStory must not claim “we do not sell or share” until the deployed tags and vendor contracts have been reviewed.",
+        "We do not sell personal information for money. If analytics or advertising technologies are configured in a way that constitutes “sale”, “sharing” or targeted advertising under an applicable state law, you may opt out through “Your Privacy Choices.”",
       ],
     },
     {
@@ -48,7 +48,7 @@ const usStatePrivacyNotice = {
     {
       title: "5. How to exercise a right",
       paragraphs: [
-        "Use <a href=\"/data-rights-request\">/data-rights-request</a> or email [INSERT PRIVACY EMAIL, RECOMMENDED: privacy@brandstoryglobal.com]. For sale, sharing or targeted-advertising choices, use the “Your Privacy Choices” control. Where legally required, we honour recognised opt-out preference signals such as Global Privacy Control.",
+        "Use <a href=\"/data-rights-request\">/data-rights-request</a> or email <a href=\"mailto:[PRIVACY_EMAIL]\">[PRIVACY_EMAIL]</a>. For sale, sharing or targeted-advertising choices, use the “Your Privacy Choices” control. Where legally required, we honour recognised opt-out preference signals such as Global Privacy Control.",
         "We verify requests in a proportionate way. We may ask for information that reasonably matches our records and may deny or limit a request where permitted. We will explain a denial and any available appeal route.",
       ],
     },
@@ -67,8 +67,9 @@ const usStatePrivacyNotice = {
     {
       title: "8. Contact",
       paragraphs: [
-        "Email: [INSERT PRIVACY EMAIL, RECOMMENDED: privacy@brandstoryglobal.com]",
-        "Postal address: 39109 Guardino Dr, Fremont, CA 94538 [CONFIRM WHETHER OFFICE, MAILING ADDRESS, OR LEGAL ENTITY ADDRESS]",
+        "Email: <a href=\"mailto:[PRIVACY_EMAIL]\">[PRIVACY_EMAIL]</a>",
+        "US registered office: [US_ADDRESS]",
+        "India registered address: [REGISTERED_ADDRESS]",
       ],
     },
   ],

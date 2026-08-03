@@ -27,13 +27,13 @@ const accessibility = {
     {
       title: "Known limitations",
       paragraphs: [
-        "Some older pages, third-party embeds, videos, documents or interactive components may not yet meet the intended standard. We are working to identify and prioritise barriers. Do not list “no known issues” until a formal audit supports that statement.",
+        "Some older pages, third-party embeds, videos, documents or interactive components may not yet meet the intended standard. We are working to identify and prioritise barriers.",
       ],
     },
     {
       title: "Need help or want to report a barrier?",
       paragraphs: [
-        "Email [INSERT ACCESSIBILITY EMAIL] or call +1 714 599 0207 [VERIFY]. Please tell us the page URL, the problem, the assistive technology or browser used if relevant, and the format you need. We will acknowledge the report and make reasonable efforts to provide the information or service another way.",
+        "Email <a href=\"mailto:[ACCESSIBILITY_EMAIL]\">[ACCESSIBILITY_EMAIL]</a> or call [PHONE_US]. Please tell us the page URL, the problem, the assistive technology or browser used if relevant, and the format you need. We will acknowledge the report and make reasonable efforts to provide the information or service another way.",
       ],
     },
   ],
