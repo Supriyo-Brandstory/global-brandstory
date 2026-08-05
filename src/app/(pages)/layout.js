@@ -12,10 +12,15 @@ export const viewport = {
 
 export const metadata = {
   title: "BrandStory Global",
+  applicationName: "BrandStory Global",
   description:
     "BrandStory Global is a full-service digital marketing and technology agency delivering growth-focused strategies, campaigns, and development.",
   verification: {
     google: "X2GZd5fccCp2LKMZqSoTyGSxXE91RM7aF9t70UKwEjQ",
+  },
+  openGraph: {
+    siteName: "BrandStory Global",
+    type: "website",
   },
   icons: {
     icon: [

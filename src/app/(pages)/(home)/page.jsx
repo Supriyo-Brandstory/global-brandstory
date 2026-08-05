@@ -17,24 +17,39 @@ import Footer from '@/component/partial/Footer'
 import Header from '@/component/partial/Header'
 import React from 'react'
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "BrandStory Global",
+  alternateName: ["BrandStory", "brandstoryglobal.com"],
+  url: "https://brandstoryglobal.com/",
+};
+
+
 const page = () => {
   return (
     <>
-   <Banner/> 
-   {/* <StatsCard/> */}
-   <HeroSection/>
-   <WhyBrandStory/>
-   <ServicesSlider/>
-   <TechTabs/>
-   <IndustriesServed/>
-   <HowWeWork/>
-   <ImpactStats/>
-   <MarketingServices/>
-   <SoftwareSolutions/>
-   <StoriesSection/>
-   <ClientLogosSection/>
-   <Bloglist/>
-   <ClientStories/>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema).replace(/</g, "\\u003c"),
+        }}
+      />
+      <Banner />
+      {/* <StatsCard/> */}
+      <HeroSection />
+      <WhyBrandStory />
+      <ServicesSlider />
+      <TechTabs />
+      <IndustriesServed />
+      <HowWeWork />
+      <ImpactStats />
+      <MarketingServices />
+      <SoftwareSolutions />
+      <StoriesSection />
+      <ClientLogosSection />
+      <Bloglist />
+      <ClientStories />
     </>
 
   )
@@ -45,4 +60,8 @@ export default page
 export const metadata = {
   title: "BrandStory - Your Partner in Digital Success",
   description: "BrandStory - Your Partner in Digital Success",
+  openGraph: {
+    title: "BrandStory Global | Digital Marketing & Technology Agency",
+    url: "https://brandstoryglobal.com/",
+  },
 };
