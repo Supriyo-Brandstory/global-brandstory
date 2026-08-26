@@ -8,7 +8,7 @@ export const StrapiWhyPartner = ({ data }) => {
     const newData = data?.cards?.map((card) => ({
         title: card?.title,
         description: card?.para,
-        logo: strapiUrl + card?.img?.url,
+        logo: card?.img?.url ? strapiUrl + card.img.url : null,
         bg: ""
     }))
 

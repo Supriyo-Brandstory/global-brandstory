@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '@/style/common/commonAbout.module.css'
-import Image from 'next/image'
+import SafeImg from './SafeImg'
 
 const CommonAbout = ({
     title = null,
@@ -20,17 +20,12 @@ const CommonAbout = ({
             </div>
 
             <div className={`${styles.flexbox} ${imageReverse ? styles.reverse : ""}`}>
-                {imageSrc && (
-                    <div className={styles.imageBox}>
-                        <Image
-                            src={imageSrc}
-                            alt={imageAlt || "Image"}
-                            width={500}
-                            height={400}
-                            className={styles.image}
-                        />
-                    </div>
-                )}
+                <SafeImg
+                    src={imageSrc}
+                    alt={imageAlt || "Image"}
+                    className={styles.image}
+                    wrapperClassName={styles.imageBox}
+                />
 
                 {(text1 || points?.length > 0 || text2) && (
                     <div className={styles.points}>

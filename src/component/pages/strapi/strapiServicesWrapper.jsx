@@ -11,7 +11,7 @@ export default function StrapiServicesWrapper({ data }) {
     const dataNew = data?.imgcards?.map((cards) => ({
         title: cards?.title,
         desc: cards?.para,
-        icon: strapiUrl + cards?.img?.url,
+        icon: cards?.img?.url ? strapiUrl + cards.img.url : null,
         background: "url('/images/ppc/bg-1.png')",
         height: boxHeight,
     }))

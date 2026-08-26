@@ -2,6 +2,7 @@
 import React from 'react';
 import styles from '@/style/common/commonBanner.module.css';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
+import SafeImg from './SafeImg';
 
 export const CommonBanner = ({ heading, paragraph, paragraph2, buttonLink, buttonLink2, buttonText, buttonText2, renderType }) => {
   // const finalLink1 = (!buttonLink || buttonLink === '#') ? '/our-works' : buttonLink;
@@ -42,7 +43,7 @@ export const CommonBanner = ({ heading, paragraph, paragraph2, buttonLink, butto
           <div className={styles.seoBannerButton}>
             <a href={finalLink1} className={styles.seoBannerButtonLink}>
               {'Contact Us'} {/* optional fallback text */}
-              <img
+              <SafeImg
                 src="/images/triangle-btn.png"
                 alt="btn img"
                 className={styles.btnImg}

@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import styles from "@/style/common/commonGridBox3.module.css";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import SafeImg from "./SafeImg";
 
 const CommonGridBox3 = ({ title, description, data, footer }) => {
 
@@ -56,8 +57,8 @@ const CommonGridBox3 = ({ title, description, data, footer }) => {
             style={{ "--card-color": card.bgcolor }}
           >
             {card.logo && (
-              <img
-                src={card.logo || "/placeholder.svg"}
+              <SafeImg
+                src={card.logo}
                 alt={card.title}
                 className={styles.cardLogo}
               />

@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
-import Image from 'next/image';
 import styles from "@/style/common/commonAccordion2.module.css";
 import Link from "next/link";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import SafeImage from "./SafeImage";
 
 const CommonAccordion2 = ({ title, highlited, description, items, button, buttonLink, splitRatio }) => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -36,7 +36,7 @@ const CommonAccordion2 = ({ title, highlited, description, items, button, button
                         <button className={styles.accordionHeader} onClick={() => toggleItem(index)}>
                             <h4>{item.title}</h4>
                             <div className={styles.arrowContainer}>
-                                <Image
+                                <SafeImage
                                     src="/images/arrow-down.webp"
                                     alt="arrow down"
                                     width={24}

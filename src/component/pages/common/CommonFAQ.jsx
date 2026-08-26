@@ -1,8 +1,8 @@
 'use client'
 import { useState } from 'react';
-import Image from 'next/image';
 import styles from '@/style/common/commonFAQs.module.css';
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
+import SafeImage from './SafeImage';
 
 const CommonFAQ = ({ data }) => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -23,7 +23,7 @@ const CommonFAQ = ({ data }) => {
             >
               <span>{item.title}</span>
               <div className={styles.arrowContainer}>
-                <Image
+                <SafeImage
                   src="/images/arrow-down.webp"
                   alt="arrow down"
                   width={24}

@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { notFound } from "next/navigation";
 import { getLocationPageByPath } from "../../../lib/services/api";
 
@@ -15,6 +16,10 @@ import { StrapiOurCommitment } from "@/component/pages/strapi/strapiOurCommitmen
 import { StrapiAdv } from "@/component/pages/strapi/strapiAdv";
 import StrapiFaq from "@/component/pages/strapi/strapiFaq";
 import { StrapiBanner } from "@/component/pages/strapi/strapiBanner";
+import { StrapiWhyStrategic } from "@/component/pages/strapi/strapiWhyStrategic";
+import { StrapiThePeople } from "@/component/pages/strapi/strapiThePeople";
+import { StrapiWhatAeoMatters } from "@/component/pages/strapi/strapiWhatAeoMatters";
+import CommonDivider from "@/component/pages/common/CommonDivider";
 
 const componentMap = {
     "section.banner": StrapiBanner,
@@ -30,6 +35,9 @@ const componentMap = {
     "section.vertical-tab": StrapiOurCommitment,
     "section.adv": StrapiAdv,
     "section.faq": StrapiFaq,
+    "section.whystrategic": StrapiWhyStrategic,
+    "section.thepeople": StrapiThePeople,
+    "section.whyaeomatters": StrapiWhatAeoMatters,
 };
 
 /* ---------------- METADATA ---------------- */
@@ -100,15 +108,24 @@ export default async function ServicePage({ params }) {
         notFound();
     }
 
-    const sections = pageData.sections || [];
+    const sections = (pageData.sections || [])
+        .map((section, index) => ({
+            section,
+            index,
+            Component: componentMap[section.__component],
+        }))
+        .filter(({ Component }) => Component);
 
     return (
         <main>
-            {sections.map((section, index) => {
-                const Component = componentMap[section.__component];
-                if (!Component) return null;
-                return <Component key={index} data={section} />;
-            })}
+            {sections.map(({ section, index, Component }, i) => (
+                <Fragment key={`${section.__component}-${section.id || index}`}>
+                    {i > 0 && <CommonDivider />}
+                    <div className="py-10 md:py-14">
+                        <Component data={section} />
+                    </div>
+                </Fragment>
+            ))}
         </main>
     );
 }

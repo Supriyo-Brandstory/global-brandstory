@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import styles from '@/style/common/commonThreeCardBlur.module.css'
 import { BlocksRenderer } from '@strapi/blocks-react-renderer'
+import SafeImg from './SafeImg'
 
 export const CommonThreeCardBlur = ({ heading, subheading, data, footer }) => {
 
@@ -58,7 +59,7 @@ export const CommonThreeCardBlur = ({ heading, subheading, data, footer }) => {
                         className={styles.card}
                         style={{ '--bg': `url(${item.bg})` }}
                     >
-                        <img
+                        <SafeImg
                             src={item.logo}
                             alt={item.title}
                             className={styles.logo}

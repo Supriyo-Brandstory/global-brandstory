@@ -416,6 +416,19 @@ export async function getLocationPageByPath(fullPath) {
             "section.faq": {
               populate: "*",
             },
+            "section.whystrategic": {
+              populate: "*",
+            },
+            "section.thepeople": {
+              populate: "*",
+            },
+            "section.whyaeomatters": {
+              populate: {
+                imgcards: {
+                  populate: "*",
+                },
+              },
+            },
           },
         },
       },

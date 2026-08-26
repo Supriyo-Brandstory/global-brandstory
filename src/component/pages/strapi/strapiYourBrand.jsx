@@ -12,7 +12,7 @@ export const StrapiYourBrand = ({ data }) => {
         title: card?.title,
         description: card?.para,
         bgcolor: card?.bgcolor,
-        logo: strapiUrl + card?.img?.url,
+        logo: card?.img?.url ? strapiUrl + card.img.url : null,
     }))
 
     const dataOld = [

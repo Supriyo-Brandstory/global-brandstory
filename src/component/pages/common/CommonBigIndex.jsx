@@ -2,6 +2,7 @@
 import styles from '@/style/common/commonBigIndex.module.css'
 import { useRef, useState, useEffect } from "react";
 import { BlocksRenderer } from '@strapi/blocks-react-renderer'
+import SafeImg from './SafeImg'
 
 export const CommonBigIndex = ({ heading, description, data, footer, caseLabel = null, paddingBottom }) => {
   const caseRef = useRef(null);
@@ -41,7 +42,7 @@ export const CommonBigIndex = ({ heading, description, data, footer, caseLabel =
           >
 
             {caseLabel && <h3 className={styles.label}>{caseLabel}</h3>}
-            <img
+            <SafeImg
               className={styles.imageId}
               src={`/images/case-${index + 1}.png`}
               alt="image"

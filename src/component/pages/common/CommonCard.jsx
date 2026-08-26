@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 
 import styles from "@/style/common/commonCard.module.css";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import SafeImg from "./SafeImg";
 
 const CommonCard = ({ seoData, heding, description, footer }) => {
     const prevRef = useRef(null);
@@ -49,12 +50,15 @@ const CommonCard = ({ seoData, heding, description, footer }) => {
                 1024: { slidesPerView: 3 },
               }}
             >
-                {seoData.map((item, index) => (
+                {(seoData || []).map((item, index) => (
                     <SwiperSlide key={index}>
                         <div className={styles.card} style={{ '--bg': item.background, '--boxHeight': item.height || '228px' }}>
-                            <div className={styles.iconWrapper}>
-                                <img src={item.icon} alt="icon" className={styles.icon} />
-                            </div>
+                            <SafeImg
+                              src={item.icon}
+                              alt={item.title || "icon"}
+                              className={styles.icon}
+                              wrapperClassName={styles.iconWrapper}
+                            />
                             <h4 className={styles.title}>{item.title}</h4>
                             {item.desc && (typeof item.desc === "string" ? (<h5 className={styles.desc} dangerouslySetInnerHTML={{ __html: item.desc }}></h5>) : (<BlocksRenderer content={item.desc} blocks={{ paragraph: ({ children }) => (<p className={'!text-white !text-[18px]'}>{children}</p>) }} />))}
                         </div>
