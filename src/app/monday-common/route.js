@@ -1,13 +1,6 @@
 import { NextResponse } from 'next/server';
 import { LEGAL_CONFIG } from '@/config/legal';
 
-function escapeGraphQLString(value) {
-  return String(value || '')
-    .replace(/\\/g, '\\\\')
-    .replace(/"/g, '\\"')
-    .replace(/\n/g, '\\n');
-}
-
 export async function POST(req) {
   try {
     const body = await req.json();
@@ -74,13 +67,15 @@ export async function POST(req) {
     const boardId = process.env.MONDAY_BOARD_ID || '5026902925';
     const groupId = process.env.MONDAY_GROUP_ID || 'group_mm10gy3r';
 
+    // Pass column_values as a GraphQL JSON variable so newlines in consent
+    // metadata stay valid JSON (inlining into a string literal breaks parsing).
     const query = `
-      mutation {
+      mutation ($boardId: ID!, $groupId: String!, $itemName: String!, $columnValues: JSON!) {
         create_item(
-          board_id: ${boardId},
-          group_id: "${groupId}",
-          item_name: "${escapeGraphQLString(name)}",
-          column_values: "${JSON.stringify(columnValues).replace(/"/g, '\\"')}"
+          board_id: $boardId,
+          group_id: $groupId,
+          item_name: $itemName,
+          column_values: $columnValues
         ) {
           id
         }
@@ -93,7 +88,15 @@ export async function POST(req) {
         'Content-Type': 'application/json',
         Authorization: apiToken,
       },
-      body: JSON.stringify({ query }),
+      body: JSON.stringify({
+        query,
+        variables: {
+          boardId: String(boardId),
+          groupId: String(groupId),
+          itemName: String(name).slice(0, 240),
+          columnValues: JSON.stringify(columnValues),
+        },
+      }),
     });
 
     const result = await response.json();
