@@ -350,6 +350,33 @@ export async function getLastThreeBlogs() {
   return fetchStrapi(`blogs?${query}`);
 }
 
+export async function getLatestBlogs(limit = 10) {
+  const query = qs.stringify(
+    {
+      fields: [
+        "blogTitle",
+        "blogSlug",
+        "blogMetaTitle",
+        "blogMetaDescription",
+        "blogDate",
+        "publishedAt",
+      ],
+      populate: {
+        blogImage: true,
+        blog_categories: true,
+      },
+      sort: ["publishedAt:desc"],
+      pagination: {
+        page: 1,
+        pageSize: limit,
+      },
+    },
+    { encodeValuesOnly: true }
+  );
+
+  return fetchStrapi(`blogs?${query}`);
+}
+
 export async function getLocationPageByPath(fullPath) {
   const query = qs.stringify(
     {
@@ -426,6 +453,57 @@ export async function getLocationPageByPath(fullPath) {
               populate: {
                 imgcards: {
                   populate: "*",
+                },
+              },
+            },
+            "section.client-logos": {
+              populate: {
+                logos: true,
+              },
+            },
+            "section.our-process": {
+              populate: {
+                buttons: true,
+                steps: true,
+              },
+            },
+            "section.card-slider": {
+              populate: {
+                slides: true,
+              },
+            },
+            "section.first-30-days": {
+              populate: {
+                weeks: {
+                  populate: {
+                    icon: true,
+                  },
+                },
+              },
+            },
+            "section.industry-results": {
+              populate: {
+                cards: true,
+              },
+            },
+            "section.team-performance": {
+              populate: {
+                image: true,
+                cards: {
+                  populate: {
+                    icon: true,
+                  },
+                },
+              },
+            },
+            "section.reviews-cta": {
+              populate: {
+                ctaImage: true,
+                reviews: {
+                  populate: {
+                    avatar: true,
+                    platformIcon: true,
+                  },
                 },
               },
             },

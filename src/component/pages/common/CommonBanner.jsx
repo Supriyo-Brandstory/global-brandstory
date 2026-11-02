@@ -11,10 +11,6 @@ export const CommonBanner = ({ heading, paragraph, paragraph2, buttonLink, butto
   const finalLink1 = '/contact-us'
   const finalLink2 = '/our-works'
 
-  const isHTML = (value) => /<\/?[a-z][\s\S]*>/i.test(value);
-
-  // console.log(renderType)
-
   return (
     <div className={styles.seoBanner}>
       <div className={styles.seoBannerContent}>

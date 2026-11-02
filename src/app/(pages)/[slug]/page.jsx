@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { notFound } from "next/navigation";
-import { getLocationPageByPath } from "../../../lib/services/api";
+import { getLatestBlogs, getLocationPageByPath } from "../../../lib/services/api";
+import LocationLatestBlogs from "@/component/pages/common/LocationLatestBlogs";
 
 // components (unchanged)
 import StrapiTest from "@/component/pages/strapi/test";
@@ -15,14 +16,22 @@ import { StrapiMasteringVisuals } from "@/component/pages/strapi/strapiMastering
 import { StrapiOurCommitment } from "@/component/pages/strapi/strapiOurCommitment";
 import { StrapiAdv } from "@/component/pages/strapi/strapiAdv";
 import StrapiFaq from "@/component/pages/strapi/strapiFaq";
-import { StrapiBanner } from "@/component/pages/strapi/strapiBanner";
+import { StrapiBannerLocation } from "@/component/pages/strapi/strapiBannerLocation";
 import { StrapiWhyStrategic } from "@/component/pages/strapi/strapiWhyStrategic";
 import { StrapiThePeople } from "@/component/pages/strapi/strapiThePeople";
 import { StrapiWhatAeoMatters } from "@/component/pages/strapi/strapiWhatAeoMatters";
+import { StrapiClientLogos } from "@/component/pages/strapi/strapiClientLogos";
+import { StrapiOurProcess } from "@/component/pages/strapi/strapiOurProcess";
+import { StrapiCardSlider } from "@/component/pages/strapi/strapiCardSlider";
+import { StrapiFirst30Days } from "@/component/pages/strapi/strapiFirst30Days";
+import { StrapiIndustryResults } from "@/component/pages/strapi/strapiIndustryResults";
+import { StrapiTeamPerformance } from "@/component/pages/strapi/strapiTeamPerformance";
+import { StrapiReviewsCta } from "@/component/pages/strapi/strapiReviewsCta";
 import CommonDivider from "@/component/pages/common/CommonDivider";
+import LocationContactPopup from "@/component/pages/common/LocationContactPopup";
 
 const componentMap = {
-    "section.banner": StrapiBanner,
+    "section.banner": StrapiBannerLocation,
     "section.accordion1": StrapiTest,
     "section.accordion2": RedifiningProfessionalStrapi,
     "section.outcome": CommonTwoCardWrapper,
@@ -38,6 +47,13 @@ const componentMap = {
     "section.whystrategic": StrapiWhyStrategic,
     "section.thepeople": StrapiThePeople,
     "section.whyaeomatters": StrapiWhatAeoMatters,
+    "section.client-logos": StrapiClientLogos,
+    "section.our-process": StrapiOurProcess,
+    "section.card-slider": StrapiCardSlider,
+    "section.first-30-days": StrapiFirst30Days,
+    "section.industry-results": StrapiIndustryResults,
+    "section.team-performance": StrapiTeamPerformance,
+    "section.reviews-cta": StrapiReviewsCta,
 };
 
 /* ---------------- METADATA ---------------- */
@@ -116,6 +132,9 @@ export default async function ServicePage({ params }) {
         }))
         .filter(({ Component }) => Component);
 
+    const latestBlogsResponse = await getLatestBlogs(10);
+    const latestBlogs = latestBlogsResponse?.data || [];
+
     return (
         <main>
             {sections.map(({ section, index, Component }, i) => (
@@ -126,6 +145,15 @@ export default async function ServicePage({ params }) {
                     </div>
                 </Fragment>
             ))}
+            {latestBlogs.length > 0 && (
+                <>
+                    {sections.length > 0 && <CommonDivider />}
+                    <div className="py-10 md:py-14">
+                        <LocationLatestBlogs blogs={latestBlogs} />
+                    </div>
+                </>
+            )}
+            <LocationContactPopup />
         </main>
     );
 }

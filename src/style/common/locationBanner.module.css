@@ -1,0 +1,203 @@
+.seoBanner {
+    text-align: center;
+    width: 100%;
+    background: url('/images/seo/seo-banner.png') no-repeat;
+    background-size: cover;
+    background-position: 80% 40%;
+    min-height: 100vh;
+    padding: 120px 0 80px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #0F0F0F;
+}
+.seoBannerContent{
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.btnWrapper{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.seoBannerParagraph div{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.btnImg{
+    margin-left: 10px;
+    height: 17px;
+    width: 17px;
+}
+
+.seoBannerButtonLink{
+    color: #f0f8fd;
+    background: rgba(241, 93, 34, 1);
+    border-radius: 40px;
+    box-shadow: 0 0 20px #fdf6f0;
+    padding: 10px 60px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seoBannerButtonLink2{
+    color: #f0f8fd;
+    background: transparent;
+    border-radius: 40px;
+    border: 2px solid #fff;
+    padding: 10px 60px;
+    display: inline-block;
+}
+
+.boxes{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    pointer-events: none;
+}
+
+.boxes div{
+    position: absolute;
+    height: 78px;
+    width: 78px;
+    background: url('/images/banner-sm-box.png');
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.boxes div:hover{
+    background-image: linear-gradient(to top right, rgba(182, 58, 58, 0.231), transparent);
+}
+
+.box1{
+    top: 425px;
+    left: 145px;
+}
+
+.box2{
+    top: 500px;
+    left: 63px;
+    transform: rotate(180deg);
+}
+
+.box3{
+    top: 300px;
+    right: 65px;
+}
+
+.statsRow{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1000px;
+    margin: 56px auto 0;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.statItem{
+    flex: 1;
+    text-align: center;
+    padding: 0 18px;
+    border-right: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.statItem:last-child{
+    border-right: none;
+}
+
+.statValue{
+    margin: 0;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.statLabel{
+    margin: 8px 0 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.35;
+}
+
+@media (max-width: 768px) {
+    .seoBanner {
+        padding: 80px 15px 50px 15px;
+    }
+
+    .btnWrapper{
+        flex-direction: column;
+    }
+
+    .seoBannerButton{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .seoBannerButtonLink, .seoBannerButtonLink2{
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .seoBannerButtonLink{
+        box-shadow: 0 0 20px #fdf6f089;
+    }
+    .seoBannerParagraph div{
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 300;
+    }
+
+    .seoBannerButtonLink {
+        padding: 14px 30px;
+        font-size: 14px;
+        margin-top: 30px;
+    }
+
+    .boxes{
+        display: none;
+    }
+
+    .statsRow{
+        flex-wrap: wrap;
+        margin-top: 40px;
+        padding: 0 8px;
+        row-gap: 24px;
+    }
+
+    .statItem{
+        flex: 1 1 45%;
+        padding: 0 12px;
+        border-right: none;
+    }
+
+    .statItem:nth-child(odd){
+        border-right: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .statValue{
+        font-size: 22px;
+    }
+
+    .statLabel{
+        font-size: 14px;
+    }
+}
