@@ -42,6 +42,14 @@
   padding-right: 0;
 }
 
+/* Location pages only: the "11+ Years" stat is hidden.
+   The marker attribute is set by the location template — see
+   src/app/(pages)/[slug]/page.jsx (data-template="location").
+   All other templates (home, contact, blogs, other CMS pages) still show it. */
+:global(body:has([data-template="location"])) .statYears {
+  display: none;
+}
+
 .stat h3 {
   font-family: var(--font-family-bold);
   font-weight: 700;

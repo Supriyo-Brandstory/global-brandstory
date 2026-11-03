@@ -136,7 +136,7 @@ export default async function ServicePage({ params }) {
     const latestBlogs = latestBlogsResponse?.data || [];
 
     return (
-        <main>
+        <main data-template="location">
             {sections.map(({ section, index, Component }, i) => (
                 <Fragment key={`${section.__component}-${section.id || index}`}>
                     {i > 0 && <CommonDivider />}

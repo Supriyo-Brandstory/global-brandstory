@@ -17,7 +17,7 @@ export default function Footer() {
             <h3>₹5,200+ Cr</h3>
             <p>Client Revenue Influenced across digital touchpoints</p>
           </div>
-          <div className={styles.stat}>
+          <div className={`${styles.stat} ${styles.statYears}`}>
             <h3>11+ Years</h3>
             <p>of Creative Intelligence driving measurable results</p>
           </div>

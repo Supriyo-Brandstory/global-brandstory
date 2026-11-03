@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_OPTIONS='--max-old-space-size=8192' next dev --webpack",
-    "dev:turbo": "NODE_OPTIONS='--max-old-space-size=8192' next dev --turbopack",
-    "build": "NODE_OPTIONS='--max-old-space-size=8192' next build --webpack",
+    "dev": "next dev --webpack",
+    "dev:turbo": "next dev --turbopack",
+    "build": "next build --webpack",
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
     "test:watch": "vitest",
-    "clean": "rm -rf .next"
+    "clean": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\""
   },
   "dependencies": {
     "@strapi/blocks-react-renderer": "1.0.2",

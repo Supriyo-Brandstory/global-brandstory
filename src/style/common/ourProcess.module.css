@@ -133,7 +133,7 @@
 .timeline::before {
   content: "";
   position: absolute;
-  left: 27px;
+  left: 27.5px;
   top: 28px;
   bottom: 28px;
   width: 1px;
@@ -144,18 +144,28 @@
   position: relative;
   display: grid;
   grid-template-columns: 56px minmax(0, 1fr);
-  gap: 20px;
-  align-items: start;
+  gap: 40px;
+  align-items: center;
   padding: 22px 0;
 }
 
-.step + .step {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+/* Divider starts after the badge column so it never crosses the rail or dot. */
+.step + .step::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(56px + 40px);
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .number {
+  --accent-rgb: 241, 93, 34;
+
   position: relative;
   z-index: 1;
+  box-sizing: border-box;
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -166,38 +176,54 @@
   font-size: 16px;
   letter-spacing: 0.02em;
   color: #fff;
-  border: 1px solid transparent;
-  background: rgba(241, 93, 34, 0.22);
-  border-color: rgba(241, 93, 34, 0.55);
+  border: 2px solid rgba(var(--accent-rgb), 0.9);
+  /* Opaque base + tint keeps the accent colour but hides the rail behind. */
+  background-color: var(--color-background, #000);
+  background-image: linear-gradient(
+    rgba(var(--accent-rgb), 0.22),
+    rgba(var(--accent-rgb), 0.22)
+  );
+  box-shadow: 0 0 18px rgba(var(--accent-rgb), 0.22),
+    inset 0 0 14px rgba(var(--accent-rgb), 0.12);
+}
+
+/* Glowing extension dot trailing each badge */
+.number::after {
+  content: "";
+  position: absolute;
+  left: calc(100% + 12px);
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background: rgb(var(--accent-rgb));
+  box-shadow: 0 0 0 2px rgba(var(--accent-rgb), 0.18),
+    0 0 10px 2px rgba(var(--accent-rgb), 0.7);
 }
 
 .step:nth-child(5n + 1) .number {
-  background: rgba(241, 93, 34, 0.22);
-  border-color: rgba(241, 93, 34, 0.55);
+  --accent-rgb: 241, 93, 34;
 }
 
 .step:nth-child(5n + 2) .number {
-  background: rgba(255, 170, 50, 0.22);
-  border-color: rgba(255, 170, 50, 0.55);
+  --accent-rgb: 255, 170, 50;
 }
 
 .step:nth-child(5n + 3) .number {
-  background: rgba(80, 140, 255, 0.22);
-  border-color: rgba(80, 140, 255, 0.55);
+  --accent-rgb: 80, 140, 255;
 }
 
 .step:nth-child(5n + 4) .number {
-  background: rgba(60, 200, 120, 0.22);
-  border-color: rgba(60, 200, 120, 0.55);
+  --accent-rgb: 60, 200, 120;
 }
 
 .step:nth-child(5n + 5) .number {
-  background: rgba(160, 100, 255, 0.22);
-  border-color: rgba(160, 100, 255, 0.55);
+  --accent-rgb: 160, 100, 255;
 }
 
 .stepContent {
-  padding-top: 6px;
+  padding-top: 0;
   min-width: 0;
 }
 
@@ -275,8 +301,12 @@
 
   .step {
     grid-template-columns: 44px minmax(0, 1fr);
-    gap: 12px;
+    gap: 18px;
     padding: 16px 0;
+  }
+
+  .step + .step::after {
+    left: calc(44px + 18px);
   }
 
   .number {
@@ -285,8 +315,14 @@
     font-size: 13px;
   }
 
+  .number::after {
+    left: calc(100% + 8px);
+    width: 5px;
+    height: 5px;
+  }
+
   .timeline::before {
-    left: 21px;
+    left: 21.5px;
   }
 
   .stepTitle {
