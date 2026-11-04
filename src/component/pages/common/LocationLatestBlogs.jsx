@@ -8,6 +8,9 @@ import "swiper/css";
 import SafeImg from "./SafeImg";
 import styles from "@/style/common/locationLatestBlogs.module.css";
 
+/** Same fallback as the blog listing page (CommonBlogs). */
+const FALLBACK_BLOG_IMAGE = "https://picsum.photos/id/1/600/400";
+
 function resolveMediaUrl(media, strapiUrl) {
   const raw =
     media?.url ||
@@ -50,7 +53,7 @@ function normalizeBlogs(blogs = [], strapiUrl) {
         title: item.blogTitle,
         slug: item.blogSlug,
         category: categories[0] || "Blog",
-        image: imageUrl,
+        image: imageUrl || FALLBACK_BLOG_IMAGE,
         href: `/blogs/${item.blogSlug}`,
       };
     })

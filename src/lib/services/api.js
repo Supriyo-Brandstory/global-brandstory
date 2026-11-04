@@ -1,5 +1,6 @@
 import qs from 'qs';
-import { fetchStrapi } from "../strapi";
+import { notFound } from "next/navigation";
+import { fetchStrapi, fetchStrapiSafe } from "../strapi";
 
 export async function getLandingPageBySlug(slug) {
   const query = qs.stringify({
@@ -377,17 +378,56 @@ export async function getLatestBlogs(limit = 10) {
   return fetchStrapi(`blogs?${query}`);
 }
 
+/** Section components the connected Strapi does not have (e.g. not yet deployed). */
+const unsupportedLocationSections = new Set();
+
 export async function getLocationPageByPath(fullPath) {
-  const query = qs.stringify(
-    {
-      filters: {
-        fullPath: {
-          $eq: fullPath,
+  const sectionPopulate = { ...LOCATION_SECTION_POPULATE };
+  unsupportedLocationSections.forEach((key) => delete sectionPopulate[key]);
+
+  const maxAttempts = Object.keys(sectionPopulate).length + 1;
+
+  for (let attempt = 0; attempt < maxAttempts; attempt++) {
+    const query = qs.stringify(
+      {
+        filters: {
+          fullPath: {
+            $eq: fullPath,
+          },
+        },
+        populate: {
+          sections: {
+            on: sectionPopulate,
+          },
         },
       },
-      populate: {
-        sections: {
-          on: {
+      { encodeValuesOnly: true }
+    );
+
+    const result = await fetchStrapiSafe(`location-pages?${query}`);
+    if (result.ok) return result.data;
+
+    const invalidKey = result.error?.details?.key;
+    const isUnknownSection =
+      result.status === 400 &&
+      result.error?.details?.param === "populate" &&
+      invalidKey &&
+      Object.prototype.hasOwnProperty.call(sectionPopulate, invalidKey);
+
+    if (!isUnknownSection) {
+      console.error("Strapi Error Details:", result.error);
+      notFound();
+    }
+
+    unsupportedLocationSections.add(invalidKey);
+    delete sectionPopulate[invalidKey];
+    console.warn(`Strapi has no "${invalidKey}" component; skipping that section.`);
+  }
+
+  notFound();
+}
+
+const LOCATION_SECTION_POPULATE = {
             "section.banner": {
               populate: "*",
             },
@@ -507,15 +547,7 @@ export async function getLocationPageByPath(fullPath) {
                 },
               },
             },
-          },
-        },
-      },
-    },
-    { encodeValuesOnly: true }
-  );
-
-  return fetchStrapi(`location-pages?${query}`);
-}
+};
 
 export async function getIndustryReportBySlug(slugArray) {
   if (!Array.isArray(slugArray) || slugArray.length === 0 || slugArray.length > 2) {
