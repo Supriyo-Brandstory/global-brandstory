@@ -49,12 +49,18 @@
 }
 
 .sliderWrap {
-  position: relative;
   width: 100%;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px;
+  grid-template-areas: "prev slider next";
+  align-items: center;
+  gap: 16px;
 }
 
 .swiper {
+  grid-area: slider;
   width: 100%;
+  min-width: 0;
   overflow: hidden;
   padding: 4px 2px 10px;
 }
@@ -140,46 +146,38 @@
 }
 
 .navBtn {
-  position: absolute;
-  top: 42%;
-  z-index: 5;
   width: 44px;
   height: 44px;
+  padding: 0;
   border-radius: 50%;
   border: 1px solid rgba(241, 93, 34, 0.7);
-  background: rgba(0, 0, 0, 0.55);
+  background: transparent;
   color: #fff;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
-  line-height: 1;
-  transform: translateY(-50%);
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navBtn svg {
+  width: 18px;
+  height: 18px;
+  display: block;
 }
 
 .navBtn:hover {
-  background: rgba(241, 93, 34, 0.2);
+  background: rgba(241, 93, 34, 0.18);
   border-color: #f15d22;
+  box-shadow: 0 0 16px rgba(241, 93, 34, 0.45);
 }
 
 .navPrev {
-  left: -8px;
+  grid-area: prev;
 }
 
 .navNext {
-  right: -8px;
-}
-
-@media (max-width: 1100px) {
-  .navPrev {
-    left: 0;
-  }
-
-  .navNext {
-    right: 0;
-  }
+  grid-area: next;
 }
 
 @media (max-width: 768px) {
@@ -199,10 +197,26 @@
     font-size: 18px;
   }
 
+  .sliderWrap {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "slider slider"
+      "prev next";
+    row-gap: 18px;
+    column-gap: 12px;
+  }
+
+  .navPrev {
+    justify-self: end;
+  }
+
+  .navNext {
+    justify-self: start;
+  }
+
   .navBtn {
-    width: 38px;
-    height: 38px;
-    font-size: 18px;
+    width: 40px;
+    height: 40px;
   }
 
   .card:hover {

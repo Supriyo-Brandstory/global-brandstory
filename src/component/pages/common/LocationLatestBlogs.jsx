@@ -81,24 +81,22 @@ export default function LocationLatestBlogs({ blogs = [] }) {
 
         <div className={styles.sliderWrap}>
           {items.length > 1 && (
-            <>
-              <button
-                type="button"
-                className={`${styles.navBtn} ${styles.navPrev}`}
-                aria-label="Previous blogs"
-                onClick={() => swiperInstance?.slidePrev()}
-              >
-                ‹
-              </button>
-              <button
-                type="button"
-                className={`${styles.navBtn} ${styles.navNext}`}
-                aria-label="Next blogs"
-                onClick={() => swiperInstance?.slideNext()}
-              >
-                ›
-              </button>
-            </>
+            <button
+              type="button"
+              className={`${styles.navBtn} ${styles.navPrev}`}
+              aria-label="Previous blogs"
+              onClick={() => swiperInstance?.slidePrev()}
+            >
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path
+                  d="M10 3L5 8l5 5"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
           )}
 
           <Swiper
@@ -140,6 +138,25 @@ export default function LocationLatestBlogs({ blogs = [] }) {
               </SwiperSlide>
             ))}
           </Swiper>
+
+          {items.length > 1 && (
+            <button
+              type="button"
+              className={`${styles.navBtn} ${styles.navNext}`}
+              aria-label="Next blogs"
+              onClick={() => swiperInstance?.slideNext()}
+            >
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path
+                  d="M6 3l5 5-5 5"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          )}
         </div>
       </div>
     </section>

@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --webpack",
-    "dev:turbo": "next dev --turbopack",
-    "build": "next build --webpack",
+    "dev": "NODE_OPTIONS='--max-old-space-size=8192' next dev --webpack",
+    "dev:turbo": "NODE_OPTIONS='--max-old-space-size=8192' next dev --turbopack",
+    "build": "NODE_OPTIONS='--max-old-space-size=8192' next build --webpack",
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
