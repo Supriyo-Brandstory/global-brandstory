@@ -276,7 +276,17 @@ export async function getBlogBySlug(slug) {
               populate: {
                 blogImage: { populate: "*" }
               }
-            }
+            },
+            "industry-reports.table": {
+              populate: {
+                heading: true,
+                Row: {
+                  populate: {
+                    cells: true,
+                  },
+                },
+              },
+            },
           }
         }
       }
