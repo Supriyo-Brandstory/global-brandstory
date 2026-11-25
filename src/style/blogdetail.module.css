@@ -192,6 +192,47 @@
   object-fit: cover;
 }
 
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 32px 0 40px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+}
+
+.blogTable {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.blogTable th,
+.blogTable td {
+  padding: 14px 16px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.blogTable th {
+  background: rgba(241, 93, 34, 0.18);
+  color: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.blogTable tr:last-child td {
+  border-bottom: none;
+}
+
+.blogTable tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.04);
+}
+
 /* =========================
    CLOSING
 ========================= */

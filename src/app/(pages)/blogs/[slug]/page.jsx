@@ -3,13 +3,13 @@ import styles from '@/style/blogdetail.module.css';
 import { getBlogBySlug } from '@/lib/services/api';
 import TableOfContents from '@/component/pages/Blogs/blogTableOfContent';
 import BlogContentRenderer from '@/component/pages/Blogs/BlogContentRenderer';
+import BlogTable from '@/component/pages/Blogs/BlogTable';
 import { notFound } from 'next/navigation';
 
 export async function generateMetadata({ params }) {
     const { slug } = await params;
     const response = await getBlogBySlug(slug);
     const blog = response?.data?.[0]?.attributes || response?.data?.[0];
-
     if (!blog) {
         return {
             title: "Blog Not Found",
@@ -119,6 +119,9 @@ export default async function Page({ params }) {
                                         alt={sectionImg.alternativeText || ""}
                                     />
                                 );
+                            }
+                            if (section.__component === 'industry-reports.table') {
+                                return <BlogTable key={index} data={section} />;
                             }
                             return null;
                         })}
